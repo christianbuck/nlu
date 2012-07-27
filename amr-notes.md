@@ -7,7 +7,7 @@ The latest version of the `Amr` class is on the `new_amr` branch.
 ```python
 >>> from dev.amr.amr import Amr
 >>> y = Amr.from_triples([('p', 'ARG0-of', 'w'), ('w', 'ARG1', 'b')], {'p': 'person', 'w': 'write-01', 'b': 'book'})
-# stores the second arg as y.node2concepts
+# stores the second arg as y.node_to_concepts
 # infers one or more roots and stores them in the set y.roots
 >>> y
 DAG{ (p / person :ARG0-of (w / write-01 :ARG1 (b / book) )) }
