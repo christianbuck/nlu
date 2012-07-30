@@ -35,11 +35,16 @@ class SpanTree(ParentedTree):
         sub_tree = self[self.leaf_treeposition(leaf_id)[:-(depth+1)]]
         return sub_tree
 
-    def span_from_pos(self, pos):
+    def parse_pos(self, pos):
+        leaf_id, depth = map(int, pos.split(':'))
+        return leaf_id, depth
+
+    def span_from_pos(self, leaf_id, depth):
         # requires no conversion
         #print sub_tree.leaves()
-        leaf_id, depth = map(int, pos.split(':'))
+        leaf_id, depth
         subtree = self.subtree_from_pos(leaf_id, depth)
+        print subtree.node
         span_words = subtree.leaves()
         span = (leaf_id, leaf_id+len(span_words)-1)
         return span

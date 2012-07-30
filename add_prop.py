@@ -93,7 +93,8 @@ if __name__ == "__main__":
         pb_data = parse_onprop(prop)
         args = pb_data['args']
         for pos, role in args:
-            start, end = pt.span_from_pos(pos)
+            leaf_id, depth = pt.parse_pos(pos)
+            start, end = pt.span_from_pos(leaf_id, depth)
             print start, end
         print pb_data
 
