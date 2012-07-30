@@ -8,12 +8,13 @@ Directed Acyclic Graphs.
 #from rule import Rule
 
 from collections import defaultdict
-from amr_parser import make_amr_parser, SpecialValue, StrLiteral
+from amr_parser import make_amr_parser, SpecialValue, StrLiteral, NonterminalLabel
 import functools
 import unittest
 import re
 import sys
 import copy
+import pyparsing
 
 # Try to import modules to render DAGs
 try:
@@ -76,7 +77,7 @@ def ast_to_dag(ast):
                     childnode = child[0]                                           
                     if type(childnode) is str and childnode.startswith("@"):
                         childnode = childnode.replace("@","")
-                        dag.external_nodes.add(childnode)                               
+                        dag.external_nodes.append(childnode)                               
                     dag[node].append(role, childnode)
                     x = dag[childnode]
                     rec_step(child)
@@ -87,13 +88,13 @@ def ast_to_dag(ast):
                         if type(c) == tuple and len(c) == 3:
                             if type(child) is str and c[0].startswith("@"):
                                 c[0] = c[0].replace("@","")
-                                dag.external_nodes.add(c[0])                               
+                                dag.external_nodes.append(c[0])                               
                             childnode.add(c[0])
                             rec_step(c)
                         else:
                             if type(c) is str and c.startswith("@"):
                                 c = c.replace("@","")
-                                dag.external_nodes.add(c)                               
+                                dag.external_nodes.append(c)                               
                             childnode.add(c)
                     newchild = tuple(childnode)        
                     dag[node].append(role, newchild)
@@ -102,7 +103,7 @@ def ast_to_dag(ast):
                 else: # Just assume this node is some special symbol
                     if type(child) is str and child.startswith("@"):
                         child = child.replace("@","")
-                        dag.external_nodes.add(child)
+                        dag.external_nodes.append(child)
                         dag[node].append(role, child)
                     else:
                         dag[node].append(role, child)
@@ -195,6 +196,7 @@ class Dag(defaultdict):
         self.replace_count = 0    # Count how many replacements have occured in this DAG
                                   # to prefix unique new node IDs for glued fragments.
 
+        self.__cached_triples = None
 
     def __reduce__(self):
         t = defaultdict.__reduce__(self)
@@ -226,21 +228,22 @@ class Dag(defaultdict):
         for parent, relation, child in triples: 
             new_par = parent.replace("@","")       
             if parent.startswith("@"):
-                dag.external_nodes.add(new_par)
+                dag.external_nodes.append(new_par)
 
             if type(child) is tuple: 
                 new_child = []
                 for c in child: 
                     new_c = c.replace("@","")
                     if c.startswith("@"):
-                        dag.external_nodes.add(new_c)
+                        dag.external_nodes.append(new_c)
+                    new_child = list(new_child)
                     new_child.append(new_c)
                     new_child = tuple(new_child)
             else: # Allow triples to have single string children for convenience. 
                   # and downward compatibility.
                 tmpchild = child.replace("@","")
                 if child.startswith("@"):
-                    dag.external_nodes.add(tmp_child)
+                    dag.external_nodes.append(tmpchild)
                 new_child = (tmpchild,)
 
             dag._add_triple(new_par, relation, new_child)
@@ -376,11 +379,14 @@ class Dag(defaultdict):
     def has_edge(self, par, rel, child):
         return par in self and rel in self[par] and child in self[par].getall(rel) 
 
-    @memoize
     def triples(self, start_node = None):
         """
         Traverse the DAG breadth first to collect a list of (parent, relation, child) triples.
         """
+
+        if self.__cached_triples:
+          return self.__cached_triples
+
         triples = []
         tabu = set()
 
@@ -400,6 +406,8 @@ class Dag(defaultdict):
                     else:
                         if not child in tabu: 
                             queue.append(child)
+
+        self.__cached_triples = triples
         return triples
     
     def out_edges(self, node): 
@@ -819,37 +827,6 @@ class Dag(defaultdict):
     #            return " ".join(nodes)
     #
     #    return " ".join(self.dfs(extractor, combiner, hedgecombiner))
-
-        
-class NonterminalLabel(object):
-    """
-    There can be multiple nonterminal edges with the same symbol. Wrap the 
-    edge into an object so two edges do not compare equal.
-    Nonterminal edges carry a nonterminal symbol and an index that identifies
-    it uniquely in a rule.
-    """
-    def __init__(self, label, index = None):
-        self.label = label
-        self.index = index  
-
-    def __eq__(self, other):
-        try: 
-            return self.label == other.label and self.index == other.index
-        except AttributeError:
-            return False     
-    
-    def __repr__(self):
-        return "NT(#%s)" % str(self)
-
-    def __str__(self):
-        if self.index is not None:
-            return "#%s[%s]" % (str(self.label), str(self.index))
-        else: 
-            return "#%s" % str(self.label)
-
-    def __hash__(self):
-        return 83 * hash(self.label) + 17 * hash(self.index)
-
 
 if __name__ == "__main__":
 
