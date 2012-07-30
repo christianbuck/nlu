@@ -36,7 +36,7 @@ def read_propbank(filename):
         if not m:
             print line
         fileId, sentNr, raw = m.groups()
-        pb[fileId][sentNr].append(raw)
+        pb[fileId][int(sentNr)].append(raw)
     return pb
 
 
@@ -52,9 +52,9 @@ def read_onprop(filename):
         m = re.search('wsj_(\d+)@\S+ (\d+) \d+ gold (.*)$', line)
         if not m:
             print line
-        print m.groups()
+        #print m.groups()
         fileId, sentNr, raw = m.groups()
-        pb[fileId][sentNr].append(raw)
+        pb[fileId][int(sentNr)].append(raw)
 
     return pb
 
@@ -66,7 +66,9 @@ def parse_onprop(raw_prop):
     re_onprop = re.compile(r'^(?P<baseform>\w+)-(?P<basepos>\w) (?P<roleset>\w+[.]\d+) (?P<inflection>\S+) (?P<args>.*)$')
     m = re_onprop.match(raw_prop.strip())
     assert m, "no match: %s" %raw_prop
-    m.groupdict()
+    d = m.groupdict()
+    d['args'] = [arg.split('-',1) for arg in d['args'].split()]
+    return d
 
 
 if __name__ == "__main__":
@@ -78,25 +80,39 @@ if __name__ == "__main__":
     args = parser.parse_args(sys.argv[1:])
 
     pb = read_onprop(args.probbank)
-    for fileid in pb:
-        for sentNr in pb[fileid]:
-            for prop in pb[fileid][sentNr]:
-                parse_onprop(prop)
     #print pb
+
+    docId, sentNr = re.search(r'wsj_(\d+).(\d+).json', args.json).groups()
+    sentNr = int(sentNr)
+    data = json.load(open(args.json))
+
+    pt = SpanTree.parse(data['goldparse'])
+    print list(enumerate(pt.leaves()))
+
+    for prop in pb[docId][sentNr-1]:
+        pb_data = parse_onprop(prop)
+        args = pb_data['args']
+        for pos, role in args:
+            start, end = pt.span_from_pos(pos)
+            print start, end
+        print pb_data
+
+    #print pt.span_from_pos("1:0")
+
     sys.exit()
+
+
+    #print data.keys()
+    #print docId, sentNr
+    #print pb[docId].keys()
+    #assert sentNr in pb[docId]
+
+    #print pb
 
     pb = read_propbank(args.probbank)
 
     # json filename should look like this:
     # /home/buck/corpora/ontonotes-release-4.0/data/files/data/english/annotations/nw/wsj/01/wsj_0125.1.json
-    docId, sentNr = re.search(r'wsj_(\d+).(\d+).json', args.json).groups()
-    print docId, sentNr
-
-    assert docId in pb
-    #print pb[docId].keys()
-    #assert sentNr in pb[docId]
-
-    data = json.load(open(args.json))
 
     pb_dict = {'raw': pb[docId][sentNr]}
 

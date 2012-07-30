@@ -31,12 +31,15 @@ class SpanTree(ParentedTree):
                 return True
         return False
 
-    def span_from_pos(self, pos):
-        leaf_id, depth = map(int, pos.split(':'))
-
-        #print leaf_id, depth, role
+    def subtree_from_pos(self, leaf_id, depth):
         sub_tree = self[self.leaf_treeposition(leaf_id)[:-(depth+1)]]
+        return sub_tree
+
+    def span_from_pos(self, pos):
+        # requires no conversion
         #print sub_tree.leaves()
-        span_words = sub_tree.leaves()
+        leaf_id, depth = map(int, pos.split(':'))
+        subtree = self.subtree_from_pos(leaf_id, depth)
+        span_words = subtree.leaves()
         span = (leaf_id, leaf_id+len(span_words)-1)
         return span
