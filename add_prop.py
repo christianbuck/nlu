@@ -5,6 +5,7 @@ from collections import defaultdict
 from itertools import imap, izip
 import json
 import re
+from spantree import SpanTree
 
 '''
 we want this:
