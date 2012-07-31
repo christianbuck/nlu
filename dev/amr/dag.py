@@ -232,7 +232,7 @@ class Dag(defaultdict):
             else:   # e.g. if an int
                 new_par = parent
 
-            if type(child) is tuple: 
+            if type(child) is tuple:
                 new_child = []
                 for c in child:
                     if isinstance(c, basestring):
