@@ -94,6 +94,15 @@ if __name__ == "__main__":
         args = pb_data['args']
         for pos, role in args:
             leaf_id, depth = pt.parse_pos(pos)
+            subtree = pt.subtree_from_pos(leaf_id, depth)
+            print 'node:', subtree.node
+            if subtree.node == '-NONE-':
+                leaves = subtree.leaves()
+                if len(leaves) == 1:
+                    trace_id = int(leaves[0].split('-')[-1])
+                    print 'looking for trace', trace_id
+                    pt.find_trace(trace_id)
+            print 'children:', subtree.leaves()
             start, end = pt.span_from_pos(leaf_id, depth)
             print start, end
         print pb_data
