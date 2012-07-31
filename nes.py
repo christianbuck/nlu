@@ -10,7 +10,7 @@ import os, sys, re, codecs, fileinput, json
 from dev.amr.amr import Amr
 
 import pipeline
-from pipeline import choose_head, new_concept
+from pipeline import choose_head, new_concept, parent_edges
 
 '''
 Example input, from wsj_0002.1:
@@ -56,8 +56,7 @@ def main(sentenceId, depParse, inAMR, alignment, completed):
             assert j==i
             # make the word the AMR head
             if not (x or x==0): # need a new variable
-                assert not completed[h]
-                x = new_concept(pipeline.token2concept(depParse[h+1]['dep']), amr, alignment, h)
+                x = new_concept(pipeline.token2concept(depParse[h+1][0]['dep']), amr, alignment, h)
                 triples.add((str(x), 'DUMMY', ''))
         else:
             if not (x or x==0): # need a new variable
@@ -71,8 +70,12 @@ def main(sentenceId, depParse, inAMR, alignment, completed):
                     
         
         for k in range(i,j+1):
-            assert not completed[k]
-            completed[k] = True
+            assert not completed[0][k]
+            completed[0][k] = True
+            print('completed token',k)
+            if k!=h:
+                for link in parent_edges(depParse[k]):
+                    completed[1][link] = True  # we don't need to attach non-head parts of names anywhere else
     
     amr = Amr.from_triples(amr.triples(instances=False)+list(triples), amr.node_to_concepts)
 

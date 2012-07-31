@@ -16,7 +16,14 @@ def main(sentenceId):
     import nes, adjsAndAdverbs
 
     # initialize input to first pipeline step
-    completed = [False]*len(depParse)
+    token_accounted_for = [False]*len(depParse)
+    '''Has the token been accounted for yet in the semantics?'''
+    
+    edge_accounted_for = {(dep['gov_idx'],m): False for m in range(len(depParse)) if depParse[m] for dep in depParse[m]}
+    '''Has the dependency edge been accounted for yet in the semantics?'''
+    
+    completed = token_accounted_for, edge_accounted_for
+    
     amr = Amr()
     alignments = Alignment()
 
@@ -24,7 +31,7 @@ def main(sentenceId):
     for m in [nes, adjsAndAdverbs]:
         depParse, amr, alignments, completed = m.main(sentenceId, depParse, amr, alignments, completed)
         print(repr(amr), file=sys.stderr)
-        print(alignments, completed, file=sys.stderr)
+        print(alignments, [deps[0]['dep'] for deps in depParse[1:] if deps and not completed[0][deps[0]['dep_idx']-1]], file=sys.stderr)
         print(amr, file=sys.stderr)
 
     # TODO: output
@@ -46,8 +53,16 @@ def loadDepParse(sentenceId):
         for entry in deps_concise:
             while len(deps)<entry['dep_idx']:
                 deps.append(None)   # dependency root, puncutation, or function word incorporated into a dependecy relation
-            deps.append(entry)
+            if entry['dep_idx']==len(deps):
+                deps.append([])
+            deps[-1].append(entry)  # can be multiple entries for a token, because tokens can have multiple heads
         return deps
+
+def parents(depParseEntry):
+    return [dep['dep_idx'] for dep in depParseEntry] if depParseEntry else []
+
+def parent_edges(depParseEntry):
+    return [(dep['gov_idx'],dep['dep_idx']) for dep in depParseEntry] if depParseEntry else []
 
 def choose_head(tokenIndices, depParse):
     # restricted version of least common subsumer:
@@ -56,7 +71,7 @@ def choose_head(tokenIndices, depParse):
     # are also in the NE
     frontier = set(tokenIndices)    # should end up with just (the head)
     for itm in set(frontier):
-        if depParse[itm+1]['gov_idx']-1 in tokenIndices:
+        if all((depitm['gov_idx']-1 in tokenIndices) for depitm in depParse[itm+1]):
             # subtract 1 to account for dependency root
             frontier.remove(itm)
     assert len(frontier)==1

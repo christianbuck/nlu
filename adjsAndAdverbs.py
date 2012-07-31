@@ -14,29 +14,48 @@ from pipeline import new_concept
 
 def main(sentenceId, depParse, inAMR, alignment, completed):
     amr = inAMR
-    for itm in depParse[1:]:
-        if itm is None: continue
-        i = itm['dep_idx']-1
-        if completed[i]: continue
-        if itm['rel'] in ['amod', 'advmod', 'dep', 'num']:
-            h = itm['gov_idx']-1 # i's head
-            x = alignment[:h] # index of variable associated with i's head, if any
-            if not (x or x==0): # need a new variable
-                assert not completed[h]
-                x = new_concept(pipeline.token2concept(depParse[itm['gov_idx']]['dep']), amr, alignment, h)
-            y = alignment[:i] # modifier variable
-            if not (y or y==0): # new variable
-                y = new_concept(pipeline.token2concept(itm['dep'].lower()), amr, alignment, i)
+    for deps in depParse[1:]:
+        if deps is None: continue
+        for itm in deps:
+            if completed[1][(itm['gov_idx'],itm['dep_idx'])]: continue
+            i = itm['dep_idx']-1
+            if itm['rel'] in ['amod', 'advmod', 'dep', 'num']:
+                h = itm['gov_idx']-1 # i's head
+                x = alignment[:h] # index of variable associated with i's head, if any
+                if not (x or x==0): # need a new variable
+                    assert not completed[0][h+1]
+                    w = depParse[itm['gov_idx']][0]['dep']  # modifier token
+                    #if itm['rel']=='advmod':    # adverbs sometimes not linked as advmod
+                    w = simplify_adv(w)
+                    x = new_concept(pipeline.token2concept(w), amr, alignment, h)
+                    completed[0][h+1] = True
+                y = alignment[:i] # modifier variable
+                if not (y or y==0): # new variable
+                    y = new_concept(pipeline.token2concept(itm['dep'].lower()), amr, alignment, i)
+                    completed[0][i+1] = True
+                if itm['rel']=='num':   # attach as :quant
+                    newtriple = (str(x), 'quant', str(y))   # TODO: for plain values, don't create a variable
+                else:   # attach with :mod relation
+                    newtriple = (str(x), 'mod', str(y))
                 
-            if itm['rel']=='num':   # attach as :quant
-                newtriple = (str(x), 'quant', str(y))   # TODO: for plain values, don't create a variable
-            else:   # attach with :mod relation
-                newtriple = (str(x), 'mod', str(y))
-            
-            amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
-            completed[i] = True
+                amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
+                
+                completed[1][(itm['gov_idx'],itm['dep_idx'])] = True
 
     return depParse, amr, alignment, completed
+
+adv_adj_lex = None
+def simplify_adv(w):
+    '''Try to simplify an adverb given a lexicon of corresponding adjectives.
+    E.g. seriously -> serious. If not found in the lexicon, return the input.'''
+    global adv_adj_lex
+    if adv_adj_lex is None:
+        adv_adj_lex = {}
+        with codecs.open('adj-adv-pairs.txt', 'r', 'utf-8') as lexF:
+            for ln in lexF:
+                adj, adv = ln[:-1].split('\t')
+                adv_adj_lex[adv] = adj
+    return adv_adj_lex.get(w,w)
 
 def sample_dep_parse():
     from nltk.corpus import dependency_treebank
