@@ -1,4 +1,5 @@
 from nltk.tree import ParentedTree
+import re
 
 class SpanTree(ParentedTree):
     """
@@ -6,6 +7,7 @@ class SpanTree(ParentedTree):
     This requires you to call 'convert' on the
     root node.
     """
+
 
     def convert(self): # todo: better name
         """
@@ -39,12 +41,25 @@ class SpanTree(ParentedTree):
         leaf_id, depth = map(int, pos.split(':'))
         return leaf_id, depth
 
+    def find_trace(self, trace_id):
+        '''
+        looks for a subtree with a node value of *-trace_id
+        return position in tree
+        '''
+        for pos in self.treepositions():
+            if self[pos[:-1]].height() > 2:
+                m = re.search('-(?P<traceid>\d+)$', self[pos].node)
+                if m and int(m.groupdict()['traceid']) == trace_id:
+                    return pos
+        return None
+
     def span_from_pos(self, leaf_id, depth):
         # requires no conversion
         #print sub_tree.leaves()
-        leaf_id, depth
+        #leaf_id, depth
         subtree = self.subtree_from_pos(leaf_id, depth)
-        print subtree.node
+        print 'node:', subtree.node
+        print 'children:', subtree.leaves()
         span_words = subtree.leaves()
         span = (leaf_id, leaf_id+len(span_words)-1)
         return span
