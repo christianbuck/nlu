@@ -85,6 +85,7 @@ if __name__ == "__main__":
     docId, sentNr = re.search(r'wsj_(\d+).(\d+).json', args.json).groups()
     sentNr = int(sentNr)
     data = json.load(open(args.json))
+    data['prop'] = []
 
     pt = SpanTree.parse(data['goldparse'])
     print list(enumerate(pt.leaves()))
@@ -92,20 +93,37 @@ if __name__ == "__main__":
     for prop in pb[docId][sentNr-1]:
         pb_data = parse_onprop(prop)
         args = pb_data['args']
+        new_args = []
         for pos, role in args:
+            words, start, end = '', None, None
             leaf_id, depth = pt.parse_pos(pos)
-            subtree = pt.subtree_from_pos(leaf_id, depth)
-            print 'node:', subtree.node
-            if subtree.node == '-NONE-':
-                leaves = subtree.leaves()
-                if len(leaves) == 1:
-                    trace_id = int(leaves[0].split('-')[-1])
-                    print 'looking for trace', trace_id
-                    pt.find_trace(trace_id)
-            print 'children:', subtree.leaves()
-            start, end = pt.span_from_pos(leaf_id, depth)
-            print start, end
+            if leaf_id != None and depth != None:
+                subtree = pt.subtree_from_pos(leaf_id, depth)
+                print 'node:', subtree.node
+                if subtree.node == '-NONE-':
+                    leaves = subtree.leaves()
+                    if len(leaves) == 1:
+                        trace_id = int(leaves[0].split('-')[-1])
+                        print 'looking for trace', trace_id
+                        tracepos = pt.find_trace(trace_id)
+                        if tracepos != None:
+                            print 'trace %s found! Here:', tracepos
+                            words = ' '.join(pt[tracepos].leaves())
+                            st = SpanTree.parse(str(pt))
+                            st.convert()
+                            start = min(st[tracepos].leaves())
+                            end = max(st[tracepos].leaves())
+                else:
+                    words = ' '.join(subtree.leaves())
+                    start, end = pt.span_from_pos(leaf_id, depth)
+            new_args.append( [role, pos, start, end, words] )
+
+        pb_data['args'] = new_args
+        data['prop'].append(pb_data)
+
         print pb_data
+
+    print json.dumps(data, indent=2)
 
     #print pt.span_from_pos("1:0")
 

@@ -38,8 +38,11 @@ class SpanTree(ParentedTree):
         return sub_tree
 
     def parse_pos(self, pos):
-        leaf_id, depth = map(int, pos.split(':'))
-        return leaf_id, depth
+        try:
+            leaf_id, depth = map(int, pos.split(':'))
+            return leaf_id, depth
+        except:
+            return None, None
 
     def find_trace(self, trace_id):
         '''
@@ -58,8 +61,8 @@ class SpanTree(ParentedTree):
         #print sub_tree.leaves()
         #leaf_id, depth
         subtree = self.subtree_from_pos(leaf_id, depth)
-        print 'node:', subtree.node
-        print 'children:', subtree.leaves()
+        #print 'node:', subtree.node
+        #print 'children:', subtree.leaves()
         span_words = subtree.leaves()
         span = (leaf_id, leaf_id+len(span_words)-1)
         return span
