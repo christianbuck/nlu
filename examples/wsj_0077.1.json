@@ -1,0 +1,381 @@
+{
+  "stanford_dep": [
+    {
+      "dep": "Investors", 
+      "dep_idx": 1, 
+      "gov": "took", 
+      "rel": "nsubj", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "Investors", 
+      "dep_idx": 1, 
+      "gov": "book", 
+      "rel": "xsubj", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "took", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": 0
+    }, 
+    {
+      "dep": "advantage", 
+      "dep_idx": 3, 
+      "gov": "took", 
+      "rel": "dobj", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "Tuesday", 
+      "dep_idx": 5, 
+      "gov": "rally", 
+      "rel": "poss", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "stock", 
+      "dep_idx": 7, 
+      "gov": "rally", 
+      "rel": "nn", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "rally", 
+      "dep_idx": 8, 
+      "gov": "took", 
+      "rel": "prep_of", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 10, 
+      "gov": "book", 
+      "rel": "aux", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "book", 
+      "dep_idx": 11, 
+      "gov": "took", 
+      "rel": "xcomp", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "some", 
+      "dep_idx": 12, 
+      "gov": "profits", 
+      "rel": "det", 
+      "gov_idx": 13
+    }, 
+    {
+      "dep": "profits", 
+      "dep_idx": 13, 
+      "gov": "book", 
+      "rel": "dobj", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "yesterday", 
+      "dep_idx": 14, 
+      "gov": "took", 
+      "rel": "tmod", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "leaving", 
+      "dep_idx": 17, 
+      "gov": "took", 
+      "rel": "partmod", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "leaving", 
+      "dep_idx": 17, 
+      "gov": "took", 
+      "rel": "xcomp", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "stocks", 
+      "dep_idx": 18, 
+      "gov": "leaving", 
+      "rel": "dobj", 
+      "gov_idx": 17
+    }, 
+    {
+      "dep": "up", 
+      "dep_idx": 20, 
+      "gov": "fractionally", 
+      "rel": "dep", 
+      "gov_idx": 21
+    }, 
+    {
+      "dep": "fractionally", 
+      "dep_idx": 21, 
+      "gov": "leaving", 
+      "rel": "dep", 
+      "gov_idx": 17
+    }
+  ], 
+  "text": "Investors took advantage of Tuesday 's stock rally to book some profits yesterday , leaving stocks up fractionally .", 
+  "coref_chains": [], 
+  "bbn_ne": [
+    [
+      0, 
+      0, 
+      "Investors", 
+      "PER_DESC", 
+      "", 
+      "", 
+      false
+    ]
+  ], 
+  "sentence_nr": 1, 
+  "tuples": [
+    [
+      "nsubj", 
+      "took", 
+      "Investors"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "took"
+    ], 
+    [
+      "dobj", 
+      "took", 
+      "advantage"
+    ], 
+    [
+      "poss", 
+      "rally", 
+      "Tuesday"
+    ], 
+    [
+      "nn", 
+      "rally", 
+      "stock"
+    ], 
+    [
+      "prep_of", 
+      "advantage", 
+      "rally"
+    ], 
+    [
+      "aux", 
+      "book", 
+      "to"
+    ], 
+    [
+      "xcomp", 
+      "took", 
+      "book"
+    ], 
+    [
+      "det", 
+      "profits", 
+      "some"
+    ], 
+    [
+      "dobj", 
+      "book", 
+      "profits"
+    ], 
+    [
+      "tmod", 
+      "book", 
+      "yesterday"
+    ], 
+    [
+      "partmod", 
+      "book", 
+      "leaving"
+    ], 
+    [
+      "xcomp", 
+      "book", 
+      "leaving"
+    ], 
+    [
+      "dobj", 
+      "leaving", 
+      "stocks"
+    ], 
+    [
+      "advmod", 
+      "leaving", 
+      "up"
+    ], 
+    [
+      "advmod", 
+      "leaving", 
+      "fractionally"
+    ]
+  ], 
+  "words": [
+    [
+      "Investors", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "investor", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "took", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "take", 
+        "PartOfSpeech": "VBD"
+      }
+    ], 
+    [
+      "advantage", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "advantage", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "of", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "Tuesday", 
+      {
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "XXXX-WXX-2", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"XXXX-WXX-2\" type=\"DATE\">Tuesday</TIMEX3>", 
+        "PartOfSpeech": "NNP", 
+        "Lemma": "Tuesday"
+      }
+    ], 
+    [
+      "'s", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "'s", 
+        "PartOfSpeech": "POS"
+      }
+    ], 
+    [
+      "stock", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "stock", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "rally", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "rally", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "to", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "to", 
+        "PartOfSpeech": "TO"
+      }
+    ], 
+    [
+      "book", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "book", 
+        "PartOfSpeech": "VB"
+      }
+    ], 
+    [
+      "some", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "some", 
+        "PartOfSpeech": "DT"
+      }
+    ], 
+    [
+      "profits", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "profit", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "yesterday", 
+      {
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "Timex": "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET P-1D\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">yesterday</TIMEX3>", 
+        "PartOfSpeech": "NN", 
+        "Lemma": "yesterday"
+      }
+    ], 
+    [
+      ",", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ",", 
+        "PartOfSpeech": ","
+      }
+    ], 
+    [
+      "leaving", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "leave", 
+        "PartOfSpeech": "VBG"
+      }
+    ], 
+    [
+      "stocks", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "stock", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "up", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "up", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "fractionally", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "fractionally", 
+        "PartOfSpeech": "RB"
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": "."
+      }
+    ]
+  ], 
+  "treebank_sentence": "Investors took advantage of Tuesday 's stock rally *PRO*-1 to book some profits yesterday , *PRO*-1 leaving stocks *PRO*-2 up fractionally .", 
+  "parsetree": "(ROOT (S (NP (NNS Investors)) (VP (VBD took) (NP (NP (NN advantage)) (PP (IN of) (NP (NP (NNP Tuesday) (POS 's)) (NN stock) (NN rally)))) (S (VP (TO to) (VP (VB book) (NP (DT some) (NNS profits)) (NP-TMP (NN yesterday)) (, ,) (S (VP (VBG leaving) (NP (NNS stocks)) (ADVP (IN up)) (ADVP (RB fractionally)))))))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ-1 (NNS Investors)) (VP (VBD took) (NP (NN advantage)) (PP-CLR (IN of) (NP (NP (NNP Tuesday) (POS 's)) (NN stock) (NN rally))) (S-PRP (NP-SBJ (-NONE- *PRO*-1)) (VP (TO to) (VP (VB book) (NP (DT some) (NNS profits))))) (NP-TMP (NN yesterday)) (, ,) (S-ADV (NP-SBJ (-NONE- *PRO*-1)) (VP (VBG leaving) (NP-2 (NNS stocks)) (S-CLR (NP-SBJ (-NONE- *PRO*-2)) (ADVP-PRD (IN up) (ADVP (RB fractionally))))))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

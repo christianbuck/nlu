@@ -1,0 +1,555 @@
+{
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 1, 
+      "gov": "Reserve", 
+      "rel": "det", 
+      "gov_idx": 3
+    }, 
+    {
+      "dep": "Federal", 
+      "dep_idx": 2, 
+      "gov": "Reserve", 
+      "rel": "nn", 
+      "gov_idx": 3
+    }, 
+    {
+      "dep": "Reserve", 
+      "dep_idx": 3, 
+      "gov": "Book", 
+      "rel": "poss", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "Beige", 
+      "dep_idx": 5, 
+      "gov": "Book", 
+      "rel": "nn", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "Book", 
+      "dep_idx": 6, 
+      "gov": "indicated", 
+      "rel": "nsubj", 
+      "gov_idx": 17
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 8, 
+      "gov": "summary", 
+      "rel": "det", 
+      "gov_idx": 9
+    }, 
+    {
+      "dep": "summary", 
+      "dep_idx": 9, 
+      "gov": "Book", 
+      "rel": "appos", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "economic", 
+      "dep_idx": 11, 
+      "gov": "conditions", 
+      "rel": "amod", 
+      "gov_idx": 12
+    }, 
+    {
+      "dep": "conditions", 
+      "dep_idx": 12, 
+      "gov": "summary", 
+      "rel": "prep_of", 
+      "gov_idx": 9
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 14, 
+      "gov": "country", 
+      "rel": "det", 
+      "gov_idx": 15
+    }, 
+    {
+      "dep": "country", 
+      "dep_idx": 15, 
+      "gov": "conditions", 
+      "rel": "prep_across", 
+      "gov_idx": 12
+    }, 
+    {
+      "dep": "indicated", 
+      "dep_idx": 17, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": 0
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 18, 
+      "gov": "remains", 
+      "rel": "complm", 
+      "gov_idx": 22
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 19, 
+      "gov": "economy", 
+      "rel": "det", 
+      "gov_idx": 21
+    }, 
+    {
+      "dep": "overall", 
+      "dep_idx": 20, 
+      "gov": "economy", 
+      "rel": "amod", 
+      "gov_idx": 21
+    }, 
+    {
+      "dep": "economy", 
+      "dep_idx": 21, 
+      "gov": "remains", 
+      "rel": "nsubj", 
+      "gov_idx": 22
+    }, 
+    {
+      "dep": "remains", 
+      "dep_idx": 22, 
+      "gov": "indicated", 
+      "rel": "ccomp", 
+      "gov_idx": 17
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 24, 
+      "gov": "pattern", 
+      "rel": "det", 
+      "gov_idx": 25
+    }, 
+    {
+      "dep": "pattern", 
+      "dep_idx": 25, 
+      "gov": "remains", 
+      "rel": "prep_in", 
+      "gov_idx": 22
+    }, 
+    {
+      "dep": "sluggish", 
+      "dep_idx": 27, 
+      "gov": "growth", 
+      "rel": "amod", 
+      "gov_idx": 28
+    }, 
+    {
+      "dep": "growth", 
+      "dep_idx": 28, 
+      "gov": "pattern", 
+      "rel": "prep_of", 
+      "gov_idx": 25
+    }
+  ], 
+  "text": "The Federal Reserve 's Beige Book , a summary of economic conditions across the country , indicated that the overall economy remains in a pattern of sluggish growth .", 
+  "coref_chains": [], 
+  "bbn_ne": [
+    [
+      1, 
+      2, 
+      "Federal Reserve", 
+      "ORGANIZATION", 
+      "GOVERNMENT", 
+      "", 
+      false
+    ], 
+    [
+      4, 
+      5, 
+      "Beige Book", 
+      "WORK_OF_ART", 
+      "BOOK", 
+      "", 
+      false
+    ]
+  ], 
+  "coref": [
+    [
+      [
+        [
+          "The Federal Reserve 's Beige Book", 
+          0, 
+          5, 
+          0, 
+          6
+        ], 
+        [
+          "The Federal Reserve 's Beige Book , a summary of economic conditions across the country ,", 
+          0, 
+          5, 
+          0, 
+          16
+        ]
+      ], 
+      [
+        [
+          "a summary of economic conditions across the country", 
+          0, 
+          8, 
+          7, 
+          15
+        ], 
+        [
+          "The Federal Reserve 's Beige Book , a summary of economic conditions across the country ,", 
+          0, 
+          5, 
+          0, 
+          16
+        ]
+      ]
+    ]
+  ], 
+  "sentence_nr": 12, 
+  "tuples": [
+    [
+      "det", 
+      "Reserve", 
+      "The"
+    ], 
+    [
+      "nn", 
+      "Reserve", 
+      "Federal"
+    ], 
+    [
+      "poss", 
+      "Book", 
+      "Reserve"
+    ], 
+    [
+      "nn", 
+      "Book", 
+      "Beige"
+    ], 
+    [
+      "nsubj", 
+      "indicated", 
+      "Book"
+    ], 
+    [
+      "det", 
+      "summary", 
+      "a"
+    ], 
+    [
+      "appos", 
+      "Book", 
+      "summary"
+    ], 
+    [
+      "amod", 
+      "conditions", 
+      "economic"
+    ], 
+    [
+      "prep_of", 
+      "summary", 
+      "conditions"
+    ], 
+    [
+      "det", 
+      "country", 
+      "the"
+    ], 
+    [
+      "prep_across", 
+      "conditions", 
+      "country"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "indicated"
+    ], 
+    [
+      "complm", 
+      "remains", 
+      "that"
+    ], 
+    [
+      "det", 
+      "economy", 
+      "the"
+    ], 
+    [
+      "amod", 
+      "economy", 
+      "overall"
+    ], 
+    [
+      "nsubj", 
+      "remains", 
+      "economy"
+    ], 
+    [
+      "ccomp", 
+      "indicated", 
+      "remains"
+    ], 
+    [
+      "det", 
+      "pattern", 
+      "a"
+    ], 
+    [
+      "prep_in", 
+      "remains", 
+      "pattern"
+    ], 
+    [
+      "amod", 
+      "growth", 
+      "sluggish"
+    ], 
+    [
+      "prep_of", 
+      "pattern", 
+      "growth"
+    ]
+  ], 
+  "words": [
+    [
+      "The", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT"
+      }
+    ], 
+    [
+      "Federal", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Federal", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "Reserve", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Reserve", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "'s", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "'s", 
+        "PartOfSpeech": "POS"
+      }
+    ], 
+    [
+      "Beige", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "Beige", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "Book", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "Book", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      ",", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ",", 
+        "PartOfSpeech": ","
+      }
+    ], 
+    [
+      "a", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "a", 
+        "PartOfSpeech": "DT"
+      }
+    ], 
+    [
+      "summary", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "summary", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "of", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "economic", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "economic", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "conditions", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "condition", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "across", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "across", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "the", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT"
+      }
+    ], 
+    [
+      "country", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "country", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      ",", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ",", 
+        "PartOfSpeech": ","
+      }
+    ], 
+    [
+      "indicated", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "indicate", 
+        "PartOfSpeech": "VBD"
+      }
+    ], 
+    [
+      "that", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "that", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "the", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT"
+      }
+    ], 
+    [
+      "overall", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "overall", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "economy", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "economy", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "remains", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "remain", 
+        "PartOfSpeech": "VBZ"
+      }
+    ], 
+    [
+      "in", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "in", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "a", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "a", 
+        "PartOfSpeech": "DT"
+      }
+    ], 
+    [
+      "pattern", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "pattern", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "of", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "sluggish", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "sluggish", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "growth", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "growth", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": "."
+      }
+    ]
+  ], 
+  "treebank_sentence": "The Federal Reserve 's Beige Book , a summary of economic conditions across the country , indicated that the overall economy remains in a pattern of sluggish growth .", 
+  "parsetree": "(ROOT (S (NP (NP (NP (DT The) (NNP Federal) (NNP Reserve) (POS 's)) (NNP Beige) (NNP Book)) (, ,) (NP (NP (DT a) (NN summary)) (PP (IN of) (NP (NP (JJ economic) (NNS conditions)) (PP (IN across) (NP (DT the) (NN country)))))) (, ,)) (VP (VBD indicated) (SBAR (IN that) (S (NP (DT the) (JJ overall) (NN economy)) (VP (VBZ remains) (PP (IN in) (NP (NP (DT a) (NN pattern)) (PP (IN of) (NP (JJ sluggish) (NN growth))))))))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NP (NP (DT The) (NNP Federal) (NNP Reserve) (POS 's)) (NNP Beige) (NNP Book)) (, ,) (NP (NP (DT a) (NN summary)) (PP (IN of) (NP (NP (JJ economic) (NNS conditions)) (PP-LOC (IN across) (NP (DT the) (NN country)))))) (, ,)) (VP (VBD indicated) (SBAR (IN that) (S (NP-SBJ (DT the) (JJ overall) (NN economy)) (VP (VBZ remains) (PP-LOC-PRD (IN in) (NP (NP (DT a) (NN pattern)) (PP (IN of) (NP (JJ sluggish) (NN growth))))))))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

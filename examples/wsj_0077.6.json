@@ -1,0 +1,248 @@
+{
+  "stanford_dep": [
+    {
+      "dep": "Continuing", 
+      "dep_idx": 1, 
+      "gov": "demand", 
+      "rel": "amod", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "demand", 
+      "dep_idx": 2, 
+      "gov": "boosted", 
+      "rel": "nsubj", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "dollars", 
+      "dep_idx": 4, 
+      "gov": "demand", 
+      "rel": "prep_for", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "Japanese", 
+      "dep_idx": 6, 
+      "gov": "investors", 
+      "rel": "amod", 
+      "gov_idx": 7
+    }, 
+    {
+      "dep": "investors", 
+      "dep_idx": 7, 
+      "gov": "demand", 
+      "rel": "prep_from", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "boosted", 
+      "dep_idx": 8, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": 0
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 9, 
+      "gov": "currency", 
+      "rel": "det", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "U.S.", 
+      "dep_idx": 10, 
+      "gov": "currency", 
+      "rel": "nn", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "currency", 
+      "dep_idx": 11, 
+      "gov": "boosted", 
+      "rel": "dobj", 
+      "gov_idx": 8
+    }
+  ], 
+  "text": "Continuing demand for dollars from Japanese investors boosted the U.S. currency .", 
+  "coref_chains": [], 
+  "bbn_ne": [
+    [
+      5, 
+      5, 
+      "Japanese", 
+      "NORP", 
+      "NATIONALITY", 
+      "", 
+      false
+    ], 
+    [
+      6, 
+      6, 
+      "investors", 
+      "PER_DESC", 
+      "", 
+      "", 
+      false
+    ], 
+    [
+      9, 
+      9, 
+      "U.S.", 
+      "GPE", 
+      "COUNTRY", 
+      "", 
+      false
+    ]
+  ], 
+  "sentence_nr": 6, 
+  "tuples": [
+    [
+      "amod", 
+      "demand", 
+      "Continuing"
+    ], 
+    [
+      "nsubj", 
+      "boosted", 
+      "demand"
+    ], 
+    [
+      "prep_for", 
+      "demand", 
+      "dollars"
+    ], 
+    [
+      "amod", 
+      "investors", 
+      "Japanese"
+    ], 
+    [
+      "prep_from", 
+      "dollars", 
+      "investors"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "boosted"
+    ], 
+    [
+      "det", 
+      "currency", 
+      "the"
+    ], 
+    [
+      "nn", 
+      "currency", 
+      "U.S."
+    ], 
+    [
+      "dobj", 
+      "boosted", 
+      "currency"
+    ]
+  ], 
+  "words": [
+    [
+      "Continuing", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "continue", 
+        "PartOfSpeech": "VBG"
+      }
+    ], 
+    [
+      "demand", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "demand", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "for", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "for", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "dollars", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "dollar", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "from", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "from", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "Japanese", 
+      {
+        "NamedEntityTag": "MISC", 
+        "Lemma": "japanese", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "investors", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "investor", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "boosted", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "boost", 
+        "PartOfSpeech": "VBD"
+      }
+    ], 
+    [
+      "the", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT"
+      }
+    ], 
+    [
+      "U.S.", 
+      {
+        "NamedEntityTag": "LOCATION", 
+        "Lemma": "U.S.", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "currency", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "currency", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": "."
+      }
+    ]
+  ], 
+  "treebank_sentence": "Continuing demand for dollars from Japanese investors boosted the U.S. currency .", 
+  "parsetree": "(ROOT (S (NP (NP (VBG Continuing) (NN demand)) (PP (IN for) (NP (NP (NNS dollars)) (PP (IN from) (NP (JJ Japanese) (NNS investors)))))) (VP (VBD boosted) (NP (DT the) (NNP U.S.) (NN currency))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NP (VBG Continuing) (NN demand)) (PP (IN for) (NP (NNS dollars))) (PP (IN from) (NP (JJ Japanese) (NNS investors)))) (VP (VBD boosted) (NP (DT the) (NNP U.S.) (NN currency))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

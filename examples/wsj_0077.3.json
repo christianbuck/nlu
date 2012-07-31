@@ -1,0 +1,366 @@
+{
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 1, 
+      "gov": "Average", 
+      "rel": "det", 
+      "gov_idx": 5
+    }, 
+    {
+      "dep": "Dow", 
+      "dep_idx": 2, 
+      "gov": "Jones", 
+      "rel": "nn", 
+      "gov_idx": 3
+    }, 
+    {
+      "dep": "Jones", 
+      "dep_idx": 3, 
+      "gov": "Average", 
+      "rel": "nn", 
+      "gov_idx": 5
+    }, 
+    {
+      "dep": "Industrial", 
+      "dep_idx": 4, 
+      "gov": "Average", 
+      "rel": "nn", 
+      "gov_idx": 5
+    }, 
+    {
+      "dep": "Average", 
+      "dep_idx": 5, 
+      "gov": "finished", 
+      "rel": "nsubj", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "Average", 
+      "dep_idx": 5, 
+      "gov": "close", 
+      "rel": "xsubj", 
+      "gov_idx": 14
+    }, 
+    {
+      "dep": "finished", 
+      "dep_idx": 6, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": 0
+    }, 
+    {
+      "dep": "less", 
+      "dep_idx": 7, 
+      "gov": "higher", 
+      "rel": "npadvmod", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 9, 
+      "gov": "point", 
+      "rel": "det", 
+      "gov_idx": 10
+    }, 
+    {
+      "dep": "point", 
+      "dep_idx": 10, 
+      "gov": "less", 
+      "rel": "prep_than", 
+      "gov_idx": 7
+    }, 
+    {
+      "dep": "higher", 
+      "dep_idx": 11, 
+      "gov": "finished", 
+      "rel": "advmod", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 13, 
+      "gov": "close", 
+      "rel": "aux", 
+      "gov_idx": 14
+    }, 
+    {
+      "dep": "close", 
+      "dep_idx": 14, 
+      "gov": "finished", 
+      "rel": "xcomp", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "2645.90", 
+      "dep_idx": 16, 
+      "gov": "close", 
+      "rel": "prep_at", 
+      "gov_idx": 14
+    }, 
+    {
+      "dep": "moderate", 
+      "dep_idx": 18, 
+      "gov": "close", 
+      "rel": "prep_in", 
+      "gov_idx": 14
+    }, 
+    {
+      "dep": "trading", 
+      "dep_idx": 19, 
+      "gov": "moderate", 
+      "rel": "amod", 
+      "gov_idx": 18
+    }
+  ], 
+  "text": "The Dow Jones Industrial Average finished less than a point higher to close at 2645.90 in moderate trading .", 
+  "coref_chains": [], 
+  "bbn_ne": [], 
+  "sentence_nr": 3, 
+  "tuples": [
+    [
+      "det", 
+      "Average", 
+      "The"
+    ], 
+    [
+      "nn", 
+      "Average", 
+      "Dow"
+    ], 
+    [
+      "nn", 
+      "Average", 
+      "Jones"
+    ], 
+    [
+      "nn", 
+      "Average", 
+      "Industrial"
+    ], 
+    [
+      "nsubj", 
+      "finished", 
+      "Average"
+    ], 
+    [
+      "xsubj", 
+      "close", 
+      "Average"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "finished"
+    ], 
+    [
+      "mwe", 
+      "than", 
+      "less"
+    ], 
+    [
+      "quantmod", 
+      "a", 
+      "than"
+    ], 
+    [
+      "num", 
+      "point", 
+      "a"
+    ], 
+    [
+      "npadvmod", 
+      "higher", 
+      "point"
+    ], 
+    [
+      "advmod", 
+      "finished", 
+      "higher"
+    ], 
+    [
+      "aux", 
+      "close", 
+      "to"
+    ], 
+    [
+      "xcomp", 
+      "finished", 
+      "close"
+    ], 
+    [
+      "prep_at", 
+      "close", 
+      "2645.90"
+    ], 
+    [
+      "amod", 
+      "trading", 
+      "moderate"
+    ], 
+    [
+      "prep_in", 
+      "close", 
+      "trading"
+    ]
+  ], 
+  "words": [
+    [
+      "The", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT"
+      }
+    ], 
+    [
+      "Dow", 
+      {
+        "NamedEntityTag": "MISC", 
+        "Lemma": "Dow", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "Jones", 
+      {
+        "NamedEntityTag": "MISC", 
+        "Lemma": "Jones", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "Industrial", 
+      {
+        "NamedEntityTag": "MISC", 
+        "Lemma": "Industrial", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "Average", 
+      {
+        "NamedEntityTag": "MISC", 
+        "Lemma": "Average", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "finished", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "finish", 
+        "PartOfSpeech": "VBD"
+      }
+    ], 
+    [
+      "less", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "less", 
+        "PartOfSpeech": "JJR"
+      }
+    ], 
+    [
+      "than", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "than", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "a", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "a", 
+        "PartOfSpeech": "DT"
+      }
+    ], 
+    [
+      "point", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "point", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "higher", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "higher", 
+        "PartOfSpeech": "JJR"
+      }
+    ], 
+    [
+      "to", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "to", 
+        "PartOfSpeech": "TO"
+      }
+    ], 
+    [
+      "close", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "close", 
+        "PartOfSpeech": "VB"
+      }
+    ], 
+    [
+      "at", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "at", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "2645.90", 
+      {
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "2645.9", 
+        "PartOfSpeech": "CD", 
+        "Lemma": "2645.90"
+      }
+    ], 
+    [
+      "in", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "in", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "moderate", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "moderate", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "trading", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "trading", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": "."
+      }
+    ]
+  ], 
+  "treebank_sentence": "The Dow Jones Industrial Average finished less than a point higher *PRO*-1 to close at 2645.90 in moderate trading .", 
+  "parsetree": "(ROOT (S (NP (DT The) (NNP Dow) (NNP Jones) (NNP Industrial) (NNP Average)) (VP (VBD finished) (ADVP (NP (QP (XS (JJR less) (IN than)) (DT a)) (NN point)) (JJR higher)) (S (VP (TO to) (VP (VB close) (PP (IN at) (NP (CD 2645.90))) (PP (IN in) (NP (JJ moderate) (NN trading))))))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ-1 (DT The) (NML (NNP Dow) (NNP Jones)) (NNP Industrial) (NNP Average)) (VP (VBD finished) (ADVP (NP (NP (JJR less)) (PP (IN than) (NP (DT a) (NN point)))) (RBR higher)) (S-PRP (NP-SBJ (-NONE- *PRO*-1)) (VP (TO to) (VP (VB close) (PP-CLR (IN at) (NP (CD 2645.90))) (PP-LOC (IN in) (NP (JJ moderate) (VBG trading))))))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

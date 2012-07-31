@@ -1,0 +1,417 @@
+{
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 1, 
+      "gov": "average", 
+      "rel": "det", 
+      "gov_idx": 3
+    }, 
+    {
+      "dep": "industrial", 
+      "dep_idx": 2, 
+      "gov": "average", 
+      "rel": "amod", 
+      "gov_idx": 3
+    }, 
+    {
+      "dep": "average", 
+      "dep_idx": 3, 
+      "gov": "jumped", 
+      "rel": "nsubj", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "jumped", 
+      "dep_idx": 4, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": 0
+    }, 
+    {
+      "dep": "more", 
+      "dep_idx": 5, 
+      "gov": "than", 
+      "rel": "advmod", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "than", 
+      "dep_idx": 6, 
+      "gov": "41", 
+      "rel": "quantmod", 
+      "gov_idx": 7
+    }, 
+    {
+      "dep": "41", 
+      "dep_idx": 7, 
+      "gov": "points", 
+      "rel": "num", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "points", 
+      "dep_idx": 8, 
+      "gov": "jumped", 
+      "rel": "dobj", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "Tuesday", 
+      "dep_idx": 9, 
+      "gov": "jumped", 
+      "rel": "tmod", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "as", 
+      "dep_idx": 10, 
+      "gov": "rushed", 
+      "rel": "mark", 
+      "gov_idx": 12
+    }, 
+    {
+      "dep": "speculators", 
+      "dep_idx": 11, 
+      "gov": "rushed", 
+      "rel": "nsubj", 
+      "gov_idx": 12
+    }, 
+    {
+      "dep": "speculators", 
+      "dep_idx": 11, 
+      "gov": "buy", 
+      "rel": "xsubj", 
+      "gov_idx": 15
+    }, 
+    {
+      "dep": "rushed", 
+      "dep_idx": 12, 
+      "gov": "jumped", 
+      "rel": "advcl", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 14, 
+      "gov": "buy", 
+      "rel": "aux", 
+      "gov_idx": 15
+    }, 
+    {
+      "dep": "buy", 
+      "dep_idx": 15, 
+      "gov": "rushed", 
+      "rel": "xcomp", 
+      "gov_idx": 12
+    }, 
+    {
+      "dep": "shares", 
+      "dep_idx": 16, 
+      "gov": "buy", 
+      "rel": "dobj", 
+      "gov_idx": 15
+    }, 
+    {
+      "dep": "potential", 
+      "dep_idx": 18, 
+      "gov": "targets", 
+      "rel": "amod", 
+      "gov_idx": 20
+    }, 
+    {
+      "dep": "takeover", 
+      "dep_idx": 19, 
+      "gov": "targets", 
+      "rel": "nn", 
+      "gov_idx": 20
+    }, 
+    {
+      "dep": "targets", 
+      "dep_idx": 20, 
+      "gov": "shares", 
+      "rel": "prep_of", 
+      "gov_idx": 16
+    }
+  ], 
+  "text": "The industrial average jumped more than 41 points Tuesday as speculators rushed to buy shares of potential takeover targets .", 
+  "coref_chains": [], 
+  "bbn_ne": [
+    [
+      10, 
+      10, 
+      "speculators", 
+      "PER_DESC", 
+      "", 
+      "", 
+      false
+    ]
+  ], 
+  "sentence_nr": 8, 
+  "tuples": [
+    [
+      "det", 
+      "average", 
+      "The"
+    ], 
+    [
+      "amod", 
+      "average", 
+      "industrial"
+    ], 
+    [
+      "nsubj", 
+      "jumped", 
+      "average"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "jumped"
+    ], 
+    [
+      "mwe", 
+      "than", 
+      "more"
+    ], 
+    [
+      "quantmod", 
+      "41", 
+      "than"
+    ], 
+    [
+      "num", 
+      "points", 
+      "41"
+    ], 
+    [
+      "dobj", 
+      "jumped", 
+      "points"
+    ], 
+    [
+      "tmod", 
+      "jumped", 
+      "Tuesday"
+    ], 
+    [
+      "mark", 
+      "rushed", 
+      "as"
+    ], 
+    [
+      "nsubj", 
+      "rushed", 
+      "speculators"
+    ], 
+    [
+      "xsubj", 
+      "buy", 
+      "speculators"
+    ], 
+    [
+      "advcl", 
+      "jumped", 
+      "rushed"
+    ], 
+    [
+      "aux", 
+      "buy", 
+      "to"
+    ], 
+    [
+      "xcomp", 
+      "rushed", 
+      "buy"
+    ], 
+    [
+      "dobj", 
+      "buy", 
+      "shares"
+    ], 
+    [
+      "amod", 
+      "targets", 
+      "potential"
+    ], 
+    [
+      "nn", 
+      "targets", 
+      "takeover"
+    ], 
+    [
+      "prep_of", 
+      "shares", 
+      "targets"
+    ]
+  ], 
+  "words": [
+    [
+      "The", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT"
+      }
+    ], 
+    [
+      "industrial", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "industrial", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "average", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "average", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "jumped", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "jump", 
+        "PartOfSpeech": "VBD"
+      }
+    ], 
+    [
+      "more", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "more", 
+        "PartOfSpeech": "JJR"
+      }
+    ], 
+    [
+      "than", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "than", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "41", 
+      {
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": ">41.0", 
+        "PartOfSpeech": "CD", 
+        "Lemma": "41"
+      }
+    ], 
+    [
+      "points", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "point", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "Tuesday", 
+      {
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "XXXX-WXX-2", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"XXXX-WXX-2\" type=\"DATE\">Tuesday</TIMEX3>", 
+        "PartOfSpeech": "NNP", 
+        "Lemma": "Tuesday"
+      }
+    ], 
+    [
+      "as", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "as", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "speculators", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "speculator", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "rushed", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "rush", 
+        "PartOfSpeech": "VBD"
+      }
+    ], 
+    [
+      "to", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "to", 
+        "PartOfSpeech": "TO"
+      }
+    ], 
+    [
+      "buy", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "buy", 
+        "PartOfSpeech": "VB"
+      }
+    ], 
+    [
+      "shares", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "share", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "of", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "potential", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "potential", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "takeover", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "takeover", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "targets", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "target", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": "."
+      }
+    ]
+  ], 
+  "treebank_sentence": "The industrial average jumped more than 41 points Tuesday as speculators rushed *PRO*-1 to buy shares of potential takeover targets .", 
+  "parsetree": "(ROOT (S (NP (DT The) (JJ industrial) (NN average)) (VP (VBD jumped) (NP (QP (XS (JJR more) (IN than)) (CD 41)) (NNS points)) (NP-TMP (NNP Tuesday)) (SBAR (IN as) (S (NP (NNS speculators)) (VP (VBD rushed) (S (VP (TO to) (VP (VB buy) (NP (NP (NNS shares)) (PP (IN of) (NP (JJ potential) (NN takeover) (NNS targets))))))))))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (DT The) (JJ industrial) (NN average)) (VP (VBD jumped) (NP-EXT (QP (RBR more) (IN than) (CD 41)) (NNS points)) (NP-TMP (NNP Tuesday)) (SBAR-TMP (IN as) (S (NP-SBJ-1 (NNS speculators)) (VP (VBD rushed) (S (NP-SBJ (-NONE- *PRO*-1)) (VP (TO to) (VP (VB buy) (NP (NP (NNS shares)) (PP (IN of) (NP (JJ potential) (NN takeover) (NNS targets))))))))))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

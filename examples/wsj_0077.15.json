@@ -1,0 +1,176 @@
+{
+  "stanford_dep": [
+    {
+      "dep": "Big", 
+      "dep_idx": 1, 
+      "gov": "Board", 
+      "rel": "nn", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "Board", 
+      "dep_idx": 2, 
+      "gov": "volume", 
+      "rel": "nn", 
+      "gov_idx": 3
+    }, 
+    {
+      "dep": "volume", 
+      "dep_idx": 3, 
+      "gov": "totaled", 
+      "rel": "nsubj", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "totaled", 
+      "dep_idx": 4, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": 0
+    }, 
+    {
+      "dep": "154.2", 
+      "dep_idx": 5, 
+      "gov": "million", 
+      "rel": "number", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "million", 
+      "dep_idx": 6, 
+      "gov": "shares", 
+      "rel": "num", 
+      "gov_idx": 7
+    }, 
+    {
+      "dep": "shares", 
+      "dep_idx": 7, 
+      "gov": "totaled", 
+      "rel": "dobj", 
+      "gov_idx": 4
+    }
+  ], 
+  "text": "Big Board volume totaled 154.2 million shares .", 
+  "coref_chains": [], 
+  "bbn_ne": [
+    [
+      0, 
+      1, 
+      "Big Board", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "", 
+      false
+    ]
+  ], 
+  "sentence_nr": 15, 
+  "tuples": [
+    [
+      "nn", 
+      "volume", 
+      "Big"
+    ], 
+    [
+      "nn", 
+      "volume", 
+      "Board"
+    ], 
+    [
+      "nsubj", 
+      "totaled", 
+      "volume"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "totaled"
+    ], 
+    [
+      "number", 
+      "million", 
+      "154.2"
+    ], 
+    [
+      "num", 
+      "shares", 
+      "million"
+    ], 
+    [
+      "dobj", 
+      "totaled", 
+      "shares"
+    ]
+  ], 
+  "words": [
+    [
+      "Big", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Big", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "Board", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Board", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "volume", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "volume", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "totaled", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "total", 
+        "PartOfSpeech": "VBD"
+      }
+    ], 
+    [
+      "154.2", 
+      {
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "1.542E8", 
+        "PartOfSpeech": "CD", 
+        "Lemma": "154.2"
+      }
+    ], 
+    [
+      "million", 
+      {
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "1.542E8", 
+        "PartOfSpeech": "CD", 
+        "Lemma": "million"
+      }
+    ], 
+    [
+      "shares", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "share", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": "."
+      }
+    ]
+  ], 
+  "treebank_sentence": "Big Board volume totaled 154.2 million shares .", 
+  "parsetree": "(ROOT (S (NP (NNP Big) (NNP Board) (NN volume)) (VP (VBD totaled) (NP (QP (CD 154.2) (CD million)) (NNS shares))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NML (NNP Big) (NNP Board)) (NN volume)) (VP (VBD totaled) (NP (QP (CD 154.2) (CD million)) (NNS shares))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

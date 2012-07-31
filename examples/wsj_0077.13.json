@@ -1,0 +1,104 @@
+{
+  "stanford_dep": [
+    {
+      "dep": "In", 
+      "dep_idx": 1, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": 0
+    }, 
+    {
+      "dep": "major", 
+      "dep_idx": 2, 
+      "gov": "activity", 
+      "rel": "amod", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "market", 
+      "dep_idx": 3, 
+      "gov": "activity", 
+      "rel": "nn", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "activity", 
+      "dep_idx": 4, 
+      "gov": "In", 
+      "rel": "pobj", 
+      "gov_idx": 1
+    }
+  ], 
+  "text": "In major market activity :", 
+  "coref_chains": [], 
+  "bbn_ne": [], 
+  "sentence_nr": 13, 
+  "tuples": [
+    [
+      "dep", 
+      "activity", 
+      "In"
+    ], 
+    [
+      "amod", 
+      "market", 
+      "major"
+    ], 
+    [
+      "pobj", 
+      "In", 
+      "market"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "activity"
+    ]
+  ], 
+  "words": [
+    [
+      "In", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "in", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "major", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "major", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "market", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "market", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "activity", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "activity", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      ":", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ":", 
+        "PartOfSpeech": ":"
+      }
+    ]
+  ], 
+  "treebank_sentence": "In major market activity :", 
+  "parsetree": "(ROOT (FRAG (PP (IN In) (NP (JJ major) (NN market))) (NP-TMP (NN activity)) (: :)))", 
+  "goldparse": "(TOP (PP-LOC (IN In) (NP (JJ major) (NN market) (NN activity)) (: :)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}
