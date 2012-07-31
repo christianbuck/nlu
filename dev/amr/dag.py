@@ -14,6 +14,7 @@ import unittest
 import re
 import sys
 import copy
+import pyparsing
 
 # Try to import modules to render DAGs
 try:
@@ -210,7 +211,7 @@ class Dag(defaultdict):
         try:
             ast = _parser_singleton.parseString(s)
         except pyparsing.ParseException, e:
-            sys.stderr.write("Could not parse DAG: %s" % amr_string)
+            sys.stderr.write("Could not parse DAG: %s" % s)
             raise e 
         return ast_to_dag(ast)
 
@@ -223,24 +224,33 @@ class Dag(defaultdict):
         """
         dag = Dag() # Make new DAG
 
-        for parent, relation, child in triples: 
-            new_par = parent.replace("@","")       
-            if parent.startswith("@"):
-                dag.external_nodes.add(new_par)
+        for parent, relation, child in triples:
+            if isinstance(parent, basestring):
+                new_par = parent.replace("@","")       
+                if parent.startswith("@"):
+                    dag.external_nodes.add(new_par)
+            else:   # e.g. if an int
+                new_par = parent
 
-            if type(child) is tuple: 
+            if type(child) is tuple:
                 new_child = []
-                for c in child: 
-                    new_c = c.replace("@","")
-                    if c.startswith("@"):
-                        dag.external_nodes.add(new_c)
+                for c in child:
+                    if isinstance(c, basestring):
+                        new_c = c.replace("@","")
+                        if c.startswith("@"):
+                            dag.external_nodes.add(new_c)
+                    else:
+                        new_c = c
                     new_child.append(new_c)
                     new_child = tuple(new_child)
             else: # Allow triples to have single string children for convenience. 
                   # and downward compatibility.
-                tmpchild = child.replace("@","")
-                if child.startswith("@"):
-                    dag.external_nodes.add(tmp_child)
+                if isinstance(child, basestring):
+                    tmpchild = child.replace("@","")
+                    if child.startswith("@"):
+                        dag.external_nodes.add(tmpchild)
+                else:
+                    tmpchild = child
                 new_child = (tmpchild,)
 
             dag._add_triple(new_par, relation, new_child)
@@ -605,7 +615,7 @@ class Dag(defaultdict):
         """
         new = Dag()
         node_map = self._get_canonical_nodes(prefix)
-        for k,v in external__dict.items():
+        for k,v in external_dict.items():
                 node_map[k] = v
         new.roots = [node_map[x] for x in self.roots]
         new.external_nodes = set([node_map[x] for x in self.external_nodes])
@@ -631,7 +641,7 @@ class Dag(defaultdict):
         """
         # First get a mapping of boundary nodes in the new fragment to 
         # boundary nodes in the fragment to be replaced
-        leaves = amr.find_leaves()
+        leaves = dag.find_leaves()
         external = new_dag.get_external_nodes()
         assert len(external) == len(leaves)
         boundary_map = dict(zip(external, leaves))
@@ -653,9 +663,9 @@ class Dag(defaultdict):
                 new_child = [boundary_map[c] if c in boundary_map else c for c in child]       
             else:            
                 new_child = boundary_map[child] if child in boundary_map else child
-            new_amr._add_triple(new_par, rel, new_child)
+            res_dag._add_triple(new_par, rel, new_child)
 
-        return new_amr
+        return res_dag
 
     def collapse_fragment(self, dag, label = None):
         """
@@ -678,7 +688,7 @@ class Dag(defaultdict):
     
         #Find hyperedge to replace 
         for p, r, c in self.nonterminal_edges(): 
-            if rel.label == rule.symbol:
+            if r.label == rule.symbol:
                 par, rel, child = p, r, c
                 break
         repl_fragment = Dag.from_triples([(par,rel,child)])
@@ -686,7 +696,7 @@ class Dag(defaultdict):
         #Replace it with the new fragment               
         new_amr = rule.amr.clone_canonical(prefix = str(self.replace_count))
         res_dag = self.replace_fragment(repl_fragment, new_amr)
-        # Keep track of prefix for new canonical node IDs               
+        # Keep track of prefix for new canonical node IDs
         res_dag.replace_count = self.replace_count + 1
         return res_dag
 

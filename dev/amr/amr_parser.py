@@ -63,7 +63,7 @@ def make_amr_parser():
     node_name =  Word(alphas+nums+"_@")  
 
     concept_name = Word(alphas+nums+"-_")    
-    role_name = Word(alphas+nums+":-_.$'&@") | Literal("#").suppress()+Word(alphas+nums+"[]-$_").setParseAction(lambda s, loc, tok: NonterminalEdge(tok[0]))     
+    role_name = Word(alphas+nums+":-_.$'&@") | Literal("#").suppress()+Word(alphas+nums+"[]-$_").setParseAction(lambda s, loc, tok: NonterminalLabel(tok[0]))     
     lit_string = Literal('"').suppress() + CharsNotIn('"') + Literal('"').suppress()
 
     expr = Forward()
@@ -92,4 +92,33 @@ def make_amr_parser():
     expr << (lpar +  node_name + Optional(Literal("/").suppress() + concept_name) + ZeroOrMore(role) + rpar)
     
     return expr 
+
+class NonterminalLabel(object):
+    """
+    There can be multiple nonterminal edges with the same symbol. Wrap the 
+    edge into an object so two edges do not compare equal.
+    Nonterminal edges carry a nonterminal symbol and an index that identifies
+    it uniquely in a rule.
+    """
+    def __init__(self, label, index = None):
+        self.label = label
+        self.index = index  
+
+    def __eq__(self, other):
+        try: 
+            return self.label == other.label and self.index == other.index
+        except AttributeError:
+            return False     
+    
+    def __repr__(self):
+        return "NT(#%s)" % str(self)
+
+    def __str__(self):
+        if self.index is not None:
+            return "#%s[%s]" % (str(self.label), str(self.index))
+        else: 
+            return "#%s" % str(self.label)
+
+    def __hash__(self):
+        return 83 * hash(self.label) + 17 * hash(self.index)
 
