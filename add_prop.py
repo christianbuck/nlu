@@ -71,6 +71,20 @@ def parse_onprop(raw_prop):
     return d
 
 
+def is_trace(subtree):
+    if subtree.node == '-NONE-' or len(subtree) == 1:
+        words = subtree.leaves()
+        if len(words) == 1 and re.match(r'.*-\d+$',words[0]):
+            return True
+    return False
+
+def span_from_treepos(tree, treepos):
+    st = SpanTree.parse(str(pt))
+    st.convert()
+    start = min(st[treepos].leaves())
+    end = max(st[treepos].leaves())
+    return (start, end)
+
 if __name__ == "__main__":
     import argparse
     parser = argparse.ArgumentParser()
@@ -96,28 +110,25 @@ if __name__ == "__main__":
         args = pb_data['args']
         new_args = []
         for pos, role in args:
-            words, start, end = '', None, None
+            words, start, end = [], None, None
             leaf_id, depth = pt.parse_pos(pos)
             if leaf_id != None and depth != None:
-                subtree = pt.subtree_from_pos(leaf_id, depth)
-                print 'node:', subtree.node
-                if subtree.node == '-NONE-':
-                    leaves = subtree.leaves()
-                    if len(leaves) == 1 and re.match(r'.*-\d+$',leaves[0]):
-                        trace_id = int(leaves[0].split('-')[-1])
-                        print 'looking for trace', trace_id
-                        tracepos = pt.find_trace(trace_id)
-                        if tracepos != None:
-                            print 'trace %s found! Here:', tracepos
-                            words = ' '.join(pt[tracepos].leaves())
-                            st = SpanTree.parse(str(pt))
-                            st.convert()
-                            start = min(st[tracepos].leaves())
-                            end = max(st[tracepos].leaves())
-                else:
-                    words = ' '.join(subtree.leaves())
-                    start, end = pt.span_from_pos(leaf_id, depth)
-            new_args.append( [role, pos, start, end, words] )
+                treepos = pt.get_treepos(leaf_id, depth)
+                while is_trace(pt[treepos]):
+                    trace_id = int(pt[treepos].leaves()[0].split('-')[-1])
+                    print 'looking for trace', trace_id
+                    tracepos = pt.find_trace(trace_id)
+                    if tracepos != None:
+                        print 'trace %s found! Here:', tracepos
+                        print pt[tracepos].pprint()
+                        treepos = tracepos
+                    else:
+                        break # could not follow trace
+
+                words = pt[treepos].leaves()
+                start, end = span_from_treepos(pt, treepos)
+
+            new_args.append( [role, pos, start, end, ' '.join(words)] )
 
         pb_data['args'] = new_args
         data['prop'].append(pb_data)

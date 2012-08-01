@@ -34,7 +34,7 @@ class SpanTree(ParentedTree):
         return False
 
     def subtree_from_pos(self, leaf_id, depth):
-        sub_tree = self[self.leaf_treeposition(leaf_id)[:-(depth+1)]]
+        sub_tree = self[self.get_treepos(leaf_id, depth)]
         return sub_tree
 
     def parse_pos(self, pos):
@@ -43,6 +43,9 @@ class SpanTree(ParentedTree):
             return leaf_id, depth
         except:
             return None, None
+
+    def get_treepos(self, leaf_id, depth):
+        return self.leaf_treeposition(leaf_id)[:-(depth+1)]
 
     def find_trace(self, trace_id):
         '''
