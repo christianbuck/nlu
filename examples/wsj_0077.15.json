@@ -62,6 +62,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "bond", 
+        "idx": 0, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -70,6 +71,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "price", 
+        "idx": 1, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -78,6 +80,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "be", 
+        "idx": 2, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -86,6 +89,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "up", 
+        "idx": 3, 
         "PartOfSpeech": "RB"
       }
     ], 
@@ -94,6 +98,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 4, 
         "PartOfSpeech": "."
       }
     ]

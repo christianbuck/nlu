@@ -252,27 +252,30 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "in", 
+        "idx": 0, 
         "PartOfSpeech": "IN"
       }
     ], 
     [
       "late", 
       {
-        "NamedEntityTag": "TIME", 
         "NormalizedNamedEntityTag": "TAF", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"TAF\" type=\"TIME\" mod=\"LATE\">late afternoon</TIMEX3>", 
+        "idx": 1, 
+        "Lemma": "late", 
         "PartOfSpeech": "JJ", 
-        "Lemma": "late"
+        "NamedEntityTag": "TIME"
       }
     ], 
     [
       "afternoon", 
       {
-        "NamedEntityTag": "TIME", 
         "NormalizedNamedEntityTag": "TAF", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"TAF\" type=\"TIME\" mod=\"LATE\">late afternoon</TIMEX3>", 
+        "idx": 2, 
+        "Lemma": "afternoon", 
         "PartOfSpeech": "NN", 
-        "Lemma": "afternoon"
+        "NamedEntityTag": "TIME"
       }
     ], 
     [
@@ -280,6 +283,7 @@
       {
         "NamedEntityTag": "LOCATION", 
         "Lemma": "New", 
+        "idx": 3, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -288,6 +292,7 @@
       {
         "NamedEntityTag": "LOCATION", 
         "Lemma": "York", 
+        "idx": 4, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -296,6 +301,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "trading", 
+        "idx": 5, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -304,6 +310,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 6, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -312,6 +319,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "currency", 
+        "idx": 7, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -320,6 +328,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "be", 
+        "idx": 8, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -328,6 +337,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "at", 
+        "idx": 9, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -336,6 +346,7 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$1.85", 
+        "idx": 10, 
         "PartOfSpeech": "CD", 
         "Lemma": "1.8500"
       }
@@ -345,6 +356,7 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$1.85", 
+        "idx": 11, 
         "PartOfSpeech": "NNS", 
         "Lemma": "mark"
       }
@@ -354,6 +366,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "and", 
+        "idx": 12, 
         "PartOfSpeech": "CC"
       }
     ], 
@@ -362,6 +375,7 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "\u00a5143.8", 
+        "idx": 13, 
         "PartOfSpeech": "CD", 
         "Lemma": "143.80"
       }
@@ -371,6 +385,7 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "\u00a5143.8", 
+        "idx": 14, 
         "PartOfSpeech": "NN", 
         "Lemma": "yen"
       }
@@ -380,6 +395,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "compare", 
+        "idx": 15, 
         "PartOfSpeech": "VBN"
       }
     ], 
@@ -388,6 +404,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "with", 
+        "idx": 16, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -396,6 +413,7 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$1.8415", 
+        "idx": 17, 
         "PartOfSpeech": "CD", 
         "Lemma": "1.8415"
       }
@@ -405,6 +423,7 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$1.8415", 
+        "idx": 18, 
         "PartOfSpeech": "NNS", 
         "Lemma": "mark"
       }
@@ -414,6 +433,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "and", 
+        "idx": 19, 
         "PartOfSpeech": "CC"
       }
     ], 
@@ -422,6 +442,7 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "\u00a5142.85", 
+        "idx": 20, 
         "PartOfSpeech": "CD", 
         "Lemma": "142.85"
       }
@@ -431,6 +452,7 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "\u00a5142.85", 
+        "idx": 21, 
         "PartOfSpeech": "NNS", 
         "Lemma": "yen"
       }
@@ -440,6 +462,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 22, 
         "PartOfSpeech": "."
       }
     ]

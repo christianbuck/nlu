@@ -128,6 +128,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "economic", 
+        "idx": 0, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -136,6 +137,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "news", 
+        "idx": 1, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -144,6 +146,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "have", 
+        "idx": 2, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -152,6 +155,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "little", 
+        "idx": 3, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -160,6 +164,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "effect", 
+        "idx": 4, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -168,6 +173,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "on", 
+        "idx": 5, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -176,6 +182,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "financial", 
+        "idx": 6, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -184,6 +191,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "market", 
+        "idx": 7, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -192,6 +200,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 8, 
         "PartOfSpeech": "."
       }
     ]

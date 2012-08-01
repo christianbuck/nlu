@@ -283,6 +283,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "but", 
+        "idx": 0, 
         "PartOfSpeech": "CC"
       }
     ], 
@@ -291,6 +292,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "advance", 
+        "idx": 1, 
         "PartOfSpeech": "VBG"
       }
     ], 
@@ -299,6 +301,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "issue", 
+        "idx": 2, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -307,6 +310,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "on", 
+        "idx": 3, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -315,6 +319,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 4, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -323,6 +328,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "New", 
+        "idx": 5, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -331,6 +337,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "York", 
+        "idx": 6, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -339,6 +346,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Stock", 
+        "idx": 7, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -347,6 +355,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Exchange", 
+        "idx": 8, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -355,6 +364,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "be", 
+        "idx": 9, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -363,6 +373,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "tidily", 
+        "idx": 10, 
         "PartOfSpeech": "RB"
       }
     ], 
@@ -371,6 +382,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "ahead", 
+        "idx": 11, 
         "PartOfSpeech": "RB"
       }
     ], 
@@ -379,6 +391,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "idx": 12, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -387,6 +400,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "decline", 
+        "idx": 13, 
         "PartOfSpeech": "VBG"
       }
     ], 
@@ -395,6 +409,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "stock", 
+        "idx": 14, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -403,6 +418,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "idx": 15, 
         "PartOfSpeech": ","
       }
     ], 
@@ -411,6 +427,7 @@
       {
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "847.0", 
+        "idx": 16, 
         "PartOfSpeech": "CD", 
         "Lemma": "847"
       }
@@ -420,6 +437,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "to", 
+        "idx": 17, 
         "PartOfSpeech": "TO"
       }
     ], 
@@ -428,6 +446,7 @@
       {
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "644.0", 
+        "idx": 18, 
         "PartOfSpeech": "CD", 
         "Lemma": "644"
       }
@@ -437,6 +456,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 19, 
         "PartOfSpeech": "."
       }
     ]

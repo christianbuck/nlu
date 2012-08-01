@@ -123,6 +123,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "stock", 
+        "idx": 0, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -131,6 +132,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "price", 
+        "idx": 1, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -139,6 +141,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "rise", 
+        "idx": 2, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -147,6 +150,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "fractionally", 
+        "idx": 3, 
         "PartOfSpeech": "RB"
       }
     ], 
@@ -155,6 +159,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "in", 
+        "idx": 4, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -163,6 +168,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "moderate", 
+        "idx": 5, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -171,6 +177,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "trading", 
+        "idx": 6, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -179,6 +186,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 7, 
         "PartOfSpeech": "."
       }
     ]

@@ -73,6 +73,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 0, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -81,6 +82,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "dollar", 
+        "idx": 1, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -89,6 +91,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "rise", 
+        "idx": 2, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -97,6 +100,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 3, 
         "PartOfSpeech": "."
       }
     ]

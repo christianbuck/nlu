@@ -62,6 +62,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "in", 
+        "idx": 0, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -70,6 +71,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "major", 
+        "idx": 1, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -78,6 +80,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "market", 
+        "idx": 2, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -86,6 +89,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "activity", 
+        "idx": 3, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -94,6 +98,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ":", 
+        "idx": 4, 
         "PartOfSpeech": ":"
       }
     ]

@@ -369,6 +369,7 @@
       {
         "NamedEntityTag": "PERSON", 
         "Lemma": "Rudolph", 
+        "idx": 0, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -377,6 +378,7 @@
       {
         "NamedEntityTag": "PERSON", 
         "Lemma": "Agnew", 
+        "idx": 1, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -385,27 +387,30 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "idx": 2, 
         "PartOfSpeech": ","
       }
     ], 
     [
       "55", 
       {
-        "NamedEntityTag": "DURATION", 
         "NormalizedNamedEntityTag": "55.0", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"P55Y\" type=\"DURATION\">55 years old</TIMEX3>", 
+        "idx": 3, 
+        "Lemma": "55", 
         "PartOfSpeech": "CD", 
-        "Lemma": "55"
+        "NamedEntityTag": "DURATION"
       }
     ], 
     [
       "years", 
       {
-        "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "0.0", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"P55Y\" type=\"DURATION\">55 years old</TIMEX3>", 
+        "idx": 4, 
+        "Lemma": "year", 
         "PartOfSpeech": "NNS", 
-        "Lemma": "year"
+        "NamedEntityTag": "NUMBER"
       }
     ], 
     [
@@ -414,6 +419,7 @@
         "NamedEntityTag": "DURATION", 
         "Lemma": "old", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"P55Y\" type=\"DURATION\">55 years old</TIMEX3>", 
+        "idx": 5, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -422,6 +428,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "and", 
+        "idx": 6, 
         "PartOfSpeech": "CC"
       }
     ], 
@@ -430,6 +437,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "former", 
+        "idx": 7, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -438,6 +446,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "chairman", 
+        "idx": 8, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -446,6 +455,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "idx": 9, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -454,6 +464,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Consolidated", 
+        "idx": 10, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -462,6 +473,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Gold", 
+        "idx": 11, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -470,6 +482,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Fields", 
+        "idx": 12, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -478,6 +491,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "PLC", 
+        "idx": 13, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -486,6 +500,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "idx": 14, 
         "PartOfSpeech": ","
       }
     ], 
@@ -494,6 +509,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "be", 
+        "idx": 15, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -502,6 +518,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "name", 
+        "idx": 16, 
         "PartOfSpeech": "VBN"
       }
     ], 
@@ -510,6 +527,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "a", 
+        "idx": 19, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -518,6 +536,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "nonexecutive", 
+        "idx": 20, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -526,6 +545,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "director", 
+        "idx": 21, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -534,6 +554,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "idx": 22, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -542,6 +563,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "this", 
+        "idx": 23, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -550,6 +572,7 @@
       {
         "NamedEntityTag": "MISC", 
         "Lemma": "british", 
+        "idx": 24, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -558,6 +581,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "industrial", 
+        "idx": 25, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -566,6 +590,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "conglomerate", 
+        "idx": 26, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -574,6 +599,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 27, 
         "PartOfSpeech": "."
       }
     ]

@@ -263,6 +263,7 @@
       {
         "NamedEntityTag": "PERSON", 
         "Lemma": "Mr.", 
+        "idx": 0, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -271,6 +272,7 @@
       {
         "NamedEntityTag": "PERSON", 
         "Lemma": "Vinken", 
+        "idx": 1, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -279,6 +281,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "be", 
+        "idx": 2, 
         "PartOfSpeech": "VBZ"
       }
     ], 
@@ -287,6 +290,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "chairman", 
+        "idx": 3, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -295,6 +299,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "idx": 4, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -303,6 +308,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Elsevier", 
+        "idx": 5, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -311,6 +317,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "N.V.", 
+        "idx": 6, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -319,6 +326,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "idx": 7, 
         "PartOfSpeech": ","
       }
     ], 
@@ -327,6 +335,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 8, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -335,6 +344,7 @@
       {
         "NamedEntityTag": "MISC", 
         "Lemma": "dutch", 
+        "idx": 9, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -343,6 +353,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "publishing", 
+        "idx": 10, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -351,6 +362,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "group", 
+        "idx": 11, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -359,6 +371,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 12, 
         "PartOfSpeech": "."
       }
     ]

@@ -291,6 +291,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 0, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -299,6 +300,7 @@
       {
         "NamedEntityTag": "MISC", 
         "Lemma": "Dow", 
+        "idx": 1, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -307,6 +309,7 @@
       {
         "NamedEntityTag": "MISC", 
         "Lemma": "Jones", 
+        "idx": 2, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -315,6 +318,7 @@
       {
         "NamedEntityTag": "MISC", 
         "Lemma": "Industrial", 
+        "idx": 3, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -323,6 +327,7 @@
       {
         "NamedEntityTag": "MISC", 
         "Lemma": "Average", 
+        "idx": 4, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -331,6 +336,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "finish", 
+        "idx": 5, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -339,6 +345,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "less", 
+        "idx": 6, 
         "PartOfSpeech": "JJR"
       }
     ], 
@@ -347,6 +354,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "than", 
+        "idx": 7, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -355,6 +363,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "a", 
+        "idx": 8, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -363,6 +372,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "point", 
+        "idx": 9, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -371,6 +381,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "higher", 
+        "idx": 10, 
         "PartOfSpeech": "JJR"
       }
     ], 
@@ -379,6 +390,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "to", 
+        "idx": 12, 
         "PartOfSpeech": "TO"
       }
     ], 
@@ -387,6 +399,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "close", 
+        "idx": 13, 
         "PartOfSpeech": "VB"
       }
     ], 
@@ -395,6 +408,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "at", 
+        "idx": 14, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -403,6 +417,7 @@
       {
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "2645.9", 
+        "idx": 15, 
         "PartOfSpeech": "CD", 
         "Lemma": "2645.90"
       }
@@ -412,6 +427,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "in", 
+        "idx": 16, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -420,6 +436,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "moderate", 
+        "idx": 17, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -428,6 +445,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "trading", 
+        "idx": 18, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -436,6 +454,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 19, 
         "PartOfSpeech": "."
       }
     ]

@@ -140,6 +140,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "bond", 
+        "idx": 0, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -148,6 +149,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "price", 
+        "idx": 1, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -156,6 +158,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "and", 
+        "idx": 2, 
         "PartOfSpeech": "CC"
       }
     ], 
@@ -164,6 +167,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 3, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -172,6 +176,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "dollar", 
+        "idx": 4, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -180,6 +185,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "both", 
+        "idx": 5, 
         "PartOfSpeech": "CC"
       }
     ], 
@@ -188,6 +194,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "gain", 
+        "idx": 6, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -196,6 +203,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "modestly", 
+        "idx": 7, 
         "PartOfSpeech": "RB"
       }
     ], 
@@ -204,6 +212,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 8, 
         "PartOfSpeech": "."
       }
     ]

@@ -360,6 +360,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "investor", 
+        "idx": 0, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -368,6 +369,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "take", 
+        "idx": 1, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -376,6 +378,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "advantage", 
+        "idx": 2, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -384,17 +387,19 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "idx": 3, 
         "PartOfSpeech": "IN"
       }
     ], 
     [
       "Tuesday", 
       {
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "XXXX-WXX-2", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"XXXX-WXX-2\" type=\"DATE\">Tuesday</TIMEX3>", 
+        "idx": 4, 
+        "Lemma": "Tuesday", 
         "PartOfSpeech": "NNP", 
-        "Lemma": "Tuesday"
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
@@ -402,6 +407,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "'s", 
+        "idx": 5, 
         "PartOfSpeech": "POS"
       }
     ], 
@@ -410,6 +416,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "stock", 
+        "idx": 6, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -418,6 +425,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "rally", 
+        "idx": 7, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -426,6 +434,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "to", 
+        "idx": 9, 
         "PartOfSpeech": "TO"
       }
     ], 
@@ -434,6 +443,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "book", 
+        "idx": 10, 
         "PartOfSpeech": "VB"
       }
     ], 
@@ -442,6 +452,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "some", 
+        "idx": 11, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -450,17 +461,19 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "profit", 
+        "idx": 12, 
         "PartOfSpeech": "NNS"
       }
     ], 
     [
       "yesterday", 
       {
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "OFFSET", 
         "Timex": "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET P-1D\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">yesterday</TIMEX3>", 
+        "idx": 13, 
+        "Lemma": "yesterday", 
         "PartOfSpeech": "NN", 
-        "Lemma": "yesterday"
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
@@ -468,6 +481,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "idx": 14, 
         "PartOfSpeech": ","
       }
     ], 
@@ -476,6 +490,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "leave", 
+        "idx": 16, 
         "PartOfSpeech": "VBG"
       }
     ], 
@@ -484,6 +499,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "stock", 
+        "idx": 17, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -492,6 +508,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "up", 
+        "idx": 19, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -500,6 +517,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "fractionally", 
+        "idx": 20, 
         "PartOfSpeech": "RB"
       }
     ], 
@@ -508,6 +526,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 21, 
         "PartOfSpeech": "."
       }
     ]

@@ -222,6 +222,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "long", 
+        "idx": 0, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -230,6 +231,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "-", 
+        "idx": 1, 
         "PartOfSpeech": ":"
       }
     ], 
@@ -238,6 +240,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "term", 
+        "idx": 2, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -246,6 +249,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "bond", 
+        "idx": 3, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -254,6 +258,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "price", 
+        "idx": 4, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -262,6 +267,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "rise", 
+        "idx": 5, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -270,6 +276,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "despite", 
+        "idx": 6, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -278,6 +285,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "prospects", 
+        "idx": 7, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -286,6 +294,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "idx": 8, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -294,6 +303,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "a", 
+        "idx": 9, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -302,6 +312,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "huge", 
+        "idx": 10, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -310,6 +321,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "new", 
+        "idx": 11, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -318,6 +330,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "supply", 
+        "idx": 12, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -326,6 +339,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "idx": 13, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -334,6 +348,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Treasury", 
+        "idx": 14, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -342,27 +357,30 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "debt", 
+        "idx": 15, 
         "PartOfSpeech": "NN"
       }
     ], 
     [
       "this", 
       {
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "THIS", 
         "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1M\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">this month</TIMEX3>", 
+        "idx": 16, 
+        "Lemma": "this", 
         "PartOfSpeech": "DT", 
-        "Lemma": "this"
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
       "month", 
       {
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "THIS", 
         "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1M\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">this month</TIMEX3>", 
+        "idx": 17, 
+        "Lemma": "month", 
         "PartOfSpeech": "NN", 
-        "Lemma": "month"
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
@@ -370,6 +388,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 18, 
         "PartOfSpeech": "."
       }
     ]

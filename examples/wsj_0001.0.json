@@ -272,6 +272,7 @@
       {
         "NamedEntityTag": "PERSON", 
         "Lemma": "Pierre", 
+        "idx": 0, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -280,6 +281,7 @@
       {
         "NamedEntityTag": "PERSON", 
         "Lemma": "Vinken", 
+        "idx": 1, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -288,27 +290,30 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "idx": 2, 
         "PartOfSpeech": ","
       }
     ], 
     [
       "61", 
       {
-        "NamedEntityTag": "DURATION", 
         "NormalizedNamedEntityTag": "61.0", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"P61Y\" type=\"DURATION\">61 years old</TIMEX3>", 
+        "idx": 3, 
+        "Lemma": "61", 
         "PartOfSpeech": "CD", 
-        "Lemma": "61"
+        "NamedEntityTag": "DURATION"
       }
     ], 
     [
       "years", 
       {
-        "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "0.0", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"P61Y\" type=\"DURATION\">61 years old</TIMEX3>", 
+        "idx": 4, 
+        "Lemma": "year", 
         "PartOfSpeech": "NNS", 
-        "Lemma": "year"
+        "NamedEntityTag": "NUMBER"
       }
     ], 
     [
@@ -317,6 +322,7 @@
         "NamedEntityTag": "DURATION", 
         "Lemma": "old", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"P61Y\" type=\"DURATION\">61 years old</TIMEX3>", 
+        "idx": 5, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -325,6 +331,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "idx": 6, 
         "PartOfSpeech": ","
       }
     ], 
@@ -333,6 +340,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "will", 
+        "idx": 7, 
         "PartOfSpeech": "MD"
       }
     ], 
@@ -341,6 +349,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "join", 
+        "idx": 8, 
         "PartOfSpeech": "VB"
       }
     ], 
@@ -349,6 +358,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 9, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -357,6 +367,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "board", 
+        "idx": 10, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -365,6 +376,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "as", 
+        "idx": 11, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -373,6 +385,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "a", 
+        "idx": 12, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -381,6 +394,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "nonexecutive", 
+        "idx": 13, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -389,27 +403,30 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "director", 
+        "idx": 14, 
         "PartOfSpeech": "NN"
       }
     ], 
     [
       "Nov.", 
       {
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "XXXX-11-29", 
         "Timex": "<TIMEX3 tid=\"t2\" value=\"XXXX-11-29\" type=\"DATE\">Nov. 29</TIMEX3>", 
+        "idx": 15, 
+        "Lemma": "Nov.", 
         "PartOfSpeech": "NNP", 
-        "Lemma": "Nov."
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
       "29", 
       {
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "XXXX-11-29", 
         "Timex": "<TIMEX3 tid=\"t2\" value=\"XXXX-11-29\" type=\"DATE\">Nov. 29</TIMEX3>", 
+        "idx": 16, 
+        "Lemma": "29", 
         "PartOfSpeech": "CD", 
-        "Lemma": "29"
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
@@ -417,6 +434,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 17, 
         "PartOfSpeech": "."
       }
     ]

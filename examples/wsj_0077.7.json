@@ -361,6 +361,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 0, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -369,6 +370,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "industrial", 
+        "idx": 1, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -377,6 +379,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "average", 
+        "idx": 2, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -385,6 +388,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "jump", 
+        "idx": 3, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -393,6 +397,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "more", 
+        "idx": 4, 
         "PartOfSpeech": "JJR"
       }
     ], 
@@ -401,6 +406,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "than", 
+        "idx": 5, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -409,6 +415,7 @@
       {
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": ">41.0", 
+        "idx": 6, 
         "PartOfSpeech": "CD", 
         "Lemma": "41"
       }
@@ -418,17 +425,19 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "point", 
+        "idx": 7, 
         "PartOfSpeech": "NNS"
       }
     ], 
     [
       "Tuesday", 
       {
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "XXXX-WXX-2", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"XXXX-WXX-2\" type=\"DATE\">Tuesday</TIMEX3>", 
+        "idx": 8, 
+        "Lemma": "Tuesday", 
         "PartOfSpeech": "NNP", 
-        "Lemma": "Tuesday"
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
@@ -436,6 +445,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "as", 
+        "idx": 9, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -444,6 +454,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "speculator", 
+        "idx": 10, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -452,6 +463,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "rush", 
+        "idx": 11, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -460,6 +472,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "to", 
+        "idx": 13, 
         "PartOfSpeech": "TO"
       }
     ], 
@@ -468,6 +481,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "buy", 
+        "idx": 14, 
         "PartOfSpeech": "VB"
       }
     ], 
@@ -476,6 +490,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "share", 
+        "idx": 15, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -484,6 +499,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "idx": 16, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -492,6 +508,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "potential", 
+        "idx": 17, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -500,6 +517,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "takeover", 
+        "idx": 18, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -508,6 +526,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "target", 
+        "idx": 19, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -516,6 +535,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 20, 
         "PartOfSpeech": "."
       }
     ]

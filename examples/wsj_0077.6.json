@@ -400,6 +400,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "analyst", 
+        "idx": 0, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -408,6 +409,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "be", 
+        "idx": 1, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -416,6 +418,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "disappoint", 
+        "idx": 2, 
         "PartOfSpeech": "VBN"
       }
     ], 
@@ -424,6 +427,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "that", 
+        "idx": 4, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -432,6 +436,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 5, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -440,6 +445,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "enthusiasm", 
+        "idx": 6, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -448,6 +454,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "investor", 
+        "idx": 9, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -456,6 +463,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "show", 
+        "idx": 10, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -464,6 +472,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "for", 
+        "idx": 12, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -472,6 +481,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "stock", 
+        "idx": 13, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -480,6 +490,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "in", 
+        "idx": 14, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -488,6 +499,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 15, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -496,6 +508,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "wake", 
+        "idx": 16, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -504,6 +517,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "idx": 17, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -512,6 +526,7 @@
       {
         "NamedEntityTag": "LOCATION", 
         "Lemma": "Georgia", 
+        "idx": 18, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -520,6 +535,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "-", 
+        "idx": 19, 
         "PartOfSpeech": ":"
       }
     ], 
@@ -528,6 +544,7 @@
       {
         "NamedEntityTag": "LOCATION", 
         "Lemma": "Pacific", 
+        "idx": 20, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -536,6 +553,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "'s", 
+        "idx": 21, 
         "PartOfSpeech": "POS"
       }
     ], 
@@ -544,6 +562,7 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$3.18E9", 
+        "idx": 22, 
         "PartOfSpeech": "$", 
         "Lemma": "$"
       }
@@ -553,6 +572,7 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$3.18E9", 
+        "idx": 23, 
         "PartOfSpeech": "CD", 
         "Lemma": "3.18"
       }
@@ -562,6 +582,7 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$3.18E9", 
+        "idx": 24, 
         "PartOfSpeech": "CD", 
         "Lemma": "billion"
       }
@@ -571,6 +592,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "bid", 
+        "idx": 26, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -579,6 +601,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "for", 
+        "idx": 27, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -587,6 +610,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Great", 
+        "idx": 28, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -595,6 +619,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Northern", 
+        "idx": 29, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -603,6 +628,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Nekoosa", 
+        "idx": 30, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -611,6 +637,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "evaporate", 
+        "idx": 31, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -619,6 +646,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "so", 
+        "idx": 32, 
         "PartOfSpeech": "RB"
       }
     ], 
@@ -627,6 +655,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "quickly", 
+        "idx": 33, 
         "PartOfSpeech": "RB"
       }
     ], 
@@ -635,6 +664,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 34, 
         "PartOfSpeech": "."
       }
     ]

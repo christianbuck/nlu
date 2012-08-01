@@ -380,6 +380,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 0, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -388,6 +389,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Federal", 
+        "idx": 1, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -396,6 +398,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Reserve", 
+        "idx": 2, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -404,6 +407,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "'s", 
+        "idx": 3, 
         "PartOfSpeech": "POS"
       }
     ], 
@@ -412,6 +416,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "Beige", 
+        "idx": 4, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -420,6 +425,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "Book", 
+        "idx": 5, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -428,6 +434,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "idx": 6, 
         "PartOfSpeech": ","
       }
     ], 
@@ -436,6 +443,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "a", 
+        "idx": 7, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -444,6 +452,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "summary", 
+        "idx": 8, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -452,6 +461,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "idx": 9, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -460,6 +470,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "economic", 
+        "idx": 10, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -468,6 +479,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "condition", 
+        "idx": 11, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -476,6 +488,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "across", 
+        "idx": 12, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -484,6 +497,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 13, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -492,6 +506,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "country", 
+        "idx": 14, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -500,6 +515,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "idx": 15, 
         "PartOfSpeech": ","
       }
     ], 
@@ -508,6 +524,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "indicate", 
+        "idx": 16, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -516,6 +533,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "that", 
+        "idx": 17, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -524,6 +542,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 18, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -532,6 +551,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "overall", 
+        "idx": 19, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -540,6 +560,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "economy", 
+        "idx": 20, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -548,6 +569,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "remain", 
+        "idx": 21, 
         "PartOfSpeech": "VBZ"
       }
     ], 
@@ -556,6 +578,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "in", 
+        "idx": 22, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -564,6 +587,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "a", 
+        "idx": 23, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -572,6 +596,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "pattern", 
+        "idx": 24, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -580,6 +605,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "idx": 25, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -588,6 +614,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "sluggish", 
+        "idx": 26, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -596,6 +623,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "growth", 
+        "idx": 27, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -604,6 +632,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 28, 
         "PartOfSpeech": "."
       }
     ]

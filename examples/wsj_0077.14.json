@@ -138,6 +138,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Big", 
+        "idx": 0, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -146,6 +147,7 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Board", 
+        "idx": 1, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -154,6 +156,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "volume", 
+        "idx": 2, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -162,6 +165,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "total", 
+        "idx": 3, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -170,6 +174,7 @@
       {
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "1.542E8", 
+        "idx": 4, 
         "PartOfSpeech": "CD", 
         "Lemma": "154.2"
       }
@@ -179,6 +184,7 @@
       {
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "1.542E8", 
+        "idx": 5, 
         "PartOfSpeech": "CD", 
         "Lemma": "million"
       }
@@ -188,6 +194,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "share", 
+        "idx": 6, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -196,6 +203,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 7, 
         "PartOfSpeech": "."
       }
     ]

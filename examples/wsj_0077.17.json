@@ -104,6 +104,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 0, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -112,6 +113,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "yield", 
+        "idx": 1, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -120,6 +122,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "fall", 
+        "idx": 2, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -128,6 +131,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "to", 
+        "idx": 3, 
         "PartOfSpeech": "TO"
       }
     ], 
@@ -136,6 +140,7 @@
       {
         "NamedEntityTag": "PERCENT", 
         "NormalizedNamedEntityTag": "%7.88", 
+        "idx": 4, 
         "PartOfSpeech": "CD", 
         "Lemma": "7.88"
       }
@@ -145,6 +150,7 @@
       {
         "NamedEntityTag": "PERCENT", 
         "NormalizedNamedEntityTag": "%7.88", 
+        "idx": 5, 
         "PartOfSpeech": "NN", 
         "Lemma": "%"
       }
@@ -154,6 +160,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 6, 
         "PartOfSpeech": "."
       }
     ]

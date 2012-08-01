@@ -202,6 +202,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "continue", 
+        "idx": 0, 
         "PartOfSpeech": "VBG"
       }
     ], 
@@ -210,6 +211,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "demand", 
+        "idx": 1, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -218,6 +220,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "for", 
+        "idx": 2, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -226,6 +229,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "dollar", 
+        "idx": 3, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -234,6 +238,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "from", 
+        "idx": 4, 
         "PartOfSpeech": "IN"
       }
     ], 
@@ -242,6 +247,7 @@
       {
         "NamedEntityTag": "MISC", 
         "Lemma": "japanese", 
+        "idx": 5, 
         "PartOfSpeech": "JJ"
       }
     ], 
@@ -250,6 +256,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "investor", 
+        "idx": 6, 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -258,6 +265,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "boost", 
+        "idx": 7, 
         "PartOfSpeech": "VBD"
       }
     ], 
@@ -266,6 +274,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "idx": 8, 
         "PartOfSpeech": "DT"
       }
     ], 
@@ -274,6 +283,7 @@
       {
         "NamedEntityTag": "LOCATION", 
         "Lemma": "U.S.", 
+        "idx": 9, 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -282,6 +292,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "currency", 
+        "idx": 10, 
         "PartOfSpeech": "NN"
       }
     ], 
@@ -290,6 +301,7 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "idx": 11, 
         "PartOfSpeech": "."
       }
     ]

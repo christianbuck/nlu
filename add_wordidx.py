@@ -3,6 +3,7 @@
 import sys
 import json
 from offset import Offset
+from brackets import escape_brackets, unescape_brackets
 
 if __name__ == "__main__":
     import argparse
@@ -13,18 +14,19 @@ if __name__ == "__main__":
 
     data = json.load(open(arguments.json))
 
-    cleanstring = data['text'].split()
-    tracestring = data['treebank_sentence'].split()
+    cleanstring = escape_brackets(data['text']).split()
+    tracestring = escape_brackets(data['treebank_sentence']).split()
     off = Offset(cleanstring, tracestring)
 
     words = data['words']
     #print 'c:', cleanstring
     #print 't:', tracestring
     for i, w in enumerate(words):
+        lemma = escape_brackets(w[0])
         assert len(w) == 2
         adjusted_idx = off.map_to_longer(i)
-        assert w[0] == cleanstring[i]
-        assert w[0] == tracestring[adjusted_idx]
+        assert lemma == cleanstring[i]
+        assert lemma == tracestring[adjusted_idx]
         w[1]['idx'] = adjusted_idx
 
     json.dump(data, open(arguments.jsonout,'w'), indent=2)
