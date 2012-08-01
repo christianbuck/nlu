@@ -1,253 +1,503 @@
 {
   "stanford_dep": [
     {
-      "dep": "The", 
-      "dep_idx": 1, 
-      "gov": "average", 
+      "dep": "But", 
+      "dep_idx": 0, 
+      "gov": "eager", 
+      "rel": "cc", 
+      "gov_idx": 13
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 2, 
+      "gov": "end", 
       "rel": "det", 
       "gov_idx": 3
     }, 
     {
-      "dep": "industrial", 
-      "dep_idx": 2, 
-      "gov": "average", 
-      "rel": "amod", 
-      "gov_idx": 3
-    }, 
-    {
-      "dep": "average", 
+      "dep": "end", 
       "dep_idx": 3, 
-      "gov": "jumped", 
-      "rel": "nsubj", 
-      "gov_idx": 4
+      "gov": "eager", 
+      "rel": "prepc_with", 
+      "gov_idx": 13
     }, 
     {
-      "dep": "jumped", 
-      "dep_idx": 4, 
-      "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": 0
-    }, 
-    {
-      "dep": "more", 
+      "dep": "the", 
       "dep_idx": 5, 
-      "gov": "than", 
-      "rel": "advmod", 
+      "gov": "year", 
+      "rel": "det", 
       "gov_idx": 6
     }, 
     {
-      "dep": "than", 
+      "dep": "year", 
       "dep_idx": 6, 
-      "gov": "41", 
-      "rel": "quantmod", 
+      "gov": "end", 
+      "rel": "prep_of", 
+      "gov_idx": 3
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 7, 
+      "gov": "end", 
+      "rel": "dep", 
+      "gov_idx": 3
+    }, 
+    {
+      "dep": "sight", 
+      "dep_idx": 8, 
+      "gov": "in", 
+      "rel": "pobj", 
       "gov_idx": 7
     }, 
     {
-      "dep": "41", 
-      "dep_idx": 7, 
-      "gov": "points", 
-      "rel": "num", 
-      "gov_idx": 8
-    }, 
-    {
-      "dep": "points", 
-      "dep_idx": 8, 
-      "gov": "jumped", 
-      "rel": "dobj", 
-      "gov_idx": 4
-    }, 
-    {
-      "dep": "Tuesday", 
-      "dep_idx": 9, 
-      "gov": "jumped", 
-      "rel": "tmod", 
-      "gov_idx": 4
-    }, 
-    {
-      "dep": "as", 
+      "dep": "money", 
       "dep_idx": 10, 
-      "gov": "rushed", 
-      "rel": "mark", 
-      "gov_idx": 12
+      "gov": "managers", 
+      "rel": "nn", 
+      "gov_idx": 11
     }, 
     {
-      "dep": "speculators", 
+      "dep": "managers", 
       "dep_idx": 11, 
-      "gov": "rushed", 
+      "gov": "eager", 
       "rel": "nsubj", 
-      "gov_idx": 12
+      "gov_idx": 13
     }, 
     {
-      "dep": "speculators", 
-      "dep_idx": 11, 
-      "gov": "buy", 
-      "rel": "xsubj", 
-      "gov_idx": 15
-    }, 
-    {
-      "dep": "rushed", 
+      "dep": "are", 
       "dep_idx": 12, 
-      "gov": "jumped", 
-      "rel": "advcl", 
-      "gov_idx": 4
+      "gov": "eager", 
+      "rel": "cop", 
+      "gov_idx": 13
+    }, 
+    {
+      "dep": "eager", 
+      "dep_idx": 13, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
     }, 
     {
       "dep": "to", 
-      "dep_idx": 14, 
-      "gov": "buy", 
-      "rel": "aux", 
-      "gov_idx": 15
-    }, 
-    {
-      "dep": "buy", 
       "dep_idx": 15, 
-      "gov": "rushed", 
-      "rel": "xcomp", 
-      "gov_idx": 12
-    }, 
-    {
-      "dep": "shares", 
-      "dep_idx": 16, 
-      "gov": "buy", 
-      "rel": "dobj", 
-      "gov_idx": 15
-    }, 
-    {
-      "dep": "potential", 
-      "dep_idx": 18, 
-      "gov": "targets", 
-      "rel": "amod", 
-      "gov_idx": 20
-    }, 
-    {
-      "dep": "takeover", 
-      "dep_idx": 19, 
-      "gov": "targets", 
-      "rel": "nn", 
-      "gov_idx": 20
-    }, 
-    {
-      "dep": "targets", 
-      "dep_idx": 20, 
-      "gov": "shares", 
-      "rel": "prep_of", 
+      "gov": "take", 
+      "rel": "aux", 
       "gov_idx": 16
+    }, 
+    {
+      "dep": "take", 
+      "dep_idx": 16, 
+      "gov": "eager", 
+      "rel": "xcomp", 
+      "gov_idx": 13
+    }, 
+    {
+      "dep": "profits", 
+      "dep_idx": 17, 
+      "gov": "take", 
+      "rel": "dobj", 
+      "gov_idx": 16
+    }, 
+    {
+      "dep": "cut", 
+      "dep_idx": 19, 
+      "gov": "eager", 
+      "rel": "xcomp", 
+      "gov_idx": 13
+    }, 
+    {
+      "dep": "cut", 
+      "dep_idx": 19, 
+      "gov": "take", 
+      "rel": "conj_and", 
+      "gov_idx": 16
+    }, 
+    {
+      "dep": "their", 
+      "dep_idx": 20, 
+      "gov": "risks", 
+      "rel": "poss", 
+      "gov_idx": 21
+    }, 
+    {
+      "dep": "risks", 
+      "dep_idx": 21, 
+      "gov": "cut", 
+      "rel": "dobj", 
+      "gov_idx": 19
+    }, 
+    {
+      "dep": "losing", 
+      "dep_idx": 24, 
+      "gov": "risks", 
+      "rel": "prepc_of", 
+      "gov_idx": 21
+    }, 
+    {
+      "dep": "what", 
+      "dep_idx": 25, 
+      "gov": "returns", 
+      "rel": "nsubj", 
+      "gov_idx": 33
+    }, 
+    {
+      "dep": "many", 
+      "dep_idx": 27, 
+      "gov": "returns", 
+      "rel": "prep_for", 
+      "gov_idx": 33
+    }, 
+    {
+      "dep": "have", 
+      "dep_idx": 29, 
+      "gov": "returns", 
+      "rel": "aux", 
+      "gov_idx": 33
+    }, 
+    {
+      "dep": "been", 
+      "dep_idx": 30, 
+      "gov": "returns", 
+      "rel": "cop", 
+      "gov_idx": 33
+    }, 
+    {
+      "dep": "exceptionally", 
+      "dep_idx": 31, 
+      "gov": "good", 
+      "rel": "advmod", 
+      "gov_idx": 32
+    }, 
+    {
+      "dep": "good", 
+      "dep_idx": 32, 
+      "gov": "returns", 
+      "rel": "amod", 
+      "gov_idx": 33
+    }, 
+    {
+      "dep": "returns", 
+      "dep_idx": 33, 
+      "gov": "losing", 
+      "rel": "ccomp", 
+      "gov_idx": 24
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 34, 
+      "gov": "returns", 
+      "rel": "dep", 
+      "gov_idx": 33
     }
   ], 
-  "text": "The industrial average jumped more than 41 points Tuesday as speculators rushed to buy shares of potential takeover targets .", 
-  "coref_chains": [], 
-  "bbn_ne": [
+  "text": "But with the end of the year in sight , money managers are eager to take profits and cut their risks of losing what for many have been exceptionally good returns in", 
+  "coref_chains": [
     [
       10, 
-      10, 
-      "speculators", 
+      11, 
+      1, 
+      "money managers", 
+      false
+    ], 
+    [
+      20, 
+      20, 
+      1, 
+      "their", 
+      false
+    ]
+  ], 
+  "bbn_ne": [
+    [
+      11, 
+      11, 
+      "managers", 
       "PER_DESC", 
       "", 
       "", 
       false
     ]
   ], 
+  "coref": [
+    [
+      [
+        [
+          "their", 
+          0, 
+          -1, 
+          19, 
+          20
+        ], 
+        [
+          "money managers", 
+          0, 
+          1, 
+          10, 
+          12
+        ]
+      ]
+    ]
+  ], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "take", 
+      "args": [
+        [
+          "rel", 
+          "16:0", 
+          16, 
+          16, 
+          "take"
+        ], 
+        [
+          "ARG0", 
+          "14:0", 
+          10, 
+          11, 
+          "money managers"
+        ], 
+        [
+          "ARG1", 
+          "17:1", 
+          17, 
+          17, 
+          "profits"
+        ]
+      ], 
+      "roleset": "take.01"
+    }, 
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "cut", 
+      "args": [
+        [
+          "rel", 
+          "19:0", 
+          19, 
+          19, 
+          "cut"
+        ], 
+        [
+          "ARG0", 
+          "14:0", 
+          10, 
+          11, 
+          "money managers"
+        ], 
+        [
+          "ARG1", 
+          "20:2", 
+          20, 
+          34, 
+          "their risks of *PRO*-2 losing what for many *T*-178 have been exceptionally good returns in"
+        ], 
+        [
+          "LINK-PCR", 
+          "10:1*14:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "roleset": "cut.02"
+    }, 
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "lose", 
+      "args": [
+        [
+          "rel", 
+          "24:0", 
+          24, 
+          24, 
+          "losing"
+        ], 
+        [
+          "ARG0", 
+          "23:0", 
+          14, 
+          14, 
+          "*PRO*-1"
+        ], 
+        [
+          "ARG1", 
+          "25:2", 
+          25, 
+          34, 
+          "what for many *T*-178 have been exceptionally good returns in"
+        ], 
+        [
+          "LINK-PCR", 
+          "23:0*23:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "roleset": "lose.02"
+    }
+  ], 
   "sentence_nr": 8, 
   "tuples": [
     [
-      "det", 
-      "average", 
-      "The"
+      "cc", 
+      "eager", 
+      "But"
     ], 
     [
-      "amod", 
-      "average", 
-      "industrial"
+      "det", 
+      "end", 
+      "the"
+    ], 
+    [
+      "prep_with", 
+      "eager", 
+      "end"
+    ], 
+    [
+      "det", 
+      "year", 
+      "the"
+    ], 
+    [
+      "prep_of", 
+      "end", 
+      "year"
+    ], 
+    [
+      "prep_in", 
+      "year", 
+      "sight"
+    ], 
+    [
+      "nn", 
+      "managers", 
+      "money"
     ], 
     [
       "nsubj", 
-      "jumped", 
-      "average"
+      "eager", 
+      "managers"
+    ], 
+    [
+      "cop", 
+      "eager", 
+      "are"
     ], 
     [
       "root", 
       "ROOT", 
-      "jumped"
-    ], 
-    [
-      "mwe", 
-      "than", 
-      "more"
-    ], 
-    [
-      "quantmod", 
-      "41", 
-      "than"
-    ], 
-    [
-      "num", 
-      "points", 
-      "41"
-    ], 
-    [
-      "dobj", 
-      "jumped", 
-      "points"
-    ], 
-    [
-      "tmod", 
-      "jumped", 
-      "Tuesday"
-    ], 
-    [
-      "mark", 
-      "rushed", 
-      "as"
-    ], 
-    [
-      "nsubj", 
-      "rushed", 
-      "speculators"
-    ], 
-    [
-      "xsubj", 
-      "buy", 
-      "speculators"
-    ], 
-    [
-      "advcl", 
-      "jumped", 
-      "rushed"
+      "eager"
     ], 
     [
       "aux", 
-      "buy", 
+      "take", 
       "to"
     ], 
     [
       "xcomp", 
-      "rushed", 
-      "buy"
+      "eager", 
+      "take"
     ], 
     [
       "dobj", 
-      "buy", 
-      "shares"
+      "take", 
+      "profits"
+    ], 
+    [
+      "xcomp", 
+      "eager", 
+      "cut"
+    ], 
+    [
+      "conj_and", 
+      "take", 
+      "cut"
+    ], 
+    [
+      "poss", 
+      "risks", 
+      "their"
+    ], 
+    [
+      "dobj", 
+      "cut", 
+      "risks"
+    ], 
+    [
+      "prepc_of", 
+      "risks", 
+      "losing"
+    ], 
+    [
+      "nsubj", 
+      "returns", 
+      "what"
+    ], 
+    [
+      "dep", 
+      "returns", 
+      "for"
+    ], 
+    [
+      "pobj", 
+      "for", 
+      "many"
+    ], 
+    [
+      "aux", 
+      "returns", 
+      "have"
+    ], 
+    [
+      "cop", 
+      "returns", 
+      "been"
+    ], 
+    [
+      "advmod", 
+      "good", 
+      "exceptionally"
     ], 
     [
       "amod", 
-      "targets", 
-      "potential"
+      "returns", 
+      "good"
     ], 
     [
-      "nn", 
-      "targets", 
-      "takeover"
+      "ccomp", 
+      "losing", 
+      "returns"
     ], 
     [
-      "prep_of", 
-      "shares", 
-      "targets"
+      "prep", 
+      "returns", 
+      "in"
     ]
   ], 
   "words": [
     [
-      "The", 
+      "But", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "but", 
+        "PartOfSpeech": "CC"
+      }
+    ], 
+    [
+      "with", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "with", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "the", 
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
@@ -255,94 +505,95 @@
       }
     ], 
     [
-      "industrial", 
+      "end", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "industrial", 
-        "PartOfSpeech": "JJ"
-      }
-    ], 
-    [
-      "average", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "average", 
+        "Lemma": "end", 
         "PartOfSpeech": "NN"
       }
     ], 
     [
-      "jumped", 
+      "of", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "jump", 
-        "PartOfSpeech": "VBD"
-      }
-    ], 
-    [
-      "more", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "more", 
-        "PartOfSpeech": "JJR"
-      }
-    ], 
-    [
-      "than", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "than", 
+        "Lemma": "of", 
         "PartOfSpeech": "IN"
       }
     ], 
     [
-      "41", 
-      {
-        "NamedEntityTag": "NUMBER", 
-        "NormalizedNamedEntityTag": ">41.0", 
-        "PartOfSpeech": "CD", 
-        "Lemma": "41"
-      }
-    ], 
-    [
-      "points", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "point", 
-        "PartOfSpeech": "NNS"
-      }
-    ], 
-    [
-      "Tuesday", 
+      "the", 
       {
         "NamedEntityTag": "DATE", 
-        "NormalizedNamedEntityTag": "XXXX-WXX-2", 
-        "Timex": "<TIMEX3 tid=\"t1\" value=\"XXXX-WXX-2\" type=\"DATE\">Tuesday</TIMEX3>", 
-        "PartOfSpeech": "NNP", 
-        "Lemma": "Tuesday"
+        "NormalizedNamedEntityTag": "THIS", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">the year</TIMEX3>", 
+        "PartOfSpeech": "DT", 
+        "Lemma": "the"
       }
     ], 
     [
-      "as", 
+      "year", 
+      {
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "THIS", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">the year</TIMEX3>", 
+        "PartOfSpeech": "NN", 
+        "Lemma": "year"
+      }
+    ], 
+    [
+      "in", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "as", 
+        "Lemma": "in", 
         "PartOfSpeech": "IN"
       }
     ], 
     [
-      "speculators", 
+      "sight", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "speculator", 
+        "Lemma": "sight", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      ",", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ",", 
+        "PartOfSpeech": ","
+      }
+    ], 
+    [
+      "money", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "money", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "managers", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "manager", 
         "PartOfSpeech": "NNS"
       }
     ], 
     [
-      "rushed", 
+      "are", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "rush", 
-        "PartOfSpeech": "VBD"
+        "Lemma": "be", 
+        "PartOfSpeech": "VBP"
+      }
+    ], 
+    [
+      "eager", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "eager", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
@@ -354,18 +605,50 @@
       }
     ], 
     [
-      "buy", 
+      "take", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "buy", 
+        "Lemma": "take", 
         "PartOfSpeech": "VB"
       }
     ], 
     [
-      "shares", 
+      "profits", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "share", 
+        "Lemma": "profit", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "and", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "and", 
+        "PartOfSpeech": "CC"
+      }
+    ], 
+    [
+      "cut", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "cut", 
+        "PartOfSpeech": "VB"
+      }
+    ], 
+    [
+      "their", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "they", 
+        "PartOfSpeech": "PRP$"
+      }
+    ], 
+    [
+      "risks", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "risk", 
         "PartOfSpeech": "NNS"
       }
     ], 
@@ -378,40 +661,88 @@
       }
     ], 
     [
-      "potential", 
+      "losing", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "potential", 
+        "Lemma": "lose", 
+        "PartOfSpeech": "VBG"
+      }
+    ], 
+    [
+      "what", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "what", 
+        "PartOfSpeech": "WP"
+      }
+    ], 
+    [
+      "for", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "for", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "many", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "many", 
         "PartOfSpeech": "JJ"
       }
     ], 
     [
-      "takeover", 
+      "have", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "takeover", 
-        "PartOfSpeech": "NN"
+        "Lemma": "have", 
+        "PartOfSpeech": "VBP"
       }
     ], 
     [
-      "targets", 
+      "been", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "target", 
+        "Lemma": "be", 
+        "PartOfSpeech": "VBN"
+      }
+    ], 
+    [
+      "exceptionally", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "exceptionally", 
+        "PartOfSpeech": "RB"
+      }
+    ], 
+    [
+      "good", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "good", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "returns", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "return", 
         "PartOfSpeech": "NNS"
       }
     ], 
     [
-      ".", 
+      "in", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": ".", 
-        "PartOfSpeech": "."
+        "Lemma": "in", 
+        "PartOfSpeech": "IN"
       }
     ]
   ], 
-  "treebank_sentence": "The industrial average jumped more than 41 points Tuesday as speculators rushed *PRO*-1 to buy shares of potential takeover targets .", 
-  "parsetree": "(ROOT (S (NP (DT The) (JJ industrial) (NN average)) (VP (VBD jumped) (NP (QP (XS (JJR more) (IN than)) (CD 41)) (NNS points)) (NP-TMP (NNP Tuesday)) (SBAR (IN as) (S (NP (NNS speculators)) (VP (VBD rushed) (S (VP (TO to) (VP (VB buy) (NP (NP (NNS shares)) (PP (IN of) (NP (JJ potential) (NN takeover) (NNS targets))))))))))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ (DT The) (JJ industrial) (NN average)) (VP (VBD jumped) (NP-EXT (QP (RBR more) (IN than) (CD 41)) (NNS points)) (NP-TMP (NNP Tuesday)) (SBAR-TMP (IN as) (S (NP-SBJ-1 (NNS speculators)) (VP (VBD rushed) (S (NP-SBJ (-NONE- *PRO*-1)) (VP (TO to) (VP (VB buy) (NP (NP (NNS shares)) (PP (IN of) (NP (JJ potential) (NN takeover) (NNS targets))))))))))) (. .)))", 
+  "treebank_sentence": "But with the end of the year in sight , money managers are eager *PRO*-1 to take profits and cut their risks of *PRO*-2 losing what for many *T*-178 have been exceptionally good returns in", 
+  "parsetree": "(ROOT (S (CC But) (PP (IN with) (NP (NP (DT the) (NN end)) (PP (IN of) (NP (NP (DT the) (NN year)) (PP (IN in) (NP (NN sight))))))) (, ,) (NP (NN money) (NNS managers)) (VP (VBP are) (ADJP (JJ eager) (S (VP (TO to) (VP (VP (VB take) (NP (NNS profits))) (CC and) (VP (VB cut) (NP (NP (PRP$ their) (NNS risks)) (PP (IN of) (S (VP (VBG losing) (SBAR (WHNP (WP what)) (PP (IN for) (ADJP (JJ many))) (S (VP (VBP have) (VP (VBN been) (NP (ADJP (RB exceptionally) (JJ good)) (NNS returns)) (PP (IN in))))))))))))))))))", 
+  "goldparse": "(TOP (S (CC But) (PP (IN with) (S-NOM (NP-SBJ (NP (DT the) (NN end)) (PP (IN of) (NP (DT the) (NN year)))) (PP-LOC-PRD (IN in) (NP (NN sight))))) (, ,) (NP-SBJ-1 (NN money) (NNS managers)) (VP (VBP are) (ADJP-PRD (JJ eager) (S (NP-SBJ-2 (-NONE- *PRO*-1)) (VP (TO to) (VP (VP (VB take) (NP (NNS profits))) (CC and) (VP (VB cut) (NP (NP (PRP$ their) (NNS risks)) (PP (IN of) (S-NOM (NP-SBJ (-NONE- *PRO*-2)) (VP (VBG losing) (SBAR-NOM (WHNP-178 (WP what)) (S (PP (IN for) (NP (JJ many))) (NP-SBJ (-NONE- *T*-178)) (VP (VBP have) (VP (VBN been) (NP-PRD (NP (ADJP (RB exceptionally) (JJ good)) (NNS returns)) (X (PP (IN in))))))))))))))))))))", 
   "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
 }

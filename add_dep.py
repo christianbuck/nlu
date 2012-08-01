@@ -99,6 +99,7 @@ class DepOffset(object):
                 offset += 1
                 i2 = offset + i1
             if i2 >= len(s2):
+                print "%s %s\n%s %s" %(len(s1), s1, len(s2), s2)
                 return False
             assert s1[i1] == s2[i2]
             #print i2+1, s2[i2]
@@ -138,9 +139,9 @@ def read_dependencies(filename, n, offsets=None):
             gov_idx = offsets.map_to_longer(gov_idx)
         dependencies.append( {'rel': rel,
                               'dep': dep,
-                              'dep_idx' : dep_idx,
+                              'dep_idx' : dep_idx - 1,
                               'gov' : gov,
-                              'gov_idx' : gov_idx} )
+                              'gov_idx' : gov_idx - 1} )
     #for entry in dependencies:
     #    print entry
     return dependencies
@@ -149,6 +150,15 @@ def add_to_json(infile, outfile, key, value):
     data = json.load(open(infile))
     data[key] = value
     json.dump(data, open(outfile,'w'), indent=2)
+
+def decode_specials(s):
+    s = s.replace('-LRB-','(')
+    s = s.replace('-RRB-',')')
+    s = s.replace('-LSB-','[')
+    s = s.replace('-RSB-',']')
+    s = s.replace('-LCB-','{')
+    s = s.replace('-RCB-','}')
+    return s
 
 if __name__ == "__main__":
     import argparse
@@ -159,8 +169,11 @@ if __name__ == "__main__":
     args = parser.parse_args(sys.argv[1:])
 
     s = Sentence(open(args.jsonfile))
+
+    s.treebank_sentence = map(decode_specials, s.treebank_sentence)
+
     off = DepOffset(s.text, s.treebank_sentence)
-    n = int(args.jsonfile.split('.')[-2])
+    n = int(args.jsonfile.split('.')[-2]) + 1
     depfile = args.jsonfile.rsplit('.',2)[0] + '.dep'
     print 'depfile:', depfile
     #sys.exit()

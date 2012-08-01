@@ -2,69 +2,69 @@
   "stanford_dep": [
     {
       "dep": "The", 
-      "dep_idx": 1, 
-      "gov": "yield", 
+      "dep_idx": 0, 
+      "gov": "dollar", 
       "rel": "det", 
+      "gov_idx": 1
+    }, 
+    {
+      "dep": "dollar", 
+      "dep_idx": 1, 
+      "gov": "rose", 
+      "rel": "nsubj", 
       "gov_idx": 2
     }, 
     {
-      "dep": "yield", 
+      "dep": "rose", 
       "dep_idx": 2, 
-      "gov": "fell", 
-      "rel": "nsubj", 
-      "gov_idx": 3
-    }, 
-    {
-      "dep": "fell", 
-      "dep_idx": 3, 
       "gov": "ROOT", 
       "rel": "root", 
-      "gov_idx": 0
-    }, 
-    {
-      "dep": "7.88", 
-      "dep_idx": 5, 
-      "gov": "%", 
-      "rel": "num", 
-      "gov_idx": 6
-    }, 
-    {
-      "dep": "%", 
-      "dep_idx": 6, 
-      "gov": "fell", 
-      "rel": "prep_to", 
-      "gov_idx": 3
+      "gov_idx": -1
     }
   ], 
-  "text": "The yield fell to 7.88 % .", 
+  "text": "The dollar rose .", 
   "coref_chains": [], 
   "bbn_ne": [], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "rise", 
+      "args": [
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "rose"
+        ], 
+        [
+          "ARG1", 
+          "0:1", 
+          0, 
+          1, 
+          "The dollar"
+        ]
+      ], 
+      "roleset": "rise.01"
+    }
+  ], 
   "sentence_nr": 18, 
   "tuples": [
     [
       "det", 
-      "yield", 
+      "dollar", 
       "The"
     ], 
     [
       "nsubj", 
-      "fell", 
-      "yield"
+      "rose", 
+      "dollar"
     ], 
     [
       "root", 
       "ROOT", 
-      "fell"
-    ], 
-    [
-      "num", 
-      "%", 
-      "7.88"
-    ], 
-    [
-      "prep_to", 
-      "fell", 
-      "%"
+      "rose"
     ]
   ], 
   "words": [
@@ -77,45 +77,19 @@
       }
     ], 
     [
-      "yield", 
+      "dollar", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "yield", 
+        "Lemma": "dollar", 
         "PartOfSpeech": "NN"
       }
     ], 
     [
-      "fell", 
+      "rose", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "fall", 
+        "Lemma": "rise", 
         "PartOfSpeech": "VBD"
-      }
-    ], 
-    [
-      "to", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "to", 
-        "PartOfSpeech": "TO"
-      }
-    ], 
-    [
-      "7.88", 
-      {
-        "NamedEntityTag": "PERCENT", 
-        "NormalizedNamedEntityTag": "%7.88", 
-        "PartOfSpeech": "CD", 
-        "Lemma": "7.88"
-      }
-    ], 
-    [
-      "%", 
-      {
-        "NamedEntityTag": "PERCENT", 
-        "NormalizedNamedEntityTag": "%7.88", 
-        "PartOfSpeech": "NN", 
-        "Lemma": "%"
       }
     ], 
     [
@@ -127,8 +101,8 @@
       }
     ]
   ], 
-  "treebank_sentence": "The yield fell to 7.88 % .", 
-  "parsetree": "(ROOT (S (NP (DT The) (NN yield)) (VP (VBD fell) (PP (TO to) (NP (CD 7.88) (NN %)))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ (DT The) (NN yield)) (VP (VBD fell) (PP-DIR (IN to) (NP (CD 7.88) (NN %)))) (. .)))", 
+  "treebank_sentence": "The dollar rose .", 
+  "parsetree": "(ROOT (S (NP (DT The) (NN dollar)) (VP (VBD rose)) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (DT The) (NN dollar)) (VP (VBD rose)) (. .)))", 
   "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
 }

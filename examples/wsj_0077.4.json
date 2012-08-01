@@ -1,324 +1,284 @@
 {
   "stanford_dep": [
     {
-      "dep": "But", 
-      "dep_idx": 1, 
-      "gov": "ahead", 
-      "rel": "cc", 
-      "gov_idx": 12
-    }, 
-    {
-      "dep": "advancing", 
-      "dep_idx": 2, 
-      "gov": "issues", 
+      "dep": "Long", 
+      "dep_idx": 0, 
+      "gov": "term", 
       "rel": "amod", 
-      "gov_idx": 3
+      "gov_idx": 2
     }, 
     {
-      "dep": "issues", 
+      "dep": "term", 
+      "dep_idx": 2, 
+      "gov": "prices", 
+      "rel": "nn", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "bond", 
       "dep_idx": 3, 
-      "gov": "ahead", 
+      "gov": "prices", 
+      "rel": "nn", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "prices", 
+      "dep_idx": 4, 
+      "gov": "rose", 
       "rel": "nsubj", 
+      "gov_idx": 5
+    }, 
+    {
+      "dep": "rose", 
+      "dep_idx": 5, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
+    }, 
+    {
+      "dep": "prospects", 
+      "dep_idx": 7, 
+      "gov": "rose", 
+      "rel": "prep_despite", 
+      "gov_idx": 5
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 9, 
+      "gov": "supply", 
+      "rel": "det", 
       "gov_idx": 12
     }, 
     {
-      "dep": "the", 
-      "dep_idx": 5, 
-      "gov": "Exchange", 
-      "rel": "det", 
-      "gov_idx": 9
+      "dep": "huge", 
+      "dep_idx": 10, 
+      "gov": "supply", 
+      "rel": "amod", 
+      "gov_idx": 12
     }, 
     {
-      "dep": "New", 
-      "dep_idx": 6, 
-      "gov": "York", 
-      "rel": "nn", 
+      "dep": "new", 
+      "dep_idx": 11, 
+      "gov": "supply", 
+      "rel": "amod", 
+      "gov_idx": 12
+    }, 
+    {
+      "dep": "supply", 
+      "dep_idx": 12, 
+      "gov": "prospects", 
+      "rel": "prep_of", 
       "gov_idx": 7
     }, 
     {
-      "dep": "York", 
-      "dep_idx": 7, 
-      "gov": "Exchange", 
-      "rel": "nn", 
-      "gov_idx": 9
-    }, 
-    {
-      "dep": "Stock", 
-      "dep_idx": 8, 
-      "gov": "Exchange", 
-      "rel": "nn", 
-      "gov_idx": 9
-    }, 
-    {
-      "dep": "Exchange", 
-      "dep_idx": 9, 
-      "gov": "issues", 
-      "rel": "prep_on", 
-      "gov_idx": 3
-    }, 
-    {
-      "dep": "were", 
-      "dep_idx": 10, 
-      "gov": "ahead", 
-      "rel": "cop", 
-      "gov_idx": 12
-    }, 
-    {
-      "dep": "tidily", 
-      "dep_idx": 11, 
-      "gov": "ahead", 
-      "rel": "advmod", 
-      "gov_idx": 12
-    }, 
-    {
-      "dep": "ahead", 
-      "dep_idx": 12, 
-      "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": 0
-    }, 
-    {
-      "dep": "declining", 
+      "dep": "Treasury", 
       "dep_idx": 14, 
-      "gov": "stocks", 
-      "rel": "amod", 
+      "gov": "debt", 
+      "rel": "nn", 
       "gov_idx": 15
     }, 
     {
-      "dep": "stocks", 
+      "dep": "debt", 
       "dep_idx": 15, 
-      "gov": "ahead", 
+      "gov": "supply", 
       "rel": "prep_of", 
       "gov_idx": 12
     }, 
     {
-      "dep": "847", 
+      "dep": "this", 
+      "dep_idx": 16, 
+      "gov": "month", 
+      "rel": "det", 
+      "gov_idx": 17
+    }, 
+    {
+      "dep": "month", 
       "dep_idx": 17, 
-      "gov": "644", 
-      "rel": "dep", 
-      "gov_idx": 19
-    }, 
-    {
-      "dep": "to", 
-      "dep_idx": 18, 
-      "gov": "644", 
-      "rel": "dep", 
-      "gov_idx": 19
-    }, 
-    {
-      "dep": "644", 
-      "dep_idx": 19, 
-      "gov": "ahead", 
-      "rel": "advmod", 
+      "gov": "supply", 
+      "rel": "tmod", 
       "gov_idx": 12
     }
   ], 
-  "text": "But advancing issues on the New York Stock Exchange were tidily ahead of declining stocks , 847 to 644 .", 
+  "text": "Long - term bond prices rose despite prospects of a huge new supply of Treasury debt this month .", 
   "coref_chains": [], 
   "bbn_ne": [
     [
-      5, 
-      8, 
-      "New York Stock Exchange", 
+      14, 
+      14, 
+      "Treasury", 
       "ORGANIZATION", 
-      "CORPORATION", 
+      "GOVERNMENT", 
       "", 
       false
     ]
   ], 
-  "coref": [
-    [
-      [
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "rise", 
+      "args": [
         [
-          "declining stocks", 
-          0, 
-          4, 
-          13, 
-          15
+          "rel", 
+          "5:0", 
+          5, 
+          5, 
+          "rose"
         ], 
         [
-          "declining stocks , 847 to 644", 
+          "ARG1", 
+          "0:2", 
           0, 
           4, 
-          13, 
-          19
+          "Long - term bond prices"
+        ], 
+        [
+          "ARGM-ADV", 
+          "6:1", 
+          6, 
+          17, 
+          "despite prospects of a huge new supply of Treasury debt this month"
         ]
-      ]
-    ]
+      ], 
+      "roleset": "rise.01"
+    }
   ], 
   "sentence_nr": 4, 
   "tuples": [
     [
-      "cc", 
-      "were", 
-      "But"
+      "dep", 
+      "rose", 
+      "Long"
     ], 
     [
-      "amod", 
-      "issues", 
-      "advancing"
+      "nn", 
+      "prices", 
+      "term"
+    ], 
+    [
+      "nn", 
+      "prices", 
+      "bond"
     ], 
     [
       "nsubj", 
-      "were", 
-      "issues"
-    ], 
-    [
-      "det", 
-      "Exchange", 
-      "the"
-    ], 
-    [
-      "nn", 
-      "Exchange", 
-      "New"
-    ], 
-    [
-      "nn", 
-      "Exchange", 
-      "York"
-    ], 
-    [
-      "nn", 
-      "Exchange", 
-      "Stock"
-    ], 
-    [
-      "prep_on", 
-      "issues", 
-      "Exchange"
+      "rose", 
+      "prices"
     ], 
     [
       "root", 
       "ROOT", 
-      "were"
+      "rose"
     ], 
     [
-      "advmod", 
-      "were", 
-      "tidily"
+      "prep_despite", 
+      "rose", 
+      "prospects"
+    ], 
+    [
+      "det", 
+      "supply", 
+      "a"
     ], 
     [
       "amod", 
-      "stocks", 
-      "declining"
+      "supply", 
+      "huge"
     ], 
     [
-      "prep_ahead_of", 
-      "were", 
-      "stocks"
+      "amod", 
+      "supply", 
+      "new"
     ], 
     [
-      "num", 
-      "644", 
-      "847"
+      "prep_of", 
+      "prospects", 
+      "supply"
     ], 
     [
-      "dep", 
-      "644", 
-      "to"
+      "nn", 
+      "debt", 
+      "Treasury"
     ], 
     [
-      "appos", 
-      "stocks", 
-      "644"
+      "prep_of", 
+      "supply", 
+      "debt"
+    ], 
+    [
+      "det", 
+      "month", 
+      "this"
+    ], 
+    [
+      "tmod", 
+      "rose", 
+      "month"
     ]
   ], 
   "words": [
     [
-      "But", 
+      "Long", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "but", 
-        "PartOfSpeech": "CC"
+        "Lemma": "long", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
-      "advancing", 
+      "-", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "advance", 
-        "PartOfSpeech": "VBG"
+        "Lemma": "-", 
+        "PartOfSpeech": ":"
       }
     ], 
     [
-      "issues", 
+      "term", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "issue", 
+        "Lemma": "term", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "bond", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "bond", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "prices", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "price", 
         "PartOfSpeech": "NNS"
       }
     ], 
     [
-      "on", 
+      "rose", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "on", 
-        "PartOfSpeech": "IN"
-      }
-    ], 
-    [
-      "the", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "the", 
-        "PartOfSpeech": "DT"
-      }
-    ], 
-    [
-      "New", 
-      {
-        "NamedEntityTag": "ORGANIZATION", 
-        "Lemma": "New", 
-        "PartOfSpeech": "NNP"
-      }
-    ], 
-    [
-      "York", 
-      {
-        "NamedEntityTag": "ORGANIZATION", 
-        "Lemma": "York", 
-        "PartOfSpeech": "NNP"
-      }
-    ], 
-    [
-      "Stock", 
-      {
-        "NamedEntityTag": "ORGANIZATION", 
-        "Lemma": "Stock", 
-        "PartOfSpeech": "NNP"
-      }
-    ], 
-    [
-      "Exchange", 
-      {
-        "NamedEntityTag": "ORGANIZATION", 
-        "Lemma": "Exchange", 
-        "PartOfSpeech": "NNP"
-      }
-    ], 
-    [
-      "were", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "be", 
+        "Lemma": "rise", 
         "PartOfSpeech": "VBD"
       }
     ], 
     [
-      "tidily", 
+      "despite", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "tidily", 
-        "PartOfSpeech": "RB"
+        "Lemma": "despite", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
-      "ahead", 
+      "prospects", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "ahead", 
-        "PartOfSpeech": "RB"
+        "Lemma": "prospects", 
+        "PartOfSpeech": "NNS"
       }
     ], 
     [
@@ -330,53 +290,79 @@
       }
     ], 
     [
-      "declining", 
+      "a", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "decline", 
-        "PartOfSpeech": "VBG"
+        "Lemma": "a", 
+        "PartOfSpeech": "DT"
       }
     ], 
     [
-      "stocks", 
+      "huge", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "stock", 
-        "PartOfSpeech": "NNS"
+        "Lemma": "huge", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
-      ",", 
+      "new", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": ",", 
-        "PartOfSpeech": ","
+        "Lemma": "new", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
-      "847", 
-      {
-        "NamedEntityTag": "NUMBER", 
-        "NormalizedNamedEntityTag": "847.0", 
-        "PartOfSpeech": "CD", 
-        "Lemma": "847"
-      }
-    ], 
-    [
-      "to", 
+      "supply", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "to", 
-        "PartOfSpeech": "TO"
+        "Lemma": "supply", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
-      "644", 
+      "of", 
       {
-        "NamedEntityTag": "NUMBER", 
-        "NormalizedNamedEntityTag": "644.0", 
-        "PartOfSpeech": "CD", 
-        "Lemma": "644"
+        "NamedEntityTag": "O", 
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "Treasury", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Treasury", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "debt", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "debt", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "this", 
+      {
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "THIS", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1M\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">this month</TIMEX3>", 
+        "PartOfSpeech": "DT", 
+        "Lemma": "this"
+      }
+    ], 
+    [
+      "month", 
+      {
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "THIS", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1M\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">this month</TIMEX3>", 
+        "PartOfSpeech": "NN", 
+        "Lemma": "month"
       }
     ], 
     [
@@ -388,8 +374,8 @@
       }
     ]
   ], 
-  "treebank_sentence": "But advancing issues on the New York Stock Exchange were tidily ahead of declining stocks , 847 to 644 .", 
-  "parsetree": "(ROOT (S (CC But) (NP (NP (VBG advancing) (NNS issues)) (PP (IN on) (NP (DT the) (NNP New) (NNP York) (NNP Stock) (NNP Exchange)))) (VP (VBD were) (ADVP (RB tidily)) (ADVP (RB ahead) (PP (IN of) (NP (NP (VBG declining) (NNS stocks)) (, ,) (NP (CD 847) (TO to) (CD 644)))))) (. .)))", 
-  "goldparse": "(TOP (S (CC But) (NP-SBJ (NP (VBG advancing) (NNS issues)) (PP-LOC (IN on) (NP (DT the) (NML (NNP New) (NNP York)) (NNP Stock) (NNP Exchange)))) (VP (VBD were) (ADJP-PRD (ADVP (RB tidily)) (RB ahead) (PP (IN of) (NP (VBG declining) (NNS stocks))) (, ,) (ADVP (CD 847) (TO to) (CD 644)))) (. .)))", 
+  "treebank_sentence": "Long - term bond prices rose despite prospects of a huge new supply of Treasury debt this month .", 
+  "parsetree": "(ROOT (X (NP (JJ Long)) (: -) (S (NP (NN term) (NN bond) (NNS prices)) (VP (VBD rose) (PP (IN despite) (NP (NP (NNS prospects)) (PP (IN of) (NP (NP (DT a) (JJ huge) (JJ new) (NN supply)) (PP (IN of) (NP (NNP Treasury) (NN debt))))))) (NP-TMP (DT this) (NN month)))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NML (JJ Long) (HYPH -) (NN term)) (NN bond) (NNS prices)) (VP (VBD rose) (PP (IN despite) (NP (NP (NNS prospects)) (PP (IN of) (NP (NP (DT a) (JJ huge) (JJ new) (NN supply)) (PP (IN of) (NP (NNP Treasury) (NN debt))) (NP-TMP (DT this) (NN month))))))) (. .)))", 
   "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
 }

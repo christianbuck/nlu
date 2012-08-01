@@ -1,367 +1,363 @@
 {
   "stanford_dep": [
     {
-      "dep": "Analysts", 
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "average", 
+      "rel": "det", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "industrial", 
       "dep_idx": 1, 
-      "gov": "disappointed", 
-      "rel": "nsubjpass", 
-      "gov_idx": 3
+      "gov": "average", 
+      "rel": "amod", 
+      "gov_idx": 2
     }, 
     {
-      "dep": "were", 
+      "dep": "average", 
       "dep_idx": 2, 
-      "gov": "disappointed", 
-      "rel": "auxpass", 
+      "gov": "jumped", 
+      "rel": "nsubj", 
       "gov_idx": 3
     }, 
     {
-      "dep": "disappointed", 
+      "dep": "jumped", 
       "dep_idx": 3, 
       "gov": "ROOT", 
       "rel": "root", 
-      "gov_idx": 0
+      "gov_idx": -1
     }, 
     {
-      "dep": "that", 
+      "dep": "more", 
+      "dep_idx": 4, 
+      "gov": "than", 
+      "rel": "advmod", 
+      "gov_idx": 5
+    }, 
+    {
+      "dep": "than", 
       "dep_idx": 5, 
-      "gov": "evaporated", 
-      "rel": "complm", 
-      "gov_idx": 32
+      "gov": "41", 
+      "rel": "quantmod", 
+      "gov_idx": 6
     }, 
     {
-      "dep": "the", 
+      "dep": "41", 
       "dep_idx": 6, 
-      "gov": "enthusiasm", 
-      "rel": "det", 
+      "gov": "points", 
+      "rel": "num", 
       "gov_idx": 7
     }, 
     {
-      "dep": "enthusiasm", 
+      "dep": "points", 
       "dep_idx": 7, 
-      "gov": "showed", 
+      "gov": "jumped", 
       "rel": "dobj", 
-      "gov_idx": 11
-    }, 
-    {
-      "dep": "enthusiasm", 
-      "dep_idx": 7, 
-      "gov": "evaporated", 
-      "rel": "nsubj", 
-      "gov_idx": 32
-    }, 
-    {
-      "dep": "investors", 
-      "dep_idx": 10, 
-      "gov": "showed", 
-      "rel": "nsubj", 
-      "gov_idx": 11
-    }, 
-    {
-      "dep": "showed", 
-      "dep_idx": 11, 
-      "gov": "enthusiasm", 
-      "rel": "rcmod", 
-      "gov_idx": 7
-    }, 
-    {
-      "dep": "stocks", 
-      "dep_idx": 14, 
-      "gov": "showed", 
-      "rel": "prep_for", 
-      "gov_idx": 11
-    }, 
-    {
-      "dep": "the", 
-      "dep_idx": 16, 
-      "gov": "wake", 
-      "rel": "det", 
-      "gov_idx": 17
-    }, 
-    {
-      "dep": "wake", 
-      "dep_idx": 17, 
-      "gov": "showed", 
-      "rel": "prep_in", 
-      "gov_idx": 11
-    }, 
-    {
-      "dep": "Georgia", 
-      "dep_idx": 19, 
-      "gov": "Pacific", 
-      "rel": "nn", 
-      "gov_idx": 21
-    }, 
-    {
-      "dep": "Pacific", 
-      "dep_idx": 21, 
-      "gov": "bid", 
-      "rel": "poss", 
-      "gov_idx": 27
-    }, 
-    {
-      "dep": "$", 
-      "dep_idx": 23, 
-      "gov": "bid", 
-      "rel": "nn", 
-      "gov_idx": 27
-    }, 
-    {
-      "dep": "3.18", 
-      "dep_idx": 24, 
-      "gov": "$", 
-      "rel": "number", 
-      "gov_idx": 23
-    }, 
-    {
-      "dep": "billion", 
-      "dep_idx": 25, 
-      "gov": "$", 
-      "rel": "number", 
-      "gov_idx": 23
-    }, 
-    {
-      "dep": "bid", 
-      "dep_idx": 27, 
-      "gov": "wake", 
-      "rel": "prep_of", 
-      "gov_idx": 17
-    }, 
-    {
-      "dep": "Great", 
-      "dep_idx": 29, 
-      "gov": "Nekoosa", 
-      "rel": "amod", 
-      "gov_idx": 31
-    }, 
-    {
-      "dep": "Northern", 
-      "dep_idx": 30, 
-      "gov": "Nekoosa", 
-      "rel": "nn", 
-      "gov_idx": 31
-    }, 
-    {
-      "dep": "Nekoosa", 
-      "dep_idx": 31, 
-      "gov": "bid", 
-      "rel": "prep_for", 
-      "gov_idx": 27
-    }, 
-    {
-      "dep": "evaporated", 
-      "dep_idx": 32, 
-      "gov": "disappointed", 
-      "rel": "ccomp", 
       "gov_idx": 3
     }, 
     {
-      "dep": "so", 
-      "dep_idx": 33, 
-      "gov": "quickly", 
-      "rel": "advmod", 
-      "gov_idx": 34
+      "dep": "Tuesday", 
+      "dep_idx": 8, 
+      "gov": "jumped", 
+      "rel": "tmod", 
+      "gov_idx": 3
     }, 
     {
-      "dep": "quickly", 
-      "dep_idx": 34, 
-      "gov": "evaporated", 
-      "rel": "advmod", 
-      "gov_idx": 32
+      "dep": "as", 
+      "dep_idx": 9, 
+      "gov": "rushed", 
+      "rel": "mark", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "speculators", 
+      "dep_idx": 10, 
+      "gov": "rushed", 
+      "rel": "nsubj", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "speculators", 
+      "dep_idx": 10, 
+      "gov": "buy", 
+      "rel": "xsubj", 
+      "gov_idx": 14
+    }, 
+    {
+      "dep": "rushed", 
+      "dep_idx": 11, 
+      "gov": "jumped", 
+      "rel": "advcl", 
+      "gov_idx": 3
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 13, 
+      "gov": "buy", 
+      "rel": "aux", 
+      "gov_idx": 14
+    }, 
+    {
+      "dep": "buy", 
+      "dep_idx": 14, 
+      "gov": "rushed", 
+      "rel": "xcomp", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "shares", 
+      "dep_idx": 15, 
+      "gov": "buy", 
+      "rel": "dobj", 
+      "gov_idx": 14
+    }, 
+    {
+      "dep": "potential", 
+      "dep_idx": 17, 
+      "gov": "targets", 
+      "rel": "amod", 
+      "gov_idx": 19
+    }, 
+    {
+      "dep": "takeover", 
+      "dep_idx": 18, 
+      "gov": "targets", 
+      "rel": "nn", 
+      "gov_idx": 19
+    }, 
+    {
+      "dep": "targets", 
+      "dep_idx": 19, 
+      "gov": "shares", 
+      "rel": "prep_of", 
+      "gov_idx": 15
     }
   ], 
-  "text": "Analysts were disappointed that the enthusiasm investors showed for stocks in the wake of Georgia - Pacific 's $ 3.18 billion bid for Great Northern Nekoosa evaporated so quickly .", 
+  "text": "The industrial average jumped more than 41 points Tuesday as speculators rushed to buy shares of potential takeover targets .", 
   "coref_chains": [], 
   "bbn_ne": [
     [
-      0, 
-      0, 
-      "Analysts", 
+      10, 
+      10, 
+      "speculators", 
       "PER_DESC", 
       "", 
-      "", 
-      false
-    ], 
-    [
-      0, 
-      0, 
-      "Georgia-Pacific", 
-      "ORGANIZATION", 
-      "CORPORATION", 
-      "", 
-      false
-    ], 
-    [
-      9, 
-      9, 
-      "investors", 
-      "PER_DESC", 
-      "", 
-      "", 
-      false
-    ], 
-    [
-      28, 
-      30, 
-      "Great Northern Nekoosa", 
-      "ORGANIZATION", 
-      "CORPORATION", 
       "", 
       false
     ]
+  ], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "jump", 
+      "args": [
+        [
+          "rel", 
+          "3:0", 
+          3, 
+          3, 
+          "jumped"
+        ], 
+        [
+          "ARG1", 
+          "0:1", 
+          0, 
+          2, 
+          "The industrial average"
+        ], 
+        [
+          "ARG2", 
+          "4:2", 
+          4, 
+          7, 
+          "more than 41 points"
+        ], 
+        [
+          "ARGM-TMP", 
+          "8:1", 
+          8, 
+          8, 
+          "Tuesday"
+        ], 
+        [
+          "ARGM-TMP", 
+          "9:1", 
+          9, 
+          19, 
+          "as speculators rushed *PRO*-1 to buy shares of potential takeover targets"
+        ]
+      ], 
+      "roleset": "jump.01"
+    }, 
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "rush", 
+      "args": [
+        [
+          "rel", 
+          "11:0", 
+          11, 
+          11, 
+          "rushed"
+        ], 
+        [
+          "ARG1", 
+          "12:0", 
+          10, 
+          10, 
+          "speculators"
+        ], 
+        [
+          "ARG2", 
+          "12:2", 
+          12, 
+          19, 
+          "*PRO*-1 to buy shares of potential takeover targets"
+        ]
+      ], 
+      "roleset": "rush.01"
+    }, 
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "buy", 
+      "args": [
+        [
+          "rel", 
+          "14:0", 
+          14, 
+          14, 
+          "buy"
+        ], 
+        [
+          "ARG0", 
+          "12:0", 
+          10, 
+          10, 
+          "speculators"
+        ], 
+        [
+          "ARG1", 
+          "15:2", 
+          15, 
+          19, 
+          "shares of potential takeover targets"
+        ], 
+        [
+          "LINK-PCR", 
+          "12:0*12:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "roleset": "buy.01"
+    }
   ], 
   "sentence_nr": 7, 
   "tuples": [
     [
-      "nsubjpass", 
-      "disappointed", 
-      "Analysts"
+      "det", 
+      "average", 
+      "The"
     ], 
     [
-      "auxpass", 
-      "disappointed", 
-      "were"
+      "amod", 
+      "average", 
+      "industrial"
+    ], 
+    [
+      "nsubj", 
+      "jumped", 
+      "average"
     ], 
     [
       "root", 
       "ROOT", 
-      "disappointed"
+      "jumped"
     ], 
     [
-      "complm", 
-      "showed", 
-      "that"
+      "mwe", 
+      "than", 
+      "more"
     ], 
     [
-      "det", 
-      "investors", 
-      "the"
-    ], 
-    [
-      "nn", 
-      "investors", 
-      "enthusiasm"
-    ], 
-    [
-      "nsubj", 
-      "showed", 
-      "investors"
-    ], 
-    [
-      "ccomp", 
-      "disappointed", 
-      "showed"
-    ], 
-    [
-      "prep_for", 
-      "showed", 
-      "stocks"
-    ], 
-    [
-      "det", 
-      "wake", 
-      "the"
-    ], 
-    [
-      "prep_in", 
-      "showed", 
-      "wake"
-    ], 
-    [
-      "prep_of", 
-      "wake", 
-      "Georgia"
-    ], 
-    [
-      "poss", 
-      "bid", 
-      "Pacific"
+      "quantmod", 
+      "41", 
+      "than"
     ], 
     [
       "num", 
-      "bid", 
-      "$"
+      "points", 
+      "41"
     ], 
     [
-      "number", 
-      "$", 
-      "3.18"
+      "dobj", 
+      "jumped", 
+      "points"
     ], 
     [
-      "number", 
-      "$", 
-      "billion"
+      "tmod", 
+      "jumped", 
+      "Tuesday"
+    ], 
+    [
+      "mark", 
+      "rushed", 
+      "as"
     ], 
     [
       "nsubj", 
-      "evaporated", 
-      "bid"
+      "rushed", 
+      "speculators"
+    ], 
+    [
+      "xsubj", 
+      "buy", 
+      "speculators"
+    ], 
+    [
+      "advcl", 
+      "jumped", 
+      "rushed"
+    ], 
+    [
+      "aux", 
+      "buy", 
+      "to"
+    ], 
+    [
+      "xcomp", 
+      "rushed", 
+      "buy"
+    ], 
+    [
+      "dobj", 
+      "buy", 
+      "shares"
+    ], 
+    [
+      "amod", 
+      "targets", 
+      "potential"
     ], 
     [
       "nn", 
-      "Nekoosa", 
-      "Great"
+      "targets", 
+      "takeover"
     ], 
     [
-      "nn", 
-      "Nekoosa", 
-      "Northern"
-    ], 
-    [
-      "prep_for", 
-      "bid", 
-      "Nekoosa"
-    ], 
-    [
-      "parataxis", 
-      "disappointed", 
-      "evaporated"
-    ], 
-    [
-      "advmod", 
-      "quickly", 
-      "so"
-    ], 
-    [
-      "advmod", 
-      "evaporated", 
-      "quickly"
+      "prep_of", 
+      "shares", 
+      "targets"
     ]
   ], 
   "words": [
     [
-      "Analysts", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "analyst", 
-        "PartOfSpeech": "NNS"
-      }
-    ], 
-    [
-      "were", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "be", 
-        "PartOfSpeech": "VBD"
-      }
-    ], 
-    [
-      "disappointed", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "disappoint", 
-        "PartOfSpeech": "VBN"
-      }
-    ], 
-    [
-      "that", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "that", 
-        "PartOfSpeech": "IN"
-      }
-    ], 
-    [
-      "the", 
+      "The", 
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
@@ -369,67 +365,118 @@
       }
     ], 
     [
-      "enthusiasm", 
+      "industrial", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "enthusiasm", 
+        "Lemma": "industrial", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "average", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "average", 
         "PartOfSpeech": "NN"
       }
     ], 
     [
-      "investors", 
+      "jumped", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "investor", 
-        "PartOfSpeech": "NNS"
-      }
-    ], 
-    [
-      "showed", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "show", 
+        "Lemma": "jump", 
         "PartOfSpeech": "VBD"
       }
     ], 
     [
-      "for", 
+      "more", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "for", 
+        "Lemma": "more", 
+        "PartOfSpeech": "JJR"
+      }
+    ], 
+    [
+      "than", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "than", 
         "PartOfSpeech": "IN"
       }
     ], 
     [
-      "stocks", 
+      "41", 
+      {
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": ">41.0", 
+        "PartOfSpeech": "CD", 
+        "Lemma": "41"
+      }
+    ], 
+    [
+      "points", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "stock", 
+        "Lemma": "point", 
         "PartOfSpeech": "NNS"
       }
     ], 
     [
-      "in", 
+      "Tuesday", 
+      {
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "XXXX-WXX-2", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"XXXX-WXX-2\" type=\"DATE\">Tuesday</TIMEX3>", 
+        "PartOfSpeech": "NNP", 
+        "Lemma": "Tuesday"
+      }
+    ], 
+    [
+      "as", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "in", 
+        "Lemma": "as", 
         "PartOfSpeech": "IN"
       }
     ], 
     [
-      "the", 
+      "speculators", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "the", 
-        "PartOfSpeech": "DT"
+        "Lemma": "speculator", 
+        "PartOfSpeech": "NNS"
       }
     ], 
     [
-      "wake", 
+      "rushed", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "wake", 
-        "PartOfSpeech": "NN"
+        "Lemma": "rush", 
+        "PartOfSpeech": "VBD"
+      }
+    ], 
+    [
+      "to", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "to", 
+        "PartOfSpeech": "TO"
+      }
+    ], 
+    [
+      "buy", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "buy", 
+        "PartOfSpeech": "VB"
+      }
+    ], 
+    [
+      "shares", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "share", 
+        "PartOfSpeech": "NNS"
       }
     ], 
     [
@@ -441,126 +488,27 @@
       }
     ], 
     [
-      "Georgia", 
-      {
-        "NamedEntityTag": "LOCATION", 
-        "Lemma": "Georgia", 
-        "PartOfSpeech": "NNP"
-      }
-    ], 
-    [
-      "-", 
+      "potential", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "-", 
-        "PartOfSpeech": ":"
+        "Lemma": "potential", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
-      "Pacific", 
-      {
-        "NamedEntityTag": "LOCATION", 
-        "Lemma": "Pacific", 
-        "PartOfSpeech": "NNP"
-      }
-    ], 
-    [
-      "'s", 
+      "takeover", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "'s", 
-        "PartOfSpeech": "POS"
-      }
-    ], 
-    [
-      "$", 
-      {
-        "NamedEntityTag": "MONEY", 
-        "NormalizedNamedEntityTag": "$3.18E9", 
-        "PartOfSpeech": "$", 
-        "Lemma": "$"
-      }
-    ], 
-    [
-      "3.18", 
-      {
-        "NamedEntityTag": "MONEY", 
-        "NormalizedNamedEntityTag": "$3.18E9", 
-        "PartOfSpeech": "CD", 
-        "Lemma": "3.18"
-      }
-    ], 
-    [
-      "billion", 
-      {
-        "NamedEntityTag": "MONEY", 
-        "NormalizedNamedEntityTag": "$3.18E9", 
-        "PartOfSpeech": "CD", 
-        "Lemma": "billion"
-      }
-    ], 
-    [
-      "bid", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "bid", 
+        "Lemma": "takeover", 
         "PartOfSpeech": "NN"
       }
     ], 
     [
-      "for", 
+      "targets", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "for", 
-        "PartOfSpeech": "IN"
-      }
-    ], 
-    [
-      "Great", 
-      {
-        "NamedEntityTag": "ORGANIZATION", 
-        "Lemma": "Great", 
-        "PartOfSpeech": "NNP"
-      }
-    ], 
-    [
-      "Northern", 
-      {
-        "NamedEntityTag": "ORGANIZATION", 
-        "Lemma": "Northern", 
-        "PartOfSpeech": "NNP"
-      }
-    ], 
-    [
-      "Nekoosa", 
-      {
-        "NamedEntityTag": "ORGANIZATION", 
-        "Lemma": "Nekoosa", 
-        "PartOfSpeech": "NNP"
-      }
-    ], 
-    [
-      "evaporated", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "evaporate", 
-        "PartOfSpeech": "VBD"
-      }
-    ], 
-    [
-      "so", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "so", 
-        "PartOfSpeech": "RB"
-      }
-    ], 
-    [
-      "quickly", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "quickly", 
-        "PartOfSpeech": "RB"
+        "Lemma": "target", 
+        "PartOfSpeech": "NNS"
       }
     ], 
     [
@@ -572,8 +520,8 @@
       }
     ]
   ], 
-  "treebank_sentence": "Analysts were disappointed *-112 that the enthusiasm *ICH*-2 0 investors showed *T*-1 for stocks in the wake of Georgia - Pacific 's $ 3.18 billion *U* bid for Great Northern Nekoosa evaporated so quickly .", 
-  "parsetree": "(ROOT (S (S (NP (NNS Analysts)) (VP (VBD were) (VP (VBN disappointed) (SBAR (IN that) (S (NP (DT the) (NN enthusiasm) (NNS investors)) (VP (VBD showed) (PP (IN for) (NP (NNS stocks))) (PP (IN in) (NP (NP (DT the) (NN wake)) (PP (IN of) (NP (NNP Georgia))))))))))) (: -) (S (NP (NP (NP (NNP Pacific) (POS 's)) (ADJP (QP ($ $) (CD 3.18) (CD billion))) (NN bid)) (PP (IN for) (NP (NNP Great) (NNP Northern) (NNP Nekoosa)))) (VP (VBD evaporated) (ADVP (RB so) (RB quickly)))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ-112 (NNS Analysts)) (VP (VBD were) (VP (VBN disappointed) (NP (-NONE- *-112)) (SBAR (IN that) (S (NP-SBJ (NP (NP (DT the) (NN enthusiasm)) (PP (-NONE- *ICH*-2))) (SBAR (WHNP-1 (-NONE- 0)) (S (NP-SBJ (NNS investors)) (VP (VBD showed) (NP (-NONE- *T*-1)) (PP-2 (IN for) (NP (NNS stocks))) (PP-LOC (IN in) (NP (NP (DT the) (NN wake)) (PP (IN of) (NP (NP (NP (NNP Georgia) (HYPH -) (NNP Pacific) (POS 's)) (NML (QP ($ $) (CD 3.18) (CD billion)) (-NONE- *U*)) (NN bid)) (PP (IN for) (NP (JJ Great) (NNP Northern) (NNP Nekoosa))))))))))) (VP (VBD evaporated) (ADVP-TMP (RB so) (RB quickly))))))) (. .)))", 
+  "treebank_sentence": "The industrial average jumped more than 41 points Tuesday as speculators rushed *PRO*-1 to buy shares of potential takeover targets .", 
+  "parsetree": "(ROOT (S (NP (DT The) (JJ industrial) (NN average)) (VP (VBD jumped) (NP (QP (XS (JJR more) (IN than)) (CD 41)) (NNS points)) (NP-TMP (NNP Tuesday)) (SBAR (IN as) (S (NP (NNS speculators)) (VP (VBD rushed) (S (VP (TO to) (VP (VB buy) (NP (NP (NNS shares)) (PP (IN of) (NP (JJ potential) (NN takeover) (NNS targets))))))))))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (DT The) (JJ industrial) (NN average)) (VP (VBD jumped) (NP-EXT (QP (RBR more) (IN than) (CD 41)) (NNS points)) (NP-TMP (NNP Tuesday)) (SBAR-TMP (IN as) (S (NP-SBJ-1 (NNS speculators)) (VP (VBD rushed) (S (NP-SBJ (-NONE- *PRO*-1)) (VP (TO to) (VP (VB buy) (NP (NP (NNS shares)) (PP (IN of) (NP (JJ potential) (NN takeover) (NNS targets))))))))))) (. .)))", 
   "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
 }

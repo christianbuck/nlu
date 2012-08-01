@@ -1,337 +1,288 @@
 {
   "stanford_dep": [
     {
-      "dep": "Long", 
-      "dep_idx": 1, 
-      "gov": "term", 
+      "dep": "Continuing", 
+      "dep_idx": 0, 
+      "gov": "demand", 
       "rel": "amod", 
-      "gov_idx": 3
+      "gov_idx": 1
     }, 
     {
-      "dep": "term", 
-      "dep_idx": 3, 
-      "gov": "prices", 
-      "rel": "nn", 
-      "gov_idx": 5
-    }, 
-    {
-      "dep": "bond", 
-      "dep_idx": 4, 
-      "gov": "prices", 
-      "rel": "nn", 
-      "gov_idx": 5
-    }, 
-    {
-      "dep": "prices", 
-      "dep_idx": 5, 
-      "gov": "rose", 
+      "dep": "demand", 
+      "dep_idx": 1, 
+      "gov": "boosted", 
       "rel": "nsubj", 
+      "gov_idx": 7
+    }, 
+    {
+      "dep": "dollars", 
+      "dep_idx": 3, 
+      "gov": "demand", 
+      "rel": "prep_for", 
+      "gov_idx": 1
+    }, 
+    {
+      "dep": "Japanese", 
+      "dep_idx": 5, 
+      "gov": "investors", 
+      "rel": "amod", 
       "gov_idx": 6
     }, 
     {
-      "dep": "rose", 
+      "dep": "investors", 
       "dep_idx": 6, 
+      "gov": "demand", 
+      "rel": "prep_from", 
+      "gov_idx": 1
+    }, 
+    {
+      "dep": "boosted", 
+      "dep_idx": 7, 
       "gov": "ROOT", 
       "rel": "root", 
-      "gov_idx": 0
+      "gov_idx": -1
     }, 
     {
-      "dep": "prospects", 
+      "dep": "the", 
       "dep_idx": 8, 
-      "gov": "rose", 
-      "rel": "prep_despite", 
-      "gov_idx": 6
-    }, 
-    {
-      "dep": "a", 
-      "dep_idx": 10, 
-      "gov": "supply", 
+      "gov": "currency", 
       "rel": "det", 
-      "gov_idx": 13
+      "gov_idx": 10
     }, 
     {
-      "dep": "huge", 
-      "dep_idx": 11, 
-      "gov": "supply", 
-      "rel": "amod", 
-      "gov_idx": 13
-    }, 
-    {
-      "dep": "new", 
-      "dep_idx": 12, 
-      "gov": "supply", 
-      "rel": "amod", 
-      "gov_idx": 13
-    }, 
-    {
-      "dep": "supply", 
-      "dep_idx": 13, 
-      "gov": "prospects", 
-      "rel": "prep_of", 
-      "gov_idx": 8
-    }, 
-    {
-      "dep": "Treasury", 
-      "dep_idx": 15, 
-      "gov": "debt", 
+      "dep": "U.S.", 
+      "dep_idx": 9, 
+      "gov": "currency", 
       "rel": "nn", 
-      "gov_idx": 16
+      "gov_idx": 10
     }, 
     {
-      "dep": "debt", 
-      "dep_idx": 16, 
-      "gov": "supply", 
-      "rel": "prep_of", 
-      "gov_idx": 13
-    }, 
-    {
-      "dep": "this", 
-      "dep_idx": 17, 
-      "gov": "month", 
-      "rel": "det", 
-      "gov_idx": 18
-    }, 
-    {
-      "dep": "month", 
-      "dep_idx": 18, 
-      "gov": "supply", 
-      "rel": "tmod", 
-      "gov_idx": 13
+      "dep": "currency", 
+      "dep_idx": 10, 
+      "gov": "boosted", 
+      "rel": "dobj", 
+      "gov_idx": 7
     }
   ], 
-  "text": "Long - term bond prices rose despite prospects of a huge new supply of Treasury debt this month .", 
+  "text": "Continuing demand for dollars from Japanese investors boosted the U.S. currency .", 
   "coref_chains": [], 
   "bbn_ne": [
     [
-      14, 
-      14, 
-      "Treasury", 
-      "ORGANIZATION", 
-      "GOVERNMENT", 
+      5, 
+      5, 
+      "Japanese", 
+      "NORP", 
+      "NATIONALITY", 
+      "", 
+      false
+    ], 
+    [
+      6, 
+      6, 
+      "investors", 
+      "PER_DESC", 
+      "", 
+      "", 
+      false
+    ], 
+    [
+      9, 
+      9, 
+      "U.S.", 
+      "GPE", 
+      "COUNTRY", 
       "", 
       false
     ]
   ], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "continue", 
+      "args": [
+        [
+          "rel", 
+          "0:0", 
+          0, 
+          0, 
+          "Continuing"
+        ], 
+        [
+          "ARG1", 
+          "1:0", 
+          1, 
+          1, 
+          "demand"
+        ]
+      ], 
+      "roleset": "continue.01"
+    }, 
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "boost", 
+      "args": [
+        [
+          "rel", 
+          "7:0", 
+          7, 
+          7, 
+          "boosted"
+        ], 
+        [
+          "ARG0", 
+          "0:2", 
+          0, 
+          6, 
+          "Continuing demand for dollars from Japanese investors"
+        ], 
+        [
+          "ARG1", 
+          "8:1", 
+          8, 
+          10, 
+          "the U.S. currency"
+        ]
+      ], 
+      "roleset": "boost.01"
+    }
+  ], 
   "sentence_nr": 5, 
   "tuples": [
     [
-      "dep", 
-      "rose", 
-      "Long"
-    ], 
-    [
-      "nn", 
-      "prices", 
-      "term"
-    ], 
-    [
-      "nn", 
-      "prices", 
-      "bond"
+      "amod", 
+      "demand", 
+      "Continuing"
     ], 
     [
       "nsubj", 
-      "rose", 
-      "prices"
+      "boosted", 
+      "demand"
+    ], 
+    [
+      "prep_for", 
+      "demand", 
+      "dollars"
+    ], 
+    [
+      "amod", 
+      "investors", 
+      "Japanese"
+    ], 
+    [
+      "prep_from", 
+      "dollars", 
+      "investors"
     ], 
     [
       "root", 
       "ROOT", 
-      "rose"
-    ], 
-    [
-      "prep_despite", 
-      "rose", 
-      "prospects"
+      "boosted"
     ], 
     [
       "det", 
-      "supply", 
-      "a"
-    ], 
-    [
-      "amod", 
-      "supply", 
-      "huge"
-    ], 
-    [
-      "amod", 
-      "supply", 
-      "new"
-    ], 
-    [
-      "prep_of", 
-      "prospects", 
-      "supply"
+      "currency", 
+      "the"
     ], 
     [
       "nn", 
-      "debt", 
-      "Treasury"
+      "currency", 
+      "U.S."
     ], 
     [
-      "prep_of", 
-      "supply", 
-      "debt"
-    ], 
-    [
-      "det", 
-      "month", 
-      "this"
-    ], 
-    [
-      "tmod", 
-      "rose", 
-      "month"
+      "dobj", 
+      "boosted", 
+      "currency"
     ]
   ], 
   "words": [
     [
-      "Long", 
+      "Continuing", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "long", 
-        "PartOfSpeech": "JJ"
+        "Lemma": "continue", 
+        "PartOfSpeech": "VBG"
       }
     ], 
     [
-      "-", 
+      "demand", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "-", 
-        "PartOfSpeech": ":"
-      }
-    ], 
-    [
-      "term", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "term", 
+        "Lemma": "demand", 
         "PartOfSpeech": "NN"
       }
     ], 
     [
-      "bond", 
+      "for", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "bond", 
-        "PartOfSpeech": "NN"
+        "Lemma": "for", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
-      "prices", 
+      "dollars", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "price", 
+        "Lemma": "dollar", 
         "PartOfSpeech": "NNS"
       }
     ], 
     [
-      "rose", 
+      "from", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "rise", 
+        "Lemma": "from", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "Japanese", 
+      {
+        "NamedEntityTag": "MISC", 
+        "Lemma": "japanese", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "investors", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "investor", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "boosted", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "boost", 
         "PartOfSpeech": "VBD"
       }
     ], 
     [
-      "despite", 
+      "the", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "despite", 
-        "PartOfSpeech": "IN"
-      }
-    ], 
-    [
-      "prospects", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "prospects", 
-        "PartOfSpeech": "NNS"
-      }
-    ], 
-    [
-      "of", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "of", 
-        "PartOfSpeech": "IN"
-      }
-    ], 
-    [
-      "a", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "a", 
+        "Lemma": "the", 
         "PartOfSpeech": "DT"
       }
     ], 
     [
-      "huge", 
+      "U.S.", 
       {
-        "NamedEntityTag": "O", 
-        "Lemma": "huge", 
-        "PartOfSpeech": "JJ"
-      }
-    ], 
-    [
-      "new", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "new", 
-        "PartOfSpeech": "JJ"
-      }
-    ], 
-    [
-      "supply", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "supply", 
-        "PartOfSpeech": "NN"
-      }
-    ], 
-    [
-      "of", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "of", 
-        "PartOfSpeech": "IN"
-      }
-    ], 
-    [
-      "Treasury", 
-      {
-        "NamedEntityTag": "ORGANIZATION", 
-        "Lemma": "Treasury", 
+        "NamedEntityTag": "LOCATION", 
+        "Lemma": "U.S.", 
         "PartOfSpeech": "NNP"
       }
     ], 
     [
-      "debt", 
+      "currency", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "debt", 
+        "Lemma": "currency", 
         "PartOfSpeech": "NN"
-      }
-    ], 
-    [
-      "this", 
-      {
-        "NamedEntityTag": "DATE", 
-        "NormalizedNamedEntityTag": "THIS", 
-        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1M\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">this month</TIMEX3>", 
-        "PartOfSpeech": "DT", 
-        "Lemma": "this"
-      }
-    ], 
-    [
-      "month", 
-      {
-        "NamedEntityTag": "DATE", 
-        "NormalizedNamedEntityTag": "THIS", 
-        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1M\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">this month</TIMEX3>", 
-        "PartOfSpeech": "NN", 
-        "Lemma": "month"
       }
     ], 
     [
@@ -343,8 +294,8 @@
       }
     ]
   ], 
-  "treebank_sentence": "Long - term bond prices rose despite prospects of a huge new supply of Treasury debt this month .", 
-  "parsetree": "(ROOT (X (NP (JJ Long)) (: -) (S (NP (NN term) (NN bond) (NNS prices)) (VP (VBD rose) (PP (IN despite) (NP (NP (NNS prospects)) (PP (IN of) (NP (NP (DT a) (JJ huge) (JJ new) (NN supply)) (PP (IN of) (NP (NNP Treasury) (NN debt))))))) (NP-TMP (DT this) (NN month)))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ (NML (JJ Long) (HYPH -) (NN term)) (NN bond) (NNS prices)) (VP (VBD rose) (PP (IN despite) (NP (NP (NNS prospects)) (PP (IN of) (NP (NP (DT a) (JJ huge) (JJ new) (NN supply)) (PP (IN of) (NP (NNP Treasury) (NN debt))) (NP-TMP (DT this) (NN month))))))) (. .)))", 
+  "treebank_sentence": "Continuing demand for dollars from Japanese investors boosted the U.S. currency .", 
+  "parsetree": "(ROOT (S (NP (NP (VBG Continuing) (NN demand)) (PP (IN for) (NP (NP (NNS dollars)) (PP (IN from) (NP (JJ Japanese) (NNS investors)))))) (VP (VBD boosted) (NP (DT the) (NNP U.S.) (NN currency))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NP (VBG Continuing) (NN demand)) (PP (IN for) (NP (NNS dollars))) (PP (IN from) (NP (JJ Japanese) (NNS investors)))) (VP (VBD boosted) (NP (DT the) (NNP U.S.) (NN currency))) (. .)))", 
   "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
 }
