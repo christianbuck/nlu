@@ -11,9 +11,13 @@ from alignment import Alignment
 def main(sentenceId):
     # load dependency parse from sentence file
     ww, wTags, depParse = loadDepParse(sentenceId)
+    del ww
+    del wTags
+    # TODO: ww and wTags are bad right now, because they don't account for empty element tokens
+    # use depParse instead.
     
     # pipeline steps
-    import nes, adjsAndAdverbs
+    import nes, vprop, adjsAndAdverbs
 
     # initialize input to first pipeline step
     token_accounted_for = [False]*len(depParse)
@@ -28,11 +32,12 @@ def main(sentenceId):
     alignments = Alignment()
 
     # serially execute pipeline steps
-    for m in [nes, adjsAndAdverbs]:
+    for m in [nes, vprop, adjsAndAdverbs]:
         depParse, amr, alignments, completed = m.main(sentenceId, depParse, amr, alignments, completed)
-        print(' '.join(ww))
+        #print(' '.join(ww))
         print(repr(amr), file=sys.stderr)
-        print(alignments, [deps[0]['dep'] for deps in depParse if deps and not completed[0][deps[0]['dep_idx']-1]], file=sys.stderr)
+        print('Completed:',[depParse[i][0]['dep'] for i,v in enumerate(completed[0]) if v and depParse[i]], file=sys.stderr)
+        print(alignments, [deps[0]['dep'] for deps in depParse if deps and not completed[0][deps[0]['dep_idx']]], file=sys.stderr)
         print(amr, file=sys.stderr)
 
     # TODO: output
@@ -45,6 +50,11 @@ def loadBBN(sentenceId):
     jsonFile = 'examples/'+sentenceId+'.json'
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         return json.load(jsonF)['bbn_ne']
+
+def loadVProp(sentenceId):
+    jsonFile = 'examples/'+sentenceId+'.json'
+    with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
+        return json.load(jsonF)['prop']
 
 def loadDepParse(sentenceId):
     jsonFile = 'examples/'+sentenceId+'.json'
@@ -74,7 +84,7 @@ def choose_head(tokenIndices, depParse):
     # assume that for every word in the NE, 
     # all words on the ancestor path up to the NE's head 
     # are also in the NE
-    frontier = set(tokenIndices)    # should end up with just (the head)
+    frontier = set(tokenIndices)    # should end up with just 1 (the head)
     for itm in set(frontier):
         if not depParse[itm] or all((depitm['gov_idx'] in tokenIndices) for depitm in depParse[itm]):
             frontier.remove(itm)
