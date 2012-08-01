@@ -77,20 +77,21 @@ if __name__ == "__main__":
     parser.add_argument('probbank', action='store', help="prop.txt file")
     parser.add_argument('json', action='store', help="json input file")
     parser.add_argument('jsonout', action='store', help="json output file")
-    args = parser.parse_args(sys.argv[1:])
+    arguments = parser.parse_args(sys.argv[1:])
 
-    pb = read_onprop(args.probbank)
+    pb = read_onprop(arguments.probbank)
     #print pb
 
-    docId, sentNr = re.search(r'wsj_(\d+).(\d+).json', args.json).groups()
+    docId, sentNr = re.search(r'wsj_(\d+).(\d+).json', arguments.json).groups()
     sentNr = int(sentNr)
-    data = json.load(open(args.json))
+    data = json.load(open(arguments.json))
     data['prop'] = []
 
     pt = SpanTree.parse(data['goldparse'])
-    print list(enumerate(pt.leaves()))
+    #print list(enumerate(pt.leaves()))
+    #print pt.pprint()
 
-    for prop in pb[docId][sentNr-1]:
+    for prop in pb[docId][sentNr]:
         pb_data = parse_onprop(prop)
         args = pb_data['args']
         new_args = []
@@ -102,7 +103,7 @@ if __name__ == "__main__":
                 print 'node:', subtree.node
                 if subtree.node == '-NONE-':
                     leaves = subtree.leaves()
-                    if len(leaves) == 1:
+                    if len(leaves) == 1 and re.match(r'.*-\d+$',leaves[0]):
                         trace_id = int(leaves[0].split('-')[-1])
                         print 'looking for trace', trace_id
                         tracepos = pt.find_trace(trace_id)
@@ -122,8 +123,9 @@ if __name__ == "__main__":
         data['prop'].append(pb_data)
 
         print pb_data
+    json.dump(data, open(arguments.jsonout, 'w'), indent=2)
 
-    print json.dumps(data, indent=2)
+    #print json.dumps(data, indent=2)
 
     #print pt.span_from_pos("1:0")
 
@@ -148,7 +150,8 @@ if __name__ == "__main__":
 
 
     data['propbank_raw'] = pb_dict
-    json.dump(open(args.jsonout,'w'),data)
+    #json.dump(open(args.jsonout,'w'),data)
+    json.dump(data, open(args.jsonout, 'w'), indent=2)
 
 
     #/home/buck/corpora/ontonotes-release-4.0/data/files/data/english/annotations/nw/wsj/00/wsj_0036.prop
