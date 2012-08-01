@@ -14,33 +14,36 @@ from pipeline import new_concept
 
 def main(sentenceId, depParse, inAMR, alignment, completed):
     amr = inAMR
-    for deps in depParse[1:]:
+    for deps in depParse:
         if deps is None: continue
         for itm in deps:
             if completed[1][(itm['gov_idx'],itm['dep_idx'])]: continue
-            i = itm['dep_idx']-1
+            i = itm['dep_idx']
             if itm['rel'] in ['amod', 'advmod', 'dep', 'num']:
-                h = itm['gov_idx']-1 # i's head
+                h = itm['gov_idx'] # i's head
                 x = alignment[:h] # index of variable associated with i's head, if any
                 if not (x or x==0): # need a new variable
-                    assert not completed[0][h+1]
+                    assert not completed[0][h]
                     w = depParse[itm['gov_idx']][0]['dep']  # modifier token
-                    #if itm['rel']=='advmod':    # adverbs sometimes not linked as advmod
-                    w = simplify_adv(w)
                     x = new_concept(pipeline.token2concept(w), amr, alignment, h)
-                    completed[0][h+1] = True
+                    completed[0][h] = True
                 y = alignment[:i] # modifier variable
                 if not (y or y==0): # new variable
                     y = new_concept(pipeline.token2concept(itm['dep'].lower()), amr, alignment, i)
-                    completed[0][i+1] = True
+                    completed[0][i] = True
                 if itm['rel']=='num':   # attach as :quant
                     newtriple = (str(x), 'quant', str(y))   # TODO: for plain values, don't create a variable
                 else:   # attach with :mod relation
                     newtriple = (str(x), 'mod', str(y))
                 
+                #print(newtriple)
                 amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
                 
                 completed[1][(itm['gov_idx'],itm['dep_idx'])] = True
+
+    # simplify adverbs to adjectives based on lexicon
+    for v in amr.node_to_concepts.keys():
+        amr.node_to_concepts[v] = simplify_adv(amr.node_to_concepts[v])
 
     return depParse, amr, alignment, completed
 
@@ -54,7 +57,8 @@ def simplify_adv(w):
         with codecs.open('adj-adv-pairs.txt', 'r', 'utf-8') as lexF:
             for ln in lexF:
                 adj, adv = ln[:-1].split('\t')
-                adv_adj_lex[adv] = adj
+                if adv not in adv_adj_lex or len(adv_adj_lex[adv])>len(adj):
+                    adv_adj_lex[adv] = adj
     return adv_adj_lex.get(w,w)
 
 def sample_dep_parse():

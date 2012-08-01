@@ -56,7 +56,7 @@ def main(sentenceId, depParse, inAMR, alignment, completed):
             assert j==i
             # make the word the AMR head
             if not (x or x==0): # need a new variable
-                x = new_concept(pipeline.token2concept(depParse[h+1][0]['dep']), amr, alignment, h)
+                x = new_concept(pipeline.token2concept(depParse[h][0]['dep']), amr, alignment, h)
                 triples.add((str(x), 'DUMMY', ''))
         else:
             if not (x or x==0): # need a new variable
@@ -72,7 +72,7 @@ def main(sentenceId, depParse, inAMR, alignment, completed):
         for k in range(i,j+1):
             assert not completed[0][k]
             completed[0][k] = True
-            print('completed token',k)
+            #print('completed token',k)
             if k!=h:
                 for link in parent_edges(depParse[k]):
                     completed[1][link] = True  # we don't need to attach non-head parts of names anywhere else
