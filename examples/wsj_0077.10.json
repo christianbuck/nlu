@@ -1,4 +1,90 @@
 {
+  "nom": [
+    {
+      "lemma": "manager", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARGM-LOC", 
+          "6:0", 
+          6, 
+          6, 
+          "national"
+        ], 
+        [
+          "ARG1", 
+          "7:0", 
+          7, 
+          7, 
+          "purchasing"
+        ], 
+        [
+          "ARG0", 
+          "8:0", 
+          8, 
+          8, 
+          "managers"
+        ], 
+        [
+          "rel", 
+          "8:0", 
+          8, 
+          8, 
+          "managers"
+        ]
+      ], 
+      "tokenNr": "8"
+    }, 
+    {
+      "lemma": "report", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG0", 
+          "5:1", 
+          5, 
+          9, 
+          "a national purchasing managers '"
+        ], 
+        [
+          "rel", 
+          "10:0", 
+          10, 
+          10, 
+          "report"
+        ]
+      ], 
+      "tokenNr": "10"
+    }, 
+    {
+      "lemma": "sector", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG2", 
+          "13:1", 
+          13, 
+          15, 
+          "the nation 's"
+        ], 
+        [
+          "ARG1", 
+          "16:0", 
+          16, 
+          16, 
+          "manufacturing"
+        ], 
+        [
+          "rel", 
+          "17:0", 
+          17, 
+          17, 
+          "sector"
+        ]
+      ], 
+      "tokenNr": "17"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "As", 
@@ -352,8 +438,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "as", 
-        "idx": 0, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 0
       }
     ], 
     [
@@ -361,8 +447,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "expect", 
-        "idx": 2, 
-        "PartOfSpeech": "VBN"
+        "PartOfSpeech": "VBN", 
+        "idx": 2
       }
     ], 
     [
@@ -370,8 +456,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
-        "idx": 4, 
-        "PartOfSpeech": ","
+        "PartOfSpeech": ",", 
+        "idx": 4
       }
     ], 
     [
@@ -379,8 +465,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "a", 
-        "idx": 5, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 5
       }
     ], 
     [
@@ -388,8 +474,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "national", 
-        "idx": 6, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 6
       }
     ], 
     [
@@ -397,8 +483,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "purchasing", 
-        "idx": 7, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 7
       }
     ], 
     [
@@ -406,8 +492,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "manager", 
-        "idx": 8, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 8
       }
     ], 
     [
@@ -415,8 +501,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "'", 
-        "idx": 9, 
-        "PartOfSpeech": "POS"
+        "PartOfSpeech": "POS", 
+        "idx": 9
       }
     ], 
     [
@@ -424,8 +510,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "report", 
-        "idx": 10, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 10
       }
     ], 
     [
@@ -433,8 +519,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "indicate", 
-        "idx": 11, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 11
       }
     ], 
     [
@@ -442,8 +528,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
-        "idx": 13, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 13
       }
     ], 
     [
@@ -451,8 +537,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "nation", 
-        "idx": 14, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 14
       }
     ], 
     [
@@ -460,8 +546,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "'s", 
-        "idx": 15, 
-        "PartOfSpeech": "POS"
+        "PartOfSpeech": "POS", 
+        "idx": 15
       }
     ], 
     [
@@ -469,8 +555,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "manufacturing", 
-        "idx": 16, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 16
       }
     ], 
     [
@@ -478,8 +564,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "sector", 
-        "idx": 17, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 17
       }
     ], 
     [
@@ -487,8 +573,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "continue", 
-        "idx": 18, 
-        "PartOfSpeech": "VBZ"
+        "PartOfSpeech": "VBZ", 
+        "idx": 18
       }
     ], 
     [
@@ -496,8 +582,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "to", 
-        "idx": 20, 
-        "PartOfSpeech": "TO"
+        "PartOfSpeech": "TO", 
+        "idx": 20
       }
     ], 
     [
@@ -505,8 +591,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "contract", 
-        "idx": 21, 
-        "PartOfSpeech": "VB"
+        "PartOfSpeech": "VB", 
+        "idx": 21
       }
     ], 
     [
@@ -514,8 +600,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "modestly", 
-        "idx": 22, 
-        "PartOfSpeech": "RB"
+        "PartOfSpeech": "RB", 
+        "idx": 22
       }
     ], 
     [
@@ -523,8 +609,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 23, 
-        "PartOfSpeech": "."
+        "PartOfSpeech": ".", 
+        "idx": 23
       }
     ]
   ], 

@@ -1,4 +1,27 @@
 {
+  "nom": [
+    {
+      "lemma": "activity", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "2:0", 
+          2, 
+          2, 
+          "market"
+        ], 
+        [
+          "rel", 
+          "3:0", 
+          3, 
+          3, 
+          "activity"
+        ]
+      ], 
+      "tokenNr": "3"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "In", 
@@ -62,8 +85,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "in", 
-        "idx": 0, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 0
       }
     ], 
     [
@@ -71,8 +94,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "major", 
-        "idx": 1, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 1
       }
     ], 
     [
@@ -80,8 +103,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "market", 
-        "idx": 2, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 2
       }
     ], 
     [
@@ -89,8 +112,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "activity", 
-        "idx": 3, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 3
       }
     ], 
     [
@@ -98,8 +121,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ":", 
-        "idx": 4, 
-        "PartOfSpeech": ":"
+        "PartOfSpeech": ":", 
+        "idx": 4
       }
     ]
   ], 

@@ -1,4 +1,5 @@
 {
+  "nom": [], 
   "stanford_dep": [
     {
       "dep": "But", 
@@ -113,8 +114,6 @@
       "gov_idx": 11
     }
   ], 
-  "text": "But advancing issues on the New York Stock Exchange were tidily ahead of declining stocks , 847 to 644 .", 
-  "coref_chains": [], 
   "bbn_ne": [
     [
       5, 
@@ -126,6 +125,7 @@
       false
     ]
   ], 
+  "coref_chains": [], 
   "coref": [
     [
       [
@@ -277,14 +277,15 @@
       "644"
     ]
   ], 
+  "text": "But advancing issues on the New York Stock Exchange were tidily ahead of declining stocks , 847 to 644 .", 
   "words": [
     [
       "But", 
       {
         "NamedEntityTag": "O", 
         "Lemma": "but", 
-        "idx": 0, 
-        "PartOfSpeech": "CC"
+        "PartOfSpeech": "CC", 
+        "idx": 0
       }
     ], 
     [
@@ -292,8 +293,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "advance", 
-        "idx": 1, 
-        "PartOfSpeech": "VBG"
+        "PartOfSpeech": "VBG", 
+        "idx": 1
       }
     ], 
     [
@@ -301,8 +302,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "issue", 
-        "idx": 2, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 2
       }
     ], 
     [
@@ -310,8 +311,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "on", 
-        "idx": 3, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 3
       }
     ], 
     [
@@ -319,8 +320,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
-        "idx": 4, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 4
       }
     ], 
     [
@@ -328,8 +329,8 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "New", 
-        "idx": 5, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 5
       }
     ], 
     [
@@ -337,8 +338,8 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "York", 
-        "idx": 6, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 6
       }
     ], 
     [
@@ -346,8 +347,8 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Stock", 
-        "idx": 7, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 7
       }
     ], 
     [
@@ -355,8 +356,8 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Exchange", 
-        "idx": 8, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 8
       }
     ], 
     [
@@ -364,8 +365,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "be", 
-        "idx": 9, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 9
       }
     ], 
     [
@@ -373,8 +374,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "tidily", 
-        "idx": 10, 
-        "PartOfSpeech": "RB"
+        "PartOfSpeech": "RB", 
+        "idx": 10
       }
     ], 
     [
@@ -382,8 +383,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "ahead", 
-        "idx": 11, 
-        "PartOfSpeech": "RB"
+        "PartOfSpeech": "RB", 
+        "idx": 11
       }
     ], 
     [
@@ -391,8 +392,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
-        "idx": 12, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 12
       }
     ], 
     [
@@ -400,8 +401,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "decline", 
-        "idx": 13, 
-        "PartOfSpeech": "VBG"
+        "PartOfSpeech": "VBG", 
+        "idx": 13
       }
     ], 
     [
@@ -409,8 +410,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "stock", 
-        "idx": 14, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 14
       }
     ], 
     [
@@ -418,8 +419,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
-        "idx": 15, 
-        "PartOfSpeech": ","
+        "PartOfSpeech": ",", 
+        "idx": 15
       }
     ], 
     [
@@ -427,8 +428,8 @@
       {
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "847.0", 
-        "idx": 16, 
         "PartOfSpeech": "CD", 
+        "idx": 16, 
         "Lemma": "847"
       }
     ], 
@@ -437,8 +438,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "to", 
-        "idx": 17, 
-        "PartOfSpeech": "TO"
+        "PartOfSpeech": "TO", 
+        "idx": 17
       }
     ], 
     [
@@ -446,8 +447,8 @@
       {
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "644.0", 
-        "idx": 18, 
         "PartOfSpeech": "CD", 
+        "idx": 18, 
         "Lemma": "644"
       }
     ], 
@@ -456,8 +457,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 19, 
-        "PartOfSpeech": "."
+        "PartOfSpeech": ".", 
+        "idx": 19
       }
     ]
   ], 

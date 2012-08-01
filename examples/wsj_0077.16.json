@@ -1,4 +1,104 @@
 {
+  "nom": [
+    {
+      "lemma": "benchmark", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "0:1", 
+          0, 
+          2, 
+          "The Treasury 's"
+        ], 
+        [
+          "rel", 
+          "3:0", 
+          3, 
+          3, 
+          "benchmark"
+        ], 
+        [
+          "ARG2", 
+          "4:0,5:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "tokenNr": "3"
+    }, 
+    {
+      "lemma": "bond", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG2", 
+          "0:1", 
+          0, 
+          2, 
+          "The Treasury 's"
+        ], 
+        [
+          "ARGM-TMP", 
+          "4:0", 
+          4, 
+          4, 
+          "30"
+        ], 
+        [
+          "rel", 
+          "5:0", 
+          5, 
+          5, 
+          "-"
+        ]
+      ], 
+      "tokenNr": "5"
+    }, 
+    {
+      "lemma": "face", 
+      "frame": "04", 
+      "args": [
+        [
+          "rel", 
+          "24:0", 
+          24, 
+          24, 
+          "*U*"
+        ], 
+        [
+          "ARG1", 
+          "25:0", 
+          25, 
+          25, 
+          "of"
+        ]
+      ], 
+      "tokenNr": "24"
+    }, 
+    {
+      "lemma": "quarter", 
+      "frame": "01", 
+      "args": [
+        [
+          "rel", 
+          "9:0", 
+          9, 
+          9, 
+          "about"
+        ], 
+        [
+          "ARG1", 
+          "10:1", 
+          9, 
+          11, 
+          "about a quarter"
+        ]
+      ], 
+      "tokenNr": "9"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "The", 
@@ -141,8 +241,6 @@
       "gov_idx": 22
     }
   ], 
-  "text": "The Treasury 's benchmark 30 - year bond gained about a quarter of a point , or $ 2.50 for each $ 1,000 of face amount .", 
-  "coref_chains": [], 
   "bbn_ne": [
     [
       1, 
@@ -154,6 +252,7 @@
       false
     ]
   ], 
+  "coref_chains": [], 
   "coref": [
     [
       [
@@ -313,14 +412,15 @@
       "amount"
     ]
   ], 
+  "text": "The Treasury 's benchmark 30 - year bond gained about a quarter of a point , or $ 2.50 for each $ 1,000 of face amount .", 
   "words": [
     [
       "The", 
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
-        "idx": 0, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 0
       }
     ], 
     [
@@ -328,8 +428,8 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Treasury", 
-        "idx": 1, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 1
       }
     ], 
     [
@@ -337,8 +437,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "'s", 
-        "idx": 2, 
-        "PartOfSpeech": "POS"
+        "PartOfSpeech": "POS", 
+        "idx": 2
       }
     ], 
     [
@@ -346,8 +446,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "benchmark", 
-        "idx": 3, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 3
       }
     ], 
     [
@@ -388,8 +488,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "bond", 
-        "idx": 7, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 7
       }
     ], 
     [
@@ -397,8 +497,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "gain", 
-        "idx": 8, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 8
       }
     ], 
     [
@@ -407,8 +507,8 @@
         "NamedEntityTag": "DURATION", 
         "Lemma": "about", 
         "Timex": "<TIMEX3 tid=\"t2\" value=\"P3M\" type=\"DURATION\" mod=\"APPROX\">about a quarter</TIMEX3>", 
-        "idx": 9, 
-        "PartOfSpeech": "RB"
+        "PartOfSpeech": "RB", 
+        "idx": 9
       }
     ], 
     [
@@ -417,8 +517,8 @@
         "NamedEntityTag": "DURATION", 
         "Lemma": "a", 
         "Timex": "<TIMEX3 tid=\"t2\" value=\"P3M\" type=\"DURATION\" mod=\"APPROX\">about a quarter</TIMEX3>", 
-        "idx": 10, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 10
       }
     ], 
     [
@@ -427,8 +527,8 @@
         "NamedEntityTag": "DURATION", 
         "Lemma": "quarter", 
         "Timex": "<TIMEX3 tid=\"t2\" value=\"P3M\" type=\"DURATION\" mod=\"APPROX\">about a quarter</TIMEX3>", 
-        "idx": 11, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 11
       }
     ], 
     [
@@ -436,8 +536,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
-        "idx": 12, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 12
       }
     ], 
     [
@@ -445,8 +545,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "a", 
-        "idx": 13, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 13
       }
     ], 
     [
@@ -454,8 +554,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "point", 
-        "idx": 14, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 14
       }
     ], 
     [
@@ -463,8 +563,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
-        "idx": 15, 
-        "PartOfSpeech": ","
+        "PartOfSpeech": ",", 
+        "idx": 15
       }
     ], 
     [
@@ -472,8 +572,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "or", 
-        "idx": 16, 
-        "PartOfSpeech": "CC"
+        "PartOfSpeech": "CC", 
+        "idx": 16
       }
     ], 
     [
@@ -481,8 +581,8 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$2.5", 
-        "idx": 17, 
         "PartOfSpeech": "$", 
+        "idx": 17, 
         "Lemma": "$"
       }
     ], 
@@ -491,8 +591,8 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$2.5", 
-        "idx": 18, 
         "PartOfSpeech": "CD", 
+        "idx": 18, 
         "Lemma": "2.50"
       }
     ], 
@@ -501,8 +601,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "for", 
-        "idx": 20, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 20
       }
     ], 
     [
@@ -510,8 +610,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "each", 
-        "idx": 21, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 21
       }
     ], 
     [
@@ -519,8 +619,8 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$1000.0", 
-        "idx": 22, 
         "PartOfSpeech": "$", 
+        "idx": 22, 
         "Lemma": "$"
       }
     ], 
@@ -529,8 +629,8 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$1000.0", 
-        "idx": 23, 
         "PartOfSpeech": "CD", 
+        "idx": 23, 
         "Lemma": "1,000"
       }
     ], 
@@ -539,8 +639,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
-        "idx": 25, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 25
       }
     ], 
     [
@@ -548,8 +648,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "face", 
-        "idx": 26, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 26
       }
     ], 
     [
@@ -557,8 +657,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "amount", 
-        "idx": 27, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 27
       }
     ], 
     [
@@ -566,8 +666,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 28, 
-        "PartOfSpeech": "."
+        "PartOfSpeech": ".", 
+        "idx": 28
       }
     ]
   ], 

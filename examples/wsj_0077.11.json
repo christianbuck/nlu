@@ -1,4 +1,160 @@
 {
+  "nom": [
+    {
+      "lemma": "condition", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "10:0", 
+          10, 
+          10, 
+          "economic"
+        ], 
+        [
+          "ARG2-REF", 
+          "11:0", 
+          11, 
+          11, 
+          "conditions"
+        ], 
+        [
+          "rel", 
+          "11:0", 
+          11, 
+          11, 
+          "conditions"
+        ], 
+        [
+          "ARG3", 
+          "12:1", 
+          12, 
+          14, 
+          "across the country"
+        ]
+      ], 
+      "tokenNr": "11"
+    }, 
+    {
+      "lemma": "economy", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARGM-ADV", 
+          "19:0", 
+          19, 
+          19, 
+          "overall"
+        ], 
+        [
+          "rel", 
+          "20:0", 
+          20, 
+          20, 
+          "economy"
+        ], 
+        [
+          "ARG2", 
+          "22:1", 
+          22, 
+          27, 
+          "in a pattern of sluggish growth"
+        ]
+      ], 
+      "tokenNr": "20"
+    }, 
+    {
+      "lemma": "growth", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "18:1", 
+          18, 
+          20, 
+          "the overall economy"
+        ], 
+        [
+          "Support", 
+          "21:0,22:0,24:0,25:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "ARGM-MNR", 
+          "26:0", 
+          26, 
+          26, 
+          "sluggish"
+        ], 
+        [
+          "rel", 
+          "27:0", 
+          27, 
+          27, 
+          "growth"
+        ]
+      ], 
+      "tokenNr": "27"
+    }, 
+    {
+      "lemma": "pattern", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "18:1", 
+          18, 
+          20, 
+          "the overall economy"
+        ], 
+        [
+          "Support", 
+          "21:0,22:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "rel", 
+          "24:0", 
+          24, 
+          24, 
+          "pattern"
+        ], 
+        [
+          "ARG2", 
+          "25:1", 
+          25, 
+          27, 
+          "of sluggish growth"
+        ]
+      ], 
+      "tokenNr": "24"
+    }, 
+    {
+      "lemma": "summary", 
+      "frame": "01", 
+      "args": [
+        [
+          "rel", 
+          "8:0", 
+          8, 
+          8, 
+          "summary"
+        ], 
+        [
+          "ARG1", 
+          "9:1", 
+          9, 
+          14, 
+          "of economic conditions across the country"
+        ]
+      ], 
+      "tokenNr": "8"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "The", 
@@ -148,8 +304,6 @@
       "gov_idx": 24
     }
   ], 
-  "text": "The Federal Reserve 's Beige Book , a summary of economic conditions across the country , indicated that the overall economy remains in a pattern of sluggish growth .", 
-  "coref_chains": [], 
   "bbn_ne": [
     [
       1, 
@@ -170,6 +324,7 @@
       false
     ]
   ], 
+  "coref_chains": [], 
   "coref": [
     [
       [
@@ -374,14 +529,15 @@
       "growth"
     ]
   ], 
+  "text": "The Federal Reserve 's Beige Book , a summary of economic conditions across the country , indicated that the overall economy remains in a pattern of sluggish growth .", 
   "words": [
     [
       "The", 
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
-        "idx": 0, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 0
       }
     ], 
     [
@@ -389,8 +545,8 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Federal", 
-        "idx": 1, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 1
       }
     ], 
     [
@@ -398,8 +554,8 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Reserve", 
-        "idx": 2, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 2
       }
     ], 
     [
@@ -407,8 +563,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "'s", 
-        "idx": 3, 
-        "PartOfSpeech": "POS"
+        "PartOfSpeech": "POS", 
+        "idx": 3
       }
     ], 
     [
@@ -416,8 +572,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "Beige", 
-        "idx": 4, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 4
       }
     ], 
     [
@@ -425,8 +581,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "Book", 
-        "idx": 5, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 5
       }
     ], 
     [
@@ -434,8 +590,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
-        "idx": 6, 
-        "PartOfSpeech": ","
+        "PartOfSpeech": ",", 
+        "idx": 6
       }
     ], 
     [
@@ -443,8 +599,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "a", 
-        "idx": 7, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 7
       }
     ], 
     [
@@ -452,8 +608,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "summary", 
-        "idx": 8, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 8
       }
     ], 
     [
@@ -461,8 +617,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
-        "idx": 9, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 9
       }
     ], 
     [
@@ -470,8 +626,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "economic", 
-        "idx": 10, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 10
       }
     ], 
     [
@@ -479,8 +635,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "condition", 
-        "idx": 11, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 11
       }
     ], 
     [
@@ -488,8 +644,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "across", 
-        "idx": 12, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 12
       }
     ], 
     [
@@ -497,8 +653,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
-        "idx": 13, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 13
       }
     ], 
     [
@@ -506,8 +662,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "country", 
-        "idx": 14, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 14
       }
     ], 
     [
@@ -515,8 +671,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
-        "idx": 15, 
-        "PartOfSpeech": ","
+        "PartOfSpeech": ",", 
+        "idx": 15
       }
     ], 
     [
@@ -524,8 +680,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "indicate", 
-        "idx": 16, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 16
       }
     ], 
     [
@@ -533,8 +689,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "that", 
-        "idx": 17, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 17
       }
     ], 
     [
@@ -542,8 +698,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
-        "idx": 18, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 18
       }
     ], 
     [
@@ -551,8 +707,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "overall", 
-        "idx": 19, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 19
       }
     ], 
     [
@@ -560,8 +716,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "economy", 
-        "idx": 20, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 20
       }
     ], 
     [
@@ -569,8 +725,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "remain", 
-        "idx": 21, 
-        "PartOfSpeech": "VBZ"
+        "PartOfSpeech": "VBZ", 
+        "idx": 21
       }
     ], 
     [
@@ -578,8 +734,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "in", 
-        "idx": 22, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 22
       }
     ], 
     [
@@ -587,8 +743,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "a", 
-        "idx": 23, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 23
       }
     ], 
     [
@@ -596,8 +752,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "pattern", 
-        "idx": 24, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 24
       }
     ], 
     [
@@ -605,8 +761,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
-        "idx": 25, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 25
       }
     ], 
     [
@@ -614,8 +770,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "sluggish", 
-        "idx": 26, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 26
       }
     ], 
     [
@@ -623,8 +779,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "growth", 
-        "idx": 27, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 27
       }
     ], 
     [
@@ -632,8 +788,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 28, 
-        "PartOfSpeech": "."
+        "PartOfSpeech": ".", 
+        "idx": 28
       }
     ]
   ], 

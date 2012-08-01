@@ -1,4 +1,76 @@
 {
+  "nom": [
+    {
+      "lemma": "effect", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          1, 
+          "Economic news"
+        ], 
+        [
+          "Support", 
+          "2:0", 
+          2, 
+          2, 
+          "had"
+        ], 
+        [
+          "ARGM-EXT", 
+          "3:0", 
+          3, 
+          3, 
+          "little"
+        ], 
+        [
+          "ARG1-REF", 
+          "4:0", 
+          4, 
+          4, 
+          "effect"
+        ], 
+        [
+          "rel", 
+          "4:0", 
+          4, 
+          4, 
+          "effect"
+        ], 
+        [
+          "ARG2", 
+          "5:1", 
+          5, 
+          7, 
+          "on financial markets"
+        ]
+      ], 
+      "tokenNr": "4"
+    }, 
+    {
+      "lemma": "news", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "0:0", 
+          0, 
+          0, 
+          "Economic"
+        ], 
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "news"
+        ]
+      ], 
+      "tokenNr": "1"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "Economic", 
@@ -128,8 +200,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "economic", 
-        "idx": 0, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 0
       }
     ], 
     [
@@ -137,8 +209,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "news", 
-        "idx": 1, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 1
       }
     ], 
     [
@@ -146,8 +218,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "have", 
-        "idx": 2, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 2
       }
     ], 
     [
@@ -155,8 +227,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "little", 
-        "idx": 3, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 3
       }
     ], 
     [
@@ -164,8 +236,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "effect", 
-        "idx": 4, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 4
       }
     ], 
     [
@@ -173,8 +245,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "on", 
-        "idx": 5, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 5
       }
     ], 
     [
@@ -182,8 +254,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "financial", 
-        "idx": 6, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 6
       }
     ], 
     [
@@ -191,8 +263,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "market", 
-        "idx": 7, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 7
       }
     ], 
     [
@@ -200,8 +272,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 8, 
-        "PartOfSpeech": "."
+        "PartOfSpeech": ".", 
+        "idx": 8
       }
     ]
   ], 

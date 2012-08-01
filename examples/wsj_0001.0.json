@@ -1,4 +1,34 @@
 {
+  "nom": [
+    {
+      "lemma": "director", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG3", 
+          "13:0", 
+          13, 
+          13, 
+          "nonexecutive"
+        ], 
+        [
+          "ARG0", 
+          "14:0", 
+          14, 
+          14, 
+          "director"
+        ], 
+        [
+          "rel", 
+          "14:0", 
+          14, 
+          14, 
+          "director"
+        ]
+      ], 
+      "tokenNr": "14"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "Pierre", 
@@ -99,8 +129,6 @@
       "gov_idx": 15
     }
   ], 
-  "text": "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .", 
-  "coref_chains": [], 
   "bbn_ne": [
     [
       0, 
@@ -121,6 +149,8 @@
       false
     ]
   ], 
+  "coref_chains": [], 
+  "treebank_sentence": "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .", 
   "coref": [
     [
       [
@@ -439,7 +469,7 @@
       }
     ]
   ], 
-  "treebank_sentence": "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .", 
+  "text": "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .", 
   "parsetree": "(ROOT (S (NP (NP (NNP Pierre) (NNP Vinken)) (, ,) (ADJP (NP (CD 61) (NNS years)) (JJ old)) (, ,)) (VP (MD will) (VP (VB join) (NP (DT the) (NN board)) (PP (IN as) (NP (DT a) (JJ nonexecutive) (NN director))) (NP-TMP (NNP Nov.) (CD 29)))) (. .)))", 
   "goldparse": "(TOP (S (NP-SBJ (NP (NNP Pierre) (NNP Vinken)) (, ,) (ADJP (NML (CD 61) (NNS years)) (JJ old)) (, ,)) (VP (MD will) (VP (VB join) (NP (DT the) (NN board)) (PP-CLR (IN as) (NP (DT a) (JJ nonexecutive) (NN director))) (NP-TMP (NNP Nov.) (CD 29)))) (. .)))", 
   "document_id": "nw/wsj/00/wsj_0001@all@wsj@nw@en@on"

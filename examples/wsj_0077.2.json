@@ -1,4 +1,5 @@
 {
+  "nom": [], 
   "stanford_dep": [
     {
       "dep": "The", 
@@ -291,8 +292,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
-        "idx": 0, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 0
       }
     ], 
     [
@@ -300,8 +301,8 @@
       {
         "NamedEntityTag": "MISC", 
         "Lemma": "Dow", 
-        "idx": 1, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 1
       }
     ], 
     [
@@ -309,8 +310,8 @@
       {
         "NamedEntityTag": "MISC", 
         "Lemma": "Jones", 
-        "idx": 2, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 2
       }
     ], 
     [
@@ -318,8 +319,8 @@
       {
         "NamedEntityTag": "MISC", 
         "Lemma": "Industrial", 
-        "idx": 3, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 3
       }
     ], 
     [
@@ -327,8 +328,8 @@
       {
         "NamedEntityTag": "MISC", 
         "Lemma": "Average", 
-        "idx": 4, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 4
       }
     ], 
     [
@@ -336,8 +337,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "finish", 
-        "idx": 5, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 5
       }
     ], 
     [
@@ -345,8 +346,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "less", 
-        "idx": 6, 
-        "PartOfSpeech": "JJR"
+        "PartOfSpeech": "JJR", 
+        "idx": 6
       }
     ], 
     [
@@ -354,8 +355,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "than", 
-        "idx": 7, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 7
       }
     ], 
     [
@@ -363,8 +364,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "a", 
-        "idx": 8, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 8
       }
     ], 
     [
@@ -372,8 +373,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "point", 
-        "idx": 9, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 9
       }
     ], 
     [
@@ -381,8 +382,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "higher", 
-        "idx": 10, 
-        "PartOfSpeech": "JJR"
+        "PartOfSpeech": "JJR", 
+        "idx": 10
       }
     ], 
     [
@@ -390,8 +391,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "to", 
-        "idx": 12, 
-        "PartOfSpeech": "TO"
+        "PartOfSpeech": "TO", 
+        "idx": 12
       }
     ], 
     [
@@ -399,8 +400,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "close", 
-        "idx": 13, 
-        "PartOfSpeech": "VB"
+        "PartOfSpeech": "VB", 
+        "idx": 13
       }
     ], 
     [
@@ -408,8 +409,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "at", 
-        "idx": 14, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 14
       }
     ], 
     [
@@ -417,8 +418,8 @@
       {
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "2645.9", 
-        "idx": 15, 
         "PartOfSpeech": "CD", 
+        "idx": 15, 
         "Lemma": "2645.90"
       }
     ], 
@@ -427,8 +428,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "in", 
-        "idx": 16, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 16
       }
     ], 
     [
@@ -436,8 +437,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "moderate", 
-        "idx": 17, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 17
       }
     ], 
     [
@@ -445,8 +446,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "trading", 
-        "idx": 18, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 18
       }
     ], 
     [
@@ -454,8 +455,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 19, 
-        "PartOfSpeech": "."
+        "PartOfSpeech": ".", 
+        "idx": 19
       }
     ]
   ], 

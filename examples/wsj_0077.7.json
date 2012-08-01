@@ -1,4 +1,125 @@
 {
+  "nom": [
+    {
+      "lemma": "average", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "1:0", 
+          1, 
+          1, 
+          "industrial"
+        ], 
+        [
+          "ARG2-REF", 
+          "2:0", 
+          2, 
+          2, 
+          "average"
+        ], 
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "average"
+        ]
+      ], 
+      "tokenNr": "2"
+    }, 
+    {
+      "lemma": "share", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG0", 
+          "10:1*12:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "Support", 
+          "14:0", 
+          14, 
+          14, 
+          "buy"
+        ], 
+        [
+          "rel", 
+          "15:0", 
+          15, 
+          15, 
+          "shares"
+        ], 
+        [
+          "ARG1", 
+          "16:1", 
+          16, 
+          19, 
+          "of potential takeover targets"
+        ]
+      ], 
+      "tokenNr": "15"
+    }, 
+    {
+      "lemma": "takeover", 
+      "frame": "01", 
+      "args": [
+        [
+          "rel", 
+          "18:0", 
+          18, 
+          18, 
+          "takeover"
+        ], 
+        [
+          "ARG1", 
+          "19:0", 
+          19, 
+          19, 
+          "targets"
+        ]
+      ], 
+      "tokenNr": "18"
+    }, 
+    {
+      "lemma": "target", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARGM-ADV", 
+          "17:0", 
+          17, 
+          17, 
+          "potential"
+        ], 
+        [
+          "ARG3", 
+          "18:0", 
+          18, 
+          18, 
+          "takeover"
+        ], 
+        [
+          "ARG1-REF", 
+          "19:0", 
+          19, 
+          19, 
+          "targets"
+        ], 
+        [
+          "rel", 
+          "19:0", 
+          19, 
+          19, 
+          "targets"
+        ]
+      ], 
+      "tokenNr": "19"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "The", 
@@ -361,8 +482,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
-        "idx": 0, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 0
       }
     ], 
     [
@@ -370,8 +491,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "industrial", 
-        "idx": 1, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 1
       }
     ], 
     [
@@ -379,8 +500,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "average", 
-        "idx": 2, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 2
       }
     ], 
     [
@@ -388,8 +509,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "jump", 
-        "idx": 3, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 3
       }
     ], 
     [
@@ -397,8 +518,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "more", 
-        "idx": 4, 
-        "PartOfSpeech": "JJR"
+        "PartOfSpeech": "JJR", 
+        "idx": 4
       }
     ], 
     [
@@ -406,8 +527,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "than", 
-        "idx": 5, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 5
       }
     ], 
     [
@@ -415,8 +536,8 @@
       {
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": ">41.0", 
-        "idx": 6, 
         "PartOfSpeech": "CD", 
+        "idx": 6, 
         "Lemma": "41"
       }
     ], 
@@ -425,8 +546,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "point", 
-        "idx": 7, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 7
       }
     ], 
     [
@@ -445,8 +566,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "as", 
-        "idx": 9, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 9
       }
     ], 
     [
@@ -454,8 +575,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "speculator", 
-        "idx": 10, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 10
       }
     ], 
     [
@@ -463,8 +584,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "rush", 
-        "idx": 11, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 11
       }
     ], 
     [
@@ -472,8 +593,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "to", 
-        "idx": 13, 
-        "PartOfSpeech": "TO"
+        "PartOfSpeech": "TO", 
+        "idx": 13
       }
     ], 
     [
@@ -481,8 +602,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "buy", 
-        "idx": 14, 
-        "PartOfSpeech": "VB"
+        "PartOfSpeech": "VB", 
+        "idx": 14
       }
     ], 
     [
@@ -490,8 +611,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "share", 
-        "idx": 15, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 15
       }
     ], 
     [
@@ -499,8 +620,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
-        "idx": 16, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 16
       }
     ], 
     [
@@ -508,8 +629,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "potential", 
-        "idx": 17, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 17
       }
     ], 
     [
@@ -517,8 +638,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "takeover", 
-        "idx": 18, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 18
       }
     ], 
     [
@@ -526,8 +647,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "target", 
-        "idx": 19, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 19
       }
     ], 
     [
@@ -535,8 +656,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 20, 
-        "PartOfSpeech": "."
+        "PartOfSpeech": ".", 
+        "idx": 20
       }
     ]
   ], 

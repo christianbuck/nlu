@@ -1,4 +1,34 @@
 {
+  "nom": [
+    {
+      "lemma": "yield", 
+      "frame": "01", 
+      "args": [
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "yield"
+        ], 
+        [
+          "Support", 
+          "2:0", 
+          2, 
+          2, 
+          "fell"
+        ], 
+        [
+          "ARG1", 
+          "3:1", 
+          3, 
+          5, 
+          "to 7.88 %"
+        ]
+      ], 
+      "tokenNr": "1"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "The", 
@@ -104,8 +134,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
-        "idx": 0, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 0
       }
     ], 
     [
@@ -113,8 +143,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "yield", 
-        "idx": 1, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 1
       }
     ], 
     [
@@ -122,8 +152,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "fall", 
-        "idx": 2, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 2
       }
     ], 
     [
@@ -131,8 +161,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "to", 
-        "idx": 3, 
-        "PartOfSpeech": "TO"
+        "PartOfSpeech": "TO", 
+        "idx": 3
       }
     ], 
     [
@@ -140,8 +170,8 @@
       {
         "NamedEntityTag": "PERCENT", 
         "NormalizedNamedEntityTag": "%7.88", 
-        "idx": 4, 
         "PartOfSpeech": "CD", 
+        "idx": 4, 
         "Lemma": "7.88"
       }
     ], 
@@ -150,8 +180,8 @@
       {
         "NamedEntityTag": "PERCENT", 
         "NormalizedNamedEntityTag": "%7.88", 
-        "idx": 5, 
         "PartOfSpeech": "NN", 
+        "idx": 5, 
         "Lemma": "%"
       }
     ], 
@@ -160,8 +190,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 6, 
-        "PartOfSpeech": "."
+        "PartOfSpeech": ".", 
+        "idx": 6
       }
     ]
   ], 

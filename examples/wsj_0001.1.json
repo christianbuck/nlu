@@ -1,4 +1,55 @@
 {
+  "nom": [
+    {
+      "lemma": "chairman", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG0", 
+          "3:0", 
+          3, 
+          3, 
+          "chairman"
+        ], 
+        [
+          "rel", 
+          "3:0", 
+          3, 
+          3, 
+          "chairman"
+        ], 
+        [
+          "ARG2", 
+          "4:1", 
+          4, 
+          11, 
+          "of Elsevier N.V. , the Dutch publishing group"
+        ]
+      ], 
+      "tokenNr": "3"
+    }, 
+    {
+      "lemma": "group", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "10:0", 
+          10, 
+          10, 
+          "publishing"
+        ], 
+        [
+          "rel", 
+          "11:0", 
+          11, 
+          11, 
+          "group"
+        ]
+      ], 
+      "tokenNr": "11"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "Mr.", 
@@ -71,23 +122,6 @@
       "gov_idx": 6
     }
   ], 
-  "text": "Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .", 
-  "coref_chains": [
-    [
-      0, 
-      1, 
-      1, 
-      "Mr. Vinken", 
-      false
-    ], 
-    [
-      4, 
-      11, 
-      1, 
-      "chairman of Elsevier N.V. , Dutch publishing group", 
-      false
-    ]
-  ], 
   "bbn_ne": [
     [
       1, 
@@ -126,6 +160,23 @@
       false
     ]
   ], 
+  "coref_chains": [
+    [
+      0, 
+      1, 
+      1, 
+      "Mr. Vinken", 
+      false
+    ], 
+    [
+      4, 
+      11, 
+      1, 
+      "chairman of Elsevier N.V. , Dutch publishing group", 
+      false
+    ]
+  ], 
+  "treebank_sentence": "Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .", 
   "coref": [
     [
       [
@@ -376,7 +427,7 @@
       }
     ]
   ], 
-  "treebank_sentence": "Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .", 
+  "text": "Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .", 
   "parsetree": "(ROOT (S (NP (NNP Mr.) (NNP Vinken)) (VP (VBZ is) (NP (NP (NN chairman)) (PP (IN of) (NP (NP (NNP Elsevier) (NNP N.V.)) (, ,) (NP (DT the) (JJ Dutch) (NN publishing) (NN group)))))) (. .)))", 
   "goldparse": "(TOP (S (NP-SBJ (NNP Mr.) (NNP Vinken)) (VP (VBZ is) (NP-PRD (NP (NN chairman)) (PP (IN of) (NP (NP (NNP Elsevier) (NNP N.V.)) (, ,) (NP (DT the) (NNP Dutch) (VBG publishing) (NN group)))))) (. .)))", 
   "document_id": "nw/wsj/00/wsj_0001@all@wsj@nw@en@on"

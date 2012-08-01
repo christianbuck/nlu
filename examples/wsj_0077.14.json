@@ -1,4 +1,41 @@
 {
+  "nom": [
+    {
+      "lemma": "volume", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "0:0,1:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "volume"
+        ], 
+        [
+          "Support", 
+          "3:0", 
+          3, 
+          3, 
+          "totaled"
+        ], 
+        [
+          "ARG2", 
+          "4:2", 
+          4, 
+          6, 
+          "154.2 million shares"
+        ]
+      ], 
+      "tokenNr": "2"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "Big", 
@@ -138,8 +175,8 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Big", 
-        "idx": 0, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 0
       }
     ], 
     [
@@ -147,8 +184,8 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Board", 
-        "idx": 1, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 1
       }
     ], 
     [
@@ -156,8 +193,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "volume", 
-        "idx": 2, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 2
       }
     ], 
     [
@@ -165,8 +202,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "total", 
-        "idx": 3, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 3
       }
     ], 
     [
@@ -174,8 +211,8 @@
       {
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "1.542E8", 
-        "idx": 4, 
         "PartOfSpeech": "CD", 
+        "idx": 4, 
         "Lemma": "154.2"
       }
     ], 
@@ -184,8 +221,8 @@
       {
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "1.542E8", 
-        "idx": 5, 
         "PartOfSpeech": "CD", 
+        "idx": 5, 
         "Lemma": "million"
       }
     ], 
@@ -194,8 +231,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "share", 
-        "idx": 6, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 6
       }
     ], 
     [
@@ -203,8 +240,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 7, 
-        "PartOfSpeech": "."
+        "PartOfSpeech": ".", 
+        "idx": 7
       }
     ]
   ], 

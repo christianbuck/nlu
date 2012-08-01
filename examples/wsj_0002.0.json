@@ -1,4 +1,104 @@
 {
+  "nom": [
+    {
+      "lemma": "chairman", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARGM-TMP", 
+          "7:0", 
+          7, 
+          7, 
+          "former"
+        ], 
+        [
+          "ARG0", 
+          "8:0", 
+          8, 
+          8, 
+          "chairman"
+        ], 
+        [
+          "rel", 
+          "8:0", 
+          8, 
+          8, 
+          "chairman"
+        ], 
+        [
+          "ARG2", 
+          "9:1", 
+          9, 
+          13, 
+          "of Consolidated Gold Fields PLC"
+        ]
+      ], 
+      "tokenNr": "8"
+    }, 
+    {
+      "lemma": "conglomerate", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARGM-LOC", 
+          "23:0", 
+          23, 
+          23, 
+          "this"
+        ], 
+        [
+          "ARG1", 
+          "24:0", 
+          24, 
+          24, 
+          "British"
+        ], 
+        [
+          "rel", 
+          "25:0", 
+          25, 
+          25, 
+          "industrial"
+        ]
+      ], 
+      "tokenNr": "25"
+    }, 
+    {
+      "lemma": "director", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG3", 
+          "19:0", 
+          19, 
+          19, 
+          "a"
+        ], 
+        [
+          "ARG0", 
+          "20:0", 
+          20, 
+          20, 
+          "nonexecutive"
+        ], 
+        [
+          "rel", 
+          "20:0", 
+          20, 
+          20, 
+          "nonexecutive"
+        ], 
+        [
+          "ARG2", 
+          "21:1", 
+          19, 
+          21, 
+          "a nonexecutive director"
+        ]
+      ], 
+      "tokenNr": "20"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "Rudolph", 
@@ -148,8 +248,6 @@
       "gov_idx": 21
     }
   ], 
-  "text": "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named a nonexecutive director of this British industrial conglomerate .", 
-  "coref_chains": [], 
   "bbn_ne": [
     [
       0, 
@@ -197,6 +295,8 @@
       false
     ]
   ], 
+  "coref_chains": [], 
+  "treebank_sentence": "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named *-1 *PRO*-2 a nonexecutive director of this British industrial conglomerate .", 
   "coref": [
     [
       [
@@ -604,7 +704,7 @@
       }
     ]
   ], 
-  "treebank_sentence": "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named *-1 *PRO*-2 a nonexecutive director of this British industrial conglomerate .", 
+  "text": "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named a nonexecutive director of this British industrial conglomerate .", 
   "parsetree": "(ROOT (S (NP (NP (NNP Rudolph) (NNP Agnew)) (, ,) (ADJP (ADJP (NP (CD 55) (NNS years)) (JJ old)) (CC and) (NP (NP (JJ former) (NN chairman)) (PP (IN of) (NP (NNP Consolidated) (NNP Gold) (NNP Fields) (NNP PLC))))) (, ,)) (VP (VBD was) (VP (VBN named) (NP (NP (DT a) (JJ nonexecutive) (NN director)) (PP (IN of) (NP (DT this) (JJ British) (JJ industrial) (NN conglomerate)))))) (. .)))", 
   "goldparse": "(TOP (S (NP-SBJ-1 (NP (NNP Rudolph) (NNP Agnew)) (, ,) (UCP (ADJP (NML (CD 55) (NNS years)) (JJ old)) (CC and) (NP (NP (JJ former) (NN chairman)) (PP (IN of) (NP (NNP Consolidated) (NNP Gold) (NNP Fields) (NNP PLC))))) (, ,)) (VP (VBD was) (VP (VBN named) (NP-2 (-NONE- *-1)) (S-CLR (NP-SBJ (-NONE- *PRO*-2)) (NP-PRD (NP (DT a) (JJ nonexecutive) (NN director)) (PP (IN of) (NP (DT this) (JJ British) (JJ industrial) (NN conglomerate))))))) (. .)))", 
   "document_id": "nw/wsj/00/wsj_0002@all@wsj@nw@en@on"

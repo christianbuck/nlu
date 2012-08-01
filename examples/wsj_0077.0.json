@@ -1,4 +1,104 @@
 {
+  "nom": [
+    {
+      "lemma": "advantage", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          0, 
+          "Investors"
+        ], 
+        [
+          "Support", 
+          "1:0", 
+          1, 
+          1, 
+          "took"
+        ], 
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "advantage"
+        ], 
+        [
+          "ARG1", 
+          "3:1", 
+          3, 
+          7, 
+          "of Tuesday 's stock rally"
+        ]
+      ], 
+      "tokenNr": "2"
+    }, 
+    {
+      "lemma": "profit", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG0", 
+          "0:1*8:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "Support", 
+          "10:0", 
+          10, 
+          10, 
+          "book"
+        ], 
+        [
+          "ARG1-REF", 
+          "12:0", 
+          12, 
+          12, 
+          "profits"
+        ], 
+        [
+          "rel", 
+          "12:0", 
+          12, 
+          12, 
+          "profits"
+        ]
+      ], 
+      "tokenNr": "12"
+    }, 
+    {
+      "lemma": "rally", 
+      "frame": "02", 
+      "args": [
+        [
+          "ARGM-TMP", 
+          "4:1", 
+          4, 
+          5, 
+          "Tuesday 's"
+        ], 
+        [
+          "ARG1", 
+          "6:0", 
+          6, 
+          6, 
+          "stock"
+        ], 
+        [
+          "rel", 
+          "7:0", 
+          7, 
+          7, 
+          "rally"
+        ]
+      ], 
+      "tokenNr": "7"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "Investors", 
@@ -360,8 +460,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "investor", 
-        "idx": 0, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 0
       }
     ], 
     [
@@ -369,8 +469,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "take", 
-        "idx": 1, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 1
       }
     ], 
     [
@@ -378,8 +478,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "advantage", 
-        "idx": 2, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 2
       }
     ], 
     [
@@ -387,8 +487,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
-        "idx": 3, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 3
       }
     ], 
     [
@@ -407,8 +507,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "'s", 
-        "idx": 5, 
-        "PartOfSpeech": "POS"
+        "PartOfSpeech": "POS", 
+        "idx": 5
       }
     ], 
     [
@@ -416,8 +516,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "stock", 
-        "idx": 6, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 6
       }
     ], 
     [
@@ -425,8 +525,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "rally", 
-        "idx": 7, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 7
       }
     ], 
     [
@@ -434,8 +534,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "to", 
-        "idx": 9, 
-        "PartOfSpeech": "TO"
+        "PartOfSpeech": "TO", 
+        "idx": 9
       }
     ], 
     [
@@ -443,8 +543,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "book", 
-        "idx": 10, 
-        "PartOfSpeech": "VB"
+        "PartOfSpeech": "VB", 
+        "idx": 10
       }
     ], 
     [
@@ -452,8 +552,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "some", 
-        "idx": 11, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 11
       }
     ], 
     [
@@ -461,8 +561,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "profit", 
-        "idx": 12, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 12
       }
     ], 
     [
@@ -481,8 +581,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
-        "idx": 14, 
-        "PartOfSpeech": ","
+        "PartOfSpeech": ",", 
+        "idx": 14
       }
     ], 
     [
@@ -490,8 +590,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "leave", 
-        "idx": 16, 
-        "PartOfSpeech": "VBG"
+        "PartOfSpeech": "VBG", 
+        "idx": 16
       }
     ], 
     [
@@ -499,8 +599,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "stock", 
-        "idx": 17, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 17
       }
     ], 
     [
@@ -508,8 +608,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "up", 
-        "idx": 19, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 19
       }
     ], 
     [
@@ -517,8 +617,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "fractionally", 
-        "idx": 20, 
-        "PartOfSpeech": "RB"
+        "PartOfSpeech": "RB", 
+        "idx": 20
       }
     ], 
     [
@@ -526,8 +626,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 21, 
-        "PartOfSpeech": "."
+        "PartOfSpeech": ".", 
+        "idx": 21
       }
     ]
   ], 

@@ -1,4 +1,139 @@
 {
+  "nom": [
+    {
+      "lemma": "bond", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARGM-TMP", 
+          "0:0", 
+          0, 
+          0, 
+          "Long"
+        ], 
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "-"
+        ]
+      ], 
+      "tokenNr": "1"
+    }, 
+    {
+      "lemma": "debt", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG2", 
+          "12:0", 
+          12, 
+          12, 
+          "supply"
+        ], 
+        [
+          "rel", 
+          "13:0", 
+          13, 
+          13, 
+          "of"
+        ]
+      ], 
+      "tokenNr": "13"
+    }, 
+    {
+      "lemma": "price", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARGM-TMP", 
+          "0:0", 
+          0, 
+          0, 
+          "Long"
+        ], 
+        [
+          "ARG1", 
+          "1:0", 
+          1, 
+          1, 
+          "-"
+        ], 
+        [
+          "ARG2-REF", 
+          "2:0", 
+          2, 
+          2, 
+          "term"
+        ], 
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "term"
+        ]
+      ], 
+      "tokenNr": "2"
+    }, 
+    {
+      "lemma": "prospect", 
+      "frame": "01", 
+      "args": [
+        [
+          "rel", 
+          "5:0", 
+          5, 
+          5, 
+          "rose"
+        ], 
+        [
+          "ARG1", 
+          "6:1", 
+          6, 
+          17, 
+          "despite prospects of a huge new supply of Treasury debt this month"
+        ]
+      ], 
+      "tokenNr": "5"
+    }, 
+    {
+      "lemma": "supply", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG3", 
+          "8:0", 
+          8, 
+          8, 
+          "of"
+        ], 
+        [
+          "ARGM-TMP", 
+          "9:0", 
+          9, 
+          9, 
+          "a"
+        ], 
+        [
+          "rel", 
+          "10:0", 
+          10, 
+          10, 
+          "huge"
+        ], 
+        [
+          "ARG1", 
+          "11:1", 
+          9, 
+          12, 
+          "a huge new supply"
+        ]
+      ], 
+      "tokenNr": "10"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "Long", 
@@ -222,8 +357,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "long", 
-        "idx": 0, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 0
       }
     ], 
     [
@@ -231,8 +366,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "-", 
-        "idx": 1, 
-        "PartOfSpeech": ":"
+        "PartOfSpeech": ":", 
+        "idx": 1
       }
     ], 
     [
@@ -240,8 +375,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "term", 
-        "idx": 2, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 2
       }
     ], 
     [
@@ -249,8 +384,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "bond", 
-        "idx": 3, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 3
       }
     ], 
     [
@@ -258,8 +393,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "price", 
-        "idx": 4, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 4
       }
     ], 
     [
@@ -267,8 +402,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "rise", 
-        "idx": 5, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 5
       }
     ], 
     [
@@ -276,8 +411,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "despite", 
-        "idx": 6, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 6
       }
     ], 
     [
@@ -285,8 +420,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "prospects", 
-        "idx": 7, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 7
       }
     ], 
     [
@@ -294,8 +429,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
-        "idx": 8, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 8
       }
     ], 
     [
@@ -303,8 +438,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "a", 
-        "idx": 9, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 9
       }
     ], 
     [
@@ -312,8 +447,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "huge", 
-        "idx": 10, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 10
       }
     ], 
     [
@@ -321,8 +456,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "new", 
-        "idx": 11, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 11
       }
     ], 
     [
@@ -330,8 +465,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "supply", 
-        "idx": 12, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 12
       }
     ], 
     [
@@ -339,8 +474,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
-        "idx": 13, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 13
       }
     ], 
     [
@@ -348,8 +483,8 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Treasury", 
-        "idx": 14, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 14
       }
     ], 
     [
@@ -357,8 +492,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "debt", 
-        "idx": 15, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 15
       }
     ], 
     [
@@ -388,8 +523,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 18, 
-        "PartOfSpeech": "."
+        "PartOfSpeech": ".", 
+        "idx": 18
       }
     ]
   ], 

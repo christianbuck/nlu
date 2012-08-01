@@ -1,4 +1,104 @@
 {
+  "nom": [
+    {
+      "lemma": "bid", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG0", 
+          "18:1", 
+          18, 
+          21, 
+          "Georgia - Pacific 's"
+        ], 
+        [
+          "ARG2", 
+          "20:2", 
+          18, 
+          26, 
+          "Georgia - Pacific 's $ 3.18 billion *U* bid"
+        ], 
+        [
+          "rel", 
+          "24:0", 
+          24, 
+          24, 
+          "billion"
+        ], 
+        [
+          "ARG1", 
+          "25:1", 
+          22, 
+          25, 
+          "$ 3.18 billion *U*"
+        ]
+      ], 
+      "tokenNr": "24"
+    }, 
+    {
+      "lemma": "enthusiasm", 
+      "frame": "01", 
+      "args": [
+        [
+          "rel", 
+          "6:0", 
+          6, 
+          6, 
+          "enthusiasm"
+        ], 
+        [
+          "ARG1", 
+          "7:0*12:1", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "ARG0", 
+          "9:1", 
+          9, 
+          9, 
+          "investors"
+        ], 
+        [
+          "Support", 
+          "10:0", 
+          10, 
+          10, 
+          "showed"
+        ]
+      ], 
+      "tokenNr": "6"
+    }, 
+    {
+      "lemma": "wake", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "9:1,10:0,11:0,12:1", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "rel", 
+          "16:0", 
+          16, 
+          16, 
+          "wake"
+        ], 
+        [
+          "ARG2", 
+          "17:1", 
+          17, 
+          30, 
+          "of Georgia - Pacific 's $ 3.18 billion *U* bid for Great Northern Nekoosa"
+        ]
+      ], 
+      "tokenNr": "16"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "Analysts", 
@@ -400,8 +500,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "analyst", 
-        "idx": 0, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 0
       }
     ], 
     [
@@ -409,8 +509,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "be", 
-        "idx": 1, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 1
       }
     ], 
     [
@@ -418,8 +518,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "disappoint", 
-        "idx": 2, 
-        "PartOfSpeech": "VBN"
+        "PartOfSpeech": "VBN", 
+        "idx": 2
       }
     ], 
     [
@@ -427,8 +527,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "that", 
-        "idx": 4, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 4
       }
     ], 
     [
@@ -436,8 +536,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
-        "idx": 5, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 5
       }
     ], 
     [
@@ -445,8 +545,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "enthusiasm", 
-        "idx": 6, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 6
       }
     ], 
     [
@@ -454,8 +554,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "investor", 
-        "idx": 9, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 9
       }
     ], 
     [
@@ -463,8 +563,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "show", 
-        "idx": 10, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 10
       }
     ], 
     [
@@ -472,8 +572,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "for", 
-        "idx": 12, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 12
       }
     ], 
     [
@@ -481,8 +581,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "stock", 
-        "idx": 13, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 13
       }
     ], 
     [
@@ -490,8 +590,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "in", 
-        "idx": 14, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 14
       }
     ], 
     [
@@ -499,8 +599,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "the", 
-        "idx": 15, 
-        "PartOfSpeech": "DT"
+        "PartOfSpeech": "DT", 
+        "idx": 15
       }
     ], 
     [
@@ -508,8 +608,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "wake", 
-        "idx": 16, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 16
       }
     ], 
     [
@@ -517,8 +617,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "of", 
-        "idx": 17, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 17
       }
     ], 
     [
@@ -526,8 +626,8 @@
       {
         "NamedEntityTag": "LOCATION", 
         "Lemma": "Georgia", 
-        "idx": 18, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 18
       }
     ], 
     [
@@ -535,8 +635,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "-", 
-        "idx": 19, 
-        "PartOfSpeech": ":"
+        "PartOfSpeech": ":", 
+        "idx": 19
       }
     ], 
     [
@@ -544,8 +644,8 @@
       {
         "NamedEntityTag": "LOCATION", 
         "Lemma": "Pacific", 
-        "idx": 20, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 20
       }
     ], 
     [
@@ -553,8 +653,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "'s", 
-        "idx": 21, 
-        "PartOfSpeech": "POS"
+        "PartOfSpeech": "POS", 
+        "idx": 21
       }
     ], 
     [
@@ -562,8 +662,8 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$3.18E9", 
-        "idx": 22, 
         "PartOfSpeech": "$", 
+        "idx": 22, 
         "Lemma": "$"
       }
     ], 
@@ -572,8 +672,8 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$3.18E9", 
-        "idx": 23, 
         "PartOfSpeech": "CD", 
+        "idx": 23, 
         "Lemma": "3.18"
       }
     ], 
@@ -582,8 +682,8 @@
       {
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$3.18E9", 
-        "idx": 24, 
         "PartOfSpeech": "CD", 
+        "idx": 24, 
         "Lemma": "billion"
       }
     ], 
@@ -592,8 +692,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "bid", 
-        "idx": 26, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 26
       }
     ], 
     [
@@ -601,8 +701,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "for", 
-        "idx": 27, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 27
       }
     ], 
     [
@@ -610,8 +710,8 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Great", 
-        "idx": 28, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 28
       }
     ], 
     [
@@ -619,8 +719,8 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Northern", 
-        "idx": 29, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 29
       }
     ], 
     [
@@ -628,8 +728,8 @@
       {
         "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Nekoosa", 
-        "idx": 30, 
-        "PartOfSpeech": "NNP"
+        "PartOfSpeech": "NNP", 
+        "idx": 30
       }
     ], 
     [
@@ -637,8 +737,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "evaporate", 
-        "idx": 31, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 31
       }
     ], 
     [
@@ -646,8 +746,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "so", 
-        "idx": 32, 
-        "PartOfSpeech": "RB"
+        "PartOfSpeech": "RB", 
+        "idx": 32
       }
     ], 
     [
@@ -655,8 +755,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "quickly", 
-        "idx": 33, 
-        "PartOfSpeech": "RB"
+        "PartOfSpeech": "RB", 
+        "idx": 33
       }
     ], 
     [
@@ -664,8 +764,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 34, 
-        "PartOfSpeech": "."
+        "PartOfSpeech": ".", 
+        "idx": 34
       }
     ]
   ], 

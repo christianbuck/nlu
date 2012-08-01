@@ -1,4 +1,34 @@
 {
+  "nom": [
+    {
+      "lemma": "price", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "0:0", 
+          0, 
+          0, 
+          "Stock"
+        ], 
+        [
+          "ARG2-REF", 
+          "1:0", 
+          1, 
+          1, 
+          "prices"
+        ], 
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "prices"
+        ]
+      ], 
+      "tokenNr": "1"
+    }
+  ], 
   "stanford_dep": [
     {
       "dep": "Stock", 
@@ -123,8 +153,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "stock", 
-        "idx": 0, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 0
       }
     ], 
     [
@@ -132,8 +162,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "price", 
-        "idx": 1, 
-        "PartOfSpeech": "NNS"
+        "PartOfSpeech": "NNS", 
+        "idx": 1
       }
     ], 
     [
@@ -141,8 +171,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "rise", 
-        "idx": 2, 
-        "PartOfSpeech": "VBD"
+        "PartOfSpeech": "VBD", 
+        "idx": 2
       }
     ], 
     [
@@ -150,8 +180,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "fractionally", 
-        "idx": 3, 
-        "PartOfSpeech": "RB"
+        "PartOfSpeech": "RB", 
+        "idx": 3
       }
     ], 
     [
@@ -159,8 +189,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "in", 
-        "idx": 4, 
-        "PartOfSpeech": "IN"
+        "PartOfSpeech": "IN", 
+        "idx": 4
       }
     ], 
     [
@@ -168,8 +198,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "moderate", 
-        "idx": 5, 
-        "PartOfSpeech": "JJ"
+        "PartOfSpeech": "JJ", 
+        "idx": 5
       }
     ], 
     [
@@ -177,8 +207,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": "trading", 
-        "idx": 6, 
-        "PartOfSpeech": "NN"
+        "PartOfSpeech": "NN", 
+        "idx": 6
       }
     ], 
     [
@@ -186,8 +216,8 @@
       {
         "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 7, 
-        "PartOfSpeech": "."
+        "PartOfSpeech": ".", 
+        "idx": 7
       }
     ]
   ], 
