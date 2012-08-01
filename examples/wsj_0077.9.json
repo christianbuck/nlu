@@ -1,645 +1,203 @@
 {
   "stanford_dep": [
     {
-      "dep": "But", 
-      "dep_idx": 1, 
-      "gov": "eager", 
-      "rel": "cc", 
-      "gov_idx": 14
+      "dep": "Economic", 
+      "dep_idx": 0, 
+      "gov": "news", 
+      "rel": "amod", 
+      "gov_idx": 1
     }, 
     {
-      "dep": "the", 
+      "dep": "news", 
+      "dep_idx": 1, 
+      "gov": "had", 
+      "rel": "nsubj", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "had", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
+    }, 
+    {
+      "dep": "little", 
       "dep_idx": 3, 
-      "gov": "end", 
-      "rel": "det", 
+      "gov": "effect", 
+      "rel": "amod", 
       "gov_idx": 4
     }, 
     {
-      "dep": "end", 
+      "dep": "effect", 
       "dep_idx": 4, 
-      "gov": "eager", 
-      "rel": "prepc_with", 
-      "gov_idx": 14
+      "gov": "had", 
+      "rel": "dobj", 
+      "gov_idx": 2
     }, 
     {
-      "dep": "the", 
+      "dep": "financial", 
       "dep_idx": 6, 
-      "gov": "year", 
-      "rel": "det", 
+      "gov": "markets", 
+      "rel": "amod", 
       "gov_idx": 7
     }, 
     {
-      "dep": "year", 
+      "dep": "markets", 
       "dep_idx": 7, 
-      "gov": "end", 
-      "rel": "prep_of", 
+      "gov": "effect", 
+      "rel": "prep_on", 
       "gov_idx": 4
-    }, 
-    {
-      "dep": "in", 
-      "dep_idx": 8, 
-      "gov": "end", 
-      "rel": "dep", 
-      "gov_idx": 4
-    }, 
-    {
-      "dep": "sight", 
-      "dep_idx": 9, 
-      "gov": "in", 
-      "rel": "pobj", 
-      "gov_idx": 8
-    }, 
-    {
-      "dep": "money", 
-      "dep_idx": 11, 
-      "gov": "managers", 
-      "rel": "nn", 
-      "gov_idx": 12
-    }, 
-    {
-      "dep": "managers", 
-      "dep_idx": 12, 
-      "gov": "eager", 
-      "rel": "nsubj", 
-      "gov_idx": 14
-    }, 
-    {
-      "dep": "are", 
-      "dep_idx": 13, 
-      "gov": "eager", 
-      "rel": "cop", 
-      "gov_idx": 14
-    }, 
-    {
-      "dep": "eager", 
-      "dep_idx": 14, 
-      "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": 0
-    }, 
-    {
-      "dep": "to", 
-      "dep_idx": 16, 
-      "gov": "take", 
-      "rel": "aux", 
-      "gov_idx": 17
-    }, 
-    {
-      "dep": "take", 
-      "dep_idx": 17, 
-      "gov": "eager", 
-      "rel": "xcomp", 
-      "gov_idx": 14
-    }, 
-    {
-      "dep": "profits", 
-      "dep_idx": 18, 
-      "gov": "take", 
-      "rel": "dobj", 
-      "gov_idx": 17
-    }, 
-    {
-      "dep": "cut", 
-      "dep_idx": 20, 
-      "gov": "eager", 
-      "rel": "xcomp", 
-      "gov_idx": 14
-    }, 
-    {
-      "dep": "cut", 
-      "dep_idx": 20, 
-      "gov": "take", 
-      "rel": "conj_and", 
-      "gov_idx": 17
-    }, 
-    {
-      "dep": "their", 
-      "dep_idx": 21, 
-      "gov": "risks", 
-      "rel": "poss", 
-      "gov_idx": 22
-    }, 
-    {
-      "dep": "risks", 
-      "dep_idx": 22, 
-      "gov": "cut", 
-      "rel": "dobj", 
-      "gov_idx": 20
-    }, 
-    {
-      "dep": "losing", 
-      "dep_idx": 25, 
-      "gov": "risks", 
-      "rel": "prepc_of", 
-      "gov_idx": 22
-    }, 
-    {
-      "dep": "what", 
-      "dep_idx": 26, 
-      "gov": "returns", 
-      "rel": "nsubj", 
-      "gov_idx": 34
-    }, 
-    {
-      "dep": "many", 
-      "dep_idx": 28, 
-      "gov": "returns", 
-      "rel": "prep_for", 
-      "gov_idx": 34
-    }, 
-    {
-      "dep": "have", 
-      "dep_idx": 30, 
-      "gov": "returns", 
-      "rel": "aux", 
-      "gov_idx": 34
-    }, 
-    {
-      "dep": "been", 
-      "dep_idx": 31, 
-      "gov": "returns", 
-      "rel": "cop", 
-      "gov_idx": 34
-    }, 
-    {
-      "dep": "exceptionally", 
-      "dep_idx": 32, 
-      "gov": "good", 
-      "rel": "advmod", 
-      "gov_idx": 33
-    }, 
-    {
-      "dep": "good", 
-      "dep_idx": 33, 
-      "gov": "returns", 
-      "rel": "amod", 
-      "gov_idx": 34
-    }, 
-    {
-      "dep": "returns", 
-      "dep_idx": 34, 
-      "gov": "losing", 
-      "rel": "ccomp", 
-      "gov_idx": 25
-    }, 
-    {
-      "dep": "in", 
-      "dep_idx": 35, 
-      "gov": "returns", 
-      "rel": "dep", 
-      "gov_idx": 34
     }
   ], 
-  "text": "But with the end of the year in sight , money managers are eager to take profits and cut their risks of losing what for many have been exceptionally good returns in", 
-  "coref_chains": [
-    [
-      10, 
-      11, 
-      1, 
-      "money managers", 
-      false
-    ], 
-    [
-      20, 
-      20, 
-      1, 
-      "their", 
-      false
-    ]
-  ], 
-  "bbn_ne": [
-    [
-      11, 
-      11, 
-      "managers", 
-      "PER_DESC", 
-      "", 
-      "", 
-      false
-    ]
-  ], 
-  "coref": [
-    [
-      [
+  "text": "Economic news had little effect on financial markets .", 
+  "coref_chains": [], 
+  "bbn_ne": [], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "have", 
+      "args": [
         [
-          "their", 
-          0, 
-          -1, 
-          19, 
-          20
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "had"
         ], 
         [
-          "money managers", 
+          "ARG0", 
+          "0:1", 
           0, 
           1, 
-          10, 
-          12
+          "Economic news"
+        ], 
+        [
+          "ARG1", 
+          "3:2", 
+          3, 
+          7, 
+          "little effect on financial markets"
         ]
-      ]
-    ]
+      ], 
+      "roleset": "have.03"
+    }
   ], 
   "sentence_nr": 9, 
   "tuples": [
     [
-      "cc", 
-      "eager", 
-      "But"
-    ], 
-    [
-      "det", 
-      "end", 
-      "the"
-    ], 
-    [
-      "prep_with", 
-      "eager", 
-      "end"
-    ], 
-    [
-      "det", 
-      "year", 
-      "the"
-    ], 
-    [
-      "prep_of", 
-      "end", 
-      "year"
-    ], 
-    [
-      "prep_in", 
-      "year", 
-      "sight"
-    ], 
-    [
-      "nn", 
-      "managers", 
-      "money"
+      "amod", 
+      "news", 
+      "Economic"
     ], 
     [
       "nsubj", 
-      "eager", 
-      "managers"
-    ], 
-    [
-      "cop", 
-      "eager", 
-      "are"
+      "had", 
+      "news"
     ], 
     [
       "root", 
       "ROOT", 
-      "eager"
-    ], 
-    [
-      "aux", 
-      "take", 
-      "to"
-    ], 
-    [
-      "xcomp", 
-      "eager", 
-      "take"
-    ], 
-    [
-      "dobj", 
-      "take", 
-      "profits"
-    ], 
-    [
-      "xcomp", 
-      "eager", 
-      "cut"
-    ], 
-    [
-      "conj_and", 
-      "take", 
-      "cut"
-    ], 
-    [
-      "poss", 
-      "risks", 
-      "their"
-    ], 
-    [
-      "dobj", 
-      "cut", 
-      "risks"
-    ], 
-    [
-      "prepc_of", 
-      "risks", 
-      "losing"
-    ], 
-    [
-      "nsubj", 
-      "returns", 
-      "what"
-    ], 
-    [
-      "dep", 
-      "returns", 
-      "for"
-    ], 
-    [
-      "pobj", 
-      "for", 
-      "many"
-    ], 
-    [
-      "aux", 
-      "returns", 
-      "have"
-    ], 
-    [
-      "cop", 
-      "returns", 
-      "been"
-    ], 
-    [
-      "advmod", 
-      "good", 
-      "exceptionally"
+      "had"
     ], 
     [
       "amod", 
-      "returns", 
-      "good"
+      "effect", 
+      "little"
     ], 
     [
-      "ccomp", 
-      "losing", 
-      "returns"
+      "dobj", 
+      "had", 
+      "effect"
     ], 
     [
-      "prep", 
-      "returns", 
-      "in"
+      "amod", 
+      "markets", 
+      "financial"
+    ], 
+    [
+      "prep_on", 
+      "effect", 
+      "markets"
     ]
   ], 
   "words": [
     [
-      "But", 
+      "Economic", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "but", 
-        "PartOfSpeech": "CC"
-      }
-    ], 
-    [
-      "with", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "with", 
-        "PartOfSpeech": "IN"
-      }
-    ], 
-    [
-      "the", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "the", 
-        "PartOfSpeech": "DT"
-      }
-    ], 
-    [
-      "end", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "end", 
-        "PartOfSpeech": "NN"
-      }
-    ], 
-    [
-      "of", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "of", 
-        "PartOfSpeech": "IN"
-      }
-    ], 
-    [
-      "the", 
-      {
-        "NamedEntityTag": "DATE", 
-        "NormalizedNamedEntityTag": "THIS", 
-        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">the year</TIMEX3>", 
-        "PartOfSpeech": "DT", 
-        "Lemma": "the"
-      }
-    ], 
-    [
-      "year", 
-      {
-        "NamedEntityTag": "DATE", 
-        "NormalizedNamedEntityTag": "THIS", 
-        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">the year</TIMEX3>", 
-        "PartOfSpeech": "NN", 
-        "Lemma": "year"
-      }
-    ], 
-    [
-      "in", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "in", 
-        "PartOfSpeech": "IN"
-      }
-    ], 
-    [
-      "sight", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "sight", 
-        "PartOfSpeech": "NN"
-      }
-    ], 
-    [
-      ",", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": ",", 
-        "PartOfSpeech": ","
-      }
-    ], 
-    [
-      "money", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "money", 
-        "PartOfSpeech": "NN"
-      }
-    ], 
-    [
-      "managers", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "manager", 
-        "PartOfSpeech": "NNS"
-      }
-    ], 
-    [
-      "are", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "be", 
-        "PartOfSpeech": "VBP"
-      }
-    ], 
-    [
-      "eager", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "eager", 
+        "Lemma": "economic", 
         "PartOfSpeech": "JJ"
       }
     ], 
     [
-      "to", 
+      "news", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "to", 
-        "PartOfSpeech": "TO"
+        "Lemma": "news", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
-      "take", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "take", 
-        "PartOfSpeech": "VB"
-      }
-    ], 
-    [
-      "profits", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "profit", 
-        "PartOfSpeech": "NNS"
-      }
-    ], 
-    [
-      "and", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "and", 
-        "PartOfSpeech": "CC"
-      }
-    ], 
-    [
-      "cut", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "cut", 
-        "PartOfSpeech": "VB"
-      }
-    ], 
-    [
-      "their", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "they", 
-        "PartOfSpeech": "PRP$"
-      }
-    ], 
-    [
-      "risks", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "risk", 
-        "PartOfSpeech": "NNS"
-      }
-    ], 
-    [
-      "of", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "of", 
-        "PartOfSpeech": "IN"
-      }
-    ], 
-    [
-      "losing", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "lose", 
-        "PartOfSpeech": "VBG"
-      }
-    ], 
-    [
-      "what", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "what", 
-        "PartOfSpeech": "WP"
-      }
-    ], 
-    [
-      "for", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "for", 
-        "PartOfSpeech": "IN"
-      }
-    ], 
-    [
-      "many", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "many", 
-        "PartOfSpeech": "JJ"
-      }
-    ], 
-    [
-      "have", 
+      "had", 
       {
         "NamedEntityTag": "O", 
         "Lemma": "have", 
-        "PartOfSpeech": "VBP"
+        "PartOfSpeech": "VBD"
       }
     ], 
     [
-      "been", 
+      "little", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "be", 
-        "PartOfSpeech": "VBN"
-      }
-    ], 
-    [
-      "exceptionally", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "exceptionally", 
-        "PartOfSpeech": "RB"
-      }
-    ], 
-    [
-      "good", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "good", 
+        "Lemma": "little", 
         "PartOfSpeech": "JJ"
       }
     ], 
     [
-      "returns", 
+      "effect", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "return", 
+        "Lemma": "effect", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "on", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "on", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "financial", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "financial", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "markets", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "market", 
         "PartOfSpeech": "NNS"
       }
     ], 
     [
-      "in", 
+      ".", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "in", 
-        "PartOfSpeech": "IN"
+        "Lemma": ".", 
+        "PartOfSpeech": "."
       }
     ]
   ], 
-  "treebank_sentence": "But with the end of the year in sight , money managers are eager *PRO*-1 to take profits and cut their risks of *PRO*-2 losing what for many *T*-178 have been exceptionally good returns in", 
-  "parsetree": "(ROOT (S (CC But) (PP (IN with) (NP (NP (DT the) (NN end)) (PP (IN of) (NP (NP (DT the) (NN year)) (PP (IN in) (NP (NN sight))))))) (, ,) (NP (NN money) (NNS managers)) (VP (VBP are) (ADJP (JJ eager) (S (VP (TO to) (VP (VP (VB take) (NP (NNS profits))) (CC and) (VP (VB cut) (NP (NP (PRP$ their) (NNS risks)) (PP (IN of) (S (VP (VBG losing) (SBAR (WHNP (WP what)) (PP (IN for) (ADJP (JJ many))) (S (VP (VBP have) (VP (VBN been) (NP (ADJP (RB exceptionally) (JJ good)) (NNS returns)) (PP (IN in))))))))))))))))))", 
-  "goldparse": "(TOP (S (CC But) (PP (IN with) (S-NOM (NP-SBJ (NP (DT the) (NN end)) (PP (IN of) (NP (DT the) (NN year)))) (PP-LOC-PRD (IN in) (NP (NN sight))))) (, ,) (NP-SBJ-1 (NN money) (NNS managers)) (VP (VBP are) (ADJP-PRD (JJ eager) (S (NP-SBJ-2 (-NONE- *PRO*-1)) (VP (TO to) (VP (VP (VB take) (NP (NNS profits))) (CC and) (VP (VB cut) (NP (NP (PRP$ their) (NNS risks)) (PP (IN of) (S-NOM (NP-SBJ (-NONE- *PRO*-2)) (VP (VBG losing) (SBAR-NOM (WHNP-178 (WP what)) (S (PP (IN for) (NP (JJ many))) (NP-SBJ (-NONE- *T*-178)) (VP (VBP have) (VP (VBN been) (NP-PRD (NP (ADJP (RB exceptionally) (JJ good)) (NNS returns)) (X (PP (IN in))))))))))))))))))))", 
+  "treebank_sentence": "Economic news had little effect on financial markets .", 
+  "parsetree": "(ROOT (S (NP (JJ Economic) (NN news)) (VP (VBD had) (NP (NP (JJ little) (NN effect)) (PP (IN on) (NP (JJ financial) (NNS markets))))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (JJ Economic) (NN news)) (VP (VBD had) (NP (NP (JJ little) (NN effect)) (PP (IN on) (NP (JJ financial) (NNS markets))))) (. .)))", 
   "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
 }

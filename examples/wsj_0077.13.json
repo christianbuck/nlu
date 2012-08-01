@@ -1,63 +1,157 @@
 {
   "stanford_dep": [
     {
-      "dep": "In", 
+      "dep": "Stock", 
+      "dep_idx": 0, 
+      "gov": "prices", 
+      "rel": "nn", 
+      "gov_idx": 1
+    }, 
+    {
+      "dep": "prices", 
       "dep_idx": 1, 
+      "gov": "rose", 
+      "rel": "nsubj", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "rose", 
+      "dep_idx": 2, 
       "gov": "ROOT", 
       "rel": "root", 
-      "gov_idx": 0
+      "gov_idx": -1
     }, 
     {
-      "dep": "major", 
-      "dep_idx": 2, 
-      "gov": "activity", 
-      "rel": "amod", 
-      "gov_idx": 4
-    }, 
-    {
-      "dep": "market", 
+      "dep": "fractionally", 
       "dep_idx": 3, 
-      "gov": "activity", 
-      "rel": "nn", 
-      "gov_idx": 4
+      "gov": "rose", 
+      "rel": "advmod", 
+      "gov_idx": 2
     }, 
     {
-      "dep": "activity", 
-      "dep_idx": 4, 
-      "gov": "In", 
-      "rel": "pobj", 
-      "gov_idx": 1
+      "dep": "moderate", 
+      "dep_idx": 5, 
+      "gov": "rose", 
+      "rel": "prep_in", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "trading", 
+      "dep_idx": 6, 
+      "gov": "moderate", 
+      "rel": "amod", 
+      "gov_idx": 5
     }
   ], 
-  "text": "In major market activity :", 
+  "text": "Stock prices rose fractionally in moderate trading .", 
   "coref_chains": [], 
   "bbn_ne": [], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "rise", 
+      "args": [
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "rose"
+        ], 
+        [
+          "ARG1", 
+          "0:1", 
+          0, 
+          1, 
+          "Stock prices"
+        ], 
+        [
+          "ARG2", 
+          "3:1", 
+          3, 
+          3, 
+          "fractionally"
+        ], 
+        [
+          "ARGM-LOC", 
+          "4:1", 
+          4, 
+          6, 
+          "in moderate trading"
+        ]
+      ], 
+      "roleset": "rise.01"
+    }
+  ], 
   "sentence_nr": 13, 
   "tuples": [
     [
-      "dep", 
-      "activity", 
-      "In"
+      "nn", 
+      "prices", 
+      "Stock"
     ], 
     [
-      "amod", 
-      "market", 
-      "major"
-    ], 
-    [
-      "pobj", 
-      "In", 
-      "market"
+      "nsubj", 
+      "rose", 
+      "prices"
     ], 
     [
       "root", 
       "ROOT", 
-      "activity"
+      "rose"
+    ], 
+    [
+      "advmod", 
+      "rose", 
+      "fractionally"
+    ], 
+    [
+      "amod", 
+      "trading", 
+      "moderate"
+    ], 
+    [
+      "prep_in", 
+      "rose", 
+      "trading"
     ]
   ], 
   "words": [
     [
-      "In", 
+      "Stock", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "stock", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "prices", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "price", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "rose", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "rise", 
+        "PartOfSpeech": "VBD"
+      }
+    ], 
+    [
+      "fractionally", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "fractionally", 
+        "PartOfSpeech": "RB"
+      }
+    ], 
+    [
+      "in", 
       {
         "NamedEntityTag": "O", 
         "Lemma": "in", 
@@ -65,40 +159,32 @@
       }
     ], 
     [
-      "major", 
+      "moderate", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "major", 
+        "Lemma": "moderate", 
         "PartOfSpeech": "JJ"
       }
     ], 
     [
-      "market", 
+      "trading", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "market", 
+        "Lemma": "trading", 
         "PartOfSpeech": "NN"
       }
     ], 
     [
-      "activity", 
+      ".", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "activity", 
-        "PartOfSpeech": "NN"
-      }
-    ], 
-    [
-      ":", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": ":", 
-        "PartOfSpeech": ":"
+        "Lemma": ".", 
+        "PartOfSpeech": "."
       }
     ]
   ], 
-  "treebank_sentence": "In major market activity :", 
-  "parsetree": "(ROOT (FRAG (PP (IN In) (NP (JJ major) (NN market))) (NP-TMP (NN activity)) (: :)))", 
-  "goldparse": "(TOP (PP-LOC (IN In) (NP (JJ major) (NN market) (NN activity)) (: :)))", 
+  "treebank_sentence": "Stock prices rose fractionally in moderate trading .", 
+  "parsetree": "(ROOT (S (NP (NN Stock) (NNS prices)) (VP (VBD rose) (ADVP (RB fractionally)) (PP (IN in) (NP (JJ moderate) (NN trading)))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NN Stock) (NNS prices)) (VP (VBD rose) (ADVP-MNR (RB fractionally)) (PP-LOC (IN in) (NP (JJ moderate) (VBG trading)))) (. .)))", 
   "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
 }

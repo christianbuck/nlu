@@ -1,163 +1,92 @@
 {
   "stanford_dep": [
     {
-      "dep": "Big", 
-      "dep_idx": 1, 
-      "gov": "Board", 
+      "dep": "Bond", 
+      "dep_idx": 0, 
+      "gov": "prices", 
       "rel": "nn", 
+      "gov_idx": 1
+    }, 
+    {
+      "dep": "prices", 
+      "dep_idx": 1, 
+      "gov": "were", 
+      "rel": "nsubj", 
       "gov_idx": 2
     }, 
     {
-      "dep": "Board", 
+      "dep": "were", 
       "dep_idx": 2, 
-      "gov": "volume", 
-      "rel": "nn", 
-      "gov_idx": 3
-    }, 
-    {
-      "dep": "volume", 
-      "dep_idx": 3, 
-      "gov": "totaled", 
-      "rel": "nsubj", 
-      "gov_idx": 4
-    }, 
-    {
-      "dep": "totaled", 
-      "dep_idx": 4, 
       "gov": "ROOT", 
       "rel": "root", 
-      "gov_idx": 0
+      "gov_idx": -1
     }, 
     {
-      "dep": "154.2", 
-      "dep_idx": 5, 
-      "gov": "million", 
-      "rel": "number", 
-      "gov_idx": 6
-    }, 
-    {
-      "dep": "million", 
-      "dep_idx": 6, 
-      "gov": "shares", 
-      "rel": "num", 
-      "gov_idx": 7
-    }, 
-    {
-      "dep": "shares", 
-      "dep_idx": 7, 
-      "gov": "totaled", 
-      "rel": "dobj", 
-      "gov_idx": 4
+      "dep": "up", 
+      "dep_idx": 3, 
+      "gov": "were", 
+      "rel": "advmod", 
+      "gov_idx": 2
     }
   ], 
-  "text": "Big Board volume totaled 154.2 million shares .", 
+  "text": "Bond prices were up .", 
   "coref_chains": [], 
-  "bbn_ne": [
-    [
-      0, 
-      1, 
-      "Big Board", 
-      "ORGANIZATION", 
-      "CORPORATION", 
-      "", 
-      false
-    ]
-  ], 
+  "bbn_ne": [], 
+  "prop": [], 
   "sentence_nr": 15, 
   "tuples": [
     [
       "nn", 
-      "volume", 
-      "Big"
-    ], 
-    [
-      "nn", 
-      "volume", 
-      "Board"
+      "prices", 
+      "Bond"
     ], 
     [
       "nsubj", 
-      "totaled", 
-      "volume"
+      "were", 
+      "prices"
     ], 
     [
       "root", 
       "ROOT", 
-      "totaled"
+      "were"
     ], 
     [
-      "number", 
-      "million", 
-      "154.2"
-    ], 
-    [
-      "num", 
-      "shares", 
-      "million"
-    ], 
-    [
-      "dobj", 
-      "totaled", 
-      "shares"
+      "advmod", 
+      "were", 
+      "up"
     ]
   ], 
   "words": [
     [
-      "Big", 
-      {
-        "NamedEntityTag": "ORGANIZATION", 
-        "Lemma": "Big", 
-        "PartOfSpeech": "NNP"
-      }
-    ], 
-    [
-      "Board", 
-      {
-        "NamedEntityTag": "ORGANIZATION", 
-        "Lemma": "Board", 
-        "PartOfSpeech": "NNP"
-      }
-    ], 
-    [
-      "volume", 
+      "Bond", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "volume", 
+        "Lemma": "bond", 
         "PartOfSpeech": "NN"
       }
     ], 
     [
-      "totaled", 
+      "prices", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "total", 
+        "Lemma": "price", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "were", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "be", 
         "PartOfSpeech": "VBD"
       }
     ], 
     [
-      "154.2", 
-      {
-        "NamedEntityTag": "NUMBER", 
-        "NormalizedNamedEntityTag": "1.542E8", 
-        "PartOfSpeech": "CD", 
-        "Lemma": "154.2"
-      }
-    ], 
-    [
-      "million", 
-      {
-        "NamedEntityTag": "NUMBER", 
-        "NormalizedNamedEntityTag": "1.542E8", 
-        "PartOfSpeech": "CD", 
-        "Lemma": "million"
-      }
-    ], 
-    [
-      "shares", 
+      "up", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "share", 
-        "PartOfSpeech": "NNS"
+        "Lemma": "up", 
+        "PartOfSpeech": "RB"
       }
     ], 
     [
@@ -169,8 +98,8 @@
       }
     ]
   ], 
-  "treebank_sentence": "Big Board volume totaled 154.2 million shares .", 
-  "parsetree": "(ROOT (S (NP (NNP Big) (NNP Board) (NN volume)) (VP (VBD totaled) (NP (QP (CD 154.2) (CD million)) (NNS shares))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ (NML (NNP Big) (NNP Board)) (NN volume)) (VP (VBD totaled) (NP (QP (CD 154.2) (CD million)) (NNS shares))) (. .)))", 
+  "treebank_sentence": "Bond prices were up .", 
+  "parsetree": "(ROOT (S (NP (NN Bond) (NNS prices)) (VP (VBD were) (ADVP (RB up))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NN Bond) (NNS prices)) (VP (VBD were) (ADVP-PRD (RB up))) (. .)))", 
   "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
 }

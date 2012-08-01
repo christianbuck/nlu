@@ -1,139 +1,194 @@
 {
   "stanford_dep": [
     {
-      "dep": "Stock", 
+      "dep": "Big", 
+      "dep_idx": 0, 
+      "gov": "Board", 
+      "rel": "nn", 
+      "gov_idx": 1
+    }, 
+    {
+      "dep": "Board", 
       "dep_idx": 1, 
-      "gov": "prices", 
+      "gov": "volume", 
       "rel": "nn", 
       "gov_idx": 2
     }, 
     {
-      "dep": "prices", 
+      "dep": "volume", 
       "dep_idx": 2, 
-      "gov": "rose", 
+      "gov": "totaled", 
       "rel": "nsubj", 
       "gov_idx": 3
     }, 
     {
-      "dep": "rose", 
+      "dep": "totaled", 
       "dep_idx": 3, 
       "gov": "ROOT", 
       "rel": "root", 
-      "gov_idx": 0
+      "gov_idx": -1
     }, 
     {
-      "dep": "fractionally", 
+      "dep": "154.2", 
       "dep_idx": 4, 
-      "gov": "rose", 
-      "rel": "advmod", 
-      "gov_idx": 3
+      "gov": "million", 
+      "rel": "number", 
+      "gov_idx": 5
     }, 
     {
-      "dep": "moderate", 
-      "dep_idx": 6, 
-      "gov": "rose", 
-      "rel": "prep_in", 
-      "gov_idx": 3
-    }, 
-    {
-      "dep": "trading", 
-      "dep_idx": 7, 
-      "gov": "moderate", 
-      "rel": "amod", 
+      "dep": "million", 
+      "dep_idx": 5, 
+      "gov": "shares", 
+      "rel": "num", 
       "gov_idx": 6
+    }, 
+    {
+      "dep": "shares", 
+      "dep_idx": 6, 
+      "gov": "totaled", 
+      "rel": "dobj", 
+      "gov_idx": 3
     }
   ], 
-  "text": "Stock prices rose fractionally in moderate trading .", 
+  "text": "Big Board volume totaled 154.2 million shares .", 
   "coref_chains": [], 
-  "bbn_ne": [], 
+  "bbn_ne": [
+    [
+      0, 
+      1, 
+      "Big Board", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "", 
+      false
+    ]
+  ], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "total", 
+      "args": [
+        [
+          "rel", 
+          "3:0", 
+          3, 
+          3, 
+          "totaled"
+        ], 
+        [
+          "ARG1", 
+          "0:2", 
+          0, 
+          2, 
+          "Big Board volume"
+        ], 
+        [
+          "ARG2", 
+          "4:2", 
+          4, 
+          6, 
+          "154.2 million shares"
+        ]
+      ], 
+      "roleset": "total.01"
+    }
+  ], 
   "sentence_nr": 14, 
   "tuples": [
     [
       "nn", 
-      "prices", 
-      "Stock"
+      "volume", 
+      "Big"
+    ], 
+    [
+      "nn", 
+      "volume", 
+      "Board"
     ], 
     [
       "nsubj", 
-      "rose", 
-      "prices"
+      "totaled", 
+      "volume"
     ], 
     [
       "root", 
       "ROOT", 
-      "rose"
+      "totaled"
     ], 
     [
-      "advmod", 
-      "rose", 
-      "fractionally"
+      "number", 
+      "million", 
+      "154.2"
     ], 
     [
-      "amod", 
-      "trading", 
-      "moderate"
+      "num", 
+      "shares", 
+      "million"
     ], 
     [
-      "prep_in", 
-      "rose", 
-      "trading"
+      "dobj", 
+      "totaled", 
+      "shares"
     ]
   ], 
   "words": [
     [
-      "Stock", 
+      "Big", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Big", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "Board", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Board", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "volume", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "stock", 
+        "Lemma": "volume", 
         "PartOfSpeech": "NN"
       }
     ], 
     [
-      "prices", 
+      "totaled", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "price", 
-        "PartOfSpeech": "NNS"
-      }
-    ], 
-    [
-      "rose", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "rise", 
+        "Lemma": "total", 
         "PartOfSpeech": "VBD"
       }
     ], 
     [
-      "fractionally", 
+      "154.2", 
       {
-        "NamedEntityTag": "O", 
-        "Lemma": "fractionally", 
-        "PartOfSpeech": "RB"
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "1.542E8", 
+        "PartOfSpeech": "CD", 
+        "Lemma": "154.2"
       }
     ], 
     [
-      "in", 
+      "million", 
       {
-        "NamedEntityTag": "O", 
-        "Lemma": "in", 
-        "PartOfSpeech": "IN"
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "1.542E8", 
+        "PartOfSpeech": "CD", 
+        "Lemma": "million"
       }
     ], 
     [
-      "moderate", 
+      "shares", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "moderate", 
-        "PartOfSpeech": "JJ"
-      }
-    ], 
-    [
-      "trading", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "trading", 
-        "PartOfSpeech": "NN"
+        "Lemma": "share", 
+        "PartOfSpeech": "NNS"
       }
     ], 
     [
@@ -145,8 +200,8 @@
       }
     ]
   ], 
-  "treebank_sentence": "Stock prices rose fractionally in moderate trading .", 
-  "parsetree": "(ROOT (S (NP (NN Stock) (NNS prices)) (VP (VBD rose) (ADVP (RB fractionally)) (PP (IN in) (NP (JJ moderate) (NN trading)))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ (NN Stock) (NNS prices)) (VP (VBD rose) (ADVP-MNR (RB fractionally)) (PP-LOC (IN in) (NP (JJ moderate) (VBG trading)))) (. .)))", 
+  "treebank_sentence": "Big Board volume totaled 154.2 million shares .", 
+  "parsetree": "(ROOT (S (NP (NNP Big) (NNP Board) (NN volume)) (VP (VBD totaled) (NP (QP (CD 154.2) (CD million)) (NNS shares))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NML (NNP Big) (NNP Board)) (NN volume)) (VP (VBD totaled) (NP (QP (CD 154.2) (CD million)) (NNS shares))) (. .)))", 
   "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
 }

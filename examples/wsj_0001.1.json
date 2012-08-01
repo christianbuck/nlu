@@ -1,122 +1,127 @@
 {
   "stanford_dep": [
     {
-      "dep": "Pierre", 
-      "dep_idx": 1, 
+      "dep": "Mr.", 
+      "dep_idx": 0, 
       "gov": "Vinken", 
       "rel": "nn", 
-      "gov_idx": 2
+      "gov_idx": 1
     }, 
     {
       "dep": "Vinken", 
-      "dep_idx": 2, 
-      "gov": "join", 
+      "dep_idx": 1, 
+      "gov": "chairman", 
       "rel": "nsubj", 
-      "gov_idx": 9
+      "gov_idx": 3
     }, 
     {
-      "dep": "61", 
-      "dep_idx": 4, 
-      "gov": "years", 
-      "rel": "num", 
-      "gov_idx": 5
+      "dep": "is", 
+      "dep_idx": 2, 
+      "gov": "chairman", 
+      "rel": "cop", 
+      "gov_idx": 3
     }, 
     {
-      "dep": "years", 
+      "dep": "chairman", 
+      "dep_idx": 3, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
+    }, 
+    {
+      "dep": "Elsevier", 
       "dep_idx": 5, 
-      "gov": "old", 
-      "rel": "dep", 
+      "gov": "N.V.", 
+      "rel": "nn", 
       "gov_idx": 6
     }, 
     {
-      "dep": "old", 
+      "dep": "N.V.", 
       "dep_idx": 6, 
-      "gov": "Vinken", 
-      "rel": "amod", 
-      "gov_idx": 2
-    }, 
-    {
-      "dep": "will", 
-      "dep_idx": 8, 
-      "gov": "join", 
-      "rel": "aux", 
-      "gov_idx": 9
-    }, 
-    {
-      "dep": "join", 
-      "dep_idx": 9, 
-      "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": 0
+      "gov": "chairman", 
+      "rel": "prep_of", 
+      "gov_idx": 3
     }, 
     {
       "dep": "the", 
-      "dep_idx": 10, 
-      "gov": "board", 
+      "dep_idx": 8, 
+      "gov": "group", 
       "rel": "det", 
       "gov_idx": 11
     }, 
     {
-      "dep": "board", 
-      "dep_idx": 11, 
-      "gov": "join", 
-      "rel": "dobj", 
-      "gov_idx": 9
+      "dep": "Dutch", 
+      "dep_idx": 9, 
+      "gov": "group", 
+      "rel": "nn", 
+      "gov_idx": 11
     }, 
     {
-      "dep": "a", 
-      "dep_idx": 13, 
-      "gov": "director", 
-      "rel": "det", 
-      "gov_idx": 15
-    }, 
-    {
-      "dep": "nonexecutive", 
-      "dep_idx": 14, 
-      "gov": "director", 
+      "dep": "publishing", 
+      "dep_idx": 10, 
+      "gov": "group", 
       "rel": "amod", 
-      "gov_idx": 15
+      "gov_idx": 11
     }, 
     {
-      "dep": "director", 
-      "dep_idx": 15, 
-      "gov": "join", 
-      "rel": "prep_as", 
-      "gov_idx": 9
-    }, 
-    {
-      "dep": "Nov.", 
-      "dep_idx": 16, 
-      "gov": "join", 
-      "rel": "tmod", 
-      "gov_idx": 9
-    }, 
-    {
-      "dep": "29", 
-      "dep_idx": 17, 
-      "gov": "Nov.", 
-      "rel": "num", 
-      "gov_idx": 16
+      "dep": "group", 
+      "dep_idx": 11, 
+      "gov": "N.V.", 
+      "rel": "appos", 
+      "gov_idx": 6
     }
   ], 
-  "text": "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .", 
-  "coref_chains": [], 
-  "bbn_ne": [
+  "text": "Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .", 
+  "coref_chains": [
     [
       0, 
       1, 
-      "Pierre Vinken", 
+      1, 
+      "Mr. Vinken", 
+      false
+    ], 
+    [
+      4, 
+      11, 
+      1, 
+      "chairman of Elsevier N.V. , Dutch publishing group", 
+      false
+    ]
+  ], 
+  "bbn_ne": [
+    [
+      1, 
+      1, 
+      "Vinken", 
       "PERSON", 
       "", 
       "", 
       false
     ], 
     [
-      14, 
-      14, 
-      "director", 
+      3, 
+      3, 
+      "chairman", 
       "PER_DESC", 
       "", 
+      "", 
+      false
+    ], 
+    [
+      5, 
+      6, 
+      "Elsevier N.V.", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "group", 
+      false
+    ], 
+    [
+      9, 
+      9, 
+      "Dutch", 
+      "NORP", 
+      "NATIONALITY", 
       "", 
       false
     ]
@@ -125,101 +130,139 @@
     [
       [
         [
-          "Pierre Vinken", 
+          "chairman of Elsevier N.V. , the Dutch publishing group", 
+          0, 
+          3, 
+          3, 
+          12
+        ], 
+        [
+          "Mr. Vinken", 
           0, 
           1, 
           0, 
           2
+        ]
+      ]
+    ], 
+    [
+      [
+        [
+          "Elsevier N.V.", 
+          0, 
+          6, 
+          5, 
+          7
         ], 
         [
-          "Pierre Vinken , 61 years old ,", 
+          "Elsevier N.V. , the Dutch publishing group", 
+          0, 
+          6, 
+          5, 
+          12
+        ]
+      ], 
+      [
+        [
+          "the Dutch publishing group", 
           0, 
           1, 
+          8, 
+          12
+        ], 
+        [
+          "Elsevier N.V. , the Dutch publishing group", 
           0, 
-          7
+          6, 
+          5, 
+          12
         ]
       ]
     ]
+  ], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "publish", 
+      "args": [
+        [
+          "rel", 
+          "10:0", 
+          10, 
+          10, 
+          "publishing"
+        ], 
+        [
+          "ARG0", 
+          "11:0", 
+          11, 
+          11, 
+          "group"
+        ]
+      ], 
+      "roleset": "publish.01"
+    }
   ], 
   "sentence_nr": 1, 
   "tuples": [
     [
       "nn", 
       "Vinken", 
-      "Pierre"
+      "Mr."
     ], 
     [
       "nsubj", 
-      "join", 
+      "chairman", 
       "Vinken"
     ], 
     [
-      "num", 
-      "years", 
-      "61"
-    ], 
-    [
-      "npadvmod", 
-      "old", 
-      "years"
-    ], 
-    [
-      "amod", 
-      "Vinken", 
-      "old"
-    ], 
-    [
-      "aux", 
-      "join", 
-      "will"
+      "cop", 
+      "chairman", 
+      "is"
     ], 
     [
       "root", 
       "ROOT", 
-      "join"
+      "chairman"
+    ], 
+    [
+      "nn", 
+      "N.V.", 
+      "Elsevier"
+    ], 
+    [
+      "prep_of", 
+      "chairman", 
+      "N.V."
     ], 
     [
       "det", 
-      "board", 
+      "group", 
       "the"
     ], 
     [
-      "dobj", 
-      "join", 
-      "board"
-    ], 
-    [
-      "det", 
-      "director", 
-      "a"
-    ], 
-    [
       "amod", 
-      "director", 
-      "nonexecutive"
+      "group", 
+      "Dutch"
     ], 
     [
-      "prep_as", 
-      "join", 
-      "director"
+      "nn", 
+      "group", 
+      "publishing"
     ], 
     [
-      "tmod", 
-      "join", 
-      "Nov."
-    ], 
-    [
-      "num", 
-      "Nov.", 
-      "29"
+      "appos", 
+      "N.V.", 
+      "group"
     ]
   ], 
   "words": [
     [
-      "Pierre", 
+      "Mr.", 
       {
         "NamedEntityTag": "PERSON", 
-        "Lemma": "Pierre", 
+        "Lemma": "Mr.", 
         "PartOfSpeech": "NNP"
       }
     ], 
@@ -232,64 +275,51 @@
       }
     ], 
     [
+      "is", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "be", 
+        "PartOfSpeech": "VBZ"
+      }
+    ], 
+    [
+      "chairman", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "chairman", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "of", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "Elsevier", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Elsevier", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "N.V.", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "N.V.", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
       ",", 
       {
         "NamedEntityTag": "O", 
         "Lemma": ",", 
         "PartOfSpeech": ","
-      }
-    ], 
-    [
-      "61", 
-      {
-        "NamedEntityTag": "DURATION", 
-        "NormalizedNamedEntityTag": "61.0", 
-        "Timex": "<TIMEX3 tid=\"t1\" value=\"P61Y\" type=\"DURATION\">61 years old</TIMEX3>", 
-        "PartOfSpeech": "CD", 
-        "Lemma": "61"
-      }
-    ], 
-    [
-      "years", 
-      {
-        "NamedEntityTag": "NUMBER", 
-        "NormalizedNamedEntityTag": "0.0", 
-        "Timex": "<TIMEX3 tid=\"t1\" value=\"P61Y\" type=\"DURATION\">61 years old</TIMEX3>", 
-        "PartOfSpeech": "NNS", 
-        "Lemma": "year"
-      }
-    ], 
-    [
-      "old", 
-      {
-        "NamedEntityTag": "DURATION", 
-        "Lemma": "old", 
-        "Timex": "<TIMEX3 tid=\"t1\" value=\"P61Y\" type=\"DURATION\">61 years old</TIMEX3>", 
-        "PartOfSpeech": "JJ"
-      }
-    ], 
-    [
-      ",", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": ",", 
-        "PartOfSpeech": ","
-      }
-    ], 
-    [
-      "will", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "will", 
-        "PartOfSpeech": "MD"
-      }
-    ], 
-    [
-      "join", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "join", 
-        "PartOfSpeech": "VB"
       }
     ], 
     [
@@ -301,63 +331,27 @@
       }
     ], 
     [
-      "board", 
+      "Dutch", 
       {
-        "NamedEntityTag": "O", 
-        "Lemma": "board", 
-        "PartOfSpeech": "NN"
-      }
-    ], 
-    [
-      "as", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "as", 
-        "PartOfSpeech": "IN"
-      }
-    ], 
-    [
-      "a", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "a", 
-        "PartOfSpeech": "DT"
-      }
-    ], 
-    [
-      "nonexecutive", 
-      {
-        "NamedEntityTag": "O", 
-        "Lemma": "nonexecutive", 
+        "NamedEntityTag": "MISC", 
+        "Lemma": "dutch", 
         "PartOfSpeech": "JJ"
       }
     ], 
     [
-      "director", 
+      "publishing", 
       {
         "NamedEntityTag": "O", 
-        "Lemma": "director", 
+        "Lemma": "publishing", 
         "PartOfSpeech": "NN"
       }
     ], 
     [
-      "Nov.", 
+      "group", 
       {
-        "NamedEntityTag": "DATE", 
-        "NormalizedNamedEntityTag": "XXXX-11-29", 
-        "Timex": "<TIMEX3 tid=\"t2\" value=\"XXXX-11-29\" type=\"DATE\">Nov. 29</TIMEX3>", 
-        "PartOfSpeech": "NNP", 
-        "Lemma": "Nov."
-      }
-    ], 
-    [
-      "29", 
-      {
-        "NamedEntityTag": "DATE", 
-        "NormalizedNamedEntityTag": "XXXX-11-29", 
-        "Timex": "<TIMEX3 tid=\"t2\" value=\"XXXX-11-29\" type=\"DATE\">Nov. 29</TIMEX3>", 
-        "PartOfSpeech": "CD", 
-        "Lemma": "29"
+        "NamedEntityTag": "O", 
+        "Lemma": "group", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
@@ -369,8 +363,8 @@
       }
     ]
   ], 
-  "treebank_sentence": "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .", 
-  "parsetree": "(ROOT (S (NP (NP (NNP Pierre) (NNP Vinken)) (, ,) (ADJP (NP (CD 61) (NNS years)) (JJ old)) (, ,)) (VP (MD will) (VP (VB join) (NP (DT the) (NN board)) (PP (IN as) (NP (DT a) (JJ nonexecutive) (NN director))) (NP-TMP (NNP Nov.) (CD 29)))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ (NP (NNP Pierre) (NNP Vinken)) (, ,) (ADJP (NML (CD 61) (NNS years)) (JJ old)) (, ,)) (VP (MD will) (VP (VB join) (NP (DT the) (NN board)) (PP-CLR (IN as) (NP (DT a) (JJ nonexecutive) (NN director))) (NP-TMP (NNP Nov.) (CD 29)))) (. .)))", 
+  "treebank_sentence": "Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .", 
+  "parsetree": "(ROOT (S (NP (NNP Mr.) (NNP Vinken)) (VP (VBZ is) (NP (NP (NN chairman)) (PP (IN of) (NP (NP (NNP Elsevier) (NNP N.V.)) (, ,) (NP (DT the) (JJ Dutch) (NN publishing) (NN group)))))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NNP Mr.) (NNP Vinken)) (VP (VBZ is) (NP-PRD (NP (NN chairman)) (PP (IN of) (NP (NP (NNP Elsevier) (NNP N.V.)) (, ,) (NP (DT the) (NNP Dutch) (VBG publishing) (NN group)))))) (. .)))", 
   "document_id": "nw/wsj/00/wsj_0001@all@wsj@nw@en@on"
 }
