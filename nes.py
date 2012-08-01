@@ -13,9 +13,9 @@ import pipeline
 from pipeline import choose_head, new_concept, parent_edges
 
 '''
-Example input, from wsj_0002.1:
+Example input, from wsj_0002.0:
 
-bbn_ne: { [
+"bbn_ne": { [
       0, 
       1, 
       "Rudolph Agnew", 
