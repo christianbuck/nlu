@@ -1,0 +1,202 @@
+{
+  "nom": [
+    {
+      "lemma": "yield", 
+      "frame": "01", 
+      "args": [
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "yield"
+        ], 
+        [
+          "Support", 
+          "2:0", 
+          2, 
+          2, 
+          "fell"
+        ], 
+        [
+          "ARG1", 
+          "3:1", 
+          3, 
+          5, 
+          "to 7.88 %"
+        ]
+      ], 
+      "tokenNr": "1"
+    }
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "yield", 
+      "rel": "det", 
+      "gov_idx": 1
+    }, 
+    {
+      "dep": "yield", 
+      "dep_idx": 1, 
+      "gov": "fell", 
+      "rel": "nsubj", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "fell", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
+    }, 
+    {
+      "dep": "7.88", 
+      "dep_idx": 4, 
+      "gov": "%", 
+      "rel": "num", 
+      "gov_idx": 5
+    }, 
+    {
+      "dep": "%", 
+      "dep_idx": 5, 
+      "gov": "fell", 
+      "rel": "prep_to", 
+      "gov_idx": 2
+    }
+  ], 
+  "text": "The yield fell to 7.88 % .", 
+  "coref_chains": [], 
+  "bbn_ne": [], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "fall", 
+      "args": [
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "fell"
+        ], 
+        [
+          "ARG1", 
+          "0:1", 
+          0, 
+          1, 
+          "The yield"
+        ], 
+        [
+          "ARG4", 
+          "3:1", 
+          3, 
+          5, 
+          "to 7.88 %"
+        ]
+      ], 
+      "roleset": "fall.01"
+    }
+  ], 
+  "sentence_nr": 17, 
+  "tuples": [
+    [
+      "det", 
+      "yield", 
+      "The"
+    ], 
+    [
+      "nsubj", 
+      "fell", 
+      "yield"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "fell"
+    ], 
+    [
+      "num", 
+      "%", 
+      "7.88"
+    ], 
+    [
+      "prep_to", 
+      "fell", 
+      "%"
+    ]
+  ], 
+  "words": [
+    [
+      "The", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT", 
+        "idx": 0
+      }
+    ], 
+    [
+      "yield", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "yield", 
+        "PartOfSpeech": "NN", 
+        "idx": 1
+      }
+    ], 
+    [
+      "fell", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "fall", 
+        "PartOfSpeech": "VBD", 
+        "idx": 2
+      }
+    ], 
+    [
+      "to", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "to", 
+        "PartOfSpeech": "TO", 
+        "idx": 3
+      }
+    ], 
+    [
+      "7.88", 
+      {
+        "NamedEntityTag": "PERCENT", 
+        "NormalizedNamedEntityTag": "%7.88", 
+        "PartOfSpeech": "CD", 
+        "idx": 4, 
+        "Lemma": "7.88"
+      }
+    ], 
+    [
+      "%", 
+      {
+        "NamedEntityTag": "PERCENT", 
+        "NormalizedNamedEntityTag": "%7.88", 
+        "PartOfSpeech": "NN", 
+        "idx": 5, 
+        "Lemma": "%"
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": ".", 
+        "idx": 6
+      }
+    ]
+  ], 
+  "treebank_sentence": "The yield fell to 7.88 % .", 
+  "parsetree": "(ROOT (S (NP (DT The) (NN yield)) (VP (VBD fell) (PP (TO to) (NP (CD 7.88) (NN %)))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (DT The) (NN yield)) (VP (VBD fell) (PP-DIR (IN to) (NP (CD 7.88) (NN %)))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

@@ -1,4 +1,5 @@
 from nltk.tree import ParentedTree
+import re
 
 class SpanTree(ParentedTree):
     """
@@ -6,6 +7,7 @@ class SpanTree(ParentedTree):
     This requires you to call 'convert' on the
     root node.
     """
+
 
     def convert(self): # todo: better name
         """
@@ -31,12 +33,39 @@ class SpanTree(ParentedTree):
                 return True
         return False
 
-    def span_from_pos(self, pos):
-        leaf_id, depth = map(int, pos.split(':'))
+    def subtree_from_pos(self, leaf_id, depth):
+        sub_tree = self[self.get_treepos(leaf_id, depth)]
+        return sub_tree
 
-        #print leaf_id, depth, role
-        sub_tree = self[self.leaf_treeposition(leaf_id)[:-(depth+1)]]
+    def parse_pos(self, pos):
+        try:
+            leaf_id, depth = map(int, pos.split(':'))
+            return leaf_id, depth
+        except:
+            return None, None
+
+    def get_treepos(self, leaf_id, depth):
+        return self.leaf_treeposition(leaf_id)[:-(depth+1)]
+
+    def find_trace(self, trace_id):
+        '''
+        looks for a subtree with a node value of *-trace_id
+        return position in tree
+        '''
+        for pos in self.treepositions():
+            if self[pos[:-1]].height() > 2:
+                m = re.search('-(?P<traceid>\d+)$', self[pos].node)
+                if m and int(m.groupdict()['traceid']) == trace_id:
+                    return pos
+        return None
+
+    def span_from_pos(self, leaf_id, depth):
+        # requires no conversion
         #print sub_tree.leaves()
-        span_words = sub_tree.leaves()
+        #leaf_id, depth
+        subtree = self.subtree_from_pos(leaf_id, depth)
+        #print 'node:', subtree.node
+        #print 'children:', subtree.leaves()
+        span_words = subtree.leaves()
         span = (leaf_id, leaf_id+len(span_words)-1)
         return span

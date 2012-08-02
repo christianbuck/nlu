@@ -1,0 +1,621 @@
+{
+  "nom": [
+    {
+      "lemma": "manager", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARGM-LOC", 
+          "6:0", 
+          6, 
+          6, 
+          "national"
+        ], 
+        [
+          "ARG1", 
+          "7:0", 
+          7, 
+          7, 
+          "purchasing"
+        ], 
+        [
+          "ARG0", 
+          "8:0", 
+          8, 
+          8, 
+          "managers"
+        ], 
+        [
+          "rel", 
+          "8:0", 
+          8, 
+          8, 
+          "managers"
+        ]
+      ], 
+      "tokenNr": "8"
+    }, 
+    {
+      "lemma": "report", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG0", 
+          "5:1", 
+          5, 
+          9, 
+          "a national purchasing managers '"
+        ], 
+        [
+          "rel", 
+          "10:0", 
+          10, 
+          10, 
+          "report"
+        ]
+      ], 
+      "tokenNr": "10"
+    }, 
+    {
+      "lemma": "sector", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG2", 
+          "13:1", 
+          13, 
+          15, 
+          "the nation 's"
+        ], 
+        [
+          "ARG1", 
+          "16:0", 
+          16, 
+          16, 
+          "manufacturing"
+        ], 
+        [
+          "rel", 
+          "17:0", 
+          17, 
+          17, 
+          "sector"
+        ]
+      ], 
+      "tokenNr": "17"
+    }
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "As", 
+      "dep_idx": 0, 
+      "gov": "expected", 
+      "rel": "mark", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "expected", 
+      "dep_idx": 2, 
+      "gov": "indicated", 
+      "rel": "advcl", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 5, 
+      "gov": "managers", 
+      "rel": "det", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "national", 
+      "dep_idx": 6, 
+      "gov": "managers", 
+      "rel": "amod", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "purchasing", 
+      "dep_idx": 7, 
+      "gov": "managers", 
+      "rel": "nn", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "managers", 
+      "dep_idx": 8, 
+      "gov": "report", 
+      "rel": "poss", 
+      "gov_idx": 10
+    }, 
+    {
+      "dep": "report", 
+      "dep_idx": 10, 
+      "gov": "indicated", 
+      "rel": "nsubj", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "indicated", 
+      "dep_idx": 11, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 13, 
+      "gov": "nation", 
+      "rel": "det", 
+      "gov_idx": 14
+    }, 
+    {
+      "dep": "nation", 
+      "dep_idx": 14, 
+      "gov": "sector", 
+      "rel": "poss", 
+      "gov_idx": 17
+    }, 
+    {
+      "dep": "manufacturing", 
+      "dep_idx": 16, 
+      "gov": "sector", 
+      "rel": "nn", 
+      "gov_idx": 17
+    }, 
+    {
+      "dep": "sector", 
+      "dep_idx": 17, 
+      "gov": "continues", 
+      "rel": "nsubj", 
+      "gov_idx": 18
+    }, 
+    {
+      "dep": "sector", 
+      "dep_idx": 17, 
+      "gov": "contract", 
+      "rel": "xsubj", 
+      "gov_idx": 21
+    }, 
+    {
+      "dep": "continues", 
+      "dep_idx": 18, 
+      "gov": "indicated", 
+      "rel": "ccomp", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 20, 
+      "gov": "contract", 
+      "rel": "aux", 
+      "gov_idx": 21
+    }, 
+    {
+      "dep": "contract", 
+      "dep_idx": 21, 
+      "gov": "continues", 
+      "rel": "xcomp", 
+      "gov_idx": 18
+    }, 
+    {
+      "dep": "modestly", 
+      "dep_idx": 22, 
+      "gov": "contract", 
+      "rel": "advmod", 
+      "gov_idx": 21
+    }
+  ], 
+  "text": "As expected , a national purchasing managers ' report indicated the nation 's manufacturing sector continues to contract modestly .", 
+  "coref_chains": [], 
+  "bbn_ne": [
+    [
+      8, 
+      8, 
+      "managers", 
+      "PER_DESC", 
+      "", 
+      "", 
+      false
+    ]
+  ], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "expect", 
+      "args": [
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "expected"
+        ], 
+        [
+          "ARG1", 
+          "1:0", 
+          1, 
+          1, 
+          "*PRO*"
+        ], 
+        [
+          "LINK-PCR", 
+          "1:1*1:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "roleset": "expect.01"
+    }, 
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "indicate", 
+      "args": [
+        [
+          "rel", 
+          "11:0", 
+          11, 
+          11, 
+          "indicated"
+        ], 
+        [
+          "ARGM-ADV", 
+          "0:1", 
+          0, 
+          3, 
+          "As *PRO* expected *-1"
+        ], 
+        [
+          "ARG0", 
+          "5:2", 
+          5, 
+          10, 
+          "a national purchasing managers ' report"
+        ], 
+        [
+          "ARG1", 
+          "12:1", 
+          12, 
+          22, 
+          "0 the nation 's manufacturing sector continues *-2 to contract modestly"
+        ]
+      ], 
+      "roleset": "indicate.01"
+    }, 
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "continue", 
+      "args": [
+        [
+          "rel", 
+          "18:0", 
+          18, 
+          18, 
+          "continues"
+        ], 
+        [
+          "ARG1", 
+          "19:2", 
+          19, 
+          22, 
+          "*-2 to contract modestly"
+        ]
+      ], 
+      "roleset": "continue.01"
+    }, 
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "contract", 
+      "args": [
+        [
+          "rel", 
+          "21:0", 
+          21, 
+          21, 
+          "contract"
+        ], 
+        [
+          "ARG1", 
+          "19:0", 
+          13, 
+          17, 
+          "the nation 's manufacturing sector"
+        ], 
+        [
+          "ARG2", 
+          "22:1", 
+          22, 
+          22, 
+          "modestly"
+        ], 
+        [
+          "LINK-PCR", 
+          "13:2*19:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "roleset": "contract.01"
+    }
+  ], 
+  "sentence_nr": 10, 
+  "tuples": [
+    [
+      "mark", 
+      "expected", 
+      "As"
+    ], 
+    [
+      "advcl", 
+      "continues", 
+      "expected"
+    ], 
+    [
+      "det", 
+      "purchasing", 
+      "a"
+    ], 
+    [
+      "amod", 
+      "purchasing", 
+      "national"
+    ], 
+    [
+      "nsubj", 
+      "continues", 
+      "purchasing"
+    ], 
+    [
+      "xsubj", 
+      "contract", 
+      "purchasing"
+    ], 
+    [
+      "poss", 
+      "report", 
+      "managers"
+    ], 
+    [
+      "nsubj", 
+      "indicated", 
+      "report"
+    ], 
+    [
+      "rcmod", 
+      "purchasing", 
+      "indicated"
+    ], 
+    [
+      "det", 
+      "nation", 
+      "the"
+    ], 
+    [
+      "poss", 
+      "sector", 
+      "nation"
+    ], 
+    [
+      "nn", 
+      "sector", 
+      "manufacturing"
+    ], 
+    [
+      "dobj", 
+      "indicated", 
+      "sector"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "continues"
+    ], 
+    [
+      "aux", 
+      "contract", 
+      "to"
+    ], 
+    [
+      "xcomp", 
+      "continues", 
+      "contract"
+    ], 
+    [
+      "advmod", 
+      "contract", 
+      "modestly"
+    ]
+  ], 
+  "words": [
+    [
+      "As", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "as", 
+        "PartOfSpeech": "IN", 
+        "idx": 0
+      }
+    ], 
+    [
+      "expected", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "expect", 
+        "PartOfSpeech": "VBN", 
+        "idx": 2
+      }
+    ], 
+    [
+      ",", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ",", 
+        "PartOfSpeech": ",", 
+        "idx": 4
+      }
+    ], 
+    [
+      "a", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "a", 
+        "PartOfSpeech": "DT", 
+        "idx": 5
+      }
+    ], 
+    [
+      "national", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "national", 
+        "PartOfSpeech": "JJ", 
+        "idx": 6
+      }
+    ], 
+    [
+      "purchasing", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "purchasing", 
+        "PartOfSpeech": "NN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "managers", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "manager", 
+        "PartOfSpeech": "NNS", 
+        "idx": 8
+      }
+    ], 
+    [
+      "'", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "'", 
+        "PartOfSpeech": "POS", 
+        "idx": 9
+      }
+    ], 
+    [
+      "report", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "report", 
+        "PartOfSpeech": "NN", 
+        "idx": 10
+      }
+    ], 
+    [
+      "indicated", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "indicate", 
+        "PartOfSpeech": "VBD", 
+        "idx": 11
+      }
+    ], 
+    [
+      "the", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT", 
+        "idx": 13
+      }
+    ], 
+    [
+      "nation", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "nation", 
+        "PartOfSpeech": "NN", 
+        "idx": 14
+      }
+    ], 
+    [
+      "'s", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "'s", 
+        "PartOfSpeech": "POS", 
+        "idx": 15
+      }
+    ], 
+    [
+      "manufacturing", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "manufacturing", 
+        "PartOfSpeech": "NN", 
+        "idx": 16
+      }
+    ], 
+    [
+      "sector", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "sector", 
+        "PartOfSpeech": "NN", 
+        "idx": 17
+      }
+    ], 
+    [
+      "continues", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "continue", 
+        "PartOfSpeech": "VBZ", 
+        "idx": 18
+      }
+    ], 
+    [
+      "to", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "to", 
+        "PartOfSpeech": "TO", 
+        "idx": 20
+      }
+    ], 
+    [
+      "contract", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "contract", 
+        "PartOfSpeech": "VB", 
+        "idx": 21
+      }
+    ], 
+    [
+      "modestly", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "modestly", 
+        "PartOfSpeech": "RB", 
+        "idx": 22
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": ".", 
+        "idx": 23
+      }
+    ]
+  ], 
+  "treebank_sentence": "As *PRO* expected *-1 , a national purchasing managers ' report indicated 0 the nation 's manufacturing sector continues *-2 to contract modestly .", 
+  "parsetree": "(ROOT (S (SBAR (IN As) (S (VP (VBN expected)))) (, ,) (NP (NP (DT a) (JJ national) (NN purchasing)) (SBAR (S (NP (NP (NNS managers) (POS ')) (NN report)) (VP (VBD indicated) (NP (NP (DT the) (NN nation) (POS 's)) (NN manufacturing) (NN sector)))))) (VP (VBZ continues) (S (VP (TO to) (VP (VB contract) (ADVP (RB modestly)))))) (. .)))", 
+  "goldparse": "(TOP (S (SBAR-ADV (IN As) (S (NP-SBJ-1 (-NONE- *PRO*)) (VP (VBN expected) (NP (-NONE- *-1))))) (, ,) (NP-SBJ (NP (DT a) (JJ national) (NN purchasing) (NNS managers) (POS ')) (NN report)) (VP (VBD indicated) (SBAR (-NONE- 0) (S (NP-SBJ-2 (NP (DT the) (NN nation) (POS 's)) (NN manufacturing) (NN sector)) (VP (VBZ continues) (S (NP-SBJ (-NONE- *-2)) (VP (TO to) (VP (VB contract) (ADVP-MNR (RB modestly))))))))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

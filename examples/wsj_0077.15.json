@@ -1,0 +1,140 @@
+{
+  "nom": [
+    {
+      "lemma": "price", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "0:0", 
+          0, 
+          0, 
+          "Bond"
+        ], 
+        [
+          "ARG2-REF", 
+          "1:0", 
+          1, 
+          1, 
+          "prices"
+        ], 
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "prices"
+        ]
+      ], 
+      "tokenNr": "1"
+    }
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "Bond", 
+      "dep_idx": 0, 
+      "gov": "prices", 
+      "rel": "nn", 
+      "gov_idx": 1
+    }, 
+    {
+      "dep": "prices", 
+      "dep_idx": 1, 
+      "gov": "were", 
+      "rel": "nsubj", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
+    }, 
+    {
+      "dep": "up", 
+      "dep_idx": 3, 
+      "gov": "were", 
+      "rel": "advmod", 
+      "gov_idx": 2
+    }
+  ], 
+  "text": "Bond prices were up .", 
+  "coref_chains": [], 
+  "bbn_ne": [], 
+  "prop": [], 
+  "sentence_nr": 15, 
+  "tuples": [
+    [
+      "nn", 
+      "prices", 
+      "Bond"
+    ], 
+    [
+      "nsubj", 
+      "were", 
+      "prices"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "were"
+    ], 
+    [
+      "advmod", 
+      "were", 
+      "up"
+    ]
+  ], 
+  "words": [
+    [
+      "Bond", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "bond", 
+        "PartOfSpeech": "NN", 
+        "idx": 0
+      }
+    ], 
+    [
+      "prices", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "price", 
+        "PartOfSpeech": "NNS", 
+        "idx": 1
+      }
+    ], 
+    [
+      "were", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "be", 
+        "PartOfSpeech": "VBD", 
+        "idx": 2
+      }
+    ], 
+    [
+      "up", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "up", 
+        "PartOfSpeech": "RB", 
+        "idx": 3
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": ".", 
+        "idx": 4
+      }
+    ]
+  ], 
+  "treebank_sentence": "Bond prices were up .", 
+  "parsetree": "(ROOT (S (NP (NN Bond) (NNS prices)) (VP (VBD were) (ADVP (RB up))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NN Bond) (NNS prices)) (VP (VBD were) (ADVP-PRD (RB up))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

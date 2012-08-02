@@ -1,0 +1,475 @@
+{
+  "nom": [], 
+  "stanford_dep": [
+    {
+      "dep": "late", 
+      "dep_idx": 1, 
+      "gov": "afternoon", 
+      "rel": "amod", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "afternoon", 
+      "dep_idx": 2, 
+      "gov": "trading", 
+      "rel": "nn", 
+      "gov_idx": 5
+    }, 
+    {
+      "dep": "New", 
+      "dep_idx": 3, 
+      "gov": "York", 
+      "rel": "nn", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "York", 
+      "dep_idx": 4, 
+      "gov": "trading", 
+      "rel": "nn", 
+      "gov_idx": 5
+    }, 
+    {
+      "dep": "trading", 
+      "dep_idx": 5, 
+      "gov": "was", 
+      "rel": "prep_in", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 6, 
+      "gov": "currency", 
+      "rel": "det", 
+      "gov_idx": 7
+    }, 
+    {
+      "dep": "currency", 
+      "dep_idx": 7, 
+      "gov": "was", 
+      "rel": "nsubj", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "was", 
+      "dep_idx": 8, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
+    }, 
+    {
+      "dep": "1.8500", 
+      "dep_idx": 10, 
+      "gov": "marks", 
+      "rel": "num", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "marks", 
+      "dep_idx": 11, 
+      "gov": "was", 
+      "rel": "prep_at", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "143.80", 
+      "dep_idx": 13, 
+      "gov": "yen", 
+      "rel": "num", 
+      "gov_idx": 14
+    }, 
+    {
+      "dep": "yen", 
+      "dep_idx": 14, 
+      "gov": "was", 
+      "rel": "prep_at", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "yen", 
+      "dep_idx": 14, 
+      "gov": "marks", 
+      "rel": "conj_and", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "with", 
+      "dep_idx": 16, 
+      "gov": "was", 
+      "rel": "prepc_compared_with", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "1.8415", 
+      "dep_idx": 17, 
+      "gov": "marks", 
+      "rel": "num", 
+      "gov_idx": 18
+    }, 
+    {
+      "dep": "marks", 
+      "dep_idx": 18, 
+      "gov": "was", 
+      "rel": "pobj", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "142.85", 
+      "dep_idx": 20, 
+      "gov": "yen", 
+      "rel": "num", 
+      "gov_idx": 21
+    }, 
+    {
+      "dep": "yen", 
+      "dep_idx": 21, 
+      "gov": "was", 
+      "rel": "pobj", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "yen", 
+      "dep_idx": 21, 
+      "gov": "marks", 
+      "rel": "conj_and", 
+      "gov_idx": 18
+    }
+  ], 
+  "text": "In late afternoon New York trading the currency was at 1.8500 marks and 143.80 yen compared with 1.8415 marks and 142.85 yen .", 
+  "coref_chains": [], 
+  "bbn_ne": [
+    [
+      3, 
+      4, 
+      "New York", 
+      "GPE", 
+      "CITY", 
+      "", 
+      false
+    ]
+  ], 
+  "prop": [], 
+  "sentence_nr": 19, 
+  "tuples": [
+    [
+      "amod", 
+      "trading", 
+      "late"
+    ], 
+    [
+      "nn", 
+      "trading", 
+      "afternoon"
+    ], 
+    [
+      "nn", 
+      "trading", 
+      "New"
+    ], 
+    [
+      "nn", 
+      "trading", 
+      "York"
+    ], 
+    [
+      "prep_in", 
+      "was", 
+      "trading"
+    ], 
+    [
+      "det", 
+      "currency", 
+      "the"
+    ], 
+    [
+      "nsubj", 
+      "was", 
+      "currency"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "was"
+    ], 
+    [
+      "num", 
+      "marks", 
+      "1.8500"
+    ], 
+    [
+      "prep_at", 
+      "was", 
+      "marks"
+    ], 
+    [
+      "num", 
+      "yen", 
+      "143.80"
+    ], 
+    [
+      "prep_at", 
+      "was", 
+      "yen"
+    ], 
+    [
+      "conj_and", 
+      "marks", 
+      "yen"
+    ], 
+    [
+      "prepc_compared_with", 
+      "was", 
+      "with"
+    ], 
+    [
+      "num", 
+      "marks", 
+      "1.8415"
+    ], 
+    [
+      "pobj", 
+      "was", 
+      "marks"
+    ], 
+    [
+      "num", 
+      "yen", 
+      "142.85"
+    ], 
+    [
+      "pobj", 
+      "was", 
+      "yen"
+    ], 
+    [
+      "conj_and", 
+      "marks", 
+      "yen"
+    ]
+  ], 
+  "words": [
+    [
+      "In", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "in", 
+        "PartOfSpeech": "IN", 
+        "idx": 0
+      }
+    ], 
+    [
+      "late", 
+      {
+        "NormalizedNamedEntityTag": "TAF", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"TAF\" type=\"TIME\" mod=\"LATE\">late afternoon</TIMEX3>", 
+        "idx": 1, 
+        "Lemma": "late", 
+        "PartOfSpeech": "JJ", 
+        "NamedEntityTag": "TIME"
+      }
+    ], 
+    [
+      "afternoon", 
+      {
+        "NormalizedNamedEntityTag": "TAF", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"TAF\" type=\"TIME\" mod=\"LATE\">late afternoon</TIMEX3>", 
+        "idx": 2, 
+        "Lemma": "afternoon", 
+        "PartOfSpeech": "NN", 
+        "NamedEntityTag": "TIME"
+      }
+    ], 
+    [
+      "New", 
+      {
+        "NamedEntityTag": "LOCATION", 
+        "Lemma": "New", 
+        "PartOfSpeech": "NNP", 
+        "idx": 3
+      }
+    ], 
+    [
+      "York", 
+      {
+        "NamedEntityTag": "LOCATION", 
+        "Lemma": "York", 
+        "PartOfSpeech": "NNP", 
+        "idx": 4
+      }
+    ], 
+    [
+      "trading", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "trading", 
+        "PartOfSpeech": "NN", 
+        "idx": 5
+      }
+    ], 
+    [
+      "the", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT", 
+        "idx": 6
+      }
+    ], 
+    [
+      "currency", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "currency", 
+        "PartOfSpeech": "NN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "was", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "be", 
+        "PartOfSpeech": "VBD", 
+        "idx": 8
+      }
+    ], 
+    [
+      "at", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "at", 
+        "PartOfSpeech": "IN", 
+        "idx": 9
+      }
+    ], 
+    [
+      "1.8500", 
+      {
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "$1.85", 
+        "PartOfSpeech": "CD", 
+        "idx": 10, 
+        "Lemma": "1.8500"
+      }
+    ], 
+    [
+      "marks", 
+      {
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "$1.85", 
+        "PartOfSpeech": "NNS", 
+        "idx": 11, 
+        "Lemma": "mark"
+      }
+    ], 
+    [
+      "and", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "and", 
+        "PartOfSpeech": "CC", 
+        "idx": 12
+      }
+    ], 
+    [
+      "143.80", 
+      {
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "\u00a5143.8", 
+        "PartOfSpeech": "CD", 
+        "idx": 13, 
+        "Lemma": "143.80"
+      }
+    ], 
+    [
+      "yen", 
+      {
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "\u00a5143.8", 
+        "PartOfSpeech": "NN", 
+        "idx": 14, 
+        "Lemma": "yen"
+      }
+    ], 
+    [
+      "compared", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "compare", 
+        "PartOfSpeech": "VBN", 
+        "idx": 15
+      }
+    ], 
+    [
+      "with", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "with", 
+        "PartOfSpeech": "IN", 
+        "idx": 16
+      }
+    ], 
+    [
+      "1.8415", 
+      {
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "$1.8415", 
+        "PartOfSpeech": "CD", 
+        "idx": 17, 
+        "Lemma": "1.8415"
+      }
+    ], 
+    [
+      "marks", 
+      {
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "$1.8415", 
+        "PartOfSpeech": "NNS", 
+        "idx": 18, 
+        "Lemma": "mark"
+      }
+    ], 
+    [
+      "and", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "and", 
+        "PartOfSpeech": "CC", 
+        "idx": 19
+      }
+    ], 
+    [
+      "142.85", 
+      {
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "\u00a5142.85", 
+        "PartOfSpeech": "CD", 
+        "idx": 20, 
+        "Lemma": "142.85"
+      }
+    ], 
+    [
+      "yen", 
+      {
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "\u00a5142.85", 
+        "PartOfSpeech": "NNS", 
+        "idx": 21, 
+        "Lemma": "yen"
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": ".", 
+        "idx": 22
+      }
+    ]
+  ], 
+  "treebank_sentence": "In late afternoon New York trading the currency was at 1.8500 marks and 143.80 yen compared with 1.8415 marks and 142.85 yen .", 
+  "parsetree": "(ROOT (S (PP (IN In) (NP (JJ late) (NN afternoon) (NNP New) (NNP York) (NN trading))) (NP (DT the) (NN currency)) (VP (VBD was) (PP (IN at) (NP (NP (CD 1.8500) (NNS marks)) (CC and) (NP (CD 143.80) (NN yen)))) (PP (VBN compared) (PP (IN with) (NP (NP (CD 1.8415) (NNS marks)) (CC and) (NP (CD 142.85) (NNS yen)))))) (. .)))", 
+  "goldparse": "(TOP (S (PP-LOC (IN In) (NP (NML (JJ late) (NN afternoon)) (NML (NNP New) (NNP York)) (NN trading))) (NP-SBJ (DT the) (NN currency)) (VP (VBD was) (PP-PRD (IN at) (NP (NP (CD 1.8500) (NNS marks)) (CC and) (NP (CD 143.80) (NN yen)))) (PP (VBN compared) (PP (IN with) (NP (NP (CD 1.8415) (NNS marks)) (CC and) (NP (CD 142.85) (NN yen)))))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

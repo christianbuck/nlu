@@ -1,0 +1,535 @@
+{
+  "nom": [
+    {
+      "lemma": "bond", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARGM-TMP", 
+          "0:0", 
+          0, 
+          0, 
+          "Long"
+        ], 
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "-"
+        ]
+      ], 
+      "tokenNr": "1"
+    }, 
+    {
+      "lemma": "debt", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG2", 
+          "12:0", 
+          12, 
+          12, 
+          "supply"
+        ], 
+        [
+          "rel", 
+          "13:0", 
+          13, 
+          13, 
+          "of"
+        ]
+      ], 
+      "tokenNr": "13"
+    }, 
+    {
+      "lemma": "price", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARGM-TMP", 
+          "0:0", 
+          0, 
+          0, 
+          "Long"
+        ], 
+        [
+          "ARG1", 
+          "1:0", 
+          1, 
+          1, 
+          "-"
+        ], 
+        [
+          "ARG2-REF", 
+          "2:0", 
+          2, 
+          2, 
+          "term"
+        ], 
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "term"
+        ]
+      ], 
+      "tokenNr": "2"
+    }, 
+    {
+      "lemma": "prospect", 
+      "frame": "01", 
+      "args": [
+        [
+          "rel", 
+          "5:0", 
+          5, 
+          5, 
+          "rose"
+        ], 
+        [
+          "ARG1", 
+          "6:1", 
+          6, 
+          17, 
+          "despite prospects of a huge new supply of Treasury debt this month"
+        ]
+      ], 
+      "tokenNr": "5"
+    }, 
+    {
+      "lemma": "supply", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG3", 
+          "8:0", 
+          8, 
+          8, 
+          "of"
+        ], 
+        [
+          "ARGM-TMP", 
+          "9:0", 
+          9, 
+          9, 
+          "a"
+        ], 
+        [
+          "rel", 
+          "10:0", 
+          10, 
+          10, 
+          "huge"
+        ], 
+        [
+          "ARG1", 
+          "11:1", 
+          9, 
+          12, 
+          "a huge new supply"
+        ]
+      ], 
+      "tokenNr": "10"
+    }
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "Long", 
+      "dep_idx": 0, 
+      "gov": "term", 
+      "rel": "amod", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "term", 
+      "dep_idx": 2, 
+      "gov": "prices", 
+      "rel": "nn", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "bond", 
+      "dep_idx": 3, 
+      "gov": "prices", 
+      "rel": "nn", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "prices", 
+      "dep_idx": 4, 
+      "gov": "rose", 
+      "rel": "nsubj", 
+      "gov_idx": 5
+    }, 
+    {
+      "dep": "rose", 
+      "dep_idx": 5, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
+    }, 
+    {
+      "dep": "prospects", 
+      "dep_idx": 7, 
+      "gov": "rose", 
+      "rel": "prep_despite", 
+      "gov_idx": 5
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 9, 
+      "gov": "supply", 
+      "rel": "det", 
+      "gov_idx": 12
+    }, 
+    {
+      "dep": "huge", 
+      "dep_idx": 10, 
+      "gov": "supply", 
+      "rel": "amod", 
+      "gov_idx": 12
+    }, 
+    {
+      "dep": "new", 
+      "dep_idx": 11, 
+      "gov": "supply", 
+      "rel": "amod", 
+      "gov_idx": 12
+    }, 
+    {
+      "dep": "supply", 
+      "dep_idx": 12, 
+      "gov": "prospects", 
+      "rel": "prep_of", 
+      "gov_idx": 7
+    }, 
+    {
+      "dep": "Treasury", 
+      "dep_idx": 14, 
+      "gov": "debt", 
+      "rel": "nn", 
+      "gov_idx": 15
+    }, 
+    {
+      "dep": "debt", 
+      "dep_idx": 15, 
+      "gov": "supply", 
+      "rel": "prep_of", 
+      "gov_idx": 12
+    }, 
+    {
+      "dep": "this", 
+      "dep_idx": 16, 
+      "gov": "month", 
+      "rel": "det", 
+      "gov_idx": 17
+    }, 
+    {
+      "dep": "month", 
+      "dep_idx": 17, 
+      "gov": "supply", 
+      "rel": "tmod", 
+      "gov_idx": 12
+    }
+  ], 
+  "text": "Long - term bond prices rose despite prospects of a huge new supply of Treasury debt this month .", 
+  "coref_chains": [], 
+  "bbn_ne": [
+    [
+      14, 
+      14, 
+      "Treasury", 
+      "ORGANIZATION", 
+      "GOVERNMENT", 
+      "", 
+      false
+    ]
+  ], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "rise", 
+      "args": [
+        [
+          "rel", 
+          "5:0", 
+          5, 
+          5, 
+          "rose"
+        ], 
+        [
+          "ARG1", 
+          "0:2", 
+          0, 
+          4, 
+          "Long - term bond prices"
+        ], 
+        [
+          "ARGM-ADV", 
+          "6:1", 
+          6, 
+          17, 
+          "despite prospects of a huge new supply of Treasury debt this month"
+        ]
+      ], 
+      "roleset": "rise.01"
+    }
+  ], 
+  "sentence_nr": 4, 
+  "tuples": [
+    [
+      "dep", 
+      "rose", 
+      "Long"
+    ], 
+    [
+      "nn", 
+      "prices", 
+      "term"
+    ], 
+    [
+      "nn", 
+      "prices", 
+      "bond"
+    ], 
+    [
+      "nsubj", 
+      "rose", 
+      "prices"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "rose"
+    ], 
+    [
+      "prep_despite", 
+      "rose", 
+      "prospects"
+    ], 
+    [
+      "det", 
+      "supply", 
+      "a"
+    ], 
+    [
+      "amod", 
+      "supply", 
+      "huge"
+    ], 
+    [
+      "amod", 
+      "supply", 
+      "new"
+    ], 
+    [
+      "prep_of", 
+      "prospects", 
+      "supply"
+    ], 
+    [
+      "nn", 
+      "debt", 
+      "Treasury"
+    ], 
+    [
+      "prep_of", 
+      "supply", 
+      "debt"
+    ], 
+    [
+      "det", 
+      "month", 
+      "this"
+    ], 
+    [
+      "tmod", 
+      "rose", 
+      "month"
+    ]
+  ], 
+  "words": [
+    [
+      "Long", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "long", 
+        "PartOfSpeech": "JJ", 
+        "idx": 0
+      }
+    ], 
+    [
+      "-", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "-", 
+        "PartOfSpeech": ":", 
+        "idx": 1
+      }
+    ], 
+    [
+      "term", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "term", 
+        "PartOfSpeech": "NN", 
+        "idx": 2
+      }
+    ], 
+    [
+      "bond", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "bond", 
+        "PartOfSpeech": "NN", 
+        "idx": 3
+      }
+    ], 
+    [
+      "prices", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "price", 
+        "PartOfSpeech": "NNS", 
+        "idx": 4
+      }
+    ], 
+    [
+      "rose", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "rise", 
+        "PartOfSpeech": "VBD", 
+        "idx": 5
+      }
+    ], 
+    [
+      "despite", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "despite", 
+        "PartOfSpeech": "IN", 
+        "idx": 6
+      }
+    ], 
+    [
+      "prospects", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "prospects", 
+        "PartOfSpeech": "NNS", 
+        "idx": 7
+      }
+    ], 
+    [
+      "of", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "of", 
+        "PartOfSpeech": "IN", 
+        "idx": 8
+      }
+    ], 
+    [
+      "a", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "a", 
+        "PartOfSpeech": "DT", 
+        "idx": 9
+      }
+    ], 
+    [
+      "huge", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "huge", 
+        "PartOfSpeech": "JJ", 
+        "idx": 10
+      }
+    ], 
+    [
+      "new", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "new", 
+        "PartOfSpeech": "JJ", 
+        "idx": 11
+      }
+    ], 
+    [
+      "supply", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "supply", 
+        "PartOfSpeech": "NN", 
+        "idx": 12
+      }
+    ], 
+    [
+      "of", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "of", 
+        "PartOfSpeech": "IN", 
+        "idx": 13
+      }
+    ], 
+    [
+      "Treasury", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Treasury", 
+        "PartOfSpeech": "NNP", 
+        "idx": 14
+      }
+    ], 
+    [
+      "debt", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "debt", 
+        "PartOfSpeech": "NN", 
+        "idx": 15
+      }
+    ], 
+    [
+      "this", 
+      {
+        "NormalizedNamedEntityTag": "THIS", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1M\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">this month</TIMEX3>", 
+        "idx": 16, 
+        "Lemma": "this", 
+        "PartOfSpeech": "DT", 
+        "NamedEntityTag": "DATE"
+      }
+    ], 
+    [
+      "month", 
+      {
+        "NormalizedNamedEntityTag": "THIS", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1M\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">this month</TIMEX3>", 
+        "idx": 17, 
+        "Lemma": "month", 
+        "PartOfSpeech": "NN", 
+        "NamedEntityTag": "DATE"
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": ".", 
+        "idx": 18
+      }
+    ]
+  ], 
+  "treebank_sentence": "Long - term bond prices rose despite prospects of a huge new supply of Treasury debt this month .", 
+  "parsetree": "(ROOT (X (NP (JJ Long)) (: -) (S (NP (NN term) (NN bond) (NNS prices)) (VP (VBD rose) (PP (IN despite) (NP (NP (NNS prospects)) (PP (IN of) (NP (NP (DT a) (JJ huge) (JJ new) (NN supply)) (PP (IN of) (NP (NNP Treasury) (NN debt))))))) (NP-TMP (DT this) (NN month)))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NML (JJ Long) (HYPH -) (NN term)) (NN bond) (NNS prices)) (VP (VBD rose) (PP (IN despite) (NP (NP (NNS prospects)) (PP (IN of) (NP (NP (DT a) (JJ huge) (JJ new) (NN supply)) (PP (IN of) (NP (NNP Treasury) (NN debt))) (NP-TMP (DT this) (NN month))))))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

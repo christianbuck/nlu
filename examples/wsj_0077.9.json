@@ -1,0 +1,284 @@
+{
+  "nom": [
+    {
+      "lemma": "effect", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          1, 
+          "Economic news"
+        ], 
+        [
+          "Support", 
+          "2:0", 
+          2, 
+          2, 
+          "had"
+        ], 
+        [
+          "ARGM-EXT", 
+          "3:0", 
+          3, 
+          3, 
+          "little"
+        ], 
+        [
+          "ARG1-REF", 
+          "4:0", 
+          4, 
+          4, 
+          "effect"
+        ], 
+        [
+          "rel", 
+          "4:0", 
+          4, 
+          4, 
+          "effect"
+        ], 
+        [
+          "ARG2", 
+          "5:1", 
+          5, 
+          7, 
+          "on financial markets"
+        ]
+      ], 
+      "tokenNr": "4"
+    }, 
+    {
+      "lemma": "news", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "0:0", 
+          0, 
+          0, 
+          "Economic"
+        ], 
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "news"
+        ]
+      ], 
+      "tokenNr": "1"
+    }
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "Economic", 
+      "dep_idx": 0, 
+      "gov": "news", 
+      "rel": "amod", 
+      "gov_idx": 1
+    }, 
+    {
+      "dep": "news", 
+      "dep_idx": 1, 
+      "gov": "had", 
+      "rel": "nsubj", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "had", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
+    }, 
+    {
+      "dep": "little", 
+      "dep_idx": 3, 
+      "gov": "effect", 
+      "rel": "amod", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "effect", 
+      "dep_idx": 4, 
+      "gov": "had", 
+      "rel": "dobj", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "financial", 
+      "dep_idx": 6, 
+      "gov": "markets", 
+      "rel": "amod", 
+      "gov_idx": 7
+    }, 
+    {
+      "dep": "markets", 
+      "dep_idx": 7, 
+      "gov": "effect", 
+      "rel": "prep_on", 
+      "gov_idx": 4
+    }
+  ], 
+  "text": "Economic news had little effect on financial markets .", 
+  "coref_chains": [], 
+  "bbn_ne": [], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "have", 
+      "args": [
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "had"
+        ], 
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          1, 
+          "Economic news"
+        ], 
+        [
+          "ARG1", 
+          "3:2", 
+          3, 
+          7, 
+          "little effect on financial markets"
+        ]
+      ], 
+      "roleset": "have.03"
+    }
+  ], 
+  "sentence_nr": 9, 
+  "tuples": [
+    [
+      "amod", 
+      "news", 
+      "Economic"
+    ], 
+    [
+      "nsubj", 
+      "had", 
+      "news"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "had"
+    ], 
+    [
+      "amod", 
+      "effect", 
+      "little"
+    ], 
+    [
+      "dobj", 
+      "had", 
+      "effect"
+    ], 
+    [
+      "amod", 
+      "markets", 
+      "financial"
+    ], 
+    [
+      "prep_on", 
+      "effect", 
+      "markets"
+    ]
+  ], 
+  "words": [
+    [
+      "Economic", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "economic", 
+        "PartOfSpeech": "JJ", 
+        "idx": 0
+      }
+    ], 
+    [
+      "news", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "news", 
+        "PartOfSpeech": "NN", 
+        "idx": 1
+      }
+    ], 
+    [
+      "had", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "have", 
+        "PartOfSpeech": "VBD", 
+        "idx": 2
+      }
+    ], 
+    [
+      "little", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "little", 
+        "PartOfSpeech": "JJ", 
+        "idx": 3
+      }
+    ], 
+    [
+      "effect", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "effect", 
+        "PartOfSpeech": "NN", 
+        "idx": 4
+      }
+    ], 
+    [
+      "on", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "on", 
+        "PartOfSpeech": "IN", 
+        "idx": 5
+      }
+    ], 
+    [
+      "financial", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "financial", 
+        "PartOfSpeech": "JJ", 
+        "idx": 6
+      }
+    ], 
+    [
+      "markets", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "market", 
+        "PartOfSpeech": "NNS", 
+        "idx": 7
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": ".", 
+        "idx": 8
+      }
+    ]
+  ], 
+  "treebank_sentence": "Economic news had little effect on financial markets .", 
+  "parsetree": "(ROOT (S (NP (JJ Economic) (NN news)) (VP (VBD had) (NP (NP (JJ little) (NN effect)) (PP (IN on) (NP (JJ financial) (NNS markets))))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (JJ Economic) (NN news)) (VP (VBD had) (NP (NP (JJ little) (NN effect)) (PP (IN on) (NP (JJ financial) (NNS markets))))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

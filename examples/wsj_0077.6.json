@@ -1,0 +1,776 @@
+{
+  "nom": [
+    {
+      "lemma": "bid", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG0", 
+          "18:1", 
+          18, 
+          21, 
+          "Georgia - Pacific 's"
+        ], 
+        [
+          "ARG2", 
+          "20:2", 
+          18, 
+          26, 
+          "Georgia - Pacific 's $ 3.18 billion *U* bid"
+        ], 
+        [
+          "rel", 
+          "24:0", 
+          24, 
+          24, 
+          "billion"
+        ], 
+        [
+          "ARG1", 
+          "25:1", 
+          22, 
+          25, 
+          "$ 3.18 billion *U*"
+        ]
+      ], 
+      "tokenNr": "24"
+    }, 
+    {
+      "lemma": "enthusiasm", 
+      "frame": "01", 
+      "args": [
+        [
+          "rel", 
+          "6:0", 
+          6, 
+          6, 
+          "enthusiasm"
+        ], 
+        [
+          "ARG1", 
+          "7:0*12:1", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "ARG0", 
+          "9:1", 
+          9, 
+          9, 
+          "investors"
+        ], 
+        [
+          "Support", 
+          "10:0", 
+          10, 
+          10, 
+          "showed"
+        ]
+      ], 
+      "tokenNr": "6"
+    }, 
+    {
+      "lemma": "wake", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "9:1,10:0,11:0,12:1", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "rel", 
+          "16:0", 
+          16, 
+          16, 
+          "wake"
+        ], 
+        [
+          "ARG2", 
+          "17:1", 
+          17, 
+          30, 
+          "of Georgia - Pacific 's $ 3.18 billion *U* bid for Great Northern Nekoosa"
+        ]
+      ], 
+      "tokenNr": "16"
+    }
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "Analysts", 
+      "dep_idx": 0, 
+      "gov": "disappointed", 
+      "rel": "nsubjpass", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 1, 
+      "gov": "disappointed", 
+      "rel": "auxpass", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "disappointed", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 4, 
+      "gov": "evaporated", 
+      "rel": "complm", 
+      "gov_idx": 31
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 5, 
+      "gov": "enthusiasm", 
+      "rel": "det", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "enthusiasm", 
+      "dep_idx": 6, 
+      "gov": "showed", 
+      "rel": "dobj", 
+      "gov_idx": 10
+    }, 
+    {
+      "dep": "enthusiasm", 
+      "dep_idx": 6, 
+      "gov": "evaporated", 
+      "rel": "nsubj", 
+      "gov_idx": 31
+    }, 
+    {
+      "dep": "investors", 
+      "dep_idx": 9, 
+      "gov": "showed", 
+      "rel": "nsubj", 
+      "gov_idx": 10
+    }, 
+    {
+      "dep": "showed", 
+      "dep_idx": 10, 
+      "gov": "enthusiasm", 
+      "rel": "rcmod", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "stocks", 
+      "dep_idx": 13, 
+      "gov": "showed", 
+      "rel": "prep_for", 
+      "gov_idx": 10
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 15, 
+      "gov": "wake", 
+      "rel": "det", 
+      "gov_idx": 16
+    }, 
+    {
+      "dep": "wake", 
+      "dep_idx": 16, 
+      "gov": "showed", 
+      "rel": "prep_in", 
+      "gov_idx": 10
+    }, 
+    {
+      "dep": "Georgia", 
+      "dep_idx": 18, 
+      "gov": "Pacific", 
+      "rel": "nn", 
+      "gov_idx": 20
+    }, 
+    {
+      "dep": "Pacific", 
+      "dep_idx": 20, 
+      "gov": "bid", 
+      "rel": "poss", 
+      "gov_idx": 26
+    }, 
+    {
+      "dep": "$", 
+      "dep_idx": 22, 
+      "gov": "bid", 
+      "rel": "nn", 
+      "gov_idx": 26
+    }, 
+    {
+      "dep": "3.18", 
+      "dep_idx": 23, 
+      "gov": "$", 
+      "rel": "number", 
+      "gov_idx": 22
+    }, 
+    {
+      "dep": "billion", 
+      "dep_idx": 24, 
+      "gov": "$", 
+      "rel": "number", 
+      "gov_idx": 22
+    }, 
+    {
+      "dep": "bid", 
+      "dep_idx": 26, 
+      "gov": "wake", 
+      "rel": "prep_of", 
+      "gov_idx": 16
+    }, 
+    {
+      "dep": "Great", 
+      "dep_idx": 28, 
+      "gov": "Nekoosa", 
+      "rel": "amod", 
+      "gov_idx": 30
+    }, 
+    {
+      "dep": "Northern", 
+      "dep_idx": 29, 
+      "gov": "Nekoosa", 
+      "rel": "nn", 
+      "gov_idx": 30
+    }, 
+    {
+      "dep": "Nekoosa", 
+      "dep_idx": 30, 
+      "gov": "bid", 
+      "rel": "prep_for", 
+      "gov_idx": 26
+    }, 
+    {
+      "dep": "evaporated", 
+      "dep_idx": 31, 
+      "gov": "disappointed", 
+      "rel": "ccomp", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "so", 
+      "dep_idx": 32, 
+      "gov": "quickly", 
+      "rel": "advmod", 
+      "gov_idx": 33
+    }, 
+    {
+      "dep": "quickly", 
+      "dep_idx": 33, 
+      "gov": "evaporated", 
+      "rel": "advmod", 
+      "gov_idx": 31
+    }
+  ], 
+  "text": "Analysts were disappointed that the enthusiasm investors showed for stocks in the wake of Georgia - Pacific 's $ 3.18 billion bid for Great Northern Nekoosa evaporated so quickly .", 
+  "coref_chains": [], 
+  "bbn_ne": [
+    [
+      0, 
+      0, 
+      "Analysts", 
+      "PER_DESC", 
+      "", 
+      "", 
+      false
+    ], 
+    [
+      9, 
+      9, 
+      "investors", 
+      "PER_DESC", 
+      "", 
+      "", 
+      false
+    ], 
+    [
+      18, 
+      20, 
+      "Georgia - Pacific", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "", 
+      false
+    ], 
+    [
+      28, 
+      30, 
+      "Great Northern Nekoosa", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "", 
+      false
+    ]
+  ], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "disappoint", 
+      "args": [
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "disappointed"
+        ], 
+        [
+          "ARG1", 
+          "3:0", 
+          0, 
+          0, 
+          "Analysts"
+        ], 
+        [
+          "ARG0", 
+          "4:1;12:1", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "LINK-PCR", 
+          "0:1*3:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "roleset": "disappoint.01"
+    }, 
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "evaporate", 
+      "args": [
+        [
+          "rel", 
+          "31:0", 
+          31, 
+          31, 
+          "evaporated"
+        ], 
+        [
+          "ARG1", 
+          "5:3;12:1", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "ARGM-TMP", 
+          "32:1", 
+          32, 
+          33, 
+          "so quickly"
+        ]
+      ], 
+      "roleset": "evaporate.01"
+    }
+  ], 
+  "sentence_nr": 6, 
+  "tuples": [
+    [
+      "nsubjpass", 
+      "disappointed", 
+      "Analysts"
+    ], 
+    [
+      "auxpass", 
+      "disappointed", 
+      "were"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "disappointed"
+    ], 
+    [
+      "complm", 
+      "showed", 
+      "that"
+    ], 
+    [
+      "det", 
+      "investors", 
+      "the"
+    ], 
+    [
+      "nn", 
+      "investors", 
+      "enthusiasm"
+    ], 
+    [
+      "nsubj", 
+      "showed", 
+      "investors"
+    ], 
+    [
+      "ccomp", 
+      "disappointed", 
+      "showed"
+    ], 
+    [
+      "prep_for", 
+      "showed", 
+      "stocks"
+    ], 
+    [
+      "det", 
+      "wake", 
+      "the"
+    ], 
+    [
+      "prep_in", 
+      "showed", 
+      "wake"
+    ], 
+    [
+      "prep_of", 
+      "wake", 
+      "Georgia"
+    ], 
+    [
+      "poss", 
+      "bid", 
+      "Pacific"
+    ], 
+    [
+      "num", 
+      "bid", 
+      "$"
+    ], 
+    [
+      "number", 
+      "$", 
+      "3.18"
+    ], 
+    [
+      "number", 
+      "$", 
+      "billion"
+    ], 
+    [
+      "nsubj", 
+      "evaporated", 
+      "bid"
+    ], 
+    [
+      "nn", 
+      "Nekoosa", 
+      "Great"
+    ], 
+    [
+      "nn", 
+      "Nekoosa", 
+      "Northern"
+    ], 
+    [
+      "prep_for", 
+      "bid", 
+      "Nekoosa"
+    ], 
+    [
+      "parataxis", 
+      "disappointed", 
+      "evaporated"
+    ], 
+    [
+      "advmod", 
+      "quickly", 
+      "so"
+    ], 
+    [
+      "advmod", 
+      "evaporated", 
+      "quickly"
+    ]
+  ], 
+  "words": [
+    [
+      "Analysts", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "analyst", 
+        "PartOfSpeech": "NNS", 
+        "idx": 0
+      }
+    ], 
+    [
+      "were", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "be", 
+        "PartOfSpeech": "VBD", 
+        "idx": 1
+      }
+    ], 
+    [
+      "disappointed", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "disappoint", 
+        "PartOfSpeech": "VBN", 
+        "idx": 2
+      }
+    ], 
+    [
+      "that", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "that", 
+        "PartOfSpeech": "IN", 
+        "idx": 4
+      }
+    ], 
+    [
+      "the", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT", 
+        "idx": 5
+      }
+    ], 
+    [
+      "enthusiasm", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "enthusiasm", 
+        "PartOfSpeech": "NN", 
+        "idx": 6
+      }
+    ], 
+    [
+      "investors", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "investor", 
+        "PartOfSpeech": "NNS", 
+        "idx": 9
+      }
+    ], 
+    [
+      "showed", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "show", 
+        "PartOfSpeech": "VBD", 
+        "idx": 10
+      }
+    ], 
+    [
+      "for", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "for", 
+        "PartOfSpeech": "IN", 
+        "idx": 12
+      }
+    ], 
+    [
+      "stocks", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "stock", 
+        "PartOfSpeech": "NNS", 
+        "idx": 13
+      }
+    ], 
+    [
+      "in", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "in", 
+        "PartOfSpeech": "IN", 
+        "idx": 14
+      }
+    ], 
+    [
+      "the", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT", 
+        "idx": 15
+      }
+    ], 
+    [
+      "wake", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "wake", 
+        "PartOfSpeech": "NN", 
+        "idx": 16
+      }
+    ], 
+    [
+      "of", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "of", 
+        "PartOfSpeech": "IN", 
+        "idx": 17
+      }
+    ], 
+    [
+      "Georgia", 
+      {
+        "NamedEntityTag": "LOCATION", 
+        "Lemma": "Georgia", 
+        "PartOfSpeech": "NNP", 
+        "idx": 18
+      }
+    ], 
+    [
+      "-", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "-", 
+        "PartOfSpeech": ":", 
+        "idx": 19
+      }
+    ], 
+    [
+      "Pacific", 
+      {
+        "NamedEntityTag": "LOCATION", 
+        "Lemma": "Pacific", 
+        "PartOfSpeech": "NNP", 
+        "idx": 20
+      }
+    ], 
+    [
+      "'s", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "'s", 
+        "PartOfSpeech": "POS", 
+        "idx": 21
+      }
+    ], 
+    [
+      "$", 
+      {
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "$3.18E9", 
+        "PartOfSpeech": "$", 
+        "idx": 22, 
+        "Lemma": "$"
+      }
+    ], 
+    [
+      "3.18", 
+      {
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "$3.18E9", 
+        "PartOfSpeech": "CD", 
+        "idx": 23, 
+        "Lemma": "3.18"
+      }
+    ], 
+    [
+      "billion", 
+      {
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "$3.18E9", 
+        "PartOfSpeech": "CD", 
+        "idx": 24, 
+        "Lemma": "billion"
+      }
+    ], 
+    [
+      "bid", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "bid", 
+        "PartOfSpeech": "NN", 
+        "idx": 26
+      }
+    ], 
+    [
+      "for", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "for", 
+        "PartOfSpeech": "IN", 
+        "idx": 27
+      }
+    ], 
+    [
+      "Great", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Great", 
+        "PartOfSpeech": "NNP", 
+        "idx": 28
+      }
+    ], 
+    [
+      "Northern", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Northern", 
+        "PartOfSpeech": "NNP", 
+        "idx": 29
+      }
+    ], 
+    [
+      "Nekoosa", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Nekoosa", 
+        "PartOfSpeech": "NNP", 
+        "idx": 30
+      }
+    ], 
+    [
+      "evaporated", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "evaporate", 
+        "PartOfSpeech": "VBD", 
+        "idx": 31
+      }
+    ], 
+    [
+      "so", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "so", 
+        "PartOfSpeech": "RB", 
+        "idx": 32
+      }
+    ], 
+    [
+      "quickly", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "quickly", 
+        "PartOfSpeech": "RB", 
+        "idx": 33
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": ".", 
+        "idx": 34
+      }
+    ]
+  ], 
+  "treebank_sentence": "Analysts were disappointed *-112 that the enthusiasm *ICH*-2 0 investors showed *T*-1 for stocks in the wake of Georgia - Pacific 's $ 3.18 billion *U* bid for Great Northern Nekoosa evaporated so quickly .", 
+  "parsetree": "(ROOT (S (S (NP (NNS Analysts)) (VP (VBD were) (VP (VBN disappointed) (SBAR (IN that) (S (NP (DT the) (NN enthusiasm) (NNS investors)) (VP (VBD showed) (PP (IN for) (NP (NNS stocks))) (PP (IN in) (NP (NP (DT the) (NN wake)) (PP (IN of) (NP (NNP Georgia))))))))))) (: -) (S (NP (NP (NP (NNP Pacific) (POS 's)) (ADJP (QP ($ $) (CD 3.18) (CD billion))) (NN bid)) (PP (IN for) (NP (NNP Great) (NNP Northern) (NNP Nekoosa)))) (VP (VBD evaporated) (ADVP (RB so) (RB quickly)))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ-112 (NNS Analysts)) (VP (VBD were) (VP (VBN disappointed) (NP (-NONE- *-112)) (SBAR (IN that) (S (NP-SBJ (NP (NP (DT the) (NN enthusiasm)) (PP (-NONE- *ICH*-2))) (SBAR (WHNP-1 (-NONE- 0)) (S (NP-SBJ (NNS investors)) (VP (VBD showed) (NP (-NONE- *T*-1)) (PP-2 (IN for) (NP (NNS stocks))) (PP-LOC (IN in) (NP (NP (DT the) (NN wake)) (PP (IN of) (NP (NP (NP (NNP Georgia) (HYPH -) (NNP Pacific) (POS 's)) (NML (QP ($ $) (CD 3.18) (CD billion)) (-NONE- *U*)) (NN bid)) (PP (IN for) (NP (JJ Great) (NNP Northern) (NNP Nekoosa))))))))))) (VP (VBD evaporated) (ADVP-TMP (RB so) (RB quickly))))))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

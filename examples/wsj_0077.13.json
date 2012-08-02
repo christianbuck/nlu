@@ -1,0 +1,228 @@
+{
+  "nom": [
+    {
+      "lemma": "price", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "0:0", 
+          0, 
+          0, 
+          "Stock"
+        ], 
+        [
+          "ARG2-REF", 
+          "1:0", 
+          1, 
+          1, 
+          "prices"
+        ], 
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "prices"
+        ]
+      ], 
+      "tokenNr": "1"
+    }
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "Stock", 
+      "dep_idx": 0, 
+      "gov": "prices", 
+      "rel": "nn", 
+      "gov_idx": 1
+    }, 
+    {
+      "dep": "prices", 
+      "dep_idx": 1, 
+      "gov": "rose", 
+      "rel": "nsubj", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "rose", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
+    }, 
+    {
+      "dep": "fractionally", 
+      "dep_idx": 3, 
+      "gov": "rose", 
+      "rel": "advmod", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "moderate", 
+      "dep_idx": 5, 
+      "gov": "rose", 
+      "rel": "prep_in", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "trading", 
+      "dep_idx": 6, 
+      "gov": "moderate", 
+      "rel": "amod", 
+      "gov_idx": 5
+    }
+  ], 
+  "text": "Stock prices rose fractionally in moderate trading .", 
+  "coref_chains": [], 
+  "bbn_ne": [], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "rise", 
+      "args": [
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "rose"
+        ], 
+        [
+          "ARG1", 
+          "0:1", 
+          0, 
+          1, 
+          "Stock prices"
+        ], 
+        [
+          "ARG2", 
+          "3:1", 
+          3, 
+          3, 
+          "fractionally"
+        ], 
+        [
+          "ARGM-LOC", 
+          "4:1", 
+          4, 
+          6, 
+          "in moderate trading"
+        ]
+      ], 
+      "roleset": "rise.01"
+    }
+  ], 
+  "sentence_nr": 13, 
+  "tuples": [
+    [
+      "nn", 
+      "prices", 
+      "Stock"
+    ], 
+    [
+      "nsubj", 
+      "rose", 
+      "prices"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "rose"
+    ], 
+    [
+      "advmod", 
+      "rose", 
+      "fractionally"
+    ], 
+    [
+      "amod", 
+      "trading", 
+      "moderate"
+    ], 
+    [
+      "prep_in", 
+      "rose", 
+      "trading"
+    ]
+  ], 
+  "words": [
+    [
+      "Stock", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "stock", 
+        "PartOfSpeech": "NN", 
+        "idx": 0
+      }
+    ], 
+    [
+      "prices", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "price", 
+        "PartOfSpeech": "NNS", 
+        "idx": 1
+      }
+    ], 
+    [
+      "rose", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "rise", 
+        "PartOfSpeech": "VBD", 
+        "idx": 2
+      }
+    ], 
+    [
+      "fractionally", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "fractionally", 
+        "PartOfSpeech": "RB", 
+        "idx": 3
+      }
+    ], 
+    [
+      "in", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "in", 
+        "PartOfSpeech": "IN", 
+        "idx": 4
+      }
+    ], 
+    [
+      "moderate", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "moderate", 
+        "PartOfSpeech": "JJ", 
+        "idx": 5
+      }
+    ], 
+    [
+      "trading", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "trading", 
+        "PartOfSpeech": "NN", 
+        "idx": 6
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": ".", 
+        "idx": 7
+      }
+    ]
+  ], 
+  "treebank_sentence": "Stock prices rose fractionally in moderate trading .", 
+  "parsetree": "(ROOT (S (NP (NN Stock) (NNS prices)) (VP (VBD rose) (ADVP (RB fractionally)) (PP (IN in) (NP (JJ moderate) (NN trading)))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NN Stock) (NNS prices)) (VP (VBD rose) (ADVP-MNR (RB fractionally)) (PP-LOC (IN in) (NP (JJ moderate) (VBG trading)))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

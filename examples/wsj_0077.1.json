@@ -1,0 +1,254 @@
+{
+  "nom": [
+    {
+      "lemma": "price", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG1", 
+          "0:0", 
+          0, 
+          0, 
+          "Bond"
+        ], 
+        [
+          "ARG2-REF", 
+          "1:0", 
+          1, 
+          1, 
+          "prices"
+        ], 
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "prices"
+        ]
+      ], 
+      "tokenNr": "1"
+    }
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "Bond", 
+      "dep_idx": 0, 
+      "gov": "prices", 
+      "rel": "nn", 
+      "gov_idx": 1
+    }, 
+    {
+      "dep": "prices", 
+      "dep_idx": 1, 
+      "gov": "gained", 
+      "rel": "nsubj", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 3, 
+      "gov": "dollar", 
+      "rel": "det", 
+      "gov_idx": 4
+    }, 
+    {
+      "dep": "dollar", 
+      "dep_idx": 4, 
+      "gov": "prices", 
+      "rel": "conj_and", 
+      "gov_idx": 1
+    }, 
+    {
+      "dep": "dollar", 
+      "dep_idx": 4, 
+      "gov": "gained", 
+      "rel": "nsubj", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "both", 
+      "dep_idx": 5, 
+      "gov": "gained", 
+      "rel": "dep", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "gained", 
+      "dep_idx": 6, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
+    }, 
+    {
+      "dep": "modestly", 
+      "dep_idx": 7, 
+      "gov": "gained", 
+      "rel": "advmod", 
+      "gov_idx": 6
+    }
+  ], 
+  "text": "Bond prices and the dollar both gained modestly .", 
+  "coref_chains": [], 
+  "bbn_ne": [], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "gain", 
+      "args": [
+        [
+          "rel", 
+          "6:0", 
+          6, 
+          6, 
+          "gained"
+        ], 
+        [
+          "ARG1", 
+          "0:2", 
+          0, 
+          4, 
+          "Bond prices and the dollar"
+        ], 
+        [
+          "ARG2", 
+          "7:1", 
+          7, 
+          7, 
+          "modestly"
+        ]
+      ], 
+      "roleset": "gain.01"
+    }
+  ], 
+  "sentence_nr": 1, 
+  "tuples": [
+    [
+      "nn", 
+      "prices", 
+      "Bond"
+    ], 
+    [
+      "nsubj", 
+      "gained", 
+      "prices"
+    ], 
+    [
+      "det", 
+      "dollar", 
+      "the"
+    ], 
+    [
+      "conj_and", 
+      "prices", 
+      "dollar"
+    ], 
+    [
+      "nsubj", 
+      "gained", 
+      "dollar"
+    ], 
+    [
+      "advmod", 
+      "gained", 
+      "both"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "gained"
+    ], 
+    [
+      "advmod", 
+      "gained", 
+      "modestly"
+    ]
+  ], 
+  "words": [
+    [
+      "Bond", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "bond", 
+        "PartOfSpeech": "NN", 
+        "idx": 0
+      }
+    ], 
+    [
+      "prices", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "price", 
+        "PartOfSpeech": "NNS", 
+        "idx": 1
+      }
+    ], 
+    [
+      "and", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "and", 
+        "PartOfSpeech": "CC", 
+        "idx": 2
+      }
+    ], 
+    [
+      "the", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT", 
+        "idx": 3
+      }
+    ], 
+    [
+      "dollar", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "dollar", 
+        "PartOfSpeech": "NN", 
+        "idx": 4
+      }
+    ], 
+    [
+      "both", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "both", 
+        "PartOfSpeech": "CC", 
+        "idx": 5
+      }
+    ], 
+    [
+      "gained", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "gain", 
+        "PartOfSpeech": "VBD", 
+        "idx": 6
+      }
+    ], 
+    [
+      "modestly", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "modestly", 
+        "PartOfSpeech": "RB", 
+        "idx": 7
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": ".", 
+        "idx": 8
+      }
+    ]
+  ], 
+  "treebank_sentence": "Bond prices and the dollar both gained modestly .", 
+  "parsetree": "(ROOT (S (NP (NP (NN Bond) (NNS prices)) (CC and) (NP (DT the) (NN dollar))) (ADVP (CC both)) (VP (VBD gained) (ADVP (RB modestly))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NP (NN Bond) (NNS prices)) (CC and) (NP (DT the) (NN dollar))) (DT both) (VP (VBD gained) (ADVP-MNR (RB modestly))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}

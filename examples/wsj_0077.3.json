@@ -1,0 +1,469 @@
+{
+  "nom": [], 
+  "stanford_dep": [
+    {
+      "dep": "But", 
+      "dep_idx": 0, 
+      "gov": "ahead", 
+      "rel": "cc", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "advancing", 
+      "dep_idx": 1, 
+      "gov": "issues", 
+      "rel": "amod", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "issues", 
+      "dep_idx": 2, 
+      "gov": "ahead", 
+      "rel": "nsubj", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 4, 
+      "gov": "Exchange", 
+      "rel": "det", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "New", 
+      "dep_idx": 5, 
+      "gov": "York", 
+      "rel": "nn", 
+      "gov_idx": 6
+    }, 
+    {
+      "dep": "York", 
+      "dep_idx": 6, 
+      "gov": "Exchange", 
+      "rel": "nn", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "Stock", 
+      "dep_idx": 7, 
+      "gov": "Exchange", 
+      "rel": "nn", 
+      "gov_idx": 8
+    }, 
+    {
+      "dep": "Exchange", 
+      "dep_idx": 8, 
+      "gov": "issues", 
+      "rel": "prep_on", 
+      "gov_idx": 2
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 9, 
+      "gov": "ahead", 
+      "rel": "cop", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "tidily", 
+      "dep_idx": 10, 
+      "gov": "ahead", 
+      "rel": "advmod", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "ahead", 
+      "dep_idx": 11, 
+      "gov": "ROOT", 
+      "rel": "root", 
+      "gov_idx": -1
+    }, 
+    {
+      "dep": "declining", 
+      "dep_idx": 13, 
+      "gov": "stocks", 
+      "rel": "amod", 
+      "gov_idx": 14
+    }, 
+    {
+      "dep": "stocks", 
+      "dep_idx": 14, 
+      "gov": "ahead", 
+      "rel": "prep_of", 
+      "gov_idx": 11
+    }, 
+    {
+      "dep": "847", 
+      "dep_idx": 16, 
+      "gov": "644", 
+      "rel": "dep", 
+      "gov_idx": 18
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 17, 
+      "gov": "644", 
+      "rel": "dep", 
+      "gov_idx": 18
+    }, 
+    {
+      "dep": "644", 
+      "dep_idx": 18, 
+      "gov": "ahead", 
+      "rel": "advmod", 
+      "gov_idx": 11
+    }
+  ], 
+  "bbn_ne": [
+    [
+      5, 
+      8, 
+      "New York Stock Exchange", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "", 
+      false
+    ]
+  ], 
+  "coref_chains": [], 
+  "coref": [
+    [
+      [
+        [
+          "declining stocks", 
+          0, 
+          4, 
+          13, 
+          15
+        ], 
+        [
+          "declining stocks , 847 to 644", 
+          0, 
+          4, 
+          13, 
+          19
+        ]
+      ]
+    ]
+  ], 
+  "prop": [
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "advance", 
+      "args": [
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "advancing"
+        ], 
+        [
+          "ARG1", 
+          "2:0", 
+          2, 
+          2, 
+          "issues"
+        ], 
+        [
+          "ARGM-LOC", 
+          "3:1", 
+          3, 
+          8, 
+          "on the New York Stock Exchange"
+        ]
+      ], 
+      "roleset": "advance.01"
+    }, 
+    {
+      "inflection": "-----", 
+      "basepos": "v", 
+      "baseform": "decline", 
+      "args": [
+        [
+          "rel", 
+          "13:0", 
+          13, 
+          13, 
+          "declining"
+        ], 
+        [
+          "ARG1", 
+          "14:0", 
+          14, 
+          14, 
+          "stocks"
+        ]
+      ], 
+      "roleset": "decline.01"
+    }
+  ], 
+  "sentence_nr": 3, 
+  "tuples": [
+    [
+      "cc", 
+      "were", 
+      "But"
+    ], 
+    [
+      "amod", 
+      "issues", 
+      "advancing"
+    ], 
+    [
+      "nsubj", 
+      "were", 
+      "issues"
+    ], 
+    [
+      "det", 
+      "Exchange", 
+      "the"
+    ], 
+    [
+      "nn", 
+      "Exchange", 
+      "New"
+    ], 
+    [
+      "nn", 
+      "Exchange", 
+      "York"
+    ], 
+    [
+      "nn", 
+      "Exchange", 
+      "Stock"
+    ], 
+    [
+      "prep_on", 
+      "issues", 
+      "Exchange"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "were"
+    ], 
+    [
+      "advmod", 
+      "were", 
+      "tidily"
+    ], 
+    [
+      "amod", 
+      "stocks", 
+      "declining"
+    ], 
+    [
+      "prep_ahead_of", 
+      "were", 
+      "stocks"
+    ], 
+    [
+      "num", 
+      "644", 
+      "847"
+    ], 
+    [
+      "dep", 
+      "644", 
+      "to"
+    ], 
+    [
+      "appos", 
+      "stocks", 
+      "644"
+    ]
+  ], 
+  "text": "But advancing issues on the New York Stock Exchange were tidily ahead of declining stocks , 847 to 644 .", 
+  "words": [
+    [
+      "But", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "but", 
+        "PartOfSpeech": "CC", 
+        "idx": 0
+      }
+    ], 
+    [
+      "advancing", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "advance", 
+        "PartOfSpeech": "VBG", 
+        "idx": 1
+      }
+    ], 
+    [
+      "issues", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "issue", 
+        "PartOfSpeech": "NNS", 
+        "idx": 2
+      }
+    ], 
+    [
+      "on", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "on", 
+        "PartOfSpeech": "IN", 
+        "idx": 3
+      }
+    ], 
+    [
+      "the", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT", 
+        "idx": 4
+      }
+    ], 
+    [
+      "New", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "New", 
+        "PartOfSpeech": "NNP", 
+        "idx": 5
+      }
+    ], 
+    [
+      "York", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "York", 
+        "PartOfSpeech": "NNP", 
+        "idx": 6
+      }
+    ], 
+    [
+      "Stock", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Stock", 
+        "PartOfSpeech": "NNP", 
+        "idx": 7
+      }
+    ], 
+    [
+      "Exchange", 
+      {
+        "NamedEntityTag": "ORGANIZATION", 
+        "Lemma": "Exchange", 
+        "PartOfSpeech": "NNP", 
+        "idx": 8
+      }
+    ], 
+    [
+      "were", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "be", 
+        "PartOfSpeech": "VBD", 
+        "idx": 9
+      }
+    ], 
+    [
+      "tidily", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "tidily", 
+        "PartOfSpeech": "RB", 
+        "idx": 10
+      }
+    ], 
+    [
+      "ahead", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "ahead", 
+        "PartOfSpeech": "RB", 
+        "idx": 11
+      }
+    ], 
+    [
+      "of", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "of", 
+        "PartOfSpeech": "IN", 
+        "idx": 12
+      }
+    ], 
+    [
+      "declining", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "decline", 
+        "PartOfSpeech": "VBG", 
+        "idx": 13
+      }
+    ], 
+    [
+      "stocks", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "stock", 
+        "PartOfSpeech": "NNS", 
+        "idx": 14
+      }
+    ], 
+    [
+      ",", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ",", 
+        "PartOfSpeech": ",", 
+        "idx": 15
+      }
+    ], 
+    [
+      "847", 
+      {
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "847.0", 
+        "PartOfSpeech": "CD", 
+        "idx": 16, 
+        "Lemma": "847"
+      }
+    ], 
+    [
+      "to", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "to", 
+        "PartOfSpeech": "TO", 
+        "idx": 17
+      }
+    ], 
+    [
+      "644", 
+      {
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "644.0", 
+        "PartOfSpeech": "CD", 
+        "idx": 18, 
+        "Lemma": "644"
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": ".", 
+        "idx": 19
+      }
+    ]
+  ], 
+  "treebank_sentence": "But advancing issues on the New York Stock Exchange were tidily ahead of declining stocks , 847 to 644 .", 
+  "parsetree": "(ROOT (S (CC But) (NP (NP (VBG advancing) (NNS issues)) (PP (IN on) (NP (DT the) (NNP New) (NNP York) (NNP Stock) (NNP Exchange)))) (VP (VBD were) (ADVP (RB tidily)) (ADVP (RB ahead) (PP (IN of) (NP (NP (VBG declining) (NNS stocks)) (, ,) (NP (CD 847) (TO to) (CD 644)))))) (. .)))", 
+  "goldparse": "(TOP (S (CC But) (NP-SBJ (NP (VBG advancing) (NNS issues)) (PP-LOC (IN on) (NP (DT the) (NML (NNP New) (NNP York)) (NNP Stock) (NNP Exchange)))) (VP (VBD were) (ADJP-PRD (ADVP (RB tidily)) (RB ahead) (PP (IN of) (NP (VBG declining) (NNS stocks))) (, ,) (ADVP (CD 847) (TO to) (CD 644)))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+}
