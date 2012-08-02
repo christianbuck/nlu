@@ -11,10 +11,6 @@ from alignment import Alignment
 def main(sentenceId):
     # load dependency parse from sentence file
     ww, wTags, depParse = loadDepParse(sentenceId)
-    del ww
-    del wTags
-    # TODO: ww and wTags are bad right now, because they don't account for empty element tokens
-    # use depParse instead.
     
     # pipeline steps
     import nes, vprop, nprop, adjsAndAdverbs
@@ -51,7 +47,11 @@ def main(sentenceId):
     # TODO: output
 
 def token2concept(t):
-    return re.sub(r'[^A-Za-z0-9-]', '', t).lower() or '??'
+    t = t.replace('$', '-DOLLAR-')
+    res =  re.sub(r'[^A-Za-z0-9-]', '', t).lower() or '??'
+    if res=='??':
+        assert False, t
+    return res
 
 
 def loadBBN(sentenceId):
@@ -73,18 +73,23 @@ def loadDepParse(sentenceId):
     jsonFile = 'examples/'+sentenceId+'.json'
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         sentJ = json.load(jsonF)
-        deps_concise = sentJ['stanford_dep']
+        deps_concise = sentJ["stanford_dep"]
         deps = []
         for entry in deps_concise:
-            while len(deps)<entry['dep_idx']:
+            while len(deps)<entry["dep_idx"]:
                 deps.append(None)   # dependency root, puncutation, or function word incorporated into a dependecy relation
-            if entry['dep_idx']==len(deps):
+            if entry["dep_idx"]==len(deps):
                 deps.append([])
-            if entry['gov_idx']==-1:    # root
-                entry['gov_idx'] = None
+            if entry["gov_idx"]==-1:    # root
+                entry["gov_idx"] = None
             deps[-1].append(entry)  # can be multiple entries for a token, because tokens can have multiple heads
-        ww, wTags, = zip(*sentJ['words'])
-        return ww, wTags, deps
+        tokens = sentJ["treebank_sentence"].split() # includes traces
+        ww = [None]*len(tokens)
+        wTags = [None]*len(tokens)
+        for itm in sentJ["words"]:
+            ww[itm[1]["idx"]] = itm[0]
+            wTags[itm[1]["idx"]] = itm[1]
+        return ww, wTags, deps  # ww and wTags have None for tokens which are empty elements
 
 def parents(depParseEntry):
     return [dep['dep_idx'] for dep in depParseEntry] if depParseEntry else []
