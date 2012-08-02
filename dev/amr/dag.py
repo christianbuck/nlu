@@ -46,6 +46,8 @@ class memoize(object):
            return value
     def __get__(self, obj, objtype):
         '''Support instance methods.'''
+        if not type(obj) is Dag:
+            return functools.partial(self.func, obj)
         return functools.partial(self.__call__, obj)
 
 def flatten(ll):
@@ -77,19 +79,22 @@ def ast_to_dag(ast):
                     childnode = child[0]                                           
                     if type(childnode) is str and childnode.startswith("@"):
                         childnode = childnode.replace("@","")
-                        dag.external_nodes.append(childnode)                               
-                    dag[node].append(role, childnode)
+                        dag.external_nodes.append(childnode)
+                    tuple_child = (childnode,)
+                    dag[node].append(role, tuple_child)
                     x = dag[childnode]
                     rec_step(child)
 
-                elif type(child) == list: #Hyperedge
+                elif type(child) == list: #Hyperedge 
                     childnode = set()
                     for c in child: 
                         if type(c) == tuple and len(c) == 3:
-                            if type(child) is str and c[0].startswith("@"):
-                                c[0] = c[0].replace("@","")
-                                dag.external_nodes.append(c[0])                               
-                            childnode.add(c[0])
+                            if type(c[0]) is str and c[0].startswith("@"):
+                                new_c = c[0].replace("@","")
+                                dag.external_nodes.append(new_c)                               
+                            else: 
+                                new_c = c[0]
+                            childnode.add(new_c)
                             rec_step(c)
                         else:
                             if type(c) is str and c.startswith("@"):
@@ -103,10 +108,12 @@ def ast_to_dag(ast):
                 else: # Just assume this node is some special symbol
                     if type(child) is str and child.startswith("@"):
                         child = child.replace("@","")
-                        dag.external_nodes.append(child)
-                        dag[node].append(role, child)
+                        tuple_child = (child,)
+                        dag.external_nodes.append(tuple_child)
+                        dag[node].append(role, tuple_child)
                     else:
-                        dag[node].append(role, child)
+                        dag[node].append(role, (child,))
+                    x = dag[child]
 
     root = ast[0]
     if type(root) == tuple and len(root) == 3: 
@@ -212,7 +219,7 @@ class Dag(defaultdict):
         try:
             ast = _parser_singleton.parseString(s)
         except pyparsing.ParseException, e:
-            sys.stderr.write("Could not parse DAG: %s" % amr_string)
+            sys.stderr.write("Could not parse DAG: %s" % s)
             raise e 
         return ast_to_dag(ast)
 
@@ -222,38 +229,50 @@ class Dag(defaultdict):
         Initialize a new DAG from a list of (parent, relation, child) triples.
         Optionally pass a list of root nodes (if empty, roots will be determined
         automatically).
+
+        >>> y = Dag.from_triples([('3', u'ARG1', ('5',)), ('2', u'ARG1', ('4',)), ('2', 'location', ('0',)), ('0', 'name', ('1',)), ('1', 'op4', (u'"Exchange"',)), ('1', 'op1', (u'"New"',)), ('1', 'op2', (u'"York"',)), ('1', 'op3', (u'"Stock"',))])               
+        >>> x = Dag.from_triples(y.triples() + [('4', 'mod', '2')]) #doctest:+ELLIPSIS
+        Traceback (most recent call last):
+                ...
+        ValueError: (4, mod, ('2',)) would produce a cycle with (2, ARG1, ('4',))
         """
         dag = Dag() # Make new DAG
 
         for parent, relation, child in triples: 
-            new_par = parent.replace("@","")       
-            if parent.startswith("@"):
-                dag.external_nodes.append(new_par)
+            if isinstance(parent, basestring):
+                new_par = parent.replace("@","")       
+                if parent.startswith("@"):
+                    dag.external_nodes.append(new_par)
+            else:
+                new_par = parent
 
             if type(child) is tuple: 
                 new_child = []
                 for c in child: 
-                    new_c = c.replace("@","")
-                    if c.startswith("@"):
-                        dag.external_nodes.append(new_c)
-                    new_child = list(new_child)
+                    if isinstance(c, basestring):
+                        new_c = c.replace("@","")
+                        if c.startswith("@"):
+                            dag.external_nodes.append(new_c)
                     new_child.append(new_c)
                     new_child = tuple(new_child)
             else: # Allow triples to have single string children for convenience. 
                   # and downward compatibility.
-                tmpchild = child.replace("@","")
-                if child.startswith("@"):
-                    dag.external_nodes.append(tmpchild)
-                new_child = (tmpchild,)
-
+                if isinstance(child, basestring):
+                    tmpchild = child.replace("@","")
+                    if child.startswith("@"):
+                        dag.external_nodes.append(tmpchild)
+                    new_child = (tmpchild,)
+                else:
+                    new_child = (child,)
+            
             dag._add_triple(new_par, relation, new_child)
         
         # Allow the passed root to be either an iterable of roots or a single root
         if roots: 
             try:  # Try to interpret roots as iterable
-                dag.roots.update(roots)
+                dag.roots.extend(roots)
             except TypeError: # If this fails just use the whole object as root
-                dag.roots = set([roots])
+                dag.roots = list([roots])
         else: 
             dag.roots = dag.find_roots()        
         return dag
@@ -275,7 +294,7 @@ class Dag(defaultdict):
             if type(node) is tuple: # Hyperedge case
                 allnodes = []    
                 for n in node: 
-                    leaf = self[n] != False
+                    leaf = False if self[n] else True
                     if n in tabu:
                         extracted = extractor(n, False, leaf)
                     else: 
@@ -363,6 +382,8 @@ class Dag(defaultdict):
         node_to_id = self._get_node_hashes()
         return sum(node_to_id[node] for node in node_to_id)
 
+    def __eq__(self, other):
+        return hash(self) == hash(other)
     
     ### Methods that provide information about this DAG in different formats.###
     def get_nodes(self):
@@ -400,9 +421,10 @@ class Dag(defaultdict):
                 tabu.add(node)
                 for rel, child in self[node].items():
                     triples.append((node, rel, child)) 
-                    if type(child) is tuple:
-                        for c in child: 
-                            queue.append(c)
+                    if type(child) is tuple:                            
+                        for c in child:
+                            if not c in tabu:
+                                queue.append(c)
                     else:
                         if not child in tabu: 
                             queue.append(child)
@@ -554,12 +576,14 @@ class Dag(defaultdict):
         """
         Add a (parent, relation, child) triple to the DAG. 
         """
+        if type(child) is not tuple:
+            child = (child,)
+        for c in child: 
+            x = self[c]
+            for rel, test in self[c].items():
+                if parent in test: 
+                    raise ValueError,"(%s, %s, %s) would produce a cycle with (%s, %s, %s)" % (parent, relation, child, c, rel, test)
         self[parent].append(relation, child)    
-        if type(child) is tuple:
-            for c in child: 
-                x = self[c]
-        else:
-            x = self[child]
     
     def _replace_triple(self, parent1, relation1, child1, parent2, relation2, child2):
         """
@@ -665,17 +689,48 @@ class Dag(defaultdict):
 
         return new_amr
 
-    def collapse_fragment(self, dag, label = None):
+    def find_external_nodes(self, dag):
+        """
+        Find the external nodes of the fragment dag in this Dag.
+        """
+        # All nodes in the fragment that have an edge which is not itself in the fragment
+        dagroots = dag.roots if dag.roots else dag.find_roots()
+
+        return [l for l in dag if self[l] and not l in dagroots and  \
+                             (False in [dag.has_edge(*e) for e in self.in_edges(l)] or \
+                             False in [dag.has_edge(*e) for e in self.out_edges(l)])]
+
+
+    def collapse_fragment(self, dag, label = None, unary = False):
         """
         Remove all edges in a collection and connect their boundary node with a single hyperedge.
+
+        >>> d1 =  Dag.from_string("(A :foo (B :blubb (D :fee E) :back C) :bar C)")
+        >>> d2 = Dag.from_string("(A :foo (B :blubb D))")
+        >>> d1.find_external_nodes(d2)
+        ['B', 'D']
+        >>> d_gold = Dag.from_string("(A :bar C :new (B :back C), (D :fee E))")
+        >>> d1.collapse_fragment(d2, "new") == d_gold
+        True
         """
 
         dagroots = dag.find_roots() if not dag.roots else dag.roots
-        dagleaves = tuple(dag.find_leaves())
-        
+
+        if dag.external_nodes: # Can use specified external nodes
+            external = tuple(dag.external_nodes)
+        else:
+            external = tuple(self.find_external_nodes(dag))
+      
+        if not unary:
+            # prevent unary edges
+            if not external:
+                external = (dag.find_leaves()[0],)
+
         res_dag = self.remove_fragment(dag)
+
         for r in dagroots: 
-            res_dag._add_triple(r, label, dagleaves)
+            res_dag._add_triple(r, label, external)
+       
         res_dag.roots = self.roots
         return res_dag
     
@@ -828,14 +883,25 @@ class Dag(defaultdict):
     #
     #    return " ".join(self.dfs(extractor, combiner, hedgecombiner))
 
-if __name__ == "__main__":
 
-    dag = Dag.from_string("""(j / join-01
-      :ARG0 (p / person :name (p2 / name :op1 "Pierre" :op2 "Vinken")
-            :age (t / temporal-quantity :quant 61
-                  :unit (y / year)))
-      :ARG1 (b / board)
-      :prep-as (d2 / director
-            :mod (e / executive :polarity -))
-      :time (d / date-entity :month 11 :day 29))""")
-    print dag
+
+
+#class TestDag(unittest.TestCase):
+#
+#    def setUp(self):
+#        self.dag =  Dag.from_string("(A :foo (B :blubb (D :fee E) :back C) :bar C)")
+#    
+#    def test_collapse(self):
+#        self.dag =  Dag.from_string("(A :foo (B :blubb (D :fee E) :back C) :bar C)")
+#        d2 = Dag.from_string("(A :foo (B :blubb D))")
+#        self.assertEqual(self.dag.find_external_nodes(d2), ["B","D"])
+#
+#        d_gold = Dag.from_string("(A :bar C :new (B :back C), (D :fee E))")
+#        self.assertEqual(self.dag.collapse_fragment(d2, "new"), d_gold)
+
+
+if __name__ == '__main__':
+    #unittest.main()
+   
+    import doctest
+    doctest.testmod()
