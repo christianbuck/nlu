@@ -75,7 +75,7 @@ def main(sentenceId, depParse, inAMR, alignment, completed):
         px = alignment[:ph]
         if not (px or px==0):
             px = new_concept(pipeline.token2concept(roleset.replace('.','-')), amr, alignment, ph)
-            if len(prop["args"])==1:
+            if len(prop["args"])==1 or prop["args"][1][0].startswith('LINK'):
                 triples.add((str(px), 'DUMMY', ''))
         completed[0][ph] = True
         
@@ -101,6 +101,9 @@ def main(sentenceId, depParse, inAMR, alignment, completed):
                         if dep['rel']=='tmod':
                             rel = 'time'
                         break
+                # TODO: possibly also :duration, etc.
+            elif rel=='ARGM-LOC':
+                rel = 'location'    # TODO: possibly also :direction, :source, :destination. look at preposition?
             
             if not (x or x==0): # need a new variable
                 x = new_concept(pipeline.token2concept(depParse[h][0]['dep']),
@@ -108,8 +111,13 @@ def main(sentenceId, depParse, inAMR, alignment, completed):
             triples.add((str(px), rel, str(x)))
             
             completed[0][h] = True
-            # TODO: if SRL argument link corresponds to a dependency edge, mark that edge as complete
+
+            # if SRL argument link corresponds to a dependency edge, mark that edge as complete
+            if (ph,h) in completed[1]:
+                completed[1][(ph,h)] = True
+                print('completed ',(ph,h))
     
+    print(triples)
     amr = Amr.from_triples(amr.triples(instances=False)+list(triples), amr.node_to_concepts)
 
     return depParse, amr, alignment, completed

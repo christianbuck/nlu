@@ -36,9 +36,12 @@ def main(sentenceId, depParse, inAMR, alignment, completed):
                 else:   # attach with :mod relation
                     newtriple = (str(x), 'mod', str(y))
                 
-                #print(newtriple)
-                amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
                 
+                try:
+                    amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
+                except ValueError as ex:
+                    print('Ignoring triple so as to avoid cycle:', ex.message, file=sys.stderr)
+
                 completed[1][(itm['gov_idx'],itm['dep_idx'])] = True
 
     # simplify adverbs to adjectives based on lexicon
