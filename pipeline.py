@@ -30,7 +30,7 @@ def main(sentenceId):
     # serially execute pipeline steps
     for m in [nes, vprop, nprop, adjsAndAdverbs]:
         print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
-        depParse, amr, alignments, completed = m.main(sentenceId, depParse, amr, alignments, completed)
+        depParse, amr, alignments, completed = m.main(sentenceId, ww, wTags, depParse, amr, alignments, completed)
         #print(' '.join(ww))
         print(repr(amr), file=sys.stderr)
         print('Completed:',[depParse[i][0]['dep'] for i,v in enumerate(completed[0]) if v and depParse[i]], file=sys.stderr)

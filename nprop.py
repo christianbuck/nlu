@@ -121,7 +121,7 @@ Example input, from wsj_0002.0:
 
 
 
-def main(sentenceId, depParse, inAMR, alignment, completed):
+def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     triples = set() # to add to the AMR
     
