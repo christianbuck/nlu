@@ -12,45 +12,108 @@ from dev.amr.amr import Amr
 import pipeline
 from pipeline import choose_head, new_concept, parent_edges
 
+#TODO: the example below is buggy
 '''
 Example input, from wsj_0002.0:
 
-"prop": [
+ "nom": [
     {
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "name", 
+      "lemma": "chairman", 
+      "frame": "01", 
       "args": [
         [
-          "rel", 
-          "16:0", 
-          16, 
-          16, 
-          "named"
+          "ARGM-TMP", 
+          "7:0", 
+          7, 
+          7, 
+          "former"
         ], 
         [
-          "ARG1", 
-          "17:0", 
-          0, 
-          14, 
-          "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC ,"
+          "ARG0", 
+          "8:0", 
+          8, 
+          8, 
+          "chairman"
+        ], 
+        [
+          "rel", 
+          "8:0", 
+          8, 
+          8, 
+          "chairman"
         ], 
         [
           "ARG2", 
-          "18:2", 
-          18, 
-          26, 
-          "*PRO*-2 a nonexecutive director of this British industrial conglomerate"
-        ], 
-        [
-          "LINK-PCR", 
-          "17:0*17:0", 
-          null, 
-          null, 
-          ""
+          "9:1", 
+          9, 
+          13, 
+          "of Consolidated Gold Fields PLC"
         ]
       ], 
-      "roleset": "name.01"
+      "tokenNr": "8"
+    }, 
+    {
+      "lemma": "conglomerate", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARGM-LOC", 
+          "23:0", 
+          23, 
+          23, 
+          "this"
+        ], 
+        [
+          "ARG1", 
+          "24:0", 
+          24, 
+          24, 
+          "British"
+        ], 
+        [
+          "rel", 
+          "25:0", 
+          25, 
+          25, 
+          "industrial"
+        ]
+      ], 
+      "tokenNr": "25"
+    }, 
+    {
+      "lemma": "director", 
+      "frame": "01", 
+      "args": [
+        [
+          "ARG3", 
+          "19:0", 
+          19, 
+          19, 
+          "a"
+        ], 
+        [
+          "ARG0", 
+          "20:0", 
+          20, 
+          20, 
+          "nonexecutive"
+        ], 
+        [
+          "rel", 
+          "20:0", 
+          20, 
+          20, 
+          "nonexecutive"
+        ], 
+        [
+          "ARG2", 
+          "21:1", 
+          19, 
+          21, 
+          "a nonexecutive director"
+        ]
+      ], 
+      "tokenNr": "20"
     }
 '''
 
@@ -62,34 +125,47 @@ def main(sentenceId, depParse, inAMR, alignment, completed):
     amr = inAMR
     triples = set() # to add to the AMR
     
-    props = pipeline.loadVProp(sentenceId)
+    props = pipeline.loadNProp(sentenceId)
+    
+    predheads = {}  # map head index to nominal predicate variable (not reflected in the alignment)
     
     # add all predicates first, so the roleset properly goes into the AMR
     for prop in props:
-        baseform, roleset = prop["baseform"], prop["roleset"]
+        baseform, frame = prop["lemma"], prop["frame"]
+        roleset = baseform+'.'+frame
         
-        assert prop["args"][0][0]=='rel'
-        pred = prop["args"][0]
+        preds = {tuple(arg) for arg in prop["args"] if arg[0]=='rel'}
+        assert len(preds)==1
+        pred = next(iter(preds))
         assert pred[2]==pred[3] # multiword predicates?
         ph = pred[2]    # predicate head
-        px = alignment[:ph]
+        #px = alignment[:ph]    # instead of aligning noun predicate to noun in the sentence, introduce the noun predicate separately (so the plain noun concept can be its argument)
+        px = predheads.get(ph)
+        predconcept = pipeline.token2concept(roleset.replace('.','-n-'))
         if not (px or px==0):
-            px = new_concept(pipeline.token2concept(roleset.replace('.','-')), amr, alignment, ph)
-            if len(prop["args"])==1 or prop["args"][1][0].startswith('LINK'):
+            px = new_concept(predconcept, amr)  # no alignment here - instead use 'predheads'
+            print('###','newconcept',px,'/',predconcept)
+            if len(prop["args"])==1 or (prop["args"][0][0] in ['Support','rel'] and prop["args"][1][0] in ['Support','rel']):
                 triples.add((str(px), 'DUMMY', ''))
+            predheads[ph] = px
+        #else:   # predicate already a concept in the AMR
+        #    amr.node_to_concepts[str(px)] = predconcept # change the name of the concept
+        
         completed[0][ph] = True
         
     # now handle arguments
     for prop in props:
-        baseform, roleset = prop["baseform"], prop["roleset"]
+        baseform, frame = prop["lemma"], prop["frame"]
+        roleset = baseform+'.'+frame
         
         pred = [arg for arg in prop["args"] if arg[0]=='rel'][0]
         ph = pred[2]    # predicate head
-        px = alignment[:ph]
+        #px = alignment[:ph]
+        px = predheads[ph]
         
         for rel,treenode,i,j,yieldS in prop["args"]:
             if i is None or j is None: continue # TODO: special PropBank cases that need further work
-            if rel in ['rel', 'LINK-PCR', 'LINK-SLC']: continue
+            if rel in ['rel', 'Support']: continue
             assert rel[:3]=='ARG'
             h = choose_head(range(i,j+1), depParse)
             x = alignment[:h] # index of variable associated with i's head, if any
@@ -109,6 +185,7 @@ def main(sentenceId, depParse, inAMR, alignment, completed):
                 x = new_concept(pipeline.token2concept(depParse[h][0]['dep']),
                                 amr, alignment, h)
             triples.add((str(px), rel, str(x)))
+            print('###',px,rel,x)
             
             completed[0][h] = True
 

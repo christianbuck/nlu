@@ -17,7 +17,7 @@ def main(sentenceId):
     # use depParse instead.
     
     # pipeline steps
-    import nes, vprop, adjsAndAdverbs
+    import nes, vprop, nprop, adjsAndAdverbs
 
     # initialize input to first pipeline step
     token_accounted_for = [False]*len(depParse)
@@ -32,13 +32,21 @@ def main(sentenceId):
     alignments = Alignment()
 
     # serially execute pipeline steps
-    for m in [nes, vprop, adjsAndAdverbs]:
+    for m in [nes, vprop, nprop, adjsAndAdverbs]:
+        print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
         depParse, amr, alignments, completed = m.main(sentenceId, depParse, amr, alignments, completed)
         #print(' '.join(ww))
         print(repr(amr), file=sys.stderr)
         print('Completed:',[depParse[i][0]['dep'] for i,v in enumerate(completed[0]) if v and depParse[i]], file=sys.stderr)
         print(alignments, [deps[0]['dep'] for deps in depParse if deps and not completed[0][deps[0]['dep_idx']]], file=sys.stderr)
         print(amr, file=sys.stderr)
+
+    print('\n\nRemaining edges:')
+    for deps in depParse:
+        if deps is None: continue
+        for dep in deps:
+            if dep['gov_idx'] is not None and not completed[1][(dep['gov_idx'],dep['dep_idx'])]:
+                print((dep['gov']+'-'+str(dep['gov_idx']),dep['rel'],dep['dep']+'-'+str(dep['dep_idx'])))
 
     # TODO: output
 
@@ -55,6 +63,11 @@ def loadVProp(sentenceId):
     jsonFile = 'examples/'+sentenceId+'.json'
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         return json.load(jsonF)['prop']
+    
+def loadNProp(sentenceId):
+    jsonFile = 'examples/'+sentenceId+'.json'
+    with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
+        return json.load(jsonF)['nom']
 
 def loadDepParse(sentenceId):
     jsonFile = 'examples/'+sentenceId+'.json'
