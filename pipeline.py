@@ -13,7 +13,7 @@ def main(sentenceId):
     ww, wTags, depParse = loadDepParse(sentenceId)
     
     # pipeline steps
-    import nes, vprop, nprop, adjsAndAdverbs
+    import nes, vprop, nprop, adjsAndAdverbs, auxes
 
     # initialize input to first pipeline step
     token_accounted_for = [False]*len(depParse)
@@ -28,7 +28,7 @@ def main(sentenceId):
     alignments = Alignment()
 
     # serially execute pipeline steps
-    for m in [nes, vprop, nprop, adjsAndAdverbs]:
+    for m in [nes, vprop, nprop, adjsAndAdverbs, auxes]:
         print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
         depParse, amr, alignments, completed = m.main(sentenceId, ww, wTags, depParse, amr, alignments, completed)
         #print(' '.join(ww))
