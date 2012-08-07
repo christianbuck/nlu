@@ -4,8 +4,9 @@ import sys
 from collections import defaultdict
 import re
 import json
+from nltk.tree import Tree
 
-def read_trees(filename, treelist):
+def read_trees(filename, treelist, check=True):
     buffer = []
     for line in open(filename):
         if not line.strip():
@@ -21,6 +22,13 @@ def read_trees(filename, treelist):
         tree = re.sub('\s+', ' ', tree)
         treelist.append(tree)
 
+    if check:
+        for idx, tree in enumerate(treelist):
+            try:
+                t = Tree.parse(tree)
+                s = "  ".join(t.leaves())
+            except ValueError:
+                assert False, "f: %s, i: %s, t: %s" %(filename, idx, tree)
 
 
 if __name__ == "__main__":
