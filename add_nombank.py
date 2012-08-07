@@ -40,7 +40,7 @@ def read_nombank(filename):
         fileId, sentNr, tokenNr, lemma, frame, args = m.groups()
         sentNr = int(sentNr)
         nb[fileId][sentNr].append({'tokenNr': tokenNr,
-                                   'lemma' :lemma, \
+                                   'baseform' :lemma, \
                                    'frame' :frame, \
                                    'args' : [arg.split('-',1) for arg in args.split()]})
     return nb
