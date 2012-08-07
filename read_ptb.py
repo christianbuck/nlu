@@ -10,13 +10,12 @@ def read_trees(filename, treelist):
     for line in open(filename):
         if not line.strip():
             continue
-        if line[0] != ' ' and buffer:
+        if line.startswith("(") and buffer:
             tree = ' '.join(buffer)
             tree = re.sub('\s+', ' ', tree)
             treelist.append(tree)
             buffer = []
-        else:
-            buffer.append(line.rstrip())
+        buffer.append(line.rstrip())
     if buffer:
         tree = ' '.join(buffer)
         tree = re.sub('\s+', ' ', tree)
