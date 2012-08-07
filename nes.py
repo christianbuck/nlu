@@ -40,7 +40,7 @@ Example input, from wsj_0002.0:
 
 
 
-def main(sentenceId, depParse, inAMR, alignment, completed):
+def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     triples = set() # to add to the AMR
     
@@ -60,12 +60,14 @@ def main(sentenceId, depParse, inAMR, alignment, completed):
                 triples.add((str(x), 'DUMMY', ''))
         else:
             if not (x or x==0): # need a new variable
-                x = new_concept(pipeline.token2concept(desc or fine.lower().replace('other','') or coarse.lower()),
+                ne_class = desc or fine.lower().replace('other','') or coarse.lower()
+                concept, amr_name = amrify(ne_class, name)
+                x = new_concept(pipeline.token2concept(concept),
                                 amr, alignment, h)
                 # TODO: also align to descriptor, if present
                 n = new_concept('name', amr)
                 triples.add((str(x), 'name', str(n)))
-                for iw,w in enumerate(name.split()):
+                for iw,w in enumerate(amr_name.split()):
                     triples.add((str(n), 'op'+str(iw+1), '"'+w+'"'))
                     
         
@@ -80,3 +82,28 @@ def main(sentenceId, depParse, inAMR, alignment, completed):
     amr = Amr.from_triples(amr.triples(instances=False)+list(triples), amr.node_to_concepts)
 
     return depParse, amr, alignment, completed
+
+# TODO: find a real list of nationalities -> country names
+NATIONALITIES = {'Chinese': 'China', 'Balinese': 'Bali', 'French': 'France', 'Dutch': 'Netherlands', 
+                 'Irish': 'Ireland', 'Scottish': 'Scotland', 'Welsh': 'Wales', 'English': 'England', 'British': 'Britain', 
+                 'Finnish': 'Finland', 'Swedish': 'Sweden', 'Spanish': 'Spain',
+                 'Somali': 'Somalia', 'Hawaiian': 'Hawaii', 'Brazilian': 'Brazil', 
+                 'Kentuckian': 'Kentucky', 'Italian': 'Italy', 'German': 'Germany', 'Norwegian': 'Norway', 
+                 'Belgian': 'Belgium', 'Washingtonian': 'Washington', 'Canadian': 'Canada'}
+def amrify(ne_class, name):
+    concept = ne_class
+    if ne_class=='corporation':
+        concept = 'company'
+    elif ne_class=='nationality':
+        concept = 'country'
+        if name in NATIONALITIES:
+            name = NATIONALITIES[name]
+        else:
+            name = re.sub(r'i$', '', name)  # Iraqi -> Iraq
+            name = re.sub(r'ian$', 'ia', name)   # Russian -> Russia, Australian -> Australia, Indian -> India
+            name = re.sub(r'([aeiouy])an$', r'\1', name) # Tennesseean -> Tennessee, New Jerseyan -> New Jersey
+            name = re.sub(r'an$', 'a', name)    # Moldovan -> Moldova, Sri Lankan -> Sri Lanka, Rwandan -> Rwanda, American -> America
+            name = re.sub(r'ese$', '', name)    # Japanese -> Japan
+        
+    return concept, name
+    

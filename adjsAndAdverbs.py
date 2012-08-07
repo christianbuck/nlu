@@ -12,15 +12,22 @@ from dev.amr.amr import Amr
 import pipeline
 from pipeline import new_concept
 
-def main(sentenceId, depParse, inAMR, alignment, completed):
+def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     for deps in depParse:
         if deps is None: continue
         for itm in deps:
             if completed[1][(itm['gov_idx'],itm['dep_idx'])]: continue
             i = itm['dep_idx']
-            if itm['rel'] in ['amod', 'advmod', 'dep', 'num']:
+            if itm['rel'] in ['amod', 'advmod', 'dep', 'num', 'number', 'det']:
                 h = itm['gov_idx'] # i's head
+                
+                if itm['rel']=='det' and itm['dep'].lower() in ['the', 'a', 'an']:
+                    # skip articles
+                    completed[0][i] = True
+                    completed[1][(h,i)] = True
+                    continue
+                
                 x = alignment[:h] # index of variable associated with i's head, if any
                 if not (x or x==0): # need a new variable
                     assert not completed[0][h]
@@ -31,15 +38,18 @@ def main(sentenceId, depParse, inAMR, alignment, completed):
                 if not (y or y==0): # new variable
                     y = new_concept(pipeline.token2concept(itm['dep'].lower()), amr, alignment, i)
                     completed[0][i] = True
-                if itm['rel']=='num':   # attach as :quant
+                if itm['rel'] in ['num', 'number']:   # attach as :quant
                     newtriple = (str(x), 'quant', str(y))   # TODO: for plain values, don't create a variable
                 else:   # attach with :mod relation
                     newtriple = (str(x), 'mod', str(y))
                 
-                #print(newtriple)
-                amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
                 
-                completed[1][(itm['gov_idx'],itm['dep_idx'])] = True
+                try:
+                    amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
+                except ValueError as ex:
+                    print('Ignoring triple so as to avoid cycle:', ex.message, file=sys.stderr)
+
+                completed[1][(h,i)] = True
 
     # simplify adverbs to adjectives based on lexicon
     for v in amr.node_to_concepts.keys():
