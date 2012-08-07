@@ -78,7 +78,7 @@ def process_file(json_filename, nb):
     data = json.load(open(json_filename))
     data['nom'] = []
 
-    pt = SpanTree.parse(data['goldparse'])
+    pt = SpanTree.parse(data['ptbparse'])
 
     for nb_data in nb[docId][sentNr]:
         args = nb_data['args']
