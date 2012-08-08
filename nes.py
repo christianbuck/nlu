@@ -61,7 +61,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             if not (x or x==0): # need a new variable
                 ne_class = fine.lower().replace('other','') or coarse.lower()
                 concept, amr_name = amrify(ne_class, name)
-                x = new_concept(pipeline.token2concept(concept),
+                x = new_concept(pipeline.token2concept(concept)+'-FALLBACK',    # -FALLBACK indicates extra information not in the sentence (NE class)
                                 amr, alignment, h)
                 n = new_concept('name', amr)
                 triples.add((str(x), 'name', str(n)))
