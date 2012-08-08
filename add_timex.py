@@ -34,7 +34,7 @@ def process_file(json_filename):
         data['timex'].append( [tid, min(spans[tid]), max(spans[tid]), expressions[tid]])
     print data['timex']
 
-    json.dump(data, open(json_filename, 'w'), indent=2)
+    json.dump(data, open(json_filename, 'w'), indent=2, sort_keys=True)
 
 
 if __name__ == "__main__":

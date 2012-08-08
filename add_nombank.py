@@ -39,9 +39,9 @@ def read_nombank(filename):
         assert m, "strange line %s\n" %line
         fileId, sentNr, tokenNr, lemma, frame, args = m.groups()
         sentNr = int(sentNr)
-        nb[fileId][sentNr].append({'tokenNr': tokenNr,
-                                   'baseform' :lemma, \
-                                   'frame' :frame, \
+        nb[fileId][sentNr].append({'tokenNr':tokenNr,
+                                   'baseform' :lemma,
+                                   'frame' :'.'.join((lemma,frame)),
                                    'args' : [arg.split('-',1) for arg in args.split()]})
     return nb
 
@@ -56,7 +56,6 @@ def parse_onprop(raw_prop):
     d = m.groupdict()
     d['args'] = [arg.split('-',1) for arg in d['args'].split()]
     return d
-
 
 def is_trace(subtree):
     if subtree.node == '-NONE-' or len(subtree) == 1:
@@ -108,7 +107,7 @@ def process_file(json_filename, nb):
         data['nom'].append(nb_data)
 
         #print nb_data
-    json.dump(data, open(json_filename, 'w'), indent=2)
+    json.dump(data, open(json_filename, 'w'), indent=2, sort_keys=True)
 
 if __name__ == "__main__":
     import argparse

@@ -69,13 +69,21 @@ def parse_onprop(raw_prop):
     d['args'] = [arg.split('-',1) for arg in d['args'].split()]
     return d
 
-
-def is_trace(subtree):
-    if subtree.node == '-NONE-' or len(subtree) == 1:
-        words = subtree.leaves()
-        if len(words) == 1 and re.match(r'.*-\d+$',words[0]):
-            return True
-    return False
+def get_trace(subtree, recursive=False):
+    re_trace = re.compile(r'.*-\d+$')
+    if subtree.node == '-NONE-' or subtree.height() == 2:
+        words = ' '.join(subtree.leaves())
+        if re_trace.match(words):
+            return words
+    elif recursive: # check if all subtrees of height 2 point to empty elements
+        st_h2 = list(subtree.subtrees(filter=lambda t: t.height()==2))
+        st_none = list(subtree.subtrees(filter=lambda t: t.node=='-NONE-'))
+        if st_h2 == st_none:
+            # if we have only one trace follow that one
+            traces = [get_trace(st) for st in st_h2 if re_trace.match(' '.join(st.leaves()))]
+            if len(traces) == 1:
+                return traces[0]
+    return None
 
 def span_from_treepos(tree, treepos):
     st = SpanTree.parse(str(pt))
@@ -90,10 +98,11 @@ if __name__ == "__main__":
     parser.add_argument('probbank', action='store', help="prop.txt file")
     parser.add_argument('json', action='store', help="json input file")
     parser.add_argument('jsonout', action='store', help="json output file")
+    parser.add_argument('-nonrecursive', action='store_true')
     arguments = parser.parse_args(sys.argv[1:])
+    recursive = not arguments.nonrecursive
 
     pb = read_onprop(arguments.probbank)
-    #print pb
 
     docId, sentNr = re.search(r'wsj_(\d+).(\d+).json', arguments.json).groups()
     sentNr = int(sentNr)
@@ -101,8 +110,6 @@ if __name__ == "__main__":
     data['prop'] = []
 
     pt = SpanTree.parse(data['goldparse'])
-    #print list(enumerate(pt.leaves()))
-    #print pt.pprint()
 
     for prop in pb[docId][sentNr]:
         pb_data = parse_onprop(prop)
@@ -113,16 +120,22 @@ if __name__ == "__main__":
             leaf_id, depth = pt.parse_pos(pos)
             if leaf_id != None and depth != None:
                 treepos = pt.get_treepos(leaf_id, depth)
-                while is_trace(pt[treepos]):
-                    trace_id = int(pt[treepos].leaves()[0].split('-')[-1])
-                    print 'looking for trace', trace_id
+                trace = get_trace(pt[treepos], recursive=recursive)
+                #print is_trace(pt[treepos], recursive=True)
+                #print 'trace for role %s : %s' %(role, trace)
+                while trace != None:
+                    #print 'trace:', trace
+                    #trace_id = int(pt[treepos].leaves()[0].split('-')[-1])
+                    trace_id = int(trace.split('-')[-1])
+                    #print 'looking for trace', trace_id
                     tracepos = pt.find_trace(trace_id)
                     if tracepos != None:
-                        print 'trace %s found! Here:', tracepos
-                        print pt[tracepos].pprint()
+                        #print 'trace %s found! Here:', tracepos
+                        #print pt[tracepos].pprint()
                         treepos = tracepos
                     else:
                         break # could not follow trace
+                    trace = get_trace(pt[treepos], recursive=recursive)
 
                 words = pt[treepos].leaves()
                 start, end = span_from_treepos(pt, treepos)
@@ -132,43 +145,5 @@ if __name__ == "__main__":
         pb_data['args'] = new_args
         data['prop'].append(pb_data)
 
-        print pb_data
-    json.dump(data, open(arguments.jsonout, 'w'), indent=2)
-
-    #print json.dumps(data, indent=2)
-
-    #print pt.span_from_pos("1:0")
-
-    sys.exit()
-
-
-    #print data.keys()
-    #print docId, sentNr
-    #print pb[docId].keys()
-    #assert sentNr in pb[docId]
-
-    #print pb
-
-    pb = read_propbank(args.probbank)
-
-    # json filename should look like this:
-    # /home/buck/corpora/ontonotes-release-4.0/data/files/data/english/annotations/nw/wsj/01/wsj_0125.1.json
-
-    pb_dict = {'raw': pb[docId][sentNr]}
-
-    re_prop = re.compile(r'')
-
-
-    data['propbank_raw'] = pb_dict
-    #json.dump(open(args.jsonout,'w'),data)
-    json.dump(data, open(args.jsonout, 'w'), indent=2)
-
-
-    #/home/buck/corpora/ontonotes-release-4.0/data/files/data/english/annotations/nw/wsj/00/wsj_0036.prop
-
-
-        #print m.groups()
-
-
-    #for linenr, line in enumerate(sys.stdin):
-    #    line = line.strip().split()
+        #print pb_data
+    json.dump(data, open(arguments.jsonout, 'w'), indent=2, sort_keys=True)

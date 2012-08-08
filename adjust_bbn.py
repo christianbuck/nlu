@@ -19,4 +19,4 @@ if __name__ == "__main__":
         ne.pop()
         ne.pop()
 
-    json.dump(data, open(arguments.jsonout, 'w'), indent=2)
+    json.dump(data, open(arguments.jsonout, 'w'), indent=2, sort_keys=True)
