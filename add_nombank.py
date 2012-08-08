@@ -39,9 +39,9 @@ def read_nombank(filename):
         assert m, "strange line %s\n" %line
         fileId, sentNr, tokenNr, lemma, frame, args = m.groups()
         sentNr = int(sentNr)
-        nb[fileId][sentNr].append({'tokenNr': tokenNr,
-                                   'baseform' :lemma, \
-                                   'frame' :frame, \
+        nb[fileId][sentNr].append({'tokenNr':tokenNr,
+                                   'baseform' :lemma,
+                                   'frame' :'.'.join((lemma,frame)),
                                    'args' : [arg.split('-',1) for arg in args.split()]})
     return nb
 
@@ -56,7 +56,6 @@ def parse_onprop(raw_prop):
     d = m.groupdict()
     d['args'] = [arg.split('-',1) for arg in d['args'].split()]
     return d
-
 
 def is_trace(subtree):
     if subtree.node == '-NONE-' or len(subtree) == 1:
