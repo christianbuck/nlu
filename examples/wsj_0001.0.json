@@ -1,8 +1,25 @@
 {
+  "bbn_ne": [
+    [
+      0, 
+      1, 
+      "Pierre Vinken", 
+      "PERSON", 
+      ""
+    ], 
+    [
+      14, 
+      14, 
+      "director", 
+      "PER_DESC", 
+      ""
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0001@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (NP (NNP Pierre) (NNP Vinken)) (, ,) (ADJP (NML (CD 61) (NNS years)) (JJ old)) (, ,)) (VP (MD will) (VP (VB join) (NP (DT the) (NN board)) (PP-CLR (IN as) (NP (DT a) (JJ nonexecutive) (NN director))) (NP-TMP (NNP Nov.) (CD 29)))) (. .)))", 
   "nom": [
     {
-      "lemma": "director", 
-      "frame": "01", 
       "args": [
         [
           "ARG3", 
@@ -26,146 +43,14 @@
           "director"
         ]
       ], 
+      "baseform": "director", 
+      "frame": "director.01", 
       "tokenNr": "14"
     }
   ], 
-  "stanford_dep": [
-    {
-      "dep": "Pierre", 
-      "dep_idx": 0, 
-      "gov": "Vinken", 
-      "rel": "nn", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "Vinken", 
-      "dep_idx": 1, 
-      "gov": "join", 
-      "rel": "nsubj", 
-      "gov_idx": 8
-    }, 
-    {
-      "dep": "61", 
-      "dep_idx": 3, 
-      "gov": "years", 
-      "rel": "num", 
-      "gov_idx": 4
-    }, 
-    {
-      "dep": "years", 
-      "dep_idx": 4, 
-      "gov": "old", 
-      "rel": "dep", 
-      "gov_idx": 5
-    }, 
-    {
-      "dep": "old", 
-      "dep_idx": 5, 
-      "gov": "Vinken", 
-      "rel": "amod", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "will", 
-      "dep_idx": 7, 
-      "gov": "join", 
-      "rel": "aux", 
-      "gov_idx": 8
-    }, 
-    {
-      "dep": "join", 
-      "dep_idx": 8, 
-      "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": -1
-    }, 
-    {
-      "dep": "the", 
-      "dep_idx": 9, 
-      "gov": "board", 
-      "rel": "det", 
-      "gov_idx": 10
-    }, 
-    {
-      "dep": "board", 
-      "dep_idx": 10, 
-      "gov": "join", 
-      "rel": "dobj", 
-      "gov_idx": 8
-    }, 
-    {
-      "dep": "a", 
-      "dep_idx": 12, 
-      "gov": "director", 
-      "rel": "det", 
-      "gov_idx": 14
-    }, 
-    {
-      "dep": "nonexecutive", 
-      "dep_idx": 13, 
-      "gov": "director", 
-      "rel": "amod", 
-      "gov_idx": 14
-    }, 
-    {
-      "dep": "director", 
-      "dep_idx": 14, 
-      "gov": "join", 
-      "rel": "prep_as", 
-      "gov_idx": 8
-    }, 
-    {
-      "dep": "Nov.", 
-      "dep_idx": 15, 
-      "gov": "join", 
-      "rel": "tmod", 
-      "gov_idx": 8
-    }, 
-    {
-      "dep": "29", 
-      "dep_idx": 16, 
-      "gov": "Nov.", 
-      "rel": "num", 
-      "gov_idx": 15
-    }
-  ], 
-  "stanford_coref": [
-    [
-      [
-        "Pierre Vinken", 
-        0, 
-        2
-      ], 
-      [
-        "Pierre Vinken , 61 years old ,", 
-        0, 
-        7
-      ]
-    ]
-  ], 
-  "coref_chains": [], 
-  "treebank_sentence": "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .", 
-  "bbn_ne": [
-    [
-      0, 
-      1, 
-      "Pierre Vinken", 
-      "PERSON", 
-      ""
-    ], 
-    [
-      14, 
-      14, 
-      "director", 
-      "PER_DESC", 
-      ""
-    ]
-  ], 
+  "parsetree": "(ROOT (S (NP (NP (NNP Pierre) (NNP Vinken)) (, ,) (ADJP (NP (CD 61) (NNS years)) (JJ old)) (, ,)) (VP (MD will) (VP (VB join) (NP (DT the) (NN board)) (PP (IN as) (NP (DT a) (JJ nonexecutive) (NN director))) (NP-TMP (NNP Nov.) (CD 29)))) (. .)))", 
   "prop": [
     {
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "join", 
       "args": [
         [
           "rel", 
@@ -210,10 +95,144 @@
           "Nov. 29"
         ]
       ], 
-      "roleset": "join.01"
+      "baseform": "join", 
+      "basepos": "v", 
+      "frame": "join.01", 
+      "inflection": "-----"
     }
   ], 
+  "ptbparse": "( (S (NP-SBJ (NP (NNP Pierre) (NNP Vinken) ) (, ,) (ADJP (NP (CD 61) (NNS years) ) (JJ old) ) (, ,) ) (VP (MD will) (VP (VB join) (NP (DT the) (NN board) ) (PP-CLR (IN as) (NP (DT a) (JJ nonexecutive) (NN director) )) (NP-TMP (NNP Nov.) (CD 29) ))) (. .) ))", 
   "sentence_nr": 0, 
+  "stanford_coref": [
+    [
+      [
+        "Pierre Vinken", 
+        0, 
+        2
+      ], 
+      [
+        "Pierre Vinken , 61 years old ,", 
+        0, 
+        7
+      ]
+    ]
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "Pierre", 
+      "dep_idx": 0, 
+      "gov": "Vinken", 
+      "gov_idx": 1, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Vinken", 
+      "dep_idx": 1, 
+      "gov": "join", 
+      "gov_idx": 8, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "61", 
+      "dep_idx": 3, 
+      "gov": "years", 
+      "gov_idx": 4, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "years", 
+      "dep_idx": 4, 
+      "gov": "old", 
+      "gov_idx": 5, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "old", 
+      "dep_idx": 5, 
+      "gov": "Vinken", 
+      "gov_idx": 1, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "will", 
+      "dep_idx": 7, 
+      "gov": "join", 
+      "gov_idx": 8, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "join", 
+      "dep_idx": 8, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 9, 
+      "gov": "board", 
+      "gov_idx": 10, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "board", 
+      "dep_idx": 10, 
+      "gov": "join", 
+      "gov_idx": 8, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 12, 
+      "gov": "director", 
+      "gov_idx": 14, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "nonexecutive", 
+      "dep_idx": 13, 
+      "gov": "director", 
+      "gov_idx": 14, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "director", 
+      "dep_idx": 14, 
+      "gov": "join", 
+      "gov_idx": 8, 
+      "rel": "prep_as"
+    }, 
+    {
+      "dep": "Nov.", 
+      "dep_idx": 15, 
+      "gov": "join", 
+      "gov_idx": 8, 
+      "rel": "tmod"
+    }, 
+    {
+      "dep": "29", 
+      "dep_idx": 16, 
+      "gov": "Nov.", 
+      "gov_idx": 15, 
+      "rel": "num"
+    }
+  ], 
+  "text": "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .", 
+  "timex": [
+    [
+      "t2", 
+      15, 
+      16, 
+      "<TIMEX3 tid=\"t2\" value=\"XXXX-11-29\" type=\"DATE\">Nov. 29</TIMEX3>"
+    ], 
+    [
+      "t1", 
+      3, 
+      5, 
+      "<TIMEX3 tid=\"t1\" value=\"P61Y\" type=\"DURATION\">61 years old</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .", 
   "tuples": [
     [
       "nn", 
@@ -290,177 +309,173 @@
     [
       "Pierre", 
       {
-        "NamedEntityTag": "PERSON", 
         "Lemma": "Pierre", 
-        "idx": 0, 
-        "PartOfSpeech": "NNP"
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 0
       }
     ], 
     [
       "Vinken", 
       {
-        "NamedEntityTag": "PERSON", 
         "Lemma": "Vinken", 
-        "idx": 1, 
-        "PartOfSpeech": "NNP"
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 1
       }
     ], 
     [
       ",", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ",", 
-        "idx": 2, 
-        "PartOfSpeech": ","
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 2
       }
     ], 
     [
       "61", 
       {
-        "NormalizedNamedEntityTag": "61.0", 
-        "Timex": "<TIMEX3 tid=\"t1\" value=\"P61Y\" type=\"DURATION\">61 years old</TIMEX3>", 
-        "idx": 3, 
         "Lemma": "61", 
+        "NamedEntityTag": "DURATION", 
+        "NormalizedNamedEntityTag": "61.0", 
         "PartOfSpeech": "CD", 
-        "NamedEntityTag": "DURATION"
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"P61Y\" type=\"DURATION\">61 years old</TIMEX3>", 
+        "idx": 3
       }
     ], 
     [
       "years", 
       {
-        "NormalizedNamedEntityTag": "0.0", 
-        "Timex": "<TIMEX3 tid=\"t1\" value=\"P61Y\" type=\"DURATION\">61 years old</TIMEX3>", 
-        "idx": 4, 
         "Lemma": "year", 
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "0.0", 
         "PartOfSpeech": "NNS", 
-        "NamedEntityTag": "NUMBER"
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"P61Y\" type=\"DURATION\">61 years old</TIMEX3>", 
+        "idx": 4
       }
     ], 
     [
       "old", 
       {
-        "NamedEntityTag": "DURATION", 
         "Lemma": "old", 
+        "NamedEntityTag": "DURATION", 
+        "PartOfSpeech": "JJ", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"P61Y\" type=\"DURATION\">61 years old</TIMEX3>", 
-        "idx": 5, 
-        "PartOfSpeech": "JJ"
+        "idx": 5
       }
     ], 
     [
       ",", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ",", 
-        "idx": 6, 
-        "PartOfSpeech": ","
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 6
       }
     ], 
     [
       "will", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "will", 
-        "idx": 7, 
-        "PartOfSpeech": "MD"
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "MD", 
+        "idx": 7
       }
     ], 
     [
       "join", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "join", 
-        "idx": 8, 
-        "PartOfSpeech": "VB"
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VB", 
+        "idx": 8
       }
     ], 
     [
       "the", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "the", 
-        "idx": 9, 
-        "PartOfSpeech": "DT"
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 9
       }
     ], 
     [
       "board", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "board", 
-        "idx": 10, 
-        "PartOfSpeech": "NN"
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 10
       }
     ], 
     [
       "as", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "as", 
-        "idx": 11, 
-        "PartOfSpeech": "IN"
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 11
       }
     ], 
     [
       "a", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "a", 
-        "idx": 12, 
-        "PartOfSpeech": "DT"
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 12
       }
     ], 
     [
       "nonexecutive", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "nonexecutive", 
-        "idx": 13, 
-        "PartOfSpeech": "JJ"
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 13
       }
     ], 
     [
       "director", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "director", 
-        "idx": 14, 
-        "PartOfSpeech": "NN"
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 14
       }
     ], 
     [
       "Nov.", 
       {
-        "NormalizedNamedEntityTag": "XXXX-11-29", 
-        "Timex": "<TIMEX3 tid=\"t2\" value=\"XXXX-11-29\" type=\"DATE\">Nov. 29</TIMEX3>", 
-        "idx": 15, 
         "Lemma": "Nov.", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "XXXX-11-29", 
         "PartOfSpeech": "NNP", 
-        "NamedEntityTag": "DATE"
+        "Timex": "<TIMEX3 tid=\"t2\" value=\"XXXX-11-29\" type=\"DATE\">Nov. 29</TIMEX3>", 
+        "idx": 15
       }
     ], 
     [
       "29", 
       {
-        "NormalizedNamedEntityTag": "XXXX-11-29", 
-        "Timex": "<TIMEX3 tid=\"t2\" value=\"XXXX-11-29\" type=\"DATE\">Nov. 29</TIMEX3>", 
-        "idx": 16, 
         "Lemma": "29", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "XXXX-11-29", 
         "PartOfSpeech": "CD", 
-        "NamedEntityTag": "DATE"
+        "Timex": "<TIMEX3 tid=\"t2\" value=\"XXXX-11-29\" type=\"DATE\">Nov. 29</TIMEX3>", 
+        "idx": 16
       }
     ], 
     [
       ".", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ".", 
-        "idx": 17, 
-        "PartOfSpeech": "."
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 17
       }
     ]
-  ], 
-  "text": "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .", 
-  "parsetree": "(ROOT (S (NP (NP (NNP Pierre) (NNP Vinken)) (, ,) (ADJP (NP (CD 61) (NNS years)) (JJ old)) (, ,)) (VP (MD will) (VP (VB join) (NP (DT the) (NN board)) (PP (IN as) (NP (DT a) (JJ nonexecutive) (NN director))) (NP-TMP (NNP Nov.) (CD 29)))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ (NP (NNP Pierre) (NNP Vinken)) (, ,) (ADJP (NML (CD 61) (NNS years)) (JJ old)) (, ,)) (VP (MD will) (VP (VB join) (NP (DT the) (NN board)) (PP-CLR (IN as) (NP (DT a) (JJ nonexecutive) (NN director))) (NP-TMP (NNP Nov.) (CD 29)))) (. .)))", 
-  "document_id": "nw/wsj/00/wsj_0001@all@wsj@nw@en@on"
+  ]
 }

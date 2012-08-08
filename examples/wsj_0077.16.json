@@ -1,8 +1,18 @@
 {
+  "bbn_ne": [
+    [
+      1, 
+      1, 
+      "Treasury", 
+      "ORGANIZATION", 
+      "GOVERNMENT"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (NP (DT The) (NNP Treasury) (POS 's)) (NN benchmark) (NML (CD 30) (HYPH -) (NN year)) (NN bond)) (VP (VBD gained) (NP (NP (NP (QP (RB about) (DT a) (NN quarter))) (PP (IN of) (NP (DT a) (NN point)))) (, ,) (CC or) (NP (NP ($ $) (CD 2.50) (-NONE- *U*)) (PP (IN for) (NP (NP (DT each) ($ $) (CD 1,000) (-NONE- *U*)) (PP (IN of) (NP (NN face) (NN amount)))))))) (. .)))", 
   "nom": [
     {
-      "lemma": "benchmark", 
-      "frame": "01", 
       "args": [
         [
           "ARG1", 
@@ -26,11 +36,11 @@
           ""
         ]
       ], 
+      "baseform": "benchmark", 
+      "frame": "benchmark.01", 
       "tokenNr": "3"
     }, 
     {
-      "lemma": "bond", 
-      "frame": "01", 
       "args": [
         [
           "ARG2", 
@@ -44,232 +54,66 @@
           "4:0", 
           4, 
           4, 
-          "30"
+          "30-year"
         ], 
         [
           "rel", 
           "5:0", 
           5, 
           5, 
-          "-"
+          "bond"
         ]
       ], 
+      "baseform": "bond", 
+      "frame": "bond.01", 
       "tokenNr": "5"
     }, 
     {
-      "lemma": "face", 
-      "frame": "04", 
       "args": [
         [
           "rel", 
           "24:0", 
           24, 
           24, 
-          "*U*"
+          "face"
         ], 
         [
           "ARG1", 
           "25:0", 
           25, 
           25, 
-          "of"
+          "amount"
         ]
       ], 
+      "baseform": "face", 
+      "frame": "face.04", 
       "tokenNr": "24"
     }, 
     {
-      "lemma": "quarter", 
-      "frame": "01", 
       "args": [
         [
           "rel", 
           "9:0", 
           9, 
           9, 
-          "about"
+          "quarter"
         ], 
         [
           "ARG1", 
           "10:1", 
-          9, 
-          11, 
-          "about a quarter"
+          10, 
+          12, 
+          "of a point"
         ]
       ], 
+      "baseform": "quarter", 
+      "frame": "quarter.01", 
       "tokenNr": "9"
     }
   ], 
-  "stanford_dep": [
-    {
-      "dep": "The", 
-      "dep_idx": 0, 
-      "gov": "Treasury", 
-      "rel": "det", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "Treasury", 
-      "dep_idx": 1, 
-      "gov": "bond", 
-      "rel": "poss", 
-      "gov_idx": 7
-    }, 
-    {
-      "dep": "benchmark", 
-      "dep_idx": 3, 
-      "gov": "bond", 
-      "rel": "nn", 
-      "gov_idx": 7
-    }, 
-    {
-      "dep": "30", 
-      "dep_idx": 4, 
-      "gov": "year", 
-      "rel": "num", 
-      "gov_idx": 6
-    }, 
-    {
-      "dep": "year", 
-      "dep_idx": 6, 
-      "gov": "bond", 
-      "rel": "nn", 
-      "gov_idx": 7
-    }, 
-    {
-      "dep": "bond", 
-      "dep_idx": 7, 
-      "gov": "gained", 
-      "rel": "nsubj", 
-      "gov_idx": 8
-    }, 
-    {
-      "dep": "gained", 
-      "dep_idx": 8, 
-      "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": -1
-    }, 
-    {
-      "dep": "about", 
-      "dep_idx": 9, 
-      "gov": "quarter", 
-      "rel": "quantmod", 
-      "gov_idx": 11
-    }, 
-    {
-      "dep": "a", 
-      "dep_idx": 10, 
-      "gov": "quarter", 
-      "rel": "quantmod", 
-      "gov_idx": 11
-    }, 
-    {
-      "dep": "quarter", 
-      "dep_idx": 11, 
-      "gov": "gained", 
-      "rel": "dobj", 
-      "gov_idx": 8
-    }, 
-    {
-      "dep": "a", 
-      "dep_idx": 13, 
-      "gov": "point", 
-      "rel": "det", 
-      "gov_idx": 14
-    }, 
-    {
-      "dep": "point", 
-      "dep_idx": 14, 
-      "gov": "quarter", 
-      "rel": "prep_of", 
-      "gov_idx": 11
-    }, 
-    {
-      "dep": "$", 
-      "dep_idx": 17, 
-      "gov": "gained", 
-      "rel": "dobj", 
-      "gov_idx": 8
-    }, 
-    {
-      "dep": "$", 
-      "dep_idx": 17, 
-      "gov": "quarter", 
-      "rel": "conj_or", 
-      "gov_idx": 11
-    }, 
-    {
-      "dep": "2.50", 
-      "dep_idx": 18, 
-      "gov": "$", 
-      "rel": "num", 
-      "gov_idx": 17
-    }, 
-    {
-      "dep": "each", 
-      "dep_idx": 21, 
-      "gov": "$", 
-      "rel": "det", 
-      "gov_idx": 22
-    }, 
-    {
-      "dep": "$", 
-      "dep_idx": 22, 
-      "gov": "$", 
-      "rel": "prep_for", 
-      "gov_idx": 17
-    }, 
-    {
-      "dep": "1,000", 
-      "dep_idx": 23, 
-      "gov": "$", 
-      "rel": "num", 
-      "gov_idx": 22
-    }, 
-    {
-      "dep": "face", 
-      "dep_idx": 26, 
-      "gov": "amount", 
-      "rel": "nn", 
-      "gov_idx": 27
-    }, 
-    {
-      "dep": "amount", 
-      "dep_idx": 27, 
-      "gov": "$", 
-      "rel": "prep_of", 
-      "gov_idx": 22
-    }
-  ], 
-  "stanford_coref": [
-    [
-      [
-        "about a quarter of a point", 
-        9, 
-        15
-      ], 
-      [
-        "about a quarter of a point , or $ 2.50 for each $ 1,000 of face amount", 
-        9, 
-        26
-      ]
-    ]
-  ], 
-  "coref_chains": [], 
-  "bbn_ne": [
-    [
-      1, 
-      1, 
-      "Treasury", 
-      "ORGANIZATION", 
-      "GOVERNMENT"
-    ]
-  ], 
+  "parsetree": "(ROOT (FRAG (NP (NP (NP (DT The) (NNP Treasury) (POS 's)) (JJ benchmark)) (NP (CD 30))) (: -) (S (NP (NN year) (NN bond)) (VP (VBD gained) (NP (NP (NP (QP (RB about) (DT a) (NN quarter))) (PP (IN of) (NP (DT a) (NN point)))) (, ,) (CC or) (NP (NP ($ $) (CD 2.50)) (PP (IN for) (NP (NP (DT each) ($ $) (CD 1,000)) (PP (IN of) (NP (NN face) (NN amount))))))))) (. .)))", 
   "prop": [
     {
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "gain", 
       "args": [
         [
           "rel", 
@@ -293,10 +137,186 @@
           "about a quarter of a point , or $ 2.50 *U* for each $ 1,000 *U* of face amount"
         ]
       ], 
-      "roleset": "gain.01"
+      "baseform": "gain", 
+      "basepos": "v", 
+      "frame": "gain.01", 
+      "inflection": "-----"
     }
   ], 
+  "ptbparse": "( (S (NP-SBJ (NP (DT The) (NNP Treasury) (POS 's) ) (NN benchmark) (JJ 30-year) (NN bond) ) (VP (VBD gained) (NP (NP (NP (QP (RB about) (DT a) (NN quarter) )) (PP (IN of) (NP (DT a) (NN point) ))) (, ,) (CC or) (NP (NP ($ $) (CD 2.50) (-NONE- *U*) ) (PP (IN for) (NP (NP (DT each) ($ $) (CD 1,000) (-NONE- *U*) ) (PP (IN of) (NP (NN face) (NN amount) ))))))) (. .) ))", 
   "sentence_nr": 16, 
+  "stanford_coref": [
+    [
+      [
+        "about a quarter of a point", 
+        9, 
+        15
+      ], 
+      [
+        "about a quarter of a point , or $ 2.50 for each $ 1,000 of face amount", 
+        9, 
+        26
+      ]
+    ]
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "Treasury", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Treasury", 
+      "dep_idx": 1, 
+      "gov": "bond", 
+      "gov_idx": 7, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "benchmark", 
+      "dep_idx": 3, 
+      "gov": "bond", 
+      "gov_idx": 7, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "30", 
+      "dep_idx": 4, 
+      "gov": "year", 
+      "gov_idx": 6, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "year", 
+      "dep_idx": 6, 
+      "gov": "bond", 
+      "gov_idx": 7, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "bond", 
+      "dep_idx": 7, 
+      "gov": "gained", 
+      "gov_idx": 8, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "gained", 
+      "dep_idx": 8, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "about", 
+      "dep_idx": 9, 
+      "gov": "quarter", 
+      "gov_idx": 11, 
+      "rel": "quantmod"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 10, 
+      "gov": "quarter", 
+      "gov_idx": 11, 
+      "rel": "quantmod"
+    }, 
+    {
+      "dep": "quarter", 
+      "dep_idx": 11, 
+      "gov": "gained", 
+      "gov_idx": 8, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 13, 
+      "gov": "point", 
+      "gov_idx": 14, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "point", 
+      "dep_idx": 14, 
+      "gov": "quarter", 
+      "gov_idx": 11, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "$", 
+      "dep_idx": 17, 
+      "gov": "gained", 
+      "gov_idx": 8, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "$", 
+      "dep_idx": 17, 
+      "gov": "quarter", 
+      "gov_idx": 11, 
+      "rel": "conj_or"
+    }, 
+    {
+      "dep": "2.50", 
+      "dep_idx": 18, 
+      "gov": "$", 
+      "gov_idx": 17, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "each", 
+      "dep_idx": 21, 
+      "gov": "$", 
+      "gov_idx": 22, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "$", 
+      "dep_idx": 22, 
+      "gov": "$", 
+      "gov_idx": 17, 
+      "rel": "prep_for"
+    }, 
+    {
+      "dep": "1,000", 
+      "dep_idx": 23, 
+      "gov": "$", 
+      "gov_idx": 22, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "face", 
+      "dep_idx": 26, 
+      "gov": "amount", 
+      "gov_idx": 27, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "amount", 
+      "dep_idx": 27, 
+      "gov": "$", 
+      "gov_idx": 22, 
+      "rel": "prep_of"
+    }
+  ], 
+  "text": "The Treasury 's benchmark 30 - year bond gained about a quarter of a point , or $ 2.50 for each $ 1,000 of face amount .", 
+  "timex": [
+    [
+      "t2", 
+      9, 
+      11, 
+      "<TIMEX3 tid=\"t2\" value=\"P3M\" type=\"DURATION\" mod=\"APPROX\">about a quarter</TIMEX3>"
+    ], 
+    [
+      "t1", 
+      4, 
+      6, 
+      "<TIMEX3 tid=\"t1\" value=\"P30Y\" type=\"DURATION\">30 - year</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "The Treasury 's benchmark 30 - year bond gained about a quarter of a point , or $ 2.50 *U* for each $ 1,000 *U* of face amount .", 
   "tuples": [
     [
       "det", 
@@ -404,13 +424,12 @@
       "amount"
     ]
   ], 
-  "text": "The Treasury 's benchmark 30 - year bond gained about a quarter of a point , or $ 2.50 for each $ 1,000 of face amount .", 
   "words": [
     [
       "The", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "DT", 
         "idx": 0
       }
@@ -418,8 +437,8 @@
     [
       "Treasury", 
       {
-        "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Treasury", 
+        "NamedEntityTag": "ORGANIZATION", 
         "PartOfSpeech": "NNP", 
         "idx": 1
       }
@@ -427,8 +446,8 @@
     [
       "'s", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "'s", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "POS", 
         "idx": 2
       }
@@ -436,8 +455,8 @@
     [
       "benchmark", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "benchmark", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "JJ", 
         "idx": 3
       }
@@ -445,41 +464,41 @@
     [
       "30", 
       {
-        "NormalizedNamedEntityTag": "30.0", 
-        "Timex": "<TIMEX3 tid=\"t1\" value=\"P30Y\" type=\"DURATION\">30 - year</TIMEX3>", 
-        "idx": 4, 
         "Lemma": "30", 
+        "NamedEntityTag": "DURATION", 
+        "NormalizedNamedEntityTag": "30.0", 
         "PartOfSpeech": "CD", 
-        "NamedEntityTag": "DURATION"
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"P30Y\" type=\"DURATION\">30 - year</TIMEX3>", 
+        "idx": 4
       }
     ], 
     [
       "-", 
       {
-        "NormalizedNamedEntityTag": "30.0", 
-        "Timex": "<TIMEX3 tid=\"t1\" value=\"P30Y\" type=\"DURATION\">30 - year</TIMEX3>", 
-        "idx": 5, 
         "Lemma": "-", 
+        "NamedEntityTag": "DURATION", 
+        "NormalizedNamedEntityTag": "30.0", 
         "PartOfSpeech": ":", 
-        "NamedEntityTag": "DURATION"
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"P30Y\" type=\"DURATION\">30 - year</TIMEX3>", 
+        "idx": 5
       }
     ], 
     [
       "year", 
       {
-        "NormalizedNamedEntityTag": "30.0", 
-        "Timex": "<TIMEX3 tid=\"t1\" value=\"P30Y\" type=\"DURATION\">30 - year</TIMEX3>", 
-        "idx": 6, 
         "Lemma": "year", 
+        "NamedEntityTag": "DURATION", 
+        "NormalizedNamedEntityTag": "30.0", 
         "PartOfSpeech": "NN", 
-        "NamedEntityTag": "DURATION"
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"P30Y\" type=\"DURATION\">30 - year</TIMEX3>", 
+        "idx": 6
       }
     ], 
     [
       "bond", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "bond", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 7
       }
@@ -487,8 +506,8 @@
     [
       "gained", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "gain", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBD", 
         "idx": 8
       }
@@ -496,38 +515,38 @@
     [
       "about", 
       {
-        "NamedEntityTag": "DURATION", 
         "Lemma": "about", 
-        "Timex": "<TIMEX3 tid=\"t2\" value=\"P3M\" type=\"DURATION\" mod=\"APPROX\">about a quarter</TIMEX3>", 
+        "NamedEntityTag": "DURATION", 
         "PartOfSpeech": "RB", 
+        "Timex": "<TIMEX3 tid=\"t2\" value=\"P3M\" type=\"DURATION\" mod=\"APPROX\">about a quarter</TIMEX3>", 
         "idx": 9
       }
     ], 
     [
       "a", 
       {
-        "NamedEntityTag": "DURATION", 
         "Lemma": "a", 
-        "Timex": "<TIMEX3 tid=\"t2\" value=\"P3M\" type=\"DURATION\" mod=\"APPROX\">about a quarter</TIMEX3>", 
+        "NamedEntityTag": "DURATION", 
         "PartOfSpeech": "DT", 
+        "Timex": "<TIMEX3 tid=\"t2\" value=\"P3M\" type=\"DURATION\" mod=\"APPROX\">about a quarter</TIMEX3>", 
         "idx": 10
       }
     ], 
     [
       "quarter", 
       {
-        "NamedEntityTag": "DURATION", 
         "Lemma": "quarter", 
-        "Timex": "<TIMEX3 tid=\"t2\" value=\"P3M\" type=\"DURATION\" mod=\"APPROX\">about a quarter</TIMEX3>", 
+        "NamedEntityTag": "DURATION", 
         "PartOfSpeech": "NN", 
+        "Timex": "<TIMEX3 tid=\"t2\" value=\"P3M\" type=\"DURATION\" mod=\"APPROX\">about a quarter</TIMEX3>", 
         "idx": 11
       }
     ], 
     [
       "of", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 12
       }
@@ -535,8 +554,8 @@
     [
       "a", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "a", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "DT", 
         "idx": 13
       }
@@ -544,8 +563,8 @@
     [
       "point", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "point", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 14
       }
@@ -553,8 +572,8 @@
     [
       ",", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ",", 
         "idx": 15
       }
@@ -562,8 +581,8 @@
     [
       "or", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "or", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "CC", 
         "idx": 16
       }
@@ -571,28 +590,28 @@
     [
       "$", 
       {
+        "Lemma": "$", 
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$2.5", 
         "PartOfSpeech": "$", 
-        "idx": 17, 
-        "Lemma": "$"
+        "idx": 17
       }
     ], 
     [
       "2.50", 
       {
+        "Lemma": "2.50", 
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$2.5", 
         "PartOfSpeech": "CD", 
-        "idx": 18, 
-        "Lemma": "2.50"
+        "idx": 18
       }
     ], 
     [
       "for", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "for", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 20
       }
@@ -600,8 +619,8 @@
     [
       "each", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "each", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "DT", 
         "idx": 21
       }
@@ -609,28 +628,28 @@
     [
       "$", 
       {
+        "Lemma": "$", 
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$1000.0", 
         "PartOfSpeech": "$", 
-        "idx": 22, 
-        "Lemma": "$"
+        "idx": 22
       }
     ], 
     [
       "1,000", 
       {
+        "Lemma": "1,000", 
         "NamedEntityTag": "MONEY", 
         "NormalizedNamedEntityTag": "$1000.0", 
         "PartOfSpeech": "CD", 
-        "idx": 23, 
-        "Lemma": "1,000"
+        "idx": 23
       }
     ], 
     [
       "of", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 25
       }
@@ -638,8 +657,8 @@
     [
       "face", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "face", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 26
       }
@@ -647,8 +666,8 @@
     [
       "amount", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "amount", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 27
       }
@@ -656,15 +675,11 @@
     [
       ".", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ".", 
         "idx": 28
       }
     ]
-  ], 
-  "treebank_sentence": "The Treasury 's benchmark 30 - year bond gained about a quarter of a point , or $ 2.50 *U* for each $ 1,000 *U* of face amount .", 
-  "parsetree": "(ROOT (FRAG (NP (NP (NP (DT The) (NNP Treasury) (POS 's)) (JJ benchmark)) (NP (CD 30))) (: -) (S (NP (NN year) (NN bond)) (VP (VBD gained) (NP (NP (NP (QP (RB about) (DT a) (NN quarter))) (PP (IN of) (NP (DT a) (NN point)))) (, ,) (CC or) (NP (NP ($ $) (CD 2.50)) (PP (IN for) (NP (NP (DT each) ($ $) (CD 1,000)) (PP (IN of) (NP (NN face) (NN amount))))))))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ (NP (DT The) (NNP Treasury) (POS 's)) (NN benchmark) (NML (CD 30) (HYPH -) (NN year)) (NN bond)) (VP (VBD gained) (NP (NP (NP (QP (RB about) (DT a) (NN quarter))) (PP (IN of) (NP (DT a) (NN point)))) (, ,) (CC or) (NP (NP ($ $) (CD 2.50) (-NONE- *U*)) (PP (IN for) (NP (NP (DT each) ($ $) (CD 1,000) (-NONE- *U*)) (PP (IN of) (NP (NN face) (NN amount)))))))) (. .)))", 
-  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+  ]
 }

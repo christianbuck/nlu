@@ -1,8 +1,18 @@
 {
+  "bbn_ne": [
+    [
+      0, 
+      1, 
+      "Big Board", 
+      "ORGANIZATION", 
+      "CORPORATION"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (NML (NNP Big) (NNP Board)) (NN volume)) (VP (VBD totaled) (NP (QP (CD 154.2) (CD million)) (NNS shares))) (. .)))", 
   "nom": [
     {
-      "lemma": "volume", 
-      "frame": "01", 
       "args": [
         [
           "ARG1", 
@@ -33,77 +43,14 @@
           "154.2 million shares"
         ]
       ], 
+      "baseform": "volume", 
+      "frame": "volume.01", 
       "tokenNr": "2"
     }
   ], 
-  "stanford_dep": [
-    {
-      "dep": "Big", 
-      "dep_idx": 0, 
-      "gov": "Board", 
-      "rel": "nn", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "Board", 
-      "dep_idx": 1, 
-      "gov": "volume", 
-      "rel": "nn", 
-      "gov_idx": 2
-    }, 
-    {
-      "dep": "volume", 
-      "dep_idx": 2, 
-      "gov": "totaled", 
-      "rel": "nsubj", 
-      "gov_idx": 3
-    }, 
-    {
-      "dep": "totaled", 
-      "dep_idx": 3, 
-      "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": -1
-    }, 
-    {
-      "dep": "154.2", 
-      "dep_idx": 4, 
-      "gov": "million", 
-      "rel": "number", 
-      "gov_idx": 5
-    }, 
-    {
-      "dep": "million", 
-      "dep_idx": 5, 
-      "gov": "shares", 
-      "rel": "num", 
-      "gov_idx": 6
-    }, 
-    {
-      "dep": "shares", 
-      "dep_idx": 6, 
-      "gov": "totaled", 
-      "rel": "dobj", 
-      "gov_idx": 3
-    }
-  ], 
-  "stanford_coref": [], 
-  "text": "Big Board volume totaled 154.2 million shares .", 
-  "coref_chains": [], 
-  "bbn_ne": [
-    [
-      0, 
-      1, 
-      "Big Board", 
-      "ORGANIZATION", 
-      "CORPORATION"
-    ]
-  ], 
+  "parsetree": "(ROOT (S (NP (NNP Big) (NNP Board) (NN volume)) (VP (VBD totaled) (NP (QP (CD 154.2) (CD million)) (NNS shares))) (. .)))", 
   "prop": [
     {
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "total", 
       "args": [
         [
           "rel", 
@@ -127,10 +74,69 @@
           "154.2 million shares"
         ]
       ], 
-      "roleset": "total.01"
+      "baseform": "total", 
+      "basepos": "v", 
+      "frame": "total.01", 
+      "inflection": "-----"
     }
   ], 
+  "ptbparse": "( (S (NP-SBJ (NNP Big) (NNP Board) (NN volume) ) (VP (VBD totaled) (NP (QP (CD 154.2) (CD million) ) (NNS shares) )) (. .) ))", 
   "sentence_nr": 14, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "Big", 
+      "dep_idx": 0, 
+      "gov": "Board", 
+      "gov_idx": 1, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Board", 
+      "dep_idx": 1, 
+      "gov": "volume", 
+      "gov_idx": 2, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "volume", 
+      "dep_idx": 2, 
+      "gov": "totaled", 
+      "gov_idx": 3, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "totaled", 
+      "dep_idx": 3, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "154.2", 
+      "dep_idx": 4, 
+      "gov": "million", 
+      "gov_idx": 5, 
+      "rel": "number"
+    }, 
+    {
+      "dep": "million", 
+      "dep_idx": 5, 
+      "gov": "shares", 
+      "gov_idx": 6, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "shares", 
+      "dep_idx": 6, 
+      "gov": "totaled", 
+      "gov_idx": 3, 
+      "rel": "dobj"
+    }
+  ], 
+  "text": "Big Board volume totaled 154.2 million shares .", 
+  "timex": [], 
+  "treebank_sentence": "Big Board volume totaled 154.2 million shares .", 
   "tuples": [
     [
       "nn", 
@@ -172,8 +178,8 @@
     [
       "Big", 
       {
-        "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Big", 
+        "NamedEntityTag": "ORGANIZATION", 
         "PartOfSpeech": "NNP", 
         "idx": 0
       }
@@ -181,8 +187,8 @@
     [
       "Board", 
       {
-        "NamedEntityTag": "ORGANIZATION", 
         "Lemma": "Board", 
+        "NamedEntityTag": "ORGANIZATION", 
         "PartOfSpeech": "NNP", 
         "idx": 1
       }
@@ -190,8 +196,8 @@
     [
       "volume", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "volume", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 2
       }
@@ -199,8 +205,8 @@
     [
       "totaled", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "total", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBD", 
         "idx": 3
       }
@@ -208,28 +214,28 @@
     [
       "154.2", 
       {
+        "Lemma": "154.2", 
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "1.542E8", 
         "PartOfSpeech": "CD", 
-        "idx": 4, 
-        "Lemma": "154.2"
+        "idx": 4
       }
     ], 
     [
       "million", 
       {
+        "Lemma": "million", 
         "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "1.542E8", 
         "PartOfSpeech": "CD", 
-        "idx": 5, 
-        "Lemma": "million"
+        "idx": 5
       }
     ], 
     [
       "shares", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "share", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 6
       }
@@ -237,15 +243,11 @@
     [
       ".", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ".", 
         "idx": 7
       }
     ]
-  ], 
-  "treebank_sentence": "Big Board volume totaled 154.2 million shares .", 
-  "parsetree": "(ROOT (S (NP (NNP Big) (NNP Board) (NN volume)) (VP (VBD totaled) (NP (QP (CD 154.2) (CD million)) (NNS shares))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ (NML (NNP Big) (NNP Board)) (NN volume)) (VP (VBD totaled) (NP (QP (CD 154.2) (CD million)) (NNS shares))) (. .)))", 
-  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+  ]
 }

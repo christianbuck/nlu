@@ -1,8 +1,10 @@
 {
+  "bbn_ne": [], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (NN Stock) (NNS prices)) (VP (VBD rose) (ADVP-MNR (RB fractionally)) (PP-LOC (IN in) (NP (JJ moderate) (VBG trading)))) (. .)))", 
   "nom": [
     {
-      "lemma": "price", 
-      "frame": "01", 
       "args": [
         [
           "ARG1", 
@@ -26,62 +28,14 @@
           "prices"
         ]
       ], 
+      "baseform": "price", 
+      "frame": "price.01", 
       "tokenNr": "1"
     }
   ], 
-  "stanford_dep": [
-    {
-      "dep": "Stock", 
-      "dep_idx": 0, 
-      "gov": "prices", 
-      "rel": "nn", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "prices", 
-      "dep_idx": 1, 
-      "gov": "rose", 
-      "rel": "nsubj", 
-      "gov_idx": 2
-    }, 
-    {
-      "dep": "rose", 
-      "dep_idx": 2, 
-      "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": -1
-    }, 
-    {
-      "dep": "fractionally", 
-      "dep_idx": 3, 
-      "gov": "rose", 
-      "rel": "advmod", 
-      "gov_idx": 2
-    }, 
-    {
-      "dep": "moderate", 
-      "dep_idx": 5, 
-      "gov": "rose", 
-      "rel": "prep_in", 
-      "gov_idx": 2
-    }, 
-    {
-      "dep": "trading", 
-      "dep_idx": 6, 
-      "gov": "moderate", 
-      "rel": "amod", 
-      "gov_idx": 5
-    }
-  ], 
-  "stanford_coref": [], 
-  "text": "Stock prices rose fractionally in moderate trading .", 
-  "coref_chains": [], 
-  "bbn_ne": [], 
+  "parsetree": "(ROOT (S (NP (NN Stock) (NNS prices)) (VP (VBD rose) (ADVP (RB fractionally)) (PP (IN in) (NP (JJ moderate) (NN trading)))) (. .)))", 
   "prop": [
     {
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "rise", 
       "args": [
         [
           "rel", 
@@ -112,10 +66,62 @@
           "in moderate trading"
         ]
       ], 
-      "roleset": "rise.01"
+      "baseform": "rise", 
+      "basepos": "v", 
+      "frame": "rise.01", 
+      "inflection": "-----"
     }
   ], 
+  "ptbparse": "( (S (NP-SBJ (NN Stock) (NNS prices) ) (VP (VBD rose) (ADVP-MNR (RB fractionally) ) (PP-LOC (IN in) (NP (JJ moderate) (VBG trading) ))) (. .) ))", 
   "sentence_nr": 13, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "Stock", 
+      "dep_idx": 0, 
+      "gov": "prices", 
+      "gov_idx": 1, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "prices", 
+      "dep_idx": 1, 
+      "gov": "rose", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "rose", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "fractionally", 
+      "dep_idx": 3, 
+      "gov": "rose", 
+      "gov_idx": 2, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "moderate", 
+      "dep_idx": 5, 
+      "gov": "rose", 
+      "gov_idx": 2, 
+      "rel": "prep_in"
+    }, 
+    {
+      "dep": "trading", 
+      "dep_idx": 6, 
+      "gov": "moderate", 
+      "gov_idx": 5, 
+      "rel": "amod"
+    }
+  ], 
+  "text": "Stock prices rose fractionally in moderate trading .", 
+  "timex": [], 
+  "treebank_sentence": "Stock prices rose fractionally in moderate trading .", 
   "tuples": [
     [
       "nn", 
@@ -152,8 +158,8 @@
     [
       "Stock", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "stock", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 0
       }
@@ -161,8 +167,8 @@
     [
       "prices", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "price", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 1
       }
@@ -170,8 +176,8 @@
     [
       "rose", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "rise", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBD", 
         "idx": 2
       }
@@ -179,8 +185,8 @@
     [
       "fractionally", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "fractionally", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "RB", 
         "idx": 3
       }
@@ -188,8 +194,8 @@
     [
       "in", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "in", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 4
       }
@@ -197,8 +203,8 @@
     [
       "moderate", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "moderate", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "JJ", 
         "idx": 5
       }
@@ -206,8 +212,8 @@
     [
       "trading", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "trading", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 6
       }
@@ -215,15 +221,11 @@
     [
       ".", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ".", 
         "idx": 7
       }
     ]
-  ], 
-  "treebank_sentence": "Stock prices rose fractionally in moderate trading .", 
-  "parsetree": "(ROOT (S (NP (NN Stock) (NNS prices)) (VP (VBD rose) (ADVP (RB fractionally)) (PP (IN in) (NP (JJ moderate) (NN trading)))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ (NN Stock) (NNS prices)) (VP (VBD rose) (ADVP-MNR (RB fractionally)) (PP-LOC (IN in) (NP (JJ moderate) (VBG trading)))) (. .)))", 
-  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+  ]
 }

@@ -1,8 +1,31 @@
 {
+  "bbn_ne": [
+    [
+      11, 
+      11, 
+      "managers", 
+      "PER_DESC", 
+      ""
+    ]
+  ], 
+  "coref_chains": [
+    [
+      10, 
+      11, 
+      1, 
+      "money managers"
+    ], 
+    [
+      20, 
+      20, 
+      1, 
+      "their"
+    ]
+  ], 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (CC But) (PP (IN with) (S-NOM (NP-SBJ (NP (DT the) (NN end)) (PP (IN of) (NP (DT the) (NN year)))) (PP-LOC-PRD (IN in) (NP (NN sight))))) (, ,) (NP-SBJ-1 (NN money) (NNS managers)) (VP (VBP are) (ADJP-PRD (JJ eager) (S (NP-SBJ-2 (-NONE- *PRO*-1)) (VP (TO to) (VP (VP (VB take) (NP (NNS profits))) (CC and) (VP (VB cut) (NP (NP (PRP$ their) (NNS risks)) (PP (IN of) (S-NOM (NP-SBJ (-NONE- *PRO*-2)) (VP (VBG losing) (SBAR-NOM (WHNP-178 (WP what)) (S (PP (IN for) (NP (JJ many))) (NP-SBJ (-NONE- *T*-178)) (VP (VBP have) (VP (VBN been) (NP-PRD (NP (ADJP (RB exceptionally) (JJ good)) (NNS returns)) (X (PP (IN in))))))))))))))))))))", 
   "nom": [
     {
-      "lemma": "end", 
-      "frame": "01", 
       "args": [
         [
           "rel", 
@@ -19,11 +42,11 @@
           "of the year"
         ]
       ], 
+      "baseform": "end", 
+      "frame": "end.01", 
       "tokenNr": "3"
     }, 
     {
-      "lemma": "manager", 
-      "frame": "01", 
       "args": [
         [
           "ARG1", 
@@ -47,11 +70,11 @@
           "managers"
         ]
       ], 
+      "baseform": "manager", 
+      "frame": "manager.01", 
       "tokenNr": "11"
     }, 
     {
-      "lemma": "profit", 
-      "frame": "01", 
       "args": [
         [
           "ARG0", 
@@ -82,11 +105,11 @@
           "profits"
         ]
       ], 
+      "baseform": "profit", 
+      "frame": "profit.01", 
       "tokenNr": "17"
     }, 
     {
-      "lemma": "return", 
-      "frame": "04", 
       "args": [
         [
           "ARGM-MNR", 
@@ -110,11 +133,11 @@
           "returns"
         ]
       ], 
+      "baseform": "return", 
+      "frame": "return.04", 
       "tokenNr": "33"
     }, 
     {
-      "lemma": "risk", 
-      "frame": "01", 
       "args": [
         [
           "ARG0", 
@@ -135,14 +158,14 @@
           "22:1", 
           22, 
           34, 
-          "of *PRO*-2 losing what for many *T*-178 have been exceptionally good returns in"
+          "of *-2 losing what for many *T*-178 have been exceptionally good returns in"
         ]
       ], 
+      "baseform": "risk", 
+      "frame": "risk.01", 
       "tokenNr": "21"
     }, 
     {
-      "lemma": "sight", 
-      "frame": "01", 
       "args": [
         [
           "ARG1", 
@@ -159,242 +182,14 @@
           "sight"
         ]
       ], 
+      "baseform": "sight", 
+      "frame": "sight.01", 
       "tokenNr": "8"
     }
   ], 
-  "stanford_dep": [
-    {
-      "dep": "But", 
-      "dep_idx": 0, 
-      "gov": "eager", 
-      "rel": "cc", 
-      "gov_idx": 13
-    }, 
-    {
-      "dep": "the", 
-      "dep_idx": 2, 
-      "gov": "end", 
-      "rel": "det", 
-      "gov_idx": 3
-    }, 
-    {
-      "dep": "end", 
-      "dep_idx": 3, 
-      "gov": "eager", 
-      "rel": "prepc_with", 
-      "gov_idx": 13
-    }, 
-    {
-      "dep": "the", 
-      "dep_idx": 5, 
-      "gov": "year", 
-      "rel": "det", 
-      "gov_idx": 6
-    }, 
-    {
-      "dep": "year", 
-      "dep_idx": 6, 
-      "gov": "end", 
-      "rel": "prep_of", 
-      "gov_idx": 3
-    }, 
-    {
-      "dep": "in", 
-      "dep_idx": 7, 
-      "gov": "end", 
-      "rel": "dep", 
-      "gov_idx": 3
-    }, 
-    {
-      "dep": "sight", 
-      "dep_idx": 8, 
-      "gov": "in", 
-      "rel": "pobj", 
-      "gov_idx": 7
-    }, 
-    {
-      "dep": "money", 
-      "dep_idx": 10, 
-      "gov": "managers", 
-      "rel": "nn", 
-      "gov_idx": 11
-    }, 
-    {
-      "dep": "managers", 
-      "dep_idx": 11, 
-      "gov": "eager", 
-      "rel": "nsubj", 
-      "gov_idx": 13
-    }, 
-    {
-      "dep": "are", 
-      "dep_idx": 12, 
-      "gov": "eager", 
-      "rel": "cop", 
-      "gov_idx": 13
-    }, 
-    {
-      "dep": "eager", 
-      "dep_idx": 13, 
-      "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": -1
-    }, 
-    {
-      "dep": "to", 
-      "dep_idx": 15, 
-      "gov": "take", 
-      "rel": "aux", 
-      "gov_idx": 16
-    }, 
-    {
-      "dep": "take", 
-      "dep_idx": 16, 
-      "gov": "eager", 
-      "rel": "xcomp", 
-      "gov_idx": 13
-    }, 
-    {
-      "dep": "profits", 
-      "dep_idx": 17, 
-      "gov": "take", 
-      "rel": "dobj", 
-      "gov_idx": 16
-    }, 
-    {
-      "dep": "cut", 
-      "dep_idx": 19, 
-      "gov": "eager", 
-      "rel": "xcomp", 
-      "gov_idx": 13
-    }, 
-    {
-      "dep": "cut", 
-      "dep_idx": 19, 
-      "gov": "take", 
-      "rel": "conj_and", 
-      "gov_idx": 16
-    }, 
-    {
-      "dep": "their", 
-      "dep_idx": 20, 
-      "gov": "risks", 
-      "rel": "poss", 
-      "gov_idx": 21
-    }, 
-    {
-      "dep": "risks", 
-      "dep_idx": 21, 
-      "gov": "cut", 
-      "rel": "dobj", 
-      "gov_idx": 19
-    }, 
-    {
-      "dep": "losing", 
-      "dep_idx": 24, 
-      "gov": "risks", 
-      "rel": "prepc_of", 
-      "gov_idx": 21
-    }, 
-    {
-      "dep": "what", 
-      "dep_idx": 25, 
-      "gov": "returns", 
-      "rel": "nsubj", 
-      "gov_idx": 33
-    }, 
-    {
-      "dep": "many", 
-      "dep_idx": 27, 
-      "gov": "returns", 
-      "rel": "prep_for", 
-      "gov_idx": 33
-    }, 
-    {
-      "dep": "have", 
-      "dep_idx": 29, 
-      "gov": "returns", 
-      "rel": "aux", 
-      "gov_idx": 33
-    }, 
-    {
-      "dep": "been", 
-      "dep_idx": 30, 
-      "gov": "returns", 
-      "rel": "cop", 
-      "gov_idx": 33
-    }, 
-    {
-      "dep": "exceptionally", 
-      "dep_idx": 31, 
-      "gov": "good", 
-      "rel": "advmod", 
-      "gov_idx": 32
-    }, 
-    {
-      "dep": "good", 
-      "dep_idx": 32, 
-      "gov": "returns", 
-      "rel": "amod", 
-      "gov_idx": 33
-    }, 
-    {
-      "dep": "returns", 
-      "dep_idx": 33, 
-      "gov": "losing", 
-      "rel": "ccomp", 
-      "gov_idx": 24
-    }, 
-    {
-      "dep": "in", 
-      "dep_idx": 34, 
-      "gov": "returns", 
-      "rel": "dep", 
-      "gov_idx": 33
-    }
-  ], 
-  "stanford_coref": [
-    [
-      [
-        "their", 
-        19, 
-        20
-      ], 
-      [
-        "money managers", 
-        10, 
-        12
-      ]
-    ]
-  ], 
-  "coref_chains": [
-    [
-      10, 
-      11, 
-      1, 
-      "money managers"
-    ], 
-    [
-      20, 
-      20, 
-      1, 
-      "their"
-    ]
-  ], 
-  "bbn_ne": [
-    [
-      11, 
-      11, 
-      "managers", 
-      "PER_DESC", 
-      ""
-    ]
-  ], 
+  "parsetree": "(ROOT (S (CC But) (PP (IN with) (NP (NP (DT the) (NN end)) (PP (IN of) (NP (NP (DT the) (NN year)) (PP (IN in) (NP (NN sight))))))) (, ,) (NP (NN money) (NNS managers)) (VP (VBP are) (ADJP (JJ eager) (S (VP (TO to) (VP (VP (VB take) (NP (NNS profits))) (CC and) (VP (VB cut) (NP (NP (PRP$ their) (NNS risks)) (PP (IN of) (S (VP (VBG losing) (SBAR (WHNP (WP what)) (PP (IN for) (ADJP (JJ many))) (S (VP (VBP have) (VP (VBN been) (NP (ADJP (RB exceptionally) (JJ good)) (NNS returns)) (PP (IN in))))))))))))))))))", 
   "prop": [
     {
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "take", 
       "args": [
         [
           "rel", 
@@ -418,12 +213,12 @@
           "profits"
         ]
       ], 
-      "roleset": "take.01"
+      "baseform": "take", 
+      "basepos": "v", 
+      "frame": "take.01", 
+      "inflection": "-----"
     }, 
     {
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "cut", 
       "args": [
         [
           "rel", 
@@ -454,12 +249,12 @@
           ""
         ]
       ], 
-      "roleset": "cut.02"
+      "baseform": "cut", 
+      "basepos": "v", 
+      "frame": "cut.02", 
+      "inflection": "-----"
     }, 
     {
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "lose", 
       "args": [
         [
           "rel", 
@@ -490,10 +285,229 @@
           ""
         ]
       ], 
-      "roleset": "lose.02"
+      "baseform": "lose", 
+      "basepos": "v", 
+      "frame": "lose.02", 
+      "inflection": "-----"
     }
   ], 
+  "ptbparse": "( (S (CC But) (PP (IN with) (S-NOM (NP-SBJ (NP (DT the) (NN end) ) (PP (IN of) (NP (DT the) (NN year) ))) (PP-LOC-PRD (IN in) (NP (NN sight) )))) (, ,) (NP-SBJ-1 (NN money) (NNS managers) ) (VP (VBP are) (ADJP-PRD (JJ eager) (S (NP-SBJ-2 (-NONE- *-1) ) (VP (TO to) (VP (VP (VB take) (NP (NNS profits) )) (CC and) (VP (VB cut) (NP (NP (PRP$ their) (NNS risks) ) (PP (IN of) (S-NOM (NP-SBJ (-NONE- *-2) ) (VP (VBG losing) (SBAR-NOM (WHNP-178 (WP what) ) (S (PP (IN for) (NP (JJ many) )) (NP-SBJ (-NONE- *T*-178) ) (VP (VBP have) (VP (VBN been) (NP-PRD (NP (ADJP (RB exceptionally) (JJ good) ) (NNS returns) ) (X (PP (IN in) )))))))))))))))))))", 
   "sentence_nr": 8, 
+  "stanford_coref": [
+    [
+      [
+        "their", 
+        19, 
+        20
+      ], 
+      [
+        "money managers", 
+        10, 
+        12
+      ]
+    ]
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "But", 
+      "dep_idx": 0, 
+      "gov": "eager", 
+      "gov_idx": 13, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 2, 
+      "gov": "end", 
+      "gov_idx": 3, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "end", 
+      "dep_idx": 3, 
+      "gov": "eager", 
+      "gov_idx": 13, 
+      "rel": "prepc_with"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 5, 
+      "gov": "year", 
+      "gov_idx": 6, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "year", 
+      "dep_idx": 6, 
+      "gov": "end", 
+      "gov_idx": 3, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 7, 
+      "gov": "end", 
+      "gov_idx": 3, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "sight", 
+      "dep_idx": 8, 
+      "gov": "in", 
+      "gov_idx": 7, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "money", 
+      "dep_idx": 10, 
+      "gov": "managers", 
+      "gov_idx": 11, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "managers", 
+      "dep_idx": 11, 
+      "gov": "eager", 
+      "gov_idx": 13, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "are", 
+      "dep_idx": 12, 
+      "gov": "eager", 
+      "gov_idx": 13, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "eager", 
+      "dep_idx": 13, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 15, 
+      "gov": "take", 
+      "gov_idx": 16, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "take", 
+      "dep_idx": 16, 
+      "gov": "eager", 
+      "gov_idx": 13, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "profits", 
+      "dep_idx": 17, 
+      "gov": "take", 
+      "gov_idx": 16, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "cut", 
+      "dep_idx": 19, 
+      "gov": "eager", 
+      "gov_idx": 13, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "cut", 
+      "dep_idx": 19, 
+      "gov": "take", 
+      "gov_idx": 16, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "their", 
+      "dep_idx": 20, 
+      "gov": "risks", 
+      "gov_idx": 21, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "risks", 
+      "dep_idx": 21, 
+      "gov": "cut", 
+      "gov_idx": 19, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "losing", 
+      "dep_idx": 24, 
+      "gov": "risks", 
+      "gov_idx": 21, 
+      "rel": "prepc_of"
+    }, 
+    {
+      "dep": "what", 
+      "dep_idx": 25, 
+      "gov": "returns", 
+      "gov_idx": 33, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "many", 
+      "dep_idx": 27, 
+      "gov": "returns", 
+      "gov_idx": 33, 
+      "rel": "prep_for"
+    }, 
+    {
+      "dep": "have", 
+      "dep_idx": 29, 
+      "gov": "returns", 
+      "gov_idx": 33, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "been", 
+      "dep_idx": 30, 
+      "gov": "returns", 
+      "gov_idx": 33, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "exceptionally", 
+      "dep_idx": 31, 
+      "gov": "good", 
+      "gov_idx": 32, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "good", 
+      "dep_idx": 32, 
+      "gov": "returns", 
+      "gov_idx": 33, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "returns", 
+      "dep_idx": 33, 
+      "gov": "losing", 
+      "gov_idx": 24, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 34, 
+      "gov": "returns", 
+      "gov_idx": 33, 
+      "rel": "dep"
+    }
+  ], 
+  "text": "But with the end of the year in sight , money managers are eager to take profits and cut their risks of losing what for many have been exceptionally good returns in", 
+  "timex": [
+    [
+      "t1", 
+      5, 
+      6, 
+      "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">the year</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "But with the end of the year in sight , money managers are eager *PRO*-1 to take profits and cut their risks of *PRO*-2 losing what for many *T*-178 have been exceptionally good returns in", 
   "tuples": [
     [
       "cc", 
@@ -631,13 +645,12 @@
       "in"
     ]
   ], 
-  "text": "But with the end of the year in sight , money managers are eager to take profits and cut their risks of losing what for many have been exceptionally good returns in", 
   "words": [
     [
       "But", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "but", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "CC", 
         "idx": 0
       }
@@ -645,8 +658,8 @@
     [
       "with", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "with", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 1
       }
@@ -654,8 +667,8 @@
     [
       "the", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "DT", 
         "idx": 2
       }
@@ -663,8 +676,8 @@
     [
       "end", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "end", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 3
       }
@@ -672,8 +685,8 @@
     [
       "of", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 4
       }
@@ -681,30 +694,30 @@
     [
       "the", 
       {
-        "NormalizedNamedEntityTag": "THIS", 
-        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">the year</TIMEX3>", 
-        "idx": 5, 
         "Lemma": "the", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "THIS", 
         "PartOfSpeech": "DT", 
-        "NamedEntityTag": "DATE"
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">the year</TIMEX3>", 
+        "idx": 5
       }
     ], 
     [
       "year", 
       {
-        "NormalizedNamedEntityTag": "THIS", 
-        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">the year</TIMEX3>", 
-        "idx": 6, 
         "Lemma": "year", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "THIS", 
         "PartOfSpeech": "NN", 
-        "NamedEntityTag": "DATE"
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">the year</TIMEX3>", 
+        "idx": 6
       }
     ], 
     [
       "in", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "in", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 7
       }
@@ -712,8 +725,8 @@
     [
       "sight", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "sight", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 8
       }
@@ -721,8 +734,8 @@
     [
       ",", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ",", 
         "idx": 9
       }
@@ -730,8 +743,8 @@
     [
       "money", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "money", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 10
       }
@@ -739,8 +752,8 @@
     [
       "managers", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "manager", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 11
       }
@@ -748,8 +761,8 @@
     [
       "are", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "be", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBP", 
         "idx": 12
       }
@@ -757,8 +770,8 @@
     [
       "eager", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "eager", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "JJ", 
         "idx": 13
       }
@@ -766,8 +779,8 @@
     [
       "to", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "to", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "TO", 
         "idx": 15
       }
@@ -775,8 +788,8 @@
     [
       "take", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "take", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VB", 
         "idx": 16
       }
@@ -784,8 +797,8 @@
     [
       "profits", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "profit", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 17
       }
@@ -793,8 +806,8 @@
     [
       "and", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "and", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "CC", 
         "idx": 18
       }
@@ -802,8 +815,8 @@
     [
       "cut", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "cut", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VB", 
         "idx": 19
       }
@@ -811,8 +824,8 @@
     [
       "their", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "they", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "PRP$", 
         "idx": 20
       }
@@ -820,8 +833,8 @@
     [
       "risks", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "risk", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 21
       }
@@ -829,8 +842,8 @@
     [
       "of", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 22
       }
@@ -838,8 +851,8 @@
     [
       "losing", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "lose", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBG", 
         "idx": 24
       }
@@ -847,8 +860,8 @@
     [
       "what", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "what", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "WP", 
         "idx": 25
       }
@@ -856,8 +869,8 @@
     [
       "for", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "for", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 26
       }
@@ -865,8 +878,8 @@
     [
       "many", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "many", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "JJ", 
         "idx": 27
       }
@@ -874,8 +887,8 @@
     [
       "have", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "have", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBP", 
         "idx": 29
       }
@@ -883,8 +896,8 @@
     [
       "been", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "be", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBN", 
         "idx": 30
       }
@@ -892,8 +905,8 @@
     [
       "exceptionally", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "exceptionally", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "RB", 
         "idx": 31
       }
@@ -901,8 +914,8 @@
     [
       "good", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "good", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "JJ", 
         "idx": 32
       }
@@ -910,8 +923,8 @@
     [
       "returns", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "return", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 33
       }
@@ -919,15 +932,11 @@
     [
       "in", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "in", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 34
       }
     ]
-  ], 
-  "treebank_sentence": "But with the end of the year in sight , money managers are eager *PRO*-1 to take profits and cut their risks of *PRO*-2 losing what for many *T*-178 have been exceptionally good returns in", 
-  "parsetree": "(ROOT (S (CC But) (PP (IN with) (NP (NP (DT the) (NN end)) (PP (IN of) (NP (NP (DT the) (NN year)) (PP (IN in) (NP (NN sight))))))) (, ,) (NP (NN money) (NNS managers)) (VP (VBP are) (ADJP (JJ eager) (S (VP (TO to) (VP (VP (VB take) (NP (NNS profits))) (CC and) (VP (VB cut) (NP (NP (PRP$ their) (NNS risks)) (PP (IN of) (S (VP (VBG losing) (SBAR (WHNP (WP what)) (PP (IN for) (ADJP (JJ many))) (S (VP (VBP have) (VP (VBN been) (NP (ADJP (RB exceptionally) (JJ good)) (NNS returns)) (PP (IN in))))))))))))))))))", 
-  "goldparse": "(TOP (S (CC But) (PP (IN with) (S-NOM (NP-SBJ (NP (DT the) (NN end)) (PP (IN of) (NP (DT the) (NN year)))) (PP-LOC-PRD (IN in) (NP (NN sight))))) (, ,) (NP-SBJ-1 (NN money) (NNS managers)) (VP (VBP are) (ADJP-PRD (JJ eager) (S (NP-SBJ-2 (-NONE- *PRO*-1)) (VP (TO to) (VP (VP (VB take) (NP (NNS profits))) (CC and) (VP (VB cut) (NP (NP (PRP$ their) (NNS risks)) (PP (IN of) (S-NOM (NP-SBJ (-NONE- *PRO*-2)) (VP (VBG losing) (SBAR-NOM (WHNP-178 (WP what)) (S (PP (IN for) (NP (JJ many))) (NP-SBJ (-NONE- *T*-178)) (VP (VBP have) (VP (VBN been) (NP-PRD (NP (ADJP (RB exceptionally) (JJ good)) (NNS returns)) (X (PP (IN in))))))))))))))))))))", 
-  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+  ]
 }

@@ -1,8 +1,10 @@
 {
+  "bbn_ne": [], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (PP-LOC (IN In) (NP (JJ major) (NN market) (NN activity)) (: :)))", 
   "nom": [
     {
-      "lemma": "activity", 
-      "frame": "01", 
       "args": [
         [
           "ARG1", 
@@ -19,45 +21,49 @@
           "activity"
         ]
       ], 
+      "baseform": "activity", 
+      "frame": "activity.01", 
       "tokenNr": "3"
     }
   ], 
+  "parsetree": "(ROOT (FRAG (PP (IN In) (NP (JJ major) (NN market))) (NP-TMP (NN activity)) (: :)))", 
+  "prop": [], 
+  "ptbparse": "( (PP-LOC (IN In) (NP (JJ major) (NN market) (NN activity) ) (: :) ))", 
+  "sentence_nr": 12, 
+  "stanford_coref": [], 
   "stanford_dep": [
     {
       "dep": "In", 
       "dep_idx": 0, 
       "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": -1
+      "gov_idx": -1, 
+      "rel": "root"
     }, 
     {
       "dep": "major", 
       "dep_idx": 1, 
       "gov": "activity", 
-      "rel": "amod", 
-      "gov_idx": 3
+      "gov_idx": 3, 
+      "rel": "amod"
     }, 
     {
       "dep": "market", 
       "dep_idx": 2, 
       "gov": "activity", 
-      "rel": "nn", 
-      "gov_idx": 3
+      "gov_idx": 3, 
+      "rel": "nn"
     }, 
     {
       "dep": "activity", 
       "dep_idx": 3, 
       "gov": "In", 
-      "rel": "pobj", 
-      "gov_idx": 0
+      "gov_idx": 0, 
+      "rel": "pobj"
     }
   ], 
-  "stanford_coref": [], 
   "text": "In major market activity :", 
-  "coref_chains": [], 
-  "bbn_ne": [], 
-  "prop": [], 
-  "sentence_nr": 12, 
+  "timex": [], 
+  "treebank_sentence": "In major market activity :", 
   "tuples": [
     [
       "dep", 
@@ -84,8 +90,8 @@
     [
       "In", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "in", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 0
       }
@@ -93,8 +99,8 @@
     [
       "major", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "major", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "JJ", 
         "idx": 1
       }
@@ -102,8 +108,8 @@
     [
       "market", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "market", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 2
       }
@@ -111,8 +117,8 @@
     [
       "activity", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "activity", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 3
       }
@@ -120,15 +126,11 @@
     [
       ":", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ":", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ":", 
         "idx": 4
       }
     ]
-  ], 
-  "treebank_sentence": "In major market activity :", 
-  "parsetree": "(ROOT (FRAG (PP (IN In) (NP (JJ major) (NN market))) (NP-TMP (NN activity)) (: :)))", 
-  "goldparse": "(TOP (PP-LOC (IN In) (NP (JJ major) (NN market) (NN activity)) (: :)))", 
-  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+  ]
 }

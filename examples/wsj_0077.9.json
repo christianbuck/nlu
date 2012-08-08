@@ -1,8 +1,10 @@
 {
+  "bbn_ne": [], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (JJ Economic) (NN news)) (VP (VBD had) (NP (NP (JJ little) (NN effect)) (PP (IN on) (NP (JJ financial) (NNS markets))))) (. .)))", 
   "nom": [
     {
-      "lemma": "effect", 
-      "frame": "01", 
       "args": [
         [
           "ARG0", 
@@ -47,11 +49,11 @@
           "on financial markets"
         ]
       ], 
+      "baseform": "effect", 
+      "frame": "effect.01", 
       "tokenNr": "4"
     }, 
     {
-      "lemma": "news", 
-      "frame": "01", 
       "args": [
         [
           "ARG1", 
@@ -68,69 +70,14 @@
           "news"
         ]
       ], 
+      "baseform": "news", 
+      "frame": "news.01", 
       "tokenNr": "1"
     }
   ], 
-  "stanford_dep": [
-    {
-      "dep": "Economic", 
-      "dep_idx": 0, 
-      "gov": "news", 
-      "rel": "amod", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "news", 
-      "dep_idx": 1, 
-      "gov": "had", 
-      "rel": "nsubj", 
-      "gov_idx": 2
-    }, 
-    {
-      "dep": "had", 
-      "dep_idx": 2, 
-      "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": -1
-    }, 
-    {
-      "dep": "little", 
-      "dep_idx": 3, 
-      "gov": "effect", 
-      "rel": "amod", 
-      "gov_idx": 4
-    }, 
-    {
-      "dep": "effect", 
-      "dep_idx": 4, 
-      "gov": "had", 
-      "rel": "dobj", 
-      "gov_idx": 2
-    }, 
-    {
-      "dep": "financial", 
-      "dep_idx": 6, 
-      "gov": "markets", 
-      "rel": "amod", 
-      "gov_idx": 7
-    }, 
-    {
-      "dep": "markets", 
-      "dep_idx": 7, 
-      "gov": "effect", 
-      "rel": "prep_on", 
-      "gov_idx": 4
-    }
-  ], 
-  "stanford_coref": [], 
-  "text": "Economic news had little effect on financial markets .", 
-  "coref_chains": [], 
-  "bbn_ne": [], 
+  "parsetree": "(ROOT (S (NP (JJ Economic) (NN news)) (VP (VBD had) (NP (NP (JJ little) (NN effect)) (PP (IN on) (NP (JJ financial) (NNS markets))))) (. .)))", 
   "prop": [
     {
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "have", 
       "args": [
         [
           "rel", 
@@ -154,10 +101,69 @@
           "little effect on financial markets"
         ]
       ], 
-      "roleset": "have.03"
+      "baseform": "have", 
+      "basepos": "v", 
+      "frame": "have.03", 
+      "inflection": "-----"
     }
   ], 
+  "ptbparse": "( (S (NP-SBJ (JJ Economic) (NN news) ) (VP (VBD had) (NP (NP (JJ little) (NN effect) ) (PP (IN on) (NP (JJ financial) (NNS markets) )))) (. .) ))", 
   "sentence_nr": 9, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "Economic", 
+      "dep_idx": 0, 
+      "gov": "news", 
+      "gov_idx": 1, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "news", 
+      "dep_idx": 1, 
+      "gov": "had", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "had", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "little", 
+      "dep_idx": 3, 
+      "gov": "effect", 
+      "gov_idx": 4, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "effect", 
+      "dep_idx": 4, 
+      "gov": "had", 
+      "gov_idx": 2, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "financial", 
+      "dep_idx": 6, 
+      "gov": "markets", 
+      "gov_idx": 7, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "markets", 
+      "dep_idx": 7, 
+      "gov": "effect", 
+      "gov_idx": 4, 
+      "rel": "prep_on"
+    }
+  ], 
+  "text": "Economic news had little effect on financial markets .", 
+  "timex": [], 
+  "treebank_sentence": "Economic news had little effect on financial markets .", 
   "tuples": [
     [
       "amod", 
@@ -199,8 +205,8 @@
     [
       "Economic", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "economic", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "JJ", 
         "idx": 0
       }
@@ -208,8 +214,8 @@
     [
       "news", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "news", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 1
       }
@@ -217,8 +223,8 @@
     [
       "had", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "have", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBD", 
         "idx": 2
       }
@@ -226,8 +232,8 @@
     [
       "little", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "little", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "JJ", 
         "idx": 3
       }
@@ -235,8 +241,8 @@
     [
       "effect", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "effect", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 4
       }
@@ -244,8 +250,8 @@
     [
       "on", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "on", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 5
       }
@@ -253,8 +259,8 @@
     [
       "financial", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "financial", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "JJ", 
         "idx": 6
       }
@@ -262,8 +268,8 @@
     [
       "markets", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "market", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 7
       }
@@ -271,15 +277,11 @@
     [
       ".", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ".", 
         "idx": 8
       }
     ]
-  ], 
-  "treebank_sentence": "Economic news had little effect on financial markets .", 
-  "parsetree": "(ROOT (S (NP (JJ Economic) (NN news)) (VP (VBD had) (NP (NP (JJ little) (NN effect)) (PP (IN on) (NP (JJ financial) (NNS markets))))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ (JJ Economic) (NN news)) (VP (VBD had) (NP (NP (JJ little) (NN effect)) (PP (IN on) (NP (JJ financial) (NNS markets))))) (. .)))", 
-  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+  ]
 }

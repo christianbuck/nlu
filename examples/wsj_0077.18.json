@@ -1,37 +1,12 @@
 {
-  "nom": [], 
-  "stanford_dep": [
-    {
-      "dep": "The", 
-      "dep_idx": 0, 
-      "gov": "dollar", 
-      "rel": "det", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "dollar", 
-      "dep_idx": 1, 
-      "gov": "rose", 
-      "rel": "nsubj", 
-      "gov_idx": 2
-    }, 
-    {
-      "dep": "rose", 
-      "dep_idx": 2, 
-      "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": -1
-    }
-  ], 
-  "stanford_coref": [], 
-  "text": "The dollar rose .", 
-  "coref_chains": [], 
   "bbn_ne": [], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (DT The) (NN dollar)) (VP (VBD rose)) (. .)))", 
+  "nom": [], 
+  "parsetree": "(ROOT (S (NP (DT The) (NN dollar)) (VP (VBD rose)) (. .)))", 
   "prop": [
     {
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "rise", 
       "args": [
         [
           "rel", 
@@ -48,10 +23,41 @@
           "The dollar"
         ]
       ], 
-      "roleset": "rise.01"
+      "baseform": "rise", 
+      "basepos": "v", 
+      "frame": "rise.01", 
+      "inflection": "-----"
     }
   ], 
+  "ptbparse": "( (S (NP-SBJ (DT The) (NN dollar) ) (VP (VBD rose) ) (. .) ))", 
   "sentence_nr": 18, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "dollar", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "dollar", 
+      "dep_idx": 1, 
+      "gov": "rose", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "rose", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "text": "The dollar rose .", 
+  "timex": [], 
+  "treebank_sentence": "The dollar rose .", 
   "tuples": [
     [
       "det", 
@@ -73,8 +79,8 @@
     [
       "The", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "DT", 
         "idx": 0
       }
@@ -82,8 +88,8 @@
     [
       "dollar", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "dollar", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 1
       }
@@ -91,8 +97,8 @@
     [
       "rose", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "rise", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBD", 
         "idx": 2
       }
@@ -100,15 +106,11 @@
     [
       ".", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ".", 
         "idx": 3
       }
     ]
-  ], 
-  "treebank_sentence": "The dollar rose .", 
-  "parsetree": "(ROOT (S (NP (DT The) (NN dollar)) (VP (VBD rose)) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ (DT The) (NN dollar)) (VP (VBD rose)) (. .)))", 
-  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+  ]
 }

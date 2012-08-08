@@ -1,8 +1,18 @@
 {
+  "bbn_ne": [
+    [
+      0, 
+      0, 
+      "Investors", 
+      "PER_DESC", 
+      ""
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ-1 (NNS Investors)) (VP (VBD took) (NP (NN advantage)) (PP-CLR (IN of) (NP (NP (NNP Tuesday) (POS 's)) (NN stock) (NN rally))) (S-PRP (NP-SBJ (-NONE- *PRO*-1)) (VP (TO to) (VP (VB book) (NP (DT some) (NNS profits))))) (NP-TMP (NN yesterday)) (, ,) (S-ADV (NP-SBJ (-NONE- *PRO*-1)) (VP (VBG leaving) (NP-2 (NNS stocks)) (S-CLR (NP-SBJ (-NONE- *PRO*-2)) (ADVP-PRD (IN up) (ADVP (RB fractionally))))))) (. .)))", 
   "nom": [
     {
-      "lemma": "advantage", 
-      "frame": "01", 
       "args": [
         [
           "ARG0", 
@@ -33,11 +43,11 @@
           "of Tuesday 's stock rally"
         ]
       ], 
+      "baseform": "advantage", 
+      "frame": "advantage.01", 
       "tokenNr": "2"
     }, 
     {
-      "lemma": "profit", 
-      "frame": "01", 
       "args": [
         [
           "ARG0", 
@@ -68,11 +78,11 @@
           "profits"
         ]
       ], 
+      "baseform": "profit", 
+      "frame": "profit.01", 
       "tokenNr": "12"
     }, 
     {
-      "lemma": "rally", 
-      "frame": "02", 
       "args": [
         [
           "ARGM-TMP", 
@@ -96,147 +106,14 @@
           "rally"
         ]
       ], 
+      "baseform": "rally", 
+      "frame": "rally.02", 
       "tokenNr": "7"
     }
   ], 
-  "stanford_dep": [
-    {
-      "dep": "Investors", 
-      "dep_idx": 0, 
-      "gov": "took", 
-      "rel": "nsubj", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "Investors", 
-      "dep_idx": 0, 
-      "gov": "book", 
-      "rel": "xsubj", 
-      "gov_idx": 10
-    }, 
-    {
-      "dep": "took", 
-      "dep_idx": 1, 
-      "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": -1
-    }, 
-    {
-      "dep": "advantage", 
-      "dep_idx": 2, 
-      "gov": "took", 
-      "rel": "dobj", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "Tuesday", 
-      "dep_idx": 4, 
-      "gov": "rally", 
-      "rel": "poss", 
-      "gov_idx": 7
-    }, 
-    {
-      "dep": "stock", 
-      "dep_idx": 6, 
-      "gov": "rally", 
-      "rel": "nn", 
-      "gov_idx": 7
-    }, 
-    {
-      "dep": "rally", 
-      "dep_idx": 7, 
-      "gov": "took", 
-      "rel": "prep_of", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "to", 
-      "dep_idx": 9, 
-      "gov": "book", 
-      "rel": "aux", 
-      "gov_idx": 10
-    }, 
-    {
-      "dep": "book", 
-      "dep_idx": 10, 
-      "gov": "took", 
-      "rel": "xcomp", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "some", 
-      "dep_idx": 11, 
-      "gov": "profits", 
-      "rel": "det", 
-      "gov_idx": 12
-    }, 
-    {
-      "dep": "profits", 
-      "dep_idx": 12, 
-      "gov": "book", 
-      "rel": "dobj", 
-      "gov_idx": 10
-    }, 
-    {
-      "dep": "yesterday", 
-      "dep_idx": 13, 
-      "gov": "took", 
-      "rel": "tmod", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "leaving", 
-      "dep_idx": 16, 
-      "gov": "took", 
-      "rel": "partmod", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "leaving", 
-      "dep_idx": 16, 
-      "gov": "took", 
-      "rel": "xcomp", 
-      "gov_idx": 1
-    }, 
-    {
-      "dep": "stocks", 
-      "dep_idx": 17, 
-      "gov": "leaving", 
-      "rel": "dobj", 
-      "gov_idx": 16
-    }, 
-    {
-      "dep": "up", 
-      "dep_idx": 19, 
-      "gov": "fractionally", 
-      "rel": "dep", 
-      "gov_idx": 20
-    }, 
-    {
-      "dep": "fractionally", 
-      "dep_idx": 20, 
-      "gov": "leaving", 
-      "rel": "dep", 
-      "gov_idx": 16
-    }
-  ], 
-  "stanford_coref": [], 
-  "text": "Investors took advantage of Tuesday 's stock rally to book some profits yesterday , leaving stocks up fractionally .", 
-  "coref_chains": [], 
-  "bbn_ne": [
-    [
-      0, 
-      0, 
-      "Investors", 
-      "PER_DESC", 
-      ""
-    ]
-  ], 
+  "parsetree": "(ROOT (S (NP (NNS Investors)) (VP (VBD took) (NP (NP (NN advantage)) (PP (IN of) (NP (NP (NNP Tuesday) (POS 's)) (NN stock) (NN rally)))) (S (VP (TO to) (VP (VB book) (NP (DT some) (NNS profits)) (NP-TMP (NN yesterday)) (, ,) (S (VP (VBG leaving) (NP (NNS stocks)) (ADVP (IN up)) (ADVP (RB fractionally)))))))) (. .)))", 
   "prop": [
     {
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "take", 
       "args": [
         [
           "rel", 
@@ -288,12 +165,12 @@
           "*PRO*-1 leaving stocks *PRO*-2 up fractionally"
         ]
       ], 
-      "roleset": "take.01"
+      "baseform": "take", 
+      "basepos": "v", 
+      "frame": "take.01", 
+      "inflection": "-----"
     }, 
     {
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "book", 
       "args": [
         [
           "rel", 
@@ -324,12 +201,12 @@
           ""
         ]
       ], 
-      "roleset": "book.01"
+      "baseform": "book", 
+      "basepos": "v", 
+      "frame": "book.01", 
+      "inflection": "-----"
     }, 
     {
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "leave", 
       "args": [
         [
           "rel", 
@@ -367,10 +244,152 @@
           ""
         ]
       ], 
-      "roleset": "leave.02"
+      "baseform": "leave", 
+      "basepos": "v", 
+      "frame": "leave.02", 
+      "inflection": "-----"
     }
   ], 
+  "ptbparse": "( (S (NP-SBJ-1 (NNS Investors) ) (VP (VBD took) (NP (NN advantage) ) (PP-CLR (IN of) (NP (NP (NNP Tuesday) (POS 's) ) (NN stock) (NN rally) )) (S-PRP (NP-SBJ (-NONE- *-1) ) (VP (TO to) (VP (VB book) (NP (DT some) (NNS profits) )))) (NP-TMP (NN yesterday) ) (, ,) (S-ADV (NP-SBJ (-NONE- *-1) ) (VP (VBG leaving) (S (NP-SBJ (RB stocks) ) (ADVP-PRD (IN up) (ADVP (RB fractionally) )))))) (. .) ))", 
   "sentence_nr": 0, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "Investors", 
+      "dep_idx": 0, 
+      "gov": "took", 
+      "gov_idx": 1, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "Investors", 
+      "dep_idx": 0, 
+      "gov": "book", 
+      "gov_idx": 10, 
+      "rel": "xsubj"
+    }, 
+    {
+      "dep": "took", 
+      "dep_idx": 1, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "advantage", 
+      "dep_idx": 2, 
+      "gov": "took", 
+      "gov_idx": 1, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "Tuesday", 
+      "dep_idx": 4, 
+      "gov": "rally", 
+      "gov_idx": 7, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "stock", 
+      "dep_idx": 6, 
+      "gov": "rally", 
+      "gov_idx": 7, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "rally", 
+      "dep_idx": 7, 
+      "gov": "took", 
+      "gov_idx": 1, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 9, 
+      "gov": "book", 
+      "gov_idx": 10, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "book", 
+      "dep_idx": 10, 
+      "gov": "took", 
+      "gov_idx": 1, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "some", 
+      "dep_idx": 11, 
+      "gov": "profits", 
+      "gov_idx": 12, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "profits", 
+      "dep_idx": 12, 
+      "gov": "book", 
+      "gov_idx": 10, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "yesterday", 
+      "dep_idx": 13, 
+      "gov": "took", 
+      "gov_idx": 1, 
+      "rel": "tmod"
+    }, 
+    {
+      "dep": "leaving", 
+      "dep_idx": 16, 
+      "gov": "took", 
+      "gov_idx": 1, 
+      "rel": "partmod"
+    }, 
+    {
+      "dep": "leaving", 
+      "dep_idx": 16, 
+      "gov": "took", 
+      "gov_idx": 1, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "stocks", 
+      "dep_idx": 17, 
+      "gov": "leaving", 
+      "gov_idx": 16, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "up", 
+      "dep_idx": 19, 
+      "gov": "fractionally", 
+      "gov_idx": 20, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "fractionally", 
+      "dep_idx": 20, 
+      "gov": "leaving", 
+      "gov_idx": 16, 
+      "rel": "dep"
+    }
+  ], 
+  "text": "Investors took advantage of Tuesday 's stock rally to book some profits yesterday , leaving stocks up fractionally .", 
+  "timex": [
+    [
+      "t2", 
+      13, 
+      13, 
+      "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET P-1D\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">yesterday</TIMEX3>"
+    ], 
+    [
+      "t1", 
+      4, 
+      4, 
+      "<TIMEX3 tid=\"t1\" value=\"XXXX-WXX-2\" type=\"DATE\">Tuesday</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "Investors took advantage of Tuesday 's stock rally *PRO*-1 to book some profits yesterday , *PRO*-1 leaving stocks *PRO*-2 up fractionally .", 
   "tuples": [
     [
       "nsubj", 
@@ -457,8 +476,8 @@
     [
       "Investors", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "investor", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 0
       }
@@ -466,8 +485,8 @@
     [
       "took", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "take", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBD", 
         "idx": 1
       }
@@ -475,8 +494,8 @@
     [
       "advantage", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "advantage", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 2
       }
@@ -484,8 +503,8 @@
     [
       "of", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 3
       }
@@ -493,19 +512,19 @@
     [
       "Tuesday", 
       {
-        "NormalizedNamedEntityTag": "XXXX-WXX-2", 
-        "Timex": "<TIMEX3 tid=\"t1\" value=\"XXXX-WXX-2\" type=\"DATE\">Tuesday</TIMEX3>", 
-        "idx": 4, 
         "Lemma": "Tuesday", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "XXXX-WXX-2", 
         "PartOfSpeech": "NNP", 
-        "NamedEntityTag": "DATE"
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"XXXX-WXX-2\" type=\"DATE\">Tuesday</TIMEX3>", 
+        "idx": 4
       }
     ], 
     [
       "'s", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "'s", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "POS", 
         "idx": 5
       }
@@ -513,8 +532,8 @@
     [
       "stock", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "stock", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 6
       }
@@ -522,8 +541,8 @@
     [
       "rally", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "rally", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 7
       }
@@ -531,8 +550,8 @@
     [
       "to", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "to", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "TO", 
         "idx": 9
       }
@@ -540,8 +559,8 @@
     [
       "book", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "book", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VB", 
         "idx": 10
       }
@@ -549,8 +568,8 @@
     [
       "some", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "some", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "DT", 
         "idx": 11
       }
@@ -558,8 +577,8 @@
     [
       "profits", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "profit", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 12
       }
@@ -567,19 +586,19 @@
     [
       "yesterday", 
       {
-        "NormalizedNamedEntityTag": "OFFSET", 
-        "Timex": "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET P-1D\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">yesterday</TIMEX3>", 
-        "idx": 13, 
         "Lemma": "yesterday", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
         "PartOfSpeech": "NN", 
-        "NamedEntityTag": "DATE"
+        "Timex": "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET P-1D\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">yesterday</TIMEX3>", 
+        "idx": 13
       }
     ], 
     [
       ",", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ",", 
         "idx": 14
       }
@@ -587,8 +606,8 @@
     [
       "leaving", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "leave", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBG", 
         "idx": 16
       }
@@ -596,8 +615,8 @@
     [
       "stocks", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "stock", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 17
       }
@@ -605,8 +624,8 @@
     [
       "up", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "up", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 19
       }
@@ -614,8 +633,8 @@
     [
       "fractionally", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "fractionally", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "RB", 
         "idx": 20
       }
@@ -623,15 +642,11 @@
     [
       ".", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ".", 
         "idx": 21
       }
     ]
-  ], 
-  "treebank_sentence": "Investors took advantage of Tuesday 's stock rally *PRO*-1 to book some profits yesterday , *PRO*-1 leaving stocks *PRO*-2 up fractionally .", 
-  "parsetree": "(ROOT (S (NP (NNS Investors)) (VP (VBD took) (NP (NP (NN advantage)) (PP (IN of) (NP (NP (NNP Tuesday) (POS 's)) (NN stock) (NN rally)))) (S (VP (TO to) (VP (VB book) (NP (DT some) (NNS profits)) (NP-TMP (NN yesterday)) (, ,) (S (VP (VBG leaving) (NP (NNS stocks)) (ADVP (IN up)) (ADVP (RB fractionally)))))))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ-1 (NNS Investors)) (VP (VBD took) (NP (NN advantage)) (PP-CLR (IN of) (NP (NP (NNP Tuesday) (POS 's)) (NN stock) (NN rally))) (S-PRP (NP-SBJ (-NONE- *PRO*-1)) (VP (TO to) (VP (VB book) (NP (DT some) (NNS profits))))) (NP-TMP (NN yesterday)) (, ,) (S-ADV (NP-SBJ (-NONE- *PRO*-1)) (VP (VBG leaving) (NP-2 (NNS stocks)) (S-CLR (NP-SBJ (-NONE- *PRO*-2)) (ADVP-PRD (IN up) (ADVP (RB fractionally))))))) (. .)))", 
-  "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on"
+  ]
 }
