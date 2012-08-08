@@ -353,15 +353,18 @@
       "gov_idx": 33
     }
   ], 
-  "bbn_ne": [
+  "stanford_coref": [
     [
-      11, 
-      11, 
-      "managers", 
-      "PER_DESC", 
-      "", 
-      "", 
-      false
+      [
+        "their", 
+        19, 
+        20
+      ], 
+      [
+        "money managers", 
+        10, 
+        12
+      ]
     ]
   ], 
   "coref_chains": [
@@ -369,35 +372,22 @@
       10, 
       11, 
       1, 
-      "money managers", 
-      false
+      "money managers"
     ], 
     [
       20, 
       20, 
       1, 
-      "their", 
-      false
+      "their"
     ]
   ], 
-  "coref": [
+  "bbn_ne": [
     [
-      [
-        [
-          "their", 
-          0, 
-          -1, 
-          19, 
-          20
-        ], 
-        [
-          "money managers", 
-          0, 
-          1, 
-          10, 
-          12
-        ]
-      ]
+      11, 
+      11, 
+      "managers", 
+      "PER_DESC", 
+      ""
     ]
   ], 
   "prop": [

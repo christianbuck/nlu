@@ -248,73 +248,57 @@
       "gov_idx": 21
     }
   ], 
+  "stanford_coref": [
+    [
+      [
+        "Rudolph Agnew", 
+        0, 
+        2
+      ], 
+      [
+        "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC ,", 
+        0, 
+        15
+      ]
+    ]
+  ], 
+  "coref_chains": [], 
+  "treebank_sentence": "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named *-1 *PRO*-2 a nonexecutive director of this British industrial conglomerate .", 
   "bbn_ne": [
     [
       0, 
       1, 
       "Rudolph Agnew", 
       "PERSON", 
-      "", 
-      "chairman", 
-      false
+      ""
     ], 
     [
       8, 
       8, 
       "chairman", 
       "PER_DESC", 
-      "", 
-      "", 
-      false
+      ""
     ], 
     [
       10, 
       13, 
       "Consolidated Gold Fields PLC", 
       "ORGANIZATION", 
-      "CORPORATION", 
-      "", 
-      false
+      "CORPORATION"
     ], 
     [
       21, 
       21, 
       "director", 
       "PER_DESC", 
-      "", 
-      "", 
-      false
+      ""
     ], 
     [
       24, 
       24, 
       "British", 
       "NORP", 
-      "NATIONALITY", 
-      "", 
-      false
-    ]
-  ], 
-  "coref_chains": [], 
-  "treebank_sentence": "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named *-1 *PRO*-2 a nonexecutive director of this British industrial conglomerate .", 
-  "coref": [
-    [
-      [
-        [
-          "Rudolph Agnew", 
-          0, 
-          1, 
-          0, 
-          2
-        ], 
-        [
-          "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC ,", 
-          0, 
-          1, 
-          0, 
-          15
-        ]
-      ]
+      "NATIONALITY"
     ]
   ], 
   "prop": [

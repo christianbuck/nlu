@@ -220,6 +220,7 @@
       "gov_idx": 16
     }
   ], 
+  "stanford_coref": [], 
   "text": "Investors took advantage of Tuesday 's stock rally to book some profits yesterday , leaving stocks up fractionally .", 
   "coref_chains": [], 
   "bbn_ne": [
@@ -228,9 +229,7 @@
       0, 
       "Investors", 
       "PER_DESC", 
-      "", 
-      "", 
-      false
+      ""
     ]
   ], 
   "prop": [

@@ -66,6 +66,7 @@
       "gov_idx": 2
     }
   ], 
+  "stanford_coref": [], 
   "text": "The yield fell to 7.88 % .", 
   "coref_chains": [], 
   "bbn_ne": [], 

@@ -234,6 +234,7 @@
       "gov_idx": 12
     }
   ], 
+  "stanford_coref": [], 
   "text": "Long - term bond prices rose despite prospects of a huge new supply of Treasury debt this month .", 
   "coref_chains": [], 
   "bbn_ne": [
@@ -242,9 +243,7 @@
       14, 
       "Treasury", 
       "ORGANIZATION", 
-      "GOVERNMENT", 
-      "", 
-      false
+      "GOVERNMENT"
     ]
   ], 
   "prop": [

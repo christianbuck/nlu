@@ -122,42 +122,42 @@
       "gov_idx": 6
     }
   ], 
-  "bbn_ne": [
+  "stanford_coref": [
     [
-      1, 
-      1, 
-      "Vinken", 
-      "PERSON", 
-      "", 
-      "", 
-      false
+      [
+        "chairman of Elsevier N.V. , the Dutch publishing group", 
+        3, 
+        12
+      ], 
+      [
+        "Mr. Vinken", 
+        0, 
+        2
+      ]
     ], 
     [
-      3, 
-      3, 
-      "chairman", 
-      "PER_DESC", 
-      "", 
-      "", 
-      false
+      [
+        "Elsevier N.V.", 
+        5, 
+        7
+      ], 
+      [
+        "Elsevier N.V. , the Dutch publishing group", 
+        5, 
+        12
+      ]
     ], 
     [
-      5, 
-      6, 
-      "Elsevier N.V.", 
-      "ORGANIZATION", 
-      "CORPORATION", 
-      "group", 
-      false
-    ], 
-    [
-      9, 
-      9, 
-      "Dutch", 
-      "NORP", 
-      "NATIONALITY", 
-      "", 
-      false
+      [
+        "the Dutch publishing group", 
+        8, 
+        12
+      ], 
+      [
+        "Elsevier N.V. , the Dutch publishing group", 
+        5, 
+        12
+      ]
     ]
   ], 
   "coref_chains": [
@@ -165,70 +165,44 @@
       0, 
       1, 
       1, 
-      "Mr. Vinken", 
-      false
+      "Mr. Vinken"
     ], 
     [
       4, 
       11, 
       1, 
-      "chairman of Elsevier N.V. , Dutch publishing group", 
-      false
+      "chairman of Elsevier N.V. , Dutch publishing group"
     ]
   ], 
   "treebank_sentence": "Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .", 
-  "coref": [
+  "bbn_ne": [
     [
-      [
-        [
-          "chairman of Elsevier N.V. , the Dutch publishing group", 
-          0, 
-          3, 
-          3, 
-          12
-        ], 
-        [
-          "Mr. Vinken", 
-          0, 
-          1, 
-          0, 
-          2
-        ]
-      ]
+      1, 
+      1, 
+      "Vinken", 
+      "PERSON", 
+      ""
     ], 
     [
-      [
-        [
-          "Elsevier N.V.", 
-          0, 
-          6, 
-          5, 
-          7
-        ], 
-        [
-          "Elsevier N.V. , the Dutch publishing group", 
-          0, 
-          6, 
-          5, 
-          12
-        ]
-      ], 
-      [
-        [
-          "the Dutch publishing group", 
-          0, 
-          1, 
-          8, 
-          12
-        ], 
-        [
-          "Elsevier N.V. , the Dutch publishing group", 
-          0, 
-          6, 
-          5, 
-          12
-        ]
-      ]
+      3, 
+      3, 
+      "chairman", 
+      "PER_DESC", 
+      ""
+    ], 
+    [
+      5, 
+      6, 
+      "Elsevier N.V.", 
+      "ORGANIZATION", 
+      "CORPORATION"
+    ], 
+    [
+      9, 
+      9, 
+      "Dutch", 
+      "NORP", 
+      "NATIONALITY"
     ]
   ], 
   "prop": [

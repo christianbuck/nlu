@@ -87,6 +87,7 @@
       "gov_idx": 6
     }
   ], 
+  "stanford_coref": [], 
   "text": "Bond prices and the dollar both gained modestly .", 
   "coref_chains": [], 
   "bbn_ne": [], 

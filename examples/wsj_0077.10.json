@@ -206,6 +206,7 @@
       "gov_idx": 21
     }
   ], 
+  "stanford_coref": [], 
   "text": "As expected , a national purchasing managers ' report indicated the nation 's manufacturing sector continues to contract modestly .", 
   "coref_chains": [], 
   "bbn_ne": [
@@ -214,9 +215,7 @@
       8, 
       "managers", 
       "PER_DESC", 
-      "", 
-      "", 
-      false
+      ""
     ]
   ], 
   "prop": [

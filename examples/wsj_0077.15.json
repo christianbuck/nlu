@@ -59,6 +59,7 @@
       "gov_idx": 2
     }
   ], 
+  "stanford_coref": [], 
   "text": "Bond prices were up .", 
   "coref_chains": [], 
   "bbn_ne": [], 

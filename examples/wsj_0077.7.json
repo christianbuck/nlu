@@ -255,6 +255,7 @@
       "gov_idx": 15
     }
   ], 
+  "stanford_coref": [], 
   "text": "The industrial average jumped more than 41 points Tuesday as speculators rushed to buy shares of potential takeover targets .", 
   "coref_chains": [], 
   "bbn_ne": [
@@ -263,9 +264,7 @@
       10, 
       "speculators", 
       "PER_DESC", 
-      "", 
-      "", 
-      false
+      ""
     ]
   ], 
   "prop": [

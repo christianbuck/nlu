@@ -101,6 +101,7 @@
       "gov_idx": 7
     }
   ], 
+  "stanford_coref": [], 
   "text": "Continuing demand for dollars from Japanese investors boosted the U.S. currency .", 
   "coref_chains": [], 
   "bbn_ne": [
@@ -109,27 +110,21 @@
       5, 
       "Japanese", 
       "NORP", 
-      "NATIONALITY", 
-      "", 
-      false
+      "NATIONALITY"
     ], 
     [
       6, 
       6, 
       "investors", 
       "PER_DESC", 
-      "", 
-      "", 
-      false
+      ""
     ], 
     [
       9, 
       9, 
       "U.S.", 
       "GPE", 
-      "COUNTRY", 
-      "", 
-      false
+      "COUNTRY"
     ]
   ], 
   "prop": [

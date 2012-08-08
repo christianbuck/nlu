@@ -122,6 +122,7 @@
       "gov_idx": 4
     }
   ], 
+  "stanford_coref": [], 
   "text": "Economic news had little effect on financial markets .", 
   "coref_chains": [], 
   "bbn_ne": [], 

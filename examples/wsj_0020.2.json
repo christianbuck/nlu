@@ -361,6 +361,20 @@
       "gov_idx": 24
     }
   ], 
+  "stanford_coref": [
+    [
+      [
+        "their", 
+        25, 
+        26
+      ], 
+      [
+        "they", 
+        21, 
+        22
+      ]
+    ]
+  ], 
   "ptbparse": "( (S (PP-LOC (IN Under) (NP (DT the) (JJ new) (NNP U.S.) (NN trade) (NN law) )) (, ,) (NP-SBJ (DT those) (NNS countries) ) (VP (MD could) (VP (VB face) (NP (NP (JJ accelerated) (JJ unfair-trade) (NNS investigations) ) (CC and) (NP (JJ stiff) (NN trade) (NNS sanctions) )) (SBAR-ADV (IN if) (S (NP-SBJ (PRP they) ) (VP (VBP do) (RB n't) (VP (VB improve) (NP (NP (PRP$ their) (NN protection) ) (PP (IN of) (NP (JJ intellectual) (NN property) ))) (PP-TMP (IN by) (NP (JJ next) (NN spring) )))))))) (. .) ))", 
   "text": "Under the new U.S. trade law , those countries could face accelerated unfair - trade investigations and stiff trade sanctions if they do n't improve their protection of intellectual property by next spring .", 
   "coref_chains": [
@@ -368,22 +382,19 @@
       7, 
       8, 
       47, 
-      "those countries", 
-      false
+      "those countries"
     ], 
     [
       21, 
       21, 
       47, 
-      "they", 
-      false
+      "they"
     ], 
     [
       25, 
       25, 
       47, 
-      "their", 
-      false
+      "their"
     ]
   ], 
   "bbn_ne": [
@@ -392,29 +403,7 @@
       3, 
       "U.S.", 
       "GPE", 
-      "COUNTRY", 
-      "", 
-      false
-    ]
-  ], 
-  "coref": [
-    [
-      [
-        [
-          "their", 
-          0, 
-          5, 
-          25, 
-          26
-        ], 
-        [
-          "they", 
-          0, 
-          1, 
-          21, 
-          22
-        ]
-      ]
+      "COUNTRY"
     ]
   ], 
   "prop": [

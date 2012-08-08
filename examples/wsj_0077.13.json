@@ -73,6 +73,7 @@
       "gov_idx": 5
     }
   ], 
+  "stanford_coref": [], 
   "text": "Stock prices rose fractionally in moderate trading .", 
   "coref_chains": [], 
   "bbn_ne": [], 

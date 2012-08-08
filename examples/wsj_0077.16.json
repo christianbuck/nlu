@@ -241,36 +241,28 @@
       "gov_idx": 22
     }
   ], 
+  "stanford_coref": [
+    [
+      [
+        "about a quarter of a point", 
+        9, 
+        15
+      ], 
+      [
+        "about a quarter of a point , or $ 2.50 for each $ 1,000 of face amount", 
+        9, 
+        26
+      ]
+    ]
+  ], 
+  "coref_chains": [], 
   "bbn_ne": [
     [
       1, 
       1, 
       "Treasury", 
       "ORGANIZATION", 
-      "GOVERNMENT", 
-      "", 
-      false
-    ]
-  ], 
-  "coref_chains": [], 
-  "coref": [
-    [
-      [
-        [
-          "about a quarter of a point", 
-          0, 
-          1, 
-          9, 
-          15
-        ], 
-        [
-          "about a quarter of a point , or $ 2.50 for each $ 1,000 of face amount", 
-          0, 
-          1, 
-          9, 
-          26
-        ]
-      ]
+      "GOVERNMENT"
     ]
   ], 
   "prop": [

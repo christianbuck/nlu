@@ -87,6 +87,7 @@
       "gov_idx": 3
     }
   ], 
+  "stanford_coref": [], 
   "text": "Big Board volume totaled 154.2 million shares .", 
   "coref_chains": [], 
   "bbn_ne": [
@@ -95,9 +96,7 @@
       1, 
       "Big Board", 
       "ORGANIZATION", 
-      "CORPORATION", 
-      "", 
-      false
+      "CORPORATION"
     ]
   ], 
   "prop": [

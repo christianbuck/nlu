@@ -135,6 +135,7 @@
       "gov_idx": 18
     }
   ], 
+  "stanford_coref": [], 
   "text": "In late afternoon New York trading the currency was at 1.8500 marks and 143.80 yen compared with 1.8415 marks and 142.85 yen .", 
   "coref_chains": [], 
   "bbn_ne": [
@@ -143,9 +144,7 @@
       4, 
       "New York", 
       "GPE", 
-      "CITY", 
-      "", 
-      false
+      "CITY"
     ]
   ], 
   "prop": [], 

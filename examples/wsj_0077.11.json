@@ -304,61 +304,47 @@
       "gov_idx": 24
     }
   ], 
+  "stanford_coref": [
+    [
+      [
+        "The Federal Reserve 's Beige Book", 
+        0, 
+        6
+      ], 
+      [
+        "The Federal Reserve 's Beige Book , a summary of economic conditions across the country ,", 
+        0, 
+        16
+      ]
+    ], 
+    [
+      [
+        "a summary of economic conditions across the country", 
+        7, 
+        15
+      ], 
+      [
+        "The Federal Reserve 's Beige Book , a summary of economic conditions across the country ,", 
+        0, 
+        16
+      ]
+    ]
+  ], 
+  "coref_chains": [], 
   "bbn_ne": [
     [
       1, 
       2, 
       "Federal Reserve", 
       "ORGANIZATION", 
-      "GOVERNMENT", 
-      "", 
-      false
+      "GOVERNMENT"
     ], 
     [
       4, 
       5, 
       "Beige Book", 
       "WORK_OF_ART", 
-      "BOOK", 
-      "", 
-      false
-    ]
-  ], 
-  "coref_chains": [], 
-  "coref": [
-    [
-      [
-        [
-          "The Federal Reserve 's Beige Book", 
-          0, 
-          5, 
-          0, 
-          6
-        ], 
-        [
-          "The Federal Reserve 's Beige Book , a summary of economic conditions across the country ,", 
-          0, 
-          5, 
-          0, 
-          16
-        ]
-      ], 
-      [
-        [
-          "a summary of economic conditions across the country", 
-          0, 
-          8, 
-          7, 
-          15
-        ], 
-        [
-          "The Federal Reserve 's Beige Book , a summary of economic conditions across the country ,", 
-          0, 
-          5, 
-          0, 
-          16
-        ]
-      ]
+      "BOOK"
     ]
   ], 
   "prop": [

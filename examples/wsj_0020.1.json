@@ -340,6 +340,56 @@
       "gov_idx": -1
     }
   ], 
+  "stanford_coref": [
+    [
+      [
+        "China", 
+        6, 
+        7
+      ], 
+      [
+        "China , Thailand , India , Brazil and Mexico", 
+        6, 
+        15
+      ]
+    ], 
+    [
+      [
+        "Thailand , India , Brazil and Mexico", 
+        8, 
+        15
+      ], 
+      [
+        "China , Thailand , India , Brazil and Mexico", 
+        6, 
+        15
+      ]
+    ], 
+    [
+      [
+        "Thailand", 
+        8, 
+        9
+      ], 
+      [
+        "China , Thailand , India , Brazil and Mexico", 
+        6, 
+        15
+      ]
+    ], 
+    [
+      [
+        "that", 
+        19, 
+        20
+      ], 
+      [
+        "Mexico", 
+        14, 
+        15
+      ]
+    ]
+  ], 
   "ptbparse": "( (S (S-TPC-1 (ADVP (RB However) ) (, ,) (NP-SBJ (NP (CD five) (JJ other) (NNS countries) ) (: --) (NP (NNP China) (, ,) (NNP Thailand) (, ,) (NNP India) (, ,) (NNP Brazil) (CC and) (NNP Mexico) ) (: --) ) (VP (MD will) (VP (VB remain) (PP-LOC-PRD (IN on) (NP (DT that) (JJ so-called) (NN priority) (NN watch) (NN list) )) (PP-PRP (IN as) (NP (NP (DT a) (NN result) ) (PP (IN of) (NP (DT an) (JJ interim) (NN review) ))))))) (, ,) (NP-SBJ (NNP U.S.) (NNP Trade) (NNP Representative) (NNP Carla) (NNP Hills) ) (VP (VBD announced) (SBAR (-NONE- 0) (S (-NONE- *T*-1) ))) (. .) ))", 
   "text": "However , five other countries -- China , Thailand , India , Brazil and Mexico -- will remain on that so - called priority watch list as a result of an interim review , U.S. Trade Representative Carla Hills announced .", 
   "coref_chains": [], 
@@ -349,142 +399,56 @@
       6, 
       "China", 
       "GPE", 
-      "COUNTRY", 
-      "", 
-      false
+      "COUNTRY"
     ], 
     [
       8, 
       8, 
       "Thailand", 
       "GPE", 
-      "COUNTRY", 
-      "", 
-      false
+      "COUNTRY"
     ], 
     [
       10, 
       10, 
       "India", 
       "GPE", 
-      "COUNTRY", 
-      "", 
-      false
+      "COUNTRY"
     ], 
     [
       12, 
       12, 
       "Brazil", 
       "GPE", 
-      "COUNTRY", 
-      "", 
-      false
+      "COUNTRY"
     ], 
     [
       14, 
       14, 
       "Mexico", 
       "GPE", 
-      "COUNTRY", 
-      "", 
-      false
+      "COUNTRY"
     ], 
     [
       34, 
       34, 
       "U.S.", 
       "GPE", 
-      "COUNTRY", 
-      "", 
-      false
+      "COUNTRY"
     ], 
     [
       35, 
       36, 
       "Trade Representative", 
       "PER_DESC", 
-      "", 
-      "", 
-      false
+      ""
     ], 
     [
       37, 
       38, 
       "Carla Hills", 
       "PERSON", 
-      "", 
-      "", 
-      false
-    ]
-  ], 
-  "coref": [
-    [
-      [
-        [
-          "China", 
-          0, 
-          6, 
-          6, 
-          7
-        ], 
-        [
-          "China , Thailand , India , Brazil and Mexico", 
-          0, 
-          6, 
-          6, 
-          15
-        ]
-      ], 
-      [
-        [
-          "Thailand , India , Brazil and Mexico", 
-          0, 
-          8, 
-          8, 
-          15
-        ], 
-        [
-          "China , Thailand , India , Brazil and Mexico", 
-          0, 
-          6, 
-          6, 
-          15
-        ]
-      ], 
-      [
-        [
-          "Thailand", 
-          0, 
-          8, 
-          8, 
-          9
-        ], 
-        [
-          "China , Thailand , India , Brazil and Mexico", 
-          0, 
-          6, 
-          6, 
-          15
-        ]
-      ]
-    ], 
-    [
-      [
-        [
-          "that", 
-          0, 
-          -1, 
-          19, 
-          20
-        ], 
-        [
-          "Mexico", 
-          0, 
-          4, 
-          14, 
-          15
-        ]
-      ]
+      ""
     ]
   ], 
   "prop": [

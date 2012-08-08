@@ -438,6 +438,56 @@
       "gov_idx": 39
     }
   ], 
+  "stanford_coref": [
+    [
+      [
+        "U.S. patents", 
+        33, 
+        35
+      ], 
+      [
+        "U.S. patents , copyrights and other intellectual - property rights", 
+        33, 
+        43
+      ]
+    ], 
+    [
+      [
+        "copyrights", 
+        36, 
+        37
+      ], 
+      [
+        "U.S. patents , copyrights and other intellectual - property rights", 
+        33, 
+        43
+      ]
+    ], 
+    [
+      [
+        "it", 
+        24, 
+        25
+      ], 
+      [
+        "The U.S.", 
+        0, 
+        2
+      ]
+    ], 
+    [
+      [
+        "its", 
+        7, 
+        8
+      ], 
+      [
+        "some success", 
+        4, 
+        6
+      ]
+    ]
+  ], 
   "ptbparse": "( (S (NP-SBJ-1 (DT The) (NNP U.S.) ) (, ,) (S-ADV (NP-SBJ (-NONE- *-1) ) (VP (VBG claiming) (NP (NP (DT some) (NN success) ) (PP-LOC (IN in) (NP (PRP$ its) (NN trade) (NN diplomacy) ))))) (, ,) (VP (VBD removed) (NP (NP (NNP South) (NNP Korea) ) (, ,) (NP (NNP Taiwan) ) (CC and) (NP (NNP Saudi) (NNP Arabia) )) (PP-CLR (IN from) (NP (NP (DT a) (NN list) ) (PP (IN of) (NP (NP (NNS countries) ) (SBAR (WHNP-2 (-NONE- 0) ) (S (NP-SBJ (PRP it) ) (VP (VBZ is) (VP (ADVP-MNR (RB closely) ) (VBG watching) (NP (-NONE- *T*-2) ) (PP-CLR (IN for) (S-NOM (NP-SBJ-3 (-NONE- *) ) (VP (ADVP (RB allegedly) ) (VBG failing) (S (NP-SBJ (-NONE- *-3) ) (VP (TO to) (VP (VB honor) (NP (NNP U.S.) (NX (NX (NNS patents) ) (, ,) (NX (NNS copyrights) ) (CC and) (NX (JJ other) (JJ intellectual-property) (NNS rights) )))))))))))))))))) (. .) ))", 
   "text": "The U.S. , claiming some success in its trade diplomacy , removed South Korea , Taiwan and Saudi Arabia from a list of countries it is closely watching for allegedly failing to honor U.S. patents , copyrights and other intellectual - property rights .", 
   "coref_chains": [
@@ -445,22 +495,19 @@
       1, 
       1, 
       12, 
-      "U.S.", 
-      false
+      "U.S."
     ], 
     [
       8, 
       8, 
       12, 
-      "its", 
-      false
+      "its"
     ], 
     [
       26, 
       26, 
       12, 
-      "it", 
-      false
+      "it"
     ]
   ], 
   "bbn_ne": [
@@ -469,117 +516,35 @@
       1, 
       "U.S.", 
       "GPE", 
-      "COUNTRY", 
-      "", 
-      false
+      "COUNTRY"
     ], 
     [
       13, 
       14, 
       "South Korea", 
       "GPE", 
-      "COUNTRY", 
-      "", 
-      false
+      "COUNTRY"
     ], 
     [
       16, 
       16, 
       "Taiwan", 
       "GPE", 
-      "COUNTRY", 
-      "", 
-      false
+      "COUNTRY"
     ], 
     [
       18, 
       19, 
       "Saudi Arabia", 
       "GPE", 
-      "COUNTRY", 
-      "", 
-      false
+      "COUNTRY"
     ], 
     [
       38, 
       38, 
       "U.S.", 
       "GPE", 
-      "COUNTRY", 
-      "", 
-      false
-    ]
-  ], 
-  "coref": [
-    [
-      [
-        [
-          "U.S. patents", 
-          0, 
-          4, 
-          33, 
-          35
-        ], 
-        [
-          "U.S. patents , copyrights and other intellectual - property rights", 
-          0, 
-          4, 
-          33, 
-          43
-        ]
-      ], 
-      [
-        [
-          "copyrights", 
-          0, 
-          6, 
-          36, 
-          37
-        ], 
-        [
-          "U.S. patents , copyrights and other intellectual - property rights", 
-          0, 
-          4, 
-          33, 
-          43
-        ]
-      ]
-    ], 
-    [
-      [
-        [
-          "it", 
-          0, 
-          4, 
-          24, 
-          25
-        ], 
-        [
-          "The U.S.", 
-          0, 
-          1, 
-          0, 
-          2
-        ]
-      ]
-    ], 
-    [
-      [
-        [
-          "its", 
-          0, 
-          7, 
-          7, 
-          8
-        ], 
-        [
-          "some success", 
-          0, 
-          5, 
-          4, 
-          6
-        ]
-      ]
+      "COUNTRY"
     ]
   ], 
   "prop": [

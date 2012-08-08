@@ -269,6 +269,7 @@
       "gov_idx": 31
     }
   ], 
+  "stanford_coref": [], 
   "text": "Analysts were disappointed that the enthusiasm investors showed for stocks in the wake of Georgia - Pacific 's $ 3.18 billion bid for Great Northern Nekoosa evaporated so quickly .", 
   "coref_chains": [], 
   "bbn_ne": [
@@ -277,36 +278,28 @@
       0, 
       "Analysts", 
       "PER_DESC", 
-      "", 
-      "", 
-      false
+      ""
     ], 
     [
       9, 
       9, 
       "investors", 
       "PER_DESC", 
-      "", 
-      "", 
-      false
+      ""
     ], 
     [
       18, 
       20, 
       "Georgia - Pacific", 
       "ORGANIZATION", 
-      "CORPORATION", 
-      "", 
-      false
+      "CORPORATION"
     ], 
     [
       28, 
       30, 
       "Great Northern Nekoosa", 
       "ORGANIZATION", 
-      "CORPORATION", 
-      "", 
-      false
+      "CORPORATION"
     ]
   ], 
   "prop": [

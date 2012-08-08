@@ -114,36 +114,28 @@
       "gov_idx": 11
     }
   ], 
+  "stanford_coref": [
+    [
+      [
+        "declining stocks", 
+        13, 
+        15
+      ], 
+      [
+        "declining stocks , 847 to 644", 
+        13, 
+        19
+      ]
+    ]
+  ], 
+  "coref_chains": [], 
   "bbn_ne": [
     [
       5, 
       8, 
       "New York Stock Exchange", 
       "ORGANIZATION", 
-      "CORPORATION", 
-      "", 
-      false
-    ]
-  ], 
-  "coref_chains": [], 
-  "coref": [
-    [
-      [
-        [
-          "declining stocks", 
-          0, 
-          4, 
-          13, 
-          15
-        ], 
-        [
-          "declining stocks , 847 to 644", 
-          0, 
-          4, 
-          13, 
-          19
-        ]
-      ]
+      "CORPORATION"
     ]
   ], 
   "prop": [

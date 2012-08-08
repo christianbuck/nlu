@@ -52,6 +52,7 @@
       "gov_idx": 0
     }
   ], 
+  "stanford_coref": [], 
   "text": "In major market activity :", 
   "coref_chains": [], 
   "bbn_ne": [], 

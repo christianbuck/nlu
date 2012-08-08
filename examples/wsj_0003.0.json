@@ -353,6 +353,20 @@
       "gov_idx": -1
     }
   ], 
+  "stanford_coref": [
+    [
+      [
+        "it", 
+        26, 
+        27
+      ], 
+      [
+        "A form of asbestos once used to make Kent cigarette filters", 
+        0, 
+        11
+      ]
+    ]
+  ], 
   "ptbparse": "( (S (S-TPC-1 (NP-SBJ (NP (NP (DT A) (NN form) ) (PP (IN of) (NP (NN asbestos) ))) (RRC (ADVP-TMP (RB once) ) (VP (VBN used) (NP (-NONE- *) ) (S-CLR (NP-SBJ (-NONE- *) ) (VP (TO to) (VP (VB make) (NP (NNP Kent) (NN cigarette) (NNS filters) ))))))) (VP (VBZ has) (VP (VBN caused) (NP (NP (DT a) (JJ high) (NN percentage) ) (PP (IN of) (NP (NN cancer) (NNS deaths) )) (PP-LOC (IN among) (NP (NP (DT a) (NN group) ) (PP (IN of) (NP (NP (NNS workers) ) (RRC (VP (VBN exposed) (NP (-NONE- *) ) (PP-CLR (TO to) (NP (PRP it) )) (ADVP-TMP (NP (QP (RBR more) (IN than) (CD 30) ) (NNS years) ) (IN ago) ))))))))))) (, ,) (NP-SBJ (NNS researchers) ) (VP (VBD reported) (SBAR (-NONE- 0) (S (-NONE- *T*-1) ))) (. .) ))", 
   "text": "A form of asbestos once used to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed to it more than 30 years ago , researchers reported .", 
   "coref_chains": [
@@ -360,15 +374,13 @@
       0, 
       12, 
       0, 
-      "A form of asbestos once used to make Kent cigarette filters", 
-      false
+      "A form of asbestos once used to make Kent cigarette filters"
     ], 
     [
       29, 
       29, 
       0, 
-      "it", 
-      false
+      "it"
     ]
   ], 
   "bbn_ne": [
@@ -377,65 +389,35 @@
       3, 
       "asbestos", 
       "SUBSTANCE", 
-      "CHEMICAL", 
-      "", 
-      false
+      "CHEMICAL"
     ], 
     [
       10, 
       10, 
       "Kent", 
       "PRODUCT", 
-      "OTHER", 
-      "", 
-      false
+      "OTHER"
     ], 
     [
       23, 
       23, 
       "group", 
       "PER_DESC", 
-      "", 
-      "", 
-      false
+      ""
     ], 
     [
       25, 
       25, 
       "workers", 
       "PER_DESC", 
-      "", 
-      "", 
-      false
+      ""
     ], 
     [
       36, 
       36, 
       "researchers", 
       "PER_DESC", 
-      "", 
-      "", 
-      false
-    ]
-  ], 
-  "coref": [
-    [
-      [
-        [
-          "it", 
-          0, 
-          6, 
-          26, 
-          27
-        ], 
-        [
-          "A form of asbestos once used to make Kent cigarette filters", 
-          0, 
-          1, 
-          0, 
-          11
-        ]
-      ]
+      ""
     ]
   ], 
   "prop": [

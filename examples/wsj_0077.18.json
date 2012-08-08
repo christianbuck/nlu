@@ -23,6 +23,7 @@
       "gov_idx": -1
     }
   ], 
+  "stanford_coref": [], 
   "text": "The dollar rose .", 
   "coref_chains": [], 
   "bbn_ne": [], 

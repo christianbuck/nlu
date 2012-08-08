@@ -129,46 +129,36 @@
       "gov_idx": 15
     }
   ], 
+  "stanford_coref": [
+    [
+      [
+        "Pierre Vinken", 
+        0, 
+        2
+      ], 
+      [
+        "Pierre Vinken , 61 years old ,", 
+        0, 
+        7
+      ]
+    ]
+  ], 
+  "coref_chains": [], 
+  "treebank_sentence": "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .", 
   "bbn_ne": [
     [
       0, 
       1, 
       "Pierre Vinken", 
       "PERSON", 
-      "", 
-      "", 
-      false
+      ""
     ], 
     [
       14, 
       14, 
       "director", 
       "PER_DESC", 
-      "", 
-      "", 
-      false
-    ]
-  ], 
-  "coref_chains": [], 
-  "treebank_sentence": "Pierre Vinken , 61 years old , will join the board as a nonexecutive director Nov. 29 .", 
-  "coref": [
-    [
-      [
-        [
-          "Pierre Vinken", 
-          0, 
-          1, 
-          0, 
-          2
-        ], 
-        [
-          "Pierre Vinken , 61 years old ,", 
-          0, 
-          1, 
-          0, 
-          7
-        ]
-      ]
+      ""
     ]
   ], 
   "prop": [

@@ -114,6 +114,7 @@
       "gov_idx": 17
     }
   ], 
+  "stanford_coref": [], 
   "text": "The Dow Jones Industrial Average finished less than a point higher to close at 2645.90 in moderate trading .", 
   "coref_chains": [], 
   "bbn_ne": [], 
