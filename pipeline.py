@@ -137,7 +137,7 @@ def choose_head(tokenIndices, depParse):
             frontier.remove(itm)
     
     if not frontier: return None    # TODO: temporary?
-    assert len(frontier)==1,(frontier,tokenIndices,depParse[tokenIndices[0]])
+    assert len(frontier)==1,(frontier,tokenIndices,depParse[tokenIndices[0]],depParse[tokenIndices[1]])
     return next(iter(frontier))
     
 

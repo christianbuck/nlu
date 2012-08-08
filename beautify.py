@@ -32,7 +32,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     for a, r, (b,) in triples:
         if a in replacements:
             a = replacements[a]
-        if b==y:
+        if b in replacements:
             b = replacements[b]
         newtriples.append((a,r,b))
     amr = Amr.from_triples(newtriples, amr.node_to_concepts)
