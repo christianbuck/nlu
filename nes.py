@@ -40,15 +40,14 @@ Example input, from wsj_0002.0:
 
 
 
-def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
+def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     triples = set() # to add to the AMR
     
     entities = pipeline.loadBBN(sentenceId)
-    for i,j,name,coarse,fine,desc,_ in entities:    # TODO: what is the last one?
+    for i,j,name,coarse,fine in entities:    # TODO: what is the last one?
         h = choose_head(range(i,j+1), depParse)
         #print((i,j),name,h,depParse[h+1]['dep'], file=sys.stderr)
-        # TODO: if descriptor is present, get its index
         
         x = alignment[:h] # index of variable associated with i's head, if any
         
@@ -57,14 +56,13 @@ def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
             # make the word the AMR head
             if not (x or x==0): # need a new variable
                 x = new_concept(pipeline.token2concept(depParse[h][0]['dep']), amr, alignment, h)
-                triples.add((str(x), 'DUMMY', ''))
+                triples.add((str(x), '-DUMMY', ''))
         else:
             if not (x or x==0): # need a new variable
-                ne_class = desc or fine.lower().replace('other','') or coarse.lower()
+                ne_class = fine.lower().replace('other','') or coarse.lower()
                 concept, amr_name = amrify(ne_class, name)
                 x = new_concept(pipeline.token2concept(concept),
                                 amr, alignment, h)
-                # TODO: also align to descriptor, if present
                 n = new_concept('name', amr)
                 triples.add((str(x), 'name', str(n)))
                 for iw,w in enumerate(amr_name.split()):

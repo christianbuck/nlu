@@ -12,7 +12,7 @@ from dev.amr.amr import Amr
 import pipeline
 from pipeline import new_concept
 
-def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
+def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     for deps in depParse:
         if deps is None: continue

@@ -58,7 +58,7 @@ Example input, from wsj_0002.0:
 
 
 
-def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
+def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     triples = set() # to add to the AMR
     
@@ -66,7 +66,7 @@ def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
     
     # add all predicates first, so the roleset properly goes into the AMR
     for prop in props:
-        baseform, roleset = prop["baseform"], prop["roleset"]
+        baseform, roleset = prop["baseform"], prop.get("roleset",prop.get("frame")) # TODO: roleset/frame thing is temporary
         
         assert prop["args"][0][0]=='rel'
         pred = prop["args"][0]
@@ -76,12 +76,12 @@ def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
         if not (px or px==0):
             px = new_concept(pipeline.token2concept(roleset.replace('.','-')), amr, alignment, ph)
             if len(prop["args"])==1 or prop["args"][1][0].startswith('LINK'):
-                triples.add((str(px), 'DUMMY', ''))
+                triples.add((str(px), '-DUMMY', ''))
         completed[0][ph] = True
         
     # now handle arguments
     for prop in props:
-        baseform, roleset = prop["baseform"], prop["roleset"]
+        baseform, roleset = prop["baseform"], prop.get("roleset",prop.get("frame"))
         
         pred = [arg for arg in prop["args"] if arg[0]=='rel'][0]
         ph = pred[2]    # predicate head
@@ -91,7 +91,12 @@ def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
             if i is None or j is None: continue # TODO: special PropBank cases that need further work
             if rel in ['rel', 'LINK-PCR', 'LINK-SLC']: continue
             assert rel[:3]=='ARG'
+            if i==j:
+                #assert depParse[i], (tokens[i],rel,treenode,yieldS)
+                if depParse[i] is None: continue    # TODO: is this appropriate? e.g. in wsj_0003.0
+            print(rel,i,j,yieldS)
             h = choose_head(range(i,j+1), depParse)
+            if h is None: continue  # TODO: temporary?
             x = alignment[:h] # index of variable associated with i's head, if any
             
             if rel=='ARGM-TMP':
@@ -104,6 +109,8 @@ def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
                 # TODO: possibly also :duration, etc.
             elif rel=='ARGM-LOC':
                 rel = 'location'    # TODO: possibly also :direction, :source, :destination. look at preposition?
+            elif rel=='ARGM-CAU':
+                rel = 'cause'
             
             if not (x or x==0): # need a new variable
                 x = new_concept(pipeline.token2concept(depParse[h][0]['dep']),

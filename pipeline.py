@@ -10,10 +10,10 @@ from alignment import Alignment
 
 def main(sentenceId):
     # load dependency parse from sentence file
-    ww, wTags, depParse = loadDepParse(sentenceId)
+    tokens, ww, wTags, depParse = loadDepParse(sentenceId)
     
     # pipeline steps
-    import nes, vprop, nprop, adjsAndAdverbs, auxes
+    import nes, vprop, nprop, adjsAndAdverbs, auxes, coref, beautify
 
     # initialize input to first pipeline step
     token_accounted_for = [False]*len(depParse)
@@ -28,14 +28,17 @@ def main(sentenceId):
     alignments = Alignment()
 
     # serially execute pipeline steps
-    for m in [nes, vprop, nprop, adjsAndAdverbs, auxes]:
+    print(' '.join(filter(None,ww)))
+    sys.stdout.flush()
+    for m in [nes, vprop, nprop, adjsAndAdverbs, auxes, coref, beautify]:
         print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
-        depParse, amr, alignments, completed = m.main(sentenceId, ww, wTags, depParse, amr, alignments, completed)
+        depParse, amr, alignments, completed = m.main(sentenceId, tokens, ww, wTags, depParse, amr, alignments, completed)
         #print(' '.join(ww))
         print(repr(amr), file=sys.stderr)
         print('Completed:',[depParse[i][0]['dep'] for i,v in enumerate(completed[0]) if v and depParse[i]], file=sys.stderr)
         print(alignments, [deps[0]['dep'] for deps in depParse if deps and not completed[0][deps[0]['dep_idx']]], file=sys.stderr)
         print(amr, file=sys.stderr)
+    print(' '.join(tokens))
 
     print('\n\nRemaining edges:')
     for deps in depParse:
@@ -73,23 +76,48 @@ def loadDepParse(sentenceId):
     jsonFile = 'examples/'+sentenceId+'.json'
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         sentJ = json.load(jsonF)
-        deps_concise = sentJ["stanford_dep"]
-        deps = []
-        for entry in deps_concise:
-            while len(deps)<entry["dep_idx"]:
-                deps.append(None)   # dependency root, puncutation, or function word incorporated into a dependecy relation
-            if entry["dep_idx"]==len(deps):
-                deps.append([])
-            if entry["gov_idx"]==-1:    # root
-                entry["gov_idx"] = None
-            deps[-1].append(entry)  # can be multiple entries for a token, because tokens can have multiple heads
+        
+        # words
         tokens = sentJ["treebank_sentence"].split() # includes traces
         ww = [None]*len(tokens)
         wTags = [None]*len(tokens)
         for itm in sentJ["words"]:
             ww[itm[1]["idx"]] = itm[0]
             wTags[itm[1]["idx"]] = itm[1]
-        return ww, wTags, deps  # ww and wTags have None for tokens which are empty elements
+        
+        # dependency parse
+        deps = [None]*len(tokens)   # entries that will remain None: dependency root, punctuation, or function word incorporated into a dependecy relation
+        deps_concise = sentJ["stanford_dep"]
+        for entry in deps_concise:
+            i = entry["dep_idx"]
+            if deps[i] is None:
+                deps[i] = []
+            if entry["gov_idx"]==-1:    # root
+                entry["gov_idx"] = None
+            deps[i].append(entry)  # can be multiple entries for a token, because tokens can have multiple heads
+        
+        return tokens, ww, wTags, deps  # ww and wTags have None for tokens which are empty elements
+
+def surface2treeToken(offset, ww):
+    '''
+    Given a token offset in the (tokenized) surface sentence, 
+    convert to a tree token offset by accounting for empty elements/traces.
+    ''' # TODO: replace with preprocessing of json files
+    i = offset
+    while i-ww[:i].count(None)<offset:
+        i += 1
+    return i
+
+def loadCoref(sentenceId, ww):
+    jsonFile = 'examples/'+sentenceId+'.json'
+    with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
+        chains = json.load(jsonF)["coref_chains"]
+        coref = {}  # coref chain ID -> set of elements
+        for start,end,chainId,w in chains:
+            #start = surface2treeToken(start, ww)    # TODO: unnecessary?
+            #end = surface2treeToken(end, ww)
+            coref.setdefault(chainId,set()).add((start,end,w))
+        return coref
 
 def parents(depParseEntry):
     return [dep['dep_idx'] for dep in depParseEntry] if depParseEntry else []
@@ -104,9 +132,12 @@ def choose_head(tokenIndices, depParse):
     # are also in the NE
     frontier = set(tokenIndices)    # should end up with just 1 (the head)
     for itm in set(frontier):
+        assert 0<=itm<len(depParse)
         if not depParse[itm] or all((depitm['gov_idx'] in tokenIndices) for depitm in depParse[itm]):
             frontier.remove(itm)
-    assert len(frontier)==1,(tokenIndices,frontier)
+    
+    if not frontier: return None    # TODO: temporary?
+    assert len(frontier)==1,(frontier,tokenIndices,depParse[tokenIndices[0]])
     return next(iter(frontier))
     
 
