@@ -121,7 +121,7 @@ Example input, from wsj_0002.0:
 
 
 
-def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
+def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     triples = set() # to add to the AMR
     
@@ -131,7 +131,7 @@ def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
     
     # add all predicates first, so the roleset properly goes into the AMR
     for prop in props:
-        baseform, frame = prop["lemma"], prop["frame"]
+        baseform, frame = prop.get("lemma",prop.get("baseform")), prop["frame"]
         roleset = baseform+'.'+frame
         
         preds = {tuple(arg) for arg in prop["args"] if arg[0]=='rel'}
@@ -144,9 +144,13 @@ def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
         predconcept = pipeline.token2concept(roleset.replace('.','-n-'))
         if not (px or px==0):
             px = new_concept(predconcept, amr)  # no alignment here - instead use 'predheads'
-            print('###','newconcept',px,'/',predconcept)
-            if len(prop["args"])==1 or (prop["args"][0][0] in ['Support','rel'] and prop["args"][1][0] in ['Support','rel']):
-                triples.add((str(px), 'DUMMY', ''))
+            #print('###','newconcept',px,'/',predconcept)
+            px0 = alignment[:ph]
+            if not (px0 or px0==0):
+                px0 = new_concept(pipeline.token2concept(ww[ph]), amr, alignment, ph)
+            triples.add((str(px), '-PRED-FOR', str(px0)))
+            #if len(prop["args"])==1 or (prop["args"][0][0] in ['Support','rel'] and prop["args"][1][0] in ['Support','rel']):
+            #    triples.add((str(px), '-DUMMY', ''))
             predheads[ph] = px
         #else:   # predicate already a concept in the AMR
         #    amr.node_to_concepts[str(px)] = predconcept # change the name of the concept
@@ -155,7 +159,7 @@ def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
         
     # now handle arguments
     for prop in props:
-        baseform, frame = prop["lemma"], prop["frame"]
+        baseform, frame = prop.get("lemma",prop.get("baseform")), prop["frame"]
         roleset = baseform+'.'+frame
         
         pred = [arg for arg in prop["args"] if arg[0]=='rel'][0]
@@ -180,9 +184,11 @@ def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
                 # TODO: possibly also :duration, etc.
             elif rel=='ARGM-LOC':
                 rel = 'location'    # TODO: possibly also :direction, :source, :destination. look at preposition?
+            elif rel=='ARGM-CAU':
+                rel = 'cause'
             
             if not (x or x==0): # need a new variable
-                x = new_concept(pipeline.token2concept(depParse[h][0]['dep']),
+                x = new_concept(pipeline.token2concept(ww[h]),
                                 amr, alignment, h)
             triples.add((str(px), rel, str(x)))
             print('###',px,rel,x)

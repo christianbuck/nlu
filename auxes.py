@@ -23,7 +23,7 @@ MODALS = {'will': '',
 
 # TODO: other modalities not expressed exclusively in the auxiliary: e.g. 'would rather', 'likely/able/permitted/have to'
 
-def main(sentenceId, ww, wTags, depParse, inAMR, alignment, completed):
+def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     for deps in depParse:
         if deps is None: continue
