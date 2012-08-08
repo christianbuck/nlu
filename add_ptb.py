@@ -35,4 +35,4 @@ if __name__ == "__main__":
     assert int(sentNr) < len(treebank[docId])
 
     data['ptbparse'] = treebank[docId][sentNr]
-    json.dump(data, open(arguments.jsonout, 'w'), indent=2)
+    json.dump(data, open(arguments.jsonout, 'w'), indent=2, sort_keys=True)

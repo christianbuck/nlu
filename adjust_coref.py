@@ -41,4 +41,4 @@ if __name__ == "__main__":
     for cchain in data['coref_chains']:
         cchain.pop()
 
-    json.dump(data, open(arguments.jsonout, 'w'), indent=2)
+    json.dump(data, open(arguments.jsonout, 'w'), indent=2, sort_keys=True)

@@ -29,4 +29,4 @@ if __name__ == "__main__":
         assert lemma == tracestring[adjusted_idx]
         w[1]['idx'] = adjusted_idx
 
-    json.dump(data, open(arguments.jsonout,'w'), indent=2)
+    json.dump(data, open(arguments.jsonout,'w'), indent=2, sort_keys=True)

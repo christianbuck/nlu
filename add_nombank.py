@@ -108,7 +108,7 @@ def process_file(json_filename, nb):
         data['nom'].append(nb_data)
 
         #print nb_data
-    json.dump(data, open(json_filename, 'w'), indent=2)
+    json.dump(data, open(json_filename, 'w'), indent=2, sort_keys=True)
 
 if __name__ == "__main__":
     import argparse
