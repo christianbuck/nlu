@@ -114,8 +114,6 @@ def loadCoref(sentenceId, ww):
         chains = json.load(jsonF)["coref_chains"]
         coref = {}  # coref chain ID -> set of elements
         for start,end,chainId,w in chains:
-            #start = surface2treeToken(start, ww)    # TODO: unnecessary?
-            #end = surface2treeToken(end, ww)
             coref.setdefault(chainId,set()).add((start,end,w))
         return coref
 
