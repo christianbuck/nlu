@@ -66,7 +66,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     
     # add all predicates first, so the roleset properly goes into the AMR
     for prop in props:
-        baseform, roleset = prop["baseform"], prop.get("roleset",prop.get("frame")) # TODO: roleset/frame thing is temporary
+        baseform, roleset = prop["baseform"], prop["frame"] # TODO: roleset/frame thing is temporary
         
         assert prop["args"][0][0]=='rel'
         pred = prop["args"][0]
@@ -81,7 +81,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
         
     # now handle arguments
     for prop in props:
-        baseform, roleset = prop["baseform"], prop.get("roleset",prop.get("frame"))
+        baseform, roleset = prop["baseform"], prop["frame"]
         
         pred = [arg for arg in prop["args"] if arg[0]=='rel'][0]
         ph = pred[2]    # predicate head

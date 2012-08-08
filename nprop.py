@@ -159,7 +159,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
         
     # now handle arguments
     for prop in props:
-        baseform, frame = prop.get("lemma",prop.get("baseform")), prop["frame"]
+        baseform, frame = prop["baseform"], prop["frame"]
         roleset = baseform+'.'+frame
         
         pred = [arg for arg in prop["args"] if arg[0]=='rel'][0]
