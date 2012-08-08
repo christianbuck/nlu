@@ -24,19 +24,19 @@ if __name__ == "__main__":
         #            refExpr = lCorefPair[0]
         #            antecedent = lCorefPair[1]
 
+    assert not 'stanford_coref' in data
     data['stanford_coref'] = []
-    for sentence in data['coref']:
-        for chain in sentence:
-            data['stanford_coref'].append([])
-            for entry in chain:
-                #print pair
-                if len(entry) == 5:
-                    entry = entry[0:1] + entry[3:]
-                    data['stanford_coref'][-1].append(entry)
-                    print entry
-            print chain
+    if 'coref' in data:
+        for sentence in data['coref']:
+            for chain in sentence:
+                data['stanford_coref'].append([])
+                for entry in chain:
+                    #print pair
+                    if len(entry) == 5:
+                        entry = entry[0:1] + entry[3:]
+                        data['stanford_coref'][-1].append(entry)
 
-    data.pop('coref')
+        data.pop('coref')
 
     for cchain in data['coref_chains']:
         cchain.pop()
