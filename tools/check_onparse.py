@@ -7,6 +7,7 @@ from collections import defaultdict
 from itertools import imap, izip
 import json
 import re
+from nltk.tree import Tree
 
 if __name__ == "__main__":
     import argparse
@@ -19,4 +20,10 @@ if __name__ == "__main__":
     ptb = Tree.parse(data['ptbparse'])
     onf = Tree.parse(data['goldparse'])
 
-    print pbt == onf
+    equal = ptb[0].pprint() == onf[0].pprint()
+    if not equal:
+        print "0 parses from pbt and .onf differ in %s" %arguments.json
+    if equal:
+        print "1 parses from pbt and .onf do NOT differ in %s" %arguments.json
+        #print ptb[0].pprint()
+        #print onf[0].pprint()
