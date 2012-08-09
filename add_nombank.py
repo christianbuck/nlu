@@ -5,7 +5,10 @@ from collections import defaultdict
 from itertools import imap, izip
 import json
 import re
+from offset import Offset
+from brackets import escape_brackets
 from spantree import SpanTree
+from nltk.tree import Tree
 
 '''
 we want this:
@@ -77,6 +80,16 @@ def process_file(json_filename, nb):
     data = json.load(open(json_filename))
     data['nom'] = []
 
+    ptb_tree = Tree.parse(data['ptbparse'])
+    ptbstring = ' '.join(ptb_tree.leaves())
+    ptbstring = ptbstring.replace('-',' - ')
+    ptbstring = escape_brackets(ptbstring).split()
+    tracestring = escape_brackets(data['treebank_sentence']).split()
+    print list(enumerate(ptbstring))
+    print list(enumerate(tracestring))
+    assert len(ptbstring) <= len(tracestring)
+    off = Offset(ptbstring, tracestring, ignore_traces=True)
+
     pt = SpanTree.parse(data['ptbparse'])
 
     for nb_data in nb[docId][sentNr]:
@@ -100,6 +113,9 @@ def process_file(json_filename, nb):
 
                 words = pt[treepos].leaves()
                 start, end = span_from_treepos(pt, treepos)
+                print start, end
+                start = off.map_to_longer(start)
+                end = off.map_to_longer(end)
 
             new_args.append( [role, pos, start, end, ' '.join(words)] )
 
@@ -120,4 +136,7 @@ if __name__ == "__main__":
 
     for filename in arguments.json:
         print filename, '...'
-        process_file(filename, nb)
+        try:
+            process_file(filename, nb)
+        except AssertionError:
+            pass
