@@ -72,6 +72,7 @@ def loadVProp(sentenceId):
         data = json.load(jsonF)
         props = data["prop"]
         for prop in props:  # resolve relative clause * / LINK-PCR arguments    # TODO: ideally this would be done in preparing the JSON file (add_prop)
+            # see wsj_0003.0 for an example ('workers' at 25:1 vs. '*' at 27:0 as the ARG1 of expose.01)
             empty2overt = {}
             for arg in prop["args"]:
                 if arg[0]=='LINK-PCR':

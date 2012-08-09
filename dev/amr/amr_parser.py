@@ -5,7 +5,7 @@ Parse a feature-structure-style text encoding of an AMR.
 @since: 2012-06-18
 '''
 
-from pyparsing import Literal,Word,CharsNotIn, OneOrMore, ZeroOrMore,Forward,nums,alphas, Optional 
+from pyparsing import Literal,Word,CharsNotIn, OneOrMore, ZeroOrMore,Forward,nums,alphas, Optional, ParserElement 
 from collections import defaultdict
 import pyparsing
 import unittest
@@ -31,6 +31,12 @@ def make_amr_parser():
     Pyparsing parser for AMRs. This will return an abstract syntax tree that
     needs to be converted into an AMR using ast_to_amr.
     """
+    def debug(s, loc, tok):
+        if len(tok) > 1:
+            flat = [tok[0]] + tok[1:]
+        else: 
+            flat =  tok
+        return flat
 
     def parse_concept_expr(s, loc, tok):       
         node_name = tok[0]
@@ -45,11 +51,13 @@ def make_amr_parser():
               if len(tok) > 2:
                 roles = tok[2:]
         return (node_name, concept_name, roles)
-    
+   
+    ParserElement.enablePackrat() # Hopefully no bug in here...
+
     parse_role = lambda s, loc, tok : (tok[0], tok[1:] if len(tok) > 2  else tok[1]) 
 
     # Number are all mapped to the same node in the graph because of interning
-    parse_quantity = lambda s, loc, tok: float(tok[0]) if "." in tok[0] else int(tok[0]) 
+    parse_quantity = lambda s, loc, tok: StrLiteral(" ".join(tok)) #float(tok[0]) if "." in tok[0] else int(tok[0]) 
 
     parse_string_literal = lambda s, loc, tok: StrLiteral(" ".join(tok)) 
 
@@ -62,27 +70,20 @@ def make_amr_parser():
 
     node_name =  Word(alphas+nums+"_@")  
 
-    concept_name = Word(alphas+nums+"-_")    
-    role_name = Word(alphas+nums+":-_.$'&@") | Literal("#").suppress()+Word(alphas+nums+"[]-$_").setParseAction(lambda s, loc, tok: NonterminalLabel(tok[0]))     
     lit_string = Literal('"').suppress() + CharsNotIn('"') + Literal('"').suppress()
+    concept_name = Word(alphas+nums+'-_.') | lit_string 
+    role_name = Word(alphas+nums+":-_.$'&@") | Literal("#").suppress()+Word(alphas+nums+"[]-$_").setParseAction(lambda s, loc, tok: NonterminalLabel(tok[0]))     
 
-    expr = Forward()
 
     special_attr = Literal("-") | Literal("interrogative") | Literal("amr-unknown") # Extend list if neccessary
 
-
+    expr = Forward()
     value =  expr |\
              quantity.setParseAction(parse_quantity) |\
              special_attr.setParseAction(parse_special_value) | \
              node_name |\
              lit_string.setParseAction(parse_string_literal) 
   
-    def debug(s, loc, tok):
-        if len(tok) > 1:
-            flat = [tok[0]] + tok[1:]
-        else: 
-            flat =  tok
-        return flat
 
     valuelist = Forward()
     valuelist << (value + Literal(",").suppress() +valuelist | value).setParseAction(debug)

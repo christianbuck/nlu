@@ -9,6 +9,7 @@ Directed Acyclic Graphs.
 
 from collections import defaultdict
 from amr_parser import make_amr_parser, SpecialValue, StrLiteral, NonterminalLabel
+from operator import itemgetter
 import functools
 import unittest
 import re
@@ -91,7 +92,7 @@ def ast_to_dag(ast):
                         if type(c) == tuple and len(c) == 3:
                             if type(c[0]) is str and c[0].startswith("@"):
                                 new_c = c[0].replace("@","")
-                                dag.external_nodes.append(new_c)                               
+                                dag.external_nodes.append(new_c)
                             else: 
                                 new_c = c[0]
                             childnode.add(new_c)
@@ -99,7 +100,7 @@ def ast_to_dag(ast):
                         else:
                             if type(c) is str and c.startswith("@"):
                                 c = c.replace("@","")
-                                dag.external_nodes.append(c)                               
+                                dag.external_nodes.append(c)
                             childnode.add(c)
                     newchild = tuple(childnode)        
                     dag[node].append(role, newchild)
@@ -109,7 +110,7 @@ def ast_to_dag(ast):
                     if type(child) is str and child.startswith("@"):
                         child = child.replace("@","")
                         tuple_child = (child,)
-                        dag.external_nodes.append(tuple_child)
+                        dag.external_nodes.append(child)
                         dag[node].append(role, tuple_child)
                     else:
                         dag[node].append(role, (child,))
@@ -204,6 +205,7 @@ class Dag(defaultdict):
                                   # to prefix unique new node IDs for glued fragments.
 
         self.__cached_triples = None
+        self.__cached_depth = None
 
     def __reduce__(self):
         t = defaultdict.__reduce__(self)
@@ -253,6 +255,7 @@ class Dag(defaultdict):
                         new_c = c.replace("@","")
                         if c.startswith("@"):
                             dag.external_nodes.append(new_c)
+                    new_child = list(new_child)
                     new_child.append(new_c)
                     new_child = tuple(new_child)
             else: # Allow triples to have single string children for convenience. 
@@ -399,39 +402,50 @@ class Dag(defaultdict):
 
     def has_edge(self, par, rel, child):
         return par in self and rel in self[par] and child in self[par].getall(rel) 
-
+    
     def triples(self, start_node = None):
         """
         Traverse the DAG breadth first to collect a list of (parent, relation, child) triples.
         """
 
         if self.__cached_triples:
-          return self.__cached_triples
+            return self.__cached_triples
 
+        triple_to_depth = {}
         triples = []
         tabu = set()
 
-        if start_node: 
-            queue = [start_node]
-        else:    
-            queue = [x for x in self.roots]
+        queue = [(x,0) for x in self.roots]
         while queue: 
-            node = queue.pop(0)
+            node, depth = queue.pop(0)
             if not node in tabu:
                 tabu.add(node)
-                for rel, child in self[node].items():
-                    triples.append((node, rel, child)) 
+                for rel, child in sorted(self[node].items(), key=itemgetter(0)):
+                    t = (node, rel, child)
+                    triples.append(t) 
+                    triple_to_depth[t] = depth
                     if type(child) is tuple:                            
                         for c in child:
                             if not c in tabu:
-                                queue.append(c)
+                                queue.append((c, depth+1))
                     else:
                         if not child in tabu: 
-                            queue.append(child)
+                            queue.append((child, depth+1))
 
         self.__cached_triples = triples
-        return triples
-    
+        self.__cached_depth = triple_to_depth
+        return triples 
+
+    def get_all_depths(self):
+        if not self.__cached_depth:
+            self.triples()
+        return self.__cached_depth
+
+    def get_depth(self, triple):
+        if not self.__cached_depth:
+            self.triples()
+        return self.__cached_depth[triple]
+
     def out_edges(self, node): 
         """
         Return outgoing edges from this node.
@@ -521,7 +535,7 @@ class Dag(defaultdict):
         """
         order = {}
         count = 0
-        for par, rel, child in self.triples():                
+        for par, rel, child in self.triples(instances = False):                
             if not par in order: 
                 order[par] = count 
                 count += 1
@@ -578,11 +592,15 @@ class Dag(defaultdict):
         """
         if type(child) is not tuple:
             child = (child,)
+        if parent in child: 
+            sys.stderr.wriote("WARNING: Cannot add self-edge (%s, %s, %s)." % (parent, relation, child))
+            #raise ValueError, "Cannot add self-edge (%s, %s, %s)." % (parent, relation, child)
         for c in child: 
             x = self[c]
             for rel, test in self[c].items():
                 if parent in test: 
-                    raise ValueError,"(%s, %s, %s) would produce a cycle with (%s, %s, %s)" % (parent, relation, child, c, rel, test)
+                    sys.stderr.write("WARNING: (%s, %s, %s) would produce a cycle with (%s, %s, %s)\n" % (parent, relation, child, c, rel, test))
+                    #raise ValueError,"(%s, %s, %s) would produce a cycle with (%s, %s, %s)" % (parent, relation, child, c, rel, test)
         self[parent].append(relation, child)    
     
     def _replace_triple(self, parent1, relation1, child1, parent2, relation2, child2):
@@ -613,7 +631,7 @@ class Dag(defaultdict):
         new.external_nodes = [node_map[x] if x in node_map else x for x in self.external_nodes]
         for par, rel, child in Dag.triples(self):
             if type(child) is tuple: 
-                new._add_triple(node_map[par] if par in node_map else par, rel, tuple([(node_map[c] if c in node_map else c)for c in child]))
+                new._add_triple(node_map[par] if par in node_map else par, rel, tuple([(node_map[c] if c in node_map else c) for c in child]))
             else: 
                 new._add_triple(node_map[par] if par in node_map else par, rel, node_map[child] if child in node_map else child)    
         return new
@@ -637,11 +655,11 @@ class Dag(defaultdict):
         """
         new = Dag()
         node_map = self._get_canonical_nodes(prefix)
-        for k,v in external__dict.items():
+        for k,v in external_dict.items():
                 node_map[k] = v
         new.roots = [node_map[x] for x in self.roots]
         new.external_nodes = set([node_map[x] for x in self.external_nodes])
-        for par, rel, child in self.triples():
+        for par, rel, child in self.triples(instances = False):
             if type(child) is tuple:                 
                 new._add_triple(node_map[par], rel, tuple([node_map[c] for c in child]))
             else: 
@@ -717,14 +735,14 @@ class Dag(defaultdict):
         dagroots = dag.find_roots() if not dag.roots else dag.roots
 
         if dag.external_nodes: # Can use specified external nodes
-            external = tuple(dag.external_nodes)
+            external = tuple(set(self.find_external_nodes(dag) +
+              dag.external_nodes))
         else:
             external = tuple(self.find_external_nodes(dag))
       
-        if not unary:
-            # prevent unary edges
-            if not external:
-                external = (dag.find_leaves()[0],)
+        if not unary and not external:
+            # prevent unary edges if flag is set
+            external = (dag.find_leaves()[0],)
 
         res_dag = self.remove_fragment(dag)
 
