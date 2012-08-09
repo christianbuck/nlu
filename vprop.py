@@ -94,7 +94,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             if i==j:
                 #assert depParse[i], (tokens[i],rel,treenode,yieldS)
                 if depParse[i] is None: continue    # TODO: is this appropriate? e.g. in wsj_0003.0
-            print(rel,i,j,yieldS)
+            print(roleset,rel,i,j,yieldS)
             h = choose_head(range(i,j+1), depParse)
             if h is None: continue  # TODO: temporary?
             x = alignment[:h] # index of variable associated with i's head, if any
