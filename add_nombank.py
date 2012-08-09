@@ -80,10 +80,13 @@ def process_file(json_filename, nb):
     data = json.load(open(json_filename))
     data['nom'] = []
 
+    # index adjustments for consistency with ontonotes parses
     ptb_tree = Tree.parse(data['ptbparse'])
     ptbstring = ' '.join(ptb_tree.leaves())
-    ptbstring = ptbstring.replace('-',' - ')
+    #ptbstring = ptbstring.replace('-',' - ')
+    ptbstring_tok = re.sub('(\w)-(\w)',r'\1 - \2', ptbstring)
     ptbstring = escape_brackets(ptbstring).split()
+    ptbstring_tok = escape_brackets(ptbstring_tok).split()
     tracestring = escape_brackets(data['treebank_sentence']).split()
     print list(enumerate(ptbstring))
     print list(enumerate(tracestring))
@@ -113,9 +116,10 @@ def process_file(json_filename, nb):
 
                 words = pt[treepos].leaves()
                 start, end = span_from_treepos(pt, treepos)
-                print start, end
+                print start, end,
                 start = off.map_to_longer(start)
                 end = off.map_to_longer(end)
+                print '->', start, end
 
             new_args.append( [role, pos, start, end, ' '.join(words)] )
 
@@ -139,4 +143,4 @@ if __name__ == "__main__":
         try:
             process_file(filename, nb)
         except AssertionError:
-            pass
+            raise
