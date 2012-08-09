@@ -147,7 +147,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             px0 = alignment[:ph]
             if not (px0 or px0==0):
                 px0 = new_concept(pipeline.token2concept(ww[ph]), amr, alignment, ph)
-            triples.add((str(px), '-PRED-FOR', str(px0)))
+            triples.add((str(px0), '-PRED', str(px)))
             #if len(prop["args"])==1 or (prop["args"][0][0] in ['Support','rel'] and prop["args"][1][0] in ['Support','rel']):
             #    triples.add((str(px), '-DUMMY', ''))
             predheads[ph] = px

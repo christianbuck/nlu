@@ -19,6 +19,9 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     # for each triple of the form <x :-COREF y>, delete the triple and replace 
     # all occurrences of y with x
     
+    
+    # TODO: update alignments. also record AMR triple-to-token alignments?
+    
     triples = amr.triples(instances=False)
     coref_triples = [trip for trip in triples if trip[1]=='-COREF']
     replacements = {}
