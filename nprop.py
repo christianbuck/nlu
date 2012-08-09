@@ -132,7 +132,6 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     # add all predicates first, so the roleset properly goes into the AMR
     for prop in props:
         baseform, frame = prop.get("lemma",prop.get("baseform")), prop["frame"]
-        roleset = baseform+'.'+frame
         
         preds = {tuple(arg) for arg in prop["args"] if arg[0]=='rel'}
         assert len(preds)==1
@@ -141,7 +140,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
         ph = pred[2]    # predicate head
         #px = alignment[:ph]    # instead of aligning noun predicate to noun in the sentence, introduce the noun predicate separately (so the plain noun concept can be its argument)
         px = predheads.get(ph)
-        predconcept = pipeline.token2concept(roleset.replace('.','-n-'))
+        predconcept = pipeline.token2concept(frame.replace('.','-n-'))
         if not (px or px==0):
             px = new_concept(predconcept, amr)  # no alignment here - instead use 'predheads'
             #print('###','newconcept',px,'/',predconcept)
@@ -160,7 +159,6 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     # now handle arguments
     for prop in props:
         baseform, frame = prop["baseform"], prop["frame"]
-        roleset = baseform+'.'+frame
         
         pred = [arg for arg in prop["args"] if arg[0]=='rel'][0]
         ph = pred[2]    # predicate head
