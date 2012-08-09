@@ -9,6 +9,7 @@ from collections import defaultdict
 
 from dev.amr.amr import Amr
 from alignment import Alignment
+from add_prop import SpanTree, span_from_treepos
 
 def main(sentenceId):
     # load dependency parse from sentence file
@@ -68,7 +69,28 @@ def loadBBN(sentenceId):
 def loadVProp(sentenceId):
     jsonFile = 'examples/'+sentenceId+'.json'
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
-        return json.load(jsonF)['prop']
+        data = json.load(jsonF)
+        props = data["prop"]
+        for prop in props:  # resolve relative clause * / LINK-PCR arguments    # TODO: ideally this would be done in preparing the JSON file (add_prop)
+            empty2overt = {}
+            for arg in prop["args"]:
+                if arg[0]=='LINK-PCR':
+                    overtNode, emptyNode = arg[1].split('*')
+                    empty2overt[emptyNode] = overtNode
+            for arg in prop["args"]:
+                if arg[0].startswith('ARG') and arg[4]=='*':
+                    overtNode = empty2overt[arg[1]]
+                    # look up node in the tree, convert to offsets
+                    pt = SpanTree.parse(data["goldparse"])  # TODO: what if it is a non-OntoNotes (PTB) tree?
+                    leaf_id, depth = pt.parse_pos(overtNode)
+                    treepos = pt.get_treepos(leaf_id, depth)
+                    overtWords = pt[treepos].leaves()
+                    overtStart, overtEnd = span_from_treepos(pt, treepos)
+                    print('relative clause LINK-PCR: ',arg,'-->',(overtStart,overtEnd,overtWords))
+                    arg[1] = overtNode
+                    arg[2], arg[3] = overtStart, overtEnd
+                    arg[4] = ' '.join(overtWords)
+        return props
     
 def loadNProp(sentenceId):
     jsonFile = 'examples/'+sentenceId+'.json'
