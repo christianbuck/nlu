@@ -62,7 +62,7 @@ def parse_onprop(raw_prop):
     disappoint-v disappoint.01 ----- 2:0-rel 3:0-ARG1 4:1;12:1-ARG0 0:1*3:0-LINK-PCR
     join-v join.01 ----- 8:0-rel 0:2-ARG0 7:0-ARGM-MOD 9:1-ARG1 11:1-ARGM-PRD 15:1-ARGM-TMP
     """
-    re_onprop = re.compile(r'^(?P<baseform>\w+)-(?P<basepos>\w) (?P<frame>\w+[.]\d+) (?P<inflection>\S+) (?P<args>.*)$')
+    re_onprop = re.compile(r'^(?P<baseform>\w+)-(?P<basepos>\w) (?P<frame>\w+[.](\d+|XX)) (?P<inflection>\S+) (?P<args>.*)$')
     m = re_onprop.match(raw_prop.strip())
     assert m, "no match: %s" %raw_prop
     d = m.groupdict()
