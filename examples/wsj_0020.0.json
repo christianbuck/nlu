@@ -1,7 +1,65 @@
 {
+  "bbn_ne": [
+    [
+      1, 
+      1, 
+      "U.S.", 
+      "GPE", 
+      "COUNTRY"
+    ], 
+    [
+      13, 
+      14, 
+      "South Korea", 
+      "GPE", 
+      "COUNTRY"
+    ], 
+    [
+      16, 
+      16, 
+      "Taiwan", 
+      "GPE", 
+      "COUNTRY"
+    ], 
+    [
+      18, 
+      19, 
+      "Saudi Arabia", 
+      "GPE", 
+      "COUNTRY"
+    ], 
+    [
+      38, 
+      38, 
+      "U.S.", 
+      "GPE", 
+      "COUNTRY"
+    ]
+  ], 
+  "coref_chains": [
+    [
+      1, 
+      1, 
+      12, 
+      "U.S."
+    ], 
+    [
+      8, 
+      8, 
+      12, 
+      "its"
+    ], 
+    [
+      26, 
+      26, 
+      12, 
+      "it"
+    ]
+  ], 
+  "document_id": "nw/wsj/00/wsj_0020@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ-1 (DT The) (NNP U.S.)) (, ,) (S-ADV (NP-SBJ (-NONE- *PRO*-1)) (VP (VBG claiming) (NP (NP (DT some) (NN success)) (PP-LOC (IN in) (NP (PRP$ its) (NN trade) (NN diplomacy)))))) (, ,) (VP (VBD removed) (NP (NP (NNP South) (NNP Korea)) (, ,) (NP (NNP Taiwan)) (CC and) (NP (NNP Saudi) (NNP Arabia))) (PP-CLR (IN from) (NP (NP (DT a) (NN list)) (PP (IN of) (NP (NP (NNS countries)) (SBAR (WHNP-2 (-NONE- 0)) (S (NP-SBJ (PRP it)) (VP (VBZ is) (ADVP-MNR (RB closely)) (VP (VBG watching) (NP (-NONE- *T*-2)) (PP-CLR (IN for) (S-NOM (NP-SBJ-3 (-NONE- *PRO*)) (ADVP (RB allegedly)) (VP (VBG failing) (S (NP-SBJ (-NONE- *-3)) (VP (TO to) (VP (VB honor) (NP (NNP U.S.) (NML (NML (NNS patents)) (, ,) (NML (NNS copyrights)) (CC and) (NML (JJ other) (NML (JJ intellectual) (HYPH -) (NN property)) (NNS rights))))))))))))))))))) (. .)))", 
   "nom": [
     {
-      "frame": "01", 
       "args": [
         [
           "ARGM-LOC", 
@@ -18,11 +76,11 @@
           "copyrights"
         ]
       ], 
-      "tokenNr": "41", 
-      "baseform": "copyright"
+      "baseform": "copyright", 
+      "frame": "copyright.01", 
+      "tokenNr": "41"
     }, 
     {
-      "frame": "01", 
       "args": [
         [
           "ARG0", 
@@ -39,11 +97,11 @@
           "diplomacy"
         ]
       ], 
-      "tokenNr": "10", 
-      "baseform": "diplomacy"
+      "baseform": "diplomacy", 
+      "frame": "diplomacy.01", 
+      "tokenNr": "10"
     }, 
     {
-      "frame": "01", 
       "args": [
         [
           "Support", 
@@ -74,11 +132,11 @@
           "of countries 0 it is closely watching *T*-2 for * allegedly failing *-3 to honor U.S. patents , copyrights and other intellectual-property rights"
         ]
       ], 
-      "tokenNr": "22", 
-      "baseform": "list"
+      "baseform": "list", 
+      "frame": "list.01", 
+      "tokenNr": "22"
     }, 
     {
-      "frame": "01", 
       "args": [
         [
           "ARG0", 
@@ -95,11 +153,11 @@
           "patents"
         ]
       ], 
-      "tokenNr": "39", 
-      "baseform": "patent"
+      "baseform": "patent", 
+      "frame": "patent.01", 
+      "tokenNr": "39"
     }, 
     {
-      "frame": "01", 
       "args": [
         [
           "ARG1", 
@@ -116,11 +174,11 @@
           "rights"
         ]
       ], 
-      "tokenNr": "45", 
-      "baseform": "right"
+      "baseform": "right", 
+      "frame": "right.01", 
+      "tokenNr": "45"
     }, 
     {
-      "frame": "01", 
       "args": [
         [
           "ARG0", 
@@ -151,11 +209,11 @@
           "in its trade diplomacy"
         ]
       ], 
-      "tokenNr": "6", 
-      "baseform": "success"
+      "baseform": "success", 
+      "frame": "success.01", 
+      "tokenNr": "6"
     }, 
     {
-      "frame": "01", 
       "args": [
         [
           "ARG0", 
@@ -179,265 +237,196 @@
           "diplomacy"
         ]
       ], 
-      "tokenNr": "9", 
-      "baseform": "trade"
+      "baseform": "trade", 
+      "frame": "trade.01", 
+      "tokenNr": "9"
     }
   ], 
-  "timex": [], 
-  "stanford_dep": [
+  "parsetree": "(ROOT (S (NP (DT The) (NNP U.S.)) (, ,) (S (VP (VBG claiming) (NP (DT some) (NN success)) (PP (IN in) (NP (PRP$ its) (NN trade) (NN diplomacy))))) (, ,) (VP (VBD removed) (NP (NNP South) (NP (NNP Korea) (, ,) (NNP Taiwan) (CC and) (NNP Saudi)) (NNP Arabia)) (PP (IN from) (NP (NP (DT a) (NN list)) (PP (IN of) (NP (NP (NNS countries)) (SBAR (S (NP (PRP it)) (VP (VBZ is) (ADVP (RB closely)) (VP (VBG watching) (PP (IN for) (S (ADVP (RB allegedly)) (VP (VBG failing) (S (VP (TO to) (VP (VB honor) (NP (NP (NP (NNP U.S.) (NNS patents)) (, ,) (NP (NNS copyrights)) (CC and) (NP (JJ other) (JJ intellectual))) (: -) (NP (NN property) (NNS rights)))))))))))))))))) (. .)))", 
+  "prop": [
     {
-      "dep": "The", 
-      "dep_idx": 0, 
-      "gov": "U.S.", 
-      "rel": "det", 
-      "gov_idx": 1
+      "args": [
+        [
+          "rel", 
+          "4:0", 
+          4, 
+          4, 
+          "claiming"
+        ], 
+        [
+          "ARG0", 
+          "3:0", 
+          0, 
+          1, 
+          "The U.S."
+        ], 
+        [
+          "ARG1", 
+          "5:2", 
+          5, 
+          10, 
+          "some success in its trade diplomacy"
+        ]
+      ], 
+      "baseform": "claim", 
+      "basepos": "v", 
+      "frame": "claim.01", 
+      "inflection": "-----"
     }, 
     {
-      "dep": "U.S.", 
-      "dep_idx": 1, 
-      "gov": "removed", 
-      "rel": "nsubj", 
-      "gov_idx": 12
+      "args": [
+        [
+          "rel", 
+          "12:0", 
+          12, 
+          12, 
+          "removed"
+        ], 
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          1, 
+          "The U.S."
+        ], 
+        [
+          "ARGM-ADV", 
+          "3:2", 
+          3, 
+          10, 
+          "*PRO*-1 claiming some success in its trade diplomacy"
+        ], 
+        [
+          "ARG1", 
+          "13:2", 
+          13, 
+          19, 
+          "South Korea , Taiwan and Saudi Arabia"
+        ], 
+        [
+          "ARG2", 
+          "20:1", 
+          20, 
+          47, 
+          "from a list of countries 0 it is closely watching *T*-2 for *PRO* allegedly failing *-3 to honor U.S. patents , copyrights and other intellectual - property rights"
+        ]
+      ], 
+      "baseform": "remove", 
+      "basepos": "v", 
+      "frame": "remove.01", 
+      "inflection": "-----"
     }, 
     {
-      "dep": "claiming", 
-      "dep_idx": 4, 
-      "gov": "removed", 
-      "rel": "partmod", 
-      "gov_idx": 12
+      "args": [
+        [
+          "rel", 
+          "29:0", 
+          29, 
+          29, 
+          "watching"
+        ], 
+        [
+          "ARG0", 
+          "26:1", 
+          26, 
+          26, 
+          "it"
+        ], 
+        [
+          "ARG1", 
+          "30:0", 
+          25, 
+          25, 
+          "0"
+        ], 
+        [
+          "ARGM-CAU", 
+          "31:1", 
+          31, 
+          47, 
+          "for *PRO* allegedly failing *-3 to honor U.S. patents , copyrights and other intellectual - property rights"
+        ], 
+        [
+          "LINK-SLC", 
+          "24:1*30:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "watch", 
+      "basepos": "v", 
+      "frame": "watch.01", 
+      "inflection": "-----"
     }, 
     {
-      "dep": "some", 
-      "dep_idx": 5, 
-      "gov": "success", 
-      "rel": "det", 
-      "gov_idx": 6
+      "args": [
+        [
+          "rel", 
+          "34:0", 
+          34, 
+          34, 
+          "failing"
+        ], 
+        [
+          "ARG1", 
+          "32:1", 
+          32, 
+          32, 
+          "*PRO*"
+        ], 
+        [
+          "ARGM-ADV", 
+          "33:1", 
+          33, 
+          33, 
+          "allegedly"
+        ], 
+        [
+          "ARG2", 
+          "35:2", 
+          35, 
+          47, 
+          "*-3 to honor U.S. patents , copyrights and other intellectual - property rights"
+        ]
+      ], 
+      "baseform": "fail", 
+      "basepos": "v", 
+      "frame": "fail.01", 
+      "inflection": "-----"
     }, 
     {
-      "dep": "success", 
-      "dep_idx": 6, 
-      "gov": "claiming", 
-      "rel": "dobj", 
-      "gov_idx": 4
-    }, 
-    {
-      "dep": "its", 
-      "dep_idx": 8, 
-      "gov": "diplomacy", 
-      "rel": "poss", 
-      "gov_idx": 10
-    }, 
-    {
-      "dep": "trade", 
-      "dep_idx": 9, 
-      "gov": "diplomacy", 
-      "rel": "nn", 
-      "gov_idx": 10
-    }, 
-    {
-      "dep": "diplomacy", 
-      "dep_idx": 10, 
-      "gov": "success", 
-      "rel": "prep_in", 
-      "gov_idx": 6
-    }, 
-    {
-      "dep": "removed", 
-      "dep_idx": 12, 
-      "gov": "ROOT", 
-      "rel": "root", 
-      "gov_idx": -1
-    }, 
-    {
-      "dep": "South", 
-      "dep_idx": 13, 
-      "gov": "Korea", 
-      "rel": "nn", 
-      "gov_idx": 14
-    }, 
-    {
-      "dep": "Korea", 
-      "dep_idx": 14, 
-      "gov": "removed", 
-      "rel": "dobj", 
-      "gov_idx": 12
-    }, 
-    {
-      "dep": "Taiwan", 
-      "dep_idx": 16, 
-      "gov": "removed", 
-      "rel": "dobj", 
-      "gov_idx": 12
-    }, 
-    {
-      "dep": "Taiwan", 
-      "dep_idx": 16, 
-      "gov": "Korea", 
-      "rel": "conj_and", 
-      "gov_idx": 14
-    }, 
-    {
-      "dep": "Saudi", 
-      "dep_idx": 18, 
-      "gov": "Arabia", 
-      "rel": "nn", 
-      "gov_idx": 19
-    }, 
-    {
-      "dep": "Arabia", 
-      "dep_idx": 19, 
-      "gov": "removed", 
-      "rel": "dobj", 
-      "gov_idx": 12
-    }, 
-    {
-      "dep": "Arabia", 
-      "dep_idx": 19, 
-      "gov": "Korea", 
-      "rel": "conj_and", 
-      "gov_idx": 14
-    }, 
-    {
-      "dep": "a", 
-      "dep_idx": 21, 
-      "gov": "list", 
-      "rel": "det", 
-      "gov_idx": 22
-    }, 
-    {
-      "dep": "list", 
-      "dep_idx": 22, 
-      "gov": "removed", 
-      "rel": "prep_from", 
-      "gov_idx": 12
-    }, 
-    {
-      "dep": "countries", 
-      "dep_idx": 24, 
-      "gov": "list", 
-      "rel": "prep_of", 
-      "gov_idx": 22
-    }, 
-    {
-      "dep": "it", 
-      "dep_idx": 26, 
-      "gov": "watching", 
-      "rel": "nsubj", 
-      "gov_idx": 29
-    }, 
-    {
-      "dep": "is", 
-      "dep_idx": 27, 
-      "gov": "watching", 
-      "rel": "aux", 
-      "gov_idx": 29
-    }, 
-    {
-      "dep": "closely", 
-      "dep_idx": 28, 
-      "gov": "watching", 
-      "rel": "advmod", 
-      "gov_idx": 29
-    }, 
-    {
-      "dep": "watching", 
-      "dep_idx": 29, 
-      "gov": "countries", 
-      "rel": "rcmod", 
-      "gov_idx": 24
-    }, 
-    {
-      "dep": "allegedly", 
-      "dep_idx": 33, 
-      "gov": "failing", 
-      "rel": "advmod", 
-      "gov_idx": 34
-    }, 
-    {
-      "dep": "failing", 
-      "dep_idx": 34, 
-      "gov": "watching", 
-      "rel": "prepc_for", 
-      "gov_idx": 29
-    }, 
-    {
-      "dep": "to", 
-      "dep_idx": 36, 
-      "gov": "honor", 
-      "rel": "aux", 
-      "gov_idx": 37
-    }, 
-    {
-      "dep": "honor", 
-      "dep_idx": 37, 
-      "gov": "failing", 
-      "rel": "xcomp", 
-      "gov_idx": 34
-    }, 
-    {
-      "dep": "U.S.", 
-      "dep_idx": 38, 
-      "gov": "patents", 
-      "rel": "dep", 
-      "gov_idx": 39
-    }, 
-    {
-      "dep": "patents", 
-      "dep_idx": 39, 
-      "gov": "honor", 
-      "rel": "dobj", 
-      "gov_idx": 37
-    }, 
-    {
-      "dep": "copyrights", 
-      "dep_idx": 41, 
-      "gov": "honor", 
-      "rel": "dobj", 
-      "gov_idx": 37
-    }, 
-    {
-      "dep": "copyrights", 
-      "dep_idx": 41, 
-      "gov": "patents", 
-      "rel": "conj_and", 
-      "gov_idx": 39
-    }, 
-    {
-      "dep": "other", 
-      "dep_idx": 43, 
-      "gov": "rights", 
-      "rel": "amod", 
-      "gov_idx": 47
-    }, 
-    {
-      "dep": "intellectual", 
-      "dep_idx": 44, 
-      "gov": "property", 
-      "rel": "amod", 
-      "gov_idx": 46
-    }, 
-    {
-      "dep": "property", 
-      "dep_idx": 46, 
-      "gov": "rights", 
-      "rel": "nn", 
-      "gov_idx": 47
-    }, 
-    {
-      "dep": "rights", 
-      "dep_idx": 47, 
-      "gov": "honor", 
-      "rel": "dobj", 
-      "gov_idx": 37
-    }, 
-    {
-      "dep": "rights", 
-      "dep_idx": 47, 
-      "gov": "patents", 
-      "rel": "conj_and", 
-      "gov_idx": 39
+      "args": [
+        [
+          "rel", 
+          "37:0", 
+          37, 
+          37, 
+          "honor"
+        ], 
+        [
+          "ARG0", 
+          "35:0", 
+          32, 
+          32, 
+          "*PRO*"
+        ], 
+        [
+          "ARG1", 
+          "38:1", 
+          38, 
+          47, 
+          "U.S. patents , copyrights and other intellectual - property rights"
+        ]
+      ], 
+      "baseform": "honor", 
+      "basepos": "v", 
+      "frame": "honor.01", 
+      "inflection": "-----"
     }
   ], 
+  "ptbparse": "( (S (NP-SBJ-1 (DT The) (NNP U.S.) ) (, ,) (S-ADV (NP-SBJ (-NONE- *-1) ) (VP (VBG claiming) (NP (NP (DT some) (NN success) ) (PP-LOC (IN in) (NP (PRP$ its) (NN trade) (NN diplomacy) ))))) (, ,) (VP (VBD removed) (NP (NP (NNP South) (NNP Korea) ) (, ,) (NP (NNP Taiwan) ) (CC and) (NP (NNP Saudi) (NNP Arabia) )) (PP-CLR (IN from) (NP (NP (DT a) (NN list) ) (PP (IN of) (NP (NP (NNS countries) ) (SBAR (WHNP-2 (-NONE- 0) ) (S (NP-SBJ (PRP it) ) (VP (VBZ is) (VP (ADVP-MNR (RB closely) ) (VBG watching) (NP (-NONE- *T*-2) ) (PP-CLR (IN for) (S-NOM (NP-SBJ-3 (-NONE- *) ) (VP (ADVP (RB allegedly) ) (VBG failing) (S (NP-SBJ (-NONE- *-3) ) (VP (TO to) (VP (VB honor) (NP (NNP U.S.) (NX (NX (NNS patents) ) (, ,) (NX (NNS copyrights) ) (CC and) (NX (JJ other) (JJ intellectual-property) (NNS rights) )))))))))))))))))) (. .) ))", 
+  "sentence_nr": 0, 
   "stanford_coref": [
     [
       [
@@ -488,248 +477,531 @@
       ]
     ]
   ], 
-  "ptbparse": "( (S (NP-SBJ-1 (DT The) (NNP U.S.) ) (, ,) (S-ADV (NP-SBJ (-NONE- *-1) ) (VP (VBG claiming) (NP (NP (DT some) (NN success) ) (PP-LOC (IN in) (NP (PRP$ its) (NN trade) (NN diplomacy) ))))) (, ,) (VP (VBD removed) (NP (NP (NNP South) (NNP Korea) ) (, ,) (NP (NNP Taiwan) ) (CC and) (NP (NNP Saudi) (NNP Arabia) )) (PP-CLR (IN from) (NP (NP (DT a) (NN list) ) (PP (IN of) (NP (NP (NNS countries) ) (SBAR (WHNP-2 (-NONE- 0) ) (S (NP-SBJ (PRP it) ) (VP (VBZ is) (VP (ADVP-MNR (RB closely) ) (VBG watching) (NP (-NONE- *T*-2) ) (PP-CLR (IN for) (S-NOM (NP-SBJ-3 (-NONE- *) ) (VP (ADVP (RB allegedly) ) (VBG failing) (S (NP-SBJ (-NONE- *-3) ) (VP (TO to) (VP (VB honor) (NP (NNP U.S.) (NX (NX (NNS patents) ) (, ,) (NX (NNS copyrights) ) (CC and) (NX (JJ other) (JJ intellectual-property) (NNS rights) )))))))))))))))))) (. .) ))", 
-  "text": "The U.S. , claiming some success in its trade diplomacy , removed South Korea , Taiwan and Saudi Arabia from a list of countries it is closely watching for allegedly failing to honor U.S. patents , copyrights and other intellectual - property rights .", 
-  "coref_chains": [
-    [
-      1, 
-      1, 
-      12, 
-      "U.S."
-    ], 
-    [
-      8, 
-      8, 
-      12, 
-      "its"
-    ], 
-    [
-      26, 
-      26, 
-      12, 
-      "it"
-    ]
-  ], 
-  "bbn_ne": [
-    [
-      1, 
-      1, 
-      "U.S.", 
-      "GPE", 
-      "COUNTRY"
-    ], 
-    [
-      13, 
-      14, 
-      "South Korea", 
-      "GPE", 
-      "COUNTRY"
-    ], 
-    [
-      16, 
-      16, 
-      "Taiwan", 
-      "GPE", 
-      "COUNTRY"
-    ], 
-    [
-      18, 
-      19, 
-      "Saudi Arabia", 
-      "GPE", 
-      "COUNTRY"
-    ], 
-    [
-      38, 
-      38, 
-      "U.S.", 
-      "GPE", 
-      "COUNTRY"
-    ]
-  ], 
-  "prop": [
+  "stanford_dep": [
     {
-      "frame": "claim.01", 
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "claim", 
-      "args": [
-        [
-          "rel", 
-          "4:0", 
-          4, 
-          4, 
-          "claiming"
-        ], 
-        [
-          "ARG0", 
-          "3:0", 
-          0, 
-          1, 
-          "The U.S."
-        ], 
-        [
-          "ARG1", 
-          "5:2", 
-          5, 
-          10, 
-          "some success in its trade diplomacy"
-        ]
-      ]
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "U.S.", 
+      "gov_idx": 1, 
+      "rel": "det"
     }, 
     {
-      "frame": "remove.01", 
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "remove", 
-      "args": [
-        [
-          "rel", 
-          "12:0", 
-          12, 
-          12, 
-          "removed"
-        ], 
-        [
-          "ARG0", 
-          "0:1", 
-          0, 
-          1, 
-          "The U.S."
-        ], 
-        [
-          "ARGM-ADV", 
-          "3:2", 
-          3, 
-          10, 
-          "*PRO*-1 claiming some success in its trade diplomacy"
-        ], 
-        [
-          "ARG1", 
-          "13:2", 
-          13, 
-          19, 
-          "South Korea , Taiwan and Saudi Arabia"
-        ], 
-        [
-          "ARG2", 
-          "20:1", 
-          20, 
-          47, 
-          "from a list of countries 0 it is closely watching *T*-2 for *PRO* allegedly failing *-3 to honor U.S. patents , copyrights and other intellectual - property rights"
-        ]
-      ]
+      "dep": "U.S.", 
+      "dep_idx": 1, 
+      "gov": "removed", 
+      "gov_idx": 12, 
+      "rel": "nsubj"
     }, 
     {
-      "frame": "watch.01", 
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "watch", 
-      "args": [
-        [
-          "rel", 
-          "29:0", 
-          29, 
-          29, 
-          "watching"
-        ], 
-        [
-          "ARG0", 
-          "26:1", 
-          26, 
-          26, 
-          "it"
-        ], 
-        [
-          "ARG1", 
-          "30:0", 
-          25, 
-          25, 
-          "0"
-        ], 
-        [
-          "ARGM-CAU", 
-          "31:1", 
-          31, 
-          47, 
-          "for *PRO* allegedly failing *-3 to honor U.S. patents , copyrights and other intellectual - property rights"
-        ], 
-        [
-          "LINK-SLC", 
-          "24:1*30:0", 
-          null, 
-          null, 
-          ""
-        ]
-      ]
+      "dep": "claiming", 
+      "dep_idx": 4, 
+      "gov": "removed", 
+      "gov_idx": 12, 
+      "rel": "partmod"
     }, 
     {
-      "frame": "fail.01", 
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "fail", 
-      "args": [
-        [
-          "rel", 
-          "34:0", 
-          34, 
-          34, 
-          "failing"
-        ], 
-        [
-          "ARG1", 
-          "32:1", 
-          32, 
-          32, 
-          "*PRO*"
-        ], 
-        [
-          "ARGM-ADV", 
-          "33:1", 
-          33, 
-          33, 
-          "allegedly"
-        ], 
-        [
-          "ARG2", 
-          "35:2", 
-          35, 
-          47, 
-          "*-3 to honor U.S. patents , copyrights and other intellectual - property rights"
-        ]
-      ]
+      "dep": "some", 
+      "dep_idx": 5, 
+      "gov": "success", 
+      "gov_idx": 6, 
+      "rel": "det"
     }, 
     {
-      "frame": "honor.01", 
-      "inflection": "-----", 
-      "basepos": "v", 
-      "baseform": "honor", 
-      "args": [
-        [
-          "rel", 
-          "37:0", 
-          37, 
-          37, 
-          "honor"
-        ], 
-        [
-          "ARG0", 
-          "35:0", 
-          32, 
-          32, 
-          "*PRO*"
-        ], 
-        [
-          "ARG1", 
-          "38:1", 
-          38, 
-          47, 
-          "U.S. patents , copyrights and other intellectual - property rights"
-        ]
-      ]
+      "dep": "success", 
+      "dep_idx": 6, 
+      "gov": "claiming", 
+      "gov_idx": 4, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "its", 
+      "dep_idx": 8, 
+      "gov": "diplomacy", 
+      "gov_idx": 10, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "trade", 
+      "dep_idx": 9, 
+      "gov": "diplomacy", 
+      "gov_idx": 10, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "diplomacy", 
+      "dep_idx": 10, 
+      "gov": "success", 
+      "gov_idx": 6, 
+      "rel": "prep_in"
+    }, 
+    {
+      "dep": "removed", 
+      "dep_idx": 12, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "South", 
+      "dep_idx": 13, 
+      "gov": "Korea", 
+      "gov_idx": 14, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Korea", 
+      "dep_idx": 14, 
+      "gov": "removed", 
+      "gov_idx": 12, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "Taiwan", 
+      "dep_idx": 16, 
+      "gov": "removed", 
+      "gov_idx": 12, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "Taiwan", 
+      "dep_idx": 16, 
+      "gov": "Korea", 
+      "gov_idx": 14, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "Saudi", 
+      "dep_idx": 18, 
+      "gov": "Arabia", 
+      "gov_idx": 19, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Arabia", 
+      "dep_idx": 19, 
+      "gov": "removed", 
+      "gov_idx": 12, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "Arabia", 
+      "dep_idx": 19, 
+      "gov": "Korea", 
+      "gov_idx": 14, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 21, 
+      "gov": "list", 
+      "gov_idx": 22, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "list", 
+      "dep_idx": 22, 
+      "gov": "removed", 
+      "gov_idx": 12, 
+      "rel": "prep_from"
+    }, 
+    {
+      "dep": "countries", 
+      "dep_idx": 24, 
+      "gov": "list", 
+      "gov_idx": 22, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "it", 
+      "dep_idx": 26, 
+      "gov": "watching", 
+      "gov_idx": 29, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 27, 
+      "gov": "watching", 
+      "gov_idx": 29, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "closely", 
+      "dep_idx": 28, 
+      "gov": "watching", 
+      "gov_idx": 29, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "watching", 
+      "dep_idx": 29, 
+      "gov": "countries", 
+      "gov_idx": 24, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "allegedly", 
+      "dep_idx": 33, 
+      "gov": "failing", 
+      "gov_idx": 34, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "failing", 
+      "dep_idx": 34, 
+      "gov": "watching", 
+      "gov_idx": 29, 
+      "rel": "prepc_for"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 36, 
+      "gov": "honor", 
+      "gov_idx": 37, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "honor", 
+      "dep_idx": 37, 
+      "gov": "failing", 
+      "gov_idx": 34, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "U.S.", 
+      "dep_idx": 38, 
+      "gov": "patents", 
+      "gov_idx": 39, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "patents", 
+      "dep_idx": 39, 
+      "gov": "honor", 
+      "gov_idx": 37, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "copyrights", 
+      "dep_idx": 41, 
+      "gov": "honor", 
+      "gov_idx": 37, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "copyrights", 
+      "dep_idx": 41, 
+      "gov": "patents", 
+      "gov_idx": 39, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "other", 
+      "dep_idx": 43, 
+      "gov": "rights", 
+      "gov_idx": 47, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "intellectual", 
+      "dep_idx": 44, 
+      "gov": "property", 
+      "gov_idx": 46, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "property", 
+      "dep_idx": 46, 
+      "gov": "rights", 
+      "gov_idx": 47, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "rights", 
+      "dep_idx": 47, 
+      "gov": "honor", 
+      "gov_idx": 37, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "rights", 
+      "dep_idx": 47, 
+      "gov": "patents", 
+      "gov_idx": 39, 
+      "rel": "conj_and"
     }
   ], 
-  "sentence_nr": 0, 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "U.S.", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "U.S.", 
+      "dep_idx": 1, 
+      "gov": "removed", 
+      "gov_idx": 12, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "claiming", 
+      "dep_idx": 4, 
+      "gov": "removed", 
+      "gov_idx": 12, 
+      "rel": "partmod"
+    }, 
+    {
+      "dep": "some", 
+      "dep_idx": 5, 
+      "gov": "success", 
+      "gov_idx": 6, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "success", 
+      "dep_idx": 6, 
+      "gov": "claiming", 
+      "gov_idx": 4, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 7, 
+      "gov": "success", 
+      "gov_idx": 6, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "its", 
+      "dep_idx": 8, 
+      "gov": "diplomacy", 
+      "gov_idx": 10, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "trade", 
+      "dep_idx": 9, 
+      "gov": "diplomacy", 
+      "gov_idx": 10, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "diplomacy", 
+      "dep_idx": 10, 
+      "gov": "in", 
+      "gov_idx": 7, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "removed", 
+      "dep_idx": 12, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "South", 
+      "dep_idx": 13, 
+      "gov": "Korea", 
+      "gov_idx": 14, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Korea", 
+      "dep_idx": 14, 
+      "gov": "removed", 
+      "gov_idx": 12, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "Taiwan", 
+      "dep_idx": 16, 
+      "gov": "Korea", 
+      "gov_idx": 14, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 17, 
+      "gov": "Korea", 
+      "gov_idx": 14, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "Saudi", 
+      "dep_idx": 18, 
+      "gov": "Arabia", 
+      "gov_idx": 19, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Arabia", 
+      "dep_idx": 19, 
+      "gov": "Korea", 
+      "gov_idx": 14, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "from", 
+      "dep_idx": 20, 
+      "gov": "removed", 
+      "gov_idx": 12, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 21, 
+      "gov": "list", 
+      "gov_idx": 22, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "list", 
+      "dep_idx": 22, 
+      "gov": "from", 
+      "gov_idx": 20, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 23, 
+      "gov": "list", 
+      "gov_idx": 22, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "countries", 
+      "dep_idx": 24, 
+      "gov": "of", 
+      "gov_idx": 23, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "it", 
+      "dep_idx": 26, 
+      "gov": "watching", 
+      "gov_idx": 29, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 27, 
+      "gov": "watching", 
+      "gov_idx": 29, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "closely", 
+      "dep_idx": 28, 
+      "gov": "watching", 
+      "gov_idx": 29, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "watching", 
+      "dep_idx": 29, 
+      "gov": "countries", 
+      "gov_idx": 24, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "for", 
+      "dep_idx": 31, 
+      "gov": "watching", 
+      "gov_idx": 29, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "allegedly", 
+      "dep_idx": 33, 
+      "gov": "failing", 
+      "gov_idx": 34, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "failing", 
+      "dep_idx": 34, 
+      "gov": "for", 
+      "gov_idx": 31, 
+      "rel": "pcomp"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 36, 
+      "gov": "honor", 
+      "gov_idx": 37, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "honor", 
+      "dep_idx": 37, 
+      "gov": "failing", 
+      "gov_idx": 34, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "U.S.", 
+      "dep_idx": 38, 
+      "gov": "patents", 
+      "gov_idx": 39, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "patents", 
+      "dep_idx": 39, 
+      "gov": "honor", 
+      "gov_idx": 37, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "copyrights", 
+      "dep_idx": 41, 
+      "gov": "patents", 
+      "gov_idx": 39, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 42, 
+      "gov": "patents", 
+      "gov_idx": 39, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "other", 
+      "dep_idx": 43, 
+      "gov": "rights", 
+      "gov_idx": 47, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "intellectual", 
+      "dep_idx": 44, 
+      "gov": "property", 
+      "gov_idx": 46, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "property", 
+      "dep_idx": 46, 
+      "gov": "rights", 
+      "gov_idx": 47, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "rights", 
+      "dep_idx": 47, 
+      "gov": "patents", 
+      "gov_idx": 39, 
+      "rel": "conj"
+    }
+  ], 
+  "text": "The U.S. , claiming some success in its trade diplomacy , removed South Korea , Taiwan and Saudi Arabia from a list of countries it is closely watching for allegedly failing to honor U.S. patents , copyrights and other intellectual - property rights .", 
+  "timex": [], 
+  "treebank_sentence": "The U.S. , *PRO*-1 claiming some success in its trade diplomacy , removed South Korea , Taiwan and Saudi Arabia from a list of countries 0 it is closely watching *T*-2 for *PRO* allegedly failing *-3 to honor U.S. patents , copyrights and other intellectual - property rights .", 
   "tuples": [
     [
       "det", 
@@ -916,8 +1188,8 @@
     [
       "The", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "the", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "DT", 
         "idx": 0
       }
@@ -925,8 +1197,8 @@
     [
       "U.S.", 
       {
-        "NamedEntityTag": "LOCATION", 
         "Lemma": "U.S.", 
+        "NamedEntityTag": "LOCATION", 
         "PartOfSpeech": "NNP", 
         "idx": 1
       }
@@ -934,8 +1206,8 @@
     [
       ",", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ",", 
         "idx": 2
       }
@@ -943,8 +1215,8 @@
     [
       "claiming", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "claim", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBG", 
         "idx": 4
       }
@@ -952,8 +1224,8 @@
     [
       "some", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "some", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "DT", 
         "idx": 5
       }
@@ -961,8 +1233,8 @@
     [
       "success", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "success", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 6
       }
@@ -970,8 +1242,8 @@
     [
       "in", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "in", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 7
       }
@@ -979,8 +1251,8 @@
     [
       "its", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "its", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "PRP$", 
         "idx": 8
       }
@@ -988,8 +1260,8 @@
     [
       "trade", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "trade", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 9
       }
@@ -997,8 +1269,8 @@
     [
       "diplomacy", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "diplomacy", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 10
       }
@@ -1006,8 +1278,8 @@
     [
       ",", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ",", 
         "idx": 11
       }
@@ -1015,8 +1287,8 @@
     [
       "removed", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "remove", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBD", 
         "idx": 12
       }
@@ -1024,8 +1296,8 @@
     [
       "South", 
       {
-        "NamedEntityTag": "LOCATION", 
         "Lemma": "South", 
+        "NamedEntityTag": "LOCATION", 
         "PartOfSpeech": "NNP", 
         "idx": 13
       }
@@ -1033,8 +1305,8 @@
     [
       "Korea", 
       {
-        "NamedEntityTag": "LOCATION", 
         "Lemma": "Korea", 
+        "NamedEntityTag": "LOCATION", 
         "PartOfSpeech": "NNP", 
         "idx": 14
       }
@@ -1042,8 +1314,8 @@
     [
       ",", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ",", 
         "idx": 15
       }
@@ -1051,8 +1323,8 @@
     [
       "Taiwan", 
       {
-        "NamedEntityTag": "LOCATION", 
         "Lemma": "Taiwan", 
+        "NamedEntityTag": "LOCATION", 
         "PartOfSpeech": "NNP", 
         "idx": 16
       }
@@ -1060,8 +1332,8 @@
     [
       "and", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "and", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "CC", 
         "idx": 17
       }
@@ -1069,8 +1341,8 @@
     [
       "Saudi", 
       {
-        "NamedEntityTag": "LOCATION", 
         "Lemma": "Saudi", 
+        "NamedEntityTag": "LOCATION", 
         "PartOfSpeech": "NNP", 
         "idx": 18
       }
@@ -1078,8 +1350,8 @@
     [
       "Arabia", 
       {
-        "NamedEntityTag": "LOCATION", 
         "Lemma": "Arabia", 
+        "NamedEntityTag": "LOCATION", 
         "PartOfSpeech": "NNP", 
         "idx": 19
       }
@@ -1087,8 +1359,8 @@
     [
       "from", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "from", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 20
       }
@@ -1096,8 +1368,8 @@
     [
       "a", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "a", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "DT", 
         "idx": 21
       }
@@ -1105,8 +1377,8 @@
     [
       "list", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "list", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 22
       }
@@ -1114,8 +1386,8 @@
     [
       "of", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "of", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 23
       }
@@ -1123,8 +1395,8 @@
     [
       "countries", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "country", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 24
       }
@@ -1132,8 +1404,8 @@
     [
       "it", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "it", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "PRP", 
         "idx": 26
       }
@@ -1141,8 +1413,8 @@
     [
       "is", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "be", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBZ", 
         "idx": 27
       }
@@ -1150,8 +1422,8 @@
     [
       "closely", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "closely", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "RB", 
         "idx": 28
       }
@@ -1159,8 +1431,8 @@
     [
       "watching", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "watch", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBG", 
         "idx": 29
       }
@@ -1168,8 +1440,8 @@
     [
       "for", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "for", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "IN", 
         "idx": 31
       }
@@ -1177,8 +1449,8 @@
     [
       "allegedly", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "allegedly", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "RB", 
         "idx": 33
       }
@@ -1186,8 +1458,8 @@
     [
       "failing", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "fail", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VBG", 
         "idx": 34
       }
@@ -1195,8 +1467,8 @@
     [
       "to", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "to", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "TO", 
         "idx": 36
       }
@@ -1204,8 +1476,8 @@
     [
       "honor", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "honor", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "VB", 
         "idx": 37
       }
@@ -1213,8 +1485,8 @@
     [
       "U.S.", 
       {
-        "NamedEntityTag": "LOCATION", 
         "Lemma": "U.S.", 
+        "NamedEntityTag": "LOCATION", 
         "PartOfSpeech": "NNP", 
         "idx": 38
       }
@@ -1222,8 +1494,8 @@
     [
       "patents", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "patent", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 39
       }
@@ -1231,8 +1503,8 @@
     [
       ",", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ",", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ",", 
         "idx": 40
       }
@@ -1240,8 +1512,8 @@
     [
       "copyrights", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "copyright", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 41
       }
@@ -1249,8 +1521,8 @@
     [
       "and", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "and", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "CC", 
         "idx": 42
       }
@@ -1258,8 +1530,8 @@
     [
       "other", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "other", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "JJ", 
         "idx": 43
       }
@@ -1267,8 +1539,8 @@
     [
       "intellectual", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "intellectual", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "JJ", 
         "idx": 44
       }
@@ -1276,8 +1548,8 @@
     [
       "-", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "-", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ":", 
         "idx": 45
       }
@@ -1285,8 +1557,8 @@
     [
       "property", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "property", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NN", 
         "idx": 46
       }
@@ -1294,8 +1566,8 @@
     [
       "rights", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": "rights", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": "NNS", 
         "idx": 47
       }
@@ -1303,15 +1575,11 @@
     [
       ".", 
       {
-        "NamedEntityTag": "O", 
         "Lemma": ".", 
+        "NamedEntityTag": "O", 
         "PartOfSpeech": ".", 
         "idx": 48
       }
     ]
-  ], 
-  "treebank_sentence": "The U.S. , *PRO*-1 claiming some success in its trade diplomacy , removed South Korea , Taiwan and Saudi Arabia from a list of countries 0 it is closely watching *T*-2 for *PRO* allegedly failing *-3 to honor U.S. patents , copyrights and other intellectual - property rights .", 
-  "parsetree": "(ROOT (S (NP (DT The) (NNP U.S.)) (, ,) (S (VP (VBG claiming) (NP (DT some) (NN success)) (PP (IN in) (NP (PRP$ its) (NN trade) (NN diplomacy))))) (, ,) (VP (VBD removed) (NP (NNP South) (NP (NNP Korea) (, ,) (NNP Taiwan) (CC and) (NNP Saudi)) (NNP Arabia)) (PP (IN from) (NP (NP (DT a) (NN list)) (PP (IN of) (NP (NP (NNS countries)) (SBAR (S (NP (PRP it)) (VP (VBZ is) (ADVP (RB closely)) (VP (VBG watching) (PP (IN for) (S (ADVP (RB allegedly)) (VP (VBG failing) (S (VP (TO to) (VP (VB honor) (NP (NP (NP (NNP U.S.) (NNS patents)) (, ,) (NP (NNS copyrights)) (CC and) (NP (JJ other) (JJ intellectual))) (: -) (NP (NN property) (NNS rights)))))))))))))))))) (. .)))", 
-  "goldparse": "(TOP (S (NP-SBJ-1 (DT The) (NNP U.S.)) (, ,) (S-ADV (NP-SBJ (-NONE- *PRO*-1)) (VP (VBG claiming) (NP (NP (DT some) (NN success)) (PP-LOC (IN in) (NP (PRP$ its) (NN trade) (NN diplomacy)))))) (, ,) (VP (VBD removed) (NP (NP (NNP South) (NNP Korea)) (, ,) (NP (NNP Taiwan)) (CC and) (NP (NNP Saudi) (NNP Arabia))) (PP-CLR (IN from) (NP (NP (DT a) (NN list)) (PP (IN of) (NP (NP (NNS countries)) (SBAR (WHNP-2 (-NONE- 0)) (S (NP-SBJ (PRP it)) (VP (VBZ is) (ADVP-MNR (RB closely)) (VP (VBG watching) (NP (-NONE- *T*-2)) (PP-CLR (IN for) (S-NOM (NP-SBJ-3 (-NONE- *PRO*)) (ADVP (RB allegedly)) (VP (VBG failing) (S (NP-SBJ (-NONE- *-3)) (VP (TO to) (VP (VB honor) (NP (NNP U.S.) (NML (NML (NNS patents)) (, ,) (NML (NNS copyrights)) (CC and) (NML (JJ other) (NML (JJ intellectual) (HYPH -) (NN property)) (NNS rights))))))))))))))))))) (. .)))", 
-  "document_id": "nw/wsj/00/wsj_0020@all@wsj@nw@en@on"
+  ]
 }

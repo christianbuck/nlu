@@ -233,6 +233,85 @@
       "rel": "appos"
     }
   ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Mr.", 
+      "dep_idx": 0, 
+      "gov": "Vinken", 
+      "gov_idx": 1, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Vinken", 
+      "dep_idx": 1, 
+      "gov": "chairman", 
+      "gov_idx": 3, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 2, 
+      "gov": "chairman", 
+      "gov_idx": 3, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "chairman", 
+      "dep_idx": 3, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 4, 
+      "gov": "chairman", 
+      "gov_idx": 3, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Elsevier", 
+      "dep_idx": 5, 
+      "gov": "N.V.", 
+      "gov_idx": 6, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "N.V.", 
+      "dep_idx": 6, 
+      "gov": "of", 
+      "gov_idx": 4, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 8, 
+      "gov": "group", 
+      "gov_idx": 11, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Dutch", 
+      "dep_idx": 9, 
+      "gov": "group", 
+      "gov_idx": 11, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "publishing", 
+      "dep_idx": 10, 
+      "gov": "group", 
+      "gov_idx": 11, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "group", 
+      "dep_idx": 11, 
+      "gov": "N.V.", 
+      "gov_idx": 6, 
+      "rel": "appos"
+    }
+  ], 
   "text": "Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .", 
   "timex": [], 
   "treebank_sentence": "Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .", 
