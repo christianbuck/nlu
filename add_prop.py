@@ -147,6 +147,9 @@ if __name__ == "__main__":
 
                 words = pt[treepos].leaves()
                 start, end = span_from_treepos(pt, treepos)
+            else: # pos was not number:number
+                pass
+
 
             new_args.append( [role, pos, start, end, ' '.join(words)] )
 
