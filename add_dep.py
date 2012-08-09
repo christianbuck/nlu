@@ -2,10 +2,12 @@
 
 import sys
 import json
-from collections import defaultdict
 from itertools import imap, izip
 from nltk.tree import Tree
 import re
+
+# Todo: use SpanTree from spantree.py
+# don't load and process more data than needed
 
 class SpanTree(Tree):
     """
@@ -37,11 +39,6 @@ class SpanTree(Tree):
             if st_start == start and st_end == end:
                 return True
         return False
-
-class DictTree(Tree):
-    """
-    Tree
-    """
 
 class Sentence(object):
     """
@@ -142,14 +139,12 @@ def read_dependencies(filename, n, offsets=None):
                               'dep_idx' : dep_idx - 1,
                               'gov' : gov,
                               'gov_idx' : gov_idx - 1} )
-    #for entry in dependencies:
-    #    print entry
     return dependencies
 
 def add_to_json(infile, outfile, key, value):
     data = json.load(open(infile))
     data[key] = value
-    json.dump(data, open(outfile,'w'), indent=2)
+    json.dump(data, open(outfile,'w'), indent=2, sort_keys=True)
 
 def decode_specials(s):
     s = s.replace('-LRB-','(')
@@ -174,8 +169,13 @@ if __name__ == "__main__":
 
     off = DepOffset(s.text, s.treebank_sentence)
     n = int(args.jsonfile.split('.')[-2]) + 1
+
     depfile = args.jsonfile.rsplit('.',2)[0] + '.dep'
     print 'depfile:', depfile
-    #sys.exit()
     dependencies = read_dependencies(depfile, n, off)
     add_to_json(args.jsonfile, args.outfile, 'stanford_dep', dependencies)
+
+    depfile = args.jsonfile.rsplit('.',2)[0] + '.dep_basic'
+    print 'depfile:', depfile
+    dependencies = read_dependencies(depfile, n, off)
+    add_to_json(args.jsonfile, args.outfile, 'stanford_dep_basic', dependencies)

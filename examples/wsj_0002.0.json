@@ -343,6 +343,169 @@
       "rel": "prep_of"
     }
   ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Rudolph", 
+      "dep_idx": 0, 
+      "gov": "Agnew", 
+      "gov_idx": 1, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Agnew", 
+      "dep_idx": 1, 
+      "gov": "named", 
+      "gov_idx": 16, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "55", 
+      "dep_idx": 3, 
+      "gov": "years", 
+      "gov_idx": 4, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "years", 
+      "dep_idx": 4, 
+      "gov": "old", 
+      "gov_idx": 5, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "old", 
+      "dep_idx": 5, 
+      "gov": "Agnew", 
+      "gov_idx": 1, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 6, 
+      "gov": "old", 
+      "gov_idx": 5, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "former", 
+      "dep_idx": 7, 
+      "gov": "chairman", 
+      "gov_idx": 8, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "chairman", 
+      "dep_idx": 8, 
+      "gov": "old", 
+      "gov_idx": 5, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 9, 
+      "gov": "chairman", 
+      "gov_idx": 8, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Consolidated", 
+      "dep_idx": 10, 
+      "gov": "PLC", 
+      "gov_idx": 13, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Gold", 
+      "dep_idx": 11, 
+      "gov": "PLC", 
+      "gov_idx": 13, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Fields", 
+      "dep_idx": 12, 
+      "gov": "PLC", 
+      "gov_idx": 13, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "PLC", 
+      "dep_idx": 13, 
+      "gov": "of", 
+      "gov_idx": 9, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "was", 
+      "dep_idx": 15, 
+      "gov": "named", 
+      "gov_idx": 16, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "named", 
+      "dep_idx": 16, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 19, 
+      "gov": "director", 
+      "gov_idx": 21, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "nonexecutive", 
+      "dep_idx": 20, 
+      "gov": "director", 
+      "gov_idx": 21, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "director", 
+      "dep_idx": 21, 
+      "gov": "named", 
+      "gov_idx": 16, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 22, 
+      "gov": "director", 
+      "gov_idx": 21, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "this", 
+      "dep_idx": 23, 
+      "gov": "conglomerate", 
+      "gov_idx": 26, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "British", 
+      "dep_idx": 24, 
+      "gov": "conglomerate", 
+      "gov_idx": 26, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "industrial", 
+      "dep_idx": 25, 
+      "gov": "conglomerate", 
+      "gov_idx": 26, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "conglomerate", 
+      "dep_idx": 26, 
+      "gov": "of", 
+      "gov_idx": 22, 
+      "rel": "pobj"
+    }
+  ], 
   "text": "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named a nonexecutive director of this British industrial conglomerate .", 
   "timex": [
     [
