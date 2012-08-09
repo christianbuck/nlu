@@ -39,28 +39,28 @@
           "ARG0", 
           "18:1", 
           18, 
-          19, 
-          "Georgia-Pacific 's"
+          21, 
+          "Georgia - Pacific 's"
         ], 
         [
           "ARG2", 
           "20:2", 
-          20, 
-          23, 
+          22, 
+          25, 
           "$ 3.18 billion *U*"
         ], 
         [
           "rel", 
           "24:0", 
-          24, 
-          24, 
+          26, 
+          26, 
           "bid"
         ], 
         [
           "ARG1", 
           "25:1", 
-          25, 
-          28, 
+          27, 
+          30, 
           "for Great Northern Nekoosa"
         ]
       ], 
@@ -76,13 +76,6 @@
           6, 
           6, 
           "enthusiasm"
-        ], 
-        [
-          "ARG1", 
-          "7:0*12:1", 
-          null, 
-          null, 
-          ""
         ], 
         [
           "ARG0", 
@@ -106,13 +99,6 @@
     {
       "args": [
         [
-          "ARG1", 
-          "9:1,10:0,11:0,12:1", 
-          null, 
-          null, 
-          ""
-        ], 
-        [
           "rel", 
           "16:0", 
           16, 
@@ -123,8 +109,8 @@
           "ARG2", 
           "17:1", 
           17, 
-          28, 
-          "of Georgia-Pacific 's $ 3.18 billion *U* bid for Great Northern Nekoosa"
+          30, 
+          "of Georgia - Pacific 's $ 3.18 billion *U* bid for Great Northern Nekoosa"
         ]
       ], 
       "baseform": "wake", 

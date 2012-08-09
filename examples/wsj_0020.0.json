@@ -104,13 +104,6 @@
     {
       "args": [
         [
-          "Support", 
-          "12:0,20:0", 
-          null, 
-          null, 
-          ""
-        ], 
-        [
           "ARG1", 
           "13:2", 
           13, 
@@ -128,8 +121,8 @@
           "ARG2", 
           "23:1", 
           23, 
-          45, 
-          "of countries 0 it is closely watching *T*-2 for * allegedly failing *-3 to honor U.S. patents , copyrights and other intellectual-property rights"
+          47, 
+          "of countries 0 it is closely watching *T*-2 for *PRO* allegedly failing *-3 to honor U.S. patents , copyrights and other intellectual - property rights"
         ]
       ], 
       "baseform": "list", 
@@ -163,14 +156,14 @@
           "ARG1", 
           "44:0", 
           44, 
-          44, 
-          "intellectual-property"
+          46, 
+          "intellectual - property"
         ], 
         [
           "rel", 
           "45:0", 
-          45, 
-          45, 
+          47, 
+          47, 
           "rights"
         ]
       ], 
@@ -180,13 +173,6 @@
     }, 
     {
       "args": [
-        [
-          "ARG0", 
-          "0:1*3:0", 
-          null, 
-          null, 
-          ""
-        ], 
         [
           "Support", 
           "4:0", 
