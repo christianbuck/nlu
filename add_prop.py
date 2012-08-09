@@ -5,6 +5,7 @@ from collections import defaultdict
 import json
 import re
 from spantree import SpanTree
+import os
 
 '''
 we want this:
@@ -102,7 +103,14 @@ if __name__ == "__main__":
     arguments = parser.parse_args(sys.argv[1:])
     recursive = not arguments.nonrecursive
 
-    pb = read_onprop(arguments.probbank)
+    pb = None
+    if os.path.isfile(arguments.probbank):
+        pb = read_onprop(arguments.probbank)
+    else:
+        prop_bank_prob = arguments.probbank.replace(".prop",".pprop")
+        assert os.path.isfile(prop_bank_prob)
+        pb = read_onprop(prop_bank_prob)
+    assert pb != None
 
     docId, sentNr = re.search(r'wsj_(\d+).(\d+).json', arguments.json).groups()
     sentNr = int(sentNr)
