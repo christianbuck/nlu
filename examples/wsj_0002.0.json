@@ -80,22 +80,22 @@
         [
           "ARGM-LOC", 
           "23:0", 
-          23, 
-          23, 
+          24, 
+          24, 
           "British"
         ], 
         [
           "ARG1", 
           "24:0", 
-          24, 
-          24, 
+          25, 
+          25, 
           "industrial"
         ], 
         [
           "rel", 
           "25:0", 
-          25, 
-          25, 
+          26, 
+          26, 
           "conglomerate"
         ]
       ], 
@@ -108,29 +108,29 @@
         [
           "ARG3", 
           "19:0", 
-          19, 
-          19, 
+          20, 
+          20, 
           "nonexecutive"
         ], 
         [
           "ARG0", 
           "20:0", 
-          20, 
-          20, 
+          21, 
+          21, 
           "director"
         ], 
         [
           "rel", 
           "20:0", 
-          20, 
-          20, 
+          21, 
+          21, 
           "director"
         ], 
         [
           "ARG2", 
           "21:1", 
-          21, 
-          25, 
+          22, 
+          26, 
           "of this British industrial conglomerate"
         ]
       ], 

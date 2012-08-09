@@ -1,12 +1,12 @@
 #!/usr/bin/python
 
 class Offset(object):
-    def __init__(self, s1, s2, ignore_traces=False):
+    def __init__(self, s1, s2, ignore_braces=False):
         assert len(s2) >= len(s1)
         self.mapping = []
         self.__max_in = len(s1)-1
         self.__max_out = len(s2)
-        self.__ignore_traces = ignore_traces
+        self.__ignore_braces = ignore_braces
 
         offset = 0
         for i1, w1 in enumerate(s1):
@@ -24,7 +24,7 @@ class Offset(object):
     def __eqwords(self, w1, w2):
         if w1 == w2:
             return True
-        if self.__ignore_traces and '*' in w1 and '*' in w2:
+        if self.__ignore_braces and w1[0]=='<' and w1[-1]=='>' and w2[0]=='<' and w2[-1]=='>':
             return True
         return False
 

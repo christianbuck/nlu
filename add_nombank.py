@@ -74,6 +74,89 @@ def span_from_treepos(tree, treepos):
     end = max(st[treepos].leaves())
     return (start, end)
 
+def tree_to_string(t, include_traces=True, wrap_traces=True):
+    """
+    given a nktk.tree.Tree return sentence
+    if wrap_traces put brackets <> around traces
+    """
+    words = []
+    for w, pos in t.pos():
+        if pos not in ['-NONE-','XX']:
+            words.append(w)
+        elif include_traces:
+            if wrap_traces:
+                words.append("<%s>"%w)
+            else:
+                words.append(w)
+    return ' '.join(words)
+
+
+def add_spaces(s1, s2):
+    # add spaces to s1 so that it looks like s2
+    # ignore everything in brackets
+    assert len(s1) <= len(s2)
+    out = []
+    j = 0 # index in s1
+    i = 0 # index in s2
+    while i < len(s2):
+        #print i, j, out
+        if s1[j] == '<': # copy tag from s1
+            while s1[j] != '>':
+                out.append(s1[j])
+                j += 1
+            out.append(s1[j]) # append the '>'
+            j += 1 # move behind '>'
+            continue
+        if s2[i] == '<': # skip tag in s2
+            while s2[i] != '>':
+                i += 1
+            i+= 1 # move behind '>'
+            continue
+        if s1[j] == s2[i]:
+            out.append(s1[j])
+            j += 1
+            i += 1
+            continue
+        if s2[i] == ' ':
+            out.append(' ')
+            i += 1
+            continue
+        else:
+            assert False, "weird: \n\t %s \n\t %s\n \n\t %s" %(s1, s2, ''.join(out))
+
+    # maybe close tag
+    while j < len(s1) and s1[j] == '<': # copy tag
+        while j < len(s1) and s1[j] != '>':
+            out.append(s1[j])
+            j += 1
+        out.append(s1[j])
+        j += 1
+    out = ''.join(out)
+    return out
+
+
+def split_offsets(s1, s2):
+    """
+    s2 is a string with more spaces but otherwise the same as s1
+    find offsets such that s1[i] = ''.join([s2[j] for j offset[i]])
+    """
+    w1 = s1.split()
+    w2 = s2.split()
+    assert len(w1) <= len(w2)
+    offsets = defaultdict(list) # old idx -> list of new indices
+    j = 0 # index in w2
+    for i, w in enumerate(w1):
+        merged_word = ''
+        while j < len(w2) and merged_word != w:
+            merged_word = merged_word + w2[j]
+            offsets[i].append(j)
+            j += 1
+        assert merged_word == w, 'found %s, looking for %s' %(merged_word, w)
+    return dict(offsets.items())
+
+
+
+
 def process_file(json_filename, nb):
     docId, sentNr = re.search(r'wsj_(\d+).(\d+).json', json_filename).groups()
     sentNr = int(sentNr)
@@ -82,16 +165,22 @@ def process_file(json_filename, nb):
 
     # index adjustments for consistency with ontonotes parses
     ptb_tree = Tree.parse(data['ptbparse'])
-    ptbstring = ' '.join(ptb_tree.leaves())
-    #ptbstring = ptbstring.replace('-',' - ')
-    ptbstring_tok = re.sub('(\w)-(\w)',r'\1 - \2', ptbstring)
-    ptbstring = escape_brackets(ptbstring).split()
-    ptbstring_tok = escape_brackets(ptbstring_tok).split()
-    tracestring = escape_brackets(data['treebank_sentence']).split()
-    print list(enumerate(ptbstring))
-    print list(enumerate(tracestring))
-    assert len(ptbstring) <= len(tracestring)
-    off = Offset(ptbstring, tracestring, ignore_traces=True)
+    ptbstring = tree_to_string(ptb_tree) # wrap traces
+
+    onftree = Tree.parse(data['goldparse'])
+    onfstring = tree_to_string(onftree) # wrap traces
+    raw_onfstring = tree_to_string(onftree, wrap_traces=False)
+
+    ptbstring_tok = add_spaces(ptbstring, onfstring)
+
+    tokenize_offsets = split_offsets(ptbstring, ptbstring_tok)
+    trace_offsets = Offset(ptbstring_tok.split(), onfstring.split(), ignore_braces=True)
+
+    #print ptbstring
+    #print ptbstring_tok
+    #print onfstring
+    #print tokenize_offsets
+    #print trace_offsets
 
     pt = SpanTree.parse(data['ptbparse'])
 
@@ -116,12 +205,24 @@ def process_file(json_filename, nb):
 
                 words = pt[treepos].leaves()
                 start, end = span_from_treepos(pt, treepos)
-                print start, end,
-                start = off.map_to_longer(start)
-                end = off.map_to_longer(end)
-                print '->', start, end
+                #print start, end,
 
-            new_args.append( [role, pos, start, end, ' '.join(words)] )
+                # adjust of different tokenization
+                assert start in tokenize_offsets
+                start = min(tokenize_offsets[start])
+                assert end in tokenize_offsets
+                end = max(tokenize_offsets[end])
+
+                # adjust of inserted traces in ontonotes
+                start = trace_offsets.map_to_longer(start)
+                end = trace_offsets.map_to_longer(end)
+                #print '->', start, end
+
+            if words:
+                #print ' '.join(words)
+                #print '->', ' '.join(raw_onfstring.split()[start:end+1])
+                phrase = ' '.join(raw_onfstring.split()[start:end+1])
+                new_args.append( [role, pos, start, end, phrase] )
 
         nb_data['args'] = new_args
         data['nom'].append(nb_data)
