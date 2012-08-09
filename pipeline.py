@@ -5,6 +5,8 @@ Driver and utilities for English-to-AMR pipeline.
 from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
+from collections import defaultdict
+
 from dev.amr.amr import Amr
 from alignment import Alignment
 
@@ -13,7 +15,8 @@ def main(sentenceId):
     tokens, ww, wTags, depParse = loadDepParse(sentenceId)
     
     # pipeline steps
-    import nes, vprop, nprop, adjsAndAdverbs, auxes, coref, beautify
+    import nes, conjunctions, vprop, nprop, adjsAndAdverbs, auxes, coref, beautify
+    # TODO: does conjunctions module work gracefully when propositions are conjoined?
 
     # initialize input to first pipeline step
     token_accounted_for = [False]*len(depParse)
@@ -30,7 +33,7 @@ def main(sentenceId):
     # serially execute pipeline steps
     print(' '.join(filter(None,ww)))
     sys.stdout.flush()
-    for m in [nes, vprop, nprop, adjsAndAdverbs, auxes, coref, beautify]:
+    for m in [nes, conjunctions, vprop, nprop, adjsAndAdverbs, auxes, coref, beautify]:
         print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
         depParse, amr, alignments, completed = m.main(sentenceId, tokens, ww, wTags, depParse, amr, alignments, completed)
         #print(' '.join(ww))
@@ -95,6 +98,64 @@ def loadDepParse(sentenceId):
             if entry["gov_idx"]==-1:    # root
                 entry["gov_idx"] = None
             deps[i].append(entry)  # can be multiple entries for a token, because tokens can have multiple heads
+        
+        # dependency parse: un-collapse coordinate structures except for amod links
+        conjs = [d for dep in deps if dep for d in dep if d["rel"].startswith('conj_')]
+        if conjs:
+            print('resolving coordination...', file=sys.stderr)
+            print(tokens)
+            ccs = [dep for dep in sentJ["stanford_dep_basic"] if dep["rel"]=='cc']
+        for conj in conjs:
+            i, r, h = conj["dep_idx"], conj["rel"], conj["gov_idx"]
+            # note that the conjunction link connects two conjuncts
+            # (the conjunction word is incorporated in the relation name, 
+            # but the conjunction token index is not represented)
+            
+            iextdeps = [dep for dep in deps[i] if not dep["rel"].startswith('conj')]
+            assert len(iextdeps)==1,iextdeps
+            iextdep = iextdeps[0]  # external (non-conjunction) head link of conjunction's dependent
+            hextdeps = [dep for dep in deps[h] if not dep["rel"].startswith('conj')]
+            assert len(hextdeps)<=1,hextdeps
+            
+            if r=='conj_and' and iextdep["rel"]=='amod': # remove this conjunction link
+                print('  removing',conj, file=sys.stderr)
+                deps[i].remove(conj)
+            else:   # undo propagation of conjunct dependencies
+                # remove the non-conjunction link sharing a dependent with the conjunction link
+                # example from wsj_0020.0: "removed Korea and Taiwan" transformed from
+                #    removed <-dobj- Korea <-conj_and- Taiwan
+                #        ^-------------------------dobj---|
+                #  to
+                #    removed <-dobj- Korea <-conj_and- Taiwan
+                
+                if hextdeps:
+                    hextdep = hextdeps[0]  # external (non-conjunction) head link of conjunction's governor
+                    print('  removing',hextdep, file=sys.stderr)
+                    deps[h].remove(hextdep)
+                print('  removing',iextdep, file=sys.stderr)
+                deps[i].remove(iextdep)
+                # then use Basic Dependencies to convert to
+                #    removed <-dobj- and <-conj- Korea
+                #                     ^----conj- Taiwan
+                print('  removing',conj, file=sys.stderr)
+                deps[i].remove(conj)
+                ccdeps = [dep for dep in ccs if dep["gov_idx"]==h]
+                assert len(ccdeps)==1
+                cc = ccdeps[0]
+                c, cword = cc["dep_idx"], cc["dep"]
+                conj0 = {"gov_idx": iextdep["gov_idx"], "gov": iextdep["gov"], "dep_idx": c, "dep": cword, "rel": iextdep["rel"]}
+                if deps[c] is None:
+                    deps[c] = []
+                if conj0 not in deps[c]:
+                    print('  adding',conj0, file=sys.stderr)
+                    deps[c].append(conj0)
+                conj1 = {"gov_idx": c, "gov": cword, "dep_idx": h, "dep": ww[h], "rel": 'conj'}
+                if conj1 not in deps[h]:
+                    print('  adding',conj1, file=sys.stderr)
+                    deps[h].append(conj1)
+                conj2 = {"gov_idx": c, "gov": cword, "dep_idx": i, "dep": ww[i], "rel": 'conj'}
+                print('  adding',conj2, file=sys.stderr)
+                deps[i].append(conj2) 
         
         return tokens, ww, wTags, deps  # ww and wTags have None for tokens which are empty elements
 
