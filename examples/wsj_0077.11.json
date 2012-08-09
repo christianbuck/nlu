@@ -92,6 +92,13 @@
           "the overall economy"
         ], 
         [
+          "Support", 
+          "21:0,22:0,24:0,25:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
           "ARGM-MNR", 
           "26:0", 
           26, 
@@ -118,6 +125,13 @@
           18, 
           20, 
           "the overall economy"
+        ], 
+        [
+          "Support", 
+          "21:0,22:0", 
+          null, 
+          null, 
+          ""
         ], 
         [
           "rel", 

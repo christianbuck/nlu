@@ -218,11 +218,10 @@ def process_file(json_filename, nb):
                 end = trace_offsets.map_to_longer(end)
                 #print '->', start, end
 
+            phrase = ''
             if words:
-                #print ' '.join(words)
-                #print '->', ' '.join(raw_onfstring.split()[start:end+1])
                 phrase = ' '.join(raw_onfstring.split()[start:end+1])
-                new_args.append( [role, pos, start, end, phrase] )
+            new_args.append( [role, pos, start, end, phrase] )
 
         nb_data['args'] = new_args
         data['nom'].append(nb_data)
