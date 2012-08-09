@@ -87,7 +87,7 @@ def get_trace(subtree, recursive=False):
     return None
 
 def span_from_treepos(tree, treepos):
-    st = SpanTree.parse(str(pt))
+    st = SpanTree.parse(str(tree))
     st.convert()
     start = min(st[treepos].leaves())
     end = max(st[treepos].leaves())
