@@ -1,0 +1,211 @@
+Abyssinian	Abyssinia
+Afghanistani	Afghanistan
+Albanian	Albania
+Algerian	Algeria
+American	America
+Andorran	Andorra
+Angolan	Angola
+Arab	Arabia
+Arabian	Arabia
+Argentine	Argentina
+Argentinian	Argentina
+Armenian	Armenia
+Aruban	Aruba
+Australian	Australia
+Austrian	Austria
+Azerbaijani	Azerbaijan
+Bahamian	Bahamas
+Bahrainian	Bahrain
+Bahraini	Bahrain
+Bangladeshi	Bangladesh
+Basotho	Lesotho
+Belarusian	Belarus
+Belgian	Belgium
+Bolivian	Bolivia
+Belizean	Belize
+Bosnian	Bosnia
+Brazilian	Brazil
+British	Britain
+Bulgarian	Bulgaria
+Cambodian	Cambodia
+Cameroonian	Cameroon
+Canadian	Canada
+Cantonese	Canton
+Central African	Central Africa
+Ceylonese	Ceylon
+Chadian	Chad
+Chilean	Chile
+Chinese	China
+Colombian	Colombia
+Columbian	Columbia
+Congolese	Congo
+Costa Rican	Costa Rica
+Croatian	Croatia
+Cuban	Cuba
+Cypriot	Cyprus
+Czech	Czech Republic
+Czechoslovakian	Czechoslovakia
+Danish	Denmark
+Dominican	Dominican Republic
+Dutch	Netherlands
+East German	East Germany
+East Pakistani	East Pakistan
+Ecuadorian	Ecuador
+Egyptian	Egypt
+El Salvadoran	El Salvador
+Equatorial Guinean	Equatorial Guinea
+Eritrean	Eritrea
+Estonian	Estonia
+Ethiopian	Ethiopia
+Faroese	Faroes
+Fijian	Fiji
+Finnish	Finland
+French	France
+Gabonese	Gabon
+Gambian	Gambia
+Georgian	Georgia
+German	Germany
+Ghanaian	Ghana
+Grenadian	Grenada
+Greek	Greece
+Guatemalan	Guatemala
+Guinean	Guinea
+Guyanan	Guyana
+Haitian	Haiti
+Honduran	Honduras
+Hungarian	Hungary
+Icelander	Iceland
+Icelandic	Iceland
+Indian	India
+Indonesian	Indonesia
+Iranian	Iran
+Iraqi	Iraq
+Irish	Ireland
+Israeli	Israel
+Italian	Italy
+Jamaican	Jamaica
+Japanese	Japan
+Jordanian	Jordan
+Kazakh	Kazakhstan
+Kazakhstani	Kazakhstan
+Kenyian	Kenya
+Korean	Korea
+Kuwaiti	Kuwait
+Kyrgyzstani	Kyrgyzstan
+Laotian	Laos
+Latvian	Latvia
+Lebanese	Lebanon
+Liberian	Liberia
+Libyan	Libya
+Liechtensteiner	Liechtenstein
+Lithuanian	Lithuania
+Luxembourger	Luxembourg
+Luxembourgian	Luxembourg
+Macedonian	Macedonia
+Malagasy	Madagascar
+Malawian	Malawi
+Malaysian	Malaysia
+Maldivian	Maldives
+Malian	Mali
+Maltese	Malta
+Mauritanian	Mauritania
+Mauritian	Mauritius
+Mexican	Mexico
+Moldovan	Moldova
+Monacan	Monaco
+Monegasque	Monaco
+Mongolian	Mongolia
+Montenegrin	Montenegro
+Montserratian	Montserrat
+Moroccan	Morocco
+Mosotho	Lesotho
+Mozambican	Mozambique
+Namibian	Namibia
+Nauruan	Nauru
+Nepalese	Nepal
+New Zealander	New Zealand
+Ni-Vanuatu	Vanuatu
+Nicaraguan	Nicaragua
+Nigeran	Niger
+Nigerian	Nigeria
+Nipponese	Japan
+North Korean	North Korea
+Norwegian	Norway
+Omani	Oman
+Pakistani	Pakistan
+Palauan	Palau
+Palestinian	Palestine
+Panamanian	Panama
+Papua New Guinean	Papua New Guinea
+Paraguayan	Paraguay
+Persian	Persia
+Peruvian	Peru
+Philippine	Philippines
+Polish	Poland
+Portuguese	Portugal
+Puerto Rican	Puerto Rico
+Qatari	Qatar
+Romanian	Romania
+Ruandan	Ruanda
+Russian	Russia
+Rwandan	Rwanda
+Sahraouian	Western Sahara
+Sahrawi	Western Sahara
+Sahrawian	Western Sahara
+Salvadoran	Salvador
+Samoan	Samoa
+Saudi	Saudi Arabia
+Saudi Arabian	Saudi Arabia
+Senegalese	Senegal
+Serbian	Serbia
+Seychellois	Seychelles
+Siamese	Siam
+Sierra Leonean	Sierra Leone
+Singaporean	Singapore
+Slovak	Slovakia
+Slovene	Slovenia
+Slovenian	Slovenia
+Somalian	Somalia
+South African	South Africa
+South Korean	South Korea
+South Sudanese	South Sudan
+Soviet	Soviet Union
+Spanish	Spain
+Sri Lankan	Sri Lanka
+Sudanese	Sudan
+Surinamese	Suriname
+Swazi	Swaziland
+Swedish	Sweden
+Swiss	Switzerland
+Syrian	Syria
+Taiwanese	Taiwan
+Tajikistani	Tajikistan
+Tanzanian	Tanzania
+Tchadian	Tchad
+Thai	Thailand
+Tibetan	Tibet
+Timorese	Timor
+Togolese	Togo
+Tongan	Tonga
+Tunisian	Tunisia
+Turkish	Turkey
+Turkish Cypriot	Turkish Republic of Northern Cyprus
+Turkmen	Turkmenistan
+Tuvaluan	Tuvalu
+Ugandan	Uganda
+Ukrainian	Ukraine
+Uruguayan	Uruguay
+US	United States
+Uzbek	Uzbekistan
+Uzbekistani	Uzbekistan
+Venezuelan	Venezuela
+Vietnamese	Vietnam
+West German	West Germany
+West Pakistani	West Pakistan
+Western Samoan	Western Samoa
+Yemeni	Yemen
+Yugoslav	Yugoslavia
+Yugoslavian	Yugoslavia
+Zairian	Zaire
+Zambian	Zambia
+Zimbabwean	Zimbabwe

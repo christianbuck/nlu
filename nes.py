@@ -81,6 +81,9 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
 
     return depParse, amr, alignment, completed
 
+# TODO: incorporate Mr., Mrs., etc. in the name
+# TODO: Dr. -> doctor
+
 # TODO: find a real list of nationalities -> country names
 NATIONALITIES = {'Chinese': 'China', 'Balinese': 'Bali', 'French': 'France', 'Dutch': 'Netherlands', 
                  'Irish': 'Ireland', 'Scottish': 'Scotland', 'Welsh': 'Wales', 'English': 'England', 'British': 'Britain', 
