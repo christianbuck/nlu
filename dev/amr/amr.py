@@ -75,12 +75,12 @@ class Amr(Dag):
                 part1, part2 = rel.rsplit(":",1)        
                 if part2: 
                     if part1.lower() != "root":
-                        new_amr.replace_triple(par, rel, child, par, part1, child)
+                        new_amr._replace_triple(par, rel, child, par, part1, child)
                     new_amr.node_to_concepts[child] = part2
                 if part1.lower() == "root":
                     new_amr.roots.remove(par)
-                    new_amr.remove_triple(par, rel, child)
-                    new_amr.roots.append(child)
+                    new_amr._remove_triple(par, rel, child)
+                    new_amr.roots.add(child)
         return new_amr
 
     def to_concept_edge_labels(self):
@@ -89,17 +89,17 @@ class Amr(Dag):
         which concepts are pushed into incoming edges.
         """
 
-        new_amr = clone_as_dag()
+        new_amr = self.clone_as_dag()
         for par, rel, child in self.triples(instances = False):
-            if child in self.node_to_concepts:
-                new_rel = "%s:%s" % (rel, self.node_to_concepts[child])
-                new_amr._replace_triple(par,rel,child, par, new_rel, child)
+           #new_rel = "%s:%s" % (rel, ":".join(self.node_to_concepts[c] for c in child if c in self.node_to_concepts))
+           new_rel = '%s:%s' % (rel, ':'.join(self.node_to_concepts[c] if c in self.node_to_concepts else c for c in child))
+           new_amr._replace_triple(par,rel,child, par, new_rel, child)
         for r in self.roots:
             count = 0
             if r in self.node_to_concepts:
-                new_rel = "root:%s" % self.node_to_concepts[r]
+                new_rel = "ROOT:%s" % "".join(self.node_to_concepts[r])
             else: 
-                new_rel = "root"
+                new_rel = "ROOT"
             new_amr._add_triple('root%i' % count, new_rel, r)
             new_amr.roots.remove(r)
             new_amr.roots.append('root%i' % count)
@@ -110,15 +110,26 @@ class Amr(Dag):
         """
         Convert all special symbols in the AMR to strings.
         """
+        
         new_amr = Amr()
-        for p,r,c in self.triples(instances = False):
-            p_new = str(p)
-            c_new = str(c)
-            new_amr.add_triple(p_new, r, c_new)
 
-        new_amr.roots = [str(r) for r in self.roots]
+        def conv(node): # Closure over new_amr
+            if isinstance(node, StrLiteral):
+                var =  str(node)[1:-1] 
+                new_amr._set_concept(var, str(node))
+                return var
+            else: 
+                return str(node)
+
+        for p,r,c in self.triples(instances = False):
+            c_new = tuple([conv(child) for child in c]) if type(c) is tuple else conv(c)
+            p_new = conv(p)
+            new_amr._add_triple(p_new, r, c_new)
+
+        new_amr.roots = [conv(r) for r in self.roots]
+        new_amr.external_nodes = [conv(r) for r in self.external_nodes]
         for node in self.node_to_concepts:    
-            new_amr.set_concept(str(node), self.node_to_concepts[node])
+            new_amr._set_concept(conv(node), self.node_to_concepts[node])
         return new_amr    
 
     @classmethod
@@ -260,6 +271,42 @@ class Amr(Dag):
         new.roots = copy.copy(self.roots)
         new.external_nodes = copy.copy(self.external_nodes)
         return new
+
+    def clone_canonical(self, external_dict = {}, prefix = ""):
+        """
+        Return a version of the DAG where all nodes have been replaced with canonical IDs.
+        """
+        new = Amr()
+        node_map = self._get_canonical_nodes(prefix)
+        for k,v in external_dict.items():
+                node_map[k] = v
+        new.roots = [node_map[x] for x in self.roots]
+        new.external_nodes = set([node_map[x] for x in self.external_nodes])
+        for par, rel, child in self.triples(instances = False):
+            if type(child) is tuple:                 
+                new._add_triple(node_map[par], rel, tuple([node_map[c] for c in child]))
+            else: 
+                new._add_triple(node_map[par], rel, node_map[child])    
+
+        new.node_to_concepts = {}
+        for node in self.node_to_concepts:
+            if node in node_map:
+                new.node_to_concepts[node_map[node]] = self.node_to_concepts[node]
+            else: 
+                new.node_to_concepts[node] = self.node_to_concepts[node]
+        return new
+
+    def apply_node_map(self, node_map, *args, **kwargs):
+        new = Dag.apply_node_map(self, node_map, *args, **kwargs)    
+        new.__class__ = Amr
+        new.node_to_concepts = {} 
+        for node in self.node_to_concepts:
+            if node in node_map:
+                new.node_to_concepts[node_map[node]] = self.node_to_concepts[node]
+            else: 
+                new.node_to_concepts[node] = self.node_to_concepts[node]
+        return new
+        
         
 ############################
 # Pennman format AMR parser
@@ -269,74 +316,64 @@ def ast_to_amr(ast):
     """
     Convert the abstract syntax tree returned by the amr parser into an amr.
     """
-    amr = Amr()
+    dag = Amr()
 
-    def rec_step(x):  # Closure over amr
+    def rec_step(x):  # Closure over dag
 
-            node, concept, roles = x         
-            if type(node) is str:
-                node = node.replace("@","")
-            amr.node_to_concepts[node] = concept
-
+        node, concept, roles = x         
+        if type(node) is str:
+            node = node.replace("@","")
+            dag.node_to_concepts[node] = concept
             for role, child in roles:
-
-                # Flip inverse -OF edges
-                #if r.upper().endswith("-OF"): #Check for inverse edges
-                #    new_rel = r[:-3] #Rename location
-                #    if type(child) == str: 
-                #        graph[child].append((new_rel, node))
-                #    else: 
-                #        childnode = child[0]
-                #        graph[childnode].append((new_rel, node))
-                #        if not childnode in roots:
-                #            roots.append(childnode)
-                #        rec_step(child)
-                #else: 
-
-   
                 if type(child) == tuple and len(child) == 3:
                     childnode = child[0]                                           
                     if type(childnode) is str and childnode.startswith("@"):
                         childnode = childnode.replace("@","")
-                        amr.external_nodes.add(childnode)                               
-                    amr[node].append(role, childnode)
-                    x = amr[childnode]
+                        dag.external_nodes.append(childnode)
+                    tuple_child = (childnode,)
+                    dag[node].append(role, tuple_child)
+                    x = dag[childnode]
                     rec_step(child)
 
-                elif type(child) == list: #Hyperedge
+                elif type(child) == list: #Hyperedge 
                     childnode = set()
                     for c in child: 
                         if type(c) == tuple and len(c) == 3:
-                            if type(child) is str and c[0].startswith("@"):
-                                c[0] = c[0].replace("@","")
-                                amr.external_nodes.add(c[0])                               
-                            childnode.add(c[0])
+                            if type(c[0]) is str and c[0].startswith("@"):
+                                new_c = c[0].replace("@","")
+                                dag.external_nodes.append(new_c)                               
+                            else: 
+                                new_c = c[0]
+                            childnode.add(new_c)
                             rec_step(c)
                         else:
                             if type(c) is str and c.startswith("@"):
                                 c = c.replace("@","")
-                                amr.external_nodes.add(c)                               
+                                dag.external_nodes.append(c)                               
                             childnode.add(c)
                     newchild = tuple(childnode)        
-                    amr[node].append(role, newchild)
-                    x = amr[newchild]
+                    dag[node].append(role, newchild)
+                    x = dag[newchild]
 
                 else: # Just assume this node is some special symbol
                     if type(child) is str and child.startswith("@"):
                         child = child.replace("@","")
-                        amr.external_nodes.add(child)
-                        amr[node].append(role, child)
+                        tuple_child = (child,)
+                        dag.external_nodes.append(tuple_child)
+                        dag[node].append(role, tuple_child)
                     else:
-                        amr[node].append(role, child)
+                        dag[node].append(role, (child,))
+                    x = dag[child]
 
     root = ast[0]
     if type(root) == tuple and len(root) == 3: 
-        amr.roots.append(root[0])
+        dag.roots.append(root[0])
         rec_step(root)
     else: 
-        amr.roots.append(root)
+        dag.roots.append(root)
 
-    return amr 
+    return dag 
+
 
 
 if __name__ == "__main__":
