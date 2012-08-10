@@ -112,10 +112,16 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             elif rel=='ARGM-CAU':
                 rel = 'cause'
             
-            if not (x or x==0): # need a new variable
-                x = new_concept(pipeline.token2concept(depParse[h][0]['dep']),
-                                amr, alignment, h)
-            triples.add((str(px), rel, str(x)))
+            if rel=='ARGM-MOD':
+                if yieldS=='will':
+                    pass    # skip this auxiliary
+                else:
+                    assert False,yieldS # TODO: other modals that need to be handled? 
+            else:
+                if not (x or x==0): # need a new variable
+                    x = new_concept(pipeline.token2concept(depParse[h][0]['dep']),
+                                    amr, alignment, h)
+                triples.add((str(px), rel, str(x)))
             
             completed[0][h] = True
 
