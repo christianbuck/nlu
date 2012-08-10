@@ -16,7 +16,8 @@ if __name__ == "__main__":
 
     for ne in data['bbn_ne']:
         assert len(ne) == 7, "already stipped elements? ne:%s\n" %(str(ne))
-        ne.pop()
-        ne.pop()
+        ne.pop(-2) # remove unused element
+
+    #todo: sort ENAMEX, NUMEX and TIMEX into different containers   
 
     json.dump(data, open(arguments.jsonout, 'w'), indent=2, sort_keys=True)
