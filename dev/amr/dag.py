@@ -296,11 +296,8 @@ class Dag(defaultdict):
        
         def rec_step(node, depth):
 
-            firsthit = node in tabu
+            firsthit = not node in tabu
            
-            print depth, node
-            print tabu
-
             tabu.add(node)
             if type(node) is tuple: # Hyperedge case
                 pass
@@ -312,10 +309,9 @@ class Dag(defaultdict):
                 tabu.add(n)
                 leaf = False if self[n] else True
                 if n in tabu:
-                    extracted = extractor(n, False, leaf)
+                    extracted = extractor(n, firsthit, leaf)
                 else: 
-                    extracted = extractor(n, True, leaf)
-                    tabu.add(n)
+                    extracted = extractor(n, firsthit, leaf)
                 child_map = ListMap()
                 for rel, child in self[n].items():
                     if child in tabu:
@@ -324,7 +320,7 @@ class Dag(defaultdict):
                     else:
                         child_map.append(rel, rec_step(child, depth + 1))
 
-                if self[n] and not firsthit:
+                if self[n] and firsthit: 
                     combined = combiner(extracted, child_map, depth)
                     allnodes.append(combined)
                 else: 
