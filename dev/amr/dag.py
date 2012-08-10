@@ -207,6 +207,9 @@ class Dag(defaultdict):
         self.__cached_triples = None
         self.__cached_depth = None
 
+        self.node_alignments = {} 
+        self.edge_alignments = {}
+
     def __reduce__(self):
         t = defaultdict.__reduce__(self)
         return (t[0], ()) + (self.__dict__,) +t[3:]
@@ -342,6 +345,8 @@ class Dag(defaultdict):
         """
         new = Dag()
         new.roots = copy.copy(self.roots)
+        new.external_nodes = self.external_nodes
+        new.node_alignments, new.edge_alignments = self.node_alignment, self.edge_alignments
         for tr in self.triples():
             new._add_triple(*copy.copy(tr))
         return new
@@ -362,20 +367,22 @@ class Dag(defaultdict):
                 node_to_id[x] = 0    
         while queue: 
             node, depth = queue.pop(0)            
-            rels = tuple(sorted(self[node].keys()))
-            node_to_id[node] += 13 * depth + hash(rels) 
-
-            for rel in rels:
-                children = self[node].getall(rel)
-                for child in children:
-                    if not child in node_to_id: 
-                        if type(child) is tuple:
-                            for c in child: 
-                                node_to_hash = 41 * depth
-                                queue.append((c, depth+1))
-                        else:
-                            node_to_hash = 41 * depth 
-                            queue.append((child, depth+1))
+            if not node in tabu:
+                tabu.add(node)
+                rels = tuple(sorted(self[node].keys()))
+                node_to_id[node] += 13 * depth + hash(rels) 
+    
+                for rel in rels:
+                    children = self[node].getall(rel)
+                    for child in children:
+                        if not child in node_to_id: 
+                            if type(child) is tuple:
+                                for c in child: 
+                                    node_to_hash = 41 * depth
+                                    queue.append((c, depth+1))
+                            else:
+                                node_to_hash = 41 * depth 
+                                queue.append((child, depth+1))
         return node_to_id                    
   
     def __hash__(self):
@@ -593,7 +600,7 @@ class Dag(defaultdict):
         if type(child) is not tuple:
             child = (child,)
         if parent in child: 
-            sys.stderr.wriote("WARNING: Cannot add self-edge (%s, %s, %s)." % (parent, relation, child))
+            sys.stderr.write("WARNING: Self-edge (%s, %s, %s).\n" % (parent, relation, child))
             #raise ValueError, "Cannot add self-edge (%s, %s, %s)." % (parent, relation, child)
         for c in child: 
             x = self[c]
@@ -629,6 +636,15 @@ class Dag(defaultdict):
         new = Dag()
         new.roots = [node_map[x] if x in node_map else x for x in self.roots ]
         new.external_nodes = [node_map[x] if x in node_map else x for x in self.external_nodes]
+
+        for node in self.node_alignments:
+            new.node_alignments[node_map[node]] = self.node_alignments[node]
+        for par, rel, child in self.edge_alignments:
+            if type(child) is tuple: 
+                new.edge_alignments[(node_map[par] if par in node_map else par, rel, tuple([(node_map[c] if c in node_map else c) for c in child]))] = self.edge_alignments[(par, rel, child)]
+            else: 
+                new.edge_alignments[(node_map[par] if par in node_map else par, rel, node_map[child] if child in node_map else child)] = self.edge_alignments[(par, rel, child)]
+
         for par, rel, child in Dag.triples(self):
             if type(child) is tuple: 
                 new._add_triple(node_map[par] if par in node_map else par, rel, tuple([(node_map[c] if c in node_map else c) for c in child]))
@@ -657,14 +673,26 @@ class Dag(defaultdict):
         node_map = self._get_canonical_nodes(prefix)
         for k,v in external_dict.items():
                 node_map[k] = v
-        new.roots = [node_map[x] for x in self.roots]
-        new.external_nodes = set([node_map[x] for x in self.external_nodes])
-        for par, rel, child in self.triples(instances = False):
-            if type(child) is tuple:                 
-                new._add_triple(node_map[par], rel, tuple([node_map[c] for c in child]))
-            else: 
-                new._add_triple(node_map[par], rel, node_map[child])    
-        return new
+
+        return self.apply_node_map(node_map)                        
+        #new.roots = [node_map[x] for x in self.roots]
+        #new.external_nodes = set([node_map[x] for x in self.external_nodes])
+        #
+        #for node in self.node_alignments:
+        #    new.node_alignments[node_map[node]] = self.node_alignments[node]
+        #
+        #for par, rel, child in self.edge_alignments:
+        #    if type(child) is tuple: 
+        #        new.edge_alignments[(node_map[par], rel, tuple([node_map[c] for c in child]))] = self.edge_alignments[(par, rel, child)]
+        #    else: 
+        #        new.edge_alignments[(node_map[par] , rel, node_map[child])]
+        #
+        #for par, rel, child in self.triples(instances = False):
+        #    if type(child) is tuple:                 
+        #        new._add_triple(node_map[par], rel, tuple([node_map[c] for c in child]))
+        #    else: 
+        #        new._add_triple(node_map[par], rel, node_map[child])    
+        #return new
 
     def remove_fragment(self, dag):
         """
