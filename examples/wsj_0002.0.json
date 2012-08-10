@@ -5,35 +5,48 @@
       1, 
       "Rudolph Agnew", 
       "PERSON", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PERSON\">Rudolph Agnew</ENAMEX>"
+    ], 
+    [
+      3, 
+      5, 
+      "55 years old", 
+      "DATE", 
+      "AGE", 
+      "<TIMEX TYPE=\"DATE:AGE\">55 years old</TIMEX>"
     ], 
     [
       8, 
       8, 
       "chairman", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">chairman</ENAMEX>"
     ], 
     [
       10, 
       13, 
       "Consolidated Gold Fields PLC", 
       "ORGANIZATION", 
-      "CORPORATION"
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Consolidated Gold Fields PLC</ENAMEX>"
     ], 
     [
       21, 
       21, 
       "director", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">director</ENAMEX>"
     ], 
     [
       24, 
       24, 
       "British", 
       "NORP", 
-      "NATIONALITY"
+      "NATIONALITY", 
+      "<ENAMEX TYPE=\"NORP:NATIONALITY\">British</ENAMEX>"
     ]
   ], 
   "coref_chains": [], 

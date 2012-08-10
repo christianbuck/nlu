@@ -5,28 +5,32 @@
       1, 
       "Vinken", 
       "PERSON", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PERSON\">Vinken</ENAMEX>"
     ], 
     [
       3, 
       3, 
       "chairman", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">chairman</ENAMEX>"
     ], 
     [
       5, 
       6, 
       "Elsevier N.V.", 
       "ORGANIZATION", 
-      "CORPORATION"
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Elsevier N.V.</ENAMEX>"
     ], 
     [
       9, 
       9, 
       "Dutch", 
       "NORP", 
-      "NATIONALITY"
+      "NATIONALITY", 
+      "<ENAMEX TYPE=\"NORP:NATIONALITY\">Dutch</ENAMEX>"
     ]
   ], 
   "coref_chains": [

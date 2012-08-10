@@ -5,14 +5,32 @@
       1, 
       "Pierre Vinken", 
       "PERSON", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PERSON\">Pierre Vinken</ENAMEX>"
+    ], 
+    [
+      3, 
+      5, 
+      "61 years old", 
+      "DATE", 
+      "AGE", 
+      "<TIMEX TYPE=\"DATE:AGE\">61 years old</TIMEX>"
     ], 
     [
       14, 
       14, 
       "director", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">director</ENAMEX>"
+    ], 
+    [
+      15, 
+      16, 
+      "Nov. 29", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">Nov. 29</TIMEX>"
     ]
   ], 
   "coref_chains": [], 

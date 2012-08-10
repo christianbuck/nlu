@@ -5,35 +5,40 @@
       1, 
       "U.S.", 
       "GPE", 
-      "COUNTRY"
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">U.S.</ENAMEX>"
     ], 
     [
       13, 
       14, 
       "South Korea", 
       "GPE", 
-      "COUNTRY"
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">South Korea</ENAMEX>"
     ], 
     [
       16, 
       16, 
       "Taiwan", 
       "GPE", 
-      "COUNTRY"
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">Taiwan</ENAMEX>"
     ], 
     [
       18, 
       19, 
       "Saudi Arabia", 
       "GPE", 
-      "COUNTRY"
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">Saudi Arabia</ENAMEX>"
     ], 
     [
       38, 
       38, 
       "U.S.", 
       "GPE", 
-      "COUNTRY"
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">U.S.</ENAMEX>"
     ]
   ], 
   "coref_chains": [

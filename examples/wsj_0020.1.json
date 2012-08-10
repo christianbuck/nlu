@@ -1,60 +1,76 @@
 {
   "bbn_ne": [
     [
+      2, 
+      2, 
+      "five", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">five</NUMEX>"
+    ], 
+    [
       6, 
       6, 
       "China", 
       "GPE", 
-      "COUNTRY"
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">China</ENAMEX>"
     ], 
     [
       8, 
       8, 
       "Thailand", 
       "GPE", 
-      "COUNTRY"
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">Thailand</ENAMEX>"
     ], 
     [
       10, 
       10, 
       "India", 
       "GPE", 
-      "COUNTRY"
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">India</ENAMEX>"
     ], 
     [
       12, 
       12, 
       "Brazil", 
       "GPE", 
-      "COUNTRY"
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">Brazil</ENAMEX>"
     ], 
     [
       14, 
       14, 
       "Mexico", 
       "GPE", 
-      "COUNTRY"
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">Mexico</ENAMEX>"
     ], 
     [
       34, 
       34, 
       "U.S.", 
       "GPE", 
-      "COUNTRY"
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">U.S.</ENAMEX>"
     ], 
     [
       35, 
       36, 
       "Trade Representative", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">Trade Representative</ENAMEX>"
     ], 
     [
       37, 
       38, 
       "Carla Hills", 
       "PERSON", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PERSON\">Carla Hills</ENAMEX>"
     ]
   ], 
   "coref_chains": [], 

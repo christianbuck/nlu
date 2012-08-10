@@ -5,35 +5,48 @@
       3, 
       "asbestos", 
       "SUBSTANCE", 
-      "CHEMICAL"
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">asbestos</ENAMEX>"
     ], 
     [
       10, 
       10, 
       "Kent", 
       "PRODUCT", 
-      "OTHER"
+      "OTHER", 
+      "<ENAMEX TYPE=\"PRODUCT:OTHER\">Kent</ENAMEX>"
     ], 
     [
       23, 
       23, 
       "group", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">group</ENAMEX>"
     ], 
     [
       25, 
       25, 
       "workers", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">workers</ENAMEX>"
+    ], 
+    [
+      30, 
+      34, 
+      "more than 30 years ago", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">more than 30 years ago</TIMEX>"
     ], 
     [
       36, 
       36, 
       "researchers", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">researchers</ENAMEX>"
     ]
   ], 
   "coref_chains": [
