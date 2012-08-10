@@ -21,6 +21,17 @@ def print_amr_error(amr_str):
     sys.stderr.write(amr_str)    
     sys.stderr.write("\n")
 
+
+def conv(s):
+    if not s: 
+        return "NONE"
+    if isinstance(s, StrLiteral):
+        return s[1:-1] 
+    elif s.startswith('"') and s.endswith('"'):
+        return  s[1:-1]
+    else: 
+        return s
+
 class Amr(Dag):
     """
     An abstract meaning representation.
@@ -91,18 +102,37 @@ class Amr(Dag):
 
         new_amr = self.clone_as_dag()
         for par, rel, child in self.triples(instances = False):
-           #new_rel = "%s:%s" % (rel, ":".join(self.node_to_concepts[c] for c in child if c in self.node_to_concepts))
-           new_rel = '%s:%s' % (rel, ':'.join(self.node_to_concepts[c] if c in self.node_to_concepts else c for c in child))
-           new_amr._replace_triple(par,rel,child, par, new_rel, child)
+            #new_rel = "%s:%s" % (rel, ":".join(self.node_to_concepts[c] for c in child if c in self.node_to_concepts))
+            new_rel = '%s:%s' % (rel, ':'.join(conv(self.node_to_concepts[c]) if c in self.node_to_concepts else conv(c) for c in child))
+            new_amr._replace_triple(par,rel,child, par, new_rel, child)
+
+            # Copy edge alignemnts
+            if (par, rel, child) in self.edge_alignments:
+                new_amr.edge_alignments[(par, new_rel, child)] = self.edge_alignments[(par,rel,child)]           
+            # Copy node alignments of children    
+            for c in child: 
+                if c in self.node_alignments:
+                    if not (par, new_rel, child) in new_amr.edge_alignments:
+                       new_amr.edge_alignments[(par, new_rel, child)] = []
+                    new_amr.edge_alignments[(par, new_rel, child)].extend(self.node_alignments[c])
+            for e in new_amr.edge_alignments: 
+                new_amr.edge_alignments[e] = list(set(new_amr.edge_alignments[e]))
+               
+
         for r in self.roots:
             count = 0
             if r in self.node_to_concepts:
-                new_rel = "ROOT:%s" % "".join(self.node_to_concepts[r])
+                new_rel = "ROOT:%s" % conv(self.node_to_concepts[r])
             else: 
                 new_rel = "ROOT"
-            new_amr._add_triple('root%i' % count, new_rel, r)
+            newtriple =  ('root%i' % count, new_rel, (r,))
+            new_amr._add_triple(*newtriple)
             new_amr.roots.remove(r)
             new_amr.roots.append('root%i' % count)
+             
+            if r in self.node_alignments:
+                new_amr.edge_alignments[newtriple] = self.node_alignments[r]
+
             count += 1
         return new_amr
 
@@ -128,6 +158,8 @@ class Amr(Dag):
 
         new_amr.roots = [conv(r) for r in self.roots]
         new_amr.external_nodes = [conv(r) for r in self.external_nodes]
+        new_amr.edge_alignments = self.edge_alignments
+        new_amr.node_alignments = self.node_alignments
         for node in self.node_to_concepts:    
             new_amr._set_concept(conv(node), self.node_to_concepts[node])
         return new_amr    
@@ -272,7 +304,8 @@ class Amr(Dag):
         new.external_nodes = copy.copy(self.external_nodes)
         return new
 
-    def clone_canonical(self, external_dict = {}, prefix = ""):
+    ### Dispatched to Dag
+    def clone_canonical(self, external_dict = {}, prefix = ""):            
         """
         Return a version of the DAG where all nodes have been replaced with canonical IDs.
         """
@@ -280,14 +313,26 @@ class Amr(Dag):
         node_map = self._get_canonical_nodes(prefix)
         for k,v in external_dict.items():
                 node_map[k] = v
+    
+   
+        #return self.apply_node_map(node_map)
+   
         new.roots = [node_map[x] for x in self.roots]
+        for node in self.node_alignments:
+            new.node_alignments[node_map[node]] = self.node_alignments[node]
+        for par, rel, child in self.edge_alignments:
+            if type(child) is tuple: 
+                new.edge_alignments[(node_map[par] if par in node_map else par, rel, tuple([(node_map[c] if c in node_map else c) for c in child]))] = self.edge_alignments[(par, rel, child)]
+            else: 
+                new.edge_alignments[(node_map[par] if par in node_map else par, rel, node_map[child] if child in node_map else child)] = self.edge_alignments[(par, rel, child)]
+        
         new.external_nodes = set([node_map[x] for x in self.external_nodes])
         for par, rel, child in self.triples(instances = False):
             if type(child) is tuple:                 
                 new._add_triple(node_map[par], rel, tuple([node_map[c] for c in child]))
             else: 
                 new._add_triple(node_map[par], rel, node_map[child])    
-
+        
         new.node_to_concepts = {}
         for node in self.node_to_concepts:
             if node in node_map:
@@ -321,10 +366,26 @@ def ast_to_amr(ast):
     def rec_step(x):  # Closure over dag
 
         node, concept, roles = x         
+
+        aligned_tokens = []
+        if concept and "~" in concept: 
+            concept, alignments = concept.rsplit("~",1)
+            language,alignments= alignments.split(".",1)
+            aligned_tokens = [int(x) for x in alignments.split(",")]
+
         if type(node) is str:
             node = node.replace("@","")
             dag.node_to_concepts[node] = concept
-            for role, child in roles:
+            if aligned_tokens:
+                dag.node_alignments[node] = aligned_tokens
+            for r, child in roles:
+                role = r
+                aligned = [] 
+                if "~" in r:
+                    role, alignments = r.rsplit("~",1)
+                    language,alignments = alignments.split(".",1)
+                    aligned = [int(x) for x in alignments.split(",")]
+
                 if type(child) == tuple and len(child) == 3:
                     childnode = child[0]                                           
                     if type(childnode) is str and childnode.startswith("@"):
@@ -332,6 +393,8 @@ def ast_to_amr(ast):
                         dag.external_nodes.append(childnode)
                     tuple_child = (childnode,)
                     dag[node].append(role, tuple_child)
+                    if aligned:
+                        dag.edge_alignments[(node, role, tuple_child)] = aligned
                     x = dag[childnode]
                     rec_step(child)
 
@@ -353,6 +416,8 @@ def ast_to_amr(ast):
                             childnode.add(c)
                     newchild = tuple(childnode)        
                     dag[node].append(role, newchild)
+                    if aligned:
+                        dag.edge_alignments[(node, role, newchild)] = aligned
                     x = dag[newchild]
 
                 else: # Just assume this node is some special symbol
@@ -363,6 +428,8 @@ def ast_to_amr(ast):
                         dag[node].append(role, tuple_child)
                     else:
                         dag[node].append(role, (child,))
+                    if aligned:
+                        dag.edge_alignments[(node, role, (child,))] = aligned
                     x = dag[child]
 
     root = ast[0]

@@ -295,47 +295,41 @@ class Dag(defaultdict):
         tabu = set()
        
         def rec_step(node, depth):
+
+            firsthit = node in tabu
+           
+            print depth, node
+            print tabu
+
             tabu.add(node)
-
             if type(node) is tuple: # Hyperedge case
-                allnodes = []    
-                for n in node: 
-                    leaf = False if self[n] else True
-                    if n in tabu:
-                        extracted = extractor(n, False, leaf)
-                    else: 
-                        extracted = extractor(n, True, leaf)
-                        tabu.add(n)
-                    child_map = ListMap()
-                    for rel, child in self[n].items():
-                        if child in tabu:
-                            cleaf = self[child] != False
-                            child_map.append(rel, extractor(child, False, cleaf))
-                        else:
-                            child_map.append(rel, rec_step(child, depth + 1))
-
-                    if self[n]:
-                        combined = combiner(extracted, child_map, depth)
-                        allnodes.append(combined)
-                    else: 
-                        allnodes.append(extracted)
-                return hedge_combiner(allnodes)
-
-            else:   # Normal edge case (single parent and child)
+                pass
+            else:                
+                node = (node,)
+            
+            allnodes = []    
+            for n in node: 
+                tabu.add(n)
+                leaf = False if self[n] else True
+                if n in tabu:
+                    extracted = extractor(n, False, leaf)
+                else: 
+                    extracted = extractor(n, True, leaf)
+                    tabu.add(n)
                 child_map = ListMap()
-                for rel, child in self[node].items():
+                for rel, child in self[n].items():
                     if child in tabu:
-                        cleaf = self[child] != False
-                        child_map.append(rel, extractor(child, False, cleaf))
+                        #child_map.append(rel, extractor(child, False, leaf))
+                        pass
                     else:
                         child_map.append(rel, rec_step(child, depth + 1))
-                if self[node]:
-                    extracted = extractor(node, True, False)
+
+                if self[n] and not firsthit:
                     combined = combiner(extracted, child_map, depth)
-                    return combined          
+                    allnodes.append(combined)
                 else: 
-                    extracted = extractor(node, True, True)
-                    return extracted
+                    allnodes.append(extracted)
+            return hedge_combiner(allnodes)
 
         return [rec_step(node, 0) for node in self.roots]
 
@@ -415,14 +409,17 @@ class Dag(defaultdict):
         Traverse the DAG breadth first to collect a list of (parent, relation, child) triples.
         """
 
-        if self.__cached_triples:
+        if not start_node and self.__cached_triples:
             return self.__cached_triples
 
         triple_to_depth = {}
         triples = []
         tabu = set()
 
-        queue = [(x,0) for x in self.roots]
+        if start_node:
+            queue = [(start_node,0)]
+        else:             
+            queue = [(x,0) for x in self.roots]
         while queue: 
             node, depth = queue.pop(0)
             if not node in tabu:
@@ -439,8 +436,9 @@ class Dag(defaultdict):
                         if not child in tabu: 
                             queue.append((child, depth+1))
 
-        self.__cached_triples = triples
-        self.__cached_depth = triple_to_depth
+        if not start_node:
+            self.__cached_triples = triples
+            self.__cached_depth = triple_to_depth
         return triples 
 
     def get_all_depths(self):
@@ -513,7 +511,7 @@ class Dag(defaultdict):
         Return the set of nodes reachable from a node
         """
         return set(flatten(self.dfs(node = node, combiner = lambda parent, childmap, depth:  [parent] + childmap.values())))
-    
+   
     def find_roots(self):
         """
         Find and return a set of the roots of the DAG. This does NOT set the 'roots' attribute.
@@ -532,7 +530,36 @@ class Dag(defaultdict):
                     children.update(v)
                 else:
                     children.add(v)
-        return parents - children
+        roots = parents - children
+
+
+        not_found = parents.union(children)
+        for r in roots: 
+            x = self.triples(start_node = r)
+            for p,r,c in x: 
+               if p in not_found:
+                   not_found.remove(p)
+               if type(c) is tuple: 
+                   for ch in c: 
+                       if ch in not_found:
+                           not_found.remove(ch)
+               if c in not_found: 
+                   not_found.remove(c)
+
+        while not_found:
+            parents = [x for x in not_found if self[x]]
+            new_root = parents.pop()
+            for p,r,c in  self.triples(start_node = new_root):
+               if p in not_found:
+                   not_found.remove(p)
+               if type(c) is tuple: 
+                   for ch in c: 
+                       if ch in not_found:
+                           not_found.remove(ch)
+               if c in not_found: 
+                   not_found.remove(c)
+            roots.add(new_root)    
+        return roots    
    
     @memoize
     def get_ordered_nodes(self):
@@ -762,7 +789,7 @@ class Dag(defaultdict):
 
         dagroots = dag.find_roots() if not dag.roots else dag.roots
 
-        if dag.external_nodes: # Can use specified external nodes
+        if dag.external_nodes: # Can use specified external nodesnode
             external = tuple(set(self.find_external_nodes(dag) +
               dag.external_nodes))
         else:
@@ -801,7 +828,7 @@ class Dag(defaultdict):
 
     ###Methods for rendering/viewing DAGs###
     def _get_gv_graph(self, *args):
-        """
+        """node
         Return a pygraphviz AGraph representing the DAG.
         """        
         graph = pgv.AGraph(strict=False,directed=True)
@@ -856,7 +883,7 @@ class Dag(defaultdict):
             else: 
                 childstr = " ".join([":%s %s" % (rel, child) for rel, child in sorted(childmap.items())])            
             return "(%s %s)" % (nodestr, childstr)
-
+        
         def hedgecombiner(nodes):
                 return ", ".join(nodes)
 

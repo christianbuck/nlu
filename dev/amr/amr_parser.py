@@ -20,7 +20,7 @@ class StrLiteral(str):
         return '"%s"' % "".join(self)
 
     def __repr__(self):
-            return str(self)
+            return "".join(self)
 
 class SpecialValue(str):
         pass
@@ -54,7 +54,28 @@ def make_amr_parser():
    
     ParserElement.enablePackrat() # Hopefully no bug in here...
 
-    parse_role = lambda s, loc, tok : (tok[0], tok[1:] if len(tok) > 2  else tok[1]) 
+
+    def parse_role(s,loc,tok):
+        if len(tok) >= 2:
+            r, ch = tok[0], []
+            for v in tok[1:]:
+                if isinstance(v, StrLiteral):
+                # Parse the node alignment and move it to the edge
+                    parts = v.replace(" ","").rsplit("~",1)   
+                    if len(parts) >= 2:
+                        v, align = parts
+                        v = StrLiteral(v)
+                        r = "%s~%s" % (r.strip(), align.strip())
+                elif isinstance(v, SpecialValue):
+                    parts = v.replace(" ","").rsplit("~",1)
+                    if len(parts) >= 2:                            
+                        v, align = parts
+                        v = StrLiteral(v)
+                        r = "%s~%s" % (r.strip(), align.strip())
+                ch.append(v)              
+            return  r, ch       
+        else:
+            return tok[0] 
 
     # Number are all mapped to the same node in the graph because of interning
     parse_quantity = lambda s, loc, tok: StrLiteral(" ".join(tok)) #float(tok[0]) if "." in tok[0] else int(tok[0]) 
@@ -68,21 +89,23 @@ def make_amr_parser():
 
     quantity = Word(nums+".,").setParseAction(parse_quantity)
 
-    node_name =  Word(alphas+nums+"_@")  
+    node_name =  Word(alphas+nums+"""@-_.,~$/<>%&!+\*?^`"'""") #Word(alphas+nums+"_@.")  
 
-    lit_string = Literal('"').suppress() + CharsNotIn('"') + Literal('"').suppress()
-    concept_name = Word(alphas+nums+'-_.') | lit_string 
-    role_name = Word(alphas+nums+":-_.$'&@") | Literal("#").suppress()+Word(alphas+nums+"[]-$_").setParseAction(lambda s, loc, tok: NonterminalLabel(tok[0]))     
+    lit_string = Literal('"').suppress() + CharsNotIn('"') + Literal('"').suppress() 
+    concept_name = lit_string | Word(alphas+nums+"""-_.,`~$/<>%&!+\*?^"'""")     
+    role_name = Word(alphas+nums+"""-_.,~$/<>%&!+\*:?^`"'""") | Literal("#").suppress()+Word(alphas+nums+"[]-$_").setParseAction(lambda s, loc, tok: NonterminalLabel(tok[0]))     
 
 
-    special_attr = Literal("-") | Literal("interrogative") | Literal("amr-unknown") # Extend list if neccessary
+    special_attr = (Literal("-") | Literal("interrogative") | Literal("SHOULD") | Literal("MUST") | Literal("HAVE-TO")| Literal("WOULD") | Literal("CAN") |  Literal("DARE-TO")| Literal("BE-TO") | Literal("MAY") | Literal("GOING-TO") | Literal("MIGHT") | Literal("USED-TO")) + Optional(Literal("~")+Word(alphas+nums+"."))
+    
 
     expr = Forward()
     value =  expr |\
              quantity.setParseAction(parse_quantity) |\
              special_attr.setParseAction(parse_special_value) | \
              node_name |\
-             lit_string.setParseAction(parse_string_literal) 
+             (lit_string + Optional(Literal("~")+Word(alphas+nums+"."))).setParseAction(parse_string_literal) 
+             
   
 
     valuelist = Forward()
