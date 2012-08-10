@@ -116,7 +116,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                 if yieldS=='will':
                     pass    # skip this auxiliary
                 else:
-                    assert False,yieldS # TODO: other modals that need to be handled? 
+                    continue # handle modal in a later module
             else:
                 if not (x or x==0): # need a new variable
                     x = new_concept(pipeline.token2concept(depParse[h][0]['dep']),

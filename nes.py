@@ -45,7 +45,9 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     triples = set() # to add to the AMR
     
     entities = pipeline.loadBBN(sentenceId)
-    for i,j,name,coarse,fine in entities:    # TODO: what is the last one?
+    for i,j,name,coarse,fine,raw in entities:    # TODO: what is the last one?
+        if not raw.startswith('<ENAMEX'): continue  # TODO: NUMEX, TIMEX
+        
         h = choose_head(range(i,j+1), depParse)
         #print((i,j),name,h,depParse[h+1]['dep'], file=sys.stderr)
         

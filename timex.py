@@ -107,6 +107,8 @@ re_date = [
     re.compile(r'\w{4}-Q(?P<quarter>\d)')
 ]
 
+# TODO: seasons ("next spring")
+
 weekdays = ['Monday','Tuesday','Wednesday',
             'Thursday','Friday','Saturday',
             'Sunday']
@@ -119,13 +121,17 @@ timex3_type_to_role = {
 re_offset = re.compile(r'^P(?P<count>-?\d+)(?P<unit>[HDWMY]+)$')
 
 timex3_units = {
-    'S' : 'second',
-    'M' : 'minute',
-    'H' : 'hour',
-    'D' : 'day',
-    'W' : 'week',
-    'M' : 'month', #?
-    'Y' : 'year'
+    'time': {
+        'S' : 'second',
+        'M' : 'minute',
+        'H' : 'hour'
+    },
+    'day': {
+        'D' : 'day',
+        'W' : 'week',
+        'M' : 'month',
+        'Y' : 'year'
+    }
 }
 
 timex3_ref_to_roles = {
@@ -172,8 +178,7 @@ class Timex3Entity(object):
             if 'OFFSET' in v:
                 self.type += "_RELATIVE"
                 offset = v[v.index('OFFSET')+1]
-                assert offset[-1] in timex3_units
-                self.date_entity['unit'] = timex3_units[offset[-1]]
+                self.date_entity['unit'] = timex3_units['time' if 'T' in offset else 'day'][offset[-1]]
                 quantity = offset[1:-1]
                 try:
                     self.date_entity['quant'] = int(quantity)
