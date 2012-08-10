@@ -36,8 +36,9 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
         mc = new_concept(pipeline.token2concept(t.main_concept), amr, alignment, h)
 
         if t.wrapper != None:
+            alignment.unlink(mc, h)
             wc = new_concept(pipeline.token2concept(t.wrapper), amr, alignment, h)
-            new_triples.add((str(wc), t.wrapper, str(mc)))
+            new_triples.add((str(wc), 'op1', str(mc)))
 
         if 'weekday' in t.date_entity:
             wd = int(t.date_entity['weekday'])
@@ -136,8 +137,8 @@ timex3_units = {
 
 timex3_ref_to_roles = {
     'PRESENT_REF' : 'now',
-    'PAST_REF' : 'ago',
-    'FUTURE_REF' : 'soon'
+    'PAST_REF' : 'previously',
+    'FUTURE_REF' : 'subsequently'
 }
 
 
@@ -184,6 +185,10 @@ class Timex3Entity(object):
                     self.date_entity['quant'] = int(quantity)
                     if self.date_entity['quant'] < 0:
                         self.wrapper = 'ago'
+                        self.date_entity['quant'] = -self.date_entity['quant']
+                    else:
+                        assert self.date_entity['quant'] > 0
+                        self.wrapper = 'hence'
                 except ValueError:
                     pass
                     #assert quantity == 'X', "value should be int or X but is %s" %quantity
