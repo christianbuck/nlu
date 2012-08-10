@@ -27,8 +27,10 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     replacements = {}
     for coref_trip in coref_triples:
         x, _, (y,) = coref_trip
-        assert wTags[alignment[int(y):]]["PartOfSpeech"] in ['PRP','PRP$'] \
-            or amr.node_to_concepts[y].endswith('-FALLBACK'), (y,ww[alignment[int(y):]],x,ww[alignment[int(x):]])
+        
+        assert amr.get_concept(x)==amr.get_concept(y) \
+            or wTags[alignment[int(y):]]["PartOfSpeech"] in ['PRP','PRP$'] \
+            or amr.get_concept(y).endswith('-FALLBACK'), (y,ww[alignment[int(y):]],x,ww[alignment[int(x):]])
         replacements[y] = x
         triples.remove(coref_trip)
     
