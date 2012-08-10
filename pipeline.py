@@ -14,27 +14,27 @@ from add_prop import SpanTree, span_from_treepos
 def main(sentenceId):
     # load dependency parse from sentence file
     tokens, ww, wTags, depParse = loadDepParse(sentenceId)
-    
+
     # pipeline steps
-    import nes, conjunctions, vprop, nprop, verbalize, adjsAndAdverbs, auxes, misc, coref, beautify
+    import nes, timex, conjunctions, vprop, nprop, verbalize, adjsAndAdverbs, auxes, misc, coref, beautify
     # TODO: does conjunctions module work gracefully when propositions are conjoined?
 
     # initialize input to first pipeline step
     token_accounted_for = [False]*len(depParse)
     '''Has the token been accounted for yet in the semantics?'''
-    
+
     edge_accounted_for = {(dep['gov_idx'],m): False for m in range(len(depParse)) if depParse[m] for dep in depParse[m]}
     '''Has the dependency edge been accounted for yet in the semantics?'''
-    
+
     completed = token_accounted_for, edge_accounted_for
-    
+
     amr = Amr()
     alignments = Alignment()
 
     # serially execute pipeline steps
     print(' '.join(filter(None,ww)))
     sys.stdout.flush()
-    for m in [nes, conjunctions, vprop, nprop, verbalize, adjsAndAdverbs, auxes, misc, coref, beautify]:
+    for m in [nes, timex, conjunctions, vprop, nprop, verbalize, adjsAndAdverbs, auxes, misc, coref, beautify]:
         print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
         depParse, amr, alignments, completed = m.main(sentenceId, tokens, ww, wTags, depParse, amr, alignments, completed)
         #print(' '.join(ww))
@@ -92,17 +92,22 @@ def loadVProp(sentenceId):
                     arg[2], arg[3] = overtStart, overtEnd
                     arg[4] = ' '.join(overtWords)
         return props
-    
+
 def loadNProp(sentenceId):
     jsonFile = 'examples/'+sentenceId+'.json'
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         return json.load(jsonF)['nom']
 
+def loadTimex(sentenceId):
+    jsonFile = 'examples/'+sentenceId+'.json'
+    with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
+        return json.load(jsonF)['timex']
+
 def loadDepParse(sentenceId):
     jsonFile = 'examples/'+sentenceId+'.json'
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         sentJ = json.load(jsonF)
-        
+
         # words
         tokens = sentJ["treebank_sentence"].split() # includes traces
         ww = [None]*len(tokens)
@@ -110,7 +115,7 @@ def loadDepParse(sentenceId):
         for itm in sentJ["words"]:
             ww[itm[1]["idx"]] = itm[0]
             wTags[itm[1]["idx"]] = itm[1]
-        
+
         # dependency parse
         deps = [None]*len(tokens)   # entries that will remain None: dependency root, punctuation, or function word incorporated into a dependecy relation
         deps_concise = sentJ["stanford_dep"]
@@ -121,7 +126,7 @@ def loadDepParse(sentenceId):
             if entry["gov_idx"]==-1:    # root
                 entry["gov_idx"] = None
             deps[i].append(entry)  # can be multiple entries for a token, because tokens can have multiple heads
-        
+
         # dependency parse: un-collapse coordinate structures except for amod links
         conjs = [d for dep in deps if dep for d in dep if d["rel"].startswith('conj_')]
         if conjs:
@@ -131,15 +136,15 @@ def loadDepParse(sentenceId):
         for conj in conjs:
             i, r, h = conj["dep_idx"], conj["rel"], conj["gov_idx"]
             # note that the conjunction link connects two conjuncts
-            # (the conjunction word is incorporated in the relation name, 
+            # (the conjunction word is incorporated in the relation name,
             # but the conjunction token index is not represented)
-            
+
             iextdeps = [dep for dep in deps[i] if not dep["rel"].startswith('conj')]
             assert len(iextdeps)==1,iextdeps
             iextdep = iextdeps[0]  # external (non-conjunction) head link of conjunction's dependent
             hextdeps = [dep for dep in deps[h] if not dep["rel"].startswith('conj')]
             assert len(hextdeps)<=1,hextdeps
-            
+
             if r=='conj_and' and iextdep["rel"]=='amod': # remove this conjunction link
                 print('  removing',conj, file=sys.stderr)
                 deps[i].remove(conj)
@@ -150,7 +155,7 @@ def loadDepParse(sentenceId):
                 #        ^-------------------------dobj---|
                 #  to
                 #    removed <-dobj- Korea <-conj_and- Taiwan
-                
+
                 if hextdeps:
                     hextdep = hextdeps[0]  # external (non-conjunction) head link of conjunction's governor
                     print('  removing',hextdep, file=sys.stderr)
@@ -178,13 +183,13 @@ def loadDepParse(sentenceId):
                     deps[h].append(conj1)
                 conj2 = {"gov_idx": c, "gov": cword, "dep_idx": i, "dep": ww[i], "rel": 'conj'}
                 print('  adding',conj2, file=sys.stderr)
-                deps[i].append(conj2) 
-        
+                deps[i].append(conj2)
+
         return tokens, ww, wTags, deps  # ww and wTags have None for tokens which are empty elements
 
 def surface2treeToken(offset, ww):
     '''
-    Given a token offset in the (tokenized) surface sentence, 
+    Given a token offset in the (tokenized) surface sentence,
     convert to a tree token offset by accounting for empty elements/traces.
     ''' # TODO: replace with preprocessing of json files
     i = offset
@@ -209,29 +214,29 @@ def parent_edges(depParseEntry):
 
 def choose_head(tokenIndices, depParse):
     # restricted version of least common subsumer:
-    # assume that for every word in the NE, 
-    # all words on the ancestor path up to the NE's head 
+    # assume that for every word in the NE,
+    # all words on the ancestor path up to the NE's head
     # are also in the NE
     frontier = set(tokenIndices)    # should end up with just 1 (the head)
     for itm in set(frontier):
         assert 0<=itm<len(depParse)
         if not depParse[itm] or all((depitm['gov_idx'] in tokenIndices) for depitm in depParse[itm]):
             frontier.remove(itm)
-    
+
     if not frontier: return None    # TODO: temporary?
     assert len(frontier)==1,(frontier,tokenIndices,depParse[tokenIndices[0]],depParse[tokenIndices[1]])
     return next(iter(frontier))
-    
+
 
 def new_concept(concept, amr, alignment=None, alignedToken=None):
     # new variable
     x = len(amr.node_to_concepts)
-    
+
     amr.node_to_concepts[str(x)] = concept
-    
+
     if alignedToken is not None:
         alignment.link(x, alignedToken)
-    
+
     return x    # variable, as an integer
 
 
