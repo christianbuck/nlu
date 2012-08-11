@@ -58,7 +58,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             # (could be a multiword term, like Trade Representative)
             if not (x or x==0): # need a new variable
                 x = new_concept(pipeline.token2concept(depParse[h][0]['dep']), amr, alignment, h)
-                triples.add((str(x), '-DUMMY', ''))
+                triples.add((str(x), '-DUMMY', '')) # ensure the concept participates in some triple so it is printed
         else:
             if not (x or x==0): # need a new variable
                 ne_class = fine.lower().replace('other','') or coarse.lower()

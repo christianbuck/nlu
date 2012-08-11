@@ -33,6 +33,8 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             or amr.get_concept(y).endswith('-FALLBACK'), (y,ww[alignment[int(y):]],x,ww[alignment[int(x):]])
         replacements[y] = x
         triples.remove(coref_trip)
+    for v0 in replacements:
+        del amr.node_to_concepts[v0]
     
     newtriples = []
     for a, r, (b,) in triples:
@@ -49,5 +51,33 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     for k,v in amr.node_to_concepts.items():
         if v.endswith('-FALLBACK'):
             amr.node_to_concepts[k] = v.replace('-FALLBACK', '')
+    
+    
+    # choose user-friendly variable names
+    # assumes current variable names are all integer strings
+    old2newvars = {}
+    newconcepts = {}
+    for v,c in amr.node_to_concepts.items():
+        v2 = c[0] if c[0].isalpha() else v
+        if v2 in newconcepts:    # append numerical suffix if necessary to disambiguate
+            assert v2.isalpha()
+            v2 += str(sum(1 for k in newconcepts.keys() if k[0]==v2))
+        newconcepts[v2] = c
+        old2newvars[v] = v2
+    amr = Amr.from_triples([(old2newvars.get(x,x), r, (old2newvars.get(y,y),)) for x,r,(y,) in amr.triples(instances=False)], newconcepts)
+    
+    
+    # detect orphans (variables with no triples)
+    orphans = {v: True for v in newconcepts}
+    for x,r,(y,) in amr.triples(instances=False):
+        if r=='-DUMMY': continue
+        orphans[x] = False
+        if y in orphans:
+            orphans[y] = False
+    orphans = [v for v in orphans if orphans[v]]
+    print(len(orphans),'orphans',orphans, file=sys.stderr)
+    
+    # ensure a node has a :-DUMMY annotation iff it is an orphan
+    amr = Amr.from_triples([(x,r,(y,)) for x,r,(y,) in amr.triples(instances=False) if r!='-DUMMY']+[(o,'-DUMMY','') for o in orphans], newconcepts)
     
     return depParse, amr, alignment, completed
