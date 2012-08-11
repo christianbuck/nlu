@@ -696,7 +696,6 @@ class Dag(defaultdict):
         node_map = self._get_canonical_nodes(prefix)
         for k,v in external_dict.items():
                 node_map[k] = v
-
         return self.apply_node_map(node_map)                        
         #new.roots = [node_map[x] for x in self.roots]
         #new.external_nodes = set([node_map[x] for x in self.external_nodes])
