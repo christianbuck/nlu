@@ -37,8 +37,10 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
 
         if t.wrapper != None:
             alignment.unlink(mc, h)
-            wc = new_concept(pipeline.token2concept(t.wrapper), amr, alignment, h)
+            wc = new_concept(pipeline.token2concept(t.wrapper)+'-'+t.type, amr, alignment, h)
             new_triples.add((str(wc), 'op1', str(mc)))
+        else:
+            amr.node_to_concepts[str(mc)] += '-'+t.type
 
         if 'weekday' in t.date_entity:
             wd = int(t.date_entity['weekday'])
@@ -48,10 +50,17 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
 
         print ('####', t.date_entity)
         for k, v in t.date_entity.iteritems():
-            x = new_concept(pipeline.token2concept(str(v)), amr)
-            new_triples.add((str(mc), k, str(x)))
+            if k=='weekday': continue   # handled above
+            if isinstance(v,basestring):
+                v = pipeline.token2concept(str(v))
+                x = new_concept(v, amr)
+                x = str(x)
+            else:   # leave literal numeric values alone
+                print(amr.triples(instances=False))
+                x = v
+            new_triples.add((str(mc), k, x))
 
-        for i in range(start, end +1 ): # for now mark everything as completed
+        for i in range(start, end+1): # for now mark everything as completed
             completed[0][i] = True
         for i,j in completed[1]:
             if i >= start and i <= end and j >= start and j <= end:
@@ -90,7 +99,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     #        if k!=h:
     #            for link in parent_edges(depParse[k]):
     #                completed[1][link] = True  # we don't need to attach non-head parts of names anywhere else
-
+    print(list(new_triples))
     amr = Amr.from_triples(amr.triples(instances=False)+list(new_triples), amr.node_to_concepts)
 
     return depParse, amr, alignment, completed
@@ -98,28 +107,25 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
 #### Resources ####
 # Todo: externalize
 
-# XXXX-10-31
+
 re_date = [
-    re.compile(r'\w{4}-\w{2}-(?P<day>\d\d)'),
-    re.compile(r'\w{4}-(?P<month>\w{2})\W'),
-    re.compile(r'\w{4}-(?P<month>\w{2})$'),
+    re.compile(r'\w{4}-\w{2}-(?P<day>\d\d)'),   # XXXX-10-31
+    re.compile(r'\w{4}-(?P<month>\w{2})\W'),    
+    re.compile(r'\w{4}-(?P<month>\w{2})$'),     # XXXX-10
     re.compile(r'^(?P<year>\d{4})'),
     re.compile(r'\w{4}-W\w{2}-(?P<weekday>\d)'),
-    re.compile(r'\w{4}-Q(?P<quarter>\d)')
+    re.compile(r'\w{4}-Q(?P<quarter>\d)'),
+    re.compile(r'\w{4}-(?P<season>SP|SU|FA|WI)')
 ]
 
-# TODO: seasons ("next spring")
-
-weekdays = ['Monday','Tuesday','Wednesday',
-            'Thursday','Friday','Saturday',
-            'Sunday']
+weekdays = [None,'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
 
 timex3_type_to_role = {
     "DATE" : "date-entity"
 }
 
 # P-1Y, P1Y, P100Y
-re_offset = re.compile(r'^P(?P<count>-?\d+)(?P<unit>[HDWMY]+)$')
+re_offset = re.compile(r'^P(?P<quant>-?\d+)(?P<unit>[HDWMY]+)$')
 
 timex3_units = {
     'time': {
@@ -148,8 +154,13 @@ class Timex3Entity(object):
 
     def __init__(self, timex, text = None):
         #print timex.attrib
+        self.text = timex.text
         self.timex = dict(timex.attrib)
         self.type = self.timex['type']
+        assert self.type in Timex3Entity.valid_types
+        if self.type=='DURATION' and (self.text.endswith(' old') or self.text.endwith('-old')):
+            self.type = 'AGE'
+        
         self.date_entity = {}
         self.main_concept = 'temporal-quantity'
         self.wrapper = None
@@ -168,11 +179,23 @@ class Timex3Entity(object):
             if v == "PRESENT_REF":
                 self.main_concept = 'now'
                 return
-            for regexp in re_date:
+            for regexp in ([re_offset] if self.type in ['DURATION','AGE'] else re_date):
                 m = regexp.search(v)
                 if m == None:
                     continue
-                self.date_entity.update(m.groupdict())
+                matchexprs = m.groupdict()
+                if 'unit' in matchexprs:
+                    matchexprs['unit'] = timex3_units['time' if 'T' in v else 'day'][v[-1]]
+                if 'quant' in matchexprs:
+                    try:
+                        matchexprs['quant'] = int(matchexprs['quant'])
+                    except ValueError:
+                        try:
+                            matchexprs['quant'] = float(matchexprs['quant'])
+                        except ValueError:
+                            pass
+                self.date_entity.update(matchexprs)
+            
 
         if 'alt_value' in self.timex:
             v = self.timex['alt_value'].split()
@@ -213,7 +236,13 @@ class Timex3Entity(object):
             m = regexp.search(v)
             if m == None:
                 continue
-            self.date_entity.update(m.groupdict())
+            matchexprs = m.groupdict()
+            if 'time' in matchexprs:
+                matchexprs['time'] = '"'+matchexprs['time']+'"'
+            for u in ['day','month','year','quarter']:
+                if u in matchexprs:
+                    matchexprs[u] = int(matchexprs[u])
+            self.date_entity.update(matchexprs)
 
     def is_ref(self):
         '''

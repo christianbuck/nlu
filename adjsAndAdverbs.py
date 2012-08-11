@@ -40,6 +40,9 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                     completed[0][i] = True
                 if itm['rel'] in ['num', 'number']:   # attach as :quant
                     newtriple = (str(x), 'quant', str(y))   # TODO: for plain values, don't create a variable
+                elif 'AGE' in amr.get_concept(str(y)).split('-'):
+                    newtriple = (str(x), 'age', str(y))
+                    amr.node_to_concepts[str(y)] = amr.node_to_concepts[str(y)].replace('-AGE','')
                 else:   # attach with :mod relation
                     newtriple = (str(x), 'mod', str(y))
                 
