@@ -5,7 +5,16 @@
       1, 
       "Big Board", 
       "ORGANIZATION", 
-      "CORPORATION"
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Big Board</ENAMEX>"
+    ], 
+    [
+      4, 
+      5, 
+      "154.2 million", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">154.2 million</NUMEX>"
     ]
   ], 
   "coref_chains": [], 
@@ -84,6 +93,57 @@
   "sentence_nr": 14, 
   "stanford_coref": [], 
   "stanford_dep": [
+    {
+      "dep": "Big", 
+      "dep_idx": 0, 
+      "gov": "Board", 
+      "gov_idx": 1, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Board", 
+      "dep_idx": 1, 
+      "gov": "volume", 
+      "gov_idx": 2, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "volume", 
+      "dep_idx": 2, 
+      "gov": "totaled", 
+      "gov_idx": 3, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "totaled", 
+      "dep_idx": 3, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "154.2", 
+      "dep_idx": 4, 
+      "gov": "million", 
+      "gov_idx": 5, 
+      "rel": "number"
+    }, 
+    {
+      "dep": "million", 
+      "dep_idx": 5, 
+      "gov": "shares", 
+      "gov_idx": 6, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "shares", 
+      "dep_idx": 6, 
+      "gov": "totaled", 
+      "gov_idx": 3, 
+      "rel": "dobj"
+    }
+  ], 
+  "stanford_dep_basic": [
     {
       "dep": "Big", 
       "dep_idx": 0, 

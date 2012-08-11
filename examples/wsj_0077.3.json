@@ -5,7 +5,24 @@
       8, 
       "New York Stock Exchange", 
       "ORGANIZATION", 
-      "CORPORATION"
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">New York Stock Exchange</ENAMEX>"
+    ], 
+    [
+      16, 
+      16, 
+      "847", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">847</NUMEX>"
+    ], 
+    [
+      18, 
+      18, 
+      "644", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">644</NUMEX>"
     ]
   ], 
   "coref_chains": [], 
@@ -173,6 +190,134 @@
       "gov": "ahead", 
       "gov_idx": 11, 
       "rel": "prep_of"
+    }, 
+    {
+      "dep": "847", 
+      "dep_idx": 16, 
+      "gov": "644", 
+      "gov_idx": 18, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 17, 
+      "gov": "644", 
+      "gov_idx": 18, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "644", 
+      "dep_idx": 18, 
+      "gov": "ahead", 
+      "gov_idx": 11, 
+      "rel": "advmod"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "But", 
+      "dep_idx": 0, 
+      "gov": "ahead", 
+      "gov_idx": 11, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "advancing", 
+      "dep_idx": 1, 
+      "gov": "issues", 
+      "gov_idx": 2, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "issues", 
+      "dep_idx": 2, 
+      "gov": "ahead", 
+      "gov_idx": 11, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "on", 
+      "dep_idx": 3, 
+      "gov": "issues", 
+      "gov_idx": 2, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 4, 
+      "gov": "Exchange", 
+      "gov_idx": 8, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "New", 
+      "dep_idx": 5, 
+      "gov": "York", 
+      "gov_idx": 6, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "York", 
+      "dep_idx": 6, 
+      "gov": "Exchange", 
+      "gov_idx": 8, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Stock", 
+      "dep_idx": 7, 
+      "gov": "Exchange", 
+      "gov_idx": 8, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Exchange", 
+      "dep_idx": 8, 
+      "gov": "on", 
+      "gov_idx": 3, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 9, 
+      "gov": "ahead", 
+      "gov_idx": 11, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "tidily", 
+      "dep_idx": 10, 
+      "gov": "ahead", 
+      "gov_idx": 11, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "ahead", 
+      "dep_idx": 11, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 12, 
+      "gov": "ahead", 
+      "gov_idx": 11, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "declining", 
+      "dep_idx": 13, 
+      "gov": "stocks", 
+      "gov_idx": 14, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "stocks", 
+      "dep_idx": 14, 
+      "gov": "of", 
+      "gov_idx": 12, 
+      "rel": "pobj"
     }, 
     {
       "dep": "847", 

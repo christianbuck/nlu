@@ -96,15 +96,16 @@ def ast_to_dag(ast):
                             else: 
                                 new_c = c[0]
                             childnode.add(new_c)
+                            x = dag[new_c]
                             rec_step(c)
                         else:
                             if type(c) is str and c.startswith("@"):
                                 c = c.replace("@","")
                                 dag.external_nodes.append(c)
+                            x = dag[c]
                             childnode.add(c)
                     newchild = tuple(childnode)        
                     dag[node].append(role, newchild)
-                    x = dag[newchild]
 
                 else: # Just assume this node is some special symbol
                     if type(child) is str and child.startswith("@"):
@@ -112,9 +113,11 @@ def ast_to_dag(ast):
                         tuple_child = (child,)
                         dag.external_nodes.append(child)
                         dag[node].append(role, tuple_child)
+                        x = dag[child]
                     else:
                         dag[node].append(role, (child,))
-                    x = dag[child]
+                        x = dag[child]
+
 
     root = ast[0]
     if type(root) == tuple and len(root) == 3: 
@@ -237,9 +240,7 @@ class Dag(defaultdict):
 
         >>> y = Dag.from_triples([('3', u'ARG1', ('5',)), ('2', u'ARG1', ('4',)), ('2', 'location', ('0',)), ('0', 'name', ('1',)), ('1', 'op4', (u'"Exchange"',)), ('1', 'op1', (u'"New"',)), ('1', 'op2', (u'"York"',)), ('1', 'op3', (u'"Stock"',))])               
         >>> x = Dag.from_triples(y.triples() + [('4', 'mod', '2')]) #doctest:+ELLIPSIS
-        Traceback (most recent call last):
-                ...
-        ValueError: (4, mod, ('2',)) would produce a cycle with (2, ARG1, ('4',))
+
         """
         dag = Dag() # Make new DAG
 
@@ -256,11 +257,14 @@ class Dag(defaultdict):
                 for c in child: 
                     if isinstance(c, basestring):
                         new_c = c.replace("@","")
+                        new_child.append(new_c)
+                        nothing = dag[new_c]
                         if c.startswith("@"):
                             dag.external_nodes.append(new_c)
-                    new_child = list(new_child)
-                    new_child.append(new_c)
-                    new_child = tuple(new_child)
+                    else:
+                        nothing = dag[c] 
+                        new_child.append(c)
+                new_child = tuple(new_child)
             else: # Allow triples to have single string children for convenience. 
                   # and downward compatibility.
                 if isinstance(child, basestring):
@@ -268,8 +272,10 @@ class Dag(defaultdict):
                     if child.startswith("@"):
                         dag.external_nodes.append(tmpchild)
                     new_child = (tmpchild,)
+                    nothing = dag[tmpchild]
                 else:
                     new_child = (child,)
+                    nothing = dag[child]
             
             dag._add_triple(new_par, relation, new_child)
         
@@ -293,7 +299,8 @@ class Dag(defaultdict):
         the first time a node is touched. 
         """
         tabu = set()
-       
+        tabu_edge = set()
+
         def rec_step(node, depth):
 
             firsthit = not node in tabu
@@ -304,7 +311,7 @@ class Dag(defaultdict):
             else:                
                 node = (node,)
             
-            allnodes = []    
+            allnodes = []
             for n in node: 
                 tabu.add(n)
                 leaf = False if self[n] else True
@@ -314,13 +321,15 @@ class Dag(defaultdict):
                     extracted = extractor(n, firsthit, leaf)
                 child_map = ListMap()
                 for rel, child in self[n].items():
-                    if child in tabu:
-                        #child_map.append(rel, extractor(child, False, leaf))
-                        pass
-                    else:
-                        child_map.append(rel, rec_step(child, depth + 1))
+                    if not (n, rel, child) in tabu_edge:
+                        if child in tabu:
+                            child_map.append(rel, extractor(child, False, leaf))
+                            #pass
+                        else:
+                            tabu_edge.add((n, rel, child))
+                            child_map.append(rel, rec_step(child, depth + 1))
 
-                if self[n] and firsthit: 
+                if child_map: 
                     combined = combiner(extracted, child_map, depth)
                     allnodes.append(combined)
                 else: 
@@ -649,7 +658,6 @@ class Dag(defaultdict):
         except ValueError:
             raise ValueError, "(%s, %s, %s) is not an AMR edge." % (parent, relation, child) 
 
-
     ###Specific methods for hyperedge replacement###
     def apply_node_map(self, node_map):
         """
@@ -773,11 +781,11 @@ class Dag(defaultdict):
         """
         Remove all edges in a collection and connect their boundary node with a single hyperedge.
 
-        >>> d1 =  Dag.from_string("(A :foo (B :blubb (D :fee E) :back C) :bar C)")
+        >>> d1 = Dag.from_string("(A :foo (B :blubb (D :fee E) :back C) :bar C)")
         >>> d2 = Dag.from_string("(A :foo (B :blubb D))")
         >>> d1.find_external_nodes(d2)
         ['B', 'D']
-        >>> d_gold = Dag.from_string("(A :bar C :new (B :back C), (D :fee E))")
+        >>> d_gold = Dag.from_string("(A :new (B :back C), (D :fee E) :bar C)")
         >>> d1.collapse_fragment(d2, "new") == d_gold
         True
         """

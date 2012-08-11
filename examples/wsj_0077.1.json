@@ -126,6 +126,64 @@
       "rel": "advmod"
     }
   ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Bond", 
+      "dep_idx": 0, 
+      "gov": "prices", 
+      "gov_idx": 1, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "prices", 
+      "dep_idx": 1, 
+      "gov": "gained", 
+      "gov_idx": 6, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 2, 
+      "gov": "prices", 
+      "gov_idx": 1, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 3, 
+      "gov": "dollar", 
+      "gov_idx": 4, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "dollar", 
+      "dep_idx": 4, 
+      "gov": "prices", 
+      "gov_idx": 1, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "both", 
+      "dep_idx": 5, 
+      "gov": "gained", 
+      "gov_idx": 6, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "gained", 
+      "dep_idx": 6, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "modestly", 
+      "dep_idx": 7, 
+      "gov": "gained", 
+      "gov_idx": 6, 
+      "rel": "advmod"
+    }
+  ], 
   "text": "Bond prices and the dollar both gained modestly .", 
   "timex": [], 
   "treebank_sentence": "Bond prices and the dollar both gained modestly .", 

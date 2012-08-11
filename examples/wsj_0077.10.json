@@ -5,7 +5,8 @@
       8, 
       "managers", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">managers</ENAMEX>"
     ]
   ], 
   "coref_chains": [], 
@@ -317,6 +318,127 @@
       "gov": "contract", 
       "gov_idx": 21, 
       "rel": "xsubj"
+    }, 
+    {
+      "dep": "continues", 
+      "dep_idx": 18, 
+      "gov": "indicated", 
+      "gov_idx": 11, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 20, 
+      "gov": "contract", 
+      "gov_idx": 21, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "contract", 
+      "dep_idx": 21, 
+      "gov": "continues", 
+      "gov_idx": 18, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "modestly", 
+      "dep_idx": 22, 
+      "gov": "contract", 
+      "gov_idx": 21, 
+      "rel": "advmod"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "As", 
+      "dep_idx": 0, 
+      "gov": "expected", 
+      "gov_idx": 2, 
+      "rel": "mark"
+    }, 
+    {
+      "dep": "expected", 
+      "dep_idx": 2, 
+      "gov": "indicated", 
+      "gov_idx": 11, 
+      "rel": "advcl"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 5, 
+      "gov": "managers", 
+      "gov_idx": 8, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "national", 
+      "dep_idx": 6, 
+      "gov": "managers", 
+      "gov_idx": 8, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "purchasing", 
+      "dep_idx": 7, 
+      "gov": "managers", 
+      "gov_idx": 8, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "managers", 
+      "dep_idx": 8, 
+      "gov": "report", 
+      "gov_idx": 10, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "report", 
+      "dep_idx": 10, 
+      "gov": "indicated", 
+      "gov_idx": 11, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "indicated", 
+      "dep_idx": 11, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 13, 
+      "gov": "nation", 
+      "gov_idx": 14, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "nation", 
+      "dep_idx": 14, 
+      "gov": "sector", 
+      "gov_idx": 17, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "'s", 
+      "dep_idx": 15, 
+      "gov": "nation", 
+      "gov_idx": 14, 
+      "rel": "possessive"
+    }, 
+    {
+      "dep": "manufacturing", 
+      "dep_idx": 16, 
+      "gov": "sector", 
+      "gov_idx": 17, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "sector", 
+      "dep_idx": 17, 
+      "gov": "continues", 
+      "gov_idx": 18, 
+      "rel": "nsubj"
     }, 
     {
       "dep": "continues", 

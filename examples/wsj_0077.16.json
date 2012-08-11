@@ -5,7 +5,32 @@
       1, 
       "Treasury", 
       "ORGANIZATION", 
-      "GOVERNMENT"
+      "GOVERNMENT", 
+      "<ENAMEX TYPE=\"ORGANIZATION:GOVERNMENT\">Treasury</ENAMEX>"
+    ], 
+    [
+      4, 
+      6, 
+      "30 - year", 
+      "DATE", 
+      "DURATION", 
+      "<TIMEX TYPE=\"DATE:DURATION\">30 - year</TIMEX>"
+    ], 
+    [
+      17, 
+      18, 
+      "$ 2.50", 
+      "MONEY", 
+      "", 
+      "<NUMEX TYPE=\"MONEY\">$ 2.50</NUMEX>"
+    ], 
+    [
+      22, 
+      23, 
+      "$ 1,000", 
+      "MONEY", 
+      "", 
+      "<NUMEX TYPE=\"MONEY\">$ 1,000</NUMEX>"
     ]
   ], 
   "coref_chains": [], 
@@ -299,6 +324,176 @@
       "gov": "$", 
       "gov_idx": 22, 
       "rel": "prep_of"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "Treasury", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Treasury", 
+      "dep_idx": 1, 
+      "gov": "bond", 
+      "gov_idx": 7, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "'s", 
+      "dep_idx": 2, 
+      "gov": "Treasury", 
+      "gov_idx": 1, 
+      "rel": "possessive"
+    }, 
+    {
+      "dep": "benchmark", 
+      "dep_idx": 3, 
+      "gov": "bond", 
+      "gov_idx": 7, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "30", 
+      "dep_idx": 4, 
+      "gov": "year", 
+      "gov_idx": 6, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "year", 
+      "dep_idx": 6, 
+      "gov": "bond", 
+      "gov_idx": 7, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "bond", 
+      "dep_idx": 7, 
+      "gov": "gained", 
+      "gov_idx": 8, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "gained", 
+      "dep_idx": 8, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "about", 
+      "dep_idx": 9, 
+      "gov": "quarter", 
+      "gov_idx": 11, 
+      "rel": "quantmod"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 10, 
+      "gov": "quarter", 
+      "gov_idx": 11, 
+      "rel": "quantmod"
+    }, 
+    {
+      "dep": "quarter", 
+      "dep_idx": 11, 
+      "gov": "gained", 
+      "gov_idx": 8, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 12, 
+      "gov": "quarter", 
+      "gov_idx": 11, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 13, 
+      "gov": "point", 
+      "gov_idx": 14, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "point", 
+      "dep_idx": 14, 
+      "gov": "of", 
+      "gov_idx": 12, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "or", 
+      "dep_idx": 16, 
+      "gov": "quarter", 
+      "gov_idx": 11, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "$", 
+      "dep_idx": 17, 
+      "gov": "quarter", 
+      "gov_idx": 11, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "2.50", 
+      "dep_idx": 18, 
+      "gov": "$", 
+      "gov_idx": 17, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "for", 
+      "dep_idx": 20, 
+      "gov": "$", 
+      "gov_idx": 17, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "each", 
+      "dep_idx": 21, 
+      "gov": "$", 
+      "gov_idx": 22, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "$", 
+      "dep_idx": 22, 
+      "gov": "for", 
+      "gov_idx": 20, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "1,000", 
+      "dep_idx": 23, 
+      "gov": "$", 
+      "gov_idx": 22, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 25, 
+      "gov": "$", 
+      "gov_idx": 22, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "face", 
+      "dep_idx": 26, 
+      "gov": "amount", 
+      "gov_idx": 27, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "amount", 
+      "dep_idx": 27, 
+      "gov": "of", 
+      "gov_idx": 25, 
+      "rel": "pobj"
     }
   ], 
   "text": "The Treasury 's benchmark 30 - year bond gained about a quarter of a point , or $ 2.50 for each $ 1,000 of face amount .", 

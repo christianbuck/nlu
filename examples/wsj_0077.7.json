@@ -1,11 +1,28 @@
 {
   "bbn_ne": [
     [
+      6, 
+      6, 
+      "41", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">41</NUMEX>"
+    ], 
+    [
+      8, 
+      8, 
+      "Tuesday", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">Tuesday</TIMEX>"
+    ], 
+    [
       10, 
       10, 
       "speculators", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">speculators</ENAMEX>"
     ]
   ], 
   "coref_chains": [], 
@@ -379,6 +396,141 @@
       "gov": "shares", 
       "gov_idx": 15, 
       "rel": "prep_of"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "average", 
+      "gov_idx": 2, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "industrial", 
+      "dep_idx": 1, 
+      "gov": "average", 
+      "gov_idx": 2, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "average", 
+      "dep_idx": 2, 
+      "gov": "jumped", 
+      "gov_idx": 3, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "jumped", 
+      "dep_idx": 3, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "more", 
+      "dep_idx": 4, 
+      "gov": "than", 
+      "gov_idx": 5, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "than", 
+      "dep_idx": 5, 
+      "gov": "41", 
+      "gov_idx": 6, 
+      "rel": "quantmod"
+    }, 
+    {
+      "dep": "41", 
+      "dep_idx": 6, 
+      "gov": "points", 
+      "gov_idx": 7, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "points", 
+      "dep_idx": 7, 
+      "gov": "jumped", 
+      "gov_idx": 3, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "Tuesday", 
+      "dep_idx": 8, 
+      "gov": "jumped", 
+      "gov_idx": 3, 
+      "rel": "tmod"
+    }, 
+    {
+      "dep": "as", 
+      "dep_idx": 9, 
+      "gov": "rushed", 
+      "gov_idx": 11, 
+      "rel": "mark"
+    }, 
+    {
+      "dep": "speculators", 
+      "dep_idx": 10, 
+      "gov": "rushed", 
+      "gov_idx": 11, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "rushed", 
+      "dep_idx": 11, 
+      "gov": "jumped", 
+      "gov_idx": 3, 
+      "rel": "advcl"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 13, 
+      "gov": "buy", 
+      "gov_idx": 14, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "buy", 
+      "dep_idx": 14, 
+      "gov": "rushed", 
+      "gov_idx": 11, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "shares", 
+      "dep_idx": 15, 
+      "gov": "buy", 
+      "gov_idx": 14, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 16, 
+      "gov": "shares", 
+      "gov_idx": 15, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "potential", 
+      "dep_idx": 17, 
+      "gov": "targets", 
+      "gov_idx": 19, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "takeover", 
+      "dep_idx": 18, 
+      "gov": "targets", 
+      "gov_idx": 19, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "targets", 
+      "dep_idx": 19, 
+      "gov": "of", 
+      "gov_idx": 16, 
+      "rel": "pobj"
     }
   ], 
   "text": "The industrial average jumped more than 41 points Tuesday as speculators rushed to buy shares of potential takeover targets .", 

@@ -68,6 +68,36 @@
       "rel": "advmod"
     }
   ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Bond", 
+      "dep_idx": 0, 
+      "gov": "prices", 
+      "gov_idx": 1, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "prices", 
+      "dep_idx": 1, 
+      "gov": "were", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "up", 
+      "dep_idx": 3, 
+      "gov": "were", 
+      "gov_idx": 2, 
+      "rel": "advmod"
+    }
+  ], 
   "text": "Bond prices were up .", 
   "timex": [], 
   "treebank_sentence": "Bond prices were up .", 

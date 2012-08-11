@@ -1,11 +1,20 @@
 {
   "bbn_ne": [
     [
+      6, 
+      6, 
+      "year", 
+      "DATE", 
+      "DURATION", 
+      "<TIMEX TYPE=\"DATE:DURATION\">year</TIMEX>"
+    ], 
+    [
       11, 
       11, 
       "managers", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">managers</ENAMEX>"
     ]
   ], 
   "coref_chains": [
@@ -454,6 +463,225 @@
       "gov": "returns", 
       "gov_idx": 33, 
       "rel": "prep_for"
+    }, 
+    {
+      "dep": "have", 
+      "dep_idx": 29, 
+      "gov": "returns", 
+      "gov_idx": 33, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "been", 
+      "dep_idx": 30, 
+      "gov": "returns", 
+      "gov_idx": 33, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "exceptionally", 
+      "dep_idx": 31, 
+      "gov": "good", 
+      "gov_idx": 32, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "good", 
+      "dep_idx": 32, 
+      "gov": "returns", 
+      "gov_idx": 33, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "returns", 
+      "dep_idx": 33, 
+      "gov": "losing", 
+      "gov_idx": 24, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 34, 
+      "gov": "returns", 
+      "gov_idx": 33, 
+      "rel": "dep"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "But", 
+      "dep_idx": 0, 
+      "gov": "eager", 
+      "gov_idx": 13, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "with", 
+      "dep_idx": 1, 
+      "gov": "eager", 
+      "gov_idx": 13, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 2, 
+      "gov": "end", 
+      "gov_idx": 3, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "end", 
+      "dep_idx": 3, 
+      "gov": "with", 
+      "gov_idx": 1, 
+      "rel": "pcomp"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 4, 
+      "gov": "end", 
+      "gov_idx": 3, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 5, 
+      "gov": "year", 
+      "gov_idx": 6, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "year", 
+      "dep_idx": 6, 
+      "gov": "of", 
+      "gov_idx": 4, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 7, 
+      "gov": "end", 
+      "gov_idx": 3, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "sight", 
+      "dep_idx": 8, 
+      "gov": "in", 
+      "gov_idx": 7, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "money", 
+      "dep_idx": 10, 
+      "gov": "managers", 
+      "gov_idx": 11, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "managers", 
+      "dep_idx": 11, 
+      "gov": "eager", 
+      "gov_idx": 13, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "are", 
+      "dep_idx": 12, 
+      "gov": "eager", 
+      "gov_idx": 13, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "eager", 
+      "dep_idx": 13, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 15, 
+      "gov": "take", 
+      "gov_idx": 16, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "take", 
+      "dep_idx": 16, 
+      "gov": "eager", 
+      "gov_idx": 13, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "profits", 
+      "dep_idx": 17, 
+      "gov": "take", 
+      "gov_idx": 16, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 18, 
+      "gov": "take", 
+      "gov_idx": 16, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "cut", 
+      "dep_idx": 19, 
+      "gov": "take", 
+      "gov_idx": 16, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "their", 
+      "dep_idx": 20, 
+      "gov": "risks", 
+      "gov_idx": 21, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "risks", 
+      "dep_idx": 21, 
+      "gov": "cut", 
+      "gov_idx": 19, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 22, 
+      "gov": "risks", 
+      "gov_idx": 21, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "losing", 
+      "dep_idx": 24, 
+      "gov": "of", 
+      "gov_idx": 22, 
+      "rel": "pcomp"
+    }, 
+    {
+      "dep": "what", 
+      "dep_idx": 25, 
+      "gov": "returns", 
+      "gov_idx": 33, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "for", 
+      "dep_idx": 26, 
+      "gov": "returns", 
+      "gov_idx": 33, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "many", 
+      "dep_idx": 27, 
+      "gov": "for", 
+      "gov_idx": 26, 
+      "rel": "pobj"
     }, 
     {
       "dep": "have", 

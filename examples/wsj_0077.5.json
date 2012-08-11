@@ -5,21 +5,24 @@
       5, 
       "Japanese", 
       "NORP", 
-      "NATIONALITY"
+      "NATIONALITY", 
+      "<ENAMEX TYPE=\"NORP:NATIONALITY\">Japanese</ENAMEX>"
     ], 
     [
       6, 
       6, 
       "investors", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">investors</ENAMEX>"
     ], 
     [
       9, 
       9, 
       "U.S.", 
       "GPE", 
-      "COUNTRY"
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">U.S.</ENAMEX>"
     ]
   ], 
   "coref_chains": [], 
@@ -154,6 +157,85 @@
       "gov": "demand", 
       "gov_idx": 1, 
       "rel": "prep_from"
+    }, 
+    {
+      "dep": "boosted", 
+      "dep_idx": 7, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 8, 
+      "gov": "currency", 
+      "gov_idx": 10, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "U.S.", 
+      "dep_idx": 9, 
+      "gov": "currency", 
+      "gov_idx": 10, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "currency", 
+      "dep_idx": 10, 
+      "gov": "boosted", 
+      "gov_idx": 7, 
+      "rel": "dobj"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Continuing", 
+      "dep_idx": 0, 
+      "gov": "demand", 
+      "gov_idx": 1, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "demand", 
+      "dep_idx": 1, 
+      "gov": "boosted", 
+      "gov_idx": 7, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "for", 
+      "dep_idx": 2, 
+      "gov": "demand", 
+      "gov_idx": 1, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "dollars", 
+      "dep_idx": 3, 
+      "gov": "for", 
+      "gov_idx": 2, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "from", 
+      "dep_idx": 4, 
+      "gov": "demand", 
+      "gov_idx": 1, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Japanese", 
+      "dep_idx": 5, 
+      "gov": "investors", 
+      "gov_idx": 6, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "investors", 
+      "dep_idx": 6, 
+      "gov": "from", 
+      "gov_idx": 4, 
+      "rel": "pobj"
     }, 
     {
       "dep": "boosted", 

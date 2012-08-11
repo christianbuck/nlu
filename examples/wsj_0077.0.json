@@ -5,7 +5,24 @@
       0, 
       "Investors", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">Investors</ENAMEX>"
+    ], 
+    [
+      4, 
+      4, 
+      "Tuesday", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">Tuesday</TIMEX>"
+    ], 
+    [
+      13, 
+      13, 
+      "yesterday", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">yesterday</TIMEX>"
     ]
   ], 
   "coref_chains": [], 
@@ -351,6 +368,127 @@
       "gov": "took", 
       "gov_idx": 1, 
       "rel": "xcomp"
+    }, 
+    {
+      "dep": "stocks", 
+      "dep_idx": 17, 
+      "gov": "leaving", 
+      "gov_idx": 16, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "up", 
+      "dep_idx": 19, 
+      "gov": "fractionally", 
+      "gov_idx": 20, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "fractionally", 
+      "dep_idx": 20, 
+      "gov": "leaving", 
+      "gov_idx": 16, 
+      "rel": "dep"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Investors", 
+      "dep_idx": 0, 
+      "gov": "took", 
+      "gov_idx": 1, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "took", 
+      "dep_idx": 1, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "advantage", 
+      "dep_idx": 2, 
+      "gov": "took", 
+      "gov_idx": 1, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 3, 
+      "gov": "took", 
+      "gov_idx": 1, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Tuesday", 
+      "dep_idx": 4, 
+      "gov": "rally", 
+      "gov_idx": 7, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "'s", 
+      "dep_idx": 5, 
+      "gov": "Tuesday", 
+      "gov_idx": 4, 
+      "rel": "possessive"
+    }, 
+    {
+      "dep": "stock", 
+      "dep_idx": 6, 
+      "gov": "rally", 
+      "gov_idx": 7, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "rally", 
+      "dep_idx": 7, 
+      "gov": "of", 
+      "gov_idx": 3, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 9, 
+      "gov": "book", 
+      "gov_idx": 10, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "book", 
+      "dep_idx": 10, 
+      "gov": "took", 
+      "gov_idx": 1, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "some", 
+      "dep_idx": 11, 
+      "gov": "profits", 
+      "gov_idx": 12, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "profits", 
+      "dep_idx": 12, 
+      "gov": "book", 
+      "gov_idx": 10, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "yesterday", 
+      "dep_idx": 13, 
+      "gov": "took", 
+      "gov_idx": 1, 
+      "rel": "tmod"
+    }, 
+    {
+      "dep": "leaving", 
+      "dep_idx": 16, 
+      "gov": "took", 
+      "gov_idx": 1, 
+      "rel": "partmod"
     }, 
     {
       "dep": "stocks", 

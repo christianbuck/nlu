@@ -203,6 +203,134 @@
       "rel": "amod"
     }
   ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "Average", 
+      "gov_idx": 4, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Dow", 
+      "dep_idx": 1, 
+      "gov": "Jones", 
+      "gov_idx": 2, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Jones", 
+      "dep_idx": 2, 
+      "gov": "Average", 
+      "gov_idx": 4, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Industrial", 
+      "dep_idx": 3, 
+      "gov": "Average", 
+      "gov_idx": 4, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Average", 
+      "dep_idx": 4, 
+      "gov": "finished", 
+      "gov_idx": 5, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "finished", 
+      "dep_idx": 5, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "less", 
+      "dep_idx": 6, 
+      "gov": "higher", 
+      "gov_idx": 10, 
+      "rel": "npadvmod"
+    }, 
+    {
+      "dep": "than", 
+      "dep_idx": 7, 
+      "gov": "less", 
+      "gov_idx": 6, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 8, 
+      "gov": "point", 
+      "gov_idx": 9, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "point", 
+      "dep_idx": 9, 
+      "gov": "than", 
+      "gov_idx": 7, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "higher", 
+      "dep_idx": 10, 
+      "gov": "finished", 
+      "gov_idx": 5, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 12, 
+      "gov": "close", 
+      "gov_idx": 13, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "close", 
+      "dep_idx": 13, 
+      "gov": "finished", 
+      "gov_idx": 5, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "at", 
+      "dep_idx": 14, 
+      "gov": "close", 
+      "gov_idx": 13, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "2645.90", 
+      "dep_idx": 15, 
+      "gov": "at", 
+      "gov_idx": 14, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 16, 
+      "gov": "close", 
+      "gov_idx": 13, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "moderate", 
+      "dep_idx": 17, 
+      "gov": "in", 
+      "gov_idx": 16, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "trading", 
+      "dep_idx": 18, 
+      "gov": "moderate", 
+      "gov_idx": 17, 
+      "rel": "amod"
+    }
+  ], 
   "text": "The Dow Jones Industrial Average finished less than a point higher to close at 2645.90 in moderate trading .", 
   "timex": [], 
   "treebank_sentence": "The Dow Jones Industrial Average finished less than a point higher *PRO*-1 to close at 2645.90 in moderate trading .", 
