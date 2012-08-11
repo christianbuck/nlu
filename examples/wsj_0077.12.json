@@ -61,6 +61,36 @@
       "rel": "pobj"
     }
   ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "In", 
+      "dep_idx": 0, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "major", 
+      "dep_idx": 1, 
+      "gov": "activity", 
+      "gov_idx": 3, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "market", 
+      "dep_idx": 2, 
+      "gov": "activity", 
+      "gov_idx": 3, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "activity", 
+      "dep_idx": 3, 
+      "gov": "In", 
+      "gov_idx": 0, 
+      "rel": "pobj"
+    }
+  ], 
   "text": "In major market activity :", 
   "timex": [], 
   "treebank_sentence": "In major market activity :", 

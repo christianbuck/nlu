@@ -55,6 +55,29 @@
       "rel": "root"
     }
   ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "dollar", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "dollar", 
+      "dep_idx": 1, 
+      "gov": "rose", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "rose", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
   "text": "The dollar rose .", 
   "timex": [], 
   "treebank_sentence": "The dollar rose .", 

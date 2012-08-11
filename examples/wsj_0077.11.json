@@ -5,14 +5,16 @@
       2, 
       "Federal Reserve", 
       "ORGANIZATION", 
-      "GOVERNMENT"
+      "GOVERNMENT", 
+      "<ENAMEX TYPE=\"ORGANIZATION:GOVERNMENT\">Federal Reserve</ENAMEX>"
     ], 
     [
       4, 
       5, 
       "Beige Book", 
       "WORK_OF_ART", 
-      "BOOK"
+      "BOOK", 
+      "<ENAMEX TYPE=\"WORK_OF_ART:BOOK\">Beige Book</ENAMEX>"
     ]
   ], 
   "coref_chains": [], 
@@ -410,6 +412,190 @@
       "gov": "pattern", 
       "gov_idx": 24, 
       "rel": "prep_of"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "Reserve", 
+      "gov_idx": 2, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Federal", 
+      "dep_idx": 1, 
+      "gov": "Reserve", 
+      "gov_idx": 2, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Reserve", 
+      "dep_idx": 2, 
+      "gov": "Book", 
+      "gov_idx": 5, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "'s", 
+      "dep_idx": 3, 
+      "gov": "Reserve", 
+      "gov_idx": 2, 
+      "rel": "possessive"
+    }, 
+    {
+      "dep": "Beige", 
+      "dep_idx": 4, 
+      "gov": "Book", 
+      "gov_idx": 5, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Book", 
+      "dep_idx": 5, 
+      "gov": "indicated", 
+      "gov_idx": 16, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 7, 
+      "gov": "summary", 
+      "gov_idx": 8, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "summary", 
+      "dep_idx": 8, 
+      "gov": "Book", 
+      "gov_idx": 5, 
+      "rel": "appos"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 9, 
+      "gov": "summary", 
+      "gov_idx": 8, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "economic", 
+      "dep_idx": 10, 
+      "gov": "conditions", 
+      "gov_idx": 11, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "conditions", 
+      "dep_idx": 11, 
+      "gov": "of", 
+      "gov_idx": 9, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "across", 
+      "dep_idx": 12, 
+      "gov": "conditions", 
+      "gov_idx": 11, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 13, 
+      "gov": "country", 
+      "gov_idx": 14, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "country", 
+      "dep_idx": 14, 
+      "gov": "across", 
+      "gov_idx": 12, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "indicated", 
+      "dep_idx": 16, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 17, 
+      "gov": "remains", 
+      "gov_idx": 21, 
+      "rel": "complm"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 18, 
+      "gov": "economy", 
+      "gov_idx": 20, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "overall", 
+      "dep_idx": 19, 
+      "gov": "economy", 
+      "gov_idx": 20, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "economy", 
+      "dep_idx": 20, 
+      "gov": "remains", 
+      "gov_idx": 21, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "remains", 
+      "dep_idx": 21, 
+      "gov": "indicated", 
+      "gov_idx": 16, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 22, 
+      "gov": "remains", 
+      "gov_idx": 21, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 23, 
+      "gov": "pattern", 
+      "gov_idx": 24, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "pattern", 
+      "dep_idx": 24, 
+      "gov": "in", 
+      "gov_idx": 22, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 25, 
+      "gov": "pattern", 
+      "gov_idx": 24, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "sluggish", 
+      "dep_idx": 26, 
+      "gov": "growth", 
+      "gov_idx": 27, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "growth", 
+      "dep_idx": 27, 
+      "gov": "of", 
+      "gov_idx": 25, 
+      "rel": "pobj"
     }
   ], 
   "text": "The Federal Reserve 's Beige Book , a summary of economic conditions across the country , indicated that the overall economy remains in a pattern of sluggish growth .", 

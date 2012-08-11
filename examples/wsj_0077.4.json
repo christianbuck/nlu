@@ -5,7 +5,16 @@
       14, 
       "Treasury", 
       "ORGANIZATION", 
-      "GOVERNMENT"
+      "GOVERNMENT", 
+      "<ENAMEX TYPE=\"ORGANIZATION:GOVERNMENT\">Treasury</ENAMEX>"
+    ], 
+    [
+      17, 
+      17, 
+      "month", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">month</TIMEX>"
     ]
   ], 
   "coref_chains": [], 
@@ -265,6 +274,127 @@
       "gov": "supply", 
       "gov_idx": 12, 
       "rel": "prep_of"
+    }, 
+    {
+      "dep": "this", 
+      "dep_idx": 16, 
+      "gov": "month", 
+      "gov_idx": 17, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "month", 
+      "dep_idx": 17, 
+      "gov": "supply", 
+      "gov_idx": 12, 
+      "rel": "tmod"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Long", 
+      "dep_idx": 0, 
+      "gov": "term", 
+      "gov_idx": 2, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "term", 
+      "dep_idx": 2, 
+      "gov": "prices", 
+      "gov_idx": 4, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "bond", 
+      "dep_idx": 3, 
+      "gov": "prices", 
+      "gov_idx": 4, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "prices", 
+      "dep_idx": 4, 
+      "gov": "rose", 
+      "gov_idx": 5, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "rose", 
+      "dep_idx": 5, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "despite", 
+      "dep_idx": 6, 
+      "gov": "rose", 
+      "gov_idx": 5, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "prospects", 
+      "dep_idx": 7, 
+      "gov": "despite", 
+      "gov_idx": 6, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 8, 
+      "gov": "prospects", 
+      "gov_idx": 7, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 9, 
+      "gov": "supply", 
+      "gov_idx": 12, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "huge", 
+      "dep_idx": 10, 
+      "gov": "supply", 
+      "gov_idx": 12, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "new", 
+      "dep_idx": 11, 
+      "gov": "supply", 
+      "gov_idx": 12, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "supply", 
+      "dep_idx": 12, 
+      "gov": "of", 
+      "gov_idx": 8, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 13, 
+      "gov": "supply", 
+      "gov_idx": 12, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Treasury", 
+      "dep_idx": 14, 
+      "gov": "debt", 
+      "gov_idx": 15, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "debt", 
+      "dep_idx": 15, 
+      "gov": "of", 
+      "gov_idx": 13, 
+      "rel": "pobj"
     }, 
     {
       "dep": "this", 

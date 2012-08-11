@@ -5,28 +5,40 @@
       0, 
       "Analysts", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">Analysts</ENAMEX>"
     ], 
     [
       9, 
       9, 
       "investors", 
       "PER_DESC", 
-      ""
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">investors</ENAMEX>"
     ], 
     [
       18, 
       20, 
       "Georgia - Pacific", 
       "ORGANIZATION", 
-      "CORPORATION"
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Georgia - Pacific</ENAMEX>"
+    ], 
+    [
+      22, 
+      24, 
+      "$ 3.18 billion", 
+      "MONEY", 
+      "", 
+      "<NUMEX TYPE=\"MONEY\">$ 3.18 billion</NUMEX>"
     ], 
     [
       28, 
       30, 
       "Great Northern Nekoosa", 
       "ORGANIZATION", 
-      "CORPORATION"
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Great Northern Nekoosa</ENAMEX>"
     ]
   ], 
   "coref_chains": [], 
@@ -350,6 +362,204 @@
       "gov": "bid", 
       "gov_idx": 26, 
       "rel": "prep_for"
+    }, 
+    {
+      "dep": "evaporated", 
+      "dep_idx": 31, 
+      "gov": "disappointed", 
+      "gov_idx": 2, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "so", 
+      "dep_idx": 32, 
+      "gov": "quickly", 
+      "gov_idx": 33, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "quickly", 
+      "dep_idx": 33, 
+      "gov": "evaporated", 
+      "gov_idx": 31, 
+      "rel": "advmod"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Analysts", 
+      "dep_idx": 0, 
+      "gov": "disappointed", 
+      "gov_idx": 2, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 1, 
+      "gov": "disappointed", 
+      "gov_idx": 2, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "disappointed", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 4, 
+      "gov": "evaporated", 
+      "gov_idx": 31, 
+      "rel": "complm"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 5, 
+      "gov": "enthusiasm", 
+      "gov_idx": 6, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "enthusiasm", 
+      "dep_idx": 6, 
+      "gov": "evaporated", 
+      "gov_idx": 31, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "investors", 
+      "dep_idx": 9, 
+      "gov": "showed", 
+      "gov_idx": 10, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "showed", 
+      "dep_idx": 10, 
+      "gov": "enthusiasm", 
+      "gov_idx": 6, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "for", 
+      "dep_idx": 12, 
+      "gov": "showed", 
+      "gov_idx": 10, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "stocks", 
+      "dep_idx": 13, 
+      "gov": "for", 
+      "gov_idx": 12, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 14, 
+      "gov": "showed", 
+      "gov_idx": 10, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 15, 
+      "gov": "wake", 
+      "gov_idx": 16, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "wake", 
+      "dep_idx": 16, 
+      "gov": "in", 
+      "gov_idx": 14, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 17, 
+      "gov": "wake", 
+      "gov_idx": 16, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Georgia", 
+      "dep_idx": 18, 
+      "gov": "Pacific", 
+      "gov_idx": 20, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Pacific", 
+      "dep_idx": 20, 
+      "gov": "bid", 
+      "gov_idx": 26, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "'s", 
+      "dep_idx": 21, 
+      "gov": "Pacific", 
+      "gov_idx": 20, 
+      "rel": "possessive"
+    }, 
+    {
+      "dep": "$", 
+      "dep_idx": 22, 
+      "gov": "bid", 
+      "gov_idx": 26, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "3.18", 
+      "dep_idx": 23, 
+      "gov": "$", 
+      "gov_idx": 22, 
+      "rel": "number"
+    }, 
+    {
+      "dep": "billion", 
+      "dep_idx": 24, 
+      "gov": "$", 
+      "gov_idx": 22, 
+      "rel": "number"
+    }, 
+    {
+      "dep": "bid", 
+      "dep_idx": 26, 
+      "gov": "of", 
+      "gov_idx": 17, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "for", 
+      "dep_idx": 27, 
+      "gov": "bid", 
+      "gov_idx": 26, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Great", 
+      "dep_idx": 28, 
+      "gov": "Nekoosa", 
+      "gov_idx": 30, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "Northern", 
+      "dep_idx": 29, 
+      "gov": "Nekoosa", 
+      "gov_idx": 30, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Nekoosa", 
+      "dep_idx": 30, 
+      "gov": "for", 
+      "gov_idx": 27, 
+      "rel": "pobj"
     }, 
     {
       "dep": "evaporated", 

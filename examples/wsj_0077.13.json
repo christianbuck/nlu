@@ -119,6 +119,57 @@
       "rel": "amod"
     }
   ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Stock", 
+      "dep_idx": 0, 
+      "gov": "prices", 
+      "gov_idx": 1, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "prices", 
+      "dep_idx": 1, 
+      "gov": "rose", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "rose", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "fractionally", 
+      "dep_idx": 3, 
+      "gov": "rose", 
+      "gov_idx": 2, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 4, 
+      "gov": "rose", 
+      "gov_idx": 2, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "moderate", 
+      "dep_idx": 5, 
+      "gov": "in", 
+      "gov_idx": 4, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "trading", 
+      "dep_idx": 6, 
+      "gov": "moderate", 
+      "gov_idx": 5, 
+      "rel": "amod"
+    }
+  ], 
   "text": "Stock prices rose fractionally in moderate trading .", 
   "timex": [], 
   "treebank_sentence": "Stock prices rose fractionally in moderate trading .", 

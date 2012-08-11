@@ -1,11 +1,52 @@
 {
   "bbn_ne": [
     [
+      1, 
+      2, 
+      "late afternoon", 
+      "TIME", 
+      "", 
+      "<TIMEX TYPE=\"TIME\">late afternoon</TIMEX>"
+    ], 
+    [
       3, 
       4, 
       "New York", 
       "GPE", 
-      "CITY"
+      "CITY", 
+      "<ENAMEX TYPE=\"GPE:CITY\">New York</ENAMEX>"
+    ], 
+    [
+      10, 
+      11, 
+      "1.8500 marks", 
+      "MONEY", 
+      "", 
+      "<NUMEX TYPE=\"MONEY\">1.8500 marks</NUMEX>"
+    ], 
+    [
+      13, 
+      14, 
+      "143.80 yen", 
+      "MONEY", 
+      "", 
+      "<NUMEX TYPE=\"MONEY\">143.80 yen</NUMEX>"
+    ], 
+    [
+      17, 
+      18, 
+      "1.8415 marks", 
+      "MONEY", 
+      "", 
+      "<NUMEX TYPE=\"MONEY\">1.8415 marks</NUMEX>"
+    ], 
+    [
+      20, 
+      21, 
+      "142.85 yen", 
+      "MONEY", 
+      "", 
+      "<NUMEX TYPE=\"MONEY\">142.85 yen</NUMEX>"
     ]
   ], 
   "coref_chains": [], 
@@ -150,6 +191,162 @@
       "gov": "marks", 
       "gov_idx": 18, 
       "rel": "conj_and"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "In", 
+      "dep_idx": 0, 
+      "gov": "was", 
+      "gov_idx": 8, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "late", 
+      "dep_idx": 1, 
+      "gov": "afternoon", 
+      "gov_idx": 2, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "afternoon", 
+      "dep_idx": 2, 
+      "gov": "trading", 
+      "gov_idx": 5, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "New", 
+      "dep_idx": 3, 
+      "gov": "York", 
+      "gov_idx": 4, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "York", 
+      "dep_idx": 4, 
+      "gov": "trading", 
+      "gov_idx": 5, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "trading", 
+      "dep_idx": 5, 
+      "gov": "In", 
+      "gov_idx": 0, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 6, 
+      "gov": "currency", 
+      "gov_idx": 7, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "currency", 
+      "dep_idx": 7, 
+      "gov": "was", 
+      "gov_idx": 8, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "was", 
+      "dep_idx": 8, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "at", 
+      "dep_idx": 9, 
+      "gov": "was", 
+      "gov_idx": 8, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "1.8500", 
+      "dep_idx": 10, 
+      "gov": "marks", 
+      "gov_idx": 11, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "marks", 
+      "dep_idx": 11, 
+      "gov": "at", 
+      "gov_idx": 9, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 12, 
+      "gov": "marks", 
+      "gov_idx": 11, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "143.80", 
+      "dep_idx": 13, 
+      "gov": "yen", 
+      "gov_idx": 14, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "yen", 
+      "dep_idx": 14, 
+      "gov": "marks", 
+      "gov_idx": 11, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "compared", 
+      "dep_idx": 15, 
+      "gov": "was", 
+      "gov_idx": 8, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "with", 
+      "dep_idx": 16, 
+      "gov": "compared", 
+      "gov_idx": 15, 
+      "rel": "pcomp"
+    }, 
+    {
+      "dep": "1.8415", 
+      "dep_idx": 17, 
+      "gov": "marks", 
+      "gov_idx": 18, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "marks", 
+      "dep_idx": 18, 
+      "gov": "with", 
+      "gov_idx": 16, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 19, 
+      "gov": "marks", 
+      "gov_idx": 18, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "142.85", 
+      "dep_idx": 20, 
+      "gov": "yen", 
+      "gov_idx": 21, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "yen", 
+      "dep_idx": 21, 
+      "gov": "marks", 
+      "gov_idx": 18, 
+      "rel": "conj"
     }
   ], 
   "text": "In late afternoon New York trading the currency was at 1.8500 marks and 143.80 yen compared with 1.8415 marks and 142.85 yen .", 

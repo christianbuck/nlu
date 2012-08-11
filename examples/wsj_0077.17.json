@@ -1,5 +1,14 @@
 {
-  "bbn_ne": [], 
+  "bbn_ne": [
+    [
+      4, 
+      5, 
+      "7.88 %", 
+      "PERCENT", 
+      "", 
+      "<NUMEX TYPE=\"PERCENT\">7.88 %</NUMEX>"
+    ]
+  ], 
   "coref_chains": [], 
   "document_id": "nw/wsj/00/wsj_0077@all@wsj@nw@en@on", 
   "goldparse": "(TOP (S (NP-SBJ (DT The) (NN yield)) (VP (VBD fell) (PP-DIR (IN to) (NP (CD 7.88) (NN %)))) (. .)))", 
@@ -103,6 +112,50 @@
       "gov": "fell", 
       "gov_idx": 2, 
       "rel": "prep_to"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "yield", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "yield", 
+      "dep_idx": 1, 
+      "gov": "fell", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "fell", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 3, 
+      "gov": "fell", 
+      "gov_idx": 2, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "7.88", 
+      "dep_idx": 4, 
+      "gov": "%", 
+      "gov_idx": 5, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "%", 
+      "dep_idx": 5, 
+      "gov": "to", 
+      "gov_idx": 3, 
+      "rel": "pobj"
     }
   ], 
   "text": "The yield fell to 7.88 % .", 

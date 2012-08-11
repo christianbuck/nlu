@@ -161,6 +161,64 @@
       "rel": "prep_on"
     }
   ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Economic", 
+      "dep_idx": 0, 
+      "gov": "news", 
+      "gov_idx": 1, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "news", 
+      "dep_idx": 1, 
+      "gov": "had", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "had", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "little", 
+      "dep_idx": 3, 
+      "gov": "effect", 
+      "gov_idx": 4, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "effect", 
+      "dep_idx": 4, 
+      "gov": "had", 
+      "gov_idx": 2, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "on", 
+      "dep_idx": 5, 
+      "gov": "effect", 
+      "gov_idx": 4, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "financial", 
+      "dep_idx": 6, 
+      "gov": "markets", 
+      "gov_idx": 7, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "markets", 
+      "dep_idx": 7, 
+      "gov": "on", 
+      "gov_idx": 5, 
+      "rel": "pobj"
+    }
+  ], 
   "text": "Economic news had little effect on financial markets .", 
   "timex": [], 
   "treebank_sentence": "Economic news had little effect on financial markets .", 
