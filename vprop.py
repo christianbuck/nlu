@@ -9,7 +9,7 @@ import os, sys, re, codecs, fileinput, json
 
 from dev.amr.amr import Amr
 
-import pipeline
+import pipeline, timex
 from pipeline import choose_head, new_concept, parent_edges
 
 '''
@@ -66,7 +66,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     
     # add all predicates first, so the roleset properly goes into the AMR
     for prop in props:
-        baseform, roleset = prop["baseform"], prop["frame"] # TODO: roleset/frame thing is temporary
+        baseform, roleset = prop["baseform"], prop["frame"]
         
         assert prop["args"][0][0]=='rel'
         pred = prop["args"][0]
@@ -94,24 +94,18 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             if i==j:
                 #assert depParse[i], (tokens[i],rel,treenode,yieldS)
                 if depParse[i] is None: continue    # TODO: is this appropriate? e.g. in wsj_0003.0
-            print(roleset,rel,i,j,yieldS)
+            #print(roleset,rel,i,j,yieldS)
             h = choose_head(range(i,j+1), depParse)
             if h is None: continue  # TODO: temporary?
             x = alignment[:h] # index of variable associated with i's head, if any
             
-            if rel=='ARGM-TMP':
-                # see if it looks syntactically like a temporal modifier
-                for dep in depParse[h]:
-                    if dep['gov_idx']==ph:
-                        if dep['rel']=='tmod':
-                            rel = 'time'
-                        break
-                # TODO: possibly also :duration, etc.
-            elif rel=='ARGM-LOC':
-                rel = 'location'    # TODO: possibly also :direction, :source, :destination. look at preposition?
-            elif rel=='ARGM-CAU':
-                rel = 'cause'
+            # handle general proposition arguments
+            if str(x) in amr.node_to_concepts:
+                rel, amr.node_to_concepts[str(x)] = common_arg(rel, amr.get_concept(str(x)))
+            else:
+                rel = common_arg(rel)
             
+            # verb-specific argument types
             if rel=='ARGM-MOD':
                 if yieldS=='will':
                     pass    # skip this auxiliary
@@ -128,12 +122,47 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             # if SRL argument link corresponds to a dependency edge, mark that edge as complete
             if (ph,h) in completed[1]:
                 completed[1][(ph,h)] = True
-                print('completed ',(ph,h))
+                #print('completed ',(ph,h))
             if (h,ph) in completed[1]:  # also for reverse direction
                 completed[1][(h,ph)] = True
-                print('completed ',(ph,h))
+                #print('completed ',(ph,h))
     
     print(triples)
     amr = Amr.from_triples(amr.triples(instances=False)+list(triples), amr.node_to_concepts)
 
     return depParse, amr, alignment, completed
+
+def common_arg(rel, concept=None):
+    '''
+    Kind of argument that may occur in a noun or verb proposition. 
+    Exceptions include ARGM-MOD (modal), which is verb-specific.
+    '''
+    if True:
+            newrel = rel
+            newconcept = concept
+            if rel=='ARGM-TMP':
+                assert concept is not None
+                assert any(ttyp in concept.split('-') for ttyp in timex.Timex3Entity.valid_types)
+                if 'DURATION' in concept.split('-'):
+                    newrel = 'duration'
+                    newconcept = concept.replace('-DURATION','')
+                else:
+                    newrel = 'time'
+                    newconcept = concept.replace('-DATE_RELATIVE','').replace('-DATE','').replace('-SET','')
+                
+                '''
+                    # see if it looks syntactically like a temporal modifier
+                    for dep in depParse[h]:
+                        if dep['gov_idx']==ph:
+                            if dep['rel']=='tmod':
+                                rel = 'time'
+                            break
+                '''
+            elif rel=='ARGM-LOC':
+                newrel = 'location'    # TODO: possibly also :direction, :source, :destination. look at preposition?
+            elif rel=='ARGM-CAU':
+                newrel = 'cause'
+            elif rel=='ARGM-PRP':
+                newrel = 'purpose'
+
+    return (newrel, newconcept) if newconcept is not None else newrel

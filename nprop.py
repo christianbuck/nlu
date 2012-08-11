@@ -11,6 +11,7 @@ from dev.amr.amr import Amr
 
 import pipeline
 from pipeline import choose_head, new_concept, parent_edges
+from vprop import common_arg
 
 #TODO: the example below is buggy
 '''
@@ -131,7 +132,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     
     # add all predicates first, so the roleset properly goes into the AMR
     for prop in props:
-        baseform, frame = prop.get("lemma",prop.get("baseform")), prop["frame"]
+        baseform, roleset = prop["baseform"], prop["frame"]
         
         preds = {tuple(arg) for arg in prop["args"] if arg[0]=='rel'}
         assert len(preds)==1
@@ -140,7 +141,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
         ph = pred[2]    # predicate head
         #px = alignment[:ph]    # instead of aligning noun predicate to noun in the sentence, introduce the noun predicate separately (so the plain noun concept can be its argument)
         px = predheads.get(ph)
-        predconcept = pipeline.token2concept(frame.replace('.','-n-'))
+        predconcept = pipeline.token2concept(roleset.replace('.','-n-'))
         if not (px or px==0):
             px = new_concept(predconcept, amr)  # no alignment here - instead use 'predheads'
             #print('###','newconcept',px,'/',predconcept)
@@ -158,7 +159,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
         
     # now handle arguments
     for prop in props:
-        baseform, frame = prop["baseform"], prop["frame"]
+        baseform, roleset = prop["baseform"], prop["frame"]
         
         pred = [arg for arg in prop["args"] if arg[0]=='rel'][0]
         ph = pred[2]    # predicate head
@@ -172,34 +173,27 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             h = choose_head(range(i,j+1), depParse)
             x = alignment[:h] # index of variable associated with i's head, if any
             
-            if rel=='ARGM-TMP':
-                # see if it looks syntactically like a temporal modifier
-                for dep in depParse[h]:
-                    if dep['gov_idx']==ph:
-                        if dep['rel']=='tmod':
-                            rel = 'time'
-                        break
-                # TODO: possibly also :duration, etc.
-            elif rel=='ARGM-LOC':
-                rel = 'location'    # TODO: possibly also :direction, :source, :destination. look at preposition?
-            elif rel=='ARGM-CAU':
-                rel = 'cause'
+            # handle general proposition arguments
+            if str(x) in amr.node_to_concepts:
+                rel, amr.node_to_concepts[str(x)] = common_arg(rel, amr.get_concept(str(x)))
+            else:
+                rel = common_arg(rel)
             
             if not (x or x==0): # need a new variable
                 x = new_concept(pipeline.token2concept(ww[h]),
                                 amr, alignment, h)
             triples.add((str(px), rel, str(x)))
-            print('###',px,rel,x)
+            #print('###',px,rel,x)
             
             completed[0][h] = True
 
             # if SRL argument link corresponds to a dependency edge, mark that edge as complete
             if (ph,h) in completed[1]:
                 completed[1][(ph,h)] = True
-                print('completed ',(ph,h))
+                #print('completed ',(ph,h))
             if (h,ph) in completed[1]:  # also for reverse direction
                 completed[1][(h,ph)] = True
-                print('completed ',(ph,h))
+                #print('completed ',(ph,h))
     
     print(triples)
     amr = Amr.from_triples(amr.triples(instances=False)+list(triples), amr.node_to_concepts)
