@@ -177,7 +177,8 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             if str(x) in amr.node_to_concepts:
                 rel, amr.node_to_concepts[str(x)] = common_arg(rel, amr.get_concept(str(x)))
             else:
-                rel = common_arg(rel)
+                drels = [dep["rel"] for dep in depParse[h]]
+                rel = common_arg(rel, drels=drels)
             
             if not (x or x==0): # need a new variable
                 x = new_concept(pipeline.token2concept(ww[h]),

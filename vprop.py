@@ -103,7 +103,8 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             if str(x) in amr.node_to_concepts:
                 rel, amr.node_to_concepts[str(x)] = common_arg(rel, amr.get_concept(str(x)))
             else:
-                rel = common_arg(rel)
+                drels = [dep["rel"] for dep in depParse[h]]
+                rel = common_arg(rel, drels=drels)
             
             # verb-specific argument types
             if rel=='ARGM-MOD':
@@ -132,7 +133,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
 
     return depParse, amr, alignment, completed
 
-def common_arg(rel, concept=None):
+def common_arg(rel, concept=None, drels=None):
     '''
     Kind of argument that may occur in a noun or verb proposition. 
     Exceptions include ARGM-MOD (modal), which is verb-specific.
@@ -141,23 +142,20 @@ def common_arg(rel, concept=None):
             newrel = rel
             newconcept = concept
             if rel=='ARGM-TMP':
-                assert concept is not None
-                assert any(ttyp in concept.split('-') for ttyp in timex.Timex3Entity.valid_types)
-                if 'DURATION' in concept.split('-'):
-                    newrel = 'duration'
-                    newconcept = concept.replace('-DURATION','')
-                else:
-                    newrel = 'time'
-                    newconcept = concept.replace('-DATE_RELATIVE','').replace('-DATE','').replace('-SET','')
-                
-                '''
-                    # see if it looks syntactically like a temporal modifier
-                    for dep in depParse[h]:
-                        if dep['gov_idx']==ph:
-                            if dep['rel']=='tmod':
-                                rel = 'time'
-                            break
-                '''
+                if concept is not None:
+                    assert any(ttyp in concept.split('-') for ttyp in timex.Timex3Entity.valid_types)
+                    if 'DURATION' in concept.split('-'):
+                        newrel = 'duration'
+                        newconcept = concept.replace('-DURATION','')
+                    else:
+                        newrel = 'time'
+                        newconcept = concept.replace('-DATE_RELATIVE','').replace('-DATE','').replace('-SET','')
+                else:   # no TIMEX information
+                    # fallback: see if it looks syntactically like a temporal modifier
+                    if 'tmod' in drels:
+                        newrel = 'time'
+                    elif 'amod' in drels:
+                        newrel = 'mod' # e.g. 'former' -- temporal but not itself a time
             elif rel=='ARGM-LOC':
                 newrel = 'location'    # TODO: possibly also :direction, :source, :destination. look at preposition?
             elif rel=='ARGM-CAU':
