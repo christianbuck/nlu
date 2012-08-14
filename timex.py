@@ -4,10 +4,8 @@ Creates AMR fragments for time expressions
 from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
-from dev.amr.amr import Amr
-
-import pipeline
-from pipeline import choose_head, new_concept, parent_edges
+import pipeline, config
+from pipeline import choose_head, new_concept, new_amr_from_old, parent_edges
 from xml.etree import ElementTree
 
 '''
@@ -75,12 +73,12 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
         try:
             assert t.main_concept and (t.main_concept not in ['date-entity','temporal-quantity'] or len(new_triples)>nNewTrip)
         except AssertionError:
-            print('Warning: Unhandled time expression', file=sys.stderr)
+            if config.verbose or config.warn: print('Warning: Unhandled time expression', file=sys.stderr)
         nNewTrip = len(new_triples)
 
     #print(list(new_triples))
     
-    amr = Amr.from_triples(amr.triples(instances=False)+list(new_triples), amr.node_to_concepts)
+    amr = new_amr_from_old(amr, new_triples=list(new_triples))
     
     
 

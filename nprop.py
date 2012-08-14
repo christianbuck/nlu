@@ -7,10 +7,8 @@ Creates AMR fragments for verb propositions (PropBank-style semantic role struct
 from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
-from dev.amr.amr import Amr
-
 import pipeline
-from pipeline import choose_head, new_concept, parent_edges
+from pipeline import choose_head, new_concept, new_amr_from_old, parent_edges
 from vprop import common_arg
 
 #TODO: the example below is buggy
@@ -197,6 +195,6 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                 #print('completed ',(ph,h))
     
     #print(triples)
-    amr = Amr.from_triples(amr.triples(instances=False)+list(triples), amr.node_to_concepts)
+    amr = new_amr_from_old(amr, new_triples=list(triples))
 
     return depParse, amr, alignment, completed

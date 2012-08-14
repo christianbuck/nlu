@@ -8,10 +8,8 @@ Creates AMR fragments for named entities.
 from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
-from dev.amr.amr import Amr
-
 import pipeline
-from pipeline import choose_head, new_concept, parent_edges
+from pipeline import choose_head, new_concept, new_amr_from_old, parent_edges
 
 '''
 Example input, from wsj_0002.0:
@@ -138,7 +136,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                 for link in parent_edges(depParse[k]):
                     completed[1][link] = True  # we don't need to attach non-head parts of names anywhere else
     
-    amr = Amr.from_triples(amr.triples(instances=False)+list(triples), amr.node_to_concepts)
+    amr = new_amr_from_old(amr, new_triples=list(triples))
 
     return depParse, amr, alignment, completed
 

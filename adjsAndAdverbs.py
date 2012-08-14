@@ -7,10 +7,8 @@ Attaches adjective and adverb modifiers with the :mod relation.
 from __future__ import print_function
 import os, sys, re, codecs, fileinput
 
-from dev.amr.amr import Amr
-
 import pipeline
-from pipeline import new_concept
+from pipeline import new_concept, new_amr_from_old
 
 def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
@@ -47,11 +45,8 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                     newtriple = (str(x), 'mod', str(y))
                 
                 
-                try:
-                    amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
-                except ValueError as ex:
-                    print('Ignoring triple so as to avoid cycle:', ex.message, file=sys.stderr)
-
+                amr = new_amr_from_old(amr, new_triples=[newtriple])
+                
                 completed[1][(h,i)] = True
 
     # simplify adverbs to adjectives based on lexicon

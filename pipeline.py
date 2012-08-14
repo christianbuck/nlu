@@ -7,16 +7,13 @@ import os, sys, re, codecs, fileinput, json, glob
 
 from collections import defaultdict
 
+import config
+
 from dev.amr.amr import Amr
 from alignment import Alignment
 from add_prop import SpanTree, span_from_treepos
 
-_verbose = False
-
-def main(files, verbose=False, keep_nombank=False):
-    global _verbose
-    _verbose = verbose
-
+def main(files):
     # pipeline steps
     import nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, beautify
     # TODO: does conjunctions module work gracefully when propositions are conjoined?
@@ -60,6 +57,7 @@ def main(files, verbose=False, keep_nombank=False):
             print(' '.join(tokens), file=sys.stderr)
         
         print(amr)
+        #amr.render()
         #print('Amr.from_triples(',amr.triples(instances=False),',',amr.node_to_concepts,')')
         print()
     
@@ -106,8 +104,7 @@ def loadVProp(sentenceId):
                     treepos = pt.get_treepos(leaf_id, depth)
                     overtWords = pt[treepos].leaves()
                     overtStart, overtEnd = span_from_treepos(pt, treepos)
-                    global _verbose
-                    if _verbose: print('relative clause LINK-PCR: ',arg,'-->',(overtStart,overtEnd,overtWords), file=sys.stderr)
+                    if config.verbose: print('relative clause LINK-PCR: ',arg,'-->',(overtStart,overtEnd,overtWords), file=sys.stderr)
                     arg[1] = overtNode
                     arg[2], arg[3] = overtStart, overtEnd
                     arg[4] = ' '.join(overtWords)
@@ -248,9 +245,23 @@ def choose_head(tokenIndices, depParse):
     assert len(frontier)==1,(frontier,tokenIndices,depParse[tokenIndices[0]],depParse[tokenIndices[1]])
     return next(iter(frontier))
 
+def new_amr(triples, concepts, roots=None):
+    return Amr.from_triples(triples, concepts, roots=None, 
+                            warn=(sys.stderr if config.verbose else None))  # only display AMR cycle warnings in verbose mode
+
+def new_amr_from_old(oldamr, new_triples=[], new_concepts={}, avoid_triples=[], avoid_concepts=[], roots=None):
+    newconcepts = {v: c for v,c in oldamr.node_to_concepts.items() if v not in avoid_concepts}
+    newconcepts.update(new_concepts)
+    return new_amr([trip for trip in oldamr.triples(instances=None) if trip not in avoid_triples]+new_triples,
+                   newconcepts, roots=roots)
 
 def new_concept(concept, amr, alignment=None, alignedToken=None):
-    # new variable
+    '''
+    Creates and returns a new (integer) variable for the designated concept, 
+    though the variable is actually stored as a string in the AMR.
+    Optionally updates an alignment, marking the specified token 
+    as aligned to the new variable.
+    '''
     x = len(amr.node_to_concepts)
 
     amr.node_to_concepts[str(x)] = concept
@@ -260,6 +271,32 @@ def new_concept(concept, amr, alignment=None, alignedToken=None):
 
     return x    # variable, as an integer
 
+def new_concept_from_token(amr, alignment, i, depParse, concept=None):
+    '''
+    If 'i' is an integer, aligning to the 'i'th token.
+    If 'i' is an interable over integers, finds and aligns to 
+    the common head of the indices in 'i'.
+    If 'concept' is specified, that string will be used as the 
+    concept name; otherwise, the aligned token will be used.
+    '''
+    h = choose_head(i, depParse) if hasattr(i, '__iter__') else i
+    v = new_concept(token2concept(depParse[h][0]["dep"]) if concept is None else concept, amr, alignment, h)
+    return v
+
+def _(*args, **kwargs):
+    '''Alias for get_or_create_concept_from_token()'''
+    return get_or_create_concept_from_token(*args, **kwargs)
+
+def get_or_create_concept_from_token(amr, alignment, i, depParse, concept=None):
+    '''
+    Like new_concept_from_token(), but doesn't modify the AMR if the 
+    appropriate head token is already aligned to a variable.
+    '''
+    h = choose_head(i, depParse) if hasattr(i, '__iter__') else i
+    v = alignment[:h] # index of variable associated with i's head, if any
+    if not (v or v==0): # need a new variable
+        v = new_concept(token2concept(depParse[h][0]["dep"]) if concept is None else concept, amr, alignment, h)
+    return v
 
 if __name__=='__main__':
     args = sys.argv[1:]
@@ -268,11 +305,13 @@ if __name__=='__main__':
     while args and args[0][0]=='-':
         arg = args.pop(0)
         if arg=='-v':
-            verbose = True
+            config.verbose = True
+        elif arg=='-w':
+            config.warn = True
         elif arg=='-n':
-            keepNombank = True
+            config.keepNombank = True
         else:
             assert False,'Unknown flag: '+arg
     
     files = [f for ff in args for f in glob.glob(ff)]
-    main(files, verbose=verbose, keep_nombank=keepNombank)
+    main(files)

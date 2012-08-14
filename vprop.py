@@ -7,10 +7,8 @@ Creates AMR fragments for verb propositions (PropBank-style semantic role struct
 from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
-from dev.amr.amr import Amr
-
-import pipeline, timex
-from pipeline import choose_head, new_concept, parent_edges
+import pipeline, config, timex
+from pipeline import choose_head, new_concept, new_amr_from_old, parent_edges
 
 '''
 Example input, from wsj_0002.0:
@@ -129,7 +127,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                 #print('completed ',(ph,h))
     
     #print(triples)
-    amr = Amr.from_triples(amr.triples(instances=False)+list(triples), amr.node_to_concepts)
+    amr = new_amr_from_old(amr, new_triples=list(triples))
 
     return depParse, amr, alignment, completed
 
@@ -151,7 +149,7 @@ def common_arg(rel, concept=None, drels=None):
                         newconcept = concept.replace('-DATE_RELATIVE','').replace('-DATE','').replace('-SET','')
                 else:   # no TIMEX information
                     if concept is not None:
-                        print('WARNING: ARGM-TMP not a known time expression',(concept,drels), file=sys.stderr)
+                        if config.verbose or config.warn: print('Warning: ARGM-TMP not a known time expression',(concept,drels), file=sys.stderr)
                     # fallback: see if it looks syntactically like a temporal modifier
                     if drels:
                         if 'tmod' in drels:

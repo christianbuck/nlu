@@ -8,10 +8,8 @@ Attaches conjunction dependents in the AMR based on the dependency parse.
 from __future__ import print_function
 import os, sys, re, codecs, fileinput
 
-from dev.amr.amr import Amr
-
 import pipeline
-from pipeline import new_concept
+from pipeline import new_concept, new_amr_from_old
 
 def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
@@ -36,7 +34,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                 newtriple = (str(x), 'op'+str(nConjOps.setdefault(x,0)+1), str(y))
                 nConjOps[x] += 1
 
-                amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
+                amr = new_amr_from_old(amr, new_triples=[newtriple])
 
                 completed[1][(c,i)] = True
 

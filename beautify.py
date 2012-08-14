@@ -8,10 +8,8 @@ Cleans up superficial issues in the AMR, such as deleting unnecessary :-DUMMY re
 from __future__ import print_function
 import os, sys, re, codecs, fileinput
 
-from dev.amr.amr import Amr
-
-import pipeline
-from pipeline import new_concept, loadCoref, choose_head
+import pipeline, config
+from pipeline import new_concept, new_amr, new_amr_from_old, loadCoref, choose_head
 
 def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
@@ -33,17 +31,24 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             or amr.get_concept(y).endswith('-FALLBACK'), (y,ww[alignment[int(y):]],x,ww[alignment[int(x):]])
         replacements[y] = x
         triples.remove(coref_trip)
-    for v0 in replacements:
-        del amr.node_to_concepts[v0]
+    #for v0 in replacements:
+    #    del amr.node_to_concepts[v0]
     
     newtriples = []
+    oldtriples = coref_triples
     for a, r, (b,) in triples:
+        change = False
+        trip = (a,r,(b,))
         if a in replacements:
             a = replacements[a]
+            change = True
         if b in replacements:
             b = replacements[b]
-        newtriples.append((a,r,b))
-    amr = Amr.from_triples(newtriples, amr.node_to_concepts)
+            change = True
+        if change:
+            newtriples.append((a,r,b))
+            oldtriples.append(trip)
+    amr = new_amr_from_old(amr, new_triples=newtriples, avoid_triples=oldtriples, avoid_concepts=replacements)
     
     
     # delete -FALLBACK decorations
@@ -52,7 +57,9 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             amr.node_to_concepts[k] = v.replace('-FALLBACK', '')
     
     # clean up role names: :mod-nn and :MOD => :mod
-    amr = Amr.from_triples([(x, {'mod-NN': 'mod', 'MOD': 'mod'}.get(r,r), (y,)) for x,r,(y,) in amr.triples(instances=False)], amr.node_to_concepts)
+    repltriples = [(x, r, (y,)) for x,r,(y,) in amr.triples(instances=False) if r in ['mod-NN','MOD']]
+    newtriples = [(x, 'mod', (y,)) for x,r,(y,) in repltriples]
+    amr = new_amr_from_old(amr, new_triples=newtriples, avoid_triples=repltriples)
     
     
     # delete CARDINAL concepts (cf. the nes module) unless the concept has no parent
@@ -72,7 +79,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
         assert t1[2]==t2[0]==v
         old2newvars[v] = t2[2]
         del amr.node_to_concepts[v]
-        amr = Amr.from_triples([(old2newvars.get(x,x), r, (old2newvars.get(y,y),)) for x,r,(y,) in amr.triples(instances=False) if x!=v], amr.node_to_concepts)
+        amr = new_amr([(old2newvars.get(x,x), r, (old2newvars.get(y,y),)) for x,r,(y,) in amr.triples(instances=False) if x!=v], amr.node_to_concepts)
     
     # choose user-friendly variable names
     # assumes current variable names are all integer strings
@@ -85,7 +92,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             v2 += str(sum(1 for k in newconcepts.keys() if k[0]==v2))
         newconcepts[v2] = c
         old2newvars[v] = v2
-    amr = Amr.from_triples([(old2newvars.get(x,x), r, (old2newvars.get(y,y),)) for x,r,(y,) in amr.triples(instances=False)], newconcepts)
+    amr = new_amr([(old2newvars.get(x,x), r, (old2newvars.get(y,y),)) for x,r,(y,) in amr.triples(instances=False)], newconcepts)
     
     
     # detect orphans (variables with no triples)
@@ -96,9 +103,9 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
         if y in orphans:
             orphans[y] = False
     orphans = [v for v in orphans if orphans[v]]
-    print(len(orphans),'orphans',orphans, file=sys.stderr)
+    if config.verbose: print(len(orphans),'orphans',orphans, file=sys.stderr)
     
     # ensure a node has a :-DUMMY annotation iff it is an orphan
-    amr = Amr.from_triples([(x,r,(y,)) for x,r,(y,) in amr.triples(instances=False) if r!='-DUMMY']+[(o,'-DUMMY','') for o in orphans], newconcepts)
+    amr = new_amr([(x,r,(y,)) for x,r,(y,) in amr.triples(instances=False) if r!='-DUMMY']+[(o,'-DUMMY','') for o in orphans], newconcepts)
     
     return depParse, amr, alignment, completed

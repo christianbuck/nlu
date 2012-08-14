@@ -8,10 +8,8 @@ to known associated verb propositions (based on a list extracted from NomBank).
 from __future__ import print_function
 import os, sys, re, codecs, fileinput
 
-from dev.amr.amr import Amr
-
 import pipeline
-from pipeline import new_concept
+from pipeline import new_concept, new_amr, new_amr_from_old
 
 def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
@@ -53,7 +51,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             amr.node_to_concepts[x] = amr.node_to_concepts[y]
         triples.remove((x,r,(y,)))
     
-        amr = Amr.from_triples(triples, amr.node_to_concepts)
+        amr = new_amr(triples, amr.node_to_concepts)
         
     return depParse, amr, alignment, completed
 
