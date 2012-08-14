@@ -551,8 +551,7 @@ class Dag(defaultdict):
                 else:
                     children.add(v)
         roots = list(parents - children)
-
-
+    
         not_found = parents.union(children)
         for r in roots: 
             x = self.triples(start_node = r)
@@ -567,7 +566,11 @@ class Dag(defaultdict):
                    not_found.remove(c)
 
         while not_found:
-            parents = [x for x in not_found if self[x]]
+            parents = sorted([x for x in not_found if self[x]], key=lambda a:len(self.triples(start_node = a)))
+            if not parents: 
+                sys.stderr.write("WARNING: orphaned leafs %s.\n" % str(not_found))
+                roots.extend(list(not_found))
+                return roots
             new_root = parents.pop()
             for p,r,c in  self.triples(start_node = new_root):
                if p in not_found:
@@ -589,7 +592,7 @@ class Dag(defaultdict):
         """
         order = {}
         count = 0
-        for par, rel, child in self.triples(instances = False):                
+        for par, rel, child in self.triples():
             if not par in order: 
                 order[par] = count 
                 count += 1
@@ -754,7 +757,7 @@ class Dag(defaultdict):
         """
         # First get a mapping of boundary nodes in the new fragment to 
         # boundary nodes in the fragment to be replaced
-        leaves = amr.find_leaves()
+        leaves = dag.find_leaves()
         external = new_dag.get_external_nodes()
         assert len(external) == len(leaves)
         boundary_map = dict(zip(external, leaves))
@@ -766,19 +769,20 @@ class Dag(defaultdict):
 
         # now remove the old fragment
         res_dag = self.remove_fragment(dag)
+        res_dag.roots = [boundary_map[x] if x in boundary_map else x for x in self.roots]
 
         # and add the remaining edges, fusing boundary nodes
-        for par, rel, child in new_dag: 
+        for par, rel, child in new_dag.triples(): 
             
             new_par = boundary_map[par] if par in boundary_map else par
 
             if type(child) is tuple: #Hyperedge case
-                new_child = [boundary_map[c] if c in boundary_map else c for c in child]       
+                new_child = tuple([boundary_map[c] if c in boundary_map else c for c in child])
             else:            
                 new_child = boundary_map[child] if child in boundary_map else child
-            new_amr._add_triple(new_par, rel, new_child)
+            res_dag._add_triple(new_par, rel, new_child)
 
-        return new_amr
+        return res_dag
 
     def find_external_nodes(self, dag):
         """
@@ -825,20 +829,20 @@ class Dag(defaultdict):
         res_dag.roots = self.roots
         return res_dag
     
-    def apply_herg_rule(self, rule): 
+    def apply_herg_rule(self, symbol, amr): 
         """
         Apply a hyperedge replacement grammar rule to this DAG.
         """
     
         #Find hyperedge to replace 
         for p, r, c in self.nonterminal_edges(): 
-            if rel.label == rule.symbol:
+            if r.label == symbol:
                 par, rel, child = p, r, c
                 break
         repl_fragment = Dag.from_triples([(par,rel,child)])
         repl_fragment.roots = [par]
         #Replace it with the new fragment               
-        new_amr = rule.amr.clone_canonical(prefix = str(self.replace_count))
+        new_amr = amr.clone_canonical(prefix = str(self.replace_count))        
         res_dag = self.replace_fragment(repl_fragment, new_amr)
         # Keep track of prefix for new canonical node IDs               
         res_dag.replace_count = self.replace_count + 1
