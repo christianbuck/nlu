@@ -164,5 +164,7 @@ def common_arg(rel, concept=None, drels=None):
                 newrel = 'cause'
             elif rel=='ARGM-PRP':
                 newrel = 'purpose'
+            elif '-REF' in rel:
+                newrel = rel.replace('-REF','')
 
     return (newrel, newconcept) if newconcept is not None else newrel
