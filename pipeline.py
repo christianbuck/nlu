@@ -23,7 +23,7 @@ def main(files, verbose=False, keep_nombank=False):
         print(sentenceId)
         
         # load dependency parse from sentence file
-        tokens, ww, wTags, depParse = loadDepParse(sentenceId)
+        tokens, ww, wTags, depParse = loadDepParse(sentenceId, verbose=verbose)
 
         # initialize input to first pipeline step
         token_accounted_for = [False]*len(depParse)
@@ -38,9 +38,10 @@ def main(files, verbose=False, keep_nombank=False):
         alignments = Alignment()
     
         # serially execute pipeline steps
-        if verbose:
-            print(' '.join(filter(None,ww)), file=sys.stderr)
+        print(' '.join(filter(None,ww)))
+        print()
         sys.stdout.flush()
+
         for m in [nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, beautify]:
             if verbose:
                 print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
@@ -51,8 +52,10 @@ def main(files, verbose=False, keep_nombank=False):
                 print('Completed:',[depParse[i][0]['dep'] for i,v in enumerate(completed[0]) if v and depParse[i]], file=sys.stderr)
                 print(alignments, [deps[0]['dep'] for deps in depParse if deps and not completed[0][deps[0]['dep_idx']]], file=sys.stderr)
                 print(amr, file=sys.stderr)
-        print(' '.join(tokens))
-        print()
+                
+        if verbose:
+            print(' '.join(tokens), file=sys.stderr)
+        
         print(amr)
         print()
     
@@ -81,9 +84,10 @@ def loadVProp(sentenceId):
     jsonFile = 'examples/'+sentenceId+'.json'
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         data = json.load(jsonF)
-        props = data["prop"]
+        props = [prop for prop in data["prop"] if prop["frame"]!='do.01']   # auxiliary do.01 shouldn't be annotated, but sometimes is
         for prop in props:  # resolve relative clause * / LINK-PCR arguments    # TODO: ideally this would be done in preparing the JSON file (add_prop)
             # see wsj_0003.0 for an example ('workers' at 25:1 vs. '*' at 27:0 as the ARG1 of expose.01)
+            
             empty2overt = {}
             for arg in prop["args"]:
                 if arg[0]=='LINK-PCR':
@@ -114,7 +118,7 @@ def loadTimex(sentenceId):
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         return json.load(jsonF)['timex']
 
-def loadDepParse(sentenceId):
+def loadDepParse(sentenceId, verbose=False):
     jsonFile = 'examples/'+sentenceId+'.json'
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         sentJ = json.load(jsonF)
@@ -141,7 +145,8 @@ def loadDepParse(sentenceId):
         # dependency parse: un-collapse coordinate structures except for amod links
         conjs = [d for dep in deps if dep for d in dep if d["rel"].startswith('conj_')]
         if conjs:
-            print('resolving coordination...', file=sys.stderr)
+            if verbose:
+                print('resolving coordination...', file=sys.stderr)
             #print(tokens)
             ccs = [dep for dep in sentJ["stanford_dep_basic"] if dep["rel"]=='cc']
         for conj in conjs:
@@ -157,7 +162,7 @@ def loadDepParse(sentenceId):
             assert len(hextdeps)<=1,hextdeps
 
             if r=='conj_and' and iextdep["rel"]=='amod': # remove this conjunction link
-                print('  removing',conj, file=sys.stderr)
+                if verbose: print('  removing',conj, file=sys.stderr)
                 deps[i].remove(conj)
             else:   # undo propagation of conjunct dependencies
                 # remove the non-conjunction link sharing a dependent with the conjunction link
@@ -169,14 +174,14 @@ def loadDepParse(sentenceId):
 
                 if hextdeps:
                     hextdep = hextdeps[0]  # external (non-conjunction) head link of conjunction's governor
-                    print('  removing',hextdep, file=sys.stderr)
+                    if verbose: print('  removing',hextdep, file=sys.stderr)
                     deps[h].remove(hextdep)
-                print('  removing',iextdep, file=sys.stderr)
+                if verbose: print('  removing',iextdep, file=sys.stderr)
                 deps[i].remove(iextdep)
                 # then use Basic Dependencies to convert to
                 #    removed <-dobj- and <-conj- Korea
                 #                     ^----conj- Taiwan
-                print('  removing',conj, file=sys.stderr)
+                if verbose: print('  removing',conj, file=sys.stderr)
                 deps[i].remove(conj)
                 ccdeps = [dep for dep in ccs if dep["gov_idx"]==h]
                 assert len(ccdeps)==1
@@ -186,14 +191,14 @@ def loadDepParse(sentenceId):
                 if deps[c] is None:
                     deps[c] = []
                 if conj0 not in deps[c]:
-                    print('  adding',conj0, file=sys.stderr)
+                    if verbose: print('  adding',conj0, file=sys.stderr)
                     deps[c].append(conj0)
                 conj1 = {"gov_idx": c, "gov": cword, "dep_idx": h, "dep": ww[h], "rel": 'conj'}
                 if conj1 not in deps[h]:
-                    print('  adding',conj1, file=sys.stderr)
+                    if verbose: print('  adding',conj1, file=sys.stderr)
                     deps[h].append(conj1)
                 conj2 = {"gov_idx": c, "gov": cword, "dep_idx": i, "dep": ww[i], "rel": 'conj'}
-                print('  adding',conj2, file=sys.stderr)
+                if verbose: print('  adding',conj2, file=sys.stderr)
                 deps[i].append(conj2)
 
         return tokens, ww, wTags, deps  # ww and wTags have None for tokens which are empty elements
