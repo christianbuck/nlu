@@ -89,7 +89,7 @@ def make_amr_parser():
 
     quantity = Word(nums+".,").setParseAction(parse_quantity)
 
-    node_name =  Word(alphas+nums+"""@-_.,~$/<>%&!+\*?^`"'""") #Word(alphas+nums+"_@.")  
+    node_name =  Word(alphas+nums+"""@-_.~$/<>%&!+\*?^`"'""") #Word(alphas+nums+"_@.")  
 
     lit_string = Literal('"').suppress() + CharsNotIn('"') + Literal('"').suppress() 
     concept_name = lit_string | Word(alphas+nums+"""-_.,`~$/<>%&!+\*?^"'""")     
@@ -109,9 +109,9 @@ def make_amr_parser():
   
 
     valuelist = Forward()
-    valuelist << (value + Literal(",").suppress() +valuelist | value).setParseAction(debug)
+    valuelist << (value + Literal(",").suppress() + valuelist | value).setParseAction(debug)
     role = (Literal(":").suppress() + role_name + valuelist).setParseAction(parse_role)
-
+ 
     expr.setParseAction(parse_concept_expr) 
     expr << (lpar +  node_name + Optional(Literal("/").suppress() + concept_name) + ZeroOrMore(role) + rpar)
     
