@@ -142,8 +142,7 @@ def common_arg(rel, concept=None, drels=None):
             newrel = rel
             newconcept = concept
             if rel=='ARGM-TMP':
-                if concept is not None:
-                    assert any(ttyp in concept.split('-') for ttyp in timex.Timex3Entity.valid_types)
+                if concept is not None and any(ttyp in concept.split('-') for ttyp in timex.Timex3Entity.valid_types):
                     if 'DURATION' in concept.split('-'):
                         newrel = 'duration'
                         newconcept = concept.replace('-DURATION','')
@@ -151,11 +150,14 @@ def common_arg(rel, concept=None, drels=None):
                         newrel = 'time'
                         newconcept = concept.replace('-DATE_RELATIVE','').replace('-DATE','').replace('-SET','')
                 else:   # no TIMEX information
+                    if concept is not None:
+                        print('WARNING: ARGM-TMP not a known time expression',(concept,drels), file=sys.stderr)
                     # fallback: see if it looks syntactically like a temporal modifier
-                    if 'tmod' in drels:
-                        newrel = 'time'
-                    elif 'amod' in drels:
-                        newrel = 'mod' # e.g. 'former' -- temporal but not itself a time
+                    if drels:
+                        if 'tmod' in drels:
+                            newrel = 'time'
+                        elif 'amod' in drels:
+                            newrel = 'mod' # e.g. 'former' -- temporal but not itself a time
             elif rel=='ARGM-LOC':
                 newrel = 'location'    # TODO: possibly also :direction, :source, :destination. look at preposition?
             elif rel=='ARGM-CAU':

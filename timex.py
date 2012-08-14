@@ -125,7 +125,7 @@ timex3_type_to_role = {
 }
 
 # P-1Y, P1Y, P100Y
-re_offset = re.compile(r'^P(?P<quant>-?\d+)(?P<unit>[HDWMY]+)$')
+re_pexpr = re.compile(r'^(THIS )?P(?P<quant>-?\d+)(?P<unit>[HDWMY]+)$')
 
 timex3_units = {
     'time': {
@@ -165,12 +165,14 @@ class Timex3Entity(object):
         self.main_concept = 'temporal-quantity'
         self.wrapper = None
 
-        if self.is_absolute_time():
+        if self.is_absolute_time(): # side effect: merges alt_value with value in self.timex
             self.main_concept = 'date-entity'
             self.parse_absolute_time()
             return
-
-        if self.is_ref():
+        
+        if self.timex['value'].startswith('THIS '):
+            self.main_concept = 'date-entity'
+        elif self.is_ref():
             self.main_concept = self.parse_ref()
 
         # extract info from value and store in self.date_entity
@@ -179,13 +181,13 @@ class Timex3Entity(object):
             if v == "PRESENT_REF":
                 self.main_concept = 'now'
                 return
-            for regexp in ([re_offset] if self.type in ['DURATION','AGE'] else re_date):
+            for regexp in ([re_pexpr] if self.type in ['DURATION','AGE'] or v.startswith('THIS ') else re_date):
                 m = regexp.search(v)
                 if m == None:
                     continue
                 matchexprs = m.groupdict()
                 if 'unit' in matchexprs:
-                    matchexprs['unit'] = timex3_units['time' if 'T' in v else 'day'][v[-1]]
+                    matchexprs['unit'] = timex3_units['time' if 'T' in v and self.type in ['DURATION','AGE'] else 'day'][v[-1]]
                 if 'quant' in matchexprs:
                     try:
                         matchexprs['quant'] = int(matchexprs['quant'])
@@ -199,6 +201,15 @@ class Timex3Entity(object):
 
         if 'alt_value' in self.timex:
             v = self.timex['alt_value'].split()
+            
+            hasThis = False
+            if v[0]=='THIS':
+                if v[1]=='NI':
+                    pass    # TODO: tonight
+                
+                hasThis = True
+                
+            
             if 'OFFSET' in v:
                 self.type += "_RELATIVE"
                 offset = v[v.index('OFFSET')+1]
@@ -212,9 +223,15 @@ class Timex3Entity(object):
                     else:
                         assert self.date_entity['quant'] > 0
                         self.wrapper = 'hence'
+                        
+                    if hasThis: # use 'last' or 'next' instead of 'ago'/'hence'
+                        self.date_entity['mod'] = {'ago': 'last', 'hence': 'next'}[self.wrapper]
+                        self.wrapper = None
                 except ValueError:
                     pass
                     #assert quantity == 'X', "value should be int or X but is %s" %quantity
+            else:
+                self.date_entity['mod'] = 'this'
 
     def is_absolute_time(self):
         '''
