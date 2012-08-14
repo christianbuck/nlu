@@ -120,20 +120,19 @@ class Amr(Dag):
                
 
         for r in self.roots:
-            count = 0
             if r in self.node_to_concepts:
                 new_rel = "ROOT:%s" % conv(self.node_to_concepts[r])
             else: 
                 new_rel = "ROOT"
-            newtriple =  ('root%i' % count, new_rel, (r,))
+            newtriple =  ('root0', new_rel, (r,))
             new_amr._add_triple(*newtriple)
             new_amr.roots.remove(r)
-            new_amr.roots.append('root%i' % count)
-             
+            if not "root0" in new_amr.roots:
+                new_amr.roots.append('root0' )
+
             if r in self.node_alignments:
                 new_amr.edge_alignments[newtriple] = self.node_alignments[r]
 
-            count += 1
         return new_amr
 
     def stringify(self):
@@ -187,12 +186,12 @@ class Amr(Dag):
         """
         self.node_to_concepts[node] = concept
 
-    def triples(self, instances = True, start_node = None):
+    def triples(self, instances = True, start_node = None, refresh = False):
         """
         Retrieve a list of (node, role, filler) triples. If instances is False
         do not include 'instance' roles.
         """
-        res = [t for t in super(Amr, self).triples(start_node)]
+        res = [t for t in super(Amr, self).triples(start_node, refresh)]
         if instances:
             for node, concept in self.node_to_concepts.items():
                 res.append((node, 'instance', concept))

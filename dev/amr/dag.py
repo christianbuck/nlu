@@ -121,10 +121,16 @@ def ast_to_dag(ast):
 
     root = ast[0]
     if type(root) == tuple and len(root) == 3: 
-        dag.roots.append(root[0])
+        if "@" in root[0]:
+            dag.external_nodes.append(root[0].replace("@",""))  
+
+        dag.roots.append(root[0].replace("@",""))
+       
         rec_step(root)
     else: 
-        dag.roots.append(root)
+        if "@" in root:
+            dag.external_nodes.append(root.replace("@",""))        
+        dag.roots.append(root.replace("@",""))
 
     return dag 
 
@@ -186,6 +192,8 @@ class ListMap(defaultdict):
     
     def remove(self, k, v):
         defaultdict.__getitem__(self, k).remove(v)        
+        if not dict.__getitem__(self,k):
+            del self[k]
 
     def __reduce__(self):
         t = defaultdict.__reduce__(self)
@@ -409,12 +417,12 @@ class Dag(defaultdict):
     def has_edge(self, par, rel, child):
         return par in self and rel in self[par] and child in self[par].getall(rel) 
     
-    def triples(self, start_node = None):
+    def triples(self, start_node = None, refresh = False):
         """
         Traverse the DAG breadth first to collect a list of (parent, relation, child) triples.
         """
 
-        if not start_node and self.__cached_triples:
+        if (not (refresh or start_node)) and self.__cached_triples:
             return self.__cached_triples
 
         triple_to_depth = {}
@@ -515,7 +523,14 @@ class Dag(defaultdict):
         """
         Return the set of nodes reachable from a node
         """
-        return set(flatten(self.dfs(node = node, combiner = lambda parent, childmap, depth:  [parent] + childmap.values())))
+        res = set()
+        for p,r,c in self.triples(isntances = False):
+            res.add(p)
+            if type(c) is tuple:
+                res.update(c)
+            else:
+                res.add(c)
+        return res
    
     def find_roots(self):
         """
@@ -535,7 +550,7 @@ class Dag(defaultdict):
                     children.update(v)
                 else:
                     children.add(v)
-        roots = parents - children
+        roots = list(parents - children)
 
 
         not_found = parents.union(children)
@@ -563,7 +578,7 @@ class Dag(defaultdict):
                            not_found.remove(ch)
                if c in not_found: 
                    not_found.remove(c)
-            roots.add(new_root)    
+            roots.append(new_root)    
         return roots    
    
     @memoize
