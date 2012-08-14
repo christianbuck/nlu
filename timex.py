@@ -89,16 +89,16 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
 #### Resources ####
 # Todo: externalize
 
-re_time = r'(T(?P<dayperiod>MO|AF|EV|NI)|T(?P<time>\d{2}:\d{2}))?'
+re_time = r'(T(?P<dayperiod>MO|AF|EV|NI)|T(?P<time>\d{2}:\d{2}))'
 
 re_date = [
-    re.compile(r'\w{4}-\w{2}-(?P<day>\d\d)'+re_time),   # XXXX-10-31
-    re.compile(r'\w{4}-(?P<month>\d{2})\W'+re_time),    
+    re.compile(r'\w{4}-\w{2}-(?P<day>\d\d)'+re_time+'?'),   # XXXX-10-31
+    re.compile(r'\w{4}-(?P<month>\d{2})\W'+re_time+'?'),    
     re.compile(r'\w{4}-(?P<month>\d{2})$'),     # XXXX-10
-    re.compile(r'^(?P<year>\d{4})'+re_time),
-    re.compile(r'\w{4}-W\w{2}-(?P<weekday>\d)'+re_time),
-    re.compile(r'\w{4}-Q(?P<quarter>\d)'+re_time),
-    re.compile(r'\w{4}-(?P<season>SP|SU|FA|WI)'+re_time),
+    re.compile(r'^(?P<year>\d{4})'+re_time+'?'),
+    re.compile(r'\w{4}-W\w{2}-(?P<weekday>\d)'+re_time+'?'),
+    re.compile(r'\w{4}-Q(?P<quarter>\d)'+re_time+'?'),
+    re.compile(r'\w{4}-(?P<season>SP|SU|FA|WI)'+re_time+'?'),
     re.compile(re_time)
 ]
 
@@ -177,7 +177,10 @@ class Timex3Entity(object):
             self.date_entity['MOD'] = self.timex['mod'] # date_entity['mod'] is taken below, so 'MOD' here allows 2 modifiers to be present
             # TODO: APPROX->about, MORE_THAN=> more-than, etc. as heads rather than MOD
 
-        if self.is_absolute_time(): # side effect: merges alt_value with value in self.timex
+        if not 'value' in self.timex:
+            self.timex['value'] = self.timex['alt_value']
+            
+        if self.is_absolute_time():
             self.main_concept = 'date-entity'
             self.parse_absolute_time()
             return
@@ -250,8 +253,6 @@ class Timex3Entity(object):
         indicates if timex can be expressed by date entity
         try to match any of the regexps in re_data and return True if one fits
         '''
-        if not 'value' in self.timex:
-            self.timex['value'] = self.timex['alt_value']
         v = self.timex['value']
         for regexp in re_date:
             m = regexp.search(v)
