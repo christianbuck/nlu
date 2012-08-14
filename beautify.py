@@ -45,13 +45,28 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
         newtriples.append((a,r,b))
     amr = Amr.from_triples(newtriples, amr.node_to_concepts)
     
-    # TODO: delete unnecessary dummies
     
     # delete -FALLBACK decorations
     for k,v in amr.node_to_concepts.items():
         if v.endswith('-FALLBACK'):
             amr.node_to_concepts[k] = v.replace('-FALLBACK', '')
     
+    
+    # delete CARDINAL concepts (cf. the nes module) unless the concept has no parent
+    # e.g. in wsj_0077.14, "154.2 million shares" is converted from (s / shares :quant (c / CARDINAL :quant 154200000)) to (s / shares :quant 154200000)
+    cardinals = {v for v,c in amr.node_to_concepts.items() if c=='CARDINAL'}
+    for v in cardinals:
+        old2newvars = {}
+        triples = [(x,r,y) for x,r,(y,) in amr.triples(instances=False) if x==v or y==v]
+        assert 1<=len(triples)<=2
+        if len(triples)<2: continue
+        t1, t2 = triples
+        if t1[2]!=v:
+            t1, t2 = t2, t1
+        assert t1[2]==t2[0]==v
+        old2newvars[v] = t2[2]
+        del amr.node_to_concepts[v]
+        amr = Amr.from_triples([(old2newvars.get(x,x), r, (old2newvars.get(y,y),)) for x,r,(y,) in amr.triples(instances=False) if x!=v], amr.node_to_concepts)
     
     # choose user-friendly variable names
     # assumes current variable names are all integer strings
