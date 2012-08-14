@@ -73,7 +73,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                 completed[1][(i,j)] = True
                 
         try:
-            assert len(new_triples)>nNewTrip
+            assert t.main_concept and (t.main_concept not in ['date-entity','temporal-quantity'] or len(new_triples)>nNewTrip)
         except AssertionError:
             print('Warning: Unhandled time expression', file=sys.stderr)
         nNewTrip = len(new_triples)
