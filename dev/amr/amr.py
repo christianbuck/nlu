@@ -16,10 +16,24 @@ import re
 import sys
 import copy
 
-def print_amr_error(amr_str):
-    sys.stderr.write("Could not parse AMR.\n")
-    sys.stderr.write(amr_str)    
-    sys.stderr.write("\n")
+_graphics = False
+def require_graphics():
+    global _graphics
+    if _graphics: return
+    
+    # Try to import modules to render DAGs
+    global xdot
+    import xdot
+    
+    global pgv
+    import pygraphviz as pgv
+    
+    _graphics = True
+
+def print_amr_error(amr_str, warn=sys.stderr):
+    warn.write("Could not parse AMR.\n")
+    warn.write(amr_str)    
+    warn.write("\n")
 
 
 def conv(s):
@@ -164,12 +178,12 @@ class Amr(Dag):
         return new_amr    
 
     @classmethod
-    def from_triples(cls, triples, concepts, roots = None):
+    def from_triples(cls, triples, concepts, roots=None, warn=sys.stderr):
         """
         Initialize a new abstract meaning representation from a collection of triples 
         and a node to concept map.
         """
-        amr = Dag.from_triples(triples, roots)
+        amr = Dag.from_triples(triples, roots, warn=warn)
         amr.__class__ = Amr
         amr.node_to_concepts = concepts
         return amr
@@ -250,7 +264,8 @@ class Amr(Dag):
     def _get_gv_graph(self, instances = True):
         """
         Return a pygraphviz AGraph.
-        """        
+        """
+        require_graphics()
         graph = pgv.AGraph(strict=False,directed=True)
         graph.node_attr.update(height=0.1, width=0.1, shape='none')
         graph.edge_attr.update(fontsize='9')
@@ -268,6 +283,7 @@ class Amr(Dag):
         """
         Interactively view the graph. 
         """
+        require_graphics()
         dot = self.get_dot(instances)
         window = xdot.DotWindow()
         window.set_dotcode(dot)

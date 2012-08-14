@@ -17,15 +17,19 @@ import sys
 import copy
 import pyparsing
 
-# Try to import modules to render DAGs
-try:
+_graphics = False
+def require_graphics():
+    global _graphics
+    if _graphics: return
+    
+    # Try to import modules to render DAGs
+    global xdot
     import xdot
-except ImportError:
-    sys.stderr.write("Warning: Could not import xdot. Will not be able to view DAGs interactively.\n")
-try:
+    
+    global pgv
     import pygraphviz as pgv
-except ImportError:
-    sys.stderr.write("Warning: Could not import pygraphviz. Will not be able to render DAGs to file.\n")
+    
+    _graphics = True
 
 ###UTILS###
 
@@ -240,7 +244,7 @@ class Dag(defaultdict):
         return ast_to_dag(ast)
 
     @classmethod
-    def from_triples(self, triples, roots = None):    
+    def from_triples(self, triples, roots=None, warn=sys.stderr):    
         """
         Initialize a new DAG from a list of (parent, relation, child) triples.
         Optionally pass a list of root nodes (if empty, roots will be determined
@@ -285,7 +289,7 @@ class Dag(defaultdict):
                     new_child = (child,)
                     nothing = dag[child]
             
-            dag._add_triple(new_par, relation, new_child)
+            dag._add_triple(new_par, relation, new_child, warn=warn)
         
         # Allow the passed root to be either an iterable of roots or a single root
         if roots: 
@@ -642,20 +646,20 @@ class Dag(defaultdict):
         return result
     
     ####Methods that modify the DAG###    
-    def _add_triple(self, parent, relation, child):
+    def _add_triple(self, parent, relation, child, warn=sys.stderr):
         """
         Add a (parent, relation, child) triple to the DAG. 
         """
         if type(child) is not tuple:
             child = (child,)
         if parent in child: 
-            sys.stderr.write("WARNING: Self-edge (%s, %s, %s).\n" % (parent, relation, child))
+            if warn: warn.write("WARNING: Self-edge (%s, %s, %s).\n" % (parent, relation, child))
             #raise ValueError, "Cannot add self-edge (%s, %s, %s)." % (parent, relation, child)
         for c in child: 
             x = self[c]
             for rel, test in self[c].items():
                 if parent in test: 
-                    sys.stderr.write("WARNING: (%s, %s, %s) would produce a cycle with (%s, %s, %s)\n" % (parent, relation, child, c, rel, test))
+                    if warn: warn.write("WARNING: (%s, %s, %s) would produce a cycle with (%s, %s, %s)\n" % (parent, relation, child, c, rel, test))
                     #raise ValueError,"(%s, %s, %s) would produce a cycle with (%s, %s, %s)" % (parent, relation, child, c, rel, test)
         self[parent].append(relation, child)    
     
@@ -852,7 +856,8 @@ class Dag(defaultdict):
     def _get_gv_graph(self, *args):
         """node
         Return a pygraphviz AGraph representing the DAG.
-        """        
+        """
+        require_graphics()
         graph = pgv.AGraph(strict=False,directed=True)
         graph.node_attr.update(height=0.1, width=0.1, shape='none')
         graph.edge_attr.update(fontsize='9')
@@ -865,6 +870,7 @@ class Dag(defaultdict):
         """
         Interactively view the graph. Requires xdot and pygraphviz.
         """
+        require_graphics()
         dot = self.get_dot()
         window = xdot.DotWindow()
         window.set_dotcode(dot)
