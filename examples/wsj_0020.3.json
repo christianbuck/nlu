@@ -1,0 +1,390 @@
+{
+  "text": "Mrs. Hills said many of the 25 countries that she placed under varying degrees of scrutiny have made `` genuine progress '' on this touchy issue .", 
+  "coref_chains": [
+    [
+      1, 
+      1, 
+      10, 
+      "Hills", 
+      false
+    ], 
+    [
+      10, 
+      10, 
+      10, 
+      "she", 
+      false
+    ]
+  ], 
+  "bbn_ne": [
+    [
+      1, 
+      1, 
+      "Hills", 
+      "PERSON", 
+      "", 
+      "", 
+      "<ENAMEX TYPE=\"PERSON\">Hills</ENAMEX>"
+    ], 
+    [
+      7, 
+      7, 
+      "25", 
+      "CARDINAL", 
+      "", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">25</NUMEX>"
+    ]
+  ], 
+  "coref": [
+    [
+      [
+        [
+          "she", 
+          0, 
+          -1, 
+          9, 
+          10
+        ], 
+        [
+          "Mrs. Hills", 
+          0, 
+          1, 
+          0, 
+          2
+        ]
+      ]
+    ]
+  ], 
+  "sentence_nr": 3, 
+  "tuples": [
+    [
+      "nn", 
+      "Hills", 
+      "Mrs."
+    ], 
+    [
+      "nsubj", 
+      "said", 
+      "Hills"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "said"
+    ], 
+    [
+      "nsubj", 
+      "made", 
+      "many"
+    ], 
+    [
+      "det", 
+      "countries", 
+      "the"
+    ], 
+    [
+      "num", 
+      "countries", 
+      "25"
+    ], 
+    [
+      "prep_of", 
+      "many", 
+      "countries"
+    ], 
+    [
+      "dobj", 
+      "placed", 
+      "countries"
+    ], 
+    [
+      "complm", 
+      "placed", 
+      "that"
+    ], 
+    [
+      "nsubj", 
+      "placed", 
+      "she"
+    ], 
+    [
+      "dep", 
+      "countries", 
+      "placed"
+    ], 
+    [
+      "amod", 
+      "degrees", 
+      "varying"
+    ], 
+    [
+      "prep_under", 
+      "placed", 
+      "degrees"
+    ], 
+    [
+      "prep_of", 
+      "degrees", 
+      "scrutiny"
+    ], 
+    [
+      "aux", 
+      "made", 
+      "have"
+    ], 
+    [
+      "ccomp", 
+      "said", 
+      "made"
+    ], 
+    [
+      "amod", 
+      "progress", 
+      "genuine"
+    ], 
+    [
+      "dobj", 
+      "made", 
+      "progress"
+    ], 
+    [
+      "det", 
+      "issue", 
+      "this"
+    ], 
+    [
+      "amod", 
+      "issue", 
+      "touchy"
+    ], 
+    [
+      "prep_on", 
+      "made", 
+      "issue"
+    ]
+  ], 
+  "words": [
+    [
+      "Mrs.", 
+      {
+        "NamedEntityTag": "PERSON", 
+        "Lemma": "Mrs.", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "Hills", 
+      {
+        "NamedEntityTag": "PERSON", 
+        "Lemma": "Hills", 
+        "PartOfSpeech": "NNP"
+      }
+    ], 
+    [
+      "said", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "say", 
+        "PartOfSpeech": "VBD"
+      }
+    ], 
+    [
+      "many", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "many", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "of", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "the", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "the", 
+        "PartOfSpeech": "DT"
+      }
+    ], 
+    [
+      "25", 
+      {
+        "NormalizedNamedEntityTag": "25.0", 
+        "Lemma": "25", 
+        "PartOfSpeech": "CD", 
+        "NamedEntityTag": "NUMBER"
+      }
+    ], 
+    [
+      "countries", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "country", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "that", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "that", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "she", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "she", 
+        "PartOfSpeech": "PRP"
+      }
+    ], 
+    [
+      "placed", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "place", 
+        "PartOfSpeech": "VBD"
+      }
+    ], 
+    [
+      "under", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "under", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "varying", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "vary", 
+        "PartOfSpeech": "VBG"
+      }
+    ], 
+    [
+      "degrees", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "degree", 
+        "PartOfSpeech": "NNS"
+      }
+    ], 
+    [
+      "of", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "scrutiny", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "scrutiny", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "have", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "have", 
+        "PartOfSpeech": "VBP"
+      }
+    ], 
+    [
+      "made", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "make", 
+        "PartOfSpeech": "VBN"
+      }
+    ], 
+    [
+      "``", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "``", 
+        "PartOfSpeech": "``"
+      }
+    ], 
+    [
+      "genuine", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "genuine", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "progress", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "progress", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      "''", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "''", 
+        "PartOfSpeech": "''"
+      }
+    ], 
+    [
+      "on", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "on", 
+        "PartOfSpeech": "IN"
+      }
+    ], 
+    [
+      "this", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "this", 
+        "PartOfSpeech": "DT"
+      }
+    ], 
+    [
+      "touchy", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "touchy", 
+        "PartOfSpeech": "JJ"
+      }
+    ], 
+    [
+      "issue", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": "issue", 
+        "PartOfSpeech": "NN"
+      }
+    ], 
+    [
+      ".", 
+      {
+        "NamedEntityTag": "O", 
+        "Lemma": ".", 
+        "PartOfSpeech": "."
+      }
+    ]
+  ], 
+  "treebank_sentence": "Mrs. Hills said 0 many of the 25 countries that she placed *T*-1 under varying degrees of scrutiny have made `` genuine progress '' on this touchy issue .", 
+  "parsetree": "(ROOT (S (NP (NNP Mrs.) (NNP Hills)) (VP (VBD said) (SBAR (S (NP (NP (JJ many)) (PP (IN of) (NP (NP (DT the) (CD 25) (NNS countries)) (SBAR (IN that) (S (NP (PRP she)) (VP (VBD placed) (PP (IN under) (NP (NP (VBG varying) (NNS degrees)) (PP (IN of) (NP (NN scrutiny))))))))))) (VP (VBP have) (VP (VBN made) (NP (`` ``) (JJ genuine) (NN progress) ('' '')) (PP (IN on) (NP (DT this) (JJ touchy) (NN issue)))))))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NNP Mrs.) (NNP Hills)) (VP (VBD said) (SBAR (-NONE- 0) (S (NP-SBJ (NP (JJ many)) (PP (IN of) (NP (NP (DT the) (CD 25) (NNS countries)) (SBAR (WHNP-1 (IN that)) (S (NP-SBJ (PRP she)) (VP (VBD placed) (NP (-NONE- *T*-1)) (PP-DIR-CLR (IN under) (NP (NP (VBG varying) (NNS degrees)) (PP (IN of) (NP (NN scrutiny))))))))))) (VP (VBP have) (VP (VBN made) (`` ``) (NP (NP (JJ genuine) (NN progress)) ('' '') (PP-LOC (IN on) (NP (DT this) (JJ touchy) (NN issue))))))))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0020@all@wsj@nw@en@on"
+}

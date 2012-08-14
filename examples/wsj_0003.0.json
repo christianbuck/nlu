@@ -1,4 +1,21 @@
 {
+  "text": "A form of asbestos once used to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed to it more than 30 years ago , researchers reported .", 
+  "coref_chains": [
+    [
+      0, 
+      12, 
+      0, 
+      "A form of asbestos once used to make Kent cigarette filters", 
+      false
+    ], 
+    [
+      29, 
+      29, 
+      0, 
+      "it", 
+      false
+    ]
+  ], 
   "bbn_ne": [
     [
       3, 
@@ -6,6 +23,7 @@
       "asbestos", 
       "SUBSTANCE", 
       "CHEMICAL", 
+      "", 
       "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">asbestos</ENAMEX>"
     ], 
     [
@@ -14,6 +32,7 @@
       "Kent", 
       "PRODUCT", 
       "OTHER", 
+      "", 
       "<ENAMEX TYPE=\"PRODUCT:OTHER\">Kent</ENAMEX>"
     ], 
     [
@@ -21,6 +40,7 @@
       23, 
       "group", 
       "PER_DESC", 
+      "", 
       "", 
       "<ENAMEX TYPE=\"PER_DESC\">group</ENAMEX>"
     ], 
@@ -30,6 +50,7 @@
       "workers", 
       "PER_DESC", 
       "", 
+      "", 
       "<ENAMEX TYPE=\"PER_DESC\">workers</ENAMEX>"
     ], 
     [
@@ -38,6 +59,7 @@
       "more than 30 years ago", 
       "DATE", 
       "DATE", 
+      "", 
       "<TIMEX TYPE=\"DATE:DATE\">more than 30 years ago</TIMEX>"
     ], 
     [
@@ -46,813 +68,31 @@
       "researchers", 
       "PER_DESC", 
       "", 
+      "", 
       "<ENAMEX TYPE=\"PER_DESC\">researchers</ENAMEX>"
     ]
   ], 
-  "coref_chains": [
-    [
-      0, 
-      12, 
-      0, 
-      "A form of asbestos once used to make Kent cigarette filters"
-    ], 
-    [
-      29, 
-      29, 
-      0, 
-      "it"
-    ]
-  ], 
-  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
-  "goldparse": "(TOP (S (S-TPC-1 (NP-SBJ (NP (NP (DT A) (NN form)) (PP (IN of) (NP (NN asbestos)))) (VP (ADVP-TMP (RB once)) (VBN used) (NP (-NONE- *)) (S-CLR (NP-SBJ (-NONE- *PRO*)) (VP (TO to) (VP (VB make) (NP (NNP Kent) (NN cigarette) (NNS filters))))))) (VP (VBZ has) (VP (VBN caused) (NP (NP (DT a) (JJ high) (NN percentage)) (PP (IN of) (NP (NN cancer) (NNS deaths))) (PP-LOC (IN among) (NP (NP (DT a) (NN group)) (PP (IN of) (NP (NP (NNS workers)) (VP (VBN exposed) (NP (-NONE- *)) (PP-CLR (IN to) (NP (PRP it))) (ADVP-TMP (NP (QP (RBR more) (IN than) (CD 30)) (NNS years)) (IN ago))))))))))) (, ,) (NP-SBJ (NNS researchers)) (VP (VBD reported) (SBAR (-NONE- 0) (S (-NONE- *T*-1)))) (. .)))", 
-  "nom": [
-    {
-      "args": [
-        [
-          "ARGM-CAU", 
-          "19:0", 
-          19, 
-          19, 
-          "cancer"
-        ], 
-        [
-          "rel", 
-          "20:0", 
-          20, 
-          20, 
-          "deaths"
-        ], 
-        [
-          "ARG1", 
-          "21:1", 
-          21, 
-          34, 
-          "among a group of workers exposed * to it more than 30 years ago"
-        ]
-      ], 
-      "baseform": "death", 
-      "frame": "death.01", 
-      "tokenNr": "20"
-    }, 
-    {
-      "args": [
-        [
-          "ARG2", 
-          "11:0", 
-          11, 
-          11, 
-          "cigarette"
-        ], 
-        [
-          "ARG0", 
-          "12:0", 
-          12, 
-          12, 
-          "filters"
-        ], 
-        [
-          "rel", 
-          "12:0", 
-          12, 
-          12, 
-          "filters"
-        ]
-      ], 
-      "baseform": "filter", 
-      "frame": "filter.01", 
-      "tokenNr": "12"
-    }, 
-    {
-      "args": [
-        [
-          "ARG2-REF", 
-          "1:0", 
-          1, 
-          1, 
-          "form"
-        ], 
-        [
-          "rel", 
-          "1:0", 
-          1, 
-          1, 
-          "form"
-        ], 
-        [
-          "ARG1", 
-          "2:1", 
-          2, 
-          3, 
-          "of asbestos"
-        ]
-      ], 
-      "baseform": "form", 
-      "frame": "form.01", 
-      "tokenNr": "1"
-    }, 
-    {
-      "args": [
-        [
-          "rel", 
-          "23:0", 
-          23, 
-          23, 
-          "group"
-        ], 
-        [
-          "ARG1", 
-          "24:1", 
-          24, 
-          34, 
-          "of workers exposed * to it more than 30 years ago"
-        ]
-      ], 
-      "baseform": "group", 
-      "frame": "group.01", 
-      "tokenNr": "23"
-    }, 
-    {
-      "args": [
-        [
-          "rel", 
-          "17:0", 
-          17, 
-          17, 
-          "percentage"
-        ], 
-        [
-          "ARG1", 
-          "18:1", 
-          18, 
-          20, 
-          "of cancer deaths"
-        ]
-      ], 
-      "baseform": "percentage", 
-      "frame": "percentage.01", 
-      "tokenNr": "17"
-    }
-  ], 
-  "parsetree": "(ROOT (S (S (NP (NP (DT A) (NN form)) (PP (IN of) (NP (NP (NN asbestos)) (VP (ADVP (RB once)) (VBN used) (S (VP (TO to) (VP (VB make) (NP (NNP Kent) (NN cigarette) (NNS filters))))))))) (VP (VBZ has) (VP (VBN caused) (NP (NP (DT a) (JJ high) (NN percentage)) (PP (IN of) (NP (NN cancer) (NNS deaths)))) (PP (IN among) (NP (NP (DT a) (NN group)) (PP (IN of) (NP (NP (NNS workers)) (VP (VBN exposed) (PP (TO to) (NP (PRP it))) (ADVP (NP (QP (XS (JJR more) (IN than)) (CD 30)) (NNS years)) (RB ago)))))))))) (, ,) (NP (NNS researchers)) (VP (VBD reported)) (. .)))", 
-  "prop": [
-    {
-      "args": [
-        [
-          "rel", 
-          "5:0", 
-          5, 
-          5, 
-          "used"
-        ], 
-        [
-          "ARG1", 
-          "6:0", 
-          6, 
-          6, 
-          "*"
-        ], 
-        [
-          "ARGM-TMP", 
-          "4:1", 
-          4, 
-          4, 
-          "once"
-        ], 
-        [
-          "ARG2", 
-          "7:2", 
-          7, 
-          12, 
-          "*PRO* to make Kent cigarette filters"
-        ], 
-        [
-          "LINK-PCR", 
-          "0:2*6:0", 
-          null, 
-          null, 
-          ""
-        ]
-      ], 
-      "baseform": "use", 
-      "basepos": "v", 
-      "frame": "use.01", 
-      "inflection": "-----"
-    }, 
-    {
-      "args": [
-        [
-          "rel", 
-          "9:0", 
-          9, 
-          9, 
-          "make"
-        ], 
-        [
-          "ARG0", 
-          "7:0", 
-          7, 
-          7, 
-          "*PRO*"
-        ], 
-        [
-          "ARG1", 
-          "10:1", 
-          10, 
-          12, 
-          "Kent cigarette filters"
-        ]
-      ], 
-      "baseform": "make", 
-      "basepos": "v", 
-      "frame": "make.01", 
-      "inflection": "-----"
-    }, 
-    {
-      "args": [
-        [
-          "rel", 
-          "14:0", 
-          14, 
-          14, 
-          "caused"
-        ], 
-        [
-          "ARG0", 
-          "0:3", 
-          0, 
-          12, 
-          "A form of asbestos once used * *PRO* to make Kent cigarette filters"
-        ], 
-        [
-          "ARG1", 
-          "15:2", 
-          15, 
-          34, 
-          "a high percentage of cancer deaths among a group of workers exposed * to it more than 30 years ago"
-        ]
-      ], 
-      "baseform": "cause", 
-      "basepos": "v", 
-      "frame": "cause.01", 
-      "inflection": "-----"
-    }, 
-    {
-      "args": [
-        [
-          "rel", 
-          "26:0", 
-          26, 
-          26, 
-          "exposed"
-        ], 
-        [
-          "ARG1", 
-          "27:0", 
-          27, 
-          27, 
-          "*"
-        ], 
-        [
-          "ARG2", 
-          "28:1", 
-          28, 
-          29, 
-          "to it"
-        ], 
-        [
-          "ARGM-TMP", 
-          "30:3", 
-          30, 
-          34, 
-          "more than 30 years ago"
-        ], 
-        [
-          "LINK-PCR", 
-          "25:1*27:0", 
-          null, 
-          null, 
-          ""
-        ]
-      ], 
-      "baseform": "expose", 
-      "basepos": "v", 
-      "frame": "expose.01", 
-      "inflection": "-----"
-    }, 
-    {
-      "args": [
-        [
-          "rel", 
-          "37:0", 
-          37, 
-          37, 
-          "reported"
-        ], 
-        [
-          "ARG0", 
-          "36:1", 
-          36, 
-          36, 
-          "researchers"
-        ], 
-        [
-          "ARG1", 
-          "38:1", 
-          0, 
-          34, 
-          "A form of asbestos once used * *PRO* to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed * to it more than 30 years ago"
-        ]
-      ], 
-      "baseform": "report", 
-      "basepos": "v", 
-      "frame": "report.01", 
-      "inflection": "-----"
-    }
-  ], 
-  "ptbparse": "( (S (S-TPC-1 (NP-SBJ (NP (NP (DT A) (NN form) ) (PP (IN of) (NP (NN asbestos) ))) (RRC (ADVP-TMP (RB once) ) (VP (VBN used) (NP (-NONE- *) ) (S-CLR (NP-SBJ (-NONE- *) ) (VP (TO to) (VP (VB make) (NP (NNP Kent) (NN cigarette) (NNS filters) ))))))) (VP (VBZ has) (VP (VBN caused) (NP (NP (DT a) (JJ high) (NN percentage) ) (PP (IN of) (NP (NN cancer) (NNS deaths) )) (PP-LOC (IN among) (NP (NP (DT a) (NN group) ) (PP (IN of) (NP (NP (NNS workers) ) (RRC (VP (VBN exposed) (NP (-NONE- *) ) (PP-CLR (TO to) (NP (PRP it) )) (ADVP-TMP (NP (QP (RBR more) (IN than) (CD 30) ) (NNS years) ) (IN ago) ))))))))))) (, ,) (NP-SBJ (NNS researchers) ) (VP (VBD reported) (SBAR (-NONE- 0) (S (-NONE- *T*-1) ))) (. .) ))", 
-  "sentence_nr": 0, 
-  "stanford_coref": [
+  "coref": [
     [
       [
-        "it", 
-        26, 
-        27
-      ], 
-      [
-        "A form of asbestos once used to make Kent cigarette filters", 
-        0, 
-        11
+        [
+          "it", 
+          0, 
+          6, 
+          26, 
+          27
+        ], 
+        [
+          "A form of asbestos once used to make Kent cigarette filters", 
+          0, 
+          1, 
+          0, 
+          11
+        ]
       ]
     ]
   ], 
-  "stanford_dep": [
-    {
-      "dep": "A", 
-      "dep_idx": 0, 
-      "gov": "form", 
-      "gov_idx": 1, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "form", 
-      "dep_idx": 1, 
-      "gov": "make", 
-      "gov_idx": 9, 
-      "rel": "xsubj"
-    }, 
-    {
-      "dep": "form", 
-      "dep_idx": 1, 
-      "gov": "caused", 
-      "gov_idx": 14, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "asbestos", 
-      "dep_idx": 3, 
-      "gov": "form", 
-      "gov_idx": 1, 
-      "rel": "prep_of"
-    }, 
-    {
-      "dep": "once", 
-      "dep_idx": 4, 
-      "gov": "used", 
-      "gov_idx": 5, 
-      "rel": "advmod"
-    }, 
-    {
-      "dep": "used", 
-      "dep_idx": 5, 
-      "gov": "form", 
-      "gov_idx": 1, 
-      "rel": "partmod"
-    }, 
-    {
-      "dep": "to", 
-      "dep_idx": 8, 
-      "gov": "make", 
-      "gov_idx": 9, 
-      "rel": "aux"
-    }, 
-    {
-      "dep": "make", 
-      "dep_idx": 9, 
-      "gov": "used", 
-      "gov_idx": 5, 
-      "rel": "xcomp"
-    }, 
-    {
-      "dep": "Kent", 
-      "dep_idx": 10, 
-      "gov": "filters", 
-      "gov_idx": 12, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "cigarette", 
-      "dep_idx": 11, 
-      "gov": "filters", 
-      "gov_idx": 12, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "filters", 
-      "dep_idx": 12, 
-      "gov": "make", 
-      "gov_idx": 9, 
-      "rel": "dobj"
-    }, 
-    {
-      "dep": "has", 
-      "dep_idx": 13, 
-      "gov": "caused", 
-      "gov_idx": 14, 
-      "rel": "aux"
-    }, 
-    {
-      "dep": "caused", 
-      "dep_idx": 14, 
-      "gov": "reported", 
-      "gov_idx": 37, 
-      "rel": "ccomp"
-    }, 
-    {
-      "dep": "a", 
-      "dep_idx": 15, 
-      "gov": "percentage", 
-      "gov_idx": 17, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "high", 
-      "dep_idx": 16, 
-      "gov": "percentage", 
-      "gov_idx": 17, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "percentage", 
-      "dep_idx": 17, 
-      "gov": "caused", 
-      "gov_idx": 14, 
-      "rel": "dobj"
-    }, 
-    {
-      "dep": "cancer", 
-      "dep_idx": 19, 
-      "gov": "deaths", 
-      "gov_idx": 20, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "deaths", 
-      "dep_idx": 20, 
-      "gov": "percentage", 
-      "gov_idx": 17, 
-      "rel": "prep_of"
-    }, 
-    {
-      "dep": "a", 
-      "dep_idx": 22, 
-      "gov": "group", 
-      "gov_idx": 23, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "group", 
-      "dep_idx": 23, 
-      "gov": "percentage", 
-      "gov_idx": 17, 
-      "rel": "prep_among"
-    }, 
-    {
-      "dep": "workers", 
-      "dep_idx": 25, 
-      "gov": "group", 
-      "gov_idx": 23, 
-      "rel": "prep_of"
-    }, 
-    {
-      "dep": "exposed", 
-      "dep_idx": 26, 
-      "gov": "workers", 
-      "gov_idx": 25, 
-      "rel": "partmod"
-    }, 
-    {
-      "dep": "it", 
-      "dep_idx": 29, 
-      "gov": "exposed", 
-      "gov_idx": 26, 
-      "rel": "prep_to"
-    }, 
-    {
-      "dep": "more", 
-      "dep_idx": 30, 
-      "gov": "than", 
-      "gov_idx": 31, 
-      "rel": "advmod"
-    }, 
-    {
-      "dep": "than", 
-      "dep_idx": 31, 
-      "gov": "30", 
-      "gov_idx": 32, 
-      "rel": "quantmod"
-    }, 
-    {
-      "dep": "30", 
-      "dep_idx": 32, 
-      "gov": "years", 
-      "gov_idx": 33, 
-      "rel": "num"
-    }, 
-    {
-      "dep": "years", 
-      "dep_idx": 33, 
-      "gov": "ago", 
-      "gov_idx": 34, 
-      "rel": "npadvmod"
-    }, 
-    {
-      "dep": "ago", 
-      "dep_idx": 34, 
-      "gov": "exposed", 
-      "gov_idx": 26, 
-      "rel": "advmod"
-    }, 
-    {
-      "dep": "researchers", 
-      "dep_idx": 36, 
-      "gov": "reported", 
-      "gov_idx": 37, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "reported", 
-      "dep_idx": 37, 
-      "gov": "ROOT", 
-      "gov_idx": -1, 
-      "rel": "root"
-    }
-  ], 
-  "stanford_dep_basic": [
-    {
-      "dep": "A", 
-      "dep_idx": 0, 
-      "gov": "form", 
-      "gov_idx": 1, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "form", 
-      "dep_idx": 1, 
-      "gov": "caused", 
-      "gov_idx": 14, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "of", 
-      "dep_idx": 2, 
-      "gov": "form", 
-      "gov_idx": 1, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "asbestos", 
-      "dep_idx": 3, 
-      "gov": "of", 
-      "gov_idx": 2, 
-      "rel": "pobj"
-    }, 
-    {
-      "dep": "once", 
-      "dep_idx": 4, 
-      "gov": "used", 
-      "gov_idx": 5, 
-      "rel": "advmod"
-    }, 
-    {
-      "dep": "used", 
-      "dep_idx": 5, 
-      "gov": "form", 
-      "gov_idx": 1, 
-      "rel": "partmod"
-    }, 
-    {
-      "dep": "to", 
-      "dep_idx": 8, 
-      "gov": "make", 
-      "gov_idx": 9, 
-      "rel": "aux"
-    }, 
-    {
-      "dep": "make", 
-      "dep_idx": 9, 
-      "gov": "used", 
-      "gov_idx": 5, 
-      "rel": "xcomp"
-    }, 
-    {
-      "dep": "Kent", 
-      "dep_idx": 10, 
-      "gov": "filters", 
-      "gov_idx": 12, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "cigarette", 
-      "dep_idx": 11, 
-      "gov": "filters", 
-      "gov_idx": 12, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "filters", 
-      "dep_idx": 12, 
-      "gov": "make", 
-      "gov_idx": 9, 
-      "rel": "dobj"
-    }, 
-    {
-      "dep": "has", 
-      "dep_idx": 13, 
-      "gov": "caused", 
-      "gov_idx": 14, 
-      "rel": "aux"
-    }, 
-    {
-      "dep": "caused", 
-      "dep_idx": 14, 
-      "gov": "reported", 
-      "gov_idx": 37, 
-      "rel": "ccomp"
-    }, 
-    {
-      "dep": "a", 
-      "dep_idx": 15, 
-      "gov": "percentage", 
-      "gov_idx": 17, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "high", 
-      "dep_idx": 16, 
-      "gov": "percentage", 
-      "gov_idx": 17, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "percentage", 
-      "dep_idx": 17, 
-      "gov": "caused", 
-      "gov_idx": 14, 
-      "rel": "dobj"
-    }, 
-    {
-      "dep": "of", 
-      "dep_idx": 18, 
-      "gov": "percentage", 
-      "gov_idx": 17, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "cancer", 
-      "dep_idx": 19, 
-      "gov": "deaths", 
-      "gov_idx": 20, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "deaths", 
-      "dep_idx": 20, 
-      "gov": "of", 
-      "gov_idx": 18, 
-      "rel": "pobj"
-    }, 
-    {
-      "dep": "among", 
-      "dep_idx": 21, 
-      "gov": "percentage", 
-      "gov_idx": 17, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "a", 
-      "dep_idx": 22, 
-      "gov": "group", 
-      "gov_idx": 23, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "group", 
-      "dep_idx": 23, 
-      "gov": "among", 
-      "gov_idx": 21, 
-      "rel": "pobj"
-    }, 
-    {
-      "dep": "of", 
-      "dep_idx": 24, 
-      "gov": "group", 
-      "gov_idx": 23, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "workers", 
-      "dep_idx": 25, 
-      "gov": "of", 
-      "gov_idx": 24, 
-      "rel": "pobj"
-    }, 
-    {
-      "dep": "exposed", 
-      "dep_idx": 26, 
-      "gov": "workers", 
-      "gov_idx": 25, 
-      "rel": "partmod"
-    }, 
-    {
-      "dep": "to", 
-      "dep_idx": 28, 
-      "gov": "exposed", 
-      "gov_idx": 26, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "it", 
-      "dep_idx": 29, 
-      "gov": "to", 
-      "gov_idx": 28, 
-      "rel": "pobj"
-    }, 
-    {
-      "dep": "more", 
-      "dep_idx": 30, 
-      "gov": "than", 
-      "gov_idx": 31, 
-      "rel": "advmod"
-    }, 
-    {
-      "dep": "than", 
-      "dep_idx": 31, 
-      "gov": "30", 
-      "gov_idx": 32, 
-      "rel": "quantmod"
-    }, 
-    {
-      "dep": "30", 
-      "dep_idx": 32, 
-      "gov": "years", 
-      "gov_idx": 33, 
-      "rel": "num"
-    }, 
-    {
-      "dep": "years", 
-      "dep_idx": 33, 
-      "gov": "ago", 
-      "gov_idx": 34, 
-      "rel": "npadvmod"
-    }, 
-    {
-      "dep": "ago", 
-      "dep_idx": 34, 
-      "gov": "exposed", 
-      "gov_idx": 26, 
-      "rel": "advmod"
-    }, 
-    {
-      "dep": "researchers", 
-      "dep_idx": 36, 
-      "gov": "reported", 
-      "gov_idx": 37, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "reported", 
-      "dep_idx": 37, 
-      "gov": "ROOT", 
-      "gov_idx": -1, 
-      "rel": "root"
-    }
-  ], 
-  "text": "A form of asbestos once used to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed to it more than 30 years ago , researchers reported .", 
-  "timex": [
-    [
-      "t2", 
-      30, 
-      34, 
-      "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET P-30Y\" type=\"DATE\" mod=\"MORE_THAN\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">more than 30 years ago</TIMEX3>"
-    ], 
-    [
-      "t1", 
-      4, 
-      4, 
-      "<TIMEX3 tid=\"t1\" value=\"PAST_REF\" type=\"DATE\">once</TIMEX3>"
-    ]
-  ], 
-  "treebank_sentence": "A form of asbestos once used * *PRO* to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed * to it more than 30 years ago , researchers reported 0 *T*-1 .", 
+  "sentence_nr": 0, 
   "tuples": [
     [
       "det", 
@@ -1009,338 +249,306 @@
     [
       "A", 
       {
-        "Lemma": "a", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "DT", 
-        "idx": 0
+        "Lemma": "a", 
+        "PartOfSpeech": "DT"
       }
     ], 
     [
       "form", 
       {
-        "Lemma": "form", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 1
+        "Lemma": "form", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "of", 
       {
-        "Lemma": "of", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 2
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "asbestos", 
       {
-        "Lemma": "asbestos", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 3
+        "Lemma": "asbestos", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "once", 
       {
-        "Lemma": "once", 
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "PAST_REF", 
-        "PartOfSpeech": "RB", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"PAST_REF\" type=\"DATE\">once</TIMEX3>", 
-        "idx": 4
+        "Lemma": "once", 
+        "PartOfSpeech": "RB", 
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
       "used", 
       {
-        "Lemma": "use", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VBN", 
-        "idx": 5
+        "Lemma": "use", 
+        "PartOfSpeech": "VBN"
       }
     ], 
     [
       "to", 
       {
-        "Lemma": "to", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "TO", 
-        "idx": 8
+        "Lemma": "to", 
+        "PartOfSpeech": "TO"
       }
     ], 
     [
       "make", 
       {
-        "Lemma": "make", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VB", 
-        "idx": 9
+        "Lemma": "make", 
+        "PartOfSpeech": "VB"
       }
     ], 
     [
       "Kent", 
       {
-        "Lemma": "Kent", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NNP", 
-        "idx": 10
+        "Lemma": "Kent", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "cigarette", 
       {
-        "Lemma": "cigarette", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 11
+        "Lemma": "cigarette", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "filters", 
       {
-        "Lemma": "filter", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NNS", 
-        "idx": 12
+        "Lemma": "filter", 
+        "PartOfSpeech": "NNS"
       }
     ], 
     [
       "has", 
       {
-        "Lemma": "have", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VBZ", 
-        "idx": 13
+        "Lemma": "have", 
+        "PartOfSpeech": "VBZ"
       }
     ], 
     [
       "caused", 
       {
-        "Lemma": "cause", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VBN", 
-        "idx": 14
+        "Lemma": "cause", 
+        "PartOfSpeech": "VBN"
       }
     ], 
     [
       "a", 
       {
-        "Lemma": "a", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "DT", 
-        "idx": 15
+        "Lemma": "a", 
+        "PartOfSpeech": "DT"
       }
     ], 
     [
       "high", 
       {
-        "Lemma": "high", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "JJ", 
-        "idx": 16
+        "Lemma": "high", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
       "percentage", 
       {
-        "Lemma": "percentage", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 17
+        "Lemma": "percentage", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "of", 
       {
-        "Lemma": "of", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 18
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "cancer", 
       {
-        "Lemma": "cancer", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 19
+        "Lemma": "cancer", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "deaths", 
       {
-        "Lemma": "death", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NNS", 
-        "idx": 20
+        "Lemma": "death", 
+        "PartOfSpeech": "NNS"
       }
     ], 
     [
       "among", 
       {
-        "Lemma": "among", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 21
+        "Lemma": "among", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "a", 
       {
-        "Lemma": "a", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "DT", 
-        "idx": 22
+        "Lemma": "a", 
+        "PartOfSpeech": "DT"
       }
     ], 
     [
       "group", 
       {
-        "Lemma": "group", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 23
+        "Lemma": "group", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "of", 
       {
-        "Lemma": "of", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 24
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "workers", 
       {
-        "Lemma": "worker", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NNS", 
-        "idx": 25
+        "Lemma": "worker", 
+        "PartOfSpeech": "NNS"
       }
     ], 
     [
       "exposed", 
       {
-        "Lemma": "expose", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VBN", 
-        "idx": 26
+        "Lemma": "expose", 
+        "PartOfSpeech": "VBN"
       }
     ], 
     [
       "to", 
       {
-        "Lemma": "to", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "TO", 
-        "idx": 28
+        "Lemma": "to", 
+        "PartOfSpeech": "TO"
       }
     ], 
     [
       "it", 
       {
-        "Lemma": "it", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "PRP", 
-        "idx": 29
+        "Lemma": "it", 
+        "PartOfSpeech": "PRP"
       }
     ], 
     [
       "more", 
       {
-        "Lemma": "more", 
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "OFFSET", 
-        "PartOfSpeech": "JJR", 
         "Timex": "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET P-30Y\" type=\"DATE\" mod=\"MORE_THAN\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">more than 30 years ago</TIMEX3>", 
-        "idx": 30
+        "Lemma": "more", 
+        "PartOfSpeech": "JJR", 
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
       "than", 
       {
-        "Lemma": "than", 
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "OFFSET", 
-        "PartOfSpeech": "IN", 
         "Timex": "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET P-30Y\" type=\"DATE\" mod=\"MORE_THAN\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">more than 30 years ago</TIMEX3>", 
-        "idx": 31
+        "Lemma": "than", 
+        "PartOfSpeech": "IN", 
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
       "30", 
       {
-        "Lemma": "30", 
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "OFFSET", 
-        "PartOfSpeech": "CD", 
         "Timex": "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET P-30Y\" type=\"DATE\" mod=\"MORE_THAN\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">more than 30 years ago</TIMEX3>", 
-        "idx": 32
+        "Lemma": "30", 
+        "PartOfSpeech": "CD", 
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
       "years", 
       {
-        "Lemma": "year", 
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "OFFSET", 
-        "PartOfSpeech": "NNS", 
         "Timex": "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET P-30Y\" type=\"DATE\" mod=\"MORE_THAN\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">more than 30 years ago</TIMEX3>", 
-        "idx": 33
+        "Lemma": "year", 
+        "PartOfSpeech": "NNS", 
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
       "ago", 
       {
-        "Lemma": "ago", 
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "OFFSET", 
-        "PartOfSpeech": "RB", 
         "Timex": "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET P-30Y\" type=\"DATE\" mod=\"MORE_THAN\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">more than 30 years ago</TIMEX3>", 
-        "idx": 34
+        "Lemma": "ago", 
+        "PartOfSpeech": "RB", 
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
       ",", 
       {
-        "Lemma": ",", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ",", 
-        "idx": 35
+        "Lemma": ",", 
+        "PartOfSpeech": ","
       }
     ], 
     [
       "researchers", 
       {
-        "Lemma": "researcher", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NNS", 
-        "idx": 36
+        "Lemma": "researcher", 
+        "PartOfSpeech": "NNS"
       }
     ], 
     [
       "reported", 
       {
-        "Lemma": "report", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VBD", 
-        "idx": 37
+        "Lemma": "report", 
+        "PartOfSpeech": "VBD"
       }
     ], 
     [
       ".", 
       {
-        "Lemma": ".", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ".", 
-        "idx": 40
+        "Lemma": ".", 
+        "PartOfSpeech": "."
       }
     ]
-  ]
+  ], 
+  "treebank_sentence": "A form of asbestos once used * *PRO* to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed * to it more than 30 years ago , researchers reported 0 *T*-1 .", 
+  "parsetree": "(ROOT (S (S (NP (NP (DT A) (NN form)) (PP (IN of) (NP (NP (NN asbestos)) (VP (ADVP (RB once)) (VBN used) (S (VP (TO to) (VP (VB make) (NP (NNP Kent) (NN cigarette) (NNS filters))))))))) (VP (VBZ has) (VP (VBN caused) (NP (NP (DT a) (JJ high) (NN percentage)) (PP (IN of) (NP (NN cancer) (NNS deaths)))) (PP (IN among) (NP (NP (DT a) (NN group)) (PP (IN of) (NP (NP (NNS workers)) (VP (VBN exposed) (PP (TO to) (NP (PRP it))) (ADVP (NP (QP (XS (JJR more) (IN than)) (CD 30)) (NNS years)) (RB ago)))))))))) (, ,) (NP (NNS researchers)) (VP (VBD reported)) (. .)))", 
+  "goldparse": "(TOP (S (S-TPC-1 (NP-SBJ (NP (NP (DT A) (NN form)) (PP (IN of) (NP (NN asbestos)))) (VP (ADVP-TMP (RB once)) (VBN used) (NP (-NONE- *)) (S-CLR (NP-SBJ (-NONE- *PRO*)) (VP (TO to) (VP (VB make) (NP (NNP Kent) (NN cigarette) (NNS filters))))))) (VP (VBZ has) (VP (VBN caused) (NP (NP (DT a) (JJ high) (NN percentage)) (PP (IN of) (NP (NN cancer) (NNS deaths))) (PP-LOC (IN among) (NP (NP (DT a) (NN group)) (PP (IN of) (NP (NP (NNS workers)) (VP (VBN exposed) (NP (-NONE- *)) (PP-CLR (IN to) (NP (PRP it))) (ADVP-TMP (NP (QP (RBR more) (IN than) (CD 30)) (NNS years)) (IN ago))))))))))) (, ,) (NP-SBJ (NNS researchers)) (VP (VBD reported) (SBAR (-NONE- 0) (S (-NONE- *T*-1)))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on"
 }

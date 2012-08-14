@@ -1,10 +1,13 @@
 {
+  "text": "However , five other countries -- China , Thailand , India , Brazil and Mexico -- will remain on that so - called priority watch list as a result of an interim review , U.S. Trade Representative Carla Hills announced .", 
+  "coref_chains": [], 
   "bbn_ne": [
     [
       2, 
       2, 
       "five", 
       "CARDINAL", 
+      "", 
       "", 
       "<NUMEX TYPE=\"CARDINAL\">five</NUMEX>"
     ], 
@@ -14,6 +17,7 @@
       "China", 
       "GPE", 
       "COUNTRY", 
+      "", 
       "<ENAMEX TYPE=\"GPE:COUNTRY\">China</ENAMEX>"
     ], 
     [
@@ -22,6 +26,7 @@
       "Thailand", 
       "GPE", 
       "COUNTRY", 
+      "", 
       "<ENAMEX TYPE=\"GPE:COUNTRY\">Thailand</ENAMEX>"
     ], 
     [
@@ -30,6 +35,7 @@
       "India", 
       "GPE", 
       "COUNTRY", 
+      "", 
       "<ENAMEX TYPE=\"GPE:COUNTRY\">India</ENAMEX>"
     ], 
     [
@@ -38,6 +44,7 @@
       "Brazil", 
       "GPE", 
       "COUNTRY", 
+      "", 
       "<ENAMEX TYPE=\"GPE:COUNTRY\">Brazil</ENAMEX>"
     ], 
     [
@@ -46,6 +53,7 @@
       "Mexico", 
       "GPE", 
       "COUNTRY", 
+      "", 
       "<ENAMEX TYPE=\"GPE:COUNTRY\">Mexico</ENAMEX>"
     ], 
     [
@@ -54,6 +62,7 @@
       "U.S.", 
       "GPE", 
       "COUNTRY", 
+      "", 
       "<ENAMEX TYPE=\"GPE:COUNTRY\">U.S.</ENAMEX>"
     ], 
     [
@@ -61,6 +70,7 @@
       36, 
       "Trade Representative", 
       "PER_DESC", 
+      "", 
       "", 
       "<ENAMEX TYPE=\"PER_DESC\">Trade Representative</ENAMEX>"
     ], 
@@ -70,715 +80,81 @@
       "Carla Hills", 
       "PERSON", 
       "", 
+      "", 
       "<ENAMEX TYPE=\"PERSON\">Carla Hills</ENAMEX>"
     ]
   ], 
-  "coref_chains": [], 
-  "document_id": "nw/wsj/00/wsj_0020@all@wsj@nw@en@on", 
-  "goldparse": "(TOP (S (S-TPC-1 (ADVP (RB However)) (, ,) (NP-SBJ (NP (CD five) (JJ other) (NNS countries)) (: --) (NP (NNP China) (, ,) (NNP Thailand) (, ,) (NNP India) (, ,) (NNP Brazil) (CC and) (NNP Mexico)) (: --)) (VP (MD will) (VP (VB remain) (PP-LOC-PRD (IN on) (NP (DT that) (ADJP (RB so) (HYPH -) (VBN called)) (NML (NN priority) (NN watch)) (NN list))) (PP-PRP (IN as) (NP (NP (DT a) (NN result)) (PP (IN of) (NP (DT an) (JJ interim) (NN review)))))))) (, ,) (NP-SBJ (NML (NNP U.S.) (NNP Trade) (NNP Representative)) (NNP Carla) (NNP Hills)) (VP (VBD announced) (SBAR (-NONE- 0) (S (-NONE- *T*-1)))) (. .)))", 
-  "nom": [
-    {
-      "args": [
-        [
-          "ARG1", 
-          "2:2", 
-          2, 
-          15, 
-          "five other countries -- China , Thailand , India , Brazil and Mexico --"
-        ], 
-        [
-          "Support", 
-          "17:0,18:0", 
-          null, 
-          null, 
-          ""
-        ], 
-        [
-          "ARG2", 
-          "21:0,22:0", 
-          null, 
-          null, 
-          ""
-        ], 
-        [
-          "rel", 
-          "23:0", 
-          25, 
-          25, 
-          "list"
-        ]
-      ], 
-      "baseform": "list", 
-      "frame": "list.01", 
-      "tokenNr": "23"
-    }, 
-    {
-      "args": [
-        [
-          "ARG2-PRD", 
-          "2:2,16:0,17:0,18:1", 
-          null, 
-          null, 
-          ""
-        ], 
-        [
-          "rel", 
-          "26:0", 
-          28, 
-          28, 
-          "result"
-        ], 
-        [
-          "ARG1", 
-          "27:1", 
-          29, 
-          32, 
-          "of an interim review"
-        ]
-      ], 
-      "baseform": "result", 
-      "frame": "result.01", 
-      "tokenNr": "26"
-    }, 
-    {
-      "args": [
-        [
-          "ARGM-TMP", 
-          "29:0", 
-          31, 
-          31, 
-          "interim"
-        ], 
-        [
-          "rel", 
-          "30:0", 
-          32, 
-          32, 
-          "review"
-        ]
-      ], 
-      "baseform": "review", 
-      "frame": "review.01", 
-      "tokenNr": "30"
-    }, 
-    {
-      "args": [
-        [
-          "ARG1", 
-          "2:2", 
-          2, 
-          15, 
-          "five other countries -- China , Thailand , India , Brazil and Mexico --"
-        ], 
-        [
-          "Support", 
-          "17:0,18:0,23:0", 
-          null, 
-          null, 
-          ""
-        ], 
-        [
-          "rel", 
-          "22:0", 
-          24, 
-          24, 
-          "watch"
-        ]
-      ], 
-      "baseform": "watch", 
-      "frame": "watch.01", 
-      "tokenNr": "22"
-    }
-  ], 
-  "parsetree": "(ROOT (S (S (ADVP (RB However)) (, ,) (NP (NP (CD five) (JJ other) (NNS countries)) (PRN (: --) (NP (NP (NNP China)) (, ,) (NP (NNP Thailand) (, ,) (NNP India) (, ,) (NNP Brazil) (CC and) (NNP Mexico))) (: --))) (VP (MD will) (VP (VB remain) (PP (IN on) (NP (DT that))) (ADVP (RB so))))) (: -) (S (S (VP (VBN called) (NP (NP (NN priority) (NN watch) (NN list)) (PP (IN as) (NP (NP (DT a) (NN result)) (PP (IN of) (NP (DT an) (JJ interim) (NN review)))))))) (, ,) (NP (NNP U.S.) (NNP Trade) (NNP Representative) (NNP Carla) (NNP Hills)) (VP (VBD announced))) (. .)))", 
-  "prop": [
-    {
-      "args": [
-        [
-          "rel", 
-          "17:0", 
-          17, 
-          17, 
-          "remain"
-        ], 
-        [
-          "ARGM-DIS", 
-          "0:1", 
-          0, 
-          0, 
-          "However"
-        ], 
-        [
-          "ARG1", 
-          "2:2", 
-          2, 
-          15, 
-          "five other countries -- China , Thailand , India , Brazil and Mexico --"
-        ], 
-        [
-          "ARGM-MOD", 
-          "16:0", 
-          16, 
-          16, 
-          "will"
-        ], 
-        [
-          "ARG3", 
-          "18:1", 
-          18, 
-          25, 
-          "on that so - called priority watch list"
-        ], 
-        [
-          "ARGM-CAU", 
-          "26:1", 
-          26, 
-          32, 
-          "as a result of an interim review"
-        ]
-      ], 
-      "baseform": "remain", 
-      "basepos": "v", 
-      "frame": "remain.01", 
-      "inflection": "-----"
-    }, 
-    {
-      "args": [
-        [
-          "rel", 
-          "39:0", 
-          39, 
-          39, 
-          "announced"
-        ], 
-        [
-          "ARG0", 
-          "34:2", 
-          34, 
-          38, 
-          "U.S. Trade Representative Carla Hills"
-        ], 
-        [
-          "ARG1", 
-          "40:1", 
-          0, 
-          32, 
-          "However , five other countries -- China , Thailand , India , Brazil and Mexico -- will remain on that so - called priority watch list as a result of an interim review"
-        ]
-      ], 
-      "baseform": "announce", 
-      "basepos": "v", 
-      "frame": "announce.01", 
-      "inflection": "-----"
-    }
-  ], 
-  "ptbparse": "( (S (S-TPC-1 (ADVP (RB However) ) (, ,) (NP-SBJ (NP (CD five) (JJ other) (NNS countries) ) (: --) (NP (NNP China) (, ,) (NNP Thailand) (, ,) (NNP India) (, ,) (NNP Brazil) (CC and) (NNP Mexico) ) (: --) ) (VP (MD will) (VP (VB remain) (PP-LOC-PRD (IN on) (NP (DT that) (JJ so-called) (NN priority) (NN watch) (NN list) )) (PP-PRP (IN as) (NP (NP (DT a) (NN result) ) (PP (IN of) (NP (DT an) (JJ interim) (NN review) ))))))) (, ,) (NP-SBJ (NNP U.S.) (NNP Trade) (NNP Representative) (NNP Carla) (NNP Hills) ) (VP (VBD announced) (SBAR (-NONE- 0) (S (-NONE- *T*-1) ))) (. .) ))", 
-  "sentence_nr": 1, 
-  "stanford_coref": [
+  "coref": [
     [
       [
-        "China", 
-        6, 
-        7
+        [
+          "China", 
+          0, 
+          6, 
+          6, 
+          7
+        ], 
+        [
+          "China , Thailand , India , Brazil and Mexico", 
+          0, 
+          6, 
+          6, 
+          15
+        ]
       ], 
       [
-        "China , Thailand , India , Brazil and Mexico", 
-        6, 
-        15
+        [
+          "Thailand , India , Brazil and Mexico", 
+          0, 
+          8, 
+          8, 
+          15
+        ], 
+        [
+          "China , Thailand , India , Brazil and Mexico", 
+          0, 
+          6, 
+          6, 
+          15
+        ]
+      ], 
+      [
+        [
+          "Thailand", 
+          0, 
+          8, 
+          8, 
+          9
+        ], 
+        [
+          "China , Thailand , India , Brazil and Mexico", 
+          0, 
+          6, 
+          6, 
+          15
+        ]
       ]
     ], 
     [
       [
-        "Thailand , India , Brazil and Mexico", 
-        8, 
-        15
-      ], 
-      [
-        "China , Thailand , India , Brazil and Mexico", 
-        6, 
-        15
-      ]
-    ], 
-    [
-      [
-        "Thailand", 
-        8, 
-        9
-      ], 
-      [
-        "China , Thailand , India , Brazil and Mexico", 
-        6, 
-        15
-      ]
-    ], 
-    [
-      [
-        "that", 
-        19, 
-        20
-      ], 
-      [
-        "Mexico", 
-        14, 
-        15
+        [
+          "that", 
+          0, 
+          -1, 
+          19, 
+          20
+        ], 
+        [
+          "Mexico", 
+          0, 
+          4, 
+          14, 
+          15
+        ]
       ]
     ]
   ], 
-  "stanford_dep": [
-    {
-      "dep": "However", 
-      "dep_idx": 0, 
-      "gov": "remain", 
-      "gov_idx": 17, 
-      "rel": "advmod"
-    }, 
-    {
-      "dep": "five", 
-      "dep_idx": 2, 
-      "gov": "countries", 
-      "gov_idx": 4, 
-      "rel": "num"
-    }, 
-    {
-      "dep": "other", 
-      "dep_idx": 3, 
-      "gov": "countries", 
-      "gov_idx": 4, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "countries", 
-      "dep_idx": 4, 
-      "gov": "remain", 
-      "gov_idx": 17, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "China", 
-      "dep_idx": 6, 
-      "gov": "countries", 
-      "gov_idx": 4, 
-      "rel": "dep"
-    }, 
-    {
-      "dep": "Thailand", 
-      "dep_idx": 8, 
-      "gov": "countries", 
-      "gov_idx": 4, 
-      "rel": "dep"
-    }, 
-    {
-      "dep": "Thailand", 
-      "dep_idx": 8, 
-      "gov": "China", 
-      "gov_idx": 6, 
-      "rel": "conj_and"
-    }, 
-    {
-      "dep": "India", 
-      "dep_idx": 10, 
-      "gov": "countries", 
-      "gov_idx": 4, 
-      "rel": "dep"
-    }, 
-    {
-      "dep": "India", 
-      "dep_idx": 10, 
-      "gov": "China", 
-      "gov_idx": 6, 
-      "rel": "conj_and"
-    }, 
-    {
-      "dep": "Brazil", 
-      "dep_idx": 12, 
-      "gov": "countries", 
-      "gov_idx": 4, 
-      "rel": "dep"
-    }, 
-    {
-      "dep": "Brazil", 
-      "dep_idx": 12, 
-      "gov": "China", 
-      "gov_idx": 6, 
-      "rel": "conj_and"
-    }, 
-    {
-      "dep": "Mexico", 
-      "dep_idx": 14, 
-      "gov": "countries", 
-      "gov_idx": 4, 
-      "rel": "dep"
-    }, 
-    {
-      "dep": "Mexico", 
-      "dep_idx": 14, 
-      "gov": "China", 
-      "gov_idx": 6, 
-      "rel": "conj_and"
-    }, 
-    {
-      "dep": "will", 
-      "dep_idx": 16, 
-      "gov": "remain", 
-      "gov_idx": 17, 
-      "rel": "aux"
-    }, 
-    {
-      "dep": "remain", 
-      "dep_idx": 17, 
-      "gov": "announced", 
-      "gov_idx": 39, 
-      "rel": "ccomp"
-    }, 
-    {
-      "dep": "that", 
-      "dep_idx": 19, 
-      "gov": "list", 
-      "gov_idx": 25, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "so", 
-      "dep_idx": 20, 
-      "gov": "called", 
-      "gov_idx": 22, 
-      "rel": "advmod"
-    }, 
-    {
-      "dep": "called", 
-      "dep_idx": 22, 
-      "gov": "list", 
-      "gov_idx": 25, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "priority", 
-      "dep_idx": 23, 
-      "gov": "watch", 
-      "gov_idx": 24, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "watch", 
-      "dep_idx": 24, 
-      "gov": "list", 
-      "gov_idx": 25, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "list", 
-      "dep_idx": 25, 
-      "gov": "remain", 
-      "gov_idx": 17, 
-      "rel": "prep_on"
-    }, 
-    {
-      "dep": "a", 
-      "dep_idx": 27, 
-      "gov": "result", 
-      "gov_idx": 28, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "result", 
-      "dep_idx": 28, 
-      "gov": "remain", 
-      "gov_idx": 17, 
-      "rel": "prep_as"
-    }, 
-    {
-      "dep": "an", 
-      "dep_idx": 30, 
-      "gov": "review", 
-      "gov_idx": 32, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "interim", 
-      "dep_idx": 31, 
-      "gov": "review", 
-      "gov_idx": 32, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "review", 
-      "dep_idx": 32, 
-      "gov": "result", 
-      "gov_idx": 28, 
-      "rel": "prep_of"
-    }, 
-    {
-      "dep": "U.S.", 
-      "dep_idx": 34, 
-      "gov": "Representative", 
-      "gov_idx": 36, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Trade", 
-      "dep_idx": 35, 
-      "gov": "Representative", 
-      "gov_idx": 36, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Representative", 
-      "dep_idx": 36, 
-      "gov": "Hills", 
-      "gov_idx": 38, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Carla", 
-      "dep_idx": 37, 
-      "gov": "Hills", 
-      "gov_idx": 38, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Hills", 
-      "dep_idx": 38, 
-      "gov": "announced", 
-      "gov_idx": 39, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "announced", 
-      "dep_idx": 39, 
-      "gov": "ROOT", 
-      "gov_idx": -1, 
-      "rel": "root"
-    }
-  ], 
-  "stanford_dep_basic": [
-    {
-      "dep": "However", 
-      "dep_idx": 0, 
-      "gov": "remain", 
-      "gov_idx": 17, 
-      "rel": "advmod"
-    }, 
-    {
-      "dep": "five", 
-      "dep_idx": 2, 
-      "gov": "countries", 
-      "gov_idx": 4, 
-      "rel": "num"
-    }, 
-    {
-      "dep": "other", 
-      "dep_idx": 3, 
-      "gov": "countries", 
-      "gov_idx": 4, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "countries", 
-      "dep_idx": 4, 
-      "gov": "remain", 
-      "gov_idx": 17, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "China", 
-      "dep_idx": 6, 
-      "gov": "countries", 
-      "gov_idx": 4, 
-      "rel": "dep"
-    }, 
-    {
-      "dep": "Thailand", 
-      "dep_idx": 8, 
-      "gov": "China", 
-      "gov_idx": 6, 
-      "rel": "conj"
-    }, 
-    {
-      "dep": "India", 
-      "dep_idx": 10, 
-      "gov": "China", 
-      "gov_idx": 6, 
-      "rel": "conj"
-    }, 
-    {
-      "dep": "Brazil", 
-      "dep_idx": 12, 
-      "gov": "China", 
-      "gov_idx": 6, 
-      "rel": "conj"
-    }, 
-    {
-      "dep": "and", 
-      "dep_idx": 13, 
-      "gov": "China", 
-      "gov_idx": 6, 
-      "rel": "cc"
-    }, 
-    {
-      "dep": "Mexico", 
-      "dep_idx": 14, 
-      "gov": "China", 
-      "gov_idx": 6, 
-      "rel": "conj"
-    }, 
-    {
-      "dep": "will", 
-      "dep_idx": 16, 
-      "gov": "remain", 
-      "gov_idx": 17, 
-      "rel": "aux"
-    }, 
-    {
-      "dep": "remain", 
-      "dep_idx": 17, 
-      "gov": "announced", 
-      "gov_idx": 39, 
-      "rel": "ccomp"
-    }, 
-    {
-      "dep": "on", 
-      "dep_idx": 18, 
-      "gov": "remain", 
-      "gov_idx": 17, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "that", 
-      "dep_idx": 19, 
-      "gov": "list", 
-      "gov_idx": 25, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "so", 
-      "dep_idx": 20, 
-      "gov": "called", 
-      "gov_idx": 22, 
-      "rel": "advmod"
-    }, 
-    {
-      "dep": "called", 
-      "dep_idx": 22, 
-      "gov": "list", 
-      "gov_idx": 25, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "priority", 
-      "dep_idx": 23, 
-      "gov": "watch", 
-      "gov_idx": 24, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "watch", 
-      "dep_idx": 24, 
-      "gov": "list", 
-      "gov_idx": 25, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "list", 
-      "dep_idx": 25, 
-      "gov": "on", 
-      "gov_idx": 18, 
-      "rel": "pobj"
-    }, 
-    {
-      "dep": "as", 
-      "dep_idx": 26, 
-      "gov": "remain", 
-      "gov_idx": 17, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "a", 
-      "dep_idx": 27, 
-      "gov": "result", 
-      "gov_idx": 28, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "result", 
-      "dep_idx": 28, 
-      "gov": "as", 
-      "gov_idx": 26, 
-      "rel": "pobj"
-    }, 
-    {
-      "dep": "of", 
-      "dep_idx": 29, 
-      "gov": "result", 
-      "gov_idx": 28, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "an", 
-      "dep_idx": 30, 
-      "gov": "review", 
-      "gov_idx": 32, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "interim", 
-      "dep_idx": 31, 
-      "gov": "review", 
-      "gov_idx": 32, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "review", 
-      "dep_idx": 32, 
-      "gov": "of", 
-      "gov_idx": 29, 
-      "rel": "pobj"
-    }, 
-    {
-      "dep": "U.S.", 
-      "dep_idx": 34, 
-      "gov": "Representative", 
-      "gov_idx": 36, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Trade", 
-      "dep_idx": 35, 
-      "gov": "Representative", 
-      "gov_idx": 36, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Representative", 
-      "dep_idx": 36, 
-      "gov": "Hills", 
-      "gov_idx": 38, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Carla", 
-      "dep_idx": 37, 
-      "gov": "Hills", 
-      "gov_idx": 38, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Hills", 
-      "dep_idx": 38, 
-      "gov": "announced", 
-      "gov_idx": 39, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "announced", 
-      "dep_idx": 39, 
-      "gov": "ROOT", 
-      "gov_idx": -1, 
-      "rel": "root"
-    }
-  ], 
-  "text": "However , five other countries -- China , Thailand , India , Brazil and Mexico -- will remain on that so - called priority watch list as a result of an interim review , U.S. Trade Representative Carla Hills announced .", 
-  "timex": [], 
-  "treebank_sentence": "However , five other countries -- China , Thailand , India , Brazil and Mexico -- will remain on that so - called priority watch list as a result of an interim review , U.S. Trade Representative Carla Hills announced 0 *T*-1 .", 
+  "sentence_nr": 1, 
   "tuples": [
     [
       "advmod", 
@@ -940,373 +316,336 @@
     [
       "However", 
       {
-        "Lemma": "however", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "RB", 
-        "idx": 0
+        "Lemma": "however", 
+        "PartOfSpeech": "RB"
       }
     ], 
     [
       ",", 
       {
-        "Lemma": ",", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ",", 
-        "idx": 1
+        "Lemma": ",", 
+        "PartOfSpeech": ","
       }
     ], 
     [
       "five", 
       {
         "": "5.0", 
-        "Lemma": "five", 
-        "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": ">", 
+        "Lemma": "five", 
         "PartOfSpeech": "CD", 
-        "idx": 2
+        "NamedEntityTag": "NUMBER"
       }
     ], 
     [
       "other", 
       {
-        "Lemma": "other", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "JJ", 
-        "idx": 3
+        "Lemma": "other", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
       "countries", 
       {
-        "Lemma": "country", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NNS", 
-        "idx": 4
+        "Lemma": "country", 
+        "PartOfSpeech": "NNS"
       }
     ], 
     [
       "--", 
       {
-        "Lemma": "--", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ":", 
-        "idx": 5
+        "Lemma": "--", 
+        "PartOfSpeech": ":"
       }
     ], 
     [
       "China", 
       {
-        "Lemma": "China", 
         "NamedEntityTag": "LOCATION", 
-        "PartOfSpeech": "NNP", 
-        "idx": 6
+        "Lemma": "China", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       ",", 
       {
-        "Lemma": ",", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ",", 
-        "idx": 7
+        "Lemma": ",", 
+        "PartOfSpeech": ","
       }
     ], 
     [
       "Thailand", 
       {
-        "Lemma": "Thailand", 
         "NamedEntityTag": "LOCATION", 
-        "PartOfSpeech": "NNP", 
-        "idx": 8
+        "Lemma": "Thailand", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       ",", 
       {
-        "Lemma": ",", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ",", 
-        "idx": 9
+        "Lemma": ",", 
+        "PartOfSpeech": ","
       }
     ], 
     [
       "India", 
       {
-        "Lemma": "India", 
         "NamedEntityTag": "LOCATION", 
-        "PartOfSpeech": "NNP", 
-        "idx": 10
+        "Lemma": "India", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       ",", 
       {
-        "Lemma": ",", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ",", 
-        "idx": 11
+        "Lemma": ",", 
+        "PartOfSpeech": ","
       }
     ], 
     [
       "Brazil", 
       {
-        "Lemma": "Brazil", 
         "NamedEntityTag": "LOCATION", 
-        "PartOfSpeech": "NNP", 
-        "idx": 12
+        "Lemma": "Brazil", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "and", 
       {
-        "Lemma": "and", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "CC", 
-        "idx": 13
+        "Lemma": "and", 
+        "PartOfSpeech": "CC"
       }
     ], 
     [
       "Mexico", 
       {
-        "Lemma": "Mexico", 
         "NamedEntityTag": "LOCATION", 
-        "PartOfSpeech": "NNP", 
-        "idx": 14
+        "Lemma": "Mexico", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "--", 
       {
-        "Lemma": "--", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ":", 
-        "idx": 15
+        "Lemma": "--", 
+        "PartOfSpeech": ":"
       }
     ], 
     [
       "will", 
       {
-        "Lemma": "will", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "MD", 
-        "idx": 16
+        "Lemma": "will", 
+        "PartOfSpeech": "MD"
       }
     ], 
     [
       "remain", 
       {
-        "Lemma": "remain", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VB", 
-        "idx": 17
+        "Lemma": "remain", 
+        "PartOfSpeech": "VB"
       }
     ], 
     [
       "on", 
       {
-        "Lemma": "on", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 18
+        "Lemma": "on", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "that", 
       {
-        "Lemma": "that", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "DT", 
-        "idx": 19
+        "Lemma": "that", 
+        "PartOfSpeech": "DT"
       }
     ], 
     [
       "so", 
       {
-        "Lemma": "so", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "RB", 
-        "idx": 20
+        "Lemma": "so", 
+        "PartOfSpeech": "RB"
       }
     ], 
     [
       "-", 
       {
-        "Lemma": "-", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ":", 
-        "idx": 21
+        "Lemma": "-", 
+        "PartOfSpeech": ":"
       }
     ], 
     [
       "called", 
       {
-        "Lemma": "call", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VBN", 
-        "idx": 22
+        "Lemma": "call", 
+        "PartOfSpeech": "VBN"
       }
     ], 
     [
       "priority", 
       {
-        "Lemma": "priority", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 23
+        "Lemma": "priority", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "watch", 
       {
-        "Lemma": "watch", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 24
+        "Lemma": "watch", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "list", 
       {
-        "Lemma": "list", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 25
+        "Lemma": "list", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "as", 
       {
-        "Lemma": "as", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 26
+        "Lemma": "as", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "a", 
       {
-        "Lemma": "a", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "DT", 
-        "idx": 27
+        "Lemma": "a", 
+        "PartOfSpeech": "DT"
       }
     ], 
     [
       "result", 
       {
-        "Lemma": "result", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 28
+        "Lemma": "result", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "of", 
       {
-        "Lemma": "of", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 29
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "an", 
       {
-        "Lemma": "a", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "DT", 
-        "idx": 30
+        "Lemma": "a", 
+        "PartOfSpeech": "DT"
       }
     ], 
     [
       "interim", 
       {
-        "Lemma": "interim", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "JJ", 
-        "idx": 31
+        "Lemma": "interim", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
       "review", 
       {
-        "Lemma": "review", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 32
+        "Lemma": "review", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       ",", 
       {
-        "Lemma": ",", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ",", 
-        "idx": 33
+        "Lemma": ",", 
+        "PartOfSpeech": ","
       }
     ], 
     [
       "U.S.", 
       {
-        "Lemma": "U.S.", 
         "NamedEntityTag": "LOCATION", 
-        "PartOfSpeech": "NNP", 
-        "idx": 34
+        "Lemma": "U.S.", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "Trade", 
       {
-        "Lemma": "Trade", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NNP", 
-        "idx": 35
+        "Lemma": "Trade", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "Representative", 
       {
-        "Lemma": "Representative", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NNP", 
-        "idx": 36
+        "Lemma": "Representative", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "Carla", 
       {
-        "Lemma": "Carla", 
         "NamedEntityTag": "PERSON", 
-        "PartOfSpeech": "NNP", 
-        "idx": 37
+        "Lemma": "Carla", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "Hills", 
       {
-        "Lemma": "Hills", 
         "NamedEntityTag": "PERSON", 
-        "PartOfSpeech": "NNP", 
-        "idx": 38
+        "Lemma": "Hills", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "announced", 
       {
-        "Lemma": "announce", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VBD", 
-        "idx": 39
+        "Lemma": "announce", 
+        "PartOfSpeech": "VBD"
       }
     ], 
     [
       ".", 
       {
-        "Lemma": ".", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ".", 
-        "idx": 42
+        "Lemma": ".", 
+        "PartOfSpeech": "."
       }
     ]
-  ]
+  ], 
+  "treebank_sentence": "However , five other countries -- China , Thailand , India , Brazil and Mexico -- will remain on that so - called priority watch list as a result of an interim review , U.S. Trade Representative Carla Hills announced 0 *T*-1 .", 
+  "parsetree": "(ROOT (S (S (ADVP (RB However)) (, ,) (NP (NP (CD five) (JJ other) (NNS countries)) (PRN (: --) (NP (NP (NNP China)) (, ,) (NP (NNP Thailand) (, ,) (NNP India) (, ,) (NNP Brazil) (CC and) (NNP Mexico))) (: --))) (VP (MD will) (VP (VB remain) (PP (IN on) (NP (DT that))) (ADVP (RB so))))) (: -) (S (S (VP (VBN called) (NP (NP (NN priority) (NN watch) (NN list)) (PP (IN as) (NP (NP (DT a) (NN result)) (PP (IN of) (NP (DT an) (JJ interim) (NN review)))))))) (, ,) (NP (NNP U.S.) (NNP Trade) (NNP Representative) (NNP Carla) (NNP Hills)) (VP (VBD announced))) (. .)))", 
+  "goldparse": "(TOP (S (S-TPC-1 (ADVP (RB However)) (, ,) (NP-SBJ (NP (CD five) (JJ other) (NNS countries)) (: --) (NP (NNP China) (, ,) (NNP Thailand) (, ,) (NNP India) (, ,) (NNP Brazil) (CC and) (NNP Mexico)) (: --)) (VP (MD will) (VP (VB remain) (PP-LOC-PRD (IN on) (NP (DT that) (ADJP (RB so) (HYPH -) (VBN called)) (NML (NN priority) (NN watch)) (NN list))) (PP-PRP (IN as) (NP (NP (DT a) (NN result)) (PP (IN of) (NP (DT an) (JJ interim) (NN review)))))))) (, ,) (NP-SBJ (NML (NNP U.S.) (NNP Trade) (NNP Representative)) (NNP Carla) (NNP Hills)) (VP (VBD announced) (SBAR (-NONE- 0) (S (-NONE- *T*-1)))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0020@all@wsj@nw@en@on"
 }

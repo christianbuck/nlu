@@ -1,10 +1,28 @@
 {
+  "text": "Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .", 
+  "coref_chains": [
+    [
+      0, 
+      1, 
+      1, 
+      "Mr. Vinken", 
+      false
+    ], 
+    [
+      3, 
+      11, 
+      1, 
+      "chairman of Elsevier N.V. , the Dutch publishing group", 
+      false
+    ]
+  ], 
   "bbn_ne": [
     [
       1, 
       1, 
       "Vinken", 
       "PERSON", 
+      "", 
       "", 
       "<ENAMEX TYPE=\"PERSON\">Vinken</ENAMEX>"
     ], 
@@ -14,6 +32,7 @@
       "chairman", 
       "PER_DESC", 
       "", 
+      "", 
       "<ENAMEX TYPE=\"PER_DESC\">chairman</ENAMEX>"
     ], 
     [
@@ -22,6 +41,7 @@
       "Elsevier N.V.", 
       "ORGANIZATION", 
       "CORPORATION", 
+      "", 
       "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Elsevier N.V.</ENAMEX>"
     ], 
     [
@@ -30,295 +50,65 @@
       "Dutch", 
       "NORP", 
       "NATIONALITY", 
+      "", 
       "<ENAMEX TYPE=\"NORP:NATIONALITY\">Dutch</ENAMEX>"
     ]
   ], 
-  "coref_chains": [
+  "coref": [
     [
-      0, 
-      1, 
-      1, 
-      "Mr. Vinken"
+      [
+        [
+          "chairman of Elsevier N.V. , the Dutch publishing group", 
+          0, 
+          3, 
+          3, 
+          12
+        ], 
+        [
+          "Mr. Vinken", 
+          0, 
+          1, 
+          0, 
+          2
+        ]
+      ]
     ], 
     [
-      4, 
-      11, 
-      1, 
-      "chairman of Elsevier N.V. , Dutch publishing group"
+      [
+        [
+          "Elsevier N.V.", 
+          0, 
+          6, 
+          5, 
+          7
+        ], 
+        [
+          "Elsevier N.V. , the Dutch publishing group", 
+          0, 
+          6, 
+          5, 
+          12
+        ]
+      ], 
+      [
+        [
+          "the Dutch publishing group", 
+          0, 
+          1, 
+          8, 
+          12
+        ], 
+        [
+          "Elsevier N.V. , the Dutch publishing group", 
+          0, 
+          6, 
+          5, 
+          12
+        ]
+      ]
     ]
   ], 
-  "document_id": "nw/wsj/00/wsj_0001@all@wsj@nw@en@on", 
-  "goldparse": "(TOP (S (NP-SBJ (NNP Mr.) (NNP Vinken)) (VP (VBZ is) (NP-PRD (NP (NN chairman)) (PP (IN of) (NP (NP (NNP Elsevier) (NNP N.V.)) (, ,) (NP (DT the) (NNP Dutch) (VBG publishing) (NN group)))))) (. .)))", 
-  "nom": [
-    {
-      "args": [
-        [
-          "ARG0", 
-          "3:0", 
-          3, 
-          3, 
-          "chairman"
-        ], 
-        [
-          "rel", 
-          "3:0", 
-          3, 
-          3, 
-          "chairman"
-        ], 
-        [
-          "ARG2", 
-          "4:1", 
-          4, 
-          11, 
-          "of Elsevier N.V. , the Dutch publishing group"
-        ]
-      ], 
-      "baseform": "chairman", 
-      "frame": "chairman.01", 
-      "tokenNr": "3"
-    }, 
-    {
-      "args": [
-        [
-          "ARG1", 
-          "10:0", 
-          10, 
-          10, 
-          "publishing"
-        ], 
-        [
-          "rel", 
-          "11:0", 
-          11, 
-          11, 
-          "group"
-        ]
-      ], 
-      "baseform": "group", 
-      "frame": "group.01", 
-      "tokenNr": "11"
-    }
-  ], 
-  "parsetree": "(ROOT (S (NP (NNP Mr.) (NNP Vinken)) (VP (VBZ is) (NP (NP (NN chairman)) (PP (IN of) (NP (NP (NNP Elsevier) (NNP N.V.)) (, ,) (NP (DT the) (JJ Dutch) (NN publishing) (NN group)))))) (. .)))", 
-  "prop": [
-    {
-      "args": [
-        [
-          "rel", 
-          "10:0", 
-          10, 
-          10, 
-          "publishing"
-        ], 
-        [
-          "ARG0", 
-          "11:0", 
-          11, 
-          11, 
-          "group"
-        ]
-      ], 
-      "baseform": "publish", 
-      "basepos": "v", 
-      "frame": "publish.01", 
-      "inflection": "-----"
-    }
-  ], 
-  "ptbparse": "( (S (NP-SBJ (NNP Mr.) (NNP Vinken) ) (VP (VBZ is) (NP-PRD (NP (NN chairman) ) (PP (IN of) (NP (NP (NNP Elsevier) (NNP N.V.) ) (, ,) (NP (DT the) (NNP Dutch) (VBG publishing) (NN group) ))))) (. .) ))", 
   "sentence_nr": 1, 
-  "stanford_coref": [
-    [
-      [
-        "chairman of Elsevier N.V. , the Dutch publishing group", 
-        3, 
-        12
-      ], 
-      [
-        "Mr. Vinken", 
-        0, 
-        2
-      ]
-    ], 
-    [
-      [
-        "Elsevier N.V.", 
-        5, 
-        7
-      ], 
-      [
-        "Elsevier N.V. , the Dutch publishing group", 
-        5, 
-        12
-      ]
-    ], 
-    [
-      [
-        "the Dutch publishing group", 
-        8, 
-        12
-      ], 
-      [
-        "Elsevier N.V. , the Dutch publishing group", 
-        5, 
-        12
-      ]
-    ]
-  ], 
-  "stanford_dep": [
-    {
-      "dep": "Mr.", 
-      "dep_idx": 0, 
-      "gov": "Vinken", 
-      "gov_idx": 1, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Vinken", 
-      "dep_idx": 1, 
-      "gov": "chairman", 
-      "gov_idx": 3, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "is", 
-      "dep_idx": 2, 
-      "gov": "chairman", 
-      "gov_idx": 3, 
-      "rel": "cop"
-    }, 
-    {
-      "dep": "chairman", 
-      "dep_idx": 3, 
-      "gov": "ROOT", 
-      "gov_idx": -1, 
-      "rel": "root"
-    }, 
-    {
-      "dep": "Elsevier", 
-      "dep_idx": 5, 
-      "gov": "N.V.", 
-      "gov_idx": 6, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "N.V.", 
-      "dep_idx": 6, 
-      "gov": "chairman", 
-      "gov_idx": 3, 
-      "rel": "prep_of"
-    }, 
-    {
-      "dep": "the", 
-      "dep_idx": 8, 
-      "gov": "group", 
-      "gov_idx": 11, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "Dutch", 
-      "dep_idx": 9, 
-      "gov": "group", 
-      "gov_idx": 11, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "publishing", 
-      "dep_idx": 10, 
-      "gov": "group", 
-      "gov_idx": 11, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "group", 
-      "dep_idx": 11, 
-      "gov": "N.V.", 
-      "gov_idx": 6, 
-      "rel": "appos"
-    }
-  ], 
-  "stanford_dep_basic": [
-    {
-      "dep": "Mr.", 
-      "dep_idx": 0, 
-      "gov": "Vinken", 
-      "gov_idx": 1, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Vinken", 
-      "dep_idx": 1, 
-      "gov": "chairman", 
-      "gov_idx": 3, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "is", 
-      "dep_idx": 2, 
-      "gov": "chairman", 
-      "gov_idx": 3, 
-      "rel": "cop"
-    }, 
-    {
-      "dep": "chairman", 
-      "dep_idx": 3, 
-      "gov": "ROOT", 
-      "gov_idx": -1, 
-      "rel": "root"
-    }, 
-    {
-      "dep": "of", 
-      "dep_idx": 4, 
-      "gov": "chairman", 
-      "gov_idx": 3, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "Elsevier", 
-      "dep_idx": 5, 
-      "gov": "N.V.", 
-      "gov_idx": 6, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "N.V.", 
-      "dep_idx": 6, 
-      "gov": "of", 
-      "gov_idx": 4, 
-      "rel": "pobj"
-    }, 
-    {
-      "dep": "the", 
-      "dep_idx": 8, 
-      "gov": "group", 
-      "gov_idx": 11, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "Dutch", 
-      "dep_idx": 9, 
-      "gov": "group", 
-      "gov_idx": 11, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "publishing", 
-      "dep_idx": 10, 
-      "gov": "group", 
-      "gov_idx": 11, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "group", 
-      "dep_idx": 11, 
-      "gov": "N.V.", 
-      "gov_idx": 6, 
-      "rel": "appos"
-    }
-  ], 
-  "text": "Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .", 
-  "timex": [], 
-  "treebank_sentence": "Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .", 
   "tuples": [
     [
       "nn", 
@@ -375,119 +165,110 @@
     [
       "Mr.", 
       {
-        "Lemma": "Mr.", 
         "NamedEntityTag": "PERSON", 
-        "PartOfSpeech": "NNP", 
-        "idx": 0
+        "Lemma": "Mr.", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "Vinken", 
       {
-        "Lemma": "Vinken", 
         "NamedEntityTag": "PERSON", 
-        "PartOfSpeech": "NNP", 
-        "idx": 1
+        "Lemma": "Vinken", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "is", 
       {
-        "Lemma": "be", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VBZ", 
-        "idx": 2
+        "Lemma": "be", 
+        "PartOfSpeech": "VBZ"
       }
     ], 
     [
       "chairman", 
       {
-        "Lemma": "chairman", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 3
+        "Lemma": "chairman", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "of", 
       {
-        "Lemma": "of", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 4
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "Elsevier", 
       {
-        "Lemma": "Elsevier", 
         "NamedEntityTag": "ORGANIZATION", 
-        "PartOfSpeech": "NNP", 
-        "idx": 5
+        "Lemma": "Elsevier", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "N.V.", 
       {
-        "Lemma": "N.V.", 
         "NamedEntityTag": "ORGANIZATION", 
-        "PartOfSpeech": "NNP", 
-        "idx": 6
+        "Lemma": "N.V.", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       ",", 
       {
-        "Lemma": ",", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ",", 
-        "idx": 7
+        "Lemma": ",", 
+        "PartOfSpeech": ","
       }
     ], 
     [
       "the", 
       {
-        "Lemma": "the", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "DT", 
-        "idx": 8
+        "Lemma": "the", 
+        "PartOfSpeech": "DT"
       }
     ], 
     [
       "Dutch", 
       {
-        "Lemma": "dutch", 
         "NamedEntityTag": "MISC", 
-        "PartOfSpeech": "JJ", 
-        "idx": 9
+        "Lemma": "dutch", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
       "publishing", 
       {
-        "Lemma": "publishing", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 10
+        "Lemma": "publishing", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "group", 
       {
-        "Lemma": "group", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 11
+        "Lemma": "group", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       ".", 
       {
-        "Lemma": ".", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ".", 
-        "idx": 12
+        "Lemma": ".", 
+        "PartOfSpeech": "."
       }
     ]
-  ]
+  ], 
+  "treebank_sentence": "Mr. Vinken is chairman of Elsevier N.V. , the Dutch publishing group .", 
+  "parsetree": "(ROOT (S (NP (NNP Mr.) (NNP Vinken)) (VP (VBZ is) (NP (NP (NN chairman)) (PP (IN of) (NP (NP (NNP Elsevier) (NNP N.V.)) (, ,) (NP (DT the) (JJ Dutch) (NN publishing) (NN group)))))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ (NNP Mr.) (NNP Vinken)) (VP (VBZ is) (NP-PRD (NP (NN chairman)) (PP (IN of) (NP (NP (NNP Elsevier) (NNP N.V.)) (, ,) (NP (DT the) (NNP Dutch) (VBG publishing) (NN group)))))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0001@all@wsj@nw@en@on"
 }
