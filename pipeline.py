@@ -11,8 +11,11 @@ from dev.amr.amr import Amr
 from alignment import Alignment
 from add_prop import SpanTree, span_from_treepos
 
+_verbose = False
+
 def main(files, verbose=False, keep_nombank=False):
-    
+    global _verbose
+    _verbose = verbose
 
     # pipeline steps
     import nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, beautify
@@ -57,6 +60,7 @@ def main(files, verbose=False, keep_nombank=False):
             print(' '.join(tokens), file=sys.stderr)
         
         print(amr)
+        #print('Amr.from_triples(',amr.triples(instances=False),',',amr.node_to_concepts,')')
         print()
     
         if verbose:
@@ -102,7 +106,8 @@ def loadVProp(sentenceId):
                     treepos = pt.get_treepos(leaf_id, depth)
                     overtWords = pt[treepos].leaves()
                     overtStart, overtEnd = span_from_treepos(pt, treepos)
-                    print('relative clause LINK-PCR: ',arg,'-->',(overtStart,overtEnd,overtWords))
+                    global _verbose
+                    if _verbose: print('relative clause LINK-PCR: ',arg,'-->',(overtStart,overtEnd,overtWords), file=sys.stderr)
                     arg[1] = overtNode
                     arg[2], arg[3] = overtStart, overtEnd
                     arg[4] = ' '.join(overtWords)

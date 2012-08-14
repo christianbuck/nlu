@@ -44,11 +44,10 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                     y = new_concept(pipeline.token2concept(dep["dep"]), amr, alignment, i)
                     completed[0][i] = True
                 
-                newtriple = (str(x), 'domain', str(y))
+                if x!=y:
+                    newtriple = (str(x), 'domain', str(y))
                 
                 amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
 
-                completed[1][(h,i)] = True
-    
     return depParse, amr, alignment, completed
 
