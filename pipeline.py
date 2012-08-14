@@ -16,7 +16,7 @@ def main(sentenceId):
     tokens, ww, wTags, depParse = loadDepParse(sentenceId)
 
     # pipeline steps
-    import nes, timex, conjunctions, vprop, nprop, verbalize, adjsAndAdverbs, auxes, misc, coref, beautify
+    import nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, beautify
     # TODO: does conjunctions module work gracefully when propositions are conjoined?
 
     # initialize input to first pipeline step
@@ -34,7 +34,7 @@ def main(sentenceId):
     # serially execute pipeline steps
     print(' '.join(filter(None,ww)))
     sys.stdout.flush()
-    for m in [nes, timex, conjunctions, vprop, nprop, verbalize, adjsAndAdverbs, auxes, misc, coref, beautify]:
+    for m in [nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, beautify]:
         print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
         depParse, amr, alignments, completed = m.main(sentenceId, tokens, ww, wTags, depParse, amr, alignments, completed)
         #print(' '.join(ww))
