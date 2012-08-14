@@ -62,14 +62,17 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                 
                 wrapper = None
                 if v[0] in '<>':
-                    if v[1]=='=':
-                        reln = v[:2]
-                        v = v[2:]
+                    if len(v)==1:
+                        print('Warning: Unexpected NormalizedNamedEntityTag:',v,'for',raw, file=sys.stderr)
                     else:
-                        reln = v[0]
-                        v = v[1:]
-                    concept = {'<': 'less-than', '>': 'more-than', '<=': 'no-more-than', '>=': 'at-least'}[reln]
-                    wrapper = new_concept(pipeline.token2concept(concept), amr, alignment, h)
+                        if v[1]=='=':
+                            reln = v[:2]
+                            v = v[2:]
+                        else:
+                            reln = v[0]
+                            v = v[1:]
+                        concept = {'<': 'less-than', '>': 'more-than', '<=': 'no-more-than', '>=': 'at-least'}[reln]
+                        wrapper = new_concept(pipeline.token2concept(concept), amr, alignment, h)
                     
                 if coarse=='MONEY':
                     m = re.match(r'^([\$¥£])(\d+\.\d+(E-?\d+)?)$', v)

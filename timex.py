@@ -48,10 +48,15 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             wd_name = weekdays[wd] # e.g. 'friday'
             x = new_concept(pipeline.token2concept(wd_name), amr)
             new_triples.add((str(mc), 'weekday', str(x)))
+        if 'dayperiod' in t.date_entity:
+            dp = t.date_entity['dayperiod']
+            dp_name = dayperiods[dp]    # e.g. 'afternoon'
+            x = new_concept(pipeline.token2concept(dp_name), amr)
+            new_triples.add((str(mc), 'dayperiod', str(x)))
 
         #print('####', t.date_entity)
         for k, v in t.date_entity.iteritems():
-            if k=='weekday': continue   # handled above
+            if k in ['weekday','dayperiod']: continue   # handled above
             if isinstance(v,basestring):
                 v = pipeline.token2concept(str(v))
                 x = new_concept(v, amr)
@@ -84,18 +89,22 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
 #### Resources ####
 # Todo: externalize
 
+re_time = r'(T(?P<dayperiod>MO|AF|EV|NI)|T(?P<time>\d{2}:\d{2}))?'
 
 re_date = [
-    re.compile(r'\w{4}-\w{2}-(?P<day>\d\d)'),   # XXXX-10-31
-    re.compile(r'\w{4}-(?P<month>\w{2})\W'),    
-    re.compile(r'\w{4}-(?P<month>\w{2})$'),     # XXXX-10
-    re.compile(r'^(?P<year>\d{4})'),
-    re.compile(r'\w{4}-W\w{2}-(?P<weekday>\d)'),
-    re.compile(r'\w{4}-Q(?P<quarter>\d)'),
-    re.compile(r'\w{4}-(?P<season>SP|SU|FA|WI)')
+    re.compile(r'\w{4}-\w{2}-(?P<day>\d\d)'+re_time),   # XXXX-10-31
+    re.compile(r'\w{4}-(?P<month>\d{2})\W'+re_time),    
+    re.compile(r'\w{4}-(?P<month>\d{2})$'),     # XXXX-10
+    re.compile(r'^(?P<year>\d{4})'+re_time),
+    re.compile(r'\w{4}-W\w{2}-(?P<weekday>\d)'+re_time),
+    re.compile(r'\w{4}-Q(?P<quarter>\d)'+re_time),
+    re.compile(r'\w{4}-(?P<season>SP|SU|FA|WI)'+re_time),
+    re.compile(re_time)
 ]
 
 weekdays = [None,'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday']
+
+dayperiods = {'MO': 'morning', 'AF': 'afternoon', 'EV': 'evening', 'NI': 'night'}
 
 timex3_type_to_role = {
     "DATE" : "date-entity"
@@ -139,6 +148,16 @@ class Timex3Entity(object):
     <TIMEX3 tid="t2" value="XXXX-WXX-4TNI" type="TIME">Thursday night</TIMEX3>
     '''
 
+    '''
+    <TIMEX3 tid="t1" alt_value="OFFSET P-2Y" type="DATE" mod="MORE_THAN">more than two years ago</TIMEX3>
+    <TIMEX3 tid="t1" alt_value="THIS P1Y OFFSET P-1Y" type="DATE" mod="EARLY">early last year</TIMEX3>
+    '''
+    
+    '''
+    <TIMEX3 tid="t3" value="XXXX-WXX-6TMO" type="SET">Saturday mornings</TIMEX3>
+    <TIMEX3 tid="t3" value="XXXX-WXX-5T22:00" type="SET" periodicity="P1W">Fridays, 10 p.m.</TIMEX3>
+    '''
+
     def __init__(self, timex, text = None):
         #print timex.attrib
         self.text = timex.text
@@ -148,9 +167,15 @@ class Timex3Entity(object):
         if self.type=='DURATION' and (self.text.endswith(' old') or self.text.endswith('-old')):
             self.type = 'AGE'
         
+            
         self.date_entity = {}
         self.main_concept = 'temporal-quantity'
         self.wrapper = None
+        
+        if 'mod' in self.timex:
+            assert self.timex['mod'] in ['EARLY','LATE','APPROX','MORE_THAN','LESS_THAN','EQUAL_OR_LESS','EQUAL_OR_MORE']
+            self.date_entity['MOD'] = self.timex['mod'] # date_entity['mod'] is taken below, so 'MOD' here allows 2 modifiers to be present
+            # TODO: APPROX->about, MORE_THAN=> more-than, etc. as heads rather than MOD
 
         if self.is_absolute_time(): # side effect: merges alt_value with value in self.timex
             self.main_concept = 'date-entity'
@@ -240,7 +265,7 @@ class Timex3Entity(object):
             m = regexp.search(v)
             if m == None:
                 continue
-            matchexprs = m.groupdict()
+            matchexprs = {k:v for k,v in m.groupdict().items() if v is not None}
             if 'time' in matchexprs:
                 matchexprs['time'] = '"'+matchexprs['time']+'"'
             for u in ['day','month','year','quarter']:

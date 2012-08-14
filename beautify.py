@@ -51,6 +51,9 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
         if v.endswith('-FALLBACK'):
             amr.node_to_concepts[k] = v.replace('-FALLBACK', '')
     
+    # clean up role names: :mod-nn and :MOD => :mod
+    amr = Amr.from_triples([(x, {'mod-NN': 'mod', 'MOD': 'mod'}.get(r,r), (y,)) for x,r,(y,) in amr.triples(instances=False)], amr.node_to_concepts)
+    
     
     # delete CARDINAL concepts (cf. the nes module) unless the concept has no parent
     # e.g. in wsj_0077.14, "154.2 million shares" is converted from (s / shares :quant (c / CARDINAL :quant 154200000)) to (s / shares :quant 154200000)
