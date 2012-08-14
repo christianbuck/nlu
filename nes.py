@@ -46,14 +46,63 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     
     entities = pipeline.loadBBN(sentenceId)
     for i,j,name,coarse,fine,raw in entities:    # TODO: what is the last one?
-        if not raw.startswith('<ENAMEX'): continue  # TODO: NUMEX, TIMEX
+        
+        if raw.startswith('<TIMEX'): continue  # TODO: NUMEX, TIMEX
         
         h = choose_head(range(i,j+1), depParse)
         #print((i,j),name,h,depParse[h+1]['dep'], file=sys.stderr)
         
         x = alignment[:h] # index of variable associated with i's head, if any
         
-        if coarse.endswith('_DESC'):
+        if raw.startswith('<NUMEX'):
+            if coarse in ['MONEY','CARDINAL']:
+                # get normalized value from Stanford tools
+                v = wTags[h]["NormalizedNamedEntityTag"]
+                
+                wrapper = None
+                if v[0] in '<>':
+                    if v[1]=='=':
+                        reln = v[:2]
+                        v = v[2:]
+                    else:
+                        reln = v[0]
+                        v = v[1:]
+                    concept = {'<': 'less-than', '>': 'more-than', '<=': 'no-more-than', '>=': 'at-least'}[reln]
+                    wrapper = new_concept(pipeline.token2concept(concept), amr, alignment, h)
+                    
+                if coarse=='MONEY':
+                    m = re.match(r'^\$(\d+\.\d+E-?\d+)', v)
+                    if not m:
+                        assert False,v
+                    v = m.group(1)
+                
+                try:
+                    v = float(v)
+                    if str(v).endswith('.0'):
+                        v = int(v)
+                except ValueError:
+                    pass
+                
+                if (wrapper is None or coarse=='MONEY') and not (x or x==0): # need a new variable
+                    _args = [pipeline.token2concept('monetary-quantity') if coarse=='MONEY' else coarse.upper(), amr]
+                    if wrapper is None: # if there is a wrapper concept (e.g. 'more-than'), it is aligned, so don't provide an alignment for x
+                        _args += [alignment, h]
+                    x = new_concept(*_args)
+                
+                if (x or x==0):
+                    triples.add((str(x), 'quant', v))
+                    if wrapper is not None:
+                        triples.add((str(wrapper), 'op1', str(x)))
+                elif wrapper is not None:
+                        triples.add((str(wrapper), 'op1', v))   # e.g. more-than :op1 41
+                
+                
+                if coarse=='MONEY':
+                    y = new_concept(pipeline.token2concept('dollar'), amr)
+                    triples.add((str(x), 'unit', str(y)))
+            else:
+                assert False,(i,j,raw)
+        elif coarse.endswith('_DESC'):
             # make the phrase head word the AMR head concept
             # (could be a multiword term, like Trade Representative)
             if not (x or x==0): # need a new variable
