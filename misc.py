@@ -21,7 +21,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
         for dep in deps:
             i, r, h = dep["dep_idx"], dep["rel"], dep["gov_idx"]
             if completed[1][(h,i)]: continue
-            if r=='nn' or r.startswith('prep_'):
+            if r in ['nn','poss'] or r.startswith('prep_'):
                 x = alignment[:h] # index of variable associated with i's head, if any
                 if not (x or x==0): # need a new variable
                     assert not completed[0][h]
@@ -34,6 +34,8 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                 
                 if r=='nn':   # attach as :mod-NN
                     newtriple = (str(x), 'mod-NN', str(y))
+                elif r=='poss':
+                    newtriple = (str(x), 'poss', str(y))
                 else:   # attach with :prep-X relation
                     assert r.startswith('prep_')
                     newtriple = (str(x), r.replace('_','-'), str(y))
