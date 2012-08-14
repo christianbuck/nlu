@@ -353,7 +353,7 @@ class Dag(defaultdict):
         new = Dag()
         new.roots = copy.copy(self.roots)
         new.external_nodes = self.external_nodes
-        new.node_alignments, new.edge_alignments = self.node_alignment, self.edge_alignments
+        new.node_alignments, new.edge_alignments = self.node_alignmente, self.edge_alignments
         for tr in self.triples():
             new._add_triple(*copy.copy(tr))
         return new
@@ -584,11 +584,10 @@ class Dag(defaultdict):
             roots.append(new_root)    
         return roots    
    
-    @memoize
     def get_ordered_nodes(self):
         """
         Get an mapping of nodes in this DAG to integers specifying a total order of 
-        nodes. (partial order broken according to order when generating the DAG).
+        nodes. (partial order broken according to edge_label).
         """
         order = {}
         count = 0
@@ -770,6 +769,7 @@ class Dag(defaultdict):
         # now remove the old fragment
         res_dag = self.remove_fragment(dag)
         res_dag.roots = [boundary_map[x] if x in boundary_map else x for x in self.roots]
+        res_dag.external_nodes = [boundary_map[x] if x in boundary_map else x for x in self.external_nodes]
 
         # and add the remaining edges, fusing boundary nodes
         for par, rel, child in new_dag.triples(): 

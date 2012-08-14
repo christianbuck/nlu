@@ -1,10 +1,12 @@
 from amr import Amr
+from collections import defaultdict
 import itertools
 import math
 import sys
 import random
 import copy
 import pyparsing
+import timeit
 
 def get_mappings(l2, l1):
      if len(l2) >= len(l1):
@@ -94,6 +96,31 @@ def compute_smatch_precise(amr1, amr2):
     sys.stdout.write("\n")
     return prec_with_best_f, rec_with_best_f, best_f
 
+def get_parallel_start(nodes1, nodes2):       
+    return zip(nodes1, nodes2)
+
+def get_concept_match_start(amr1, amr2):
+    concept_to_nodes1 = defaultdict(list)
+    for n, c in amr1.node_to_concepts.items():
+        concept_to_nodes1[c].append(n)
+    
+    concept_to_nodes2 = defaultdict(list)
+    for n, c in amr2.node_to_concepts.items():
+        concept_to_nodes2[c].append(n)
+   
+    res = []
+    for match in set(concept_to_nodes1).intersection(concept_to_nodes2):
+        res.append((random.choice(concept_to_nodes1[match]), random.choice(concept_to_nodes2[match])))
+    return res
+
+def get_root_align_start(amr1, amr2):
+
+    nodes1 = [n for n in amr1.get_nodes() if not n in amr1.roots]
+    nodes2 = [n for n in amr2.get_nodes() if not n in amr1.roots]
+
+    return get_random_start(nodes1, nodes2) + [(amr1.roots[0], amr2.roots[0])]
+        
+
 def compute_smatch_hill_climbing(amr1in, amr2in, starts = 10):       
     """
     Run hill climbing search in the space of variable mappings to find the smatch score between two AMRs.
@@ -108,6 +135,7 @@ def compute_smatch_hill_climbing(amr1in, amr2in, starts = 10):
     amr1 = amr1in.clone_canonical(prefix="t")
     amr2 = amr2in.clone_canonical(prefix="g")
 
+
     best_f = -1.0 
     prec_with_best_f = 0.0
     rec_with_best_f = 0.0
@@ -116,7 +144,10 @@ def compute_smatch_hill_climbing(amr1in, amr2in, starts = 10):
     best_mapping =  {}
 
     for i in range(starts):
-        mapping_tuples = get_random_start(nodes1, nodes2)    
+        mapping_tuples = get_concept_match_start(amr1, amr2)        
+        #mapping_tuples = get_random_start(nodes1, nodes2)    
+        #mapping_tuples = get_parallel_start(nodes1,nodes2)
+        #mapping_tuples = get_root_align_start(amr1,amr2)
     
         mapping = dict(mapping_tuples)
         max_prec, max_rec, max_f, matching_tuples = compute_score_and_matching_vars(amr1, amr2, mapping)
@@ -163,8 +194,8 @@ def compute_smatch_batch(gold_filename, test_filename):
      ps, rs, fs = [], [],[]
      with open(sys.argv[1]) as gold_file:
             with open(sys.argv[2]) as test_file:
-                gold = gold_file.readline().strip()
-                test = test_file.readline().strip()
+                gold = Amr.from_string(gold_file.readline().strip())
+                test = Amr.from_string(test_file.readline().strip())
         
                 tiburonfailct = 0
                 parsefailct = 0
@@ -196,7 +227,40 @@ def compute_smatch_batch(gold_filename, test_filename):
      print "Total: %i   Fail(tiburon): %i   Fail(invalid AMR): %i "  % (totalct, tiburonfailct, parsefailct)
 
 
-if __name__ == "__main__":
-        import doctest
-        doctest.testmod()
+        #import doctest
+        #doctest.testmod()
 
+amr1 = Amr.from_string("""
+        (s / say-01 :ARG0 (p2 / professor :location (c2 / college :mod (m / 
+medicine) :poss (u2 / university :name (u3 / name :op1 "University" :op2 
+"of" :op3 "Vermont"))) :mod (p / pathology) :name (b / name :op1 
+"Brooke" :op2 "T." :op3 "Mossman")) :ARG1 (i2 / include-91 :ARG1 (c / 
+country :name (u / name :op1 "U.S.")) :ARG2 (n / nation :ARG0-of (h / 
+have-03 :ARG1 (s2 / standard :mod (h2 / high :degree (m2 / more) ) 
+:prep-with-of (r / regulate-01 :ARG1 (f2 / fiber :ARG0-of (r2 / 
+resemble-01 :ARG1 (n2 / needle) ) :ARG1-of (c4 / classify-01 :ARG2 (a / 
+amphobile) ) :mod (s3 / smooth) :prep-such-as (c3 / crocidolite) ))) 
+:polarity -) :ARG1-of (i3 / include-91 :ARG2 (n3 / nation :ARG1-of (i / 
+industrialize-01) ) :ARG3 (f / few) ))))""")
+
+amr2 = Amr.from_string("""
+        (v0 / say-01 :ARG0 (v1 / professor :location (v3 / college) :mod (v2 / 
+pathology :mod (v4 / medicine :op1 (v11 / "university") :op2 (v12 / 
+"of") :op3 (v13 / "vermont") ) :poss (v5 / university :name (v6 / name) 
+)) :name (v7 / name :op1 (v8 / "brooke") :op2 (v9 / "t-period-") :op3 
+(v10 / "mossman") )) :ARG1 (v14 / include-91 :ARG1 (v15 / country :name 
+(v16 / name :op1 (v17 / "u-period-s-period-") )) :ARG2 (v18 / nation 
+:ARG0-of (v19 / have-03 :ARG1 (v20 / standard :mod (v26 / high :degree 
+(v27 / more :ARG0-of (v30 / resemble-01 :ARG1 (v31 / needle) ) :ARG1-of 
+(v32 / classify-01 :ARG2 (v33 / amphobile) ) :mod (v34 / smooth) 
+:prep-such-as (v35 / crocidolite) )) :prep-with-of (v28 / regulate-01 
+:ARG1 (v29 / fiber) )) :polarity (v21 / -) ) :ARG1-of (v22 / include-91 
+:ARG2 (v23 / nation :ARG1-of (v24 / industrialize-01) ) :ARG3 (v25 / 
+few) ))))""")
+
+if __name__ == "__main__":
+    #print "go"   
+    #t = timeit.Timer("print compute_smatch_hill_climbing(amr1,amr2,1)","from __main__ import compute_smatch_hill_climbing,amr1, amr2")
+    #
+    #print "%f sec" % t.timeit(number=1)
+    compute_smatch_batch(sys.argv[1], sys.argv[2])

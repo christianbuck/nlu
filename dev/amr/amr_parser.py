@@ -124,9 +124,17 @@ class NonterminalLabel(object):
     Nonterminal edges carry a nonterminal symbol and an index that identifies
     it uniquely in a rule.
     """
-    def __init__(self, label, index = None):
-        self.label = label
-        self.index = index  
+
+    label_matcher = re.compile("(?P<label>.*?)(\[(?P<index>.*)\])?$")
+
+    def __init__(self, label, index = None):            
+        if index:
+            self.label = label
+            self.index = index  
+        else: 
+            match = NonterminalLabel.label_matcher.match(label)
+            self.index = match.group("index")
+            self.label = match.group("label")
 
     def __eq__(self, other):
         try: 
@@ -135,7 +143,7 @@ class NonterminalLabel(object):
             return False     
     
     def __repr__(self):
-        return "NT(#%s)" % str(self)
+        return "NT(%s)" % str(self)
 
     def __str__(self):
         if self.index is not None:
