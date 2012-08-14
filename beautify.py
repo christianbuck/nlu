@@ -58,7 +58,10 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     for v in cardinals:
         old2newvars = {}
         triples = [(x,r,y) for x,r,(y,) in amr.triples(instances=False) if x==v or y==v]
-        assert 1<=len(triples)<=2
+        try:
+            assert 1<=len(triples)<=2,(triples,amr)
+        except AssertionError:  # something complicated; just punt
+            continue
         if len(triples)<2: continue
         t1, t2 = triples
         if t1[2]!=v:

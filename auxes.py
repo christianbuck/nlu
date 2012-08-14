@@ -53,10 +53,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                 
                 newtriple = (None,) # TODO
                 
-                try:
-                    amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
-                except ValueError as ex:
-                    print('Ignoring triple so as to avoid cycle:', ex.message, file=sys.stderr)
+                amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
 
                 completed[1][(itm['gov_idx'],i)] = True
 

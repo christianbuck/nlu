@@ -35,10 +35,8 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                 
                 newtriple = (str(x), 'op'+str(nConjOps.setdefault(x,0)+1), str(y))
                 nConjOps[x] += 1
-                try:
-                    amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
-                except ValueError as ex:
-                    print('Ignoring triple so as to avoid cycle:', ex.message, file=sys.stderr)
+
+                amr = Amr.from_triples(amr.triples(instances=False)+[newtriple], amr.node_to_concepts)
 
                 completed[1][(c,i)] = True
 

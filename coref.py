@@ -17,7 +17,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     
     coref = loadCoref(sentenceId, ww)
     
-    print(coref)
+    #print(coref)
     
     for cluster in coref.values():
         clusterX = None # choose an arbitrary member of the cluster to decorate with coreferent equivalents, marked :EQ

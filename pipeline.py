@@ -3,7 +3,7 @@
 Driver and utilities for English-to-AMR pipeline.
 '''
 from __future__ import print_function
-import os, sys, re, codecs, fileinput, json
+import os, sys, re, codecs, fileinput, json, glob
 
 from collections import defaultdict
 
@@ -11,47 +11,58 @@ from dev.amr.amr import Amr
 from alignment import Alignment
 from add_prop import SpanTree, span_from_treepos
 
-def main(sentenceId):
-    # load dependency parse from sentence file
-    tokens, ww, wTags, depParse = loadDepParse(sentenceId)
+def main(files, verbose=False, keep_nombank=False):
+    
 
     # pipeline steps
     import nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, beautify
     # TODO: does conjunctions module work gracefully when propositions are conjoined?
+    
+    for f in files:
+        sentenceId = os.path.basename(f).replace('.json','')
+        print(sentenceId)
+        
+        # load dependency parse from sentence file
+        tokens, ww, wTags, depParse = loadDepParse(sentenceId)
 
-    # initialize input to first pipeline step
-    token_accounted_for = [False]*len(depParse)
-    '''Has the token been accounted for yet in the semantics?'''
-
-    edge_accounted_for = {(dep['gov_idx'],m): False for m in range(len(depParse)) if depParse[m] for dep in depParse[m]}
-    '''Has the dependency edge been accounted for yet in the semantics?'''
-
-    completed = token_accounted_for, edge_accounted_for
-
-    amr = Amr()
-    alignments = Alignment()
-
-    # serially execute pipeline steps
-    print(' '.join(filter(None,ww)))
-    sys.stdout.flush()
-    for m in [nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, beautify]:
-        print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
-        depParse, amr, alignments, completed = m.main(sentenceId, tokens, ww, wTags, depParse, amr, alignments, completed)
-        #print(' '.join(ww))
-        print(repr(amr), file=sys.stderr)
-        print('Completed:',[depParse[i][0]['dep'] for i,v in enumerate(completed[0]) if v and depParse[i]], file=sys.stderr)
-        print(alignments, [deps[0]['dep'] for deps in depParse if deps and not completed[0][deps[0]['dep_idx']]], file=sys.stderr)
-        print(amr, file=sys.stderr)
-    print(' '.join(tokens))
-
-    print('\n\nRemaining edges:')
-    for deps in depParse:
-        if deps is None: continue
-        for dep in deps:
-            if dep['gov_idx'] is not None and not completed[1][(dep['gov_idx'],dep['dep_idx'])]:
-                print((dep['gov']+'-'+str(dep['gov_idx']),dep['rel'],dep['dep']+'-'+str(dep['dep_idx'])))
-
-    # TODO: output
+        # initialize input to first pipeline step
+        token_accounted_for = [False]*len(depParse)
+        '''Has the token been accounted for yet in the semantics?'''
+    
+        edge_accounted_for = {(dep['gov_idx'],m): False for m in range(len(depParse)) if depParse[m] for dep in depParse[m]}
+        '''Has the dependency edge been accounted for yet in the semantics?'''
+    
+        completed = token_accounted_for, edge_accounted_for
+    
+        amr = Amr()
+        alignments = Alignment()
+    
+        # serially execute pipeline steps
+        if verbose:
+            print(' '.join(filter(None,ww)), file=sys.stderr)
+        sys.stdout.flush()
+        for m in [nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, beautify]:
+            if verbose:
+                print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
+            depParse, amr, alignments, completed = m.main(sentenceId, tokens, ww, wTags, depParse, amr, alignments, completed)
+            #print(' '.join(ww))
+            if verbose:
+                print(repr(amr), file=sys.stderr)
+                print('Completed:',[depParse[i][0]['dep'] for i,v in enumerate(completed[0]) if v and depParse[i]], file=sys.stderr)
+                print(alignments, [deps[0]['dep'] for deps in depParse if deps and not completed[0][deps[0]['dep_idx']]], file=sys.stderr)
+                print(amr, file=sys.stderr)
+        print(' '.join(tokens))
+        print()
+        print(amr)
+        print()
+    
+        if verbose:
+            print('\n\nRemaining edges:', file=sys.stderr)
+            for deps in depParse:
+                if deps is None: continue
+                for dep in deps:
+                    if dep['gov_idx'] is not None and not completed[1][(dep['gov_idx'],dep['dep_idx'])]:
+                        print((dep['gov']+'-'+str(dep['gov_idx']),dep['rel'],dep['dep']+'-'+str(dep['dep_idx'])), file=sys.stderr)
 
 def token2concept(t):
     t = t.replace('$', '-DOLLAR-')
@@ -131,7 +142,7 @@ def loadDepParse(sentenceId):
         conjs = [d for dep in deps if dep for d in dep if d["rel"].startswith('conj_')]
         if conjs:
             print('resolving coordination...', file=sys.stderr)
-            print(tokens)
+            #print(tokens)
             ccs = [dep for dep in sentJ["stanford_dep_basic"] if dep["rel"]=='cc']
         for conj in conjs:
             i, r, h = conj["dep_idx"], conj["rel"], conj["gov_idx"]
@@ -241,5 +252,17 @@ def new_concept(concept, amr, alignment=None, alignedToken=None):
 
 
 if __name__=='__main__':
-    sentId = sys.argv[1]
-    main(sentId)
+    args = sys.argv[1:]
+    verbose = False
+    keepNombank = False # keep NomBank predicate names and arguments that cannot be verbalized
+    while args and args[0][0]=='-':
+        arg = args.pop(0)
+        if arg=='-v':
+            verbose = True
+        elif arg=='-n':
+            keepNombank = True
+        else:
+            assert False,'Unknown flag: '+arg
+    
+    files = [f for ff in args for f in glob.glob(ff)]
+    main(files, verbose=verbose, keep_nombank=keepNombank)
