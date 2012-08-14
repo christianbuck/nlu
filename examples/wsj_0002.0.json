@@ -1,10 +1,13 @@
 {
+  "text": "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named a nonexecutive director of this British industrial conglomerate .", 
+  "coref_chains": [], 
   "bbn_ne": [
     [
       0, 
       1, 
       "Rudolph Agnew", 
       "PERSON", 
+      "", 
       "", 
       "<ENAMEX TYPE=\"PERSON\">Rudolph Agnew</ENAMEX>"
     ], 
@@ -14,6 +17,7 @@
       "55 years old", 
       "DATE", 
       "AGE", 
+      "", 
       "<TIMEX TYPE=\"DATE:AGE\">55 years old</TIMEX>"
     ], 
     [
@@ -21,6 +25,7 @@
       8, 
       "chairman", 
       "PER_DESC", 
+      "", 
       "", 
       "<ENAMEX TYPE=\"PER_DESC\">chairman</ENAMEX>"
     ], 
@@ -30,6 +35,7 @@
       "Consolidated Gold Fields PLC", 
       "ORGANIZATION", 
       "CORPORATION", 
+      "", 
       "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Consolidated Gold Fields PLC</ENAMEX>"
     ], 
     [
@@ -37,6 +43,7 @@
       21, 
       "director", 
       "PER_DESC", 
+      "", 
       "", 
       "<ENAMEX TYPE=\"PER_DESC\">director</ENAMEX>"
     ], 
@@ -46,489 +53,31 @@
       "British", 
       "NORP", 
       "NATIONALITY", 
+      "", 
       "<ENAMEX TYPE=\"NORP:NATIONALITY\">British</ENAMEX>"
     ]
   ], 
-  "coref_chains": [], 
-  "document_id": "nw/wsj/00/wsj_0002@all@wsj@nw@en@on", 
-  "goldparse": "(TOP (S (NP-SBJ-1 (NP (NNP Rudolph) (NNP Agnew)) (, ,) (UCP (ADJP (NML (CD 55) (NNS years)) (JJ old)) (CC and) (NP (NP (JJ former) (NN chairman)) (PP (IN of) (NP (NNP Consolidated) (NNP Gold) (NNP Fields) (NNP PLC))))) (, ,)) (VP (VBD was) (VP (VBN named) (NP-2 (-NONE- *-1)) (S-CLR (NP-SBJ (-NONE- *PRO*-2)) (NP-PRD (NP (DT a) (JJ nonexecutive) (NN director)) (PP (IN of) (NP (DT this) (JJ British) (JJ industrial) (NN conglomerate))))))) (. .)))", 
-  "nom": [
-    {
-      "args": [
-        [
-          "ARGM-TMP", 
-          "7:0", 
-          7, 
-          7, 
-          "former"
-        ], 
-        [
-          "ARG0", 
-          "8:0", 
-          8, 
-          8, 
-          "chairman"
-        ], 
-        [
-          "rel", 
-          "8:0", 
-          8, 
-          8, 
-          "chairman"
-        ], 
-        [
-          "ARG2", 
-          "9:1", 
-          9, 
-          13, 
-          "of Consolidated Gold Fields PLC"
-        ]
-      ], 
-      "baseform": "chairman", 
-      "frame": "chairman.01", 
-      "tokenNr": "8"
-    }, 
-    {
-      "args": [
-        [
-          "ARGM-LOC", 
-          "23:0", 
-          24, 
-          24, 
-          "British"
-        ], 
-        [
-          "ARG1", 
-          "24:0", 
-          25, 
-          25, 
-          "industrial"
-        ], 
-        [
-          "rel", 
-          "25:0", 
-          26, 
-          26, 
-          "conglomerate"
-        ]
-      ], 
-      "baseform": "conglomerate", 
-      "frame": "conglomerate.01", 
-      "tokenNr": "25"
-    }, 
-    {
-      "args": [
-        [
-          "ARG3", 
-          "19:0", 
-          20, 
-          20, 
-          "nonexecutive"
-        ], 
-        [
-          "ARG0", 
-          "20:0", 
-          21, 
-          21, 
-          "director"
-        ], 
-        [
-          "rel", 
-          "20:0", 
-          21, 
-          21, 
-          "director"
-        ], 
-        [
-          "ARG2", 
-          "21:1", 
-          22, 
-          26, 
-          "of this British industrial conglomerate"
-        ]
-      ], 
-      "baseform": "director", 
-      "frame": "director.01", 
-      "tokenNr": "20"
-    }
-  ], 
-  "parsetree": "(ROOT (S (NP (NP (NNP Rudolph) (NNP Agnew)) (, ,) (ADJP (ADJP (NP (CD 55) (NNS years)) (JJ old)) (CC and) (NP (NP (JJ former) (NN chairman)) (PP (IN of) (NP (NNP Consolidated) (NNP Gold) (NNP Fields) (NNP PLC))))) (, ,)) (VP (VBD was) (VP (VBN named) (NP (NP (DT a) (JJ nonexecutive) (NN director)) (PP (IN of) (NP (DT this) (JJ British) (JJ industrial) (NN conglomerate)))))) (. .)))", 
-  "prop": [
-    {
-      "args": [
-        [
-          "rel", 
-          "16:0", 
-          16, 
-          16, 
-          "named"
-        ], 
-        [
-          "ARG1", 
-          "17:0", 
-          0, 
-          14, 
-          "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC ,"
-        ], 
-        [
-          "ARG2", 
-          "18:2", 
-          18, 
-          26, 
-          "*PRO*-2 a nonexecutive director of this British industrial conglomerate"
-        ], 
-        [
-          "LINK-PCR", 
-          "17:0*17:0", 
-          null, 
-          null, 
-          ""
-        ]
-      ], 
-      "baseform": "name", 
-      "basepos": "v", 
-      "frame": "name.01", 
-      "inflection": "-----"
-    }
-  ], 
-  "ptbparse": "( (S (NP-SBJ-1 (NP (NNP Rudolph) (NNP Agnew) ) (, ,) (UCP (ADJP (NP (CD 55) (NNS years) ) (JJ old) ) (CC and) (NP (NP (JJ former) (NN chairman) ) (PP (IN of) (NP (NNP Consolidated) (NNP Gold) (NNP Fields) (NNP PLC) )))) (, ,) ) (VP (VBD was) (VP (VBN named) (S (NP-SBJ (-NONE- *-1) ) (NP-PRD (NP (DT a) (JJ nonexecutive) (NN director) ) (PP (IN of) (NP (DT this) (JJ British) (JJ industrial) (NN conglomerate) )))))) (. .) ))", 
-  "sentence_nr": 0, 
-  "stanford_coref": [
+  "coref": [
     [
       [
-        "Rudolph Agnew", 
-        0, 
-        2
-      ], 
-      [
-        "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC ,", 
-        0, 
-        15
+        [
+          "Rudolph Agnew", 
+          0, 
+          1, 
+          0, 
+          2
+        ], 
+        [
+          "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC ,", 
+          0, 
+          1, 
+          0, 
+          15
+        ]
       ]
     ]
   ], 
-  "stanford_dep": [
-    {
-      "dep": "Rudolph", 
-      "dep_idx": 0, 
-      "gov": "Agnew", 
-      "gov_idx": 1, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Agnew", 
-      "dep_idx": 1, 
-      "gov": "named", 
-      "gov_idx": 16, 
-      "rel": "nsubjpass"
-    }, 
-    {
-      "dep": "55", 
-      "dep_idx": 3, 
-      "gov": "years", 
-      "gov_idx": 4, 
-      "rel": "num"
-    }, 
-    {
-      "dep": "years", 
-      "dep_idx": 4, 
-      "gov": "old", 
-      "gov_idx": 5, 
-      "rel": "dep"
-    }, 
-    {
-      "dep": "old", 
-      "dep_idx": 5, 
-      "gov": "Agnew", 
-      "gov_idx": 1, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "former", 
-      "dep_idx": 7, 
-      "gov": "chairman", 
-      "gov_idx": 8, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "chairman", 
-      "dep_idx": 8, 
-      "gov": "Agnew", 
-      "gov_idx": 1, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "chairman", 
-      "dep_idx": 8, 
-      "gov": "old", 
-      "gov_idx": 5, 
-      "rel": "conj_and"
-    }, 
-    {
-      "dep": "Consolidated", 
-      "dep_idx": 10, 
-      "gov": "PLC", 
-      "gov_idx": 13, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Gold", 
-      "dep_idx": 11, 
-      "gov": "PLC", 
-      "gov_idx": 13, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Fields", 
-      "dep_idx": 12, 
-      "gov": "PLC", 
-      "gov_idx": 13, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "PLC", 
-      "dep_idx": 13, 
-      "gov": "chairman", 
-      "gov_idx": 8, 
-      "rel": "prep_of"
-    }, 
-    {
-      "dep": "was", 
-      "dep_idx": 15, 
-      "gov": "named", 
-      "gov_idx": 16, 
-      "rel": "auxpass"
-    }, 
-    {
-      "dep": "named", 
-      "dep_idx": 16, 
-      "gov": "ROOT", 
-      "gov_idx": -1, 
-      "rel": "root"
-    }, 
-    {
-      "dep": "a", 
-      "dep_idx": 19, 
-      "gov": "director", 
-      "gov_idx": 21, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "nonexecutive", 
-      "dep_idx": 20, 
-      "gov": "director", 
-      "gov_idx": 21, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "director", 
-      "dep_idx": 21, 
-      "gov": "named", 
-      "gov_idx": 16, 
-      "rel": "xcomp"
-    }, 
-    {
-      "dep": "this", 
-      "dep_idx": 23, 
-      "gov": "conglomerate", 
-      "gov_idx": 26, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "British", 
-      "dep_idx": 24, 
-      "gov": "conglomerate", 
-      "gov_idx": 26, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "industrial", 
-      "dep_idx": 25, 
-      "gov": "conglomerate", 
-      "gov_idx": 26, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "conglomerate", 
-      "dep_idx": 26, 
-      "gov": "director", 
-      "gov_idx": 21, 
-      "rel": "prep_of"
-    }
-  ], 
-  "stanford_dep_basic": [
-    {
-      "dep": "Rudolph", 
-      "dep_idx": 0, 
-      "gov": "Agnew", 
-      "gov_idx": 1, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Agnew", 
-      "dep_idx": 1, 
-      "gov": "named", 
-      "gov_idx": 16, 
-      "rel": "nsubjpass"
-    }, 
-    {
-      "dep": "55", 
-      "dep_idx": 3, 
-      "gov": "years", 
-      "gov_idx": 4, 
-      "rel": "num"
-    }, 
-    {
-      "dep": "years", 
-      "dep_idx": 4, 
-      "gov": "old", 
-      "gov_idx": 5, 
-      "rel": "dep"
-    }, 
-    {
-      "dep": "old", 
-      "dep_idx": 5, 
-      "gov": "Agnew", 
-      "gov_idx": 1, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "and", 
-      "dep_idx": 6, 
-      "gov": "old", 
-      "gov_idx": 5, 
-      "rel": "cc"
-    }, 
-    {
-      "dep": "former", 
-      "dep_idx": 7, 
-      "gov": "chairman", 
-      "gov_idx": 8, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "chairman", 
-      "dep_idx": 8, 
-      "gov": "old", 
-      "gov_idx": 5, 
-      "rel": "conj"
-    }, 
-    {
-      "dep": "of", 
-      "dep_idx": 9, 
-      "gov": "chairman", 
-      "gov_idx": 8, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "Consolidated", 
-      "dep_idx": 10, 
-      "gov": "PLC", 
-      "gov_idx": 13, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Gold", 
-      "dep_idx": 11, 
-      "gov": "PLC", 
-      "gov_idx": 13, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "Fields", 
-      "dep_idx": 12, 
-      "gov": "PLC", 
-      "gov_idx": 13, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "PLC", 
-      "dep_idx": 13, 
-      "gov": "of", 
-      "gov_idx": 9, 
-      "rel": "pobj"
-    }, 
-    {
-      "dep": "was", 
-      "dep_idx": 15, 
-      "gov": "named", 
-      "gov_idx": 16, 
-      "rel": "auxpass"
-    }, 
-    {
-      "dep": "named", 
-      "dep_idx": 16, 
-      "gov": "ROOT", 
-      "gov_idx": -1, 
-      "rel": "root"
-    }, 
-    {
-      "dep": "a", 
-      "dep_idx": 19, 
-      "gov": "director", 
-      "gov_idx": 21, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "nonexecutive", 
-      "dep_idx": 20, 
-      "gov": "director", 
-      "gov_idx": 21, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "director", 
-      "dep_idx": 21, 
-      "gov": "named", 
-      "gov_idx": 16, 
-      "rel": "xcomp"
-    }, 
-    {
-      "dep": "of", 
-      "dep_idx": 22, 
-      "gov": "director", 
-      "gov_idx": 21, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "this", 
-      "dep_idx": 23, 
-      "gov": "conglomerate", 
-      "gov_idx": 26, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "British", 
-      "dep_idx": 24, 
-      "gov": "conglomerate", 
-      "gov_idx": 26, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "industrial", 
-      "dep_idx": 25, 
-      "gov": "conglomerate", 
-      "gov_idx": 26, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "conglomerate", 
-      "dep_idx": 26, 
-      "gov": "of", 
-      "gov_idx": 22, 
-      "rel": "pobj"
-    }
-  ], 
-  "text": "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named a nonexecutive director of this British industrial conglomerate .", 
-  "timex": [
-    [
-      "t1", 
-      3, 
-      5, 
-      "<TIMEX3 tid=\"t1\" value=\"P55Y\" type=\"DURATION\">55 years old</TIMEX3>"
-    ]
-  ], 
-  "treebank_sentence": "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named *-1 *PRO*-2 a nonexecutive director of this British industrial conglomerate .", 
+  "sentence_nr": 0, 
   "tuples": [
     [
       "nn", 
@@ -640,241 +189,219 @@
     [
       "Rudolph", 
       {
-        "Lemma": "Rudolph", 
         "NamedEntityTag": "PERSON", 
-        "PartOfSpeech": "NNP", 
-        "idx": 0
+        "Lemma": "Rudolph", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "Agnew", 
       {
-        "Lemma": "Agnew", 
         "NamedEntityTag": "PERSON", 
-        "PartOfSpeech": "NNP", 
-        "idx": 1
+        "Lemma": "Agnew", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       ",", 
       {
-        "Lemma": ",", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ",", 
-        "idx": 2
+        "Lemma": ",", 
+        "PartOfSpeech": ","
       }
     ], 
     [
       "55", 
       {
-        "Lemma": "55", 
-        "NamedEntityTag": "DURATION", 
         "NormalizedNamedEntityTag": "55.0", 
-        "PartOfSpeech": "CD", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"P55Y\" type=\"DURATION\">55 years old</TIMEX3>", 
-        "idx": 3
+        "Lemma": "55", 
+        "PartOfSpeech": "CD", 
+        "NamedEntityTag": "DURATION"
       }
     ], 
     [
       "years", 
       {
-        "Lemma": "year", 
-        "NamedEntityTag": "NUMBER", 
         "NormalizedNamedEntityTag": "0.0", 
-        "PartOfSpeech": "NNS", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"P55Y\" type=\"DURATION\">55 years old</TIMEX3>", 
-        "idx": 4
+        "Lemma": "year", 
+        "PartOfSpeech": "NNS", 
+        "NamedEntityTag": "NUMBER"
       }
     ], 
     [
       "old", 
       {
-        "Lemma": "old", 
-        "NamedEntityTag": "DURATION", 
-        "PartOfSpeech": "JJ", 
         "Timex": "<TIMEX3 tid=\"t1\" value=\"P55Y\" type=\"DURATION\">55 years old</TIMEX3>", 
-        "idx": 5
+        "Lemma": "old", 
+        "PartOfSpeech": "JJ", 
+        "NamedEntityTag": "DURATION"
       }
     ], 
     [
       "and", 
       {
-        "Lemma": "and", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "CC", 
-        "idx": 6
+        "Lemma": "and", 
+        "PartOfSpeech": "CC"
       }
     ], 
     [
       "former", 
       {
-        "Lemma": "former", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "JJ", 
-        "idx": 7
+        "Lemma": "former", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
       "chairman", 
       {
-        "Lemma": "chairman", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 8
+        "Lemma": "chairman", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "of", 
       {
-        "Lemma": "of", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 9
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "Consolidated", 
       {
-        "Lemma": "Consolidated", 
         "NamedEntityTag": "ORGANIZATION", 
-        "PartOfSpeech": "NNP", 
-        "idx": 10
+        "Lemma": "Consolidated", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "Gold", 
       {
-        "Lemma": "Gold", 
         "NamedEntityTag": "ORGANIZATION", 
-        "PartOfSpeech": "NNP", 
-        "idx": 11
+        "Lemma": "Gold", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "Fields", 
       {
-        "Lemma": "Fields", 
         "NamedEntityTag": "ORGANIZATION", 
-        "PartOfSpeech": "NNP", 
-        "idx": 12
+        "Lemma": "Fields", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "PLC", 
       {
-        "Lemma": "PLC", 
         "NamedEntityTag": "ORGANIZATION", 
-        "PartOfSpeech": "NNP", 
-        "idx": 13
+        "Lemma": "PLC", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       ",", 
       {
-        "Lemma": ",", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ",", 
-        "idx": 14
+        "Lemma": ",", 
+        "PartOfSpeech": ","
       }
     ], 
     [
       "was", 
       {
-        "Lemma": "be", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VBD", 
-        "idx": 15
+        "Lemma": "be", 
+        "PartOfSpeech": "VBD"
       }
     ], 
     [
       "named", 
       {
-        "Lemma": "name", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VBN", 
-        "idx": 16
+        "Lemma": "name", 
+        "PartOfSpeech": "VBN"
       }
     ], 
     [
       "a", 
       {
-        "Lemma": "a", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "DT", 
-        "idx": 19
+        "Lemma": "a", 
+        "PartOfSpeech": "DT"
       }
     ], 
     [
       "nonexecutive", 
       {
-        "Lemma": "nonexecutive", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "JJ", 
-        "idx": 20
+        "Lemma": "nonexecutive", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
       "director", 
       {
-        "Lemma": "director", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 21
+        "Lemma": "director", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "of", 
       {
-        "Lemma": "of", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 22
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "this", 
       {
-        "Lemma": "this", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "DT", 
-        "idx": 23
+        "Lemma": "this", 
+        "PartOfSpeech": "DT"
       }
     ], 
     [
       "British", 
       {
-        "Lemma": "british", 
         "NamedEntityTag": "MISC", 
-        "PartOfSpeech": "JJ", 
-        "idx": 24
+        "Lemma": "british", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
       "industrial", 
       {
-        "Lemma": "industrial", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "JJ", 
-        "idx": 25
+        "Lemma": "industrial", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
       "conglomerate", 
       {
-        "Lemma": "conglomerate", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 26
+        "Lemma": "conglomerate", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       ".", 
       {
-        "Lemma": ".", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ".", 
-        "idx": 27
+        "Lemma": ".", 
+        "PartOfSpeech": "."
       }
     ]
-  ]
+  ], 
+  "treebank_sentence": "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC , was named *-1 *PRO*-2 a nonexecutive director of this British industrial conglomerate .", 
+  "parsetree": "(ROOT (S (NP (NP (NNP Rudolph) (NNP Agnew)) (, ,) (ADJP (ADJP (NP (CD 55) (NNS years)) (JJ old)) (CC and) (NP (NP (JJ former) (NN chairman)) (PP (IN of) (NP (NNP Consolidated) (NNP Gold) (NNP Fields) (NNP PLC))))) (, ,)) (VP (VBD was) (VP (VBN named) (NP (NP (DT a) (JJ nonexecutive) (NN director)) (PP (IN of) (NP (DT this) (JJ British) (JJ industrial) (NN conglomerate)))))) (. .)))", 
+  "goldparse": "(TOP (S (NP-SBJ-1 (NP (NNP Rudolph) (NNP Agnew)) (, ,) (UCP (ADJP (NML (CD 55) (NNS years)) (JJ old)) (CC and) (NP (NP (JJ former) (NN chairman)) (PP (IN of) (NP (NNP Consolidated) (NNP Gold) (NNP Fields) (NNP PLC))))) (, ,)) (VP (VBD was) (VP (VBN named) (NP-2 (-NONE- *-1)) (S-CLR (NP-SBJ (-NONE- *PRO*-2)) (NP-PRD (NP (DT a) (JJ nonexecutive) (NN director)) (PP (IN of) (NP (DT this) (JJ British) (JJ industrial) (NN conglomerate))))))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0002@all@wsj@nw@en@on"
 }

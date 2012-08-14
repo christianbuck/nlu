@@ -1,4 +1,28 @@
 {
+  "text": "Under the new U.S. trade law , those countries could face accelerated unfair - trade investigations and stiff trade sanctions if they do n't improve their protection of intellectual property by next spring .", 
+  "coref_chains": [
+    [
+      7, 
+      8, 
+      47, 
+      "those countries", 
+      false
+    ], 
+    [
+      21, 
+      21, 
+      47, 
+      "they", 
+      false
+    ], 
+    [
+      25, 
+      25, 
+      47, 
+      "their", 
+      false
+    ]
+  ], 
   "bbn_ne": [
     [
       3, 
@@ -6,6 +30,7 @@
       "U.S.", 
       "GPE", 
       "COUNTRY", 
+      "", 
       "<ENAMEX TYPE=\"GPE:COUNTRY\">U.S.</ENAMEX>"
     ], 
     [
@@ -14,741 +39,31 @@
       "next spring", 
       "DATE", 
       "DATE", 
+      "", 
       "<TIMEX TYPE=\"DATE:DATE\">next spring</TIMEX>"
     ]
   ], 
-  "coref_chains": [
+  "coref": [
     [
-      7, 
-      8, 
-      47, 
-      "those countries"
-    ], 
-    [
-      21, 
-      21, 
-      47, 
-      "they"
-    ], 
-    [
-      25, 
-      25, 
-      47, 
-      "their"
-    ]
-  ], 
-  "document_id": "nw/wsj/00/wsj_0020@all@wsj@nw@en@on", 
-  "goldparse": "(TOP (S (PP-LOC (IN Under) (NP (DT the) (JJ new) (NNP U.S.) (NN trade) (NN law))) (, ,) (NP-SBJ (DT those) (NNS countries)) (VP (MD could) (VP (VB face) (NP (NP (JJ accelerated) (NML (JJ unfair) (HYPH -) (NN trade)) (NNS investigations)) (CC and) (NP (JJ stiff) (NN trade) (NNS sanctions))) (SBAR-ADV (IN if) (S (NP-SBJ (PRP they)) (VP (VBP do) (RB n't) (VP (VB improve) (NP (NP (PRP$ their) (NN protection)) (PP (IN of) (NP (JJ intellectual) (NN property)))) (PP-TMP (IN by) (NP (JJ next) (NN spring))))))))) (. .)))", 
-  "nom": [
-    {
-      "args": [
+      [
         [
-          "ARG1", 
-          "7:1", 
-          7, 
-          8, 
-          "those countries"
-        ], 
-        [
-          "Support", 
-          "10:0", 
-          10, 
-          10, 
-          "face"
-        ], 
-        [
-          "ARGM-MNR", 
-          "11:0", 
-          11, 
-          11, 
-          "accelerated"
-        ], 
-        [
-          "ARG2", 
-          "12:0", 
-          12, 
-          14, 
-          "unfair - trade"
-        ], 
-        [
-          "rel", 
-          "13:0", 
-          15, 
-          15, 
-          "investigations"
-        ]
-      ], 
-      "baseform": "investigation", 
-      "frame": "investigation.01", 
-      "tokenNr": "13"
-    }, 
-    {
-      "args": [
-        [
-          "ARG0", 
-          "3:0", 
-          3, 
-          3, 
-          "U.S."
-        ], 
-        [
-          "ARG3", 
-          "4:0", 
-          4, 
-          4, 
-          "trade"
-        ], 
-        [
-          "ARG1-REF", 
-          "5:0", 
-          5, 
-          5, 
-          "law"
-        ], 
-        [
-          "rel", 
-          "5:0", 
-          5, 
-          5, 
-          "law"
-        ], 
-        [
-          "ARG2", 
-          "7:1", 
-          7, 
-          8, 
-          "those countries"
-        ]
-      ], 
-      "baseform": "law", 
-      "frame": "law.01", 
-      "tokenNr": "5"
-    }, 
-    {
-      "args": [
-        [
-          "ARG0", 
-          "23:0", 
-          25, 
-          25, 
-          "their"
-        ], 
-        [
-          "rel", 
-          "24:0", 
-          26, 
-          26, 
-          "protection"
-        ], 
-        [
-          "ARG1", 
-          "25:1", 
-          27, 
-          29, 
-          "of intellectual property"
-        ]
-      ], 
-      "baseform": "protection", 
-      "frame": "protection.01", 
-      "tokenNr": "24"
-    }, 
-    {
-      "args": [
-        [
-          "ARG2", 
-          "7:1", 
-          7, 
-          8, 
-          "those countries"
-        ], 
-        [
-          "Support", 
-          "10:0", 
-          10, 
-          10, 
-          "face"
-        ], 
-        [
-          "ARGM-MNR", 
-          "15:0", 
-          17, 
-          17, 
-          "stiff"
-        ], 
-        [
-          "ARG1", 
-          "17:0", 
-          19, 
-          19, 
-          "sanctions"
-        ], 
-        [
-          "rel", 
-          "17:0", 
-          19, 
-          19, 
-          "sanctions"
-        ]
-      ], 
-      "baseform": "sanction", 
-      "frame": "sanction.01", 
-      "tokenNr": "17"
-    }
-  ], 
-  "parsetree": "(ROOT (S (PP (IN Under) (NP (DT the) (JJ new) (NNP U.S.) (NN trade) (NN law))) (, ,) (NP (DT those) (NNS countries)) (VP (MD could) (VP (VB face) (NP (JJ accelerated) (ADJP (ADJP (JJ unfair)) (: -) (NP (NP (NN trade) (NNS investigations)) (CC and) (NP (JJ stiff) (NN trade)))) (NNS sanctions)) (SBAR (IN if) (S (NP (PRP they)) (VP (VBP do) (RB n't) (VP (VB improve) (NP (NP (PRP$ their) (NN protection)) (PP (IN of) (NP (JJ intellectual) (NN property)))) (PP (IN by) (NP (JJ next) (NN spring))))))))) (. .)))", 
-  "prop": [
-    {
-      "args": [
-        [
-          "rel", 
-          "10:0", 
-          10, 
-          10, 
-          "face"
-        ], 
-        [
-          "ARGM-LOC", 
-          "0:1", 
+          "their", 
           0, 
           5, 
-          "Under the new U.S. trade law"
-        ], 
-        [
-          "ARG0", 
-          "7:1", 
-          7, 
-          8, 
-          "those countries"
-        ], 
-        [
-          "ARGM-MOD", 
-          "9:0", 
-          9, 
-          9, 
-          "could"
-        ], 
-        [
-          "ARG1", 
-          "11:2", 
-          11, 
-          19, 
-          "accelerated unfair - trade investigations and stiff trade sanctions"
-        ], 
-        [
-          "ARGM-ADV", 
-          "20:1", 
-          20, 
-          32, 
-          "if they do n't improve their protection of intellectual property by next spring"
-        ]
-      ], 
-      "baseform": "face", 
-      "basepos": "v", 
-      "frame": "face.01", 
-      "inflection": "-----"
-    }, 
-    {
-      "args": [
-        [
-          "rel", 
-          "22:0", 
-          22, 
-          22, 
-          "do"
-        ]
-      ], 
-      "baseform": "do", 
-      "basepos": "v", 
-      "frame": "do.01", 
-      "inflection": "-----"
-    }, 
-    {
-      "args": [
-        [
-          "rel", 
-          "24:0", 
-          24, 
-          24, 
-          "improve"
-        ], 
-        [
-          "ARG0", 
-          "21:1", 
-          21, 
-          21, 
-          "they"
-        ], 
-        [
-          "ARGM-NEG", 
-          "23:0", 
-          23, 
-          23, 
-          "n't"
-        ], 
-        [
-          "ARG1", 
-          "25:2", 
           25, 
-          29, 
-          "their protection of intellectual property"
+          26
         ], 
         [
-          "ARGM-TMP", 
-          "30:1", 
-          30, 
-          32, 
-          "by next spring"
+          "they", 
+          0, 
+          1, 
+          21, 
+          22
         ]
-      ], 
-      "baseform": "improve", 
-      "basepos": "v", 
-      "frame": "improve.01", 
-      "inflection": "-----"
-    }
-  ], 
-  "ptbparse": "( (S (PP-LOC (IN Under) (NP (DT the) (JJ new) (NNP U.S.) (NN trade) (NN law) )) (, ,) (NP-SBJ (DT those) (NNS countries) ) (VP (MD could) (VP (VB face) (NP (NP (JJ accelerated) (JJ unfair-trade) (NNS investigations) ) (CC and) (NP (JJ stiff) (NN trade) (NNS sanctions) )) (SBAR-ADV (IN if) (S (NP-SBJ (PRP they) ) (VP (VBP do) (RB n't) (VP (VB improve) (NP (NP (PRP$ their) (NN protection) ) (PP (IN of) (NP (JJ intellectual) (NN property) ))) (PP-TMP (IN by) (NP (JJ next) (NN spring) )))))))) (. .) ))", 
-  "sentence_nr": 2, 
-  "stanford_coref": [
-    [
-      [
-        "their", 
-        25, 
-        26
-      ], 
-      [
-        "they", 
-        21, 
-        22
       ]
     ]
   ], 
-  "stanford_dep": [
-    {
-      "dep": "the", 
-      "dep_idx": 1, 
-      "gov": "law", 
-      "gov_idx": 5, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "new", 
-      "dep_idx": 2, 
-      "gov": "law", 
-      "gov_idx": 5, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "U.S.", 
-      "dep_idx": 3, 
-      "gov": "law", 
-      "gov_idx": 5, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "trade", 
-      "dep_idx": 4, 
-      "gov": "law", 
-      "gov_idx": 5, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "law", 
-      "dep_idx": 5, 
-      "gov": "face", 
-      "gov_idx": 10, 
-      "rel": "prep_under"
-    }, 
-    {
-      "dep": "those", 
-      "dep_idx": 7, 
-      "gov": "countries", 
-      "gov_idx": 8, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "countries", 
-      "dep_idx": 8, 
-      "gov": "face", 
-      "gov_idx": 10, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "could", 
-      "dep_idx": 9, 
-      "gov": "face", 
-      "gov_idx": 10, 
-      "rel": "aux"
-    }, 
-    {
-      "dep": "face", 
-      "dep_idx": 10, 
-      "gov": "ROOT", 
-      "gov_idx": -1, 
-      "rel": "root"
-    }, 
-    {
-      "dep": "accelerated", 
-      "dep_idx": 11, 
-      "gov": "investigations", 
-      "gov_idx": 15, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "unfair", 
-      "dep_idx": 12, 
-      "gov": "trade", 
-      "gov_idx": 14, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "trade", 
-      "dep_idx": 14, 
-      "gov": "investigations", 
-      "gov_idx": 15, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "investigations", 
-      "dep_idx": 15, 
-      "gov": "face", 
-      "gov_idx": 10, 
-      "rel": "dobj"
-    }, 
-    {
-      "dep": "stiff", 
-      "dep_idx": 17, 
-      "gov": "sanctions", 
-      "gov_idx": 19, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "trade", 
-      "dep_idx": 18, 
-      "gov": "sanctions", 
-      "gov_idx": 19, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "sanctions", 
-      "dep_idx": 19, 
-      "gov": "face", 
-      "gov_idx": 10, 
-      "rel": "dobj"
-    }, 
-    {
-      "dep": "sanctions", 
-      "dep_idx": 19, 
-      "gov": "investigations", 
-      "gov_idx": 15, 
-      "rel": "conj_and"
-    }, 
-    {
-      "dep": "if", 
-      "dep_idx": 20, 
-      "gov": "improve", 
-      "gov_idx": 24, 
-      "rel": "mark"
-    }, 
-    {
-      "dep": "they", 
-      "dep_idx": 21, 
-      "gov": "improve", 
-      "gov_idx": 24, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "do", 
-      "dep_idx": 22, 
-      "gov": "improve", 
-      "gov_idx": 24, 
-      "rel": "aux"
-    }, 
-    {
-      "dep": "n't", 
-      "dep_idx": 23, 
-      "gov": "improve", 
-      "gov_idx": 24, 
-      "rel": "neg"
-    }, 
-    {
-      "dep": "improve", 
-      "dep_idx": 24, 
-      "gov": "face", 
-      "gov_idx": 10, 
-      "rel": "advcl"
-    }, 
-    {
-      "dep": "their", 
-      "dep_idx": 25, 
-      "gov": "protection", 
-      "gov_idx": 26, 
-      "rel": "poss"
-    }, 
-    {
-      "dep": "protection", 
-      "dep_idx": 26, 
-      "gov": "improve", 
-      "gov_idx": 24, 
-      "rel": "dobj"
-    }, 
-    {
-      "dep": "intellectual", 
-      "dep_idx": 28, 
-      "gov": "property", 
-      "gov_idx": 29, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "property", 
-      "dep_idx": 29, 
-      "gov": "protection", 
-      "gov_idx": 26, 
-      "rel": "prep_of"
-    }, 
-    {
-      "dep": "next", 
-      "dep_idx": 31, 
-      "gov": "spring", 
-      "gov_idx": 32, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "spring", 
-      "dep_idx": 32, 
-      "gov": "improve", 
-      "gov_idx": 24, 
-      "rel": "prep_by"
-    }
-  ], 
-  "stanford_dep_basic": [
-    {
-      "dep": "Under", 
-      "dep_idx": 0, 
-      "gov": "face", 
-      "gov_idx": 10, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "the", 
-      "dep_idx": 1, 
-      "gov": "law", 
-      "gov_idx": 5, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "new", 
-      "dep_idx": 2, 
-      "gov": "law", 
-      "gov_idx": 5, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "U.S.", 
-      "dep_idx": 3, 
-      "gov": "law", 
-      "gov_idx": 5, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "trade", 
-      "dep_idx": 4, 
-      "gov": "law", 
-      "gov_idx": 5, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "law", 
-      "dep_idx": 5, 
-      "gov": "Under", 
-      "gov_idx": 0, 
-      "rel": "pobj"
-    }, 
-    {
-      "dep": "those", 
-      "dep_idx": 7, 
-      "gov": "countries", 
-      "gov_idx": 8, 
-      "rel": "det"
-    }, 
-    {
-      "dep": "countries", 
-      "dep_idx": 8, 
-      "gov": "face", 
-      "gov_idx": 10, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "could", 
-      "dep_idx": 9, 
-      "gov": "face", 
-      "gov_idx": 10, 
-      "rel": "aux"
-    }, 
-    {
-      "dep": "face", 
-      "dep_idx": 10, 
-      "gov": "ROOT", 
-      "gov_idx": -1, 
-      "rel": "root"
-    }, 
-    {
-      "dep": "accelerated", 
-      "dep_idx": 11, 
-      "gov": "investigations", 
-      "gov_idx": 15, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "unfair", 
-      "dep_idx": 12, 
-      "gov": "trade", 
-      "gov_idx": 14, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "trade", 
-      "dep_idx": 14, 
-      "gov": "investigations", 
-      "gov_idx": 15, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "investigations", 
-      "dep_idx": 15, 
-      "gov": "face", 
-      "gov_idx": 10, 
-      "rel": "dobj"
-    }, 
-    {
-      "dep": "and", 
-      "dep_idx": 16, 
-      "gov": "investigations", 
-      "gov_idx": 15, 
-      "rel": "cc"
-    }, 
-    {
-      "dep": "stiff", 
-      "dep_idx": 17, 
-      "gov": "sanctions", 
-      "gov_idx": 19, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "trade", 
-      "dep_idx": 18, 
-      "gov": "sanctions", 
-      "gov_idx": 19, 
-      "rel": "nn"
-    }, 
-    {
-      "dep": "sanctions", 
-      "dep_idx": 19, 
-      "gov": "investigations", 
-      "gov_idx": 15, 
-      "rel": "conj"
-    }, 
-    {
-      "dep": "if", 
-      "dep_idx": 20, 
-      "gov": "improve", 
-      "gov_idx": 24, 
-      "rel": "mark"
-    }, 
-    {
-      "dep": "they", 
-      "dep_idx": 21, 
-      "gov": "improve", 
-      "gov_idx": 24, 
-      "rel": "nsubj"
-    }, 
-    {
-      "dep": "do", 
-      "dep_idx": 22, 
-      "gov": "improve", 
-      "gov_idx": 24, 
-      "rel": "aux"
-    }, 
-    {
-      "dep": "n't", 
-      "dep_idx": 23, 
-      "gov": "improve", 
-      "gov_idx": 24, 
-      "rel": "neg"
-    }, 
-    {
-      "dep": "improve", 
-      "dep_idx": 24, 
-      "gov": "face", 
-      "gov_idx": 10, 
-      "rel": "advcl"
-    }, 
-    {
-      "dep": "their", 
-      "dep_idx": 25, 
-      "gov": "protection", 
-      "gov_idx": 26, 
-      "rel": "poss"
-    }, 
-    {
-      "dep": "protection", 
-      "dep_idx": 26, 
-      "gov": "improve", 
-      "gov_idx": 24, 
-      "rel": "dobj"
-    }, 
-    {
-      "dep": "of", 
-      "dep_idx": 27, 
-      "gov": "protection", 
-      "gov_idx": 26, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "intellectual", 
-      "dep_idx": 28, 
-      "gov": "property", 
-      "gov_idx": 29, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "property", 
-      "dep_idx": 29, 
-      "gov": "of", 
-      "gov_idx": 27, 
-      "rel": "pobj"
-    }, 
-    {
-      "dep": "by", 
-      "dep_idx": 30, 
-      "gov": "improve", 
-      "gov_idx": 24, 
-      "rel": "prep"
-    }, 
-    {
-      "dep": "next", 
-      "dep_idx": 31, 
-      "gov": "spring", 
-      "gov_idx": 32, 
-      "rel": "amod"
-    }, 
-    {
-      "dep": "spring", 
-      "dep_idx": 32, 
-      "gov": "by", 
-      "gov_idx": 30, 
-      "rel": "pobj"
-    }
-  ], 
-  "text": "Under the new U.S. trade law , those countries could face accelerated unfair - trade investigations and stiff trade sanctions if they do n't improve their protection of intellectual property by next spring .", 
-  "timex": [
-    [
-      "t1", 
-      31, 
-      32, 
-      "<TIMEX3 tid=\"t1\" alt_value=\"XXXX-SP OFFSET P1Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t2\">next spring</TIMEX3>"
-    ]
-  ], 
-  "treebank_sentence": "Under the new U.S. trade law , those countries could face accelerated unfair - trade investigations and stiff trade sanctions if they do n't improve their protection of intellectual property by next spring .", 
+  "sentence_nr": 2, 
   "tuples": [
     [
       "det", 
@@ -895,312 +210,282 @@
     [
       "Under", 
       {
-        "Lemma": "under", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 0
+        "Lemma": "under", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "the", 
       {
-        "Lemma": "the", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "DT", 
-        "idx": 1
+        "Lemma": "the", 
+        "PartOfSpeech": "DT"
       }
     ], 
     [
       "new", 
       {
-        "Lemma": "new", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "JJ", 
-        "idx": 2
+        "Lemma": "new", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
       "U.S.", 
       {
-        "Lemma": "U.S.", 
         "NamedEntityTag": "LOCATION", 
-        "PartOfSpeech": "NNP", 
-        "idx": 3
+        "Lemma": "U.S.", 
+        "PartOfSpeech": "NNP"
       }
     ], 
     [
       "trade", 
       {
-        "Lemma": "trade", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 4
+        "Lemma": "trade", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "law", 
       {
-        "Lemma": "law", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 5
+        "Lemma": "law", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       ",", 
       {
-        "Lemma": ",", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ",", 
-        "idx": 6
+        "Lemma": ",", 
+        "PartOfSpeech": ","
       }
     ], 
     [
       "those", 
       {
-        "Lemma": "those", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "DT", 
-        "idx": 7
+        "Lemma": "those", 
+        "PartOfSpeech": "DT"
       }
     ], 
     [
       "countries", 
       {
-        "Lemma": "country", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NNS", 
-        "idx": 8
+        "Lemma": "country", 
+        "PartOfSpeech": "NNS"
       }
     ], 
     [
       "could", 
       {
-        "Lemma": "could", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "MD", 
-        "idx": 9
+        "Lemma": "could", 
+        "PartOfSpeech": "MD"
       }
     ], 
     [
       "face", 
       {
-        "Lemma": "face", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VB", 
-        "idx": 10
+        "Lemma": "face", 
+        "PartOfSpeech": "VB"
       }
     ], 
     [
       "accelerated", 
       {
-        "Lemma": "accelerated", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "JJ", 
-        "idx": 11
+        "Lemma": "accelerated", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
       "unfair", 
       {
-        "Lemma": "unfair", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "JJ", 
-        "idx": 12
+        "Lemma": "unfair", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
       "-", 
       {
-        "Lemma": "-", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ":", 
-        "idx": 13
+        "Lemma": "-", 
+        "PartOfSpeech": ":"
       }
     ], 
     [
       "trade", 
       {
-        "Lemma": "trade", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 14
+        "Lemma": "trade", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "investigations", 
       {
-        "Lemma": "investigation", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NNS", 
-        "idx": 15
+        "Lemma": "investigation", 
+        "PartOfSpeech": "NNS"
       }
     ], 
     [
       "and", 
       {
-        "Lemma": "and", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "CC", 
-        "idx": 16
+        "Lemma": "and", 
+        "PartOfSpeech": "CC"
       }
     ], 
     [
       "stiff", 
       {
-        "Lemma": "stiff", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "JJ", 
-        "idx": 17
+        "Lemma": "stiff", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
       "trade", 
       {
-        "Lemma": "trade", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 18
+        "Lemma": "trade", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "sanctions", 
       {
-        "Lemma": "sanction", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NNS", 
-        "idx": 19
+        "Lemma": "sanction", 
+        "PartOfSpeech": "NNS"
       }
     ], 
     [
       "if", 
       {
-        "Lemma": "if", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 20
+        "Lemma": "if", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "they", 
       {
-        "Lemma": "they", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "PRP", 
-        "idx": 21
+        "Lemma": "they", 
+        "PartOfSpeech": "PRP"
       }
     ], 
     [
       "do", 
       {
-        "Lemma": "do", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VBP", 
-        "idx": 22
+        "Lemma": "do", 
+        "PartOfSpeech": "VBP"
       }
     ], 
     [
       "n't", 
       {
-        "Lemma": "not", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "RB", 
-        "idx": 23
+        "Lemma": "not", 
+        "PartOfSpeech": "RB"
       }
     ], 
     [
       "improve", 
       {
-        "Lemma": "improve", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "VB", 
-        "idx": 24
+        "Lemma": "improve", 
+        "PartOfSpeech": "VB"
       }
     ], 
     [
       "their", 
       {
-        "Lemma": "they", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "PRP$", 
-        "idx": 25
+        "Lemma": "they", 
+        "PartOfSpeech": "PRP$"
       }
     ], 
     [
       "protection", 
       {
-        "Lemma": "protection", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 26
+        "Lemma": "protection", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "of", 
       {
-        "Lemma": "of", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 27
+        "Lemma": "of", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "intellectual", 
       {
-        "Lemma": "intellectual", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "JJ", 
-        "idx": 28
+        "Lemma": "intellectual", 
+        "PartOfSpeech": "JJ"
       }
     ], 
     [
       "property", 
       {
-        "Lemma": "property", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "NN", 
-        "idx": 29
+        "Lemma": "property", 
+        "PartOfSpeech": "NN"
       }
     ], 
     [
       "by", 
       {
-        "Lemma": "by", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": "IN", 
-        "idx": 30
+        "Lemma": "by", 
+        "PartOfSpeech": "IN"
       }
     ], 
     [
       "next", 
       {
-        "Lemma": "next", 
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "XXXX-SP", 
-        "PartOfSpeech": "JJ", 
         "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"XXXX-SP OFFSET P1Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t2\">next spring</TIMEX3>", 
-        "idx": 31
+        "Lemma": "next", 
+        "PartOfSpeech": "JJ", 
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
       "spring", 
       {
-        "Lemma": "spring", 
-        "NamedEntityTag": "DATE", 
         "NormalizedNamedEntityTag": "XXXX-SP", 
-        "PartOfSpeech": "NN", 
         "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"XXXX-SP OFFSET P1Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t2\">next spring</TIMEX3>", 
-        "idx": 32
+        "Lemma": "spring", 
+        "PartOfSpeech": "NN", 
+        "NamedEntityTag": "DATE"
       }
     ], 
     [
       ".", 
       {
-        "Lemma": ".", 
         "NamedEntityTag": "O", 
-        "PartOfSpeech": ".", 
-        "idx": 33
+        "Lemma": ".", 
+        "PartOfSpeech": "."
       }
     ]
-  ]
+  ], 
+  "treebank_sentence": "Under the new U.S. trade law , those countries could face accelerated unfair - trade investigations and stiff trade sanctions if they do n't improve their protection of intellectual property by next spring .", 
+  "parsetree": "(ROOT (S (PP (IN Under) (NP (DT the) (JJ new) (NNP U.S.) (NN trade) (NN law))) (, ,) (NP (DT those) (NNS countries)) (VP (MD could) (VP (VB face) (NP (JJ accelerated) (ADJP (ADJP (JJ unfair)) (: -) (NP (NP (NN trade) (NNS investigations)) (CC and) (NP (JJ stiff) (NN trade)))) (NNS sanctions)) (SBAR (IN if) (S (NP (PRP they)) (VP (VBP do) (RB n't) (VP (VB improve) (NP (NP (PRP$ their) (NN protection)) (PP (IN of) (NP (JJ intellectual) (NN property)))) (PP (IN by) (NP (JJ next) (NN spring))))))))) (. .)))", 
+  "goldparse": "(TOP (S (PP-LOC (IN Under) (NP (DT the) (JJ new) (NNP U.S.) (NN trade) (NN law))) (, ,) (NP-SBJ (DT those) (NNS countries)) (VP (MD could) (VP (VB face) (NP (NP (JJ accelerated) (NML (JJ unfair) (HYPH -) (NN trade)) (NNS investigations)) (CC and) (NP (JJ stiff) (NN trade) (NNS sanctions))) (SBAR-ADV (IN if) (S (NP-SBJ (PRP they)) (VP (VBP do) (RB n't) (VP (VB improve) (NP (NP (PRP$ their) (NN protection)) (PP (IN of) (NP (JJ intellectual) (NN property)))) (PP-TMP (IN by) (NP (JJ next) (NN spring))))))))) (. .)))", 
+  "document_id": "nw/wsj/00/wsj_0020@all@wsj@nw@en@on"
 }
