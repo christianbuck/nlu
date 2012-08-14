@@ -1,3 +1,4 @@
+#coding=UTF-8
 '''
 Creates AMR fragments for named entities.
 
@@ -55,7 +56,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
         x = alignment[:h] # index of variable associated with i's head, if any
         
         if raw.startswith('<NUMEX'):
-            if coarse in ['MONEY','CARDINAL']:
+            if coarse in ['MONEY','CARDINAL','PERCENT']:
                 # get normalized value from Stanford tools
                 v = wTags[h]["NormalizedNamedEntityTag"]
                 
@@ -71,7 +72,13 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                     wrapper = new_concept(pipeline.token2concept(concept), amr, alignment, h)
                     
                 if coarse=='MONEY':
-                    m = re.match(r'^\$(\d+\.\d+E-?\d+)', v)
+                    m = re.match(r'^([\$¥£])(\d+\.\d+(E-?\d+)?)$', v)
+                    if not m:
+                        assert False,v
+                    u = m.group(1)
+                    v = m.group(2)
+                elif coarse=='PERCENT':
+                    m = re.match(r'^%(\d+\.\d+(E-?\d+)?)$', v)
                     if not m:
                         assert False,v
                     v = m.group(1)
@@ -84,13 +91,13 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                     pass
                 
                 if (wrapper is None or coarse=='MONEY') and not (x or x==0): # need a new variable
-                    _args = [pipeline.token2concept('monetary-quantity') if coarse=='MONEY' else coarse.upper(), amr]
+                    _args = [{'MONEY': 'monetary-quantity', 'PERCENT': 'percentage-entity'}.get(coarse, coarse.upper()), amr]
                     if wrapper is None: # if there is a wrapper concept (e.g. 'more-than'), it is aligned, so don't provide an alignment for x
                         _args += [alignment, h]
                     x = new_concept(*_args)
                 
                 if (x or x==0):
-                    triples.add((str(x), 'quant', v))
+                    triples.add((str(x), 'value' if coarse=='PERCENT' else 'quant', v))
                     if wrapper is not None:
                         triples.add((str(wrapper), 'op1', str(x)))
                 elif wrapper is not None:
@@ -98,7 +105,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                 
                 
                 if coarse=='MONEY':
-                    y = new_concept(pipeline.token2concept('dollar'), amr)
+                    y = new_concept({'$': 'dollar', '¥': 'yen', '£': 'pound'}[u.encode('utf-8')], amr)
                     triples.add((str(x), 'unit', str(y)))
             else:
                 assert False,(i,j,raw)
