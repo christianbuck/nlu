@@ -8,7 +8,7 @@ from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
 import pipeline
-from pipeline import choose_head, new_concept, new_amr_from_old, parent_edges
+from pipeline import choose_head, new_concept, new_amr_from_old, parent_edges, get_or_create_concept_from_token as amrget
 from vprop import common_arg
 
 #TODO: the example below is buggy
@@ -169,18 +169,16 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             if rel in ['rel', 'Support']: continue
             assert rel[:3]=='ARG'
             h = choose_head(range(i,j+1), depParse)
-            x = alignment[:h] # index of variable associated with i's head, if any
             
             # handle general proposition arguments
-            if str(x) in amr.node_to_concepts:
-                rel, amr.node_to_concepts[str(x)] = common_arg(rel, amr.get_concept(str(x)))
+            if str(alignment[:h]) in amr.node_to_concepts:
+                rel, amr.node_to_concepts[str(alignment[:h])] = common_arg(rel, amr.get_concept(str(alignment[:h])))
             else:
                 drels = [dep["rel"] for dep in depParse[h]]
                 rel = common_arg(rel, drels=drels)
             
-            if not (x or x==0): # need a new variable
-                x = new_concept(pipeline.token2concept(ww[h]),
-                                amr, alignment, h)
+            x = amrget(amr, alignment, h, depParse)
+            
             triples.add((str(px), rel, str(x)))
             #print('###',px,rel,x)
             

@@ -70,7 +70,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                             reln = v[0]
                             v = v[1:]
                         concept = {'<': 'less-than', '>': 'more-than', '<=': 'no-more-than', '>=': 'at-least'}[reln]
-                        wrapper = new_concept(pipeline.token2concept(concept), amr, alignment, h)
+                        wrapper = new_concept(concept, amr, alignment, h)
                     
                 if coarse=='MONEY':
                     m = re.match(r'^([\$¥£])(\d+\.\d+(E-?\d+)?)$', v)

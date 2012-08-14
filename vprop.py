@@ -8,7 +8,7 @@ from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
 import pipeline, config, timex
-from pipeline import choose_head, new_concept, new_amr_from_old, parent_edges
+from pipeline import choose_head, new_concept, new_amr_from_old, parent_edges, get_or_create_concept_from_token as amrget
 
 '''
 Example input, from wsj_0002.0:
@@ -98,8 +98,8 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
             x = alignment[:h] # index of variable associated with i's head, if any
             
             # handle general proposition arguments
-            if str(x) in amr.node_to_concepts:
-                rel, amr.node_to_concepts[str(x)] = common_arg(rel, amr.get_concept(str(x)))
+            if str(alignment[:h]) in amr.node_to_concepts:
+                rel, amr.node_to_concepts[str(alignment[:h])] = common_arg(rel, amr.get_concept(str(alignment[:h])))
             else:
                 drels = [dep["rel"] for dep in depParse[h]]
                 rel = common_arg(rel, drels=drels)

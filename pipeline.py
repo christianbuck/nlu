@@ -283,19 +283,20 @@ def new_concept_from_token(amr, alignment, i, depParse, concept=None):
     v = new_concept(token2concept(depParse[h][0]["dep"]) if concept is None else concept, amr, alignment, h)
     return v
 
-def _(*args, **kwargs):
-    '''Alias for get_or_create_concept_from_token()'''
-    return get_or_create_concept_from_token(*args, **kwargs)
-
-def get_or_create_concept_from_token(amr, alignment, i, depParse, concept=None):
+def get_or_create_concept_from_token(amr, alignment, i, depParse, completed=None, concept=None):
     '''
     Like new_concept_from_token(), but doesn't modify the AMR if the 
     appropriate head token is already aligned to a variable.
+    
+    If the 'completed' data structure is provided, marks the token as completed.
     '''
     h = choose_head(i, depParse) if hasattr(i, '__iter__') else i
     v = alignment[:h] # index of variable associated with i's head, if any
     if not (v or v==0): # need a new variable
+        if completed:
+            assert not completed[0][h]
         v = new_concept(token2concept(depParse[h][0]["dep"]) if concept is None else concept, amr, alignment, h)
+    if completed: completed[0][h] = True
     return v
 
 if __name__=='__main__':
