@@ -128,7 +128,7 @@ def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
                 completed[1][(h,ph)] = True
                 #print('completed ',(ph,h))
     
-    print(triples)
+    #print(triples)
     amr = Amr.from_triples(amr.triples(instances=False)+list(triples), amr.node_to_concepts)
 
     return depParse, amr, alignment, completed
@@ -164,6 +164,8 @@ def common_arg(rel, concept=None, drels=None):
                 newrel = 'cause'
             elif rel=='ARGM-PRP':
                 newrel = 'purpose'
+            elif rel=='ARGM-MNR':
+                newrel = 'manner'
             elif '-REF' in rel:
                 newrel = rel.replace('-REF','')
 
