@@ -17,3 +17,5 @@ alignments = False
 errorTolerant = False
 '''If True, any exception encountered for an input sentence will be displayed 
 and execution will proceed the next sentence. Otherwise, all exceptions are fatal.'''
+
+showSentence = True

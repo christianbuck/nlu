@@ -26,7 +26,9 @@ def main(files):
 
         try:
             sentenceId = os.path.basename(f).replace('.json','')
-            print(sentenceId)
+            
+            if config.showSentence:
+                print(sentenceId)
         
             # load dependency parse from sentence file
             tokens, ww, wTags, depParse = loadDepParse(f)
@@ -44,9 +46,12 @@ def main(files):
             alignments = Alignment()
     
             # serially execute pipeline steps
-            print(' '.join(filter(None,ww)))
-            print()
-            sys.stdout.flush()
+            
+            # the sentence
+            if config.showSentence:
+                print(' '.join(filter(None,ww)))
+                print()
+                sys.stdout.flush()
 
 
             for m in [nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify]:
@@ -87,6 +92,7 @@ def main(files):
         except Exception as ex:
             if not config.errorTolerant:
                 raise
+            print('amr-empty\n')
             print(sentenceId, file=sys.stderr)
             traceback.print_exception(*sys.exc_info())
             time.sleep(0)
@@ -407,6 +413,8 @@ if __name__=='__main__':
             config.keepNombank = True
         elif arg=='-a':
             config.alignments = True
+        elif arg=='-S':
+            config.showSentence = False
         else:
             assert False,'Unknown flag: '+arg
     
