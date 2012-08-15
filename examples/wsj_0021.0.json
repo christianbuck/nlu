@@ -1,0 +1,910 @@
+{
+  "bbn_ne": [
+    [
+      0, 
+      0, 
+      "Argentina", 
+      "GPE", 
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">Argentina</ENAMEX>"
+    ], 
+    [
+      15, 
+      17, 
+      "$ 64 billion", 
+      "MONEY", 
+      "", 
+      "<NUMEX TYPE=\"MONEY\">$ 64 billion</NUMEX>"
+    ], 
+    [
+      21, 
+      21, 
+      "third", 
+      "ORDINAL", 
+      "", 
+      "<NUMEX TYPE=\"ORDINAL\">third</NUMEX>"
+    ]
+  ], 
+  "coref_chains": [
+    [
+      0, 
+      0, 
+      0, 
+      "Argentina"
+    ], 
+    [
+      3, 
+      3, 
+      0, 
+      "it"
+    ], 
+    [
+      11, 
+      11, 
+      0, 
+      "its"
+    ]
+  ], 
+  "document_id": "nw/wsj/00/wsj_0021@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (NNP Argentina)) (VP (VBD said) (SBAR (-NONE- 0) (S (NP-SBJ (PRP it)) (VP (MD will) (VP (VB ask) (NP-1 (NN creditor) (NNS banks)) (S (NP-SBJ (-NONE- *PRO*-1)) (VP (TO to) (VP (VB halve) (NP (NP (NP (PRP$ its) (JJ foreign) (NN debt)) (PP (IN of) (NP (QP ($ $) (CD 64) (CD billion)) (-NONE- *U*)))) (: --) (NP (NP (DT the) (ADJP (RB third) (HYPH -) (JJS highest))) (PP-LOC (IN in) (NP (DT the) (VBG developing) (NN world))))))))))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG2", 
+          "11:0", 
+          11, 
+          11, 
+          "its"
+        ], 
+        [
+          "ARG0", 
+          "12:0", 
+          12, 
+          12, 
+          "foreign"
+        ], 
+        [
+          "rel", 
+          "13:0", 
+          13, 
+          13, 
+          "debt"
+        ], 
+        [
+          "ARG1", 
+          "14:1", 
+          14, 
+          18, 
+          "of $ 64 billion *U*"
+        ]
+      ], 
+      "baseform": "debt", 
+      "frame": "debt.01", 
+      "tokenNr": "13"
+    }
+  ], 
+  "parsetree": "(ROOT (S (NP (NNP Argentina)) (VP (VBD said) (SBAR (S (NP (PRP it)) (VP (MD will) (VP (VB ask) (NP (NN creditor) (NNS banks)) (S (VP (TO to) (VP (VB halve) (NP (NP (NP (PRP$ its) (JJ foreign) (NN debt)) (PP (IN of) (NP (QP ($ $) (CD 64) (CD billion))))) (: --) (NP (NP (DT the) (JJ third)) (: -) (NP (NP (JJS highest)) (PP (IN in) (NP (DT the) (VBG developing) (NN world)))))))))))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "said"
+        ], 
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          0, 
+          "Argentina"
+        ], 
+        [
+          "ARG1", 
+          "2:1", 
+          2, 
+          27, 
+          "0 it will ask creditor banks *PRO*-1 to halve its foreign debt of $ 64 billion *U* -- the third - highest in the developing world"
+        ]
+      ], 
+      "baseform": "say", 
+      "basepos": "v", 
+      "frame": "say.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "5:0", 
+          5, 
+          5, 
+          "ask"
+        ], 
+        [
+          "ARG0", 
+          "3:1", 
+          3, 
+          3, 
+          "it"
+        ], 
+        [
+          "ARGM-MOD", 
+          "4:0", 
+          4, 
+          4, 
+          "will"
+        ], 
+        [
+          "ARG2", 
+          "8:0", 
+          6, 
+          7, 
+          "creditor banks"
+        ], 
+        [
+          "ARG1", 
+          "8:2", 
+          8, 
+          27, 
+          "*PRO*-1 to halve its foreign debt of $ 64 billion *U* -- the third - highest in the developing world"
+        ]
+      ], 
+      "baseform": "ask", 
+      "basepos": "v", 
+      "frame": "ask.02", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "10:0", 
+          10, 
+          10, 
+          "halve"
+        ], 
+        [
+          "ARG0", 
+          "8:0", 
+          6, 
+          7, 
+          "creditor banks"
+        ], 
+        [
+          "ARG1", 
+          "11:3", 
+          11, 
+          27, 
+          "its foreign debt of $ 64 billion *U* -- the third - highest in the developing world"
+        ], 
+        [
+          "LINK-PCR", 
+          "8:0*8:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "halve", 
+      "basepos": "v", 
+      "frame": "halve.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "26:0", 
+          26, 
+          26, 
+          "developing"
+        ], 
+        [
+          "ARG1", 
+          "27:0", 
+          27, 
+          27, 
+          "world"
+        ]
+      ], 
+      "baseform": "develop", 
+      "basepos": "v", 
+      "frame": "develop.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (NNP Argentina) ) (VP (VBD said) (SBAR (-NONE- 0) (S (NP-SBJ (PRP it) ) (VP (MD will) (VP (VB ask) (NP-1 (NN creditor) (NNS banks) ) (S (NP-SBJ (-NONE- *-1) ) (VP (TO to) (VP (VB halve) (NP (NP (NP (PRP$ its) (JJ foreign) (NN debt) ) (PP (IN of) (NP (QP ($ $) (CD 64) (CD billion) ) (-NONE- *U*) ))) (PRN (: --) (NP (NP (DT the) (JJS third-highest) ) (PP-LOC (IN in) (NP (DT the) (VBG developing) (NN world) ))))))))))))) (. .) ))", 
+  "sentence_nr": 0, 
+  "stanford_coref": [
+    [
+      [
+        "it", 
+        2, 
+        3
+      ], 
+      [
+        "Argentina", 
+        0, 
+        1
+      ]
+    ], 
+    [
+      [
+        "its", 
+        9, 
+        10
+      ], 
+      [
+        "Argentina", 
+        0, 
+        1
+      ]
+    ]
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "Argentina", 
+      "dep_idx": 0, 
+      "gov": "said", 
+      "gov_idx": 1, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 1, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "it", 
+      "dep_idx": 3, 
+      "gov": "ask", 
+      "gov_idx": 5, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "will", 
+      "dep_idx": 4, 
+      "gov": "ask", 
+      "gov_idx": 5, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "ask", 
+      "dep_idx": 5, 
+      "gov": "said", 
+      "gov_idx": 1, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "creditor", 
+      "dep_idx": 6, 
+      "gov": "banks", 
+      "gov_idx": 7, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "banks", 
+      "dep_idx": 7, 
+      "gov": "ask", 
+      "gov_idx": 5, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 9, 
+      "gov": "halve", 
+      "gov_idx": 10, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "halve", 
+      "dep_idx": 10, 
+      "gov": "ask", 
+      "gov_idx": 5, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "its", 
+      "dep_idx": 11, 
+      "gov": "debt", 
+      "gov_idx": 13, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "foreign", 
+      "dep_idx": 12, 
+      "gov": "debt", 
+      "gov_idx": 13, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "debt", 
+      "dep_idx": 13, 
+      "gov": "halve", 
+      "gov_idx": 10, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "$", 
+      "dep_idx": 15, 
+      "gov": "debt", 
+      "gov_idx": 13, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "64", 
+      "dep_idx": 16, 
+      "gov": "$", 
+      "gov_idx": 15, 
+      "rel": "number"
+    }, 
+    {
+      "dep": "billion", 
+      "dep_idx": 17, 
+      "gov": "$", 
+      "gov_idx": 15, 
+      "rel": "number"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 20, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "third", 
+      "dep_idx": 21, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "highest", 
+      "dep_idx": 23, 
+      "gov": "debt", 
+      "gov_idx": 13, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 25, 
+      "gov": "world", 
+      "gov_idx": 27, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "developing", 
+      "dep_idx": 26, 
+      "gov": "world", 
+      "gov_idx": 27, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "world", 
+      "dep_idx": 27, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "prep_in"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Argentina", 
+      "dep_idx": 0, 
+      "gov": "said", 
+      "gov_idx": 1, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 1, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "it", 
+      "dep_idx": 3, 
+      "gov": "ask", 
+      "gov_idx": 5, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "will", 
+      "dep_idx": 4, 
+      "gov": "ask", 
+      "gov_idx": 5, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "ask", 
+      "dep_idx": 5, 
+      "gov": "said", 
+      "gov_idx": 1, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "creditor", 
+      "dep_idx": 6, 
+      "gov": "banks", 
+      "gov_idx": 7, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "banks", 
+      "dep_idx": 7, 
+      "gov": "ask", 
+      "gov_idx": 5, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 9, 
+      "gov": "halve", 
+      "gov_idx": 10, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "halve", 
+      "dep_idx": 10, 
+      "gov": "ask", 
+      "gov_idx": 5, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "its", 
+      "dep_idx": 11, 
+      "gov": "debt", 
+      "gov_idx": 13, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "foreign", 
+      "dep_idx": 12, 
+      "gov": "debt", 
+      "gov_idx": 13, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "debt", 
+      "dep_idx": 13, 
+      "gov": "halve", 
+      "gov_idx": 10, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 14, 
+      "gov": "debt", 
+      "gov_idx": 13, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "$", 
+      "dep_idx": 15, 
+      "gov": "of", 
+      "gov_idx": 14, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "64", 
+      "dep_idx": 16, 
+      "gov": "$", 
+      "gov_idx": 15, 
+      "rel": "number"
+    }, 
+    {
+      "dep": "billion", 
+      "dep_idx": 17, 
+      "gov": "$", 
+      "gov_idx": 15, 
+      "rel": "number"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 20, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "third", 
+      "dep_idx": 21, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "highest", 
+      "dep_idx": 23, 
+      "gov": "debt", 
+      "gov_idx": 13, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 24, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 25, 
+      "gov": "world", 
+      "gov_idx": 27, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "developing", 
+      "dep_idx": 26, 
+      "gov": "world", 
+      "gov_idx": 27, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "world", 
+      "dep_idx": 27, 
+      "gov": "in", 
+      "gov_idx": 24, 
+      "rel": "pobj"
+    }
+  ], 
+  "text": "Argentina said it will ask creditor banks to halve its foreign debt of $ 64 billion -- the third - highest in the developing world .", 
+  "timex": [], 
+  "treebank_sentence": "Argentina said 0 it will ask creditor banks *PRO*-1 to halve its foreign debt of $ 64 billion *U* -- the third - highest in the developing world .", 
+  "tuples": [
+    [
+      "nsubj", 
+      "said", 
+      "Argentina"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "said"
+    ], 
+    [
+      "nsubj", 
+      "ask", 
+      "it"
+    ], 
+    [
+      "aux", 
+      "ask", 
+      "will"
+    ], 
+    [
+      "ccomp", 
+      "said", 
+      "ask"
+    ], 
+    [
+      "nn", 
+      "banks", 
+      "creditor"
+    ], 
+    [
+      "dobj", 
+      "ask", 
+      "banks"
+    ], 
+    [
+      "aux", 
+      "halve", 
+      "to"
+    ], 
+    [
+      "xcomp", 
+      "ask", 
+      "halve"
+    ], 
+    [
+      "poss", 
+      "debt", 
+      "its"
+    ], 
+    [
+      "amod", 
+      "debt", 
+      "foreign"
+    ], 
+    [
+      "dobj", 
+      "halve", 
+      "debt"
+    ], 
+    [
+      "prep_of", 
+      "debt", 
+      "$"
+    ], 
+    [
+      "number", 
+      "$", 
+      "64"
+    ], 
+    [
+      "number", 
+      "$", 
+      "billion"
+    ], 
+    [
+      "det", 
+      "third", 
+      "the"
+    ], 
+    [
+      "dep", 
+      "debt", 
+      "third"
+    ], 
+    [
+      "dep", 
+      "third", 
+      "highest"
+    ], 
+    [
+      "det", 
+      "world", 
+      "the"
+    ], 
+    [
+      "amod", 
+      "world", 
+      "developing"
+    ], 
+    [
+      "prep_in", 
+      "highest", 
+      "world"
+    ]
+  ], 
+  "words": [
+    [
+      "Argentina", 
+      {
+        "Lemma": "Argentina", 
+        "NamedEntityTag": "LOCATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 0
+      }
+    ], 
+    [
+      "said", 
+      {
+        "Lemma": "say", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 1
+      }
+    ], 
+    [
+      "it", 
+      {
+        "Lemma": "it", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "PRP", 
+        "idx": 3
+      }
+    ], 
+    [
+      "will", 
+      {
+        "Lemma": "will", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "MD", 
+        "idx": 4
+      }
+    ], 
+    [
+      "ask", 
+      {
+        "Lemma": "ask", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VB", 
+        "idx": 5
+      }
+    ], 
+    [
+      "creditor", 
+      {
+        "Lemma": "creditor", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 6
+      }
+    ], 
+    [
+      "banks", 
+      {
+        "Lemma": "bank", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 7
+      }
+    ], 
+    [
+      "to", 
+      {
+        "Lemma": "to", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "TO", 
+        "idx": 9
+      }
+    ], 
+    [
+      "halve", 
+      {
+        "Lemma": "halve", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VB", 
+        "idx": 10
+      }
+    ], 
+    [
+      "its", 
+      {
+        "Lemma": "its", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "PRP$", 
+        "idx": 11
+      }
+    ], 
+    [
+      "foreign", 
+      {
+        "Lemma": "foreign", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 12
+      }
+    ], 
+    [
+      "debt", 
+      {
+        "Lemma": "debt", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 13
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 14
+      }
+    ], 
+    [
+      "$", 
+      {
+        "Lemma": "$", 
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "$6.4E10", 
+        "PartOfSpeech": "$", 
+        "idx": 15
+      }
+    ], 
+    [
+      "64", 
+      {
+        "Lemma": "64", 
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "$6.4E10", 
+        "PartOfSpeech": "CD", 
+        "idx": 16
+      }
+    ], 
+    [
+      "billion", 
+      {
+        "Lemma": "billion", 
+        "NamedEntityTag": "MONEY", 
+        "NormalizedNamedEntityTag": "$6.4E10", 
+        "PartOfSpeech": "CD", 
+        "idx": 17
+      }
+    ], 
+    [
+      "--", 
+      {
+        "Lemma": "--", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ":", 
+        "idx": 19
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 20
+      }
+    ], 
+    [
+      "third", 
+      {
+        "Lemma": "third", 
+        "NamedEntityTag": "ORDINAL", 
+        "NormalizedNamedEntityTag": "3.0", 
+        "PartOfSpeech": "JJ", 
+        "idx": 21
+      }
+    ], 
+    [
+      "-", 
+      {
+        "Lemma": "-", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ":", 
+        "idx": 22
+      }
+    ], 
+    [
+      "highest", 
+      {
+        "Lemma": "highest", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJS", 
+        "idx": 23
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 24
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 25
+      }
+    ], 
+    [
+      "developing", 
+      {
+        "Lemma": "develop", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBG", 
+        "idx": 26
+      }
+    ], 
+    [
+      "world", 
+      {
+        "Lemma": "world", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 27
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 28
+      }
+    ]
+  ]
+}
