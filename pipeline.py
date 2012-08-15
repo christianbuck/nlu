@@ -15,7 +15,7 @@ from add_prop import SpanTree, span_from_treepos
 
 def main(files):
     # pipeline steps
-    import nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, beautify
+    import nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify
     # TODO: does conjunctions module work gracefully when propositions are conjoined?
     
     for f in files:
@@ -28,7 +28,7 @@ def main(files):
         # initialize input to first pipeline step
         token_accounted_for = [False]*len(depParse)
         '''Has the token been accounted for yet in the semantics?'''
-    
+        
         edge_accounted_for = {(dep['gov_idx'],m): False for m in range(len(depParse)) if depParse[m] for dep in depParse[m]}
         '''Has the dependency edge been accounted for yet in the semantics?'''
     
@@ -42,7 +42,7 @@ def main(files):
         print()
         sys.stdout.flush()
 
-        for m in [nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, beautify]:
+        for m in [nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify]:
             if verbose:
                 print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
             depParse, amr, alignments, completed = m.main(sentenceId, tokens, ww, wTags, depParse, amr, alignments, completed)
@@ -60,6 +60,9 @@ def main(files):
         #amr.render()
         #print('Amr.from_triples(',amr.triples(instances=False),',',amr.node_to_concepts,')')
         print()
+        if config.alignments:
+            print(alignments)
+            print()
     
         if verbose:
             print('\n\nRemaining edges:', file=sys.stderr)
@@ -224,8 +227,8 @@ def loadCoref(sentenceId, ww):
             coref.setdefault(chainId,set()).add((start,end,w))
         return coref
 
-def parents(depParseEntry):
-    return [dep['dep_idx'] for dep in depParseEntry] if depParseEntry else []
+#def parents(depParseEntry):
+#    return [dep['dep_idx'] for dep in depParseEntry] if depParseEntry else []
 
 def parent_edges(depParseEntry):
     return [(dep['gov_idx'],dep['dep_idx']) for dep in depParseEntry] if depParseEntry else []
@@ -250,10 +253,19 @@ def new_amr(triples, concepts, roots=None):
                             warn=(sys.stderr if config.verbose else None))  # only display AMR cycle warnings in verbose mode
 
 def new_amr_from_old(oldamr, new_triples=[], new_concepts={}, avoid_triples=[], avoid_concepts=[], roots=None):
+    '''Triples of the form (x,r,(y,)) or (x,r,y) are accepted.'''
     newconcepts = {v: c for v,c in oldamr.node_to_concepts.items() if v not in avoid_concepts}
     newconcepts.update(new_concepts)
-    return new_amr([trip for trip in oldamr.triples(instances=None) if trip not in avoid_triples]+new_triples,
+    return new_amr([trip for trip in oldamr.triples(instances=None) if trip not in ensure_hyper(avoid_triples)]+new_triples,
                    newconcepts, roots=roots)
+
+def ensure_hyper(triples):
+    '''Generator over elements of triples, coercing items of the form (x,r,y) into the form (x,r,(y,)) 
+    (the hyperedge-friendly representation used internally by Amr).'''
+    for a,b,c in triples:
+        if not isinstance(c,tuple):
+            yield (a,b,(c,))
+        yield (a,b,c)
 
 def new_concept(concept, amr, alignment=None, alignedToken=None):
     '''
@@ -311,6 +323,8 @@ if __name__=='__main__':
             config.warn = True
         elif arg=='-n':
             config.keepNombank = True
+        elif arg=='-a':
+            config.alignments = True
         else:
             assert False,'Unknown flag: '+arg
     

@@ -10,3 +10,6 @@ warn = False
 '''Show warnings, even if verbose is False'''
 
 keepNombank = False
+
+alignments = False
+'''Include AMR triple-to-token alignments in the output'''

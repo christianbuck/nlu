@@ -171,9 +171,11 @@ class Amr(Dag):
 
         return new_amr
 
-    def make_rooted_amr(self, root):
+    def make_rooted_amr(self, root, swap_callback=None):
         """
         Flip edges in the AMR so that all nodes are reachable from the unique root.
+        If swap_callback is provided, it is called with two arguments--the old and 
+        new edges--every time an edge is inverted.
         """
         amr = self.clone()
 
@@ -192,7 +194,9 @@ class Amr(Dag):
     
             out_triples = [(p,r,c) for p,r,c in amr.triples(refresh = True) if c[0] in reached and p in unreached]
             for p,r,c in out_triples:
-                amr._replace_triple(p,r,c,c[0],"%s-OF" %r, (p,))           
+                newtrip = (c[0],"%s-of" %r, (p,))
+                amr._replace_triple(p,r,c,*newtrip)
+                if swap_callback: swap_callback((p,r,c),newtrip)
         amr.triples(refresh = True)            
         amr.roots = [root]
         amr.node_alignments = self.node_alignments
