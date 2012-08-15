@@ -76,6 +76,8 @@ def main(files):
                             print((dep['gov']+'-'+str(dep['gov_idx']),dep['rel'],dep['dep']+'-'+str(dep['dep_idx'])), file=sys.stderr)
 
         except Exception as ex:
+            if not config.errorTolerant:
+                raise
             traceback.print_exception(*sys.exc_info())
             time.sleep(3)
 
@@ -322,6 +324,8 @@ if __name__=='__main__':
             config.verbose = True
         elif arg=='-w':
             config.warn = True
+        elif arg=='-e':
+            config.errorTolerant = True
         elif arg=='-n':
             config.keepNombank = True
         elif arg=='-a':
