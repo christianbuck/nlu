@@ -93,19 +93,41 @@ class Amr(Dag):
         """
         Create a new AMR from an AMR or a DAG in which concepts are pushed into incoming edges.
         """
-        new_amr = amr.clone()
-        new_amr.node_to_concepts = {}
+        if isinstance(amr, Amr):
+            new_amr = amr.clone() 
+        else:
+            new_amr = Amr.from_triples(amr.triples(), {})
+        new_amr.roots = copy.copy(amr.roots)
         for par, rel, child in amr.triples():
-           if type(rel) is str:    
-                part1, part2 = rel.rsplit(":",1)        
-                if part2: 
-                    if part1.lower() != "root":
+           if type(rel) is str:   
+                parts = rel.rsplit(":",1)        
+                if len(parts)==2:
+                    part1, part2 = parts
+                    if not (part1.lower().startswith("root")):
                         new_amr._replace_triple(par, rel, child, par, part1, child)
-                    new_amr.node_to_concepts[child] = part2
-                if part1.lower() == "root":
+                    for c in child: 
+                         new_amr.node_to_concepts[c] = part2
+                if rel.lower().startswith("root"):
                     new_amr.roots.remove(par)
                     new_amr._remove_triple(par, rel, child)
-                    new_amr.roots.add(child)
+                    new_amr.roots = []
+                    for c in child:
+                        new_amr.roots.append(c)
+        #new_amr = amr.clone()
+        #new_amr.__class__ = cls
+        #new_amr.node_to_concepts = {}
+        #for par, rel, child in amr.triples():
+        #   if type(rel) is str:    
+        #        part1, part2 = rel.rsplit(":",1)        
+        #        if part2: 
+        #            if part1.lower() != "root":
+        #                new_amr._replace_triple(par, rel, child, par, part1,
+        #                    child[0])
+        #            new_amr.node_to_concepts[child[0]] = part2
+        #        if part1.lower() == "root":
+        #            new_amr.roots.remove(par)
+        #            new_amr._remove_triple(par, rel, child)
+        #            new_amr.roots.append(child[0])
         return new_amr
 
     def to_concept_edge_labels(self):
@@ -148,6 +170,33 @@ class Amr(Dag):
                 new_amr.edge_alignments[newtriple] = self.node_alignments[r]
 
         return new_amr
+
+    def make_rooted_amr(self, root):
+        """
+        Flip edges in the AMR so that all nodes are reachable from the unique root.
+        """
+        amr = self.clone()
+
+        all_nodes = set(amr.get_nodes())
+
+        unreached  = True
+        while unreached: 
+
+            reach_triples = amr.triples(start_node = root, instances = False)
+            reached = set()
+            for p,r,c in reach_triples: 
+                reached.add(p)
+                reached.update(c)
+
+            unreached = all_nodes - reached
+    
+            out_triples = [(p,r,c) for p,r,c in amr.triples(refresh = True) if c[0] in reached and p in unreached]
+            for p,r,c in out_triples:
+                amr._replace_triple(p,r,c,c[0],"%s-OF" %r, (p,))           
+        amr.triples(refresh = True)            
+        amr.roots = [root]
+        amr.node_alignments = self.node_alignments
+        return amr    
 
     def stringify(self):
         """

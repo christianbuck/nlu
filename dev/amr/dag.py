@@ -301,6 +301,8 @@ class Dag(defaultdict):
             dag.roots = dag.find_roots()        
         return dag
 
+
+
     def dfs(self, extractor = lambda node, firsthit, leaf: node.__repr__(), combiner = lambda par,\
             childmap, depth: {par: childmap.items()}, hedge_combiner = lambda x: tuple(x)):
         """
@@ -357,7 +359,7 @@ class Dag(defaultdict):
         new = Dag()
         new.roots = copy.copy(self.roots)
         new.external_nodes = self.external_nodes
-        new.node_alignments, new.edge_alignments = self.node_alignmente, self.edge_alignments
+        new.node_alignments, new.edge_alignments = self.node_alignments, self.edge_alignments
         for tr in self.triples():
             new._add_triple(*copy.copy(tr))
         return new
@@ -528,7 +530,7 @@ class Dag(defaultdict):
         Return the set of nodes reachable from a node
         """
         res = set()
-        for p,r,c in self.triples(isntances = False):
+        for p,r,c in self.triples(start_node = node, instances = False):
             res.add(p)
             if type(c) is tuple:
                 res.update(c)
@@ -644,7 +646,27 @@ class Dag(defaultdict):
         order = self.get_ordered_nodes()
         result.sort(lambda x,y: cmp(order[x], order[y]))
         return result
-    
+   
+    def is_connected(self):
+        
+        all_nodes = set(self.keys())
+        start = self.roots[0]
+        reached = set(self.reach(start))
+
+        unreached = all_nodes - reached
+        while unreached: 
+            start = list(unreached)[0]
+            new_reached = set(self.reach(start))
+            if new_reached.intersection(reached):
+                reached.update(new_reached)
+                unreached = all_nodes - reached
+            else:
+                return False
+        return True
+
+        
+            
+
     ####Methods that modify the DAG###    
     def _add_triple(self, parent, relation, child, warn=sys.stderr):
         """
@@ -653,6 +675,8 @@ class Dag(defaultdict):
         if type(child) is not tuple:
             child = (child,)
         if parent in child: 
+            #raise Exception('self edge!')
+            #sys.stderr.write("WARNING: Self-edge (%s, %s, %s).\n" % (parent, relation, child))
             if warn: warn.write("WARNING: Self-edge (%s, %s, %s).\n" % (parent, relation, child))
             #raise ValueError, "Cannot add self-edge (%s, %s, %s)." % (parent, relation, child)
         for c in child: 

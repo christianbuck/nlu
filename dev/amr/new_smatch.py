@@ -1,4 +1,5 @@
 from amr import Amr
+from dag import Dag
 from collections import defaultdict
 import itertools
 import math
@@ -121,7 +122,7 @@ def get_root_align_start(amr1, amr2):
     return get_random_start(nodes1, nodes2) + [(amr1.roots[0], amr2.roots[0])]
         
 
-def compute_smatch_hill_climbing(amr1in, amr2in, starts = 10):       
+def compute_smatch_hill_climbing(amr1in, amr2in, starts = 5):       
     """
     Run hill climbing search in the space of variable mappings to find the smatch score between two AMRs.
 
@@ -144,8 +145,9 @@ def compute_smatch_hill_climbing(amr1in, amr2in, starts = 10):
     best_mapping =  {}
 
     for i in range(starts):
-        mapping_tuples = get_concept_match_start(amr1, amr2)        
+        #mapping_tuples = get_root_align_start(amr1, amr2)        
         #mapping_tuples = get_random_start(nodes1, nodes2)    
+        mapping_tuples = get_concept_match_start(amr1, amr2)
         #mapping_tuples = get_parallel_start(nodes1,nodes2)
         #mapping_tuples = get_root_align_start(amr1,amr2)
     
@@ -190,21 +192,32 @@ def mean(l):
         return math.fsum(l) / len(l)
 
 
-def compute_smatch_batch(gold_filename, test_filename):
+def compute_smatch_batch(gold_filename, test_filename, concept_edges= False):
      ps, rs, fs = [], [],[]
      with open(sys.argv[1]) as gold_file:
             with open(sys.argv[2]) as test_file:
-                gold = Amr.from_string(gold_file.readline().strip())
-                test = Amr.from_string(test_file.readline().strip())
+                gold = gold_file.readline().strip()
+                test = test_file.readline().strip()
         
                 tiburonfailct = 0
                 parsefailct = 0
                 totalct = 0
+                decodefailct = 0
 
                 while gold: 
                     totalct += 1
-                    if gold and test: 
+                    
+                    if gold and test and not test.startswith("#"): 
                         try:
+                            if concept_edges:                                    
+                                amr_gold = Dag.from_string(gold)
+                                amr_test = Dag.from_string(test)
+                                amr_gold = Amr.from_concept_edge_labels(amr_gold) 
+                                amr_test = Amr.from_concept_edge_labels(amr_test)
+                            else:
+                                amr_gold = Amr.from_string(gold)
+                                amr_test = Amr.from_string(test)
+
                             p,r,f = compute_smatch_hill_climbing(amr_gold, amr_test)
                             #hill_climbing(amr_gold, amr_test)
                             print "P:%f R:%f F:%f " % (p, r, f) 
@@ -216,7 +229,10 @@ def compute_smatch_batch(gold_filename, test_filename):
                             parsefailct += 1
 
                     else: 
-                        tiburonfailct += 1
+                        if test=="# Tiburon failed.":
+                            tiburonfailct += 1
+                        elif test=="# Decoding failed.":
+                            decodefailct += 1
                     gold = gold_file.readline().strip()
                     test = test_file.readline().strip()
                     
@@ -224,7 +240,7 @@ def compute_smatch_batch(gold_filename, test_filename):
      avgr = mean(rs)
      avgf = mean(fs)
      print "MEAN SMATCH: P:%f R:%f F:%f " % (avgp, avgr, avgf)
-     print "Total: %i   Fail(tiburon): %i   Fail(invalid AMR): %i "  % (totalct, tiburonfailct, parsefailct)
+     print "Total: %i   Fail(tiburon): %i  Fail(decode):%i   Fail(invalid AMR): %i "  % (totalct, tiburonfailct, decodefailct, parsefailct)
 
 
         #import doctest
@@ -263,4 +279,4 @@ if __name__ == "__main__":
     #t = timeit.Timer("print compute_smatch_hill_climbing(amr1,amr2,1)","from __main__ import compute_smatch_hill_climbing,amr1, amr2")
     #
     #print "%f sec" % t.timeit(number=1)
-    compute_smatch_batch(sys.argv[1], sys.argv[2])
+    compute_smatch_batch(sys.argv[1], sys.argv[2], concept_edges = True)
