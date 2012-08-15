@@ -9,12 +9,12 @@ from __future__ import print_function
 import os, sys, re, codecs, fileinput
 
 import pipeline
-from pipeline import choose_head, new_concept, new_amr_from_old, get_or_create_concept_from_token as amrget
+from pipeline import highest
 
 def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     
-    h = choose_head([i for v,i in alignment[:]], depParse)
+    h = highest([i for v,i in alignment[:]], depParse)
     
     amr.node_to_concepts[str(alignment[:h])] += '-ROOT'
 

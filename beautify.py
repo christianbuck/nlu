@@ -167,10 +167,17 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
     roots = [v for v,cname in amr.node_to_concepts.items() if '-ROOT' in cname]
     assert len(roots)==1,('Need a unique root',amr.node_to_concepts)
     root = roots[0]
-    if not amr.is_connected():
-        print('<<<<AMR is not connected!','for Amr.from_triples(',amr.triples(instances=False),',',amr.node_to_concepts,')', file=sys.stdout)
+    if not amr.is_connected(warn=(sys.stderr if config.verbose else None)):
+        if config.verbose or config.warn: print('Warning: AMR is not connected!', file=sys.stdout)
     else:
-        print('<<<<calling make_rooted_amr with',root,'for Amr.from_triples(',amr.triples(instances=False),',',amr.node_to_concepts,')', file=sys.stdout)
-        #amr = amr.make_rooted_amr(root, swap_callback)
+        try:
+            amr = amr.make_rooted_amr(root, swap_callback, warn=(sys.stderr if config.verbose else None))
+        except KeyboardInterrupt:
+            print('in make_rooted_amr with',root,'for Amr.from_triples(',amr.triples(instances=False),',',amr.node_to_concepts,')', file=sys.stdout)
+            sys.exit(1)
+    
+    # remove -ROOT decoration
+    for k,v in amr.node_to_concepts.items():
+        amr.node_to_concepts[k] = v.replace('-ROOT', '')
     
     return depParse, amr, finalAlignment, completed

@@ -27,7 +27,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
             x = alignment[:h] # index of variable associated with the head, if any
             if not (x or x==0): # need a new variable
                 print('TODO: coreferring mention not yet in AMR')
-                assert False,(i,j,w,h,x)
+                assert False,(i,j,w,h,x,amr)
             if clusterX is None:
                 clusterX = x
             elif x==clusterX:

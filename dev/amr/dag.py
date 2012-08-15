@@ -298,7 +298,7 @@ class Dag(defaultdict):
             except TypeError: # If this fails just use the whole object as root
                 dag.roots = list([roots])
         else: 
-            dag.roots = dag.find_roots()        
+            dag.roots = dag.find_roots(warn=warn)        
         return dag
 
 
@@ -538,7 +538,7 @@ class Dag(defaultdict):
                 res.add(c)
         return res
    
-    def find_roots(self):
+    def find_roots(self, warn=sys.stderr):
         """
         Find and return a set of the roots of the DAG. This does NOT set the 'roots' attribute.
         """
@@ -574,7 +574,7 @@ class Dag(defaultdict):
         while not_found:
             parents = sorted([x for x in not_found if self[x]], key=lambda a:len(self.triples(start_node = a)))
             if not parents: 
-                sys.stderr.write("WARNING: orphaned leafs %s.\n" % str(not_found))
+                if warn: warn.write("WARNING: orphaned leafs %s.\n" % str(not_found))
                 roots.extend(list(not_found))
                 return roots
             new_root = parents.pop()
@@ -647,7 +647,7 @@ class Dag(defaultdict):
         result.sort(lambda x,y: cmp(order[x], order[y]))
         return result
    
-    def get_weakly_connected_roots(self):
+    def get_weakly_connected_roots(self, warn=sys.stderr):
         """
         Return a set of root nodes for each weakly connected component.
         >>> x = Dag.from_triples([("a","B","c"), ("d","E","f")])
@@ -660,7 +660,7 @@ class Dag(defaultdict):
         True
         """
 
-        roots = list(self.find_roots())
+        roots = list(self.find_roots(warn=warn))
         if len(roots) == 1:
                 return roots
 
@@ -685,8 +685,8 @@ class Dag(defaultdict):
         #new_roots = set()                       
         #for r in nodes:
 
-    def is_connected(self):
-        return len(self.get_weakly_connected_roots()) == 1        
+    def is_connected(self, warn=sys.stderr):
+        return len(self.get_weakly_connected_roots(warn=warn)) == 1        
 
     ####Methods that modify the DAG###    
     def _add_triple(self, parent, relation, child, warn=sys.stderr):
@@ -708,12 +708,12 @@ class Dag(defaultdict):
                     #raise ValueError,"(%s, %s, %s) would produce a cycle with (%s, %s, %s)" % (parent, relation, child, c, rel, test)
         self[parent].append(relation, child)    
     
-    def _replace_triple(self, parent1, relation1, child1, parent2, relation2, child2):
+    def _replace_triple(self, parent1, relation1, child1, parent2, relation2, child2, warn=sys.stderr):
         """
         Delete a (parent, relation, child) triple from the DAG. 
         """
         self._remove_triple(parent1, relation1, child1)
-        self._add_triple(parent2, relation2, child2)
+        self._add_triple(parent2, relation2, child2, warn=warn)
     
     def _remove_triple(self, parent, relation, child):
         """

@@ -81,7 +81,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
     amr = new_amr_from_old(amr, new_triples=list(new_triples))
     
     
-
+    # TODO: mark all internal dependencies as completed?
     return depParse, amr, alignment, completed
 
 #### Resources ####

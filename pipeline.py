@@ -18,6 +18,10 @@ def main(files):
     import nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify
     # TODO: does conjunctions module work gracefully when propositions are conjoined?
     
+    nSents = len(files)
+    nSuccess = nConnected = 0
+    iSent = 0
+    
     for f in files:
 
         try:
@@ -25,7 +29,7 @@ def main(files):
             print(sentenceId)
         
             # load dependency parse from sentence file
-            tokens, ww, wTags, depParse = loadDepParse(f, verbose=verbose)
+            tokens, ww, wTags, depParse = loadDepParse(f)
 
             # initialize input to first pipeline step
             token_accounted_for = [False]*len(depParse)
@@ -46,17 +50,17 @@ def main(files):
 
 
             for m in [nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify]:
-                if verbose:
+                if config.verbose:
                     print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
                 depParse, amr, alignments, completed = m.main(sentenceId, f, tokens, ww, wTags, depParse, amr, alignments, completed)
                 #print(' '.join(ww))
-                if verbose:
+                if config.verbose:
                     print(repr(amr), file=sys.stderr)
                     print('Completed:',[depParse[i][0]['dep'] for i,v in enumerate(completed[0]) if v and depParse[i]], file=sys.stderr)
                     print(alignments, [deps[0]['dep'] for deps in depParse if deps and not completed[0][deps[0]['dep_idx']]], file=sys.stderr)
                     print(amr, file=sys.stderr)
                 
-            if verbose:
+            if config.verbose:
                 print(' '.join(tokens), file=sys.stderr)
         
             print(amr)
@@ -67,7 +71,7 @@ def main(files):
                 print(alignments)
                 print()
     
-            if verbose:
+            if config.verbose:
                 print('\n\nRemaining edges:', file=sys.stderr)
                 for deps in depParse:
                     if deps is None: continue
@@ -75,11 +79,20 @@ def main(files):
                         if dep['gov_idx'] is not None and not completed[1][(dep['gov_idx'],dep['dep_idx'])]:
                             print((dep['gov']+'-'+str(dep['gov_idx']),dep['rel'],dep['dep']+'-'+str(dep['dep_idx'])), file=sys.stderr)
 
+
+            nSuccess += 1
+            if amr.is_connected(warn=None):
+                nConnected += 1
+            
         except Exception as ex:
             if not config.errorTolerant:
                 raise
+            print(sentenceId, file=sys.stderr)
             traceback.print_exception(*sys.exc_info())
-            time.sleep(3)
+            time.sleep(0)
+            
+        iSent += 1
+        print('{}/{}, {} succeeded ({} connected)'.format(iSent, nSents, nSuccess, nConnected), file=sys.stderr)
 
 def token2concept(t):
     t = t.replace('$', '-DOLLAR-')
@@ -128,7 +141,7 @@ def loadTimex(jsonFile):
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         return json.load(jsonF)['timex']
 
-def loadDepParse(jsonFile, verbose=False):
+def loadDepParse(jsonFile):
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         sentJ = json.load(jsonF)
 
@@ -154,7 +167,7 @@ def loadDepParse(jsonFile, verbose=False):
         # dependency parse: un-collapse coordinate structures except for amod links
         conjs = [d for dep in deps if dep for d in dep if d["rel"].startswith('conj_')]
         if conjs:
-            if verbose:
+            if config.verbose:
                 print('resolving coordination...', file=sys.stderr)
             #print(tokens)
             ccs = [dep for dep in sentJ["stanford_dep_basic"] if dep["rel"]=='cc']
@@ -171,7 +184,7 @@ def loadDepParse(jsonFile, verbose=False):
             assert len(hextdeps)<=1,hextdeps
 
             if r=='conj_and' and iextdep["rel"]=='amod': # remove this conjunction link
-                if verbose: print('  removing',conj, file=sys.stderr)
+                if config.verbose: print('  removing',conj, file=sys.stderr)
                 deps[i].remove(conj)
             else:   # undo propagation of conjunct dependencies
                 # remove the non-conjunction link sharing a dependent with the conjunction link
@@ -183,14 +196,14 @@ def loadDepParse(jsonFile, verbose=False):
 
                 if hextdeps:
                     hextdep = hextdeps[0]  # external (non-conjunction) head link of conjunction's governor
-                    if verbose: print('  removing',hextdep, file=sys.stderr)
+                    if config.verbose: print('  removing',hextdep, file=sys.stderr)
                     deps[h].remove(hextdep)
-                if verbose: print('  removing',iextdep, file=sys.stderr)
+                if config.verbose: print('  removing',iextdep, file=sys.stderr)
                 deps[i].remove(iextdep)
                 # then use Basic Dependencies to convert to
                 #    removed <-dobj- and <-conj- Korea
                 #                     ^----conj- Taiwan
-                if verbose: print('  removing',conj, file=sys.stderr)
+                if config.verbose: print('  removing',conj, file=sys.stderr)
                 deps[i].remove(conj)
                 ccdeps = [dep for dep in ccs if dep["gov_idx"]==h]
                 assert len(ccdeps)==1
@@ -200,14 +213,14 @@ def loadDepParse(jsonFile, verbose=False):
                 if deps[c] is None:
                     deps[c] = []
                 if conj0 not in deps[c]:
-                    if verbose: print('  adding',conj0, file=sys.stderr)
+                    if config.verbose: print('  adding',conj0, file=sys.stderr)
                     deps[c].append(conj0)
                 conj1 = {"gov_idx": c, "gov": cword, "dep_idx": h, "dep": ww[h], "rel": 'conj'}
                 if conj1 not in deps[h]:
-                    if verbose: print('  adding',conj1, file=sys.stderr)
+                    if config.verbose: print('  adding',conj1, file=sys.stderr)
                     deps[h].append(conj1)
                 conj2 = {"gov_idx": c, "gov": cword, "dep_idx": i, "dep": ww[i], "rel": 'conj'}
-                if verbose: print('  adding',conj2, file=sys.stderr)
+                if config.verbose: print('  adding',conj2, file=sys.stderr)
                 deps[i].append(conj2)
 
         return tokens, ww, wTags, deps  # ww and wTags have None for tokens which are empty elements
@@ -228,6 +241,24 @@ def loadCoref(jsonFile, ww):
         coref = {}  # coref chain ID -> set of elements
         for start,end,chainId,w in chains:
             coref.setdefault(chainId,set()).add((start,end,w))
+            
+        # TODO: some of the chains have overlapping members. requires further investigation, but for now just choose one of them.
+        for chainId,chain in coref.items():
+            itms = list(sorted(chain, key=lambda itm: itm[0]))  # sort by start index
+            groups = [0] # group members of the chain that overlap
+            for itm,pitm in zip(itms[1:],itms[:-1]):
+                if itm[0]<=pitm[1]: # overlap
+                    groups.append(groups[-1])
+                else:
+                    groups.append(groups[-1]+1) # new group
+            for ig in range(groups[-1]+1):
+                g = [itms[j] for j,i in enumerate(groups) if i==ig]
+                if len(g):
+                    choice = max(g, key=lambda itm: (itm[1], itm[1]-itm[0])) # choose the one that ends last, with the length as tiebreaker
+                    for itm in g:
+                        if itm!=choice:
+                            chain.remove(itm)   # remove non-chosen members of the group
+            
         return coref
 
 #def parents(depParseEntry):
@@ -236,7 +267,7 @@ def loadCoref(jsonFile, ww):
 def parent_edges(depParseEntry):
     return [(dep['gov_idx'],dep['dep_idx']) for dep in depParseEntry] if depParseEntry else []
 
-def choose_head(tokenIndices, depParse):
+def choose_head(tokenIndices, depParse, fallback=None):
     # restricted version of least common subsumer:
     # assume that for every word in the NE,
     # all words on the ancestor path up to the NE's head
@@ -248,8 +279,55 @@ def choose_head(tokenIndices, depParse):
             frontier.remove(itm)
 
     if not frontier: return None    # TODO: temporary?
-    assert len(frontier)==1,(frontier,tokenIndices,depParse[tokenIndices[0]],depParse[tokenIndices[1]])
+    if len(frontier)>1 and fallback is not None:
+        tiebroken = fallback(frontier)
+        if tiebroken is not False:
+            return tiebroken
+    assert len(frontier)==1,(frontier,tokenIndices,[depParse[i] for i in frontier])
     return next(iter(frontier))
+
+def mark_depths(depParse):
+    '''
+    For each node, mark its depth in the dependency parse, starting from 0 for the node with no parent.
+    If a node has multiple parents its minimum depth is recorded (same for all dependency arcs into the child).
+    '''
+    children = defaultdict(set)
+    roots = set()
+    for deps in depParse:
+        if deps is None: continue
+        for dep in deps:
+            i, h = dep["dep_idx"], dep["gov_idx"]
+            children[h].add(i)
+            if h is None:
+                roots.add(i)
+    assert len(roots)==1,roots
+    
+    def bfs(root, d=0):
+        queue = [(root,d)]
+        while queue:
+            h, d = queue.pop(0)
+            if "depth" not in depParse[h][0]:
+                for dep in depParse[h]:
+                    dep["depth"] = d
+            for i in children[h]:
+                if "depth" not in depParse[i][0]:
+                    queue.append((i,d+1))
+    
+    bfs(next(iter(roots)))
+
+def highest(tokenIndices, depParse):
+    '''Of the given token indices, chooses the one corresponding to the node 
+    that is highest in the dependency parse.'''
+    frontier = set(tokenIndices)    # should end up with just 1 (the head)
+    for itm in set(frontier):
+        assert 0<=itm<len(depParse)
+        if not depParse[itm]:
+            frontier.remove(itm)
+    dep = depParse[next(iter(frontier))][0]
+    if "depth" not in dep:
+        mark_depths(depParse)
+    
+    return min(frontier, key=lambda i: depParse[i][0]["depth"])
 
 def new_amr(triples, concepts, roots=None):
     return Amr.from_triples(triples, concepts, roots=None, 
@@ -316,7 +394,6 @@ def get_or_create_concept_from_token(amr, alignment, i, depParse, completed=None
 
 if __name__=='__main__':
     args = sys.argv[1:]
-    verbose = False
     keepNombank = False # keep NomBank predicate names and arguments that cannot be verbalized
     while args and args[0][0]=='-':
         arg = args.pop(0)

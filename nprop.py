@@ -169,6 +169,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
             if rel in ['rel', 'Support']: continue
             assert rel[:3]=='ARG'
             h = choose_head(range(i,j+1), depParse)
+            if h is None: continue # TODO: improve coverage of complex spans
             
             # handle general proposition arguments
             if str(alignment[:h]) in amr.node_to_concepts:

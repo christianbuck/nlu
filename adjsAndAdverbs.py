@@ -28,7 +28,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                 
                 x = alignment[:h] # index of variable associated with i's head, if any
                 if not (x or x==0): # need a new variable
-                    assert not completed[0][h]
+                    assert not completed[0][h], (depParse[h],amr)
                     w = depParse[itm['gov_idx']][0]['dep']  # modifier token
                     x = new_concept(pipeline.token2concept(w), amr, alignment, h)
                     completed[0][h] = True

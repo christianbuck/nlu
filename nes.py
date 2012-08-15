@@ -44,11 +44,14 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
     triples = set() # to add to the AMR
     
     entities = pipeline.loadBBN(jsonFile)
-    for i,j,name,coarse,fine,raw in entities:    # TODO: what is the last one?
+    for i,j,name,coarse,fine,raw in entities:
         
-        if raw.startswith('<TIMEX'): continue  # TODO: NUMEX, TIMEX
+        if raw.startswith('<TIMEX'): continue  # use the timex module (sutime output) instead
         
-        h = choose_head(range(i,j+1), depParse)
+        h = choose_head(range(i,j+1), depParse, 
+                        fallback=lambda frontier: max(frontier) if len(frontier)==2 and ww[min(frontier)]=='than' else False)
+                        # ^ dirty hack: in 'more than 3 times' (wsj_0003.12), [more than 3] is a value expression 
+                        # but 'than' and '3' both attach to 'times' in the dependency parse.
         #print((i,j),name,h,depParse[h+1]['dep'], file=sys.stderr)
         
         x = alignment[:h] # index of variable associated with i's head, if any
