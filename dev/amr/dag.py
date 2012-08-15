@@ -8,7 +8,6 @@ Directed Acyclic Graphs.
 #from rule import Rule
 
 from collections import defaultdict
-from amr_parser import make_amr_parser, SpecialValue, StrLiteral, NonterminalLabel
 from operator import itemgetter
 import functools
 import unittest
@@ -234,6 +233,8 @@ class Dag(defaultdict):
         Initialize a new DAG from a Pennman style string.
         """
         import pyparsing
+        from amr_parser import make_amr_parser
+        
         if not cls._parser_singleton: # Initialize the AMR parser only once
             _parser_singleton = make_amr_parser()           
         try:

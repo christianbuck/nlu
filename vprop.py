@@ -66,8 +66,9 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
     for prop in props:
         baseform, roleset = prop["baseform"], prop["frame"]
         
-        assert prop["args"][0][0]=='rel'
-        pred = prop["args"][0]
+        preds = {tuple(arg) for arg in prop["args"] if arg[0]=='rel'}
+        assert len(preds)==1
+        pred = next(iter(preds))
         assert pred[2]==pred[3] # multiword predicates?
         ph = pred[2]    # predicate head
         if ph is None: continue  # TODO: improve coverage of complex spans

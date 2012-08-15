@@ -108,6 +108,8 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                 if coarse=='MONEY':
                     y = new_concept({'$': 'dollar', '¥': 'yen', '£': 'pound'}[u.encode('utf-8')], amr)
                     triples.add((str(x), 'unit', str(y)))
+            elif coarse=='ORDINAL':
+                pass    # skip--no special treatment in AMR guidelines, though the normalized value could be used
             else:
                 assert False,(i,j,raw)
         elif coarse.endswith('_DESC'):

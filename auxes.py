@@ -11,6 +11,7 @@ import pipeline
 from pipeline import new_concept, new_amr_from_old
 
 MODALS = {'will': '', 
+          'would': '',
           'must': 'obligate-01', 
           'may': 'possible-OR-permit-01',
           'might': 'possible', 
@@ -18,6 +19,8 @@ MODALS = {'will': '',
           'could': 'possible-OR-permit-01', 
           'should': 'recommend-01',
           'shall': 'obligate-01'}  # modal auxiliaries
+
+# TODO: used-to = use-03
 
 ACTION_ARG = {'obligate-01': 'ARG2', 'permit-01': 'ARG1', 'possible': 'domain', 'recommend-01': 'ARG1',
               'possible-OR-permit-01': 'domain'}

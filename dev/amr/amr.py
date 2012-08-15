@@ -79,6 +79,7 @@ class Amr(Dag):
         Initialize a new abstract meaning representation from a Pennman style string.
         """
         import pyparsing
+        
         if not cls._parser_singleton: # Initialize the AMR parser only once
             _parser_singleton = make_amr_parser()           
         try:
