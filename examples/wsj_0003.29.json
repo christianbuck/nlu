@@ -1,0 +1,399 @@
+{
+  "bbn_ne": [
+    [
+      7, 
+      7, 
+      "force", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">force</ENAMEX>"
+    ], 
+    [
+      8, 
+      8, 
+      "today", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">today</TIMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (PRP It)) (VP (VBZ has) (NP (NP (DT no) (NN bearing)) (PP-DIR (IN on) (NP (NP (PRP$ our) (NN work) (NN force)) (NP-TMP (NN today)))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG1", 
+          "0:1", 
+          0, 
+          0, 
+          "It"
+        ], 
+        [
+          "Support", 
+          "1:0", 
+          1, 
+          1, 
+          "has"
+        ], 
+        [
+          "ARGM-NEG", 
+          "2:0", 
+          2, 
+          2, 
+          "no"
+        ], 
+        [
+          "rel", 
+          "3:0", 
+          3, 
+          3, 
+          "bearing"
+        ], 
+        [
+          "ARG2", 
+          "4:1", 
+          4, 
+          8, 
+          "on our work force today"
+        ]
+      ], 
+      "baseform": "bearing", 
+      "frame": "bearing.01", 
+      "tokenNr": "3"
+    }, 
+    {
+      "args": [
+        [
+          "ARG2", 
+          "5:0", 
+          5, 
+          5, 
+          "our"
+        ], 
+        [
+          "ARG1", 
+          "6:0", 
+          6, 
+          6, 
+          "work"
+        ], 
+        [
+          "rel", 
+          "7:0", 
+          7, 
+          7, 
+          "force"
+        ]
+      ], 
+      "baseform": "force", 
+      "frame": "force.01", 
+      "tokenNr": "7"
+    }
+  ], 
+  "parsetree": "(ROOT (S (NP (PRP It)) (VP (VBZ has) (NP (NP (DT no) (NN bearing)) (PP (IN on) (NP (PRP$ our) (NN work) (NN force)))) (NP-TMP (NN today))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "has"
+        ], 
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          0, 
+          "It"
+        ], 
+        [
+          "ARG1", 
+          "2:2", 
+          2, 
+          8, 
+          "no bearing on our work force today"
+        ]
+      ], 
+      "baseform": "have", 
+      "basepos": "v", 
+      "frame": "have.03", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (PRP It) ) (VP (VBZ has) (NP (NP (DT no) (NN bearing) ) (PP-DIR (IN on) (NP (NP (PRP$ our) (NN work) (NN force) ) (NP-TMP (NN today) ))))) (. .) ))", 
+  "sentence_nr": 29, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "It", 
+      "dep_idx": 0, 
+      "gov": "has", 
+      "gov_idx": 1, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "has", 
+      "dep_idx": 1, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "no", 
+      "dep_idx": 2, 
+      "gov": "bearing", 
+      "gov_idx": 3, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "bearing", 
+      "dep_idx": 3, 
+      "gov": "has", 
+      "gov_idx": 1, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "our", 
+      "dep_idx": 5, 
+      "gov": "force", 
+      "gov_idx": 7, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "work", 
+      "dep_idx": 6, 
+      "gov": "force", 
+      "gov_idx": 7, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "force", 
+      "dep_idx": 7, 
+      "gov": "bearing", 
+      "gov_idx": 3, 
+      "rel": "prep_on"
+    }, 
+    {
+      "dep": "today", 
+      "dep_idx": 8, 
+      "gov": "force", 
+      "gov_idx": 7, 
+      "rel": "tmod"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "It", 
+      "dep_idx": 0, 
+      "gov": "has", 
+      "gov_idx": 1, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "has", 
+      "dep_idx": 1, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "no", 
+      "dep_idx": 2, 
+      "gov": "bearing", 
+      "gov_idx": 3, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "bearing", 
+      "dep_idx": 3, 
+      "gov": "has", 
+      "gov_idx": 1, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "on", 
+      "dep_idx": 4, 
+      "gov": "bearing", 
+      "gov_idx": 3, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "our", 
+      "dep_idx": 5, 
+      "gov": "force", 
+      "gov_idx": 7, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "work", 
+      "dep_idx": 6, 
+      "gov": "force", 
+      "gov_idx": 7, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "force", 
+      "dep_idx": 7, 
+      "gov": "on", 
+      "gov_idx": 4, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "today", 
+      "dep_idx": 8, 
+      "gov": "force", 
+      "gov_idx": 7, 
+      "rel": "tmod"
+    }
+  ], 
+  "text": "It has no bearing on our work force today .", 
+  "timex": [
+    [
+      "t1", 
+      8, 
+      8, 
+      "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1D\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">today</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "It has no bearing on our work force today .", 
+  "tuples": [
+    [
+      "nsubj", 
+      "has", 
+      "It"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "has"
+    ], 
+    [
+      "det", 
+      "bearing", 
+      "no"
+    ], 
+    [
+      "dobj", 
+      "has", 
+      "bearing"
+    ], 
+    [
+      "poss", 
+      "force", 
+      "our"
+    ], 
+    [
+      "nn", 
+      "force", 
+      "work"
+    ], 
+    [
+      "prep_on", 
+      "bearing", 
+      "force"
+    ], 
+    [
+      "tmod", 
+      "has", 
+      "today"
+    ]
+  ], 
+  "words": [
+    [
+      "It", 
+      {
+        "Lemma": "it", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "PRP", 
+        "idx": 0
+      }
+    ], 
+    [
+      "has", 
+      {
+        "Lemma": "have", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBZ", 
+        "idx": 1
+      }
+    ], 
+    [
+      "no", 
+      {
+        "Lemma": "no", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 2
+      }
+    ], 
+    [
+      "bearing", 
+      {
+        "Lemma": "bearing", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 3
+      }
+    ], 
+    [
+      "on", 
+      {
+        "Lemma": "on", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 4
+      }
+    ], 
+    [
+      "our", 
+      {
+        "Lemma": "we", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "PRP$", 
+        "idx": 5
+      }
+    ], 
+    [
+      "work", 
+      {
+        "Lemma": "work", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 6
+      }
+    ], 
+    [
+      "force", 
+      {
+        "Lemma": "force", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "today", 
+      {
+        "Lemma": "today", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "THIS", 
+        "PartOfSpeech": "NN", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"THIS P1D\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">today</TIMEX3>", 
+        "idx": 8
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 9
+      }
+    ]
+  ]
+}

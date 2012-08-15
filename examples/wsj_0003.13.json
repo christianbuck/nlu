@@ -1,0 +1,703 @@
+{
+  "bbn_ne": [
+    [
+      0, 
+      0, 
+      "Four", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">Four</NUMEX>"
+    ], 
+    [
+      3, 
+      3, 
+      "five", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">five</NUMEX>"
+    ], 
+    [
+      5, 
+      5, 
+      "workers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">workers</ENAMEX>"
+    ], 
+    [
+      7, 
+      7, 
+      "asbestos", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">asbestos</ENAMEX>"
+    ], 
+    [
+      10, 
+      10, 
+      "diseases", 
+      "DISEASE", 
+      "", 
+      "<ENAMEX TYPE=\"DISEASE\">diseases</ENAMEX>"
+    ], 
+    [
+      13, 
+      13, 
+      "three", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">three</NUMEX>"
+    ], 
+    [
+      17, 
+      17, 
+      "cancer", 
+      "DISEASE", 
+      "", 
+      "<ENAMEX TYPE=\"DISEASE\">cancer</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (NP (CD Four)) (PP (IN of) (NP (DT the) (CD five) (VBG surviving) (NNS workers)))) (VP (VBP have) (NP (ADJP (NN asbestos) (HYPH -) (VBN related)) (NNS diseases)) (, ,) (PP (VBG including) (NP (NP (CD three)) (PP (IN with) (NP (ADJP (RB recently) (VBN diagnosed)) (NN cancer)))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG0", 
+          "11:1", 
+          13, 
+          13, 
+          "three"
+        ], 
+        [
+          "ARG2", 
+          "15:0", 
+          17, 
+          17, 
+          "cancer"
+        ], 
+        [
+          "rel", 
+          "15:0", 
+          17, 
+          17, 
+          "cancer"
+        ]
+      ], 
+      "baseform": "cancer", 
+      "frame": "cancer.01", 
+      "tokenNr": "15"
+    }, 
+    {
+      "args": [
+        [
+          "ARG1", 
+          "0:2", 
+          0, 
+          5, 
+          "Four of the five surviving workers"
+        ], 
+        [
+          "Support", 
+          "6:0", 
+          6, 
+          6, 
+          "have"
+        ], 
+        [
+          "ARGM-CAU", 
+          "7:0", 
+          7, 
+          9, 
+          "asbestos - related"
+        ], 
+        [
+          "ARG2-REF", 
+          "8:0", 
+          10, 
+          10, 
+          "diseases"
+        ], 
+        [
+          "rel", 
+          "8:0", 
+          10, 
+          10, 
+          "diseases"
+        ]
+      ], 
+      "baseform": "disease", 
+      "frame": "disease.01", 
+      "tokenNr": "8"
+    }
+  ], 
+  "parsetree": "(ROOT (S (NP (NP (CD Four)) (PP (IN of) (NP (DT the) (CD five) (VBG surviving) (NNS workers)))) (VP (VBP have) (NP (NP (NN asbestos)) (: -) (NP (NP (JJ related) (NNS diseases)) (, ,) (PP (VBG including) (NP (CD three))) (PP (IN with) (NP (ADJP (RB recently) (VBN diagnosed)) (NN cancer)))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "4:0", 
+          4, 
+          4, 
+          "surviving"
+        ], 
+        [
+          "ARG0", 
+          "5:0", 
+          5, 
+          5, 
+          "workers"
+        ]
+      ], 
+      "baseform": "survive", 
+      "basepos": "v", 
+      "frame": "survive.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "6:0", 
+          6, 
+          6, 
+          "have"
+        ], 
+        [
+          "ARG0", 
+          "0:2", 
+          0, 
+          5, 
+          "Four of the five surviving workers"
+        ], 
+        [
+          "ARG1", 
+          "7:2", 
+          7, 
+          10, 
+          "asbestos - related diseases"
+        ], 
+        [
+          "ARGM-PRD", 
+          "12:1", 
+          12, 
+          17, 
+          "including three with recently diagnosed cancer"
+        ]
+      ], 
+      "baseform": "have", 
+      "basepos": "v", 
+      "frame": "have.03", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "16:0", 
+          16, 
+          16, 
+          "diagnosed"
+        ], 
+        [
+          "ARGM-TMP", 
+          "15:0", 
+          15, 
+          15, 
+          "recently"
+        ], 
+        [
+          "ARG2", 
+          "17:0", 
+          17, 
+          17, 
+          "cancer"
+        ]
+      ], 
+      "baseform": "diagnose", 
+      "basepos": "v", 
+      "frame": "diagnose.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (NP (CD Four) ) (PP (IN of) (NP (DT the) (CD five) (VBG surviving) (NNS workers) ))) (VP (VBP have) (NP (JJ asbestos-related) (NNS diseases) ) (, ,) (PP (VBG including) (NP (NP (CD three) ) (PP (IN with) (NP (ADJP (RB recently) (VBN diagnosed) ) (NN cancer) ))))) (. .) ))", 
+  "sentence_nr": 13, 
+  "stanford_coref": [
+    [
+      [
+        "related diseases", 
+        9, 
+        11
+      ], 
+      [
+        "related diseases , including three with recently diagnosed cancer", 
+        9, 
+        18
+      ]
+    ]
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "Four", 
+      "dep_idx": 0, 
+      "gov": "have", 
+      "gov_idx": 6, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 2, 
+      "gov": "workers", 
+      "gov_idx": 5, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "five", 
+      "dep_idx": 3, 
+      "gov": "workers", 
+      "gov_idx": 5, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "surviving", 
+      "dep_idx": 4, 
+      "gov": "workers", 
+      "gov_idx": 5, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "workers", 
+      "dep_idx": 5, 
+      "gov": "Four", 
+      "gov_idx": 0, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "have", 
+      "dep_idx": 6, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 7, 
+      "gov": "related", 
+      "gov_idx": 9, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "related", 
+      "dep_idx": 9, 
+      "gov": "diseases", 
+      "gov_idx": 10, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "diseases", 
+      "dep_idx": 10, 
+      "gov": "have", 
+      "gov_idx": 6, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "three", 
+      "dep_idx": 13, 
+      "gov": "have", 
+      "gov_idx": 6, 
+      "rel": "prep_including"
+    }, 
+    {
+      "dep": "recently", 
+      "dep_idx": 15, 
+      "gov": "diagnosed", 
+      "gov_idx": 16, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "diagnosed", 
+      "dep_idx": 16, 
+      "gov": "cancer", 
+      "gov_idx": 17, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "cancer", 
+      "dep_idx": 17, 
+      "gov": "three", 
+      "gov_idx": 13, 
+      "rel": "prep_with"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Four", 
+      "dep_idx": 0, 
+      "gov": "have", 
+      "gov_idx": 6, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 1, 
+      "gov": "Four", 
+      "gov_idx": 0, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 2, 
+      "gov": "workers", 
+      "gov_idx": 5, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "five", 
+      "dep_idx": 3, 
+      "gov": "workers", 
+      "gov_idx": 5, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "surviving", 
+      "dep_idx": 4, 
+      "gov": "workers", 
+      "gov_idx": 5, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "workers", 
+      "dep_idx": 5, 
+      "gov": "of", 
+      "gov_idx": 1, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "have", 
+      "dep_idx": 6, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 7, 
+      "gov": "related", 
+      "gov_idx": 9, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "related", 
+      "dep_idx": 9, 
+      "gov": "diseases", 
+      "gov_idx": 10, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "diseases", 
+      "dep_idx": 10, 
+      "gov": "have", 
+      "gov_idx": 6, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "including", 
+      "dep_idx": 12, 
+      "gov": "have", 
+      "gov_idx": 6, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "three", 
+      "dep_idx": 13, 
+      "gov": "including", 
+      "gov_idx": 12, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "with", 
+      "dep_idx": 14, 
+      "gov": "three", 
+      "gov_idx": 13, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "recently", 
+      "dep_idx": 15, 
+      "gov": "diagnosed", 
+      "gov_idx": 16, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "diagnosed", 
+      "dep_idx": 16, 
+      "gov": "cancer", 
+      "gov_idx": 17, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "cancer", 
+      "dep_idx": 17, 
+      "gov": "with", 
+      "gov_idx": 14, 
+      "rel": "pobj"
+    }
+  ], 
+  "text": "Four of the five surviving workers have asbestos - related diseases , including three with recently diagnosed cancer .", 
+  "timex": [
+    [
+      "t1", 
+      15, 
+      15, 
+      "<TIMEX3 tid=\"t1\" value=\"PAST_REF\" type=\"DATE\">recently</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "Four of the five surviving workers have asbestos - related diseases , including three with recently diagnosed cancer .", 
+  "tuples": [
+    [
+      "nsubj", 
+      "have", 
+      "Four"
+    ], 
+    [
+      "det", 
+      "workers", 
+      "the"
+    ], 
+    [
+      "num", 
+      "workers", 
+      "five"
+    ], 
+    [
+      "amod", 
+      "workers", 
+      "surviving"
+    ], 
+    [
+      "prep_of", 
+      "Four", 
+      "workers"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "have"
+    ], 
+    [
+      "dobj", 
+      "have", 
+      "asbestos"
+    ], 
+    [
+      "amod", 
+      "diseases", 
+      "related"
+    ], 
+    [
+      "dep", 
+      "asbestos", 
+      "diseases"
+    ], 
+    [
+      "prep_including", 
+      "diseases", 
+      "three"
+    ], 
+    [
+      "advmod", 
+      "diagnosed", 
+      "recently"
+    ], 
+    [
+      "amod", 
+      "cancer", 
+      "diagnosed"
+    ], 
+    [
+      "prep_with", 
+      "diseases", 
+      "cancer"
+    ]
+  ], 
+  "words": [
+    [
+      "Four", 
+      {
+        "Lemma": "four", 
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "4.0", 
+        "PartOfSpeech": "CD", 
+        "idx": 0
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 1
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 2
+      }
+    ], 
+    [
+      "five", 
+      {
+        "Lemma": "five", 
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "5.0", 
+        "PartOfSpeech": "CD", 
+        "idx": 3
+      }
+    ], 
+    [
+      "surviving", 
+      {
+        "Lemma": "survive", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBG", 
+        "idx": 4
+      }
+    ], 
+    [
+      "workers", 
+      {
+        "Lemma": "worker", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 5
+      }
+    ], 
+    [
+      "have", 
+      {
+        "Lemma": "have", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBP", 
+        "idx": 6
+      }
+    ], 
+    [
+      "asbestos", 
+      {
+        "Lemma": "asbestos", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "-", 
+      {
+        "Lemma": "-", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ":", 
+        "idx": 8
+      }
+    ], 
+    [
+      "related", 
+      {
+        "Lemma": "related", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 9
+      }
+    ], 
+    [
+      "diseases", 
+      {
+        "Lemma": "disease", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 10
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 11
+      }
+    ], 
+    [
+      "including", 
+      {
+        "Lemma": "include", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBG", 
+        "idx": 12
+      }
+    ], 
+    [
+      "three", 
+      {
+        "Lemma": "three", 
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "3.0", 
+        "PartOfSpeech": "CD", 
+        "idx": 13
+      }
+    ], 
+    [
+      "with", 
+      {
+        "Lemma": "with", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 14
+      }
+    ], 
+    [
+      "recently", 
+      {
+        "Lemma": "recently", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "PAST_REF", 
+        "PartOfSpeech": "RB", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"PAST_REF\" type=\"DATE\">recently</TIMEX3>", 
+        "idx": 15
+      }
+    ], 
+    [
+      "diagnosed", 
+      {
+        "Lemma": "diagnose", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 16
+      }
+    ], 
+    [
+      "cancer", 
+      {
+        "Lemma": "cancer", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 17
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 18
+      }
+    ]
+  ]
+}

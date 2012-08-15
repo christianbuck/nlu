@@ -1,0 +1,417 @@
+{
+  "bbn_ne": [
+    [
+      10, 
+      10, 
+      "crocidolite", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">crocidolite</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (NP (NP (NNS Areas)) (PP (IN of) (NP (DT the) (NN factory)))) (SBAR (-NONE- *ICH*-2))) (VP (VBD were) (ADJP-PRD (RB particularly) (JJ dusty)) (SBAR-2 (WHADVP-1 (WRB where)) (S (NP-SBJ-8 (DT the) (NN crocidolite)) (VP (VBD was) (VP (VBN used) (NP (-NONE- *-8)) (ADVP-LOC (-NONE- *T*-1))))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "rel", 
+          "0:0", 
+          0, 
+          0, 
+          "Areas"
+        ], 
+        [
+          "ARG1", 
+          "1:1", 
+          1, 
+          3, 
+          "of the factory"
+        ]
+      ], 
+      "baseform": "area", 
+      "frame": "area.01", 
+      "tokenNr": "0"
+    }
+  ], 
+  "parsetree": "(ROOT (S (NP (NP (NNS Areas)) (PP (IN of) (NP (DT the) (NN factory)))) (VP (VBD were) (ADJP (RB particularly) (JJ dusty)) (SBAR (WHADVP (WRB where)) (S (NP (DT the) (NN crocidolite)) (VP (VBD was) (VP (VBN used)))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "12:0", 
+          12, 
+          12, 
+          "used"
+        ], 
+        [
+          "ARG1", 
+          "13:0", 
+          9, 
+          10, 
+          "the crocidolite"
+        ], 
+        [
+          "ARGM-LOC", 
+          "14:0", 
+          8, 
+          8, 
+          "where"
+        ]
+      ], 
+      "baseform": "use", 
+      "basepos": "v", 
+      "frame": "use.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (NP (NNS Areas) ) (PP (IN of) (NP (DT the) (NN factory) )) (SBAR (-NONE- *ICH*-2) )) (VP (VBD were) (ADJP-PRD (RB particularly) (JJ dusty) ) (SBAR-2 (WHADVP-1 (WRB where) ) (S (NP-SBJ-8 (DT the) (NN crocidolite) ) (VP (VBD was) (VP (VBN used) (NP (-NONE- *-8) ) (ADVP-LOC (-NONE- *T*-1) )))))) (. .) ))", 
+  "sentence_nr": 24, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "Areas", 
+      "dep_idx": 0, 
+      "gov": "dusty", 
+      "gov_idx": 7, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 2, 
+      "gov": "factory", 
+      "gov_idx": 3, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "factory", 
+      "dep_idx": 3, 
+      "gov": "Areas", 
+      "gov_idx": 0, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 5, 
+      "gov": "dusty", 
+      "gov_idx": 7, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "particularly", 
+      "dep_idx": 6, 
+      "gov": "dusty", 
+      "gov_idx": 7, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "dusty", 
+      "dep_idx": 7, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "where", 
+      "dep_idx": 8, 
+      "gov": "used", 
+      "gov_idx": 12, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 9, 
+      "gov": "crocidolite", 
+      "gov_idx": 10, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "crocidolite", 
+      "dep_idx": 10, 
+      "gov": "used", 
+      "gov_idx": 12, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "was", 
+      "dep_idx": 11, 
+      "gov": "used", 
+      "gov_idx": 12, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "used", 
+      "dep_idx": 12, 
+      "gov": "dusty", 
+      "gov_idx": 7, 
+      "rel": "advcl"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Areas", 
+      "dep_idx": 0, 
+      "gov": "dusty", 
+      "gov_idx": 7, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 1, 
+      "gov": "Areas", 
+      "gov_idx": 0, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 2, 
+      "gov": "factory", 
+      "gov_idx": 3, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "factory", 
+      "dep_idx": 3, 
+      "gov": "of", 
+      "gov_idx": 1, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 5, 
+      "gov": "dusty", 
+      "gov_idx": 7, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "particularly", 
+      "dep_idx": 6, 
+      "gov": "dusty", 
+      "gov_idx": 7, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "dusty", 
+      "dep_idx": 7, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "where", 
+      "dep_idx": 8, 
+      "gov": "used", 
+      "gov_idx": 12, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 9, 
+      "gov": "crocidolite", 
+      "gov_idx": 10, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "crocidolite", 
+      "dep_idx": 10, 
+      "gov": "used", 
+      "gov_idx": 12, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "was", 
+      "dep_idx": 11, 
+      "gov": "used", 
+      "gov_idx": 12, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "used", 
+      "dep_idx": 12, 
+      "gov": "dusty", 
+      "gov_idx": 7, 
+      "rel": "advcl"
+    }
+  ], 
+  "text": "Areas of the factory were particularly dusty where the crocidolite was used .", 
+  "timex": [], 
+  "treebank_sentence": "Areas of the factory *ICH*-2 were particularly dusty where the crocidolite was used *-8 *T*-1 .", 
+  "tuples": [
+    [
+      "nsubj", 
+      "dusty", 
+      "Areas"
+    ], 
+    [
+      "det", 
+      "factory", 
+      "the"
+    ], 
+    [
+      "prep_of", 
+      "Areas", 
+      "factory"
+    ], 
+    [
+      "cop", 
+      "dusty", 
+      "were"
+    ], 
+    [
+      "advmod", 
+      "dusty", 
+      "particularly"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "dusty"
+    ], 
+    [
+      "advmod", 
+      "used", 
+      "where"
+    ], 
+    [
+      "det", 
+      "crocidolite", 
+      "the"
+    ], 
+    [
+      "nsubjpass", 
+      "used", 
+      "crocidolite"
+    ], 
+    [
+      "auxpass", 
+      "used", 
+      "was"
+    ], 
+    [
+      "advcl", 
+      "dusty", 
+      "used"
+    ]
+  ], 
+  "words": [
+    [
+      "Areas", 
+      {
+        "Lemma": "area", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 0
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 1
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 2
+      }
+    ], 
+    [
+      "factory", 
+      {
+        "Lemma": "factory", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 3
+      }
+    ], 
+    [
+      "were", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 5
+      }
+    ], 
+    [
+      "particularly", 
+      {
+        "Lemma": "particularly", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 6
+      }
+    ], 
+    [
+      "dusty", 
+      {
+        "Lemma": "dusty", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 7
+      }
+    ], 
+    [
+      "where", 
+      {
+        "Lemma": "where", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "WRB", 
+        "idx": 8
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 9
+      }
+    ], 
+    [
+      "crocidolite", 
+      {
+        "Lemma": "crocidolite", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 10
+      }
+    ], 
+    [
+      "was", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 11
+      }
+    ], 
+    [
+      "used", 
+      {
+        "Lemma": "use", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 12
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 15
+      }
+    ]
+  ]
+}

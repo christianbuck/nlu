@@ -1,0 +1,792 @@
+{
+  "bbn_ne": [
+    [
+      8, 
+      8, 
+      "users", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">users</ENAMEX>"
+    ], 
+    [
+      16, 
+      18, 
+      "James A. Talcott", 
+      "PERSON", 
+      "", 
+      "<ENAMEX TYPE=\"PERSON\">James A. Talcott</ENAMEX>"
+    ], 
+    [
+      20, 
+      20, 
+      "Boston", 
+      "GPE", 
+      "CITY", 
+      "<ENAMEX TYPE=\"GPE:CITY\">Boston</ENAMEX>"
+    ], 
+    [
+      22, 
+      26, 
+      "Dana - Farber Cancer Institute", 
+      "ORGANIZATION", 
+      "OTHER", 
+      "<ENAMEX TYPE=\"ORGANIZATION:OTHER\">Dana - Farber Cancer Institute</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (SINV (`` ``) (S-TPC-1 (NP-SBJ (PRP We)) (VP (VBP have) (NP (NP (DT no) (JJ useful) (NN information)) (PP (IN on) (SBAR (IN whether) (S (NP-SBJ (NNS users)) (VP (VBP are) (PP-PRD (IN at) (NP (NN risk)))))))))) (, ,) ('' '') (VP (VBD said) (S (-NONE- *T*-1))) (NP-SBJ (NP (NNP James) (NNP A.) (NNP Talcott)) (PP (IN of) (NP (NP (NNP Boston) (POS 's)) (NML (NNP Dana) (HYPH -) (NNP Farber)) (NNP Cancer) (NNP Institute)))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG2", 
+          "1:1", 
+          1, 
+          1, 
+          "We"
+        ], 
+        [
+          "Support", 
+          "2:0", 
+          2, 
+          2, 
+          "have"
+        ], 
+        [
+          "ARGM-NEG", 
+          "3:0", 
+          3, 
+          3, 
+          "no"
+        ], 
+        [
+          "rel", 
+          "5:0", 
+          5, 
+          5, 
+          "information"
+        ], 
+        [
+          "ARG1", 
+          "6:1", 
+          6, 
+          11, 
+          "on whether users are at risk"
+        ]
+      ], 
+      "baseform": "information", 
+      "frame": "information.01", 
+      "tokenNr": "5"
+    }, 
+    {
+      "args": [
+        [
+          "ARG0", 
+          "8:1", 
+          8, 
+          8, 
+          "users"
+        ], 
+        [
+          "rel", 
+          "11:0", 
+          11, 
+          11, 
+          "risk"
+        ]
+      ], 
+      "baseform": "risk", 
+      "frame": "risk.01", 
+      "tokenNr": "11"
+    }
+  ], 
+  "parsetree": "(ROOT (SINV (`` ``) (S (NP (PRP We)) (VP (VBP have) (NP (NP (DT no) (JJ useful) (NN information)) (PP (IN on) (SBAR (IN whether) (S (NP (NNS users)) (VP (VBP are) (PP (IN at) (NP (NN risk)))))))))) (, ,) ('' '') (VP (VBD said)) (NP (NP (NNP James) (NNP A.) (NNP Talcott)) (PP (IN of) (NP (NP (NP (NNP Boston) (POS 's)) (NNP Dana)) (: -) (NP (NNP Farber) (NNP Cancer) (NNP Institute))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "have"
+        ], 
+        [
+          "ARG0", 
+          "1:1", 
+          1, 
+          1, 
+          "We"
+        ], 
+        [
+          "ARG1", 
+          "3:2", 
+          3, 
+          11, 
+          "no useful information on whether users are at risk"
+        ]
+      ], 
+      "baseform": "have", 
+      "basepos": "v", 
+      "frame": "have.03", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "14:0", 
+          14, 
+          14, 
+          "said"
+        ], 
+        [
+          "ARG1", 
+          "15:0", 
+          1, 
+          11, 
+          "We have no useful information on whether users are at risk"
+        ], 
+        [
+          "ARG0", 
+          "16:2", 
+          16, 
+          26, 
+          "James A. Talcott of Boston 's Dana - Farber Cancer Institute"
+        ]
+      ], 
+      "baseform": "say", 
+      "basepos": "v", 
+      "frame": "say.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (SINV (`` ``) (S-TPC-1 (NP-SBJ (PRP We) ) (VP (VBP have) (NP (NP (DT no) (JJ useful) (NN information) ) (PP (IN on) (SBAR (IN whether) (S (NP-SBJ (NNS users) ) (VP (VBP are) (PP-PRD (IN at) (NP (NN risk) ))))))))) (, ,) ('' '') (VP (VBD said) (S (-NONE- *T*-1) )) (NP-SBJ (NP (NNP James) (NNP A.) (NNP Talcott) ) (PP (IN of) (NP (NP (NNP Boston) (POS 's) ) (NNP Dana-Farber) (NNP Cancer) (NNP Institute) ))) (. .) ))", 
+  "sentence_nr": 8, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "We", 
+      "dep_idx": 1, 
+      "gov": "have", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "have", 
+      "dep_idx": 2, 
+      "gov": "said", 
+      "gov_idx": 14, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "no", 
+      "dep_idx": 3, 
+      "gov": "information", 
+      "gov_idx": 5, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "useful", 
+      "dep_idx": 4, 
+      "gov": "information", 
+      "gov_idx": 5, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "information", 
+      "dep_idx": 5, 
+      "gov": "have", 
+      "gov_idx": 2, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "whether", 
+      "dep_idx": 7, 
+      "gov": "are", 
+      "gov_idx": 9, 
+      "rel": "complm"
+    }, 
+    {
+      "dep": "users", 
+      "dep_idx": 8, 
+      "gov": "are", 
+      "gov_idx": 9, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "are", 
+      "dep_idx": 9, 
+      "gov": "information", 
+      "gov_idx": 5, 
+      "rel": "prepc_on"
+    }, 
+    {
+      "dep": "risk", 
+      "dep_idx": 11, 
+      "gov": "are", 
+      "gov_idx": 9, 
+      "rel": "prep_at"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 14, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "James", 
+      "dep_idx": 16, 
+      "gov": "Talcott", 
+      "gov_idx": 18, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "A.", 
+      "dep_idx": 17, 
+      "gov": "Talcott", 
+      "gov_idx": 18, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Talcott", 
+      "dep_idx": 18, 
+      "gov": "said", 
+      "gov_idx": 14, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "Boston", 
+      "dep_idx": 20, 
+      "gov": "Institute", 
+      "gov_idx": 26, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "Dana", 
+      "dep_idx": 22, 
+      "gov": "Farber", 
+      "gov_idx": 24, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Farber", 
+      "dep_idx": 24, 
+      "gov": "Institute", 
+      "gov_idx": 26, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Cancer", 
+      "dep_idx": 25, 
+      "gov": "Institute", 
+      "gov_idx": 26, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Institute", 
+      "dep_idx": 26, 
+      "gov": "Talcott", 
+      "gov_idx": 18, 
+      "rel": "prep_of"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "We", 
+      "dep_idx": 1, 
+      "gov": "have", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "have", 
+      "dep_idx": 2, 
+      "gov": "said", 
+      "gov_idx": 14, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "no", 
+      "dep_idx": 3, 
+      "gov": "information", 
+      "gov_idx": 5, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "useful", 
+      "dep_idx": 4, 
+      "gov": "information", 
+      "gov_idx": 5, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "information", 
+      "dep_idx": 5, 
+      "gov": "have", 
+      "gov_idx": 2, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "on", 
+      "dep_idx": 6, 
+      "gov": "information", 
+      "gov_idx": 5, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "whether", 
+      "dep_idx": 7, 
+      "gov": "are", 
+      "gov_idx": 9, 
+      "rel": "complm"
+    }, 
+    {
+      "dep": "users", 
+      "dep_idx": 8, 
+      "gov": "are", 
+      "gov_idx": 9, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "are", 
+      "dep_idx": 9, 
+      "gov": "on", 
+      "gov_idx": 6, 
+      "rel": "pcomp"
+    }, 
+    {
+      "dep": "at", 
+      "dep_idx": 10, 
+      "gov": "are", 
+      "gov_idx": 9, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "risk", 
+      "dep_idx": 11, 
+      "gov": "at", 
+      "gov_idx": 10, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 14, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "James", 
+      "dep_idx": 16, 
+      "gov": "Talcott", 
+      "gov_idx": 18, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "A.", 
+      "dep_idx": 17, 
+      "gov": "Talcott", 
+      "gov_idx": 18, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Talcott", 
+      "dep_idx": 18, 
+      "gov": "said", 
+      "gov_idx": 14, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 19, 
+      "gov": "Talcott", 
+      "gov_idx": 18, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Boston", 
+      "dep_idx": 20, 
+      "gov": "Institute", 
+      "gov_idx": 26, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "'s", 
+      "dep_idx": 21, 
+      "gov": "Boston", 
+      "gov_idx": 20, 
+      "rel": "possessive"
+    }, 
+    {
+      "dep": "Dana", 
+      "dep_idx": 22, 
+      "gov": "Farber", 
+      "gov_idx": 24, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Farber", 
+      "dep_idx": 24, 
+      "gov": "Institute", 
+      "gov_idx": 26, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Cancer", 
+      "dep_idx": 25, 
+      "gov": "Institute", 
+      "gov_idx": 26, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Institute", 
+      "dep_idx": 26, 
+      "gov": "of", 
+      "gov_idx": 19, 
+      "rel": "pobj"
+    }
+  ], 
+  "text": "`` We have no useful information on whether users are at risk , '' said James A. Talcott of Boston 's Dana - Farber Cancer Institute .", 
+  "timex": [], 
+  "treebank_sentence": "`` We have no useful information on whether users are at risk , '' said *T*-1 James A. Talcott of Boston 's Dana - Farber Cancer Institute .", 
+  "tuples": [
+    [
+      "nsubj", 
+      "have", 
+      "We"
+    ], 
+    [
+      "ccomp", 
+      "said", 
+      "have"
+    ], 
+    [
+      "det", 
+      "information", 
+      "no"
+    ], 
+    [
+      "amod", 
+      "information", 
+      "useful"
+    ], 
+    [
+      "dobj", 
+      "have", 
+      "information"
+    ], 
+    [
+      "complm", 
+      "are", 
+      "whether"
+    ], 
+    [
+      "nsubj", 
+      "are", 
+      "users"
+    ], 
+    [
+      "prepc_on", 
+      "information", 
+      "are"
+    ], 
+    [
+      "prep_at", 
+      "are", 
+      "risk"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "said"
+    ], 
+    [
+      "nn", 
+      "Talcott", 
+      "James"
+    ], 
+    [
+      "nn", 
+      "Talcott", 
+      "A."
+    ], 
+    [
+      "nsubj", 
+      "said", 
+      "Talcott"
+    ], 
+    [
+      "poss", 
+      "Dana", 
+      "Boston"
+    ], 
+    [
+      "prep_of", 
+      "Talcott", 
+      "Dana"
+    ], 
+    [
+      "nn", 
+      "Institute", 
+      "Farber"
+    ], 
+    [
+      "nn", 
+      "Institute", 
+      "Cancer"
+    ], 
+    [
+      "dep", 
+      "Dana", 
+      "Institute"
+    ]
+  ], 
+  "words": [
+    [
+      "``", 
+      {
+        "Lemma": "``", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "``", 
+        "idx": 0
+      }
+    ], 
+    [
+      "We", 
+      {
+        "Lemma": "we", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "PRP", 
+        "idx": 1
+      }
+    ], 
+    [
+      "have", 
+      {
+        "Lemma": "have", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBP", 
+        "idx": 2
+      }
+    ], 
+    [
+      "no", 
+      {
+        "Lemma": "no", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 3
+      }
+    ], 
+    [
+      "useful", 
+      {
+        "Lemma": "useful", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 4
+      }
+    ], 
+    [
+      "information", 
+      {
+        "Lemma": "information", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 5
+      }
+    ], 
+    [
+      "on", 
+      {
+        "Lemma": "on", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 6
+      }
+    ], 
+    [
+      "whether", 
+      {
+        "Lemma": "whether", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "users", 
+      {
+        "Lemma": "user", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 8
+      }
+    ], 
+    [
+      "are", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBP", 
+        "idx": 9
+      }
+    ], 
+    [
+      "at", 
+      {
+        "Lemma": "at", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 10
+      }
+    ], 
+    [
+      "risk", 
+      {
+        "Lemma": "risk", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 11
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 12
+      }
+    ], 
+    [
+      "''", 
+      {
+        "Lemma": "''", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "''", 
+        "idx": 13
+      }
+    ], 
+    [
+      "said", 
+      {
+        "Lemma": "say", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 14
+      }
+    ], 
+    [
+      "James", 
+      {
+        "Lemma": "James", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 16
+      }
+    ], 
+    [
+      "A.", 
+      {
+        "Lemma": "A.", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 17
+      }
+    ], 
+    [
+      "Talcott", 
+      {
+        "Lemma": "Talcott", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 18
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 19
+      }
+    ], 
+    [
+      "Boston", 
+      {
+        "Lemma": "Boston", 
+        "NamedEntityTag": "LOCATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 20
+      }
+    ], 
+    [
+      "'s", 
+      {
+        "Lemma": "'s", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "POS", 
+        "idx": 21
+      }
+    ], 
+    [
+      "Dana", 
+      {
+        "Lemma": "Dana", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 22
+      }
+    ], 
+    [
+      "-", 
+      {
+        "Lemma": "-", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ":", 
+        "idx": 23
+      }
+    ], 
+    [
+      "Farber", 
+      {
+        "Lemma": "Farber", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 24
+      }
+    ], 
+    [
+      "Cancer", 
+      {
+        "Lemma": "Cancer", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 25
+      }
+    ], 
+    [
+      "Institute", 
+      {
+        "Lemma": "Institute", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 26
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 27
+      }
+    ]
+  ]
+}

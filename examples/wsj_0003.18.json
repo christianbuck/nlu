@@ -1,0 +1,1403 @@
+{
+  "bbn_ne": [
+    [
+      11, 
+      11, 
+      "U.S.", 
+      "GPE", 
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">U.S.</ENAMEX>"
+    ], 
+    [
+      15, 
+      15, 
+      "class", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">class</ENAMEX>"
+    ], 
+    [
+      17, 
+      17, 
+      "asbestos", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">asbestos</ENAMEX>"
+    ], 
+    [
+      19, 
+      19, 
+      "crocidolite", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">crocidolite</ENAMEX>"
+    ], 
+    [
+      25, 
+      25, 
+      "kind", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">kind</ENAMEX>"
+    ], 
+    [
+      27, 
+      27, 
+      "asbestos", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">asbestos</ENAMEX>"
+    ], 
+    [
+      29, 
+      29, 
+      "chrysotile", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">chrysotile</ENAMEX>"
+    ], 
+    [
+      40, 
+      40, 
+      "Dr.", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">Dr.</ENAMEX>"
+    ], 
+    [
+      41, 
+      41, 
+      "Talcott", 
+      "PERSON", 
+      "", 
+      "<ENAMEX TYPE=\"PERSON\">Talcott</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (S-TPC-1 (NP-SBJ (DT The) (NN finding)) (ADVP (RB probably)) (VP (MD will) (VP (VB support) (NP (NP (DT those)) (SBAR (WHNP-6 (WP who)) (S (NP-SBJ (-NONE- *T*-6)) (VP (VBP argue) (SBAR (IN that) (S (NP-SBJ (DT the) (NNP U.S.)) (VP (MD should) (VP (VB regulate) (NP (NP (DT the) (NN class)) (PP (IN of) (NP (NN asbestos))) (PP (VBG including) (NP (NN crocidolite)))) (ADVP-MNR (ADVP (RBR more) (RB stringently)) (PP (IN than) (NP (NP (NP (DT the) (JJ common) (NN kind)) (PP (IN of) (NP (NN asbestos))) (, ,) (NP (NN chrysotile)) (, ,)) (VP (VBN found) (NP (-NONE- *)) (PP-LOC-CLR (IN in) (NP (NP (JJS most) (NNS schools)) (CC and) (NP (JJ other) (NNS buildings))))))))))))))))))) (, ,) (NP-SBJ (NNP Dr.) (NNP Talcott)) (VP (VBD said) (SBAR (-NONE- 0) (S (-NONE- *T*-1)))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG2-REF", 
+          "15:0", 
+          15, 
+          15, 
+          "class"
+        ], 
+        [
+          "rel", 
+          "15:0", 
+          15, 
+          15, 
+          "class"
+        ], 
+        [
+          "ARG1", 
+          "16:1", 
+          16, 
+          17, 
+          "of asbestos"
+        ]
+      ], 
+      "baseform": "class", 
+      "frame": "class.03", 
+      "tokenNr": "15"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "25:0", 
+          25, 
+          25, 
+          "kind"
+        ], 
+        [
+          "ARG1", 
+          "26:1", 
+          26, 
+          27, 
+          "of asbestos"
+        ]
+      ], 
+      "baseform": "kind", 
+      "frame": "kind.01", 
+      "tokenNr": "25"
+    }
+  ], 
+  "parsetree": "(ROOT (S (S (NP (DT The) (NN finding)) (ADVP (RB probably)) (VP (MD will) (VP (VB support) (NP (NP (DT those)) (SBAR (WHNP (WP who)) (S (VP (VBP argue) (SBAR (IN that) (S (NP (DT the) (NNP U.S.)) (VP (MD should) (VP (VB regulate) (S (NP (NP (DT the) (NN class)) (PP (IN of) (NP (NP (NN asbestos)) (PP (VBG including) (NP (NN crocidolite)))))) (ADJP (RBR more) (RB stringently))))))))))) (PP (IN than) (NP (NP (DT the) (JJ common) (NN kind)) (PP (IN of) (NP (NP (NN asbestos)) (, ,) (NP (NN chrysotile)) (, ,))) (VP (VBN found) (PP (IN in) (NP (NP (JJS most) (NNS schools)) (CC and) (NP (JJ other) (NNS buildings)))))))))) (, ,) (NP (NNP Dr.) (NNP Talcott)) (VP (VBD said)) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "4:0", 
+          4, 
+          4, 
+          "support"
+        ], 
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          1, 
+          "The finding"
+        ], 
+        [
+          "ARGM-ADV", 
+          "2:1", 
+          2, 
+          2, 
+          "probably"
+        ], 
+        [
+          "ARGM-MOD", 
+          "3:0", 
+          3, 
+          3, 
+          "will"
+        ], 
+        [
+          "ARG1", 
+          "5:2", 
+          5, 
+          38, 
+          "those who *T*-6 argue that the U.S. should regulate the class of asbestos including crocidolite more stringently than the common kind of asbestos , chrysotile , found * in most schools and other buildings"
+        ]
+      ], 
+      "baseform": "support", 
+      "basepos": "v", 
+      "frame": "support.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "8:0", 
+          8, 
+          8, 
+          "argue"
+        ], 
+        [
+          "ARG0", 
+          "7:0", 
+          6, 
+          6, 
+          "who"
+        ], 
+        [
+          "ARG1", 
+          "9:1", 
+          9, 
+          38, 
+          "that the U.S. should regulate the class of asbestos including crocidolite more stringently than the common kind of asbestos , chrysotile , found * in most schools and other buildings"
+        ], 
+        [
+          "LINK-SLC", 
+          "5:1*7:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "argue", 
+      "basepos": "v", 
+      "frame": "argue.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "13:0", 
+          13, 
+          13, 
+          "regulate"
+        ], 
+        [
+          "ARG0", 
+          "10:1", 
+          10, 
+          11, 
+          "the U.S."
+        ], 
+        [
+          "ARGM-MOD", 
+          "12:0", 
+          12, 
+          12, 
+          "should"
+        ], 
+        [
+          "ARG1", 
+          "14:2", 
+          14, 
+          19, 
+          "the class of asbestos including crocidolite"
+        ], 
+        [
+          "ARGM-MNR", 
+          "20:2", 
+          20, 
+          38, 
+          "more stringently than the common kind of asbestos , chrysotile , found * in most schools and other buildings"
+        ]
+      ], 
+      "baseform": "regulate", 
+      "basepos": "v", 
+      "frame": "regulate.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "18:0", 
+          18, 
+          18, 
+          "including"
+        ], 
+        [
+          "ARG2", 
+          "14:1,16:1", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "ARG1", 
+          "19:1", 
+          19, 
+          19, 
+          "crocidolite"
+        ]
+      ], 
+      "baseform": "include", 
+      "basepos": "v", 
+      "frame": "include.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "31:0", 
+          31, 
+          31, 
+          "found"
+        ], 
+        [
+          "ARG1", 
+          "32:0", 
+          32, 
+          32, 
+          "*"
+        ], 
+        [
+          "ARGM-LOC", 
+          "33:1", 
+          33, 
+          38, 
+          "in most schools and other buildings"
+        ], 
+        [
+          "LINK-PCR", 
+          "23:2*32:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "find", 
+      "basepos": "v", 
+      "frame": "find.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "42:0", 
+          42, 
+          42, 
+          "said"
+        ], 
+        [
+          "ARG0", 
+          "40:1", 
+          40, 
+          41, 
+          "Dr. Talcott"
+        ], 
+        [
+          "ARG1", 
+          "44:0", 
+          0, 
+          38, 
+          "The finding probably will support those who *T*-6 argue that the U.S. should regulate the class of asbestos including crocidolite more stringently than the common kind of asbestos , chrysotile , found * in most schools and other buildings"
+        ]
+      ], 
+      "baseform": "say", 
+      "basepos": "v", 
+      "frame": "say.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (S-TPC-1 (NP-SBJ (DT The) (NN finding) ) (ADVP (RB probably) ) (VP (MD will) (VP (VB support) (NP (NP (DT those) ) (SBAR (WHNP-6 (WP who) ) (S (NP-SBJ (-NONE- *T*-6) ) (VP (VBP argue) (SBAR (IN that) (S (NP-SBJ (DT the) (NNP U.S.) ) (VP (MD should) (VP (VB regulate) (NP (NP (DT the) (NN class) ) (PP (IN of) (NP (NN asbestos) )) (PP (VBG including) (NP (NN crocidolite) ))) (ADVP-MNR (ADVP (RBR more) (RB stringently) ) (PP (IN than) (NP (NP (NP (DT the) (JJ common) (NN kind) ) (PP (IN of) (NP (NN asbestos) )) (, ,) (NP (NN chrysotile) ) (, ,) ) (VP (VBN found) (NP (-NONE- *) ) (PP-LOC-CLR (IN in) (NP (NP (JJS most) (NNS schools) ) (CC and) (NP (JJ other) (NNS buildings) )))))))))))))))))) (, ,) (NP-SBJ (NNP Dr.) (NNP Talcott) ) (VP (VBD said) (SBAR (-NONE- 0) (S (-NONE- *T*-1) ))) (. .) ))", 
+  "sentence_nr": 18, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "finding", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "finding", 
+      "dep_idx": 1, 
+      "gov": "support", 
+      "gov_idx": 4, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "probably", 
+      "dep_idx": 2, 
+      "gov": "support", 
+      "gov_idx": 4, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "will", 
+      "dep_idx": 3, 
+      "gov": "support", 
+      "gov_idx": 4, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "support", 
+      "dep_idx": 4, 
+      "gov": "said", 
+      "gov_idx": 42, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "those", 
+      "dep_idx": 5, 
+      "gov": "support", 
+      "gov_idx": 4, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "those", 
+      "dep_idx": 5, 
+      "gov": "argue", 
+      "gov_idx": 8, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "argue", 
+      "dep_idx": 8, 
+      "gov": "those", 
+      "gov_idx": 5, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 9, 
+      "gov": "regulate", 
+      "gov_idx": 13, 
+      "rel": "complm"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 10, 
+      "gov": "U.S.", 
+      "gov_idx": 11, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "U.S.", 
+      "dep_idx": 11, 
+      "gov": "regulate", 
+      "gov_idx": 13, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "should", 
+      "dep_idx": 12, 
+      "gov": "regulate", 
+      "gov_idx": 13, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "regulate", 
+      "dep_idx": 13, 
+      "gov": "argue", 
+      "gov_idx": 8, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 14, 
+      "gov": "class", 
+      "gov_idx": 15, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "class", 
+      "dep_idx": 15, 
+      "gov": "regulate", 
+      "gov_idx": 13, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 17, 
+      "gov": "class", 
+      "gov_idx": 15, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "crocidolite", 
+      "dep_idx": 19, 
+      "gov": "class", 
+      "gov_idx": 15, 
+      "rel": "prep_including"
+    }, 
+    {
+      "dep": "more", 
+      "dep_idx": 20, 
+      "gov": "stringently", 
+      "gov_idx": 21, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "stringently", 
+      "dep_idx": 21, 
+      "gov": "regulate", 
+      "gov_idx": 13, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 23, 
+      "gov": "kind", 
+      "gov_idx": 25, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "common", 
+      "dep_idx": 24, 
+      "gov": "kind", 
+      "gov_idx": 25, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "kind", 
+      "dep_idx": 25, 
+      "gov": "stringently", 
+      "gov_idx": 21, 
+      "rel": "prep_than"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 27, 
+      "gov": "kind", 
+      "gov_idx": 25, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "chrysotile", 
+      "dep_idx": 29, 
+      "gov": "kind", 
+      "gov_idx": 25, 
+      "rel": "appos"
+    }, 
+    {
+      "dep": "found", 
+      "dep_idx": 31, 
+      "gov": "kind", 
+      "gov_idx": 25, 
+      "rel": "partmod"
+    }, 
+    {
+      "dep": "most", 
+      "dep_idx": 34, 
+      "gov": "schools", 
+      "gov_idx": 35, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "schools", 
+      "dep_idx": 35, 
+      "gov": "found", 
+      "gov_idx": 31, 
+      "rel": "prep_in"
+    }, 
+    {
+      "dep": "other", 
+      "dep_idx": 37, 
+      "gov": "buildings", 
+      "gov_idx": 38, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "buildings", 
+      "dep_idx": 38, 
+      "gov": "found", 
+      "gov_idx": 31, 
+      "rel": "prep_in"
+    }, 
+    {
+      "dep": "buildings", 
+      "dep_idx": 38, 
+      "gov": "schools", 
+      "gov_idx": 35, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "Dr.", 
+      "dep_idx": 40, 
+      "gov": "Talcott", 
+      "gov_idx": 41, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Talcott", 
+      "dep_idx": 41, 
+      "gov": "said", 
+      "gov_idx": 42, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 42, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "finding", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "finding", 
+      "dep_idx": 1, 
+      "gov": "support", 
+      "gov_idx": 4, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "probably", 
+      "dep_idx": 2, 
+      "gov": "support", 
+      "gov_idx": 4, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "will", 
+      "dep_idx": 3, 
+      "gov": "support", 
+      "gov_idx": 4, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "support", 
+      "dep_idx": 4, 
+      "gov": "said", 
+      "gov_idx": 42, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "those", 
+      "dep_idx": 5, 
+      "gov": "support", 
+      "gov_idx": 4, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "who", 
+      "dep_idx": 6, 
+      "gov": "argue", 
+      "gov_idx": 8, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "argue", 
+      "dep_idx": 8, 
+      "gov": "those", 
+      "gov_idx": 5, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 9, 
+      "gov": "regulate", 
+      "gov_idx": 13, 
+      "rel": "complm"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 10, 
+      "gov": "U.S.", 
+      "gov_idx": 11, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "U.S.", 
+      "dep_idx": 11, 
+      "gov": "regulate", 
+      "gov_idx": 13, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "should", 
+      "dep_idx": 12, 
+      "gov": "regulate", 
+      "gov_idx": 13, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "regulate", 
+      "dep_idx": 13, 
+      "gov": "argue", 
+      "gov_idx": 8, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 14, 
+      "gov": "class", 
+      "gov_idx": 15, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "class", 
+      "dep_idx": 15, 
+      "gov": "regulate", 
+      "gov_idx": 13, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 16, 
+      "gov": "class", 
+      "gov_idx": 15, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 17, 
+      "gov": "of", 
+      "gov_idx": 16, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "including", 
+      "dep_idx": 18, 
+      "gov": "class", 
+      "gov_idx": 15, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "crocidolite", 
+      "dep_idx": 19, 
+      "gov": "including", 
+      "gov_idx": 18, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "more", 
+      "dep_idx": 20, 
+      "gov": "stringently", 
+      "gov_idx": 21, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "stringently", 
+      "dep_idx": 21, 
+      "gov": "regulate", 
+      "gov_idx": 13, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "than", 
+      "dep_idx": 22, 
+      "gov": "stringently", 
+      "gov_idx": 21, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 23, 
+      "gov": "kind", 
+      "gov_idx": 25, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "common", 
+      "dep_idx": 24, 
+      "gov": "kind", 
+      "gov_idx": 25, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "kind", 
+      "dep_idx": 25, 
+      "gov": "than", 
+      "gov_idx": 22, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 26, 
+      "gov": "kind", 
+      "gov_idx": 25, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 27, 
+      "gov": "of", 
+      "gov_idx": 26, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "chrysotile", 
+      "dep_idx": 29, 
+      "gov": "kind", 
+      "gov_idx": 25, 
+      "rel": "appos"
+    }, 
+    {
+      "dep": "found", 
+      "dep_idx": 31, 
+      "gov": "kind", 
+      "gov_idx": 25, 
+      "rel": "partmod"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 33, 
+      "gov": "found", 
+      "gov_idx": 31, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "most", 
+      "dep_idx": 34, 
+      "gov": "schools", 
+      "gov_idx": 35, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "schools", 
+      "dep_idx": 35, 
+      "gov": "in", 
+      "gov_idx": 33, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 36, 
+      "gov": "schools", 
+      "gov_idx": 35, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "other", 
+      "dep_idx": 37, 
+      "gov": "buildings", 
+      "gov_idx": 38, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "buildings", 
+      "dep_idx": 38, 
+      "gov": "schools", 
+      "gov_idx": 35, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "Dr.", 
+      "dep_idx": 40, 
+      "gov": "Talcott", 
+      "gov_idx": 41, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Talcott", 
+      "dep_idx": 41, 
+      "gov": "said", 
+      "gov_idx": 42, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 42, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "text": "The finding probably will support those who argue that the U.S. should regulate the class of asbestos including crocidolite more stringently than the common kind of asbestos , chrysotile , found in most schools and other buildings , Dr. Talcott said .", 
+  "timex": [], 
+  "treebank_sentence": "The finding probably will support those who *T*-6 argue that the U.S. should regulate the class of asbestos including crocidolite more stringently than the common kind of asbestos , chrysotile , found * in most schools and other buildings , Dr. Talcott said 0 *T*-1 .", 
+  "tuples": [
+    [
+      "det", 
+      "finding", 
+      "The"
+    ], 
+    [
+      "nsubj", 
+      "support", 
+      "finding"
+    ], 
+    [
+      "advmod", 
+      "support", 
+      "probably"
+    ], 
+    [
+      "aux", 
+      "support", 
+      "will"
+    ], 
+    [
+      "ccomp", 
+      "said", 
+      "support"
+    ], 
+    [
+      "dobj", 
+      "support", 
+      "those"
+    ], 
+    [
+      "nsubj", 
+      "argue", 
+      "those"
+    ], 
+    [
+      "rcmod", 
+      "those", 
+      "argue"
+    ], 
+    [
+      "complm", 
+      "regulate", 
+      "that"
+    ], 
+    [
+      "det", 
+      "U.S.", 
+      "the"
+    ], 
+    [
+      "nsubj", 
+      "regulate", 
+      "U.S."
+    ], 
+    [
+      "aux", 
+      "regulate", 
+      "should"
+    ], 
+    [
+      "ccomp", 
+      "argue", 
+      "regulate"
+    ], 
+    [
+      "det", 
+      "class", 
+      "the"
+    ], 
+    [
+      "nsubj", 
+      "stringently", 
+      "class"
+    ], 
+    [
+      "prep_of", 
+      "class", 
+      "asbestos"
+    ], 
+    [
+      "prep_including", 
+      "asbestos", 
+      "crocidolite"
+    ], 
+    [
+      "advmod", 
+      "stringently", 
+      "more"
+    ], 
+    [
+      "xcomp", 
+      "regulate", 
+      "stringently"
+    ], 
+    [
+      "det", 
+      "kind", 
+      "the"
+    ], 
+    [
+      "amod", 
+      "kind", 
+      "common"
+    ], 
+    [
+      "prep_than", 
+      "support", 
+      "kind"
+    ], 
+    [
+      "prep_of", 
+      "kind", 
+      "asbestos"
+    ], 
+    [
+      "appos", 
+      "asbestos", 
+      "chrysotile"
+    ], 
+    [
+      "partmod", 
+      "kind", 
+      "found"
+    ], 
+    [
+      "amod", 
+      "schools", 
+      "most"
+    ], 
+    [
+      "prep_in", 
+      "found", 
+      "schools"
+    ], 
+    [
+      "amod", 
+      "buildings", 
+      "other"
+    ], 
+    [
+      "prep_in", 
+      "found", 
+      "buildings"
+    ], 
+    [
+      "conj_and", 
+      "schools", 
+      "buildings"
+    ], 
+    [
+      "nn", 
+      "Talcott", 
+      "Dr."
+    ], 
+    [
+      "nsubj", 
+      "said", 
+      "Talcott"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "said"
+    ]
+  ], 
+  "words": [
+    [
+      "The", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 0
+      }
+    ], 
+    [
+      "finding", 
+      {
+        "Lemma": "finding", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 1
+      }
+    ], 
+    [
+      "probably", 
+      {
+        "Lemma": "probably", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 2
+      }
+    ], 
+    [
+      "will", 
+      {
+        "Lemma": "will", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "MD", 
+        "idx": 3
+      }
+    ], 
+    [
+      "support", 
+      {
+        "Lemma": "support", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VB", 
+        "idx": 4
+      }
+    ], 
+    [
+      "those", 
+      {
+        "Lemma": "those", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 5
+      }
+    ], 
+    [
+      "who", 
+      {
+        "Lemma": "who", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "WP", 
+        "idx": 6
+      }
+    ], 
+    [
+      "argue", 
+      {
+        "Lemma": "argue", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBP", 
+        "idx": 8
+      }
+    ], 
+    [
+      "that", 
+      {
+        "Lemma": "that", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 9
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 10
+      }
+    ], 
+    [
+      "U.S.", 
+      {
+        "Lemma": "U.S.", 
+        "NamedEntityTag": "LOCATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 11
+      }
+    ], 
+    [
+      "should", 
+      {
+        "Lemma": "should", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "MD", 
+        "idx": 12
+      }
+    ], 
+    [
+      "regulate", 
+      {
+        "Lemma": "regulate", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VB", 
+        "idx": 13
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 14
+      }
+    ], 
+    [
+      "class", 
+      {
+        "Lemma": "class", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 15
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 16
+      }
+    ], 
+    [
+      "asbestos", 
+      {
+        "Lemma": "asbestos", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 17
+      }
+    ], 
+    [
+      "including", 
+      {
+        "Lemma": "include", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBG", 
+        "idx": 18
+      }
+    ], 
+    [
+      "crocidolite", 
+      {
+        "Lemma": "crocidolite", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 19
+      }
+    ], 
+    [
+      "more", 
+      {
+        "Lemma": "more", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RBR", 
+        "idx": 20
+      }
+    ], 
+    [
+      "stringently", 
+      {
+        "Lemma": "stringently", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 21
+      }
+    ], 
+    [
+      "than", 
+      {
+        "Lemma": "than", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 22
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 23
+      }
+    ], 
+    [
+      "common", 
+      {
+        "Lemma": "common", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 24
+      }
+    ], 
+    [
+      "kind", 
+      {
+        "Lemma": "kind", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 25
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 26
+      }
+    ], 
+    [
+      "asbestos", 
+      {
+        "Lemma": "asbestos", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 27
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 28
+      }
+    ], 
+    [
+      "chrysotile", 
+      {
+        "Lemma": "chrysotile", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 29
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 30
+      }
+    ], 
+    [
+      "found", 
+      {
+        "Lemma": "find", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 31
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 33
+      }
+    ], 
+    [
+      "most", 
+      {
+        "Lemma": "most", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJS", 
+        "idx": 34
+      }
+    ], 
+    [
+      "schools", 
+      {
+        "Lemma": "school", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 35
+      }
+    ], 
+    [
+      "and", 
+      {
+        "Lemma": "and", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "CC", 
+        "idx": 36
+      }
+    ], 
+    [
+      "other", 
+      {
+        "Lemma": "other", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 37
+      }
+    ], 
+    [
+      "buildings", 
+      {
+        "Lemma": "building", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 38
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 39
+      }
+    ], 
+    [
+      "Dr.", 
+      {
+        "Lemma": "Dr.", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 40
+      }
+    ], 
+    [
+      "Talcott", 
+      {
+        "Lemma": "Talcott", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 41
+      }
+    ], 
+    [
+      "said", 
+      {
+        "Lemma": "say", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 42
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 45
+      }
+    ]
+  ]
+}

@@ -1,0 +1,564 @@
+{
+  "bbn_ne": [
+    [
+      1, 
+      3, 
+      "1953 to 1955", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">1953 to 1955</TIMEX>"
+    ], 
+    [
+      5, 
+      6, 
+      "9.8 billion", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">9.8 billion</NUMEX>"
+    ], 
+    [
+      7, 
+      7, 
+      "Kent", 
+      "PRODUCT", 
+      "OTHER", 
+      "<ENAMEX TYPE=\"PRODUCT:OTHER\">Kent</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (S-TPC-1 (PP-TMP (PP-DIR (IN From) (NP (CD 1953))) (PP-DIR (IN to) (NP (CD 1955)))) (, ,) (NP-SBJ-3 (NP (QP (CD 9.8) (CD billion)) (NNP Kent) (NNS cigarettes)) (PP (IN with) (NP (DT the) (NNS filters)))) (VP (VBD were) (VP (VBN sold) (NP (-NONE- *-3))))) (, ,) (NP-SBJ (DT the) (NN company)) (VP (VBD said) (SBAR (-NONE- 0) (S (-NONE- *T*-1)))) (. .)))", 
+  "nom": [], 
+  "parsetree": "(ROOT (S (S (PP (IN From) (NP (CD 1953) (TO to) (CD 1955))) (, ,) (NP (NP (QP (CD 9.8) (CD billion)) (NNP Kent) (NNS cigarettes)) (PP (IN with) (NP (DT the) (NNS filters)))) (VP (VBD were) (VP (VBN sold)))) (, ,) (NP (DT the) (NN company)) (VP (VBD said)) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "13:0", 
+          13, 
+          13, 
+          "sold"
+        ], 
+        [
+          "ARG1", 
+          "14:0", 
+          5, 
+          11, 
+          "9.8 billion Kent cigarettes with the filters"
+        ]
+      ], 
+      "baseform": "sell", 
+      "basepos": "v", 
+      "frame": "sell.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "18:0", 
+          18, 
+          18, 
+          "said"
+        ], 
+        [
+          "ARG0", 
+          "16:1", 
+          16, 
+          17, 
+          "the company"
+        ], 
+        [
+          "ARG1", 
+          "20:0", 
+          0, 
+          14, 
+          "From 1953 to 1955 , 9.8 billion Kent cigarettes with the filters were sold *-3"
+        ]
+      ], 
+      "baseform": "say", 
+      "basepos": "v", 
+      "frame": "say.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (S-TPC-1 (PP-TMP (PP-DIR (IN From) (NP (CD 1953) )) (PP-DIR (TO to) (NP (CD 1955) ))) (, ,) (NP-SBJ-3 (NP (QP (CD 9.8) (CD billion) ) (NNP Kent) (NNS cigarettes) ) (PP (IN with) (NP (DT the) (NNS filters) ))) (VP (VBD were) (VP (VBN sold) (NP (-NONE- *-3) )))) (, ,) (NP-SBJ (DT the) (NN company) ) (VP (VBD said) (SBAR (-NONE- 0) (S (-NONE- *T*-1) ))) (. .) ))", 
+  "sentence_nr": 11, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "1953", 
+      "dep_idx": 1, 
+      "gov": "sold", 
+      "gov_idx": 13, 
+      "rel": "prep_from"
+    }, 
+    {
+      "dep": "1955", 
+      "dep_idx": 3, 
+      "gov": "sold", 
+      "gov_idx": 13, 
+      "rel": "prep_to"
+    }, 
+    {
+      "dep": "9.8", 
+      "dep_idx": 5, 
+      "gov": "billion", 
+      "gov_idx": 6, 
+      "rel": "number"
+    }, 
+    {
+      "dep": "billion", 
+      "dep_idx": 6, 
+      "gov": "cigarettes", 
+      "gov_idx": 8, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "Kent", 
+      "dep_idx": 7, 
+      "gov": "cigarettes", 
+      "gov_idx": 8, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "cigarettes", 
+      "dep_idx": 8, 
+      "gov": "sold", 
+      "gov_idx": 13, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 10, 
+      "gov": "filters", 
+      "gov_idx": 11, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "filters", 
+      "dep_idx": 11, 
+      "gov": "cigarettes", 
+      "gov_idx": 8, 
+      "rel": "prep_with"
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 12, 
+      "gov": "sold", 
+      "gov_idx": 13, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "sold", 
+      "dep_idx": 13, 
+      "gov": "said", 
+      "gov_idx": 18, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 16, 
+      "gov": "company", 
+      "gov_idx": 17, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "company", 
+      "dep_idx": 17, 
+      "gov": "said", 
+      "gov_idx": 18, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 18, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "From", 
+      "dep_idx": 0, 
+      "gov": "sold", 
+      "gov_idx": 13, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "1953", 
+      "dep_idx": 1, 
+      "gov": "From", 
+      "gov_idx": 0, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 2, 
+      "gov": "From", 
+      "gov_idx": 0, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "1955", 
+      "dep_idx": 3, 
+      "gov": "to", 
+      "gov_idx": 2, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "9.8", 
+      "dep_idx": 5, 
+      "gov": "billion", 
+      "gov_idx": 6, 
+      "rel": "number"
+    }, 
+    {
+      "dep": "billion", 
+      "dep_idx": 6, 
+      "gov": "cigarettes", 
+      "gov_idx": 8, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "Kent", 
+      "dep_idx": 7, 
+      "gov": "cigarettes", 
+      "gov_idx": 8, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "cigarettes", 
+      "dep_idx": 8, 
+      "gov": "sold", 
+      "gov_idx": 13, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "with", 
+      "dep_idx": 9, 
+      "gov": "cigarettes", 
+      "gov_idx": 8, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 10, 
+      "gov": "filters", 
+      "gov_idx": 11, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "filters", 
+      "dep_idx": 11, 
+      "gov": "with", 
+      "gov_idx": 9, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 12, 
+      "gov": "sold", 
+      "gov_idx": 13, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "sold", 
+      "dep_idx": 13, 
+      "gov": "said", 
+      "gov_idx": 18, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 16, 
+      "gov": "company", 
+      "gov_idx": 17, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "company", 
+      "dep_idx": 17, 
+      "gov": "said", 
+      "gov_idx": 18, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 18, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "text": "From 1953 to 1955 , 9.8 billion Kent cigarettes with the filters were sold , the company said .", 
+  "timex": [
+    [
+      "t2", 
+      3, 
+      3, 
+      "<TIMEX3 tid=\"t2\" value=\"1955\" type=\"DATE\">1955</TIMEX3>"
+    ], 
+    [
+      "t1", 
+      1, 
+      1, 
+      "<TIMEX3 tid=\"t1\" value=\"1953\" type=\"DATE\">1953</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "From 1953 to 1955 , 9.8 billion Kent cigarettes with the filters were sold *-3 , the company said 0 *T*-1 .", 
+  "tuples": [
+    [
+      "num", 
+      "1955", 
+      "1953"
+    ], 
+    [
+      "dep", 
+      "1955", 
+      "to"
+    ], 
+    [
+      "prep_from", 
+      "sold", 
+      "1955"
+    ], 
+    [
+      "number", 
+      "billion", 
+      "9.8"
+    ], 
+    [
+      "num", 
+      "cigarettes", 
+      "billion"
+    ], 
+    [
+      "nn", 
+      "cigarettes", 
+      "Kent"
+    ], 
+    [
+      "nsubjpass", 
+      "sold", 
+      "cigarettes"
+    ], 
+    [
+      "det", 
+      "filters", 
+      "the"
+    ], 
+    [
+      "prep_with", 
+      "cigarettes", 
+      "filters"
+    ], 
+    [
+      "auxpass", 
+      "sold", 
+      "were"
+    ], 
+    [
+      "ccomp", 
+      "said", 
+      "sold"
+    ], 
+    [
+      "det", 
+      "company", 
+      "the"
+    ], 
+    [
+      "nsubj", 
+      "said", 
+      "company"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "said"
+    ]
+  ], 
+  "words": [
+    [
+      "From", 
+      {
+        "Lemma": "from", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 0
+      }
+    ], 
+    [
+      "1953", 
+      {
+        "Lemma": "1953", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "1953", 
+        "PartOfSpeech": "CD", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"1953\" type=\"DATE\">1953</TIMEX3>", 
+        "idx": 1
+      }
+    ], 
+    [
+      "to", 
+      {
+        "Lemma": "to", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "1953", 
+        "PartOfSpeech": "TO", 
+        "idx": 2
+      }
+    ], 
+    [
+      "1955", 
+      {
+        "Lemma": "1955", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "1955", 
+        "PartOfSpeech": "CD", 
+        "Timex": "<TIMEX3 tid=\"t2\" value=\"1955\" type=\"DATE\">1955</TIMEX3>", 
+        "idx": 3
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 4
+      }
+    ], 
+    [
+      "9.8", 
+      {
+        "Lemma": "9.8", 
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "9.8E9", 
+        "PartOfSpeech": "CD", 
+        "idx": 5
+      }
+    ], 
+    [
+      "billion", 
+      {
+        "Lemma": "billion", 
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "9.8E9", 
+        "PartOfSpeech": "CD", 
+        "idx": 6
+      }
+    ], 
+    [
+      "Kent", 
+      {
+        "Lemma": "Kent", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNP", 
+        "idx": 7
+      }
+    ], 
+    [
+      "cigarettes", 
+      {
+        "Lemma": "cigarette", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 8
+      }
+    ], 
+    [
+      "with", 
+      {
+        "Lemma": "with", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 9
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 10
+      }
+    ], 
+    [
+      "filters", 
+      {
+        "Lemma": "filter", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 11
+      }
+    ], 
+    [
+      "were", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 12
+      }
+    ], 
+    [
+      "sold", 
+      {
+        "Lemma": "sell", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 13
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 15
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 16
+      }
+    ], 
+    [
+      "company", 
+      {
+        "Lemma": "company", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 17
+      }
+    ], 
+    [
+      "said", 
+      {
+        "Lemma": "say", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 18
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 21
+      }
+    ]
+  ]
+}

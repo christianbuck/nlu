@@ -1,0 +1,1609 @@
+{
+  "bbn_ne": [
+    [
+      1, 
+      1, 
+      "U.S.", 
+      "GPE", 
+      "COUNTRY", 
+      "<ENAMEX TYPE=\"GPE:COUNTRY\">U.S.</ENAMEX>"
+    ], 
+    [
+      26, 
+      26, 
+      "fibers", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">fibers</ENAMEX>"
+    ], 
+    [
+      29, 
+      29, 
+      "crocidolite", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">crocidolite</ENAMEX>"
+    ], 
+    [
+      36, 
+      36, 
+      "amphobiles", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">amphobiles</ENAMEX>"
+    ], 
+    [
+      40, 
+      42, 
+      "Brooke T. Mossman", 
+      "PERSON", 
+      "", 
+      "<ENAMEX TYPE=\"PERSON\">Brooke T. Mossman</ENAMEX>"
+    ], 
+    [
+      45, 
+      45, 
+      "professor", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">professor</ENAMEX>"
+    ], 
+    [
+      50, 
+      55, 
+      "University of Vermont College of Medicine", 
+      "ORGANIZATION", 
+      "EDUCATIONAL", 
+      "<ENAMEX TYPE=\"ORGANIZATION:EDUCATIONAL\">University of Vermont College of Medicine</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [
+    [
+      50, 
+      55, 
+      10, 
+      "University of Vermont College of Medicine"
+    ], 
+    [
+      50, 
+      50, 
+      10, 
+      "University"
+    ]
+  ], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (DT The) (NNP U.S.)) (VP (VBZ is) (NP-PRD (NP (CD one)) (PP (IN of) (NP (NP (DT the) (JJ few) (VBN industrialized) (NNS nations)) (SBAR (WHNP-7 (WDT that)) (S (NP-SBJ (-NONE- *T*-7)) (VP (VBZ does) (RB n't) (VP (VB have) (NP (NP (DT a) (JJR higher) (NN standard)) (PP (IN of) (NP (NN regulation))) (PP (IN for) (NP (NP (NP (DT the) (JJ smooth) (, ,) (ADJP (NN needle) (HYPH -) (JJ like)) (NNS fibers)) (PP (JJ such) (IN as) (NP (NN crocidolite)))) (SBAR (WHNP-1 (WDT that)) (S (NP-SBJ-5 (-NONE- *T*-1)) (VP (VBP are) (VP (VBN classified) (NP (-NONE- *-5)) (PP-CLR (IN as) (NP (NNS amphobiles))))))))))))))))) (, ,) (PP (VBG according) (PP (IN to) (NP (NP (NNP Brooke) (NNP T.) (NNP Mossman)) (, ,) (NP (NP (DT a) (NN professor)) (PP (IN of) (NP (NN pathlogy))) (PP-LOC (IN at) (NP (NP (DT the) (NML (NML (NNP University)) (PP (IN of) (NP (NNP Vermont)))) (NNP College)) (PP (IN of) (NP (NNP Medicine)))))))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG0", 
+          "43:0", 
+          45, 
+          45, 
+          "professor"
+        ], 
+        [
+          "rel", 
+          "43:0", 
+          45, 
+          45, 
+          "professor"
+        ], 
+        [
+          "ARG1", 
+          "44:1", 
+          46, 
+          47, 
+          "of pathlogy"
+        ], 
+        [
+          "ARG2", 
+          "46:1", 
+          48, 
+          55, 
+          "at the University of Vermont College of Medicine"
+        ]
+      ], 
+      "baseform": "professor", 
+      "frame": "professor.01", 
+      "tokenNr": "43"
+    }, 
+    {
+      "args": [
+        [
+          "Support", 
+          "16:0,17:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "rel", 
+          "18:0", 
+          18, 
+          18, 
+          "regulation"
+        ], 
+        [
+          "ARG1", 
+          "19:1", 
+          19, 
+          36, 
+          "for the smooth , needle - like fibers such as crocidolite that *T*-1 are classified *-5 as amphobiles"
+        ]
+      ], 
+      "baseform": "regulation", 
+      "frame": "regulation.01", 
+      "tokenNr": "18"
+    }, 
+    {
+      "args": [
+        [
+          "ARG0", 
+          "5:1*9:1*10:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "Support", 
+          "13:0", 
+          13, 
+          13, 
+          "have"
+        ], 
+        [
+          "ARGM-EXT", 
+          "15:0", 
+          15, 
+          15, 
+          "higher"
+        ], 
+        [
+          "ARG2-REF", 
+          "16:0", 
+          16, 
+          16, 
+          "standard"
+        ], 
+        [
+          "rel", 
+          "16:0", 
+          16, 
+          16, 
+          "standard"
+        ], 
+        [
+          "ARG3", 
+          "17:1", 
+          17, 
+          18, 
+          "of regulation"
+        ], 
+        [
+          "ARG1", 
+          "19:1", 
+          19, 
+          36, 
+          "for the smooth , needle - like fibers such as crocidolite that *T*-1 are classified *-5 as amphobiles"
+        ]
+      ], 
+      "baseform": "standard", 
+      "frame": "standard.01", 
+      "tokenNr": "16"
+    }
+  ], 
+  "parsetree": "(ROOT (S (NP (DT The) (NNP U.S.)) (VP (VBZ is) (NP (NP (CD one)) (PP (IN of) (NP (NP (DT the) (JJ few) (VBN industrialized) (NNS nations)) (SBAR (WHNP (WDT that)) (S (VP (VBZ does) (RB n't) (VP (VB have) (NP (NP (DT a) (JJR higher) (NN standard)) (PP (IN of) (NP (NP (NN regulation)) (PP (IN for) (NP (NP (DT the) (NN smooth)) (, ,) (NP (NN needle)))))) (: -) (PP (IN like) (NP (NP (NNS fibers)) (PP (JJ such) (IN as) (NP (NP (NN crocidolite)) (SBAR (WHNP (WDT that)) (S (VP (VBP are) (VP (VBN classified) (PP (IN as) (NP (NNS amphobiles))) (, ,) (PP (VBG according) (PP (TO to) (NP (NP (NNP Brooke) (NNP T.) (NNP Mossman)) (, ,) (NP (NP (DT a) (NN professor)) (PP (IN of) (NP (NN pathlogy))))))))))))))) (PP (IN at) (NP (DT the) (NNP University))) (PP (IN of) (NP (NP (NNP Vermont) (NNP College)) (PP (IN of) (NP (NNP Medicine)))))))))))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "7:0", 
+          7, 
+          7, 
+          "industrialized"
+        ], 
+        [
+          "ARG1", 
+          "8:0", 
+          8, 
+          8, 
+          "nations"
+        ]
+      ], 
+      "baseform": "industrialize", 
+      "basepos": "v", 
+      "frame": "industrialize.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "13:0", 
+          13, 
+          13, 
+          "have"
+        ], 
+        [
+          "ARG0", 
+          "10:0", 
+          9, 
+          9, 
+          "that"
+        ], 
+        [
+          "ARGM-NEG", 
+          "12:0", 
+          12, 
+          12, 
+          "n't"
+        ], 
+        [
+          "ARG1", 
+          "14:2", 
+          14, 
+          36, 
+          "a higher standard of regulation for the smooth , needle - like fibers such as crocidolite that *T*-1 are classified *-5 as amphobiles"
+        ], 
+        [
+          "LINK-SLC", 
+          "5:1*10:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "have", 
+      "basepos": "v", 
+      "frame": "have.03", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (DT The) (NNP U.S.) ) (VP (VBZ is) (NP-PRD (NP (CD one) ) (PP (IN of) (NP (NP (DT the) (JJ few) (VBN industrialized) (NNS nations) ) (SBAR (WHNP-7 (WDT that) ) (S (NP-SBJ (-NONE- *T*-7) ) (VP (VBZ does) (RB n't) (VP (VB have) (NP (NP (DT a) (JJR higher) (NN standard) ) (PP (IN of) (NP (NN regulation) )) (PP (IN for) (NP (NP (DT the) (JJ smooth) (, ,) (JJ needle-like) (NNS fibers) ) (PP (JJ such) (IN as) (NP (NN crocidolite) )) (SBAR (WHNP-1 (WDT that) ) (S (NP-SBJ-5 (-NONE- *T*-1) ) (VP (VBP are) (VP (VBN classified) (NP (-NONE- *-5) ) (PP-CLR (IN as) (NP (NNS amphobiles) )))))))))))))))) (, ,) (PP (VBG according) (PP (TO to) (NP (NP (NNP Brooke) (NNP T.) (NNP Mossman) ) (, ,) (NP (NP (DT a) (NN professor) ) (PP (IN of) (NP (NN pathlogy) )) (PP-LOC (IN at) (NP (NP (DT the) (NAC (NNP University) (PP (IN of) (NP (NNP Vermont) ))) (NNP College) ) (PP (IN of) (NP (NNP Medicine) ))))))))) (. .) ))", 
+  "sentence_nr": 19, 
+  "stanford_coref": [
+    [
+      [
+        "Brooke T. Mossman", 
+        37, 
+        40
+      ], 
+      [
+        "Brooke T. Mossman , a professor of pathlogy", 
+        37, 
+        45
+      ]
+    ], 
+    [
+      [
+        "a professor of pathlogy", 
+        41, 
+        45
+      ], 
+      [
+        "Brooke T. Mossman , a professor of pathlogy", 
+        37, 
+        45
+      ]
+    ], 
+    [
+      [
+        "University of Vermont College of Medicine", 
+        47, 
+        53
+      ], 
+      [
+        "the University", 
+        46, 
+        48
+      ]
+    ], 
+    [
+      [
+        "the smooth", 
+        19, 
+        21
+      ], 
+      [
+        "the smooth , needle", 
+        19, 
+        23
+      ]
+    ]
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "U.S.", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "U.S.", 
+      "dep_idx": 1, 
+      "gov": "one", 
+      "gov_idx": 3, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 2, 
+      "gov": "one", 
+      "gov_idx": 3, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "one", 
+      "dep_idx": 3, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 5, 
+      "gov": "nations", 
+      "gov_idx": 8, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "few", 
+      "dep_idx": 6, 
+      "gov": "nations", 
+      "gov_idx": 8, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "industrialized", 
+      "dep_idx": 7, 
+      "gov": "nations", 
+      "gov_idx": 8, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "nations", 
+      "dep_idx": 8, 
+      "gov": "one", 
+      "gov_idx": 3, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "nations", 
+      "dep_idx": 8, 
+      "gov": "have", 
+      "gov_idx": 13, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "does", 
+      "dep_idx": 11, 
+      "gov": "have", 
+      "gov_idx": 13, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "n't", 
+      "dep_idx": 12, 
+      "gov": "have", 
+      "gov_idx": 13, 
+      "rel": "neg"
+    }, 
+    {
+      "dep": "have", 
+      "dep_idx": 13, 
+      "gov": "nations", 
+      "gov_idx": 8, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 14, 
+      "gov": "standard", 
+      "gov_idx": 16, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "higher", 
+      "dep_idx": 15, 
+      "gov": "standard", 
+      "gov_idx": 16, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "standard", 
+      "dep_idx": 16, 
+      "gov": "have", 
+      "gov_idx": 13, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "regulation", 
+      "dep_idx": 18, 
+      "gov": "standard", 
+      "gov_idx": 16, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 20, 
+      "gov": "fibers", 
+      "gov_idx": 26, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "smooth", 
+      "dep_idx": 21, 
+      "gov": "fibers", 
+      "gov_idx": 26, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "needle", 
+      "dep_idx": 23, 
+      "gov": "like", 
+      "gov_idx": 25, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "like", 
+      "dep_idx": 25, 
+      "gov": "fibers", 
+      "gov_idx": 26, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "fibers", 
+      "dep_idx": 26, 
+      "gov": "standard", 
+      "gov_idx": 16, 
+      "rel": "prep_for"
+    }, 
+    {
+      "dep": "fibers", 
+      "dep_idx": 26, 
+      "gov": "classified", 
+      "gov_idx": 33, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "crocidolite", 
+      "dep_idx": 29, 
+      "gov": "fibers", 
+      "gov_idx": 26, 
+      "rel": "prep_such_as"
+    }, 
+    {
+      "dep": "are", 
+      "dep_idx": 32, 
+      "gov": "classified", 
+      "gov_idx": 33, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "classified", 
+      "dep_idx": 33, 
+      "gov": "fibers", 
+      "gov_idx": 26, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "amphobiles", 
+      "dep_idx": 36, 
+      "gov": "classified", 
+      "gov_idx": 33, 
+      "rel": "prep_as"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 39, 
+      "gov": "one", 
+      "gov_idx": 3, 
+      "rel": "prepc_according_to"
+    }, 
+    {
+      "dep": "Brooke", 
+      "dep_idx": 40, 
+      "gov": "Mossman", 
+      "gov_idx": 42, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "T.", 
+      "dep_idx": 41, 
+      "gov": "Mossman", 
+      "gov_idx": 42, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Mossman", 
+      "dep_idx": 42, 
+      "gov": "one", 
+      "gov_idx": 3, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 44, 
+      "gov": "professor", 
+      "gov_idx": 45, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "professor", 
+      "dep_idx": 45, 
+      "gov": "Mossman", 
+      "gov_idx": 42, 
+      "rel": "appos"
+    }, 
+    {
+      "dep": "pathlogy", 
+      "dep_idx": 47, 
+      "gov": "professor", 
+      "gov_idx": 45, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 49, 
+      "gov": "College", 
+      "gov_idx": 53, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "University", 
+      "dep_idx": 50, 
+      "gov": "College", 
+      "gov_idx": 53, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Vermont", 
+      "dep_idx": 52, 
+      "gov": "University", 
+      "gov_idx": 50, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "College", 
+      "dep_idx": 53, 
+      "gov": "professor", 
+      "gov_idx": 45, 
+      "rel": "prep_at"
+    }, 
+    {
+      "dep": "Medicine", 
+      "dep_idx": 55, 
+      "gov": "College", 
+      "gov_idx": 53, 
+      "rel": "prep_of"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "U.S.", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "U.S.", 
+      "dep_idx": 1, 
+      "gov": "one", 
+      "gov_idx": 3, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 2, 
+      "gov": "one", 
+      "gov_idx": 3, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "one", 
+      "dep_idx": 3, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 4, 
+      "gov": "one", 
+      "gov_idx": 3, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 5, 
+      "gov": "nations", 
+      "gov_idx": 8, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "few", 
+      "dep_idx": 6, 
+      "gov": "nations", 
+      "gov_idx": 8, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "industrialized", 
+      "dep_idx": 7, 
+      "gov": "nations", 
+      "gov_idx": 8, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "nations", 
+      "dep_idx": 8, 
+      "gov": "of", 
+      "gov_idx": 4, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 9, 
+      "gov": "have", 
+      "gov_idx": 13, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "does", 
+      "dep_idx": 11, 
+      "gov": "have", 
+      "gov_idx": 13, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "n't", 
+      "dep_idx": 12, 
+      "gov": "have", 
+      "gov_idx": 13, 
+      "rel": "neg"
+    }, 
+    {
+      "dep": "have", 
+      "dep_idx": 13, 
+      "gov": "nations", 
+      "gov_idx": 8, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 14, 
+      "gov": "standard", 
+      "gov_idx": 16, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "higher", 
+      "dep_idx": 15, 
+      "gov": "standard", 
+      "gov_idx": 16, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "standard", 
+      "dep_idx": 16, 
+      "gov": "have", 
+      "gov_idx": 13, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 17, 
+      "gov": "standard", 
+      "gov_idx": 16, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "regulation", 
+      "dep_idx": 18, 
+      "gov": "of", 
+      "gov_idx": 17, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "for", 
+      "dep_idx": 19, 
+      "gov": "standard", 
+      "gov_idx": 16, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 20, 
+      "gov": "fibers", 
+      "gov_idx": 26, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "smooth", 
+      "dep_idx": 21, 
+      "gov": "fibers", 
+      "gov_idx": 26, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "needle", 
+      "dep_idx": 23, 
+      "gov": "like", 
+      "gov_idx": 25, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "like", 
+      "dep_idx": 25, 
+      "gov": "fibers", 
+      "gov_idx": 26, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "fibers", 
+      "dep_idx": 26, 
+      "gov": "for", 
+      "gov_idx": 19, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "such", 
+      "dep_idx": 27, 
+      "gov": "as", 
+      "gov_idx": 28, 
+      "rel": "mwe"
+    }, 
+    {
+      "dep": "as", 
+      "dep_idx": 28, 
+      "gov": "fibers", 
+      "gov_idx": 26, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "crocidolite", 
+      "dep_idx": 29, 
+      "gov": "as", 
+      "gov_idx": 28, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 30, 
+      "gov": "classified", 
+      "gov_idx": 33, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "are", 
+      "dep_idx": 32, 
+      "gov": "classified", 
+      "gov_idx": 33, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "classified", 
+      "dep_idx": 33, 
+      "gov": "fibers", 
+      "gov_idx": 26, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "as", 
+      "dep_idx": 35, 
+      "gov": "classified", 
+      "gov_idx": 33, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "amphobiles", 
+      "dep_idx": 36, 
+      "gov": "as", 
+      "gov_idx": 35, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "according", 
+      "dep_idx": 38, 
+      "gov": "one", 
+      "gov_idx": 3, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 39, 
+      "gov": "according", 
+      "gov_idx": 38, 
+      "rel": "pcomp"
+    }, 
+    {
+      "dep": "Brooke", 
+      "dep_idx": 40, 
+      "gov": "Mossman", 
+      "gov_idx": 42, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "T.", 
+      "dep_idx": 41, 
+      "gov": "Mossman", 
+      "gov_idx": 42, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Mossman", 
+      "dep_idx": 42, 
+      "gov": "to", 
+      "gov_idx": 39, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 44, 
+      "gov": "professor", 
+      "gov_idx": 45, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "professor", 
+      "dep_idx": 45, 
+      "gov": "Mossman", 
+      "gov_idx": 42, 
+      "rel": "appos"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 46, 
+      "gov": "professor", 
+      "gov_idx": 45, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "pathlogy", 
+      "dep_idx": 47, 
+      "gov": "of", 
+      "gov_idx": 46, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "at", 
+      "dep_idx": 48, 
+      "gov": "professor", 
+      "gov_idx": 45, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 49, 
+      "gov": "College", 
+      "gov_idx": 53, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "University", 
+      "dep_idx": 50, 
+      "gov": "College", 
+      "gov_idx": 53, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 51, 
+      "gov": "University", 
+      "gov_idx": 50, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Vermont", 
+      "dep_idx": 52, 
+      "gov": "of", 
+      "gov_idx": 51, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "College", 
+      "dep_idx": 53, 
+      "gov": "at", 
+      "gov_idx": 48, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 54, 
+      "gov": "College", 
+      "gov_idx": 53, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Medicine", 
+      "dep_idx": 55, 
+      "gov": "of", 
+      "gov_idx": 54, 
+      "rel": "pobj"
+    }
+  ], 
+  "text": "The U.S. is one of the few industrialized nations that does n't have a higher standard of regulation for the smooth , needle - like fibers such as crocidolite that are classified as amphobiles , according to Brooke T. Mossman , a professor of pathlogy at the University of Vermont College of Medicine .", 
+  "timex": [], 
+  "treebank_sentence": "The U.S. is one of the few industrialized nations that *T*-7 does n't have a higher standard of regulation for the smooth , needle - like fibers such as crocidolite that *T*-1 are classified *-5 as amphobiles , according to Brooke T. Mossman , a professor of pathlogy at the University of Vermont College of Medicine .", 
+  "tuples": [
+    [
+      "det", 
+      "U.S.", 
+      "The"
+    ], 
+    [
+      "nsubj", 
+      "one", 
+      "U.S."
+    ], 
+    [
+      "cop", 
+      "one", 
+      "is"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "one"
+    ], 
+    [
+      "det", 
+      "nations", 
+      "the"
+    ], 
+    [
+      "amod", 
+      "nations", 
+      "few"
+    ], 
+    [
+      "amod", 
+      "nations", 
+      "industrialized"
+    ], 
+    [
+      "prep_of", 
+      "one", 
+      "nations"
+    ], 
+    [
+      "nsubj", 
+      "have", 
+      "nations"
+    ], 
+    [
+      "aux", 
+      "have", 
+      "does"
+    ], 
+    [
+      "neg", 
+      "have", 
+      "n't"
+    ], 
+    [
+      "rcmod", 
+      "nations", 
+      "have"
+    ], 
+    [
+      "det", 
+      "standard", 
+      "a"
+    ], 
+    [
+      "amod", 
+      "standard", 
+      "higher"
+    ], 
+    [
+      "dobj", 
+      "have", 
+      "standard"
+    ], 
+    [
+      "prep_of", 
+      "standard", 
+      "regulation"
+    ], 
+    [
+      "det", 
+      "smooth", 
+      "the"
+    ], 
+    [
+      "prep_for", 
+      "regulation", 
+      "smooth"
+    ], 
+    [
+      "appos", 
+      "smooth", 
+      "needle"
+    ], 
+    [
+      "prep_like", 
+      "standard", 
+      "fibers"
+    ], 
+    [
+      "prep_such_as", 
+      "fibers", 
+      "crocidolite"
+    ], 
+    [
+      "nsubjpass", 
+      "classified", 
+      "crocidolite"
+    ], 
+    [
+      "auxpass", 
+      "classified", 
+      "are"
+    ], 
+    [
+      "rcmod", 
+      "crocidolite", 
+      "classified"
+    ], 
+    [
+      "prep_as", 
+      "classified", 
+      "amphobiles"
+    ], 
+    [
+      "prepc_according_to", 
+      "classified", 
+      "to"
+    ], 
+    [
+      "nn", 
+      "Mossman", 
+      "Brooke"
+    ], 
+    [
+      "nn", 
+      "Mossman", 
+      "T."
+    ], 
+    [
+      "pobj", 
+      "classified", 
+      "Mossman"
+    ], 
+    [
+      "det", 
+      "professor", 
+      "a"
+    ], 
+    [
+      "appos", 
+      "Mossman", 
+      "professor"
+    ], 
+    [
+      "prep_of", 
+      "professor", 
+      "pathlogy"
+    ], 
+    [
+      "det", 
+      "University", 
+      "the"
+    ], 
+    [
+      "prep_at", 
+      "standard", 
+      "University"
+    ], 
+    [
+      "nn", 
+      "College", 
+      "Vermont"
+    ], 
+    [
+      "prep_of", 
+      "standard", 
+      "College"
+    ], 
+    [
+      "prep_of", 
+      "College", 
+      "Medicine"
+    ]
+  ], 
+  "words": [
+    [
+      "The", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 0
+      }
+    ], 
+    [
+      "U.S.", 
+      {
+        "Lemma": "U.S.", 
+        "NamedEntityTag": "LOCATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 1
+      }
+    ], 
+    [
+      "is", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBZ", 
+        "idx": 2
+      }
+    ], 
+    [
+      "one", 
+      {
+        "Lemma": "one", 
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "1.0", 
+        "PartOfSpeech": "CD", 
+        "idx": 3
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 4
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 5
+      }
+    ], 
+    [
+      "few", 
+      {
+        "Lemma": "few", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 6
+      }
+    ], 
+    [
+      "industrialized", 
+      {
+        "Lemma": "industrialize", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "nations", 
+      {
+        "Lemma": "nation", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 8
+      }
+    ], 
+    [
+      "that", 
+      {
+        "Lemma": "that", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "WDT", 
+        "idx": 9
+      }
+    ], 
+    [
+      "does", 
+      {
+        "Lemma": "do", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBZ", 
+        "idx": 11
+      }
+    ], 
+    [
+      "n't", 
+      {
+        "Lemma": "not", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 12
+      }
+    ], 
+    [
+      "have", 
+      {
+        "Lemma": "have", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VB", 
+        "idx": 13
+      }
+    ], 
+    [
+      "a", 
+      {
+        "Lemma": "a", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 14
+      }
+    ], 
+    [
+      "higher", 
+      {
+        "Lemma": "higher", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJR", 
+        "idx": 15
+      }
+    ], 
+    [
+      "standard", 
+      {
+        "Lemma": "standard", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 16
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 17
+      }
+    ], 
+    [
+      "regulation", 
+      {
+        "Lemma": "regulation", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 18
+      }
+    ], 
+    [
+      "for", 
+      {
+        "Lemma": "for", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 19
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 20
+      }
+    ], 
+    [
+      "smooth", 
+      {
+        "Lemma": "smooth", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 21
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 22
+      }
+    ], 
+    [
+      "needle", 
+      {
+        "Lemma": "needle", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 23
+      }
+    ], 
+    [
+      "-", 
+      {
+        "Lemma": "-", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ":", 
+        "idx": 24
+      }
+    ], 
+    [
+      "like", 
+      {
+        "Lemma": "like", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 25
+      }
+    ], 
+    [
+      "fibers", 
+      {
+        "Lemma": "fiber", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 26
+      }
+    ], 
+    [
+      "such", 
+      {
+        "Lemma": "such", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 27
+      }
+    ], 
+    [
+      "as", 
+      {
+        "Lemma": "as", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 28
+      }
+    ], 
+    [
+      "crocidolite", 
+      {
+        "Lemma": "crocidolite", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 29
+      }
+    ], 
+    [
+      "that", 
+      {
+        "Lemma": "that", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "WDT", 
+        "idx": 30
+      }
+    ], 
+    [
+      "are", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBP", 
+        "idx": 32
+      }
+    ], 
+    [
+      "classified", 
+      {
+        "Lemma": "classify", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 33
+      }
+    ], 
+    [
+      "as", 
+      {
+        "Lemma": "as", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 35
+      }
+    ], 
+    [
+      "amphobiles", 
+      {
+        "Lemma": "amphobile", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 36
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 37
+      }
+    ], 
+    [
+      "according", 
+      {
+        "Lemma": "accord", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBG", 
+        "idx": 38
+      }
+    ], 
+    [
+      "to", 
+      {
+        "Lemma": "to", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "TO", 
+        "idx": 39
+      }
+    ], 
+    [
+      "Brooke", 
+      {
+        "Lemma": "Brooke", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 40
+      }
+    ], 
+    [
+      "T.", 
+      {
+        "Lemma": "T.", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 41
+      }
+    ], 
+    [
+      "Mossman", 
+      {
+        "Lemma": "Mossman", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 42
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 43
+      }
+    ], 
+    [
+      "a", 
+      {
+        "Lemma": "a", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 44
+      }
+    ], 
+    [
+      "professor", 
+      {
+        "Lemma": "professor", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 45
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 46
+      }
+    ], 
+    [
+      "pathlogy", 
+      {
+        "Lemma": "pathlogy", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 47
+      }
+    ], 
+    [
+      "at", 
+      {
+        "Lemma": "at", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 48
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 49
+      }
+    ], 
+    [
+      "University", 
+      {
+        "Lemma": "University", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 50
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "IN", 
+        "idx": 51
+      }
+    ], 
+    [
+      "Vermont", 
+      {
+        "Lemma": "Vermont", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 52
+      }
+    ], 
+    [
+      "College", 
+      {
+        "Lemma": "College", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 53
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "IN", 
+        "idx": 54
+      }
+    ], 
+    [
+      "Medicine", 
+      {
+        "Lemma": "Medicine", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 55
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 56
+      }
+    ]
+  ]
+}

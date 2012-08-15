@@ -1,0 +1,684 @@
+{
+  "bbn_ne": [
+    [
+      1, 
+      1, 
+      "Lorillard", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Lorillard</ENAMEX>"
+    ], 
+    [
+      4, 
+      4, 
+      "researchers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">researchers</ENAMEX>"
+    ], 
+    [
+      9, 
+      9, 
+      "workers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">workers</ENAMEX>"
+    ], 
+    [
+      16, 
+      16, 
+      "smokers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">smokers</ENAMEX>"
+    ], 
+    [
+      19, 
+      19, 
+      "Kent", 
+      "PRODUCT", 
+      "OTHER", 
+      "<ENAMEX TYPE=\"PRODUCT:OTHER\">Kent</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (DT Neither) (NP (NNP Lorillard)) (CC nor) (NP (NP (DT the) (NNS researchers)) (SBAR (WHNP-3 (WP who)) (S (NP-SBJ (-NONE- *T*-3)) (VP (VBD studied) (NP (DT the) (NNS workers))))))) (VP (VBD were) (ADJP-PRD (JJ aware) (PP (IN of) (NP (NP (DT any) (NN research)) (PP (IN on) (NP (NP (NNS smokers)) (PP (IN of) (NP (DT the) (NNP Kent) (NNS cigarettes))))))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "rel", 
+          "14:0", 
+          14, 
+          14, 
+          "research"
+        ], 
+        [
+          "ARG1", 
+          "15:1", 
+          15, 
+          20, 
+          "on smokers of the Kent cigarettes"
+        ]
+      ], 
+      "baseform": "research", 
+      "frame": "research.01", 
+      "tokenNr": "14"
+    }, 
+    {
+      "args": [
+        [
+          "ARG0", 
+          "16:0", 
+          16, 
+          16, 
+          "smokers"
+        ], 
+        [
+          "rel", 
+          "16:0", 
+          16, 
+          16, 
+          "smokers"
+        ], 
+        [
+          "ARG1", 
+          "17:1", 
+          17, 
+          20, 
+          "of the Kent cigarettes"
+        ]
+      ], 
+      "baseform": "smoker", 
+      "frame": "smoker.01", 
+      "tokenNr": "16"
+    }
+  ], 
+  "parsetree": "(ROOT (S (NP (DT Neither) (NP (NNP Lorillard)) (CC nor) (NP (NP (DT the) (NNS researchers)) (SBAR (WHNP (WP who))))) (VP (VBD studied) (SBAR (S (NP (DT the) (NNS workers)) (VP (VBD were) (ADJP (JJ aware) (PP (IN of) (NP (DT any) (NN research)))) (PP (IN on) (NP (NP (NNS smokers)) (PP (IN of) (NP (DT the) (NNP Kent) (NNS cigarettes))))))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "7:0", 
+          7, 
+          7, 
+          "studied"
+        ], 
+        [
+          "ARG0", 
+          "6:0", 
+          5, 
+          5, 
+          "who"
+        ], 
+        [
+          "ARG1", 
+          "8:1", 
+          8, 
+          9, 
+          "the workers"
+        ], 
+        [
+          "LINK-SLC", 
+          "3:1*6:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "study", 
+      "basepos": "v", 
+      "frame": "study.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (DT Neither) (NP (NNP Lorillard) ) (CC nor) (NP (NP (DT the) (NNS researchers) ) (SBAR (WHNP-3 (WP who) ) (S (NP-SBJ (-NONE- *T*-3) ) (VP (VBD studied) (NP (DT the) (NNS workers) )))))) (VP (VBD were) (ADJP-PRD (JJ aware) (PP (IN of) (NP (NP (DT any) (NN research) ) (PP (IN on) (NP (NP (NNS smokers) ) (PP (IN of) (NP (DT the) (NNP Kent) (NNS cigarettes) )))))))) (. .) ))", 
+  "sentence_nr": 7, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "Neither", 
+      "dep_idx": 0, 
+      "gov": "Lorillard", 
+      "gov_idx": 1, 
+      "rel": "preconj"
+    }, 
+    {
+      "dep": "Lorillard", 
+      "dep_idx": 1, 
+      "gov": "aware", 
+      "gov_idx": 11, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 3, 
+      "gov": "researchers", 
+      "gov_idx": 4, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "researchers", 
+      "dep_idx": 4, 
+      "gov": "Lorillard", 
+      "gov_idx": 1, 
+      "rel": "conj_nor"
+    }, 
+    {
+      "dep": "researchers", 
+      "dep_idx": 4, 
+      "gov": "studied", 
+      "gov_idx": 7, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "researchers", 
+      "dep_idx": 4, 
+      "gov": "aware", 
+      "gov_idx": 11, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "studied", 
+      "dep_idx": 7, 
+      "gov": "researchers", 
+      "gov_idx": 4, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 8, 
+      "gov": "workers", 
+      "gov_idx": 9, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "workers", 
+      "dep_idx": 9, 
+      "gov": "studied", 
+      "gov_idx": 7, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 10, 
+      "gov": "aware", 
+      "gov_idx": 11, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "aware", 
+      "dep_idx": 11, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "any", 
+      "dep_idx": 13, 
+      "gov": "research", 
+      "gov_idx": 14, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "research", 
+      "dep_idx": 14, 
+      "gov": "aware", 
+      "gov_idx": 11, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "smokers", 
+      "dep_idx": 16, 
+      "gov": "research", 
+      "gov_idx": 14, 
+      "rel": "prep_on"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 18, 
+      "gov": "cigarettes", 
+      "gov_idx": 20, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Kent", 
+      "dep_idx": 19, 
+      "gov": "cigarettes", 
+      "gov_idx": 20, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "cigarettes", 
+      "dep_idx": 20, 
+      "gov": "smokers", 
+      "gov_idx": 16, 
+      "rel": "prep_of"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Neither", 
+      "dep_idx": 0, 
+      "gov": "Lorillard", 
+      "gov_idx": 1, 
+      "rel": "preconj"
+    }, 
+    {
+      "dep": "Lorillard", 
+      "dep_idx": 1, 
+      "gov": "aware", 
+      "gov_idx": 11, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "nor", 
+      "dep_idx": 2, 
+      "gov": "Lorillard", 
+      "gov_idx": 1, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 3, 
+      "gov": "researchers", 
+      "gov_idx": 4, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "researchers", 
+      "dep_idx": 4, 
+      "gov": "Lorillard", 
+      "gov_idx": 1, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "who", 
+      "dep_idx": 5, 
+      "gov": "studied", 
+      "gov_idx": 7, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "studied", 
+      "dep_idx": 7, 
+      "gov": "researchers", 
+      "gov_idx": 4, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 8, 
+      "gov": "workers", 
+      "gov_idx": 9, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "workers", 
+      "dep_idx": 9, 
+      "gov": "studied", 
+      "gov_idx": 7, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 10, 
+      "gov": "aware", 
+      "gov_idx": 11, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "aware", 
+      "dep_idx": 11, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 12, 
+      "gov": "aware", 
+      "gov_idx": 11, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "any", 
+      "dep_idx": 13, 
+      "gov": "research", 
+      "gov_idx": 14, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "research", 
+      "dep_idx": 14, 
+      "gov": "of", 
+      "gov_idx": 12, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "on", 
+      "dep_idx": 15, 
+      "gov": "research", 
+      "gov_idx": 14, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "smokers", 
+      "dep_idx": 16, 
+      "gov": "on", 
+      "gov_idx": 15, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 17, 
+      "gov": "smokers", 
+      "gov_idx": 16, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 18, 
+      "gov": "cigarettes", 
+      "gov_idx": 20, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Kent", 
+      "dep_idx": 19, 
+      "gov": "cigarettes", 
+      "gov_idx": 20, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "cigarettes", 
+      "dep_idx": 20, 
+      "gov": "of", 
+      "gov_idx": 17, 
+      "rel": "pobj"
+    }
+  ], 
+  "text": "Neither Lorillard nor the researchers who studied the workers were aware of any research on smokers of the Kent cigarettes .", 
+  "timex": [], 
+  "treebank_sentence": "Neither Lorillard nor the researchers who *T*-3 studied the workers were aware of any research on smokers of the Kent cigarettes .", 
+  "tuples": [
+    [
+      "preconj", 
+      "Lorillard", 
+      "Neither"
+    ], 
+    [
+      "nsubj", 
+      "studied", 
+      "Lorillard"
+    ], 
+    [
+      "det", 
+      "researchers", 
+      "the"
+    ], 
+    [
+      "conj_nor", 
+      "Lorillard", 
+      "researchers"
+    ], 
+    [
+      "nsubj", 
+      "studied", 
+      "researchers"
+    ], 
+    [
+      "rcmod", 
+      "researchers", 
+      "who"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "studied"
+    ], 
+    [
+      "det", 
+      "workers", 
+      "the"
+    ], 
+    [
+      "nsubj", 
+      "aware", 
+      "workers"
+    ], 
+    [
+      "cop", 
+      "aware", 
+      "were"
+    ], 
+    [
+      "ccomp", 
+      "studied", 
+      "aware"
+    ], 
+    [
+      "det", 
+      "research", 
+      "any"
+    ], 
+    [
+      "prep_of", 
+      "aware", 
+      "research"
+    ], 
+    [
+      "prep_on", 
+      "aware", 
+      "smokers"
+    ], 
+    [
+      "det", 
+      "cigarettes", 
+      "the"
+    ], 
+    [
+      "nn", 
+      "cigarettes", 
+      "Kent"
+    ], 
+    [
+      "prep_of", 
+      "smokers", 
+      "cigarettes"
+    ]
+  ], 
+  "words": [
+    [
+      "Neither", 
+      {
+        "Lemma": "neither", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 0
+      }
+    ], 
+    [
+      "Lorillard", 
+      {
+        "Lemma": "Lorillard", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 1
+      }
+    ], 
+    [
+      "nor", 
+      {
+        "Lemma": "nor", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "CC", 
+        "idx": 2
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 3
+      }
+    ], 
+    [
+      "researchers", 
+      {
+        "Lemma": "researcher", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 4
+      }
+    ], 
+    [
+      "who", 
+      {
+        "Lemma": "who", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "WP", 
+        "idx": 5
+      }
+    ], 
+    [
+      "studied", 
+      {
+        "Lemma": "study", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 7
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 8
+      }
+    ], 
+    [
+      "workers", 
+      {
+        "Lemma": "worker", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 9
+      }
+    ], 
+    [
+      "were", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 10
+      }
+    ], 
+    [
+      "aware", 
+      {
+        "Lemma": "aware", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 11
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 12
+      }
+    ], 
+    [
+      "any", 
+      {
+        "Lemma": "any", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 13
+      }
+    ], 
+    [
+      "research", 
+      {
+        "Lemma": "research", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 14
+      }
+    ], 
+    [
+      "on", 
+      {
+        "Lemma": "on", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 15
+      }
+    ], 
+    [
+      "smokers", 
+      {
+        "Lemma": "smoker", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 16
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 17
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 18
+      }
+    ], 
+    [
+      "Kent", 
+      {
+        "Lemma": "Kent", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNP", 
+        "idx": 19
+      }
+    ], 
+    [
+      "cigarettes", 
+      {
+        "Lemma": "cigarette", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 20
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 21
+      }
+    ]
+  ]
+}

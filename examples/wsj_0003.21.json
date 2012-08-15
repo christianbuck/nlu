@@ -1,0 +1,602 @@
+{
+  "bbn_ne": [
+    [
+      1, 
+      1, 
+      "July", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">July</TIMEX>"
+    ], 
+    [
+      4, 
+      6, 
+      "Environmental Protection Agency", 
+      "ORGANIZATION", 
+      "GOVERNMENT", 
+      "<ENAMEX TYPE=\"ORGANIZATION:GOVERNMENT\">Environmental Protection Agency</ENAMEX>"
+    ], 
+    [
+      16, 
+      16, 
+      "asbestos", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">asbestos</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (PP-TMP (IN In) (NP (NNP July))) (, ,) (NP-SBJ (DT the) (NML (NNP Environmental) (NNP Protection)) (NNP Agency)) (VP (VBD imposed) (NP (DT a) (JJ gradual) (NN ban)) (PP-CLR (IN on) (NP (NP (ADJP (RB virtually) (DT all)) (NNS uses)) (PP (IN of) (NP (NN asbestos)))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARGM-TMP", 
+          "0:1", 
+          0, 
+          1, 
+          "In July"
+        ], 
+        [
+          "ARG0", 
+          "3:1", 
+          3, 
+          6, 
+          "the Environmental Protection Agency"
+        ], 
+        [
+          "Support", 
+          "7:0", 
+          7, 
+          7, 
+          "imposed"
+        ], 
+        [
+          "ARGM-MNR", 
+          "9:0", 
+          9, 
+          9, 
+          "gradual"
+        ], 
+        [
+          "rel", 
+          "10:0", 
+          10, 
+          10, 
+          "ban"
+        ], 
+        [
+          "ARG1", 
+          "11:1", 
+          11, 
+          16, 
+          "on virtually all uses of asbestos"
+        ]
+      ], 
+      "baseform": "ban", 
+      "frame": "ban.01", 
+      "tokenNr": "10"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "14:0", 
+          14, 
+          14, 
+          "uses"
+        ], 
+        [
+          "ARG1", 
+          "15:1", 
+          15, 
+          16, 
+          "of asbestos"
+        ]
+      ], 
+      "baseform": "use", 
+      "frame": "use.01", 
+      "tokenNr": "14"
+    }
+  ], 
+  "parsetree": "(ROOT (S (PP (IN In) (NP (NNP July))) (, ,) (NP (DT the) (NNP Environmental) (NNP Protection) (NNP Agency)) (VP (VBD imposed) (NP (DT a) (JJ gradual) (NN ban)) (PP (IN on) (NP (NP (RB virtually) (DT all) (NNS uses)) (PP (IN of) (NP (NN asbestos)))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "7:0", 
+          7, 
+          7, 
+          "imposed"
+        ], 
+        [
+          "ARGM-TMP", 
+          "0:1", 
+          0, 
+          1, 
+          "In July"
+        ], 
+        [
+          "ARG0", 
+          "3:1", 
+          3, 
+          6, 
+          "the Environmental Protection Agency"
+        ], 
+        [
+          "ARG1", 
+          "8:1", 
+          8, 
+          10, 
+          "a gradual ban"
+        ], 
+        [
+          "ARG2", 
+          "11:1", 
+          11, 
+          16, 
+          "on virtually all uses of asbestos"
+        ]
+      ], 
+      "baseform": "impose", 
+      "basepos": "v", 
+      "frame": "impose.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (PP-TMP (IN In) (NP (NNP July) )) (, ,) (NP-SBJ (DT the) (NNP Environmental) (NNP Protection) (NNP Agency) ) (VP (VBD imposed) (NP (DT a) (JJ gradual) (NN ban) ) (PP-CLR (IN on) (NP (NP (ADJP (RB virtually) (DT all) ) (NNS uses) ) (PP (IN of) (NP (NN asbestos) ))))) (. .) ))", 
+  "sentence_nr": 21, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "July", 
+      "dep_idx": 1, 
+      "gov": "imposed", 
+      "gov_idx": 7, 
+      "rel": "prep_in"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 3, 
+      "gov": "Agency", 
+      "gov_idx": 6, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Environmental", 
+      "dep_idx": 4, 
+      "gov": "Protection", 
+      "gov_idx": 5, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Protection", 
+      "dep_idx": 5, 
+      "gov": "Agency", 
+      "gov_idx": 6, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Agency", 
+      "dep_idx": 6, 
+      "gov": "imposed", 
+      "gov_idx": 7, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "imposed", 
+      "dep_idx": 7, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 8, 
+      "gov": "ban", 
+      "gov_idx": 10, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "gradual", 
+      "dep_idx": 9, 
+      "gov": "ban", 
+      "gov_idx": 10, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "ban", 
+      "dep_idx": 10, 
+      "gov": "imposed", 
+      "gov_idx": 7, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "virtually", 
+      "dep_idx": 12, 
+      "gov": "all", 
+      "gov_idx": 13, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "all", 
+      "dep_idx": 13, 
+      "gov": "uses", 
+      "gov_idx": 14, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "uses", 
+      "dep_idx": 14, 
+      "gov": "imposed", 
+      "gov_idx": 7, 
+      "rel": "prep_on"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 16, 
+      "gov": "uses", 
+      "gov_idx": 14, 
+      "rel": "prep_of"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "In", 
+      "dep_idx": 0, 
+      "gov": "imposed", 
+      "gov_idx": 7, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "July", 
+      "dep_idx": 1, 
+      "gov": "In", 
+      "gov_idx": 0, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 3, 
+      "gov": "Agency", 
+      "gov_idx": 6, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Environmental", 
+      "dep_idx": 4, 
+      "gov": "Protection", 
+      "gov_idx": 5, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Protection", 
+      "dep_idx": 5, 
+      "gov": "Agency", 
+      "gov_idx": 6, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Agency", 
+      "dep_idx": 6, 
+      "gov": "imposed", 
+      "gov_idx": 7, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "imposed", 
+      "dep_idx": 7, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 8, 
+      "gov": "ban", 
+      "gov_idx": 10, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "gradual", 
+      "dep_idx": 9, 
+      "gov": "ban", 
+      "gov_idx": 10, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "ban", 
+      "dep_idx": 10, 
+      "gov": "imposed", 
+      "gov_idx": 7, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "on", 
+      "dep_idx": 11, 
+      "gov": "imposed", 
+      "gov_idx": 7, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "virtually", 
+      "dep_idx": 12, 
+      "gov": "all", 
+      "gov_idx": 13, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "all", 
+      "dep_idx": 13, 
+      "gov": "uses", 
+      "gov_idx": 14, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "uses", 
+      "dep_idx": 14, 
+      "gov": "on", 
+      "gov_idx": 11, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 15, 
+      "gov": "uses", 
+      "gov_idx": 14, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 16, 
+      "gov": "of", 
+      "gov_idx": 15, 
+      "rel": "pobj"
+    }
+  ], 
+  "text": "In July , the Environmental Protection Agency imposed a gradual ban on virtually all uses of asbestos .", 
+  "timex": [
+    [
+      "t1", 
+      1, 
+      1, 
+      "<TIMEX3 tid=\"t1\" value=\"XXXX-07\" type=\"DATE\">July</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "In July , the Environmental Protection Agency imposed a gradual ban on virtually all uses of asbestos .", 
+  "tuples": [
+    [
+      "prep_in", 
+      "imposed", 
+      "July"
+    ], 
+    [
+      "det", 
+      "Agency", 
+      "the"
+    ], 
+    [
+      "nn", 
+      "Agency", 
+      "Environmental"
+    ], 
+    [
+      "nn", 
+      "Agency", 
+      "Protection"
+    ], 
+    [
+      "nsubj", 
+      "imposed", 
+      "Agency"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "imposed"
+    ], 
+    [
+      "det", 
+      "ban", 
+      "a"
+    ], 
+    [
+      "amod", 
+      "ban", 
+      "gradual"
+    ], 
+    [
+      "dobj", 
+      "imposed", 
+      "ban"
+    ], 
+    [
+      "advmod", 
+      "uses", 
+      "virtually"
+    ], 
+    [
+      "det", 
+      "uses", 
+      "all"
+    ], 
+    [
+      "prep_on", 
+      "imposed", 
+      "uses"
+    ], 
+    [
+      "prep_of", 
+      "uses", 
+      "asbestos"
+    ]
+  ], 
+  "words": [
+    [
+      "In", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 0
+      }
+    ], 
+    [
+      "July", 
+      {
+        "Lemma": "July", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "XXXX-07", 
+        "PartOfSpeech": "NNP", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"XXXX-07\" type=\"DATE\">July</TIMEX3>", 
+        "idx": 1
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 2
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 3
+      }
+    ], 
+    [
+      "Environmental", 
+      {
+        "Lemma": "Environmental", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 4
+      }
+    ], 
+    [
+      "Protection", 
+      {
+        "Lemma": "Protection", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 5
+      }
+    ], 
+    [
+      "Agency", 
+      {
+        "Lemma": "Agency", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 6
+      }
+    ], 
+    [
+      "imposed", 
+      {
+        "Lemma": "impose", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 7
+      }
+    ], 
+    [
+      "a", 
+      {
+        "Lemma": "a", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 8
+      }
+    ], 
+    [
+      "gradual", 
+      {
+        "Lemma": "gradual", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 9
+      }
+    ], 
+    [
+      "ban", 
+      {
+        "Lemma": "ban", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 10
+      }
+    ], 
+    [
+      "on", 
+      {
+        "Lemma": "on", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 11
+      }
+    ], 
+    [
+      "virtually", 
+      {
+        "Lemma": "virtually", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 12
+      }
+    ], 
+    [
+      "all", 
+      {
+        "Lemma": "all", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 13
+      }
+    ], 
+    [
+      "uses", 
+      {
+        "Lemma": "use", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 14
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 15
+      }
+    ], 
+    [
+      "asbestos", 
+      {
+        "Lemma": "asbestos", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 16
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 17
+      }
+    ]
+  ]
+}

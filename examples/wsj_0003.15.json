@@ -1,0 +1,750 @@
+{
+  "bbn_ne": [
+    [
+      18, 
+      18, 
+      "diseases", 
+      "DISEASE", 
+      "", 
+      "<ENAMEX TYPE=\"DISEASE\">diseases</ENAMEX>"
+    ], 
+    [
+      23, 
+      23, 
+      "Dr.", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">Dr.</ENAMEX>"
+    ], 
+    [
+      24, 
+      24, 
+      "Talcott", 
+      "PERSON", 
+      "", 
+      "<ENAMEX TYPE=\"PERSON\">Talcott</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [
+    [
+      2, 
+      3, 
+      7, 
+      "morbidity rate"
+    ], 
+    [
+      5, 
+      18, 
+      7, 
+      "a striking finding among those of us who study asbestos - related diseases"
+    ]
+  ], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (SINV (`` ``) (S-TPC-1 (NP-SBJ (DT The) (NN morbidity) (NN rate)) (VP (VBZ is) (NP-PRD (DT a) (JJ striking) (NN finding)) (PP-LOC (IN among) (NP (NP (NP (DT those)) (PP (IN of) (NP (PRP us)))) (SBAR (WHNP-5 (WP who)) (S (NP-SBJ (-NONE- *T*-5)) (VP (VBP study) (NP (ADJP (NN asbestos) (HYPH -) (VBN related)) (NNS diseases))))))))) (, ,) ('' '') (VP (VBD said) (S (-NONE- *T*-1))) (NP-SBJ (NNP Dr.) (NNP Talcott)) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARGM-CAU", 
+          "15:0", 
+          15, 
+          17, 
+          "asbestos - related"
+        ], 
+        [
+          "ARG2-REF", 
+          "16:0", 
+          18, 
+          18, 
+          "diseases"
+        ], 
+        [
+          "rel", 
+          "16:0", 
+          18, 
+          18, 
+          "diseases"
+        ]
+      ], 
+      "baseform": "disease", 
+      "frame": "disease.01", 
+      "tokenNr": "16"
+    }, 
+    {
+      "args": [
+        [
+          "ARG1", 
+          "2:0", 
+          2, 
+          2, 
+          "morbidity"
+        ], 
+        [
+          "ARG2-REF", 
+          "3:0", 
+          3, 
+          3, 
+          "rate"
+        ], 
+        [
+          "rel", 
+          "3:0", 
+          3, 
+          3, 
+          "rate"
+        ]
+      ], 
+      "baseform": "rate", 
+      "frame": "rate.01", 
+      "tokenNr": "3"
+    }
+  ], 
+  "parsetree": "(ROOT (SINV (`` ``) (S (NP (DT The) (NN morbidity) (NN rate)) (VP (VBZ is) (NP (NP (DT a) (JJ striking) (NN finding)) (PP (IN among) (NP (NP (DT those)) (PP (IN of) (NP (PRP us))))) (SBAR (WHNP (WP who)) (S (VP (VBP study) (NP (NN asbestos)) (: -) (NP (JJ related) (NNS diseases)))))))) (, ,) ('' '') (VP (VBD said)) (NP (NNP Dr.) (NNP Talcott)) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "14:0", 
+          14, 
+          14, 
+          "study"
+        ], 
+        [
+          "ARG0", 
+          "13:0", 
+          12, 
+          12, 
+          "who"
+        ], 
+        [
+          "ARG1", 
+          "15:2", 
+          15, 
+          18, 
+          "asbestos - related diseases"
+        ], 
+        [
+          "LINK-SLC", 
+          "9:2*13:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "study", 
+      "basepos": "v", 
+      "frame": "study.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "21:0", 
+          21, 
+          21, 
+          "said"
+        ], 
+        [
+          "ARG1", 
+          "22:0", 
+          1, 
+          18, 
+          "The morbidity rate is a striking finding among those of us who *T*-5 study asbestos - related diseases"
+        ], 
+        [
+          "ARG0", 
+          "23:1", 
+          23, 
+          24, 
+          "Dr. Talcott"
+        ]
+      ], 
+      "baseform": "say", 
+      "basepos": "v", 
+      "frame": "say.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (SINV (`` ``) (S-TPC-1 (NP-SBJ (DT The) (NN morbidity) (NN rate) ) (VP (VBZ is) (NP-PRD (DT a) (JJ striking) (NN finding) ) (PP-LOC (IN among) (NP (NP (DT those) ) (PP (IN of) (NP (PRP us) )) (SBAR (WHNP-5 (WP who) ) (S (NP-SBJ (-NONE- *T*-5) ) (VP (VBP study) (NP (JJ asbestos-related) (NNS diseases) )))))))) (, ,) ('' '') (VP (VBD said) (S (-NONE- *T*-1) )) (NP-SBJ (NNP Dr.) (NNP Talcott) ) (. .) ))", 
+  "sentence_nr": 15, 
+  "stanford_coref": [
+    [
+      [
+        "The morbidity rate", 
+        1, 
+        4
+      ], 
+      [
+        "a striking finding among those of us who study asbestos - related diseases", 
+        5, 
+        18
+      ]
+    ]
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 1, 
+      "gov": "rate", 
+      "gov_idx": 3, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "morbidity", 
+      "dep_idx": 2, 
+      "gov": "rate", 
+      "gov_idx": 3, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "rate", 
+      "dep_idx": 3, 
+      "gov": "finding", 
+      "gov_idx": 7, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 4, 
+      "gov": "finding", 
+      "gov_idx": 7, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 5, 
+      "gov": "finding", 
+      "gov_idx": 7, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "striking", 
+      "dep_idx": 6, 
+      "gov": "finding", 
+      "gov_idx": 7, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "finding", 
+      "dep_idx": 7, 
+      "gov": "said", 
+      "gov_idx": 21, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "those", 
+      "dep_idx": 9, 
+      "gov": "finding", 
+      "gov_idx": 7, 
+      "rel": "prep_among"
+    }, 
+    {
+      "dep": "those", 
+      "dep_idx": 9, 
+      "gov": "study", 
+      "gov_idx": 14, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "us", 
+      "dep_idx": 11, 
+      "gov": "those", 
+      "gov_idx": 9, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "study", 
+      "dep_idx": 14, 
+      "gov": "those", 
+      "gov_idx": 9, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 15, 
+      "gov": "related", 
+      "gov_idx": 17, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "related", 
+      "dep_idx": 17, 
+      "gov": "diseases", 
+      "gov_idx": 18, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "diseases", 
+      "dep_idx": 18, 
+      "gov": "study", 
+      "gov_idx": 14, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 21, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "Dr.", 
+      "dep_idx": 23, 
+      "gov": "Talcott", 
+      "gov_idx": 24, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Talcott", 
+      "dep_idx": 24, 
+      "gov": "said", 
+      "gov_idx": 21, 
+      "rel": "nsubj"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 1, 
+      "gov": "rate", 
+      "gov_idx": 3, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "morbidity", 
+      "dep_idx": 2, 
+      "gov": "rate", 
+      "gov_idx": 3, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "rate", 
+      "dep_idx": 3, 
+      "gov": "finding", 
+      "gov_idx": 7, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 4, 
+      "gov": "finding", 
+      "gov_idx": 7, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 5, 
+      "gov": "finding", 
+      "gov_idx": 7, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "striking", 
+      "dep_idx": 6, 
+      "gov": "finding", 
+      "gov_idx": 7, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "finding", 
+      "dep_idx": 7, 
+      "gov": "said", 
+      "gov_idx": 21, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "among", 
+      "dep_idx": 8, 
+      "gov": "finding", 
+      "gov_idx": 7, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "those", 
+      "dep_idx": 9, 
+      "gov": "among", 
+      "gov_idx": 8, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 10, 
+      "gov": "those", 
+      "gov_idx": 9, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "us", 
+      "dep_idx": 11, 
+      "gov": "of", 
+      "gov_idx": 10, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "who", 
+      "dep_idx": 12, 
+      "gov": "study", 
+      "gov_idx": 14, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "study", 
+      "dep_idx": 14, 
+      "gov": "those", 
+      "gov_idx": 9, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 15, 
+      "gov": "related", 
+      "gov_idx": 17, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "related", 
+      "dep_idx": 17, 
+      "gov": "diseases", 
+      "gov_idx": 18, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "diseases", 
+      "dep_idx": 18, 
+      "gov": "study", 
+      "gov_idx": 14, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 21, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "Dr.", 
+      "dep_idx": 23, 
+      "gov": "Talcott", 
+      "gov_idx": 24, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Talcott", 
+      "dep_idx": 24, 
+      "gov": "said", 
+      "gov_idx": 21, 
+      "rel": "nsubj"
+    }
+  ], 
+  "text": "`` The morbidity rate is a striking finding among those of us who study asbestos - related diseases , '' said Dr. Talcott .", 
+  "timex": [], 
+  "treebank_sentence": "`` The morbidity rate is a striking finding among those of us who *T*-5 study asbestos - related diseases , '' said *T*-1 Dr. Talcott .", 
+  "tuples": [
+    [
+      "det", 
+      "rate", 
+      "The"
+    ], 
+    [
+      "nn", 
+      "rate", 
+      "morbidity"
+    ], 
+    [
+      "nsubj", 
+      "finding", 
+      "rate"
+    ], 
+    [
+      "cop", 
+      "finding", 
+      "is"
+    ], 
+    [
+      "det", 
+      "finding", 
+      "a"
+    ], 
+    [
+      "amod", 
+      "finding", 
+      "striking"
+    ], 
+    [
+      "nsubj", 
+      "study", 
+      "finding"
+    ], 
+    [
+      "ccomp", 
+      "said", 
+      "finding"
+    ], 
+    [
+      "prep_among", 
+      "finding", 
+      "those"
+    ], 
+    [
+      "prep_of", 
+      "those", 
+      "us"
+    ], 
+    [
+      "rcmod", 
+      "finding", 
+      "study"
+    ], 
+    [
+      "dobj", 
+      "study", 
+      "asbestos"
+    ], 
+    [
+      "amod", 
+      "diseases", 
+      "related"
+    ], 
+    [
+      "dobj", 
+      "study", 
+      "diseases"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "said"
+    ], 
+    [
+      "nn", 
+      "Talcott", 
+      "Dr."
+    ], 
+    [
+      "nsubj", 
+      "said", 
+      "Talcott"
+    ]
+  ], 
+  "words": [
+    [
+      "``", 
+      {
+        "Lemma": "``", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "``", 
+        "idx": 0
+      }
+    ], 
+    [
+      "The", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 1
+      }
+    ], 
+    [
+      "morbidity", 
+      {
+        "Lemma": "morbidity", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 2
+      }
+    ], 
+    [
+      "rate", 
+      {
+        "Lemma": "rate", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 3
+      }
+    ], 
+    [
+      "is", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBZ", 
+        "idx": 4
+      }
+    ], 
+    [
+      "a", 
+      {
+        "Lemma": "a", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 5
+      }
+    ], 
+    [
+      "striking", 
+      {
+        "Lemma": "striking", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 6
+      }
+    ], 
+    [
+      "finding", 
+      {
+        "Lemma": "finding", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "among", 
+      {
+        "Lemma": "among", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 8
+      }
+    ], 
+    [
+      "those", 
+      {
+        "Lemma": "those", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 9
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 10
+      }
+    ], 
+    [
+      "us", 
+      {
+        "Lemma": "we", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "PRP", 
+        "idx": 11
+      }
+    ], 
+    [
+      "who", 
+      {
+        "Lemma": "who", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "WP", 
+        "idx": 12
+      }
+    ], 
+    [
+      "study", 
+      {
+        "Lemma": "study", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBP", 
+        "idx": 14
+      }
+    ], 
+    [
+      "asbestos", 
+      {
+        "Lemma": "asbestos", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 15
+      }
+    ], 
+    [
+      "-", 
+      {
+        "Lemma": "-", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ":", 
+        "idx": 16
+      }
+    ], 
+    [
+      "related", 
+      {
+        "Lemma": "related", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 17
+      }
+    ], 
+    [
+      "diseases", 
+      {
+        "Lemma": "disease", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 18
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 19
+      }
+    ], 
+    [
+      "''", 
+      {
+        "Lemma": "''", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "''", 
+        "idx": 20
+      }
+    ], 
+    [
+      "said", 
+      {
+        "Lemma": "say", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 21
+      }
+    ], 
+    [
+      "Dr.", 
+      {
+        "Lemma": "Dr.", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 23
+      }
+    ], 
+    [
+      "Talcott", 
+      {
+        "Lemma": "Talcott", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 24
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 25
+      }
+    ]
+  ]
+}

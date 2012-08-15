@@ -1,0 +1,512 @@
+{
+  "bbn_ne": [
+    [
+      1, 
+      1, 
+      "1997", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">1997</TIMEX>"
+    ], 
+    [
+      8, 
+      8, 
+      "cancer", 
+      "DISEASE", 
+      "", 
+      "<ENAMEX TYPE=\"DISEASE\">cancer</ENAMEX>"
+    ], 
+    [
+      11, 
+      11, 
+      "asbestos", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">asbestos</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (PP-TMP (IN By) (NP (CD 1997))) (, ,) (NP-SBJ-6 (NP (ADJP (RB almost) (DT all)) (VBG remaining) (NNS uses)) (PP (IN of) (NP (ADJP (NN cancer) (HYPH -) (VBG causing)) (NN asbestos)))) (VP (MD will) (VP (VB be) (VP (VBN outlawed) (NP (-NONE- *-6))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "rel", 
+          "6:0", 
+          6, 
+          6, 
+          "uses"
+        ], 
+        [
+          "ARG1", 
+          "7:1", 
+          7, 
+          11, 
+          "of cancer - causing asbestos"
+        ]
+      ], 
+      "baseform": "use", 
+      "frame": "use.01", 
+      "tokenNr": "6"
+    }
+  ], 
+  "parsetree": "(ROOT (S (PP (IN By) (NP (CD 1997))) (, ,) (NP (NP (ADJP (RB almost) (DT all)) (VBG remaining) (NNS uses)) (PP (IN of) (NP (NP (NN cancer)) (: -) (S (VP (VBG causing) (NP (NN asbestos))))))) (VP (MD will) (VP (VB be) (VP (VBN outlawed)))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "5:0", 
+          5, 
+          5, 
+          "remaining"
+        ], 
+        [
+          "ARG1", 
+          "6:0", 
+          6, 
+          6, 
+          "uses"
+        ]
+      ], 
+      "baseform": "remain", 
+      "basepos": "v", 
+      "frame": "remain.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "14:0", 
+          14, 
+          14, 
+          "outlawed"
+        ], 
+        [
+          "ARGM-TMP", 
+          "0:1", 
+          0, 
+          1, 
+          "By 1997"
+        ], 
+        [
+          "ARGM-MOD", 
+          "12:0", 
+          12, 
+          12, 
+          "will"
+        ], 
+        [
+          "ARG1", 
+          "15:0", 
+          3, 
+          11, 
+          "almost all remaining uses of cancer - causing asbestos"
+        ], 
+        [
+          "LINK-PCR", 
+          "15:0*15:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "outlaw", 
+      "basepos": "v", 
+      "frame": "outlaw.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (PP-TMP (IN By) (NP (CD 1997) )) (, ,) (NP-SBJ-6 (NP (ADJP (RB almost) (DT all) ) (VBG remaining) (NNS uses) ) (PP (IN of) (NP (JJ cancer-causing) (NN asbestos) ))) (VP (MD will) (VP (VB be) (VP (VBN outlawed) (NP (-NONE- *-6) )))) (. .) ))", 
+  "sentence_nr": 22, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "1997", 
+      "dep_idx": 1, 
+      "gov": "outlawed", 
+      "gov_idx": 14, 
+      "rel": "agent"
+    }, 
+    {
+      "dep": "almost", 
+      "dep_idx": 3, 
+      "gov": "all", 
+      "gov_idx": 4, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "all", 
+      "dep_idx": 4, 
+      "gov": "uses", 
+      "gov_idx": 6, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "remaining", 
+      "dep_idx": 5, 
+      "gov": "uses", 
+      "gov_idx": 6, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "uses", 
+      "dep_idx": 6, 
+      "gov": "outlawed", 
+      "gov_idx": 14, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "cancer", 
+      "dep_idx": 8, 
+      "gov": "causing", 
+      "gov_idx": 10, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "causing", 
+      "dep_idx": 10, 
+      "gov": "asbestos", 
+      "gov_idx": 11, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 11, 
+      "gov": "uses", 
+      "gov_idx": 6, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "will", 
+      "dep_idx": 12, 
+      "gov": "outlawed", 
+      "gov_idx": 14, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "be", 
+      "dep_idx": 13, 
+      "gov": "outlawed", 
+      "gov_idx": 14, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "outlawed", 
+      "dep_idx": 14, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "By", 
+      "dep_idx": 0, 
+      "gov": "outlawed", 
+      "gov_idx": 14, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "1997", 
+      "dep_idx": 1, 
+      "gov": "By", 
+      "gov_idx": 0, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "almost", 
+      "dep_idx": 3, 
+      "gov": "all", 
+      "gov_idx": 4, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "all", 
+      "dep_idx": 4, 
+      "gov": "uses", 
+      "gov_idx": 6, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "remaining", 
+      "dep_idx": 5, 
+      "gov": "uses", 
+      "gov_idx": 6, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "uses", 
+      "dep_idx": 6, 
+      "gov": "outlawed", 
+      "gov_idx": 14, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 7, 
+      "gov": "uses", 
+      "gov_idx": 6, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "cancer", 
+      "dep_idx": 8, 
+      "gov": "causing", 
+      "gov_idx": 10, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "causing", 
+      "dep_idx": 10, 
+      "gov": "asbestos", 
+      "gov_idx": 11, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 11, 
+      "gov": "of", 
+      "gov_idx": 7, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "will", 
+      "dep_idx": 12, 
+      "gov": "outlawed", 
+      "gov_idx": 14, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "be", 
+      "dep_idx": 13, 
+      "gov": "outlawed", 
+      "gov_idx": 14, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "outlawed", 
+      "dep_idx": 14, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "text": "By 1997 , almost all remaining uses of cancer - causing asbestos will be outlawed .", 
+  "timex": [
+    [
+      "t1", 
+      1, 
+      1, 
+      "<TIMEX3 tid=\"t1\" value=\"1997\" type=\"DATE\">1997</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "By 1997 , almost all remaining uses of cancer - causing asbestos will be outlawed *-6 .", 
+  "tuples": [
+    [
+      "agent", 
+      "outlawed", 
+      "1997"
+    ], 
+    [
+      "advmod", 
+      "all", 
+      "almost"
+    ], 
+    [
+      "amod", 
+      "uses", 
+      "all"
+    ], 
+    [
+      "amod", 
+      "uses", 
+      "remaining"
+    ], 
+    [
+      "nsubjpass", 
+      "outlawed", 
+      "uses"
+    ], 
+    [
+      "prep_of", 
+      "uses", 
+      "cancer"
+    ], 
+    [
+      "dep", 
+      "cancer", 
+      "causing"
+    ], 
+    [
+      "dobj", 
+      "causing", 
+      "asbestos"
+    ], 
+    [
+      "aux", 
+      "outlawed", 
+      "will"
+    ], 
+    [
+      "auxpass", 
+      "outlawed", 
+      "be"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "outlawed"
+    ]
+  ], 
+  "words": [
+    [
+      "By", 
+      {
+        "Lemma": "by", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 0
+      }
+    ], 
+    [
+      "1997", 
+      {
+        "Lemma": "1997", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "1997", 
+        "PartOfSpeech": "CD", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"1997\" type=\"DATE\">1997</TIMEX3>", 
+        "idx": 1
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 2
+      }
+    ], 
+    [
+      "almost", 
+      {
+        "Lemma": "almost", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 3
+      }
+    ], 
+    [
+      "all", 
+      {
+        "Lemma": "all", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 4
+      }
+    ], 
+    [
+      "remaining", 
+      {
+        "Lemma": "remain", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBG", 
+        "idx": 5
+      }
+    ], 
+    [
+      "uses", 
+      {
+        "Lemma": "use", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 6
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "cancer", 
+      {
+        "Lemma": "cancer", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 8
+      }
+    ], 
+    [
+      "-", 
+      {
+        "Lemma": "-", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ":", 
+        "idx": 9
+      }
+    ], 
+    [
+      "causing", 
+      {
+        "Lemma": "cause", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBG", 
+        "idx": 10
+      }
+    ], 
+    [
+      "asbestos", 
+      {
+        "Lemma": "asbestos", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 11
+      }
+    ], 
+    [
+      "will", 
+      {
+        "Lemma": "will", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "MD", 
+        "idx": 12
+      }
+    ], 
+    [
+      "be", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VB", 
+        "idx": 13
+      }
+    ], 
+    [
+      "outlawed", 
+      {
+        "Lemma": "outlaw", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 14
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 16
+      }
+    ]
+  ]
+}

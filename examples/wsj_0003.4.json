@@ -1,0 +1,375 @@
+{
+  "bbn_ne": [
+    [
+      1, 
+      1, 
+      "Lorillard", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Lorillard</ENAMEX>"
+    ], 
+    [
+      2, 
+      2, 
+      "spokewoman", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">spokewoman</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [
+    [
+      6, 
+      6, 
+      5, 
+      "This"
+    ], 
+    [
+      8, 
+      10, 
+      5, 
+      "an old story"
+    ]
+  ], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (DT A) (NNP Lorillard) (NN spokewoman)) (VP (VBD said) (, ,) (`` ``) (S (NP-SBJ (DT This)) (VP (VBZ is) (NP-PRD (DT an) (JJ old) (NN story))))) (. .)))", 
+  "nom": [], 
+  "parsetree": "(ROOT (S (NP (DT A) (NNP Lorillard) (NN spokewoman)) (VP (VBD said) (, ,) (`` ``) (S (NP (DT This)) (VP (VBZ is) (NP (DT an) (JJ old) (NN story))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "3:0", 
+          3, 
+          3, 
+          "said"
+        ], 
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          2, 
+          "A Lorillard spokewoman"
+        ], 
+        [
+          "ARG1", 
+          "6:2", 
+          6, 
+          10, 
+          "This is an old story"
+        ]
+      ], 
+      "baseform": "say", 
+      "basepos": "v", 
+      "frame": "say.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (DT A) (NNP Lorillard) (NN spokewoman) ) (VP (VBD said) (, ,) (`` ``) (S (NP-SBJ (DT This) ) (VP (VBZ is) (NP-PRD (DT an) (JJ old) (NN story) )))) (. .) ))", 
+  "sentence_nr": 4, 
+  "stanford_coref": [
+    [
+      [
+        "This", 
+        6, 
+        7
+      ], 
+      [
+        "an old story", 
+        8, 
+        11
+      ]
+    ]
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "A", 
+      "dep_idx": 0, 
+      "gov": "spokewoman", 
+      "gov_idx": 2, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Lorillard", 
+      "dep_idx": 1, 
+      "gov": "spokewoman", 
+      "gov_idx": 2, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "spokewoman", 
+      "dep_idx": 2, 
+      "gov": "said", 
+      "gov_idx": 3, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 3, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "This", 
+      "dep_idx": 6, 
+      "gov": "story", 
+      "gov_idx": 10, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 7, 
+      "gov": "story", 
+      "gov_idx": 10, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "an", 
+      "dep_idx": 8, 
+      "gov": "story", 
+      "gov_idx": 10, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "old", 
+      "dep_idx": 9, 
+      "gov": "story", 
+      "gov_idx": 10, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "story", 
+      "dep_idx": 10, 
+      "gov": "said", 
+      "gov_idx": 3, 
+      "rel": "ccomp"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "A", 
+      "dep_idx": 0, 
+      "gov": "spokewoman", 
+      "gov_idx": 2, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Lorillard", 
+      "dep_idx": 1, 
+      "gov": "spokewoman", 
+      "gov_idx": 2, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "spokewoman", 
+      "dep_idx": 2, 
+      "gov": "said", 
+      "gov_idx": 3, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 3, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "This", 
+      "dep_idx": 6, 
+      "gov": "story", 
+      "gov_idx": 10, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 7, 
+      "gov": "story", 
+      "gov_idx": 10, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "an", 
+      "dep_idx": 8, 
+      "gov": "story", 
+      "gov_idx": 10, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "old", 
+      "dep_idx": 9, 
+      "gov": "story", 
+      "gov_idx": 10, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "story", 
+      "dep_idx": 10, 
+      "gov": "said", 
+      "gov_idx": 3, 
+      "rel": "ccomp"
+    }
+  ], 
+  "text": "A Lorillard spokewoman said , `` This is an old story .", 
+  "timex": [], 
+  "treebank_sentence": "A Lorillard spokewoman said , `` This is an old story .", 
+  "tuples": [
+    [
+      "det", 
+      "spokewoman", 
+      "A"
+    ], 
+    [
+      "nn", 
+      "spokewoman", 
+      "Lorillard"
+    ], 
+    [
+      "nsubj", 
+      "said", 
+      "spokewoman"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "said"
+    ], 
+    [
+      "nsubj", 
+      "story", 
+      "This"
+    ], 
+    [
+      "cop", 
+      "story", 
+      "is"
+    ], 
+    [
+      "det", 
+      "story", 
+      "an"
+    ], 
+    [
+      "amod", 
+      "story", 
+      "old"
+    ], 
+    [
+      "ccomp", 
+      "said", 
+      "story"
+    ]
+  ], 
+  "words": [
+    [
+      "A", 
+      {
+        "Lemma": "a", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 0
+      }
+    ], 
+    [
+      "Lorillard", 
+      {
+        "Lemma": "Lorillard", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 1
+      }
+    ], 
+    [
+      "spokewoman", 
+      {
+        "Lemma": "spokewoman", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 2
+      }
+    ], 
+    [
+      "said", 
+      {
+        "Lemma": "say", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 3
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 4
+      }
+    ], 
+    [
+      "``", 
+      {
+        "Lemma": "``", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "``", 
+        "idx": 5
+      }
+    ], 
+    [
+      "This", 
+      {
+        "Lemma": "this", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 6
+      }
+    ], 
+    [
+      "is", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBZ", 
+        "idx": 7
+      }
+    ], 
+    [
+      "an", 
+      {
+        "Lemma": "a", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 8
+      }
+    ], 
+    [
+      "old", 
+      {
+        "Lemma": "old", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 9
+      }
+    ], 
+    [
+      "story", 
+      {
+        "Lemma": "story", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 10
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 11
+      }
+    ]
+  ]
+}

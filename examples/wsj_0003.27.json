@@ -1,0 +1,1072 @@
+{
+  "bbn_ne": [
+    [
+      9, 
+      9, 
+      "workers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">workers</ENAMEX>"
+    ], 
+    [
+      11, 
+      11, 
+      "managers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">managers</ENAMEX>"
+    ], 
+    [
+      16, 
+      16, 
+      "diseases", 
+      "DISEASE", 
+      "", 
+      "<ENAMEX TYPE=\"DISEASE\">diseases</ENAMEX>"
+    ], 
+    [
+      21, 
+      22, 
+      "Darrell Phillips", 
+      "PERSON", 
+      "", 
+      "<ENAMEX TYPE=\"PERSON\">Darrell Phillips</ENAMEX>"
+    ], 
+    [
+      24, 
+      25, 
+      "vice president", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">vice president</ENAMEX>"
+    ], 
+    [
+      27, 
+      28, 
+      "human resources", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">human resources</ENAMEX>"
+    ], 
+    [
+      30, 
+      32, 
+      "Hollingsworth &amp; Vose", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Hollingsworth &amp; Vose</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (SINV (`` ``) (S-TPC-1 (NP-SBJ (EX There)) (VP (VBZ 's) (NP-PRD (NP (DT no) (NN question)) (SBAR (IN that) (S (NP-SBJ (NP (DT some)) (PP (IN of) (NP (DT those) (NNS workers) (CC and) (NNS managers)))) (VP (VBD contracted) (NP (ADJP (NN asbestos) (HYPH -) (VBN related)) (NNS diseases)))))))) (, ,) ('' '') (VP (VBD said) (S (-NONE- *T*-1))) (NP-SBJ (NP (NNP Darrell) (NNP Phillips)) (, ,) (NP (NP (NN vice) (NN president)) (PP (IN of) (NP (JJ human) (NNS resources))) (PP (IN for) (NP (NNP Hollingsworth) (CC &) (NNP Vose))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG1", 
+          "6:2", 
+          6, 
+          11, 
+          "some of those workers and managers"
+        ], 
+        [
+          "Support", 
+          "12:0", 
+          12, 
+          12, 
+          "contracted"
+        ], 
+        [
+          "ARGM-CAU", 
+          "13:0", 
+          13, 
+          15, 
+          "asbestos - related"
+        ], 
+        [
+          "ARG2-REF", 
+          "14:0", 
+          16, 
+          16, 
+          "diseases"
+        ], 
+        [
+          "rel", 
+          "14:0", 
+          16, 
+          16, 
+          "diseases"
+        ]
+      ], 
+      "baseform": "disease", 
+      "frame": "disease.01", 
+      "tokenNr": "14"
+    }, 
+    {
+      "args": [
+        [
+          "ARG3", 
+          "22:0", 
+          24, 
+          24, 
+          "vice"
+        ], 
+        [
+          "ARG0", 
+          "23:0", 
+          25, 
+          25, 
+          "president"
+        ], 
+        [
+          "rel", 
+          "23:0", 
+          25, 
+          25, 
+          "president"
+        ], 
+        [
+          "ARG1", 
+          "24:1", 
+          26, 
+          28, 
+          "of human resources"
+        ], 
+        [
+          "ARG2", 
+          "27:1", 
+          29, 
+          32, 
+          "for Hollingsworth & Vose"
+        ]
+      ], 
+      "baseform": "president", 
+      "frame": "president.01", 
+      "tokenNr": "23"
+    }, 
+    {
+      "args": [
+        [
+          "ARGM-NEG", 
+          "3:0", 
+          3, 
+          3, 
+          "no"
+        ], 
+        [
+          "rel", 
+          "4:0", 
+          4, 
+          4, 
+          "question"
+        ], 
+        [
+          "ARG1", 
+          "5:1", 
+          5, 
+          16, 
+          "that some of those workers and managers contracted asbestos - related diseases"
+        ]
+      ], 
+      "baseform": "question", 
+      "frame": "question.01", 
+      "tokenNr": "4"
+    }, 
+    {
+      "args": [
+        [
+          "ARG1", 
+          "25:0", 
+          27, 
+          27, 
+          "human"
+        ], 
+        [
+          "rel", 
+          "26:0", 
+          28, 
+          28, 
+          "resources"
+        ]
+      ], 
+      "baseform": "resource", 
+      "frame": "resource.01", 
+      "tokenNr": "26"
+    }
+  ], 
+  "parsetree": "(ROOT (SINV (`` ``) (S (NP (EX There)) (VP (VBZ 's) (NP (DT no) (NN question)) (SBAR (IN that) (S (NP (NP (DT some)) (PP (IN of) (NP (DT those) (NNS workers) (CC and) (NNS managers)))) (VP (VBD contracted) (NP (NP (NN asbestos)) (: -) (NP (JJ related) (NNS diseases)))))))) (, ,) ('' '') (VP (VBD said)) (NP (NP (NNP Darrell) (NNP Phillips)) (, ,) (NP (NP (NN vice) (NN president)) (PP (IN of) (NP (NP (JJ human) (NNS resources)) (PP (IN for) (NP (NNP Hollingsworth) (CC &) (NNP Vose))))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "12:0", 
+          12, 
+          12, 
+          "contracted"
+        ], 
+        [
+          "ARG1", 
+          "6:2", 
+          6, 
+          11, 
+          "some of those workers and managers"
+        ], 
+        [
+          "ARG2", 
+          "13:2", 
+          13, 
+          16, 
+          "asbestos - related diseases"
+        ]
+      ], 
+      "baseform": "contract", 
+      "basepos": "v", 
+      "frame": "contract.04", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "19:0", 
+          19, 
+          19, 
+          "said"
+        ], 
+        [
+          "ARG1", 
+          "20:0", 
+          1, 
+          16, 
+          "There 's no question that some of those workers and managers contracted asbestos - related diseases"
+        ], 
+        [
+          "ARG0", 
+          "21:2", 
+          21, 
+          32, 
+          "Darrell Phillips , vice president of human resources for Hollingsworth & Vose"
+        ]
+      ], 
+      "baseform": "say", 
+      "basepos": "v", 
+      "frame": "say.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (SINV (`` ``) (S-TPC-1 (NP-SBJ (EX There) ) (VP (VBZ 's) (NP-PRD (NP (DT no) (NN question) ) (SBAR (IN that) (S (NP-SBJ (NP (DT some) ) (PP (IN of) (NP (DT those) (NNS workers) (CC and) (NNS managers) ))) (VP (VBD contracted) (NP (JJ asbestos-related) (NNS diseases) ))))))) (, ,) ('' '') (VP (VBD said) (S (-NONE- *T*-1) )) (NP-SBJ (NP (NNP Darrell) (NNP Phillips) ) (, ,) (NP (NP (NN vice) (NN president) ) (PP (IN of) (NP (JJ human) (NNS resources) )) (PP (IN for) (NP (NNP Hollingsworth) (CC &) (NNP Vose) )))) (. .) ))", 
+  "sentence_nr": 27, 
+  "stanford_coref": [
+    [
+      [
+        "Darrell Phillips", 
+        20, 
+        22
+      ], 
+      [
+        "Darrell Phillips , vice president of human resources for Hollingsworth & Vose", 
+        20, 
+        32
+      ]
+    ], 
+    [
+      [
+        "vice president of human resources for Hollingsworth & Vose", 
+        23, 
+        32
+      ], 
+      [
+        "Darrell Phillips , vice president of human resources for Hollingsworth & Vose", 
+        20, 
+        32
+      ]
+    ]
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "There", 
+      "dep_idx": 1, 
+      "gov": "'s", 
+      "gov_idx": 2, 
+      "rel": "expl"
+    }, 
+    {
+      "dep": "'s", 
+      "dep_idx": 2, 
+      "gov": "said", 
+      "gov_idx": 19, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "no", 
+      "dep_idx": 3, 
+      "gov": "question", 
+      "gov_idx": 4, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "question", 
+      "dep_idx": 4, 
+      "gov": "'s", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 5, 
+      "gov": "contracted", 
+      "gov_idx": 12, 
+      "rel": "complm"
+    }, 
+    {
+      "dep": "some", 
+      "dep_idx": 6, 
+      "gov": "contracted", 
+      "gov_idx": 12, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "those", 
+      "dep_idx": 8, 
+      "gov": "workers", 
+      "gov_idx": 9, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "workers", 
+      "dep_idx": 9, 
+      "gov": "some", 
+      "gov_idx": 6, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "managers", 
+      "dep_idx": 11, 
+      "gov": "some", 
+      "gov_idx": 6, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "managers", 
+      "dep_idx": 11, 
+      "gov": "workers", 
+      "gov_idx": 9, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "contracted", 
+      "dep_idx": 12, 
+      "gov": "question", 
+      "gov_idx": 4, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 13, 
+      "gov": "related", 
+      "gov_idx": 15, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "related", 
+      "dep_idx": 15, 
+      "gov": "diseases", 
+      "gov_idx": 16, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "diseases", 
+      "dep_idx": 16, 
+      "gov": "contracted", 
+      "gov_idx": 12, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 19, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "Darrell", 
+      "dep_idx": 21, 
+      "gov": "Phillips", 
+      "gov_idx": 22, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Phillips", 
+      "dep_idx": 22, 
+      "gov": "said", 
+      "gov_idx": 19, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "vice", 
+      "dep_idx": 24, 
+      "gov": "president", 
+      "gov_idx": 25, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "president", 
+      "dep_idx": 25, 
+      "gov": "Phillips", 
+      "gov_idx": 22, 
+      "rel": "appos"
+    }, 
+    {
+      "dep": "human", 
+      "dep_idx": 27, 
+      "gov": "resources", 
+      "gov_idx": 28, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "resources", 
+      "dep_idx": 28, 
+      "gov": "president", 
+      "gov_idx": 25, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "Hollingsworth", 
+      "dep_idx": 30, 
+      "gov": "president", 
+      "gov_idx": 25, 
+      "rel": "prep_for"
+    }, 
+    {
+      "dep": "Vose", 
+      "dep_idx": 32, 
+      "gov": "president", 
+      "gov_idx": 25, 
+      "rel": "prep_for"
+    }, 
+    {
+      "dep": "Vose", 
+      "dep_idx": 32, 
+      "gov": "Hollingsworth", 
+      "gov_idx": 30, 
+      "rel": "conj_and"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "There", 
+      "dep_idx": 1, 
+      "gov": "'s", 
+      "gov_idx": 2, 
+      "rel": "expl"
+    }, 
+    {
+      "dep": "'s", 
+      "dep_idx": 2, 
+      "gov": "said", 
+      "gov_idx": 19, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "no", 
+      "dep_idx": 3, 
+      "gov": "question", 
+      "gov_idx": 4, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "question", 
+      "dep_idx": 4, 
+      "gov": "'s", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 5, 
+      "gov": "contracted", 
+      "gov_idx": 12, 
+      "rel": "complm"
+    }, 
+    {
+      "dep": "some", 
+      "dep_idx": 6, 
+      "gov": "contracted", 
+      "gov_idx": 12, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 7, 
+      "gov": "some", 
+      "gov_idx": 6, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "those", 
+      "dep_idx": 8, 
+      "gov": "workers", 
+      "gov_idx": 9, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "workers", 
+      "dep_idx": 9, 
+      "gov": "of", 
+      "gov_idx": 7, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 10, 
+      "gov": "workers", 
+      "gov_idx": 9, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "managers", 
+      "dep_idx": 11, 
+      "gov": "workers", 
+      "gov_idx": 9, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "contracted", 
+      "dep_idx": 12, 
+      "gov": "question", 
+      "gov_idx": 4, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 13, 
+      "gov": "related", 
+      "gov_idx": 15, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "related", 
+      "dep_idx": 15, 
+      "gov": "diseases", 
+      "gov_idx": 16, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "diseases", 
+      "dep_idx": 16, 
+      "gov": "contracted", 
+      "gov_idx": 12, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 19, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "Darrell", 
+      "dep_idx": 21, 
+      "gov": "Phillips", 
+      "gov_idx": 22, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Phillips", 
+      "dep_idx": 22, 
+      "gov": "said", 
+      "gov_idx": 19, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "vice", 
+      "dep_idx": 24, 
+      "gov": "president", 
+      "gov_idx": 25, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "president", 
+      "dep_idx": 25, 
+      "gov": "Phillips", 
+      "gov_idx": 22, 
+      "rel": "appos"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 26, 
+      "gov": "president", 
+      "gov_idx": 25, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "human", 
+      "dep_idx": 27, 
+      "gov": "resources", 
+      "gov_idx": 28, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "resources", 
+      "dep_idx": 28, 
+      "gov": "of", 
+      "gov_idx": 26, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "for", 
+      "dep_idx": 29, 
+      "gov": "president", 
+      "gov_idx": 25, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Hollingsworth", 
+      "dep_idx": 30, 
+      "gov": "for", 
+      "gov_idx": 29, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "&", 
+      "dep_idx": 31, 
+      "gov": "Hollingsworth", 
+      "gov_idx": 30, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "Vose", 
+      "dep_idx": 32, 
+      "gov": "Hollingsworth", 
+      "gov_idx": 30, 
+      "rel": "conj"
+    }
+  ], 
+  "text": "`` There 's no question that some of those workers and managers contracted asbestos - related diseases , '' said Darrell Phillips , vice president of human resources for Hollingsworth & Vose .", 
+  "timex": [], 
+  "treebank_sentence": "`` There 's no question that some of those workers and managers contracted asbestos - related diseases , '' said *T*-1 Darrell Phillips , vice president of human resources for Hollingsworth & Vose .", 
+  "tuples": [
+    [
+      "expl", 
+      "'s", 
+      "There"
+    ], 
+    [
+      "ccomp", 
+      "said", 
+      "'s"
+    ], 
+    [
+      "det", 
+      "question", 
+      "no"
+    ], 
+    [
+      "nsubj", 
+      "'s", 
+      "question"
+    ], 
+    [
+      "complm", 
+      "contracted", 
+      "that"
+    ], 
+    [
+      "nsubj", 
+      "contracted", 
+      "some"
+    ], 
+    [
+      "det", 
+      "workers", 
+      "those"
+    ], 
+    [
+      "prep_of", 
+      "some", 
+      "workers"
+    ], 
+    [
+      "prep_of", 
+      "some", 
+      "managers"
+    ], 
+    [
+      "conj_and", 
+      "workers", 
+      "managers"
+    ], 
+    [
+      "ccomp", 
+      "'s", 
+      "contracted"
+    ], 
+    [
+      "dobj", 
+      "contracted", 
+      "asbestos"
+    ], 
+    [
+      "amod", 
+      "diseases", 
+      "related"
+    ], 
+    [
+      "dep", 
+      "asbestos", 
+      "diseases"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "said"
+    ], 
+    [
+      "nn", 
+      "Phillips", 
+      "Darrell"
+    ], 
+    [
+      "nsubj", 
+      "said", 
+      "Phillips"
+    ], 
+    [
+      "nn", 
+      "president", 
+      "vice"
+    ], 
+    [
+      "appos", 
+      "Phillips", 
+      "president"
+    ], 
+    [
+      "amod", 
+      "resources", 
+      "human"
+    ], 
+    [
+      "prep_of", 
+      "president", 
+      "resources"
+    ], 
+    [
+      "prep_for", 
+      "resources", 
+      "Hollingsworth"
+    ], 
+    [
+      "prep_for", 
+      "resources", 
+      "Vose"
+    ], 
+    [
+      "conj_and", 
+      "Hollingsworth", 
+      "Vose"
+    ]
+  ], 
+  "words": [
+    [
+      "``", 
+      {
+        "Lemma": "``", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "``", 
+        "idx": 0
+      }
+    ], 
+    [
+      "There", 
+      {
+        "Lemma": "there", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "EX", 
+        "idx": 1
+      }
+    ], 
+    [
+      "'s", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBZ", 
+        "idx": 2
+      }
+    ], 
+    [
+      "no", 
+      {
+        "Lemma": "no", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 3
+      }
+    ], 
+    [
+      "question", 
+      {
+        "Lemma": "question", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 4
+      }
+    ], 
+    [
+      "that", 
+      {
+        "Lemma": "that", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 5
+      }
+    ], 
+    [
+      "some", 
+      {
+        "Lemma": "some", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 6
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "those", 
+      {
+        "Lemma": "those", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 8
+      }
+    ], 
+    [
+      "workers", 
+      {
+        "Lemma": "worker", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 9
+      }
+    ], 
+    [
+      "and", 
+      {
+        "Lemma": "and", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "CC", 
+        "idx": 10
+      }
+    ], 
+    [
+      "managers", 
+      {
+        "Lemma": "manager", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 11
+      }
+    ], 
+    [
+      "contracted", 
+      {
+        "Lemma": "contract", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 12
+      }
+    ], 
+    [
+      "asbestos", 
+      {
+        "Lemma": "asbestos", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 13
+      }
+    ], 
+    [
+      "-", 
+      {
+        "Lemma": "-", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ":", 
+        "idx": 14
+      }
+    ], 
+    [
+      "related", 
+      {
+        "Lemma": "related", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 15
+      }
+    ], 
+    [
+      "diseases", 
+      {
+        "Lemma": "disease", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 16
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 17
+      }
+    ], 
+    [
+      "''", 
+      {
+        "Lemma": "''", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "''", 
+        "idx": 18
+      }
+    ], 
+    [
+      "said", 
+      {
+        "Lemma": "say", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 19
+      }
+    ], 
+    [
+      "Darrell", 
+      {
+        "Lemma": "Darrell", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 21
+      }
+    ], 
+    [
+      "Phillips", 
+      {
+        "Lemma": "Phillips", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 22
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 23
+      }
+    ], 
+    [
+      "vice", 
+      {
+        "Lemma": "vice", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 24
+      }
+    ], 
+    [
+      "president", 
+      {
+        "Lemma": "president", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 25
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 26
+      }
+    ], 
+    [
+      "human", 
+      {
+        "Lemma": "human", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 27
+      }
+    ], 
+    [
+      "resources", 
+      {
+        "Lemma": "resource", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 28
+      }
+    ], 
+    [
+      "for", 
+      {
+        "Lemma": "for", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 29
+      }
+    ], 
+    [
+      "Hollingsworth", 
+      {
+        "Lemma": "Hollingsworth", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 30
+      }
+    ], 
+    [
+      "&", 
+      {
+        "Lemma": "&", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "CC", 
+        "idx": 31
+      }
+    ], 
+    [
+      "Vose", 
+      {
+        "Lemma": "Vose", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 32
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 33
+      }
+    ]
+  ]
+}

@@ -1,0 +1,563 @@
+{
+  "bbn_ne": [
+    [
+      12, 
+      14, 
+      "35 years ago", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">35 years ago</TIMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (`` ``) (CC But) (NP-SBJ-1 (PRP you)) (VP (VBP have) (S (NP-SBJ (-NONE- *-1)) (VP (TO to) (VP (VB recognize) (SBAR (IN that) (S (NP-SBJ (DT these) (NNS events)) (VP (VBD took) (NP (NN place)) (ADVP-TMP (NP (CD 35) (NNS years)) (IN ago))))))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG1", 
+          "8:1", 
+          8, 
+          9, 
+          "these events"
+        ], 
+        [
+          "Support", 
+          "10:0", 
+          10, 
+          10, 
+          "took"
+        ], 
+        [
+          "rel", 
+          "11:0", 
+          11, 
+          11, 
+          "place"
+        ]
+      ], 
+      "baseform": "place", 
+      "frame": "place.03", 
+      "tokenNr": "11"
+    }
+  ], 
+  "parsetree": "(ROOT (S (`` ``) (CC But) (NP (PRP you)) (VP (VBP have) (S (VP (TO to) (VP (VB recognize) (SBAR (IN that) (S (NP (DT these) (NNS events)) (VP (VBD took) (NP (NN place)) (ADVP (NP (CD 35) (NNS years)) (RB ago))))))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "3:0", 
+          3, 
+          3, 
+          "have"
+        ], 
+        [
+          "ARGM-DIS", 
+          "1:0", 
+          1, 
+          1, 
+          "But"
+        ]
+      ], 
+      "baseform": "have", 
+      "basepos": "v", 
+      "frame": "have.02", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "6:0", 
+          6, 
+          6, 
+          "recognize"
+        ], 
+        [
+          "ARGM-MOD", 
+          "3:0", 
+          3, 
+          3, 
+          "have"
+        ], 
+        [
+          "ARG0", 
+          "4:0", 
+          2, 
+          2, 
+          "you"
+        ], 
+        [
+          "ARG1", 
+          "8:2", 
+          8, 
+          14, 
+          "these events took place 35 years ago"
+        ]
+      ], 
+      "baseform": "recognize", 
+      "basepos": "v", 
+      "frame": "recognize.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "10:0", 
+          10, 
+          10, 
+          "took"
+        ], 
+        [
+          "ARG1", 
+          "8:1", 
+          8, 
+          9, 
+          "these events"
+        ], 
+        [
+          "ARG2", 
+          "11:1", 
+          11, 
+          11, 
+          "place"
+        ], 
+        [
+          "ARGM-TMP", 
+          "12:2", 
+          12, 
+          14, 
+          "35 years ago"
+        ]
+      ], 
+      "baseform": "take", 
+      "basepos": "v", 
+      "frame": "take.14", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (`` ``) (CC But) (NP-SBJ-1 (PRP you) ) (VP (VBP have) (S (NP-SBJ (-NONE- *-1) ) (VP (TO to) (VP (VB recognize) (SBAR (IN that) (S (NP-SBJ (DT these) (NNS events) ) (VP (VBD took) (NP (NN place) ) (ADVP-TMP (NP (CD 35) (NNS years) ) (IN ago) )))))))) (. .) ))", 
+  "sentence_nr": 28, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "But", 
+      "dep_idx": 1, 
+      "gov": "have", 
+      "gov_idx": 3, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "you", 
+      "dep_idx": 2, 
+      "gov": "have", 
+      "gov_idx": 3, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "you", 
+      "dep_idx": 2, 
+      "gov": "recognize", 
+      "gov_idx": 6, 
+      "rel": "xsubj"
+    }, 
+    {
+      "dep": "have", 
+      "dep_idx": 3, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 5, 
+      "gov": "recognize", 
+      "gov_idx": 6, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "recognize", 
+      "dep_idx": 6, 
+      "gov": "have", 
+      "gov_idx": 3, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 7, 
+      "gov": "took", 
+      "gov_idx": 10, 
+      "rel": "complm"
+    }, 
+    {
+      "dep": "these", 
+      "dep_idx": 8, 
+      "gov": "events", 
+      "gov_idx": 9, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "events", 
+      "dep_idx": 9, 
+      "gov": "took", 
+      "gov_idx": 10, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "took", 
+      "dep_idx": 10, 
+      "gov": "recognize", 
+      "gov_idx": 6, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "place", 
+      "dep_idx": 11, 
+      "gov": "took", 
+      "gov_idx": 10, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "35", 
+      "dep_idx": 12, 
+      "gov": "years", 
+      "gov_idx": 13, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "years", 
+      "dep_idx": 13, 
+      "gov": "ago", 
+      "gov_idx": 14, 
+      "rel": "npadvmod"
+    }, 
+    {
+      "dep": "ago", 
+      "dep_idx": 14, 
+      "gov": "took", 
+      "gov_idx": 10, 
+      "rel": "advmod"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "But", 
+      "dep_idx": 1, 
+      "gov": "have", 
+      "gov_idx": 3, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "you", 
+      "dep_idx": 2, 
+      "gov": "have", 
+      "gov_idx": 3, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "have", 
+      "dep_idx": 3, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 5, 
+      "gov": "recognize", 
+      "gov_idx": 6, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "recognize", 
+      "dep_idx": 6, 
+      "gov": "have", 
+      "gov_idx": 3, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 7, 
+      "gov": "took", 
+      "gov_idx": 10, 
+      "rel": "complm"
+    }, 
+    {
+      "dep": "these", 
+      "dep_idx": 8, 
+      "gov": "events", 
+      "gov_idx": 9, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "events", 
+      "dep_idx": 9, 
+      "gov": "took", 
+      "gov_idx": 10, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "took", 
+      "dep_idx": 10, 
+      "gov": "recognize", 
+      "gov_idx": 6, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "place", 
+      "dep_idx": 11, 
+      "gov": "took", 
+      "gov_idx": 10, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "35", 
+      "dep_idx": 12, 
+      "gov": "years", 
+      "gov_idx": 13, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "years", 
+      "dep_idx": 13, 
+      "gov": "ago", 
+      "gov_idx": 14, 
+      "rel": "npadvmod"
+    }, 
+    {
+      "dep": "ago", 
+      "dep_idx": 14, 
+      "gov": "took", 
+      "gov_idx": 10, 
+      "rel": "advmod"
+    }
+  ], 
+  "text": "`` But you have to recognize that these events took place 35 years ago .", 
+  "timex": [
+    [
+      "t1", 
+      12, 
+      14, 
+      "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-35Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">35 years ago</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "`` But you have *-1 to recognize that these events took place 35 years ago .", 
+  "tuples": [
+    [
+      "cc", 
+      "have", 
+      "But"
+    ], 
+    [
+      "nsubj", 
+      "have", 
+      "you"
+    ], 
+    [
+      "xsubj", 
+      "recognize", 
+      "you"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "have"
+    ], 
+    [
+      "aux", 
+      "recognize", 
+      "to"
+    ], 
+    [
+      "xcomp", 
+      "have", 
+      "recognize"
+    ], 
+    [
+      "complm", 
+      "took", 
+      "that"
+    ], 
+    [
+      "det", 
+      "events", 
+      "these"
+    ], 
+    [
+      "nsubj", 
+      "took", 
+      "events"
+    ], 
+    [
+      "ccomp", 
+      "recognize", 
+      "took"
+    ], 
+    [
+      "dobj", 
+      "took", 
+      "place"
+    ], 
+    [
+      "num", 
+      "years", 
+      "35"
+    ], 
+    [
+      "npadvmod", 
+      "ago", 
+      "years"
+    ], 
+    [
+      "advmod", 
+      "took", 
+      "ago"
+    ]
+  ], 
+  "words": [
+    [
+      "``", 
+      {
+        "Lemma": "``", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "``", 
+        "idx": 0
+      }
+    ], 
+    [
+      "But", 
+      {
+        "Lemma": "but", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "CC", 
+        "idx": 1
+      }
+    ], 
+    [
+      "you", 
+      {
+        "Lemma": "you", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "PRP", 
+        "idx": 2
+      }
+    ], 
+    [
+      "have", 
+      {
+        "Lemma": "have", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBP", 
+        "idx": 3
+      }
+    ], 
+    [
+      "to", 
+      {
+        "Lemma": "to", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "TO", 
+        "idx": 5
+      }
+    ], 
+    [
+      "recognize", 
+      {
+        "Lemma": "recognize", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VB", 
+        "idx": 6
+      }
+    ], 
+    [
+      "that", 
+      {
+        "Lemma": "that", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "these", 
+      {
+        "Lemma": "these", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 8
+      }
+    ], 
+    [
+      "events", 
+      {
+        "Lemma": "event", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 9
+      }
+    ], 
+    [
+      "took", 
+      {
+        "Lemma": "take", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 10
+      }
+    ], 
+    [
+      "place", 
+      {
+        "Lemma": "place", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 11
+      }
+    ], 
+    [
+      "35", 
+      {
+        "Lemma": "35", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "PartOfSpeech": "CD", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-35Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">35 years ago</TIMEX3>", 
+        "idx": 12
+      }
+    ], 
+    [
+      "years", 
+      {
+        "Lemma": "year", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "PartOfSpeech": "NNS", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-35Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">35 years ago</TIMEX3>", 
+        "idx": 13
+      }
+    ], 
+    [
+      "ago", 
+      {
+        "Lemma": "ago", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "PartOfSpeech": "RB", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-35Y\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">35 years ago</TIMEX3>", 
+        "idx": 14
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 15
+      }
+    ]
+  ]
+}

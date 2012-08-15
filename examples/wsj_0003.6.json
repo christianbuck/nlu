@@ -1,0 +1,300 @@
+{
+  "bbn_ne": [
+    [
+      3, 
+      3, 
+      "asbestos", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">asbestos</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (EX There)) (VP (VBZ is) (NP-PRD (DT no) (NN asbestos)) (PP-LOC (IN in) (NP (PRP$ our) (NNS products))) (ADVP-TMP (RB now))) (. .) ('' '')))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG0", 
+          "5:0", 
+          5, 
+          5, 
+          "our"
+        ], 
+        [
+          "ARG1-REF", 
+          "6:0", 
+          6, 
+          6, 
+          "products"
+        ], 
+        [
+          "rel", 
+          "6:0", 
+          6, 
+          6, 
+          "products"
+        ]
+      ], 
+      "baseform": "product", 
+      "frame": "product.01", 
+      "tokenNr": "6"
+    }
+  ], 
+  "parsetree": "(ROOT (S (NP (EX There)) (VP (VBZ is) (NP (NP (DT no) (NN asbestos)) (PP (IN in) (NP (PRP$ our) (NNS products)))) (ADVP (RB now))) (. .) ('' '')))", 
+  "prop": [], 
+  "ptbparse": "( (S (NP-SBJ (EX There) ) (VP (VBZ is) (NP-PRD (DT no) (NN asbestos) ) (PP-LOC (IN in) (NP (PRP$ our) (NNS products) )) (ADVP-TMP (RB now) )) (. .) ('' '') ))", 
+  "sentence_nr": 6, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "There", 
+      "dep_idx": 0, 
+      "gov": "is", 
+      "gov_idx": 1, 
+      "rel": "expl"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 1, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "no", 
+      "dep_idx": 2, 
+      "gov": "asbestos", 
+      "gov_idx": 3, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 3, 
+      "gov": "is", 
+      "gov_idx": 1, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "our", 
+      "dep_idx": 5, 
+      "gov": "products", 
+      "gov_idx": 6, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "products", 
+      "dep_idx": 6, 
+      "gov": "is", 
+      "gov_idx": 1, 
+      "rel": "prep_in"
+    }, 
+    {
+      "dep": "now", 
+      "dep_idx": 7, 
+      "gov": "is", 
+      "gov_idx": 1, 
+      "rel": "advmod"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "There", 
+      "dep_idx": 0, 
+      "gov": "is", 
+      "gov_idx": 1, 
+      "rel": "expl"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 1, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "no", 
+      "dep_idx": 2, 
+      "gov": "asbestos", 
+      "gov_idx": 3, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 3, 
+      "gov": "is", 
+      "gov_idx": 1, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 4, 
+      "gov": "is", 
+      "gov_idx": 1, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "our", 
+      "dep_idx": 5, 
+      "gov": "products", 
+      "gov_idx": 6, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "products", 
+      "dep_idx": 6, 
+      "gov": "in", 
+      "gov_idx": 4, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "now", 
+      "dep_idx": 7, 
+      "gov": "is", 
+      "gov_idx": 1, 
+      "rel": "advmod"
+    }
+  ], 
+  "text": "There is no asbestos in our products now . ''", 
+  "timex": [
+    [
+      "t1", 
+      7, 
+      7, 
+      "<TIMEX3 tid=\"t1\" value=\"PRESENT_REF\" type=\"DATE\">now</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "There is no asbestos in our products now . ''", 
+  "tuples": [
+    [
+      "expl", 
+      "is", 
+      "There"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "is"
+    ], 
+    [
+      "det", 
+      "asbestos", 
+      "no"
+    ], 
+    [
+      "nsubj", 
+      "is", 
+      "asbestos"
+    ], 
+    [
+      "poss", 
+      "products", 
+      "our"
+    ], 
+    [
+      "prep_in", 
+      "asbestos", 
+      "products"
+    ], 
+    [
+      "advmod", 
+      "is", 
+      "now"
+    ]
+  ], 
+  "words": [
+    [
+      "There", 
+      {
+        "Lemma": "there", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "EX", 
+        "idx": 0
+      }
+    ], 
+    [
+      "is", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBZ", 
+        "idx": 1
+      }
+    ], 
+    [
+      "no", 
+      {
+        "Lemma": "no", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 2
+      }
+    ], 
+    [
+      "asbestos", 
+      {
+        "Lemma": "asbestos", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 3
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 4
+      }
+    ], 
+    [
+      "our", 
+      {
+        "Lemma": "we", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "PRP$", 
+        "idx": 5
+      }
+    ], 
+    [
+      "products", 
+      {
+        "Lemma": "product", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 6
+      }
+    ], 
+    [
+      "now", 
+      {
+        "Lemma": "now", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "PRESENT_REF", 
+        "PartOfSpeech": "RB", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"PRESENT_REF\" type=\"DATE\">now</TIMEX3>", 
+        "idx": 7
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 8
+      }
+    ], 
+    [
+      "''", 
+      {
+        "Lemma": "''", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "''", 
+        "idx": 9
+      }
+    ]
+  ]
+}

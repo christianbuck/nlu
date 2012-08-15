@@ -1,0 +1,1117 @@
+{
+  "bbn_ne": [
+    [
+      2, 
+      2, 
+      "fiber", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">fiber</ENAMEX>"
+    ], 
+    [
+      4, 
+      4, 
+      "crocidolite", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">crocidolite</ENAMEX>"
+    ], 
+    [
+      27, 
+      28, 
+      "decades later", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">decades later</TIMEX>"
+    ], 
+    [
+      30, 
+      30, 
+      "researchers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">researchers</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [
+    [
+      9, 
+      9, 
+      1, 
+      "once"
+    ], 
+    [
+      10, 
+      10, 
+      1, 
+      "it"
+    ], 
+    [
+      20, 
+      20, 
+      1, 
+      "it"
+    ]
+  ], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (S-TPC-2 (NP-SBJ (NP (DT The) (NN asbestos) (NN fiber)) (, ,) (NP (NN crocidolite)) (, ,)) (VP (VBZ is) (ADJP-PRD (RB unusually) (JJ resilient)) (SBAR-TMP (IN once) (S (NP-SBJ (PRP it)) (VP (VBZ enters) (NP (DT the) (NNS lungs))))) (, ,) (PP (IN with) (S-NOM (NP-SBJ (NP (RB even) (JJ brief) (NNS exposures)) (PP (IN to) (NP (PRP it)))) (VP (VBG causing) (NP (NP (NNS symptoms)) (SBAR (WHNP-1 (WDT that)) (S (NP-SBJ (-NONE- *T*-1)) (VP (VBP show) (PRT (RP up)) (ADVP-TMP (NP (NNS decades)) (JJ later))))))))))) (, ,) (NP-SBJ (NNS researchers)) (VP (VBD said) (SBAR (-NONE- 0) (S (-NONE- *T*-2)))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARGM-TMP", 
+          "17:0", 
+          17, 
+          17, 
+          "brief"
+        ], 
+        [
+          "rel", 
+          "18:0", 
+          18, 
+          18, 
+          "exposures"
+        ], 
+        [
+          "ARG2", 
+          "19:1", 
+          19, 
+          20, 
+          "to it"
+        ]
+      ], 
+      "baseform": "exposure", 
+      "frame": "exposure.01", 
+      "tokenNr": "18"
+    }, 
+    {
+      "args": [
+        [
+          "ARG1", 
+          "1:0", 
+          1, 
+          1, 
+          "asbestos"
+        ], 
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "fiber"
+        ]
+      ], 
+      "baseform": "fiber", 
+      "frame": "fiber.01", 
+      "tokenNr": "2"
+    }, 
+    {
+      "args": [
+        [
+          "ARG1", 
+          "16:2", 
+          16, 
+          20, 
+          "even brief exposures to it"
+        ], 
+        [
+          "Support", 
+          "21:0", 
+          21, 
+          21, 
+          "causing"
+        ], 
+        [
+          "ARG2-REF", 
+          "22:0", 
+          22, 
+          22, 
+          "symptoms"
+        ], 
+        [
+          "rel", 
+          "22:0", 
+          22, 
+          22, 
+          "symptoms"
+        ]
+      ], 
+      "baseform": "symptom", 
+      "frame": "symptom.01", 
+      "tokenNr": "22"
+    }
+  ], 
+  "parsetree": "(ROOT (S (S (NP (NP (DT The) (NN asbestos) (NN fiber)) (, ,) (NP (NN crocidolite)) (, ,)) (VP (VBZ is) (ADJP (RB unusually) (JJ resilient)) (SBAR (IN once) (S (NP (PRP it)) (VP (VBZ enters) (NP (DT the) (NNS lungs)) (, ,) (PP (IN with) (NP (NP (RB even) (JJ brief) (NNS exposures)) (PP (TO to) (S (NP (PRP it)) (VP (VBG causing) (NP (NP (NNS symptoms)) (SBAR (WHNP (WDT that)) (S (VP (VBP show) (PRT (RP up)) (NP (NP (NNS decades)) (ADVP (RB later))))))))))))))))) (, ,) (NP (NNS researchers)) (VP (VBD said)) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "11:0", 
+          11, 
+          11, 
+          "enters"
+        ], 
+        [
+          "ARG0", 
+          "10:1", 
+          10, 
+          10, 
+          "it"
+        ], 
+        [
+          "ARG1", 
+          "12:1", 
+          12, 
+          13, 
+          "the lungs"
+        ]
+      ], 
+      "baseform": "enter", 
+      "basepos": "v", 
+      "frame": "enter.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "21:0", 
+          21, 
+          21, 
+          "causing"
+        ], 
+        [
+          "ARG0", 
+          "16:2", 
+          16, 
+          20, 
+          "even brief exposures to it"
+        ], 
+        [
+          "ARG1", 
+          "22:2", 
+          22, 
+          28, 
+          "symptoms that *T*-1 show up decades later"
+        ]
+      ], 
+      "baseform": "cause", 
+      "basepos": "v", 
+      "frame": "cause.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "25:0,26:1", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "ARG1", 
+          "24:0", 
+          23, 
+          23, 
+          "that"
+        ], 
+        [
+          "ARGM-TMP", 
+          "27:2", 
+          27, 
+          28, 
+          "decades later"
+        ], 
+        [
+          "LINK-SLC", 
+          "22:1*24:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "show", 
+      "basepos": "v", 
+      "frame": "show.02", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "31:0", 
+          31, 
+          31, 
+          "said"
+        ], 
+        [
+          "ARG0", 
+          "30:1", 
+          30, 
+          30, 
+          "researchers"
+        ], 
+        [
+          "ARG1", 
+          "33:0", 
+          0, 
+          28, 
+          "The asbestos fiber , crocidolite , is unusually resilient once it enters the lungs , with even brief exposures to it causing symptoms that *T*-1 show up decades later"
+        ]
+      ], 
+      "baseform": "say", 
+      "basepos": "v", 
+      "frame": "say.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (S-TPC-2 (NP-SBJ (NP (DT The) (NN asbestos) (NN fiber) ) (, ,) (NP (NN crocidolite) ) (, ,) ) (VP (VBZ is) (ADJP-PRD (RB unusually) (JJ resilient) ) (SBAR-TMP (IN once) (S (NP-SBJ (PRP it) ) (VP (VBZ enters) (NP (DT the) (NNS lungs) )))) (, ,) (PP (IN with) (S-NOM (NP-SBJ (NP (RB even) (JJ brief) (NNS exposures) ) (PP (TO to) (NP (PRP it) ))) (VP (VBG causing) (NP (NP (NNS symptoms) ) (SBAR (WHNP-1 (WDT that) ) (S (NP-SBJ (-NONE- *T*-1) ) (VP (VBP show) (PRT (RP up) ) (ADVP-TMP (NP (NNS decades) ) (JJ later) )))))))))) (, ,) (NP-SBJ (NNS researchers) ) (VP (VBD said) (SBAR (-NONE- 0) (S (-NONE- *T*-2) ))) (. .) ))", 
+  "sentence_nr": 1, 
+  "stanford_coref": [
+    [
+      [
+        "it", 
+        10, 
+        11
+      ], 
+      [
+        "once", 
+        9, 
+        10
+      ]
+    ], 
+    [
+      [
+        "it", 
+        20, 
+        21
+      ], 
+      [
+        "once", 
+        9, 
+        10
+      ]
+    ], 
+    [
+      [
+        "The asbestos fiber", 
+        0, 
+        3
+      ], 
+      [
+        "The asbestos fiber , crocidolite ,", 
+        0, 
+        6
+      ]
+    ]
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "fiber", 
+      "gov_idx": 2, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 1, 
+      "gov": "fiber", 
+      "gov_idx": 2, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "fiber", 
+      "dep_idx": 2, 
+      "gov": "resilient", 
+      "gov_idx": 8, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "crocidolite", 
+      "dep_idx": 4, 
+      "gov": "fiber", 
+      "gov_idx": 2, 
+      "rel": "appos"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 6, 
+      "gov": "resilient", 
+      "gov_idx": 8, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "unusually", 
+      "dep_idx": 7, 
+      "gov": "resilient", 
+      "gov_idx": 8, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "resilient", 
+      "dep_idx": 8, 
+      "gov": "said", 
+      "gov_idx": 31, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "once", 
+      "dep_idx": 9, 
+      "gov": "enters", 
+      "gov_idx": 11, 
+      "rel": "mark"
+    }, 
+    {
+      "dep": "it", 
+      "dep_idx": 10, 
+      "gov": "enters", 
+      "gov_idx": 11, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "enters", 
+      "dep_idx": 11, 
+      "gov": "resilient", 
+      "gov_idx": 8, 
+      "rel": "advcl"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 12, 
+      "gov": "lungs", 
+      "gov_idx": 13, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "lungs", 
+      "dep_idx": 13, 
+      "gov": "enters", 
+      "gov_idx": 11, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "even", 
+      "dep_idx": 16, 
+      "gov": "exposures", 
+      "gov_idx": 18, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "brief", 
+      "dep_idx": 17, 
+      "gov": "exposures", 
+      "gov_idx": 18, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "exposures", 
+      "dep_idx": 18, 
+      "gov": "causing", 
+      "gov_idx": 21, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "it", 
+      "dep_idx": 20, 
+      "gov": "exposures", 
+      "gov_idx": 18, 
+      "rel": "prep_to"
+    }, 
+    {
+      "dep": "causing", 
+      "dep_idx": 21, 
+      "gov": "resilient", 
+      "gov_idx": 8, 
+      "rel": "prepc_with"
+    }, 
+    {
+      "dep": "symptoms", 
+      "dep_idx": 22, 
+      "gov": "causing", 
+      "gov_idx": 21, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "symptoms", 
+      "dep_idx": 22, 
+      "gov": "show", 
+      "gov_idx": 25, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "show", 
+      "dep_idx": 25, 
+      "gov": "symptoms", 
+      "gov_idx": 22, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "up", 
+      "dep_idx": 26, 
+      "gov": "show", 
+      "gov_idx": 25, 
+      "rel": "prt"
+    }, 
+    {
+      "dep": "decades", 
+      "dep_idx": 27, 
+      "gov": "later", 
+      "gov_idx": 28, 
+      "rel": "npadvmod"
+    }, 
+    {
+      "dep": "later", 
+      "dep_idx": 28, 
+      "gov": "show", 
+      "gov_idx": 25, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "researchers", 
+      "dep_idx": 30, 
+      "gov": "said", 
+      "gov_idx": 31, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 31, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "fiber", 
+      "gov_idx": 2, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 1, 
+      "gov": "fiber", 
+      "gov_idx": 2, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "fiber", 
+      "dep_idx": 2, 
+      "gov": "resilient", 
+      "gov_idx": 8, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "crocidolite", 
+      "dep_idx": 4, 
+      "gov": "fiber", 
+      "gov_idx": 2, 
+      "rel": "appos"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 6, 
+      "gov": "resilient", 
+      "gov_idx": 8, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "unusually", 
+      "dep_idx": 7, 
+      "gov": "resilient", 
+      "gov_idx": 8, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "resilient", 
+      "dep_idx": 8, 
+      "gov": "said", 
+      "gov_idx": 31, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "once", 
+      "dep_idx": 9, 
+      "gov": "enters", 
+      "gov_idx": 11, 
+      "rel": "mark"
+    }, 
+    {
+      "dep": "it", 
+      "dep_idx": 10, 
+      "gov": "enters", 
+      "gov_idx": 11, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "enters", 
+      "dep_idx": 11, 
+      "gov": "resilient", 
+      "gov_idx": 8, 
+      "rel": "advcl"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 12, 
+      "gov": "lungs", 
+      "gov_idx": 13, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "lungs", 
+      "dep_idx": 13, 
+      "gov": "enters", 
+      "gov_idx": 11, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "with", 
+      "dep_idx": 15, 
+      "gov": "resilient", 
+      "gov_idx": 8, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "even", 
+      "dep_idx": 16, 
+      "gov": "exposures", 
+      "gov_idx": 18, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "brief", 
+      "dep_idx": 17, 
+      "gov": "exposures", 
+      "gov_idx": 18, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "exposures", 
+      "dep_idx": 18, 
+      "gov": "causing", 
+      "gov_idx": 21, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 19, 
+      "gov": "exposures", 
+      "gov_idx": 18, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "it", 
+      "dep_idx": 20, 
+      "gov": "to", 
+      "gov_idx": 19, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "causing", 
+      "dep_idx": 21, 
+      "gov": "with", 
+      "gov_idx": 15, 
+      "rel": "pcomp"
+    }, 
+    {
+      "dep": "symptoms", 
+      "dep_idx": 22, 
+      "gov": "causing", 
+      "gov_idx": 21, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 23, 
+      "gov": "show", 
+      "gov_idx": 25, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "show", 
+      "dep_idx": 25, 
+      "gov": "symptoms", 
+      "gov_idx": 22, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "up", 
+      "dep_idx": 26, 
+      "gov": "show", 
+      "gov_idx": 25, 
+      "rel": "prt"
+    }, 
+    {
+      "dep": "decades", 
+      "dep_idx": 27, 
+      "gov": "later", 
+      "gov_idx": 28, 
+      "rel": "npadvmod"
+    }, 
+    {
+      "dep": "later", 
+      "dep_idx": 28, 
+      "gov": "show", 
+      "gov_idx": 25, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "researchers", 
+      "dep_idx": 30, 
+      "gov": "said", 
+      "gov_idx": 31, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 31, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "text": "The asbestos fiber , crocidolite , is unusually resilient once it enters the lungs , with even brief exposures to it causing symptoms that show up decades later , researchers said .", 
+  "timex": [
+    [
+      "t2", 
+      27, 
+      28, 
+      "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET PXY\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">decades later</TIMEX3>"
+    ], 
+    [
+      "t1", 
+      9, 
+      9, 
+      "<TIMEX3 tid=\"t1\" value=\"PAST_REF\" type=\"DATE\">once</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "The asbestos fiber , crocidolite , is unusually resilient once it enters the lungs , with even brief exposures to it causing symptoms that *T*-1 show up decades later , researchers said 0 *T*-2 .", 
+  "tuples": [
+    [
+      "det", 
+      "fiber", 
+      "The"
+    ], 
+    [
+      "nn", 
+      "fiber", 
+      "asbestos"
+    ], 
+    [
+      "nsubj", 
+      "resilient", 
+      "fiber"
+    ], 
+    [
+      "appos", 
+      "fiber", 
+      "crocidolite"
+    ], 
+    [
+      "cop", 
+      "resilient", 
+      "is"
+    ], 
+    [
+      "advmod", 
+      "resilient", 
+      "unusually"
+    ], 
+    [
+      "ccomp", 
+      "said", 
+      "resilient"
+    ], 
+    [
+      "mark", 
+      "enters", 
+      "once"
+    ], 
+    [
+      "nsubj", 
+      "enters", 
+      "it"
+    ], 
+    [
+      "advcl", 
+      "resilient", 
+      "enters"
+    ], 
+    [
+      "det", 
+      "lungs", 
+      "the"
+    ], 
+    [
+      "dobj", 
+      "enters", 
+      "lungs"
+    ], 
+    [
+      "advmod", 
+      "exposures", 
+      "even"
+    ], 
+    [
+      "amod", 
+      "exposures", 
+      "brief"
+    ], 
+    [
+      "prep_with", 
+      "enters", 
+      "exposures"
+    ], 
+    [
+      "nsubj", 
+      "causing", 
+      "it"
+    ], 
+    [
+      "prepc_to", 
+      "exposures", 
+      "causing"
+    ], 
+    [
+      "dobj", 
+      "causing", 
+      "symptoms"
+    ], 
+    [
+      "nsubj", 
+      "show", 
+      "symptoms"
+    ], 
+    [
+      "rcmod", 
+      "symptoms", 
+      "show"
+    ], 
+    [
+      "prt", 
+      "show", 
+      "up"
+    ], 
+    [
+      "dobj", 
+      "show", 
+      "decades"
+    ], 
+    [
+      "advmod", 
+      "decades", 
+      "later"
+    ], 
+    [
+      "nsubj", 
+      "said", 
+      "researchers"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "said"
+    ]
+  ], 
+  "words": [
+    [
+      "The", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 0
+      }
+    ], 
+    [
+      "asbestos", 
+      {
+        "Lemma": "asbestos", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 1
+      }
+    ], 
+    [
+      "fiber", 
+      {
+        "Lemma": "fiber", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 2
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 3
+      }
+    ], 
+    [
+      "crocidolite", 
+      {
+        "Lemma": "crocidolite", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 4
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 5
+      }
+    ], 
+    [
+      "is", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBZ", 
+        "idx": 6
+      }
+    ], 
+    [
+      "unusually", 
+      {
+        "Lemma": "unusually", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 7
+      }
+    ], 
+    [
+      "resilient", 
+      {
+        "Lemma": "resilient", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 8
+      }
+    ], 
+    [
+      "once", 
+      {
+        "Lemma": "once", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "PAST_REF", 
+        "PartOfSpeech": "IN", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"PAST_REF\" type=\"DATE\">once</TIMEX3>", 
+        "idx": 9
+      }
+    ], 
+    [
+      "it", 
+      {
+        "Lemma": "it", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "PRP", 
+        "idx": 10
+      }
+    ], 
+    [
+      "enters", 
+      {
+        "Lemma": "enter", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBZ", 
+        "idx": 11
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 12
+      }
+    ], 
+    [
+      "lungs", 
+      {
+        "Lemma": "lung", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 13
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 14
+      }
+    ], 
+    [
+      "with", 
+      {
+        "Lemma": "with", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 15
+      }
+    ], 
+    [
+      "even", 
+      {
+        "Lemma": "even", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 16
+      }
+    ], 
+    [
+      "brief", 
+      {
+        "Lemma": "brief", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 17
+      }
+    ], 
+    [
+      "exposures", 
+      {
+        "Lemma": "exposure", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 18
+      }
+    ], 
+    [
+      "to", 
+      {
+        "Lemma": "to", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "TO", 
+        "idx": 19
+      }
+    ], 
+    [
+      "it", 
+      {
+        "Lemma": "it", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "PRP", 
+        "idx": 20
+      }
+    ], 
+    [
+      "causing", 
+      {
+        "Lemma": "cause", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBG", 
+        "idx": 21
+      }
+    ], 
+    [
+      "symptoms", 
+      {
+        "Lemma": "symptom", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 22
+      }
+    ], 
+    [
+      "that", 
+      {
+        "Lemma": "that", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "WDT", 
+        "idx": 23
+      }
+    ], 
+    [
+      "show", 
+      {
+        "Lemma": "show", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBP", 
+        "idx": 25
+      }
+    ], 
+    [
+      "up", 
+      {
+        "Lemma": "up", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RP", 
+        "idx": 26
+      }
+    ], 
+    [
+      "decades", 
+      {
+        "Lemma": "decade", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "PartOfSpeech": "NNS", 
+        "Timex": "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET PXY\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">decades later</TIMEX3>", 
+        "idx": 27
+      }
+    ], 
+    [
+      "later", 
+      {
+        "Lemma": "later", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "PartOfSpeech": "RB", 
+        "Timex": "<TIMEX3 tid=\"t2\" alt_value=\"OFFSET PXY\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">decades later</TIMEX3>", 
+        "idx": 28
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 29
+      }
+    ], 
+    [
+      "researchers", 
+      {
+        "Lemma": "researcher", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 30
+      }
+    ], 
+    [
+      "said", 
+      {
+        "Lemma": "say", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 31
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 34
+      }
+    ]
+  ]
+}

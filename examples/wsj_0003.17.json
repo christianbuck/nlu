@@ -1,0 +1,703 @@
+{
+  "bbn_ne": [
+    [
+      9, 
+      12, 
+      "Hollingsworth &amp; Vose Co.", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Hollingsworth &amp; Vose Co.</ENAMEX>"
+    ], 
+    [
+      19, 
+      19, 
+      "Lorillard", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Lorillard</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (NP (DT The) (NN plant)) (, ,) (SBAR (WHNP-1 (WDT which)) (S (NP-SBJ-4 (-NONE- *T*-1)) (VP (VBZ is) (VP (VBN owned) (NP (-NONE- *-4)) (PP (IN by) (NP-LGS (NNP Hollingsworth) (CC &) (NNP Vose) (NNP Co.))))))) (, ,)) (VP (VBD was) (PP-LOC-PRD (IN under) (NP (NP (NN contract) (S (-NONE- *ICH*-2))) (PP (IN with) (NP (NN Lorillard))) (S-2 (NP-SBJ (-NONE- *PRO*)) (VP (TO to) (VP (VB make) (NP (DT the) (NN cigarette) (NNS filters)))))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG0", 
+          "0:2", 
+          0, 
+          13, 
+          "The plant , which *T*-1 is owned *-4 by Hollingsworth & Vose Co. ,"
+        ], 
+        [
+          "rel", 
+          "16:0", 
+          16, 
+          16, 
+          "contract"
+        ], 
+        [
+          "ARG2", 
+          "18:1", 
+          18, 
+          19, 
+          "with Lorillard"
+        ], 
+        [
+          "ARG1-PRD", 
+          "20:2", 
+          20, 
+          25, 
+          "*PRO* to make the cigarette filters"
+        ]
+      ], 
+      "baseform": "contract", 
+      "frame": "contract.01", 
+      "tokenNr": "16"
+    }, 
+    {
+      "args": [
+        [
+          "ARG2", 
+          "24:0", 
+          24, 
+          24, 
+          "cigarette"
+        ], 
+        [
+          "ARG0", 
+          "25:0", 
+          25, 
+          25, 
+          "filters"
+        ], 
+        [
+          "rel", 
+          "25:0", 
+          25, 
+          25, 
+          "filters"
+        ]
+      ], 
+      "baseform": "filter", 
+      "frame": "filter.01", 
+      "tokenNr": "25"
+    }
+  ], 
+  "parsetree": "(ROOT (S (NP (NP (DT The) (NN plant)) (, ,) (SBAR (WHNP (WDT which)) (S (VP (VBZ is) (VP (VBN owned) (PP (IN by) (NP (NP (NNP Hollingsworth) (CC &) (NNP Vose)) (NNP Co.))))))) (, ,)) (VP (VBD was) (PP (IN under) (NP (NP (NN contract)) (PP (IN with) (NP (NN Lorillard))))) (S (VP (TO to) (VP (VB make) (NP (DT the) (NN cigarette) (NNS filters)))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "22:0", 
+          22, 
+          22, 
+          "make"
+        ], 
+        [
+          "ARG0", 
+          "20:0", 
+          20, 
+          20, 
+          "*PRO*"
+        ], 
+        [
+          "ARG1", 
+          "23:1", 
+          23, 
+          25, 
+          "the cigarette filters"
+        ]
+      ], 
+      "baseform": "make", 
+      "basepos": "v", 
+      "frame": "make.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (NP (DT The) (NN plant) ) (, ,) (SBAR (WHNP-1 (WDT which) ) (S (NP-SBJ-4 (-NONE- *T*-1) ) (VP (VBZ is) (VP (VBN owned) (NP (-NONE- *-4) ) (PP (IN by) (NP-LGS (NNP Hollingsworth) (CC &) (NNP Vose) (NNP Co.) )))))) (, ,) ) (VP (VBD was) (PP-LOC-PRD (IN under) (NP (NP (NN contract) (S (-NONE- *ICH*-2) )) (PP (IN with) (NP (NN Lorillard) )) (S-2 (NP-SBJ (-NONE- *) ) (VP (TO to) (VP (VB make) (NP (DT the) (NN cigarette) (NNS filters) ))))))) (. .) ))", 
+  "sentence_nr": 17, 
+  "stanford_coref": [
+    [
+      [
+        "The plant", 
+        0, 
+        2
+      ], 
+      [
+        "The plant , which is owned by Hollingsworth & Vose Co. ,", 
+        0, 
+        12
+      ]
+    ]
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "plant", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "plant", 
+      "dep_idx": 1, 
+      "gov": "owned", 
+      "gov_idx": 6, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "plant", 
+      "dep_idx": 1, 
+      "gov": "was", 
+      "gov_idx": 14, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 5, 
+      "gov": "owned", 
+      "gov_idx": 6, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "owned", 
+      "dep_idx": 6, 
+      "gov": "plant", 
+      "gov_idx": 1, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "Hollingsworth", 
+      "dep_idx": 9, 
+      "gov": "Co.", 
+      "gov_idx": 12, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Vose", 
+      "dep_idx": 11, 
+      "gov": "Hollingsworth", 
+      "gov_idx": 9, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "Vose", 
+      "dep_idx": 11, 
+      "gov": "Co.", 
+      "gov_idx": 12, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Co.", 
+      "dep_idx": 12, 
+      "gov": "owned", 
+      "gov_idx": 6, 
+      "rel": "agent"
+    }, 
+    {
+      "dep": "was", 
+      "dep_idx": 14, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "contract", 
+      "dep_idx": 16, 
+      "gov": "was", 
+      "gov_idx": 14, 
+      "rel": "prep_under"
+    }, 
+    {
+      "dep": "Lorillard", 
+      "dep_idx": 19, 
+      "gov": "contract", 
+      "gov_idx": 16, 
+      "rel": "prep_with"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 21, 
+      "gov": "make", 
+      "gov_idx": 22, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "make", 
+      "dep_idx": 22, 
+      "gov": "contract", 
+      "gov_idx": 16, 
+      "rel": "infmod"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 23, 
+      "gov": "filters", 
+      "gov_idx": 25, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "cigarette", 
+      "dep_idx": 24, 
+      "gov": "filters", 
+      "gov_idx": 25, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "filters", 
+      "dep_idx": 25, 
+      "gov": "make", 
+      "gov_idx": 22, 
+      "rel": "dobj"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "plant", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "plant", 
+      "dep_idx": 1, 
+      "gov": "was", 
+      "gov_idx": 14, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "which", 
+      "dep_idx": 3, 
+      "gov": "owned", 
+      "gov_idx": 6, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "is", 
+      "dep_idx": 5, 
+      "gov": "owned", 
+      "gov_idx": 6, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "owned", 
+      "dep_idx": 6, 
+      "gov": "plant", 
+      "gov_idx": 1, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "by", 
+      "dep_idx": 8, 
+      "gov": "owned", 
+      "gov_idx": 6, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Hollingsworth", 
+      "dep_idx": 9, 
+      "gov": "Co.", 
+      "gov_idx": 12, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "&", 
+      "dep_idx": 10, 
+      "gov": "Hollingsworth", 
+      "gov_idx": 9, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "Vose", 
+      "dep_idx": 11, 
+      "gov": "Hollingsworth", 
+      "gov_idx": 9, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "Co.", 
+      "dep_idx": 12, 
+      "gov": "by", 
+      "gov_idx": 8, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "was", 
+      "dep_idx": 14, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "under", 
+      "dep_idx": 15, 
+      "gov": "was", 
+      "gov_idx": 14, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "contract", 
+      "dep_idx": 16, 
+      "gov": "under", 
+      "gov_idx": 15, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "with", 
+      "dep_idx": 18, 
+      "gov": "contract", 
+      "gov_idx": 16, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Lorillard", 
+      "dep_idx": 19, 
+      "gov": "with", 
+      "gov_idx": 18, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 21, 
+      "gov": "make", 
+      "gov_idx": 22, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "make", 
+      "dep_idx": 22, 
+      "gov": "contract", 
+      "gov_idx": 16, 
+      "rel": "infmod"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 23, 
+      "gov": "filters", 
+      "gov_idx": 25, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "cigarette", 
+      "dep_idx": 24, 
+      "gov": "filters", 
+      "gov_idx": 25, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "filters", 
+      "dep_idx": 25, 
+      "gov": "make", 
+      "gov_idx": 22, 
+      "rel": "dobj"
+    }
+  ], 
+  "text": "The plant , which is owned by Hollingsworth & Vose Co. , was under contract with Lorillard to make the cigarette filters .", 
+  "timex": [], 
+  "treebank_sentence": "The plant , which *T*-1 is owned *-4 by Hollingsworth & Vose Co. , was under contract *ICH*-2 with Lorillard *PRO* to make the cigarette filters .", 
+  "tuples": [
+    [
+      "det", 
+      "plant", 
+      "The"
+    ], 
+    [
+      "nsubjpass", 
+      "owned", 
+      "plant"
+    ], 
+    [
+      "nsubj", 
+      "was", 
+      "plant"
+    ], 
+    [
+      "xsubj", 
+      "make", 
+      "plant"
+    ], 
+    [
+      "auxpass", 
+      "owned", 
+      "is"
+    ], 
+    [
+      "rcmod", 
+      "plant", 
+      "owned"
+    ], 
+    [
+      "nn", 
+      "Co.", 
+      "Hollingsworth"
+    ], 
+    [
+      "conj_and", 
+      "Hollingsworth", 
+      "Vose"
+    ], 
+    [
+      "nn", 
+      "Co.", 
+      "Vose"
+    ], 
+    [
+      "agent", 
+      "owned", 
+      "Co."
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "was"
+    ], 
+    [
+      "prep_under", 
+      "was", 
+      "contract"
+    ], 
+    [
+      "prep_with", 
+      "contract", 
+      "Lorillard"
+    ], 
+    [
+      "aux", 
+      "make", 
+      "to"
+    ], 
+    [
+      "xcomp", 
+      "was", 
+      "make"
+    ], 
+    [
+      "det", 
+      "filters", 
+      "the"
+    ], 
+    [
+      "nn", 
+      "filters", 
+      "cigarette"
+    ], 
+    [
+      "dobj", 
+      "make", 
+      "filters"
+    ]
+  ], 
+  "words": [
+    [
+      "The", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 0
+      }
+    ], 
+    [
+      "plant", 
+      {
+        "Lemma": "plant", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 1
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 2
+      }
+    ], 
+    [
+      "which", 
+      {
+        "Lemma": "which", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "WDT", 
+        "idx": 3
+      }
+    ], 
+    [
+      "is", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBZ", 
+        "idx": 5
+      }
+    ], 
+    [
+      "owned", 
+      {
+        "Lemma": "own", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 6
+      }
+    ], 
+    [
+      "by", 
+      {
+        "Lemma": "by", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 8
+      }
+    ], 
+    [
+      "Hollingsworth", 
+      {
+        "Lemma": "Hollingsworth", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 9
+      }
+    ], 
+    [
+      "&", 
+      {
+        "Lemma": "&", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "CC", 
+        "idx": 10
+      }
+    ], 
+    [
+      "Vose", 
+      {
+        "Lemma": "Vose", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 11
+      }
+    ], 
+    [
+      "Co.", 
+      {
+        "Lemma": "Co.", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 12
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 13
+      }
+    ], 
+    [
+      "was", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 14
+      }
+    ], 
+    [
+      "under", 
+      {
+        "Lemma": "under", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 15
+      }
+    ], 
+    [
+      "contract", 
+      {
+        "Lemma": "contract", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 16
+      }
+    ], 
+    [
+      "with", 
+      {
+        "Lemma": "with", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 18
+      }
+    ], 
+    [
+      "Lorillard", 
+      {
+        "Lemma": "lorillard", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NN", 
+        "idx": 19
+      }
+    ], 
+    [
+      "to", 
+      {
+        "Lemma": "to", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "TO", 
+        "idx": 21
+      }
+    ], 
+    [
+      "make", 
+      {
+        "Lemma": "make", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VB", 
+        "idx": 22
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 23
+      }
+    ], 
+    [
+      "cigarette", 
+      {
+        "Lemma": "cigarette", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 24
+      }
+    ], 
+    [
+      "filters", 
+      {
+        "Lemma": "filter", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 25
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 26
+      }
+    ]
+  ]
+}

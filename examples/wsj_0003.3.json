@@ -1,0 +1,1176 @@
+{
+  "bbn_ne": [
+    [
+      6, 
+      10, 
+      "more than a year ago", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">more than a year ago</TIMEX>"
+    ], 
+    [
+      17, 
+      17, 
+      "today", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">today</TIMEX>"
+    ], 
+    [
+      19, 
+      23, 
+      "New England Journal of Medicine", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">New England Journal of Medicine</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (SBAR-ADV (IN Although) (S (NP-SBJ-2 (JJ preliminary) (NNS findings)) (VP (VBD were) (VP (VBN reported) (NP (-NONE- *-2)) (ADVP-TMP (NP (QP (RBR more) (IN than) (DT a)) (NN year)) (IN ago)))))) (, ,) (NP-SBJ (DT the) (JJS latest) (NNS results)) (VP (VBP appear) (PP-LOC (IN in) (NP (NP (NP (NP (NN today) (POS 's)) (NML (NNP New) (NNP England)) (NNP Journal)) (PP (IN of) (NP (NNP Medicine)))) (, ,) (NP (NP (DT a) (NN forum)) (ADJP (JJ likely) (S (NP-SBJ (-NONE- *PRO*)) (VP (TO to) (VP (VB bring) (NP (JJ new) (NN attention)) (PP-DIR (IN to) (NP (DT the) (NN problem))))))))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG0", 
+          "28:1", 
+          28, 
+          28, 
+          "*PRO*"
+        ], 
+        [
+          "Support", 
+          "30:0", 
+          30, 
+          30, 
+          "bring"
+        ], 
+        [
+          "ARGM-TMP", 
+          "31:0", 
+          31, 
+          31, 
+          "new"
+        ], 
+        [
+          "rel", 
+          "32:0", 
+          32, 
+          32, 
+          "attention"
+        ], 
+        [
+          "ARG1", 
+          "33:1", 
+          33, 
+          35, 
+          "to the problem"
+        ]
+      ], 
+      "baseform": "attention", 
+      "frame": "attention.01", 
+      "tokenNr": "32"
+    }, 
+    {
+      "args": [
+        [
+          "ARGM-TMP", 
+          "1:0", 
+          1, 
+          1, 
+          "preliminary"
+        ], 
+        [
+          "ARG1-REF", 
+          "2:0", 
+          2, 
+          2, 
+          "findings"
+        ], 
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "findings"
+        ]
+      ], 
+      "baseform": "finding", 
+      "frame": "finding.01", 
+      "tokenNr": "2"
+    }, 
+    {
+      "args": [
+        [
+          "ARGM-TMP", 
+          "13:0", 
+          13, 
+          13, 
+          "latest"
+        ], 
+        [
+          "ARG2-REF", 
+          "14:0", 
+          14, 
+          14, 
+          "results"
+        ], 
+        [
+          "rel", 
+          "14:0", 
+          14, 
+          14, 
+          "results"
+        ]
+      ], 
+      "baseform": "result", 
+      "frame": "result.01", 
+      "tokenNr": "14"
+    }
+  ], 
+  "parsetree": "(ROOT (S (SBAR (IN Although) (S (NP (JJ preliminary) (NNS findings)) (VP (VBD were) (VP (VBN reported) (ADVP (NP (QP (XS (RBR more) (IN than)) (DT a)) (NN year)) (RB ago)))))) (, ,) (NP (DT the) (JJS latest) (NNS results)) (VP (VBP appear) (PP (IN in) (NP (NP (NP (NN today) (POS 's)) (NNP New) (NNP England) (NNP Journal)) (PP (IN of) (NP (NP (NNP Medicine)) (, ,) (NP (NP (DT a) (NN forum)) (ADJP (JJ likely) (S (VP (TO to) (VP (VB bring) (NP (JJ new) (NN attention)) (PP (TO to) (NP (DT the) (NN problem))))))))))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "4:0", 
+          4, 
+          4, 
+          "reported"
+        ], 
+        [
+          "ARG1", 
+          "5:0", 
+          1, 
+          2, 
+          "preliminary findings"
+        ], 
+        [
+          "ARGM-TMP", 
+          "6:3", 
+          6, 
+          10, 
+          "more than a year ago"
+        ], 
+        [
+          "LINK-PCR", 
+          "5:0*5:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "report", 
+      "basepos": "v", 
+      "frame": "report.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "15:0", 
+          15, 
+          15, 
+          "appear"
+        ], 
+        [
+          "ARGM-ADV", 
+          "0:1", 
+          0, 
+          10, 
+          "Although preliminary findings were reported *-2 more than a year ago"
+        ], 
+        [
+          "ARG1", 
+          "12:1", 
+          12, 
+          14, 
+          "the latest results"
+        ], 
+        [
+          "ARGM-LOC", 
+          "16:1", 
+          16, 
+          35, 
+          "in today 's New England Journal of Medicine , a forum likely *PRO* to bring new attention to the problem"
+        ]
+      ], 
+      "baseform": "appear", 
+      "basepos": "v", 
+      "frame": "appear.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "30:0", 
+          30, 
+          30, 
+          "bring"
+        ], 
+        [
+          "ARG0", 
+          "28:0", 
+          28, 
+          28, 
+          "*PRO*"
+        ], 
+        [
+          "ARG1", 
+          "31:1", 
+          31, 
+          32, 
+          "new attention"
+        ], 
+        [
+          "ARG2", 
+          "33:1", 
+          33, 
+          35, 
+          "to the problem"
+        ], 
+        [
+          "LINK-PCR", 
+          "25:1*28:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "bring", 
+      "basepos": "v", 
+      "frame": "bring.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (SBAR-ADV (IN Although) (S (NP-SBJ-2 (JJ preliminary) (NNS findings) ) (VP (VBD were) (VP (VBN reported) (NP (-NONE- *-2) ) (ADVP-TMP (NP (QP (RBR more) (IN than) (DT a) ) (NN year) ) (IN ago) ))))) (, ,) (NP-SBJ (DT the) (JJS latest) (NNS results) ) (VP (VBP appear) (PP-LOC (IN in) (NP (NP (NP (NP (NN today) (POS 's) ) (NNP New) (NNP England) (NNP Journal) ) (PP (IN of) (NP (NNP Medicine) ))) (, ,) (NP (NP (DT a) (NN forum) ) (ADJP (JJ likely) (S (NP-SBJ (-NONE- *) ) (VP (TO to) (VP (VB bring) (NP (JJ new) (NN attention) ) (PP-DIR (TO to) (NP (DT the) (NN problem) )))))))))) (. .) ))", 
+  "sentence_nr": 3, 
+  "stanford_coref": [
+    [
+      [
+        "Medicine", 
+        22, 
+        23
+      ], 
+      [
+        "Medicine , a forum likely to bring new attention to the problem", 
+        22, 
+        34
+      ]
+    ]
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "Although", 
+      "dep_idx": 0, 
+      "gov": "reported", 
+      "gov_idx": 4, 
+      "rel": "mark"
+    }, 
+    {
+      "dep": "preliminary", 
+      "dep_idx": 1, 
+      "gov": "findings", 
+      "gov_idx": 2, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "findings", 
+      "dep_idx": 2, 
+      "gov": "reported", 
+      "gov_idx": 4, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 3, 
+      "gov": "reported", 
+      "gov_idx": 4, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "reported", 
+      "dep_idx": 4, 
+      "gov": "appear", 
+      "gov_idx": 15, 
+      "rel": "advcl"
+    }, 
+    {
+      "dep": "more", 
+      "dep_idx": 6, 
+      "gov": "than", 
+      "gov_idx": 7, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "than", 
+      "dep_idx": 7, 
+      "gov": "a", 
+      "gov_idx": 8, 
+      "rel": "quantmod"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 8, 
+      "gov": "year", 
+      "gov_idx": 9, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "year", 
+      "dep_idx": 9, 
+      "gov": "ago", 
+      "gov_idx": 10, 
+      "rel": "npadvmod"
+    }, 
+    {
+      "dep": "ago", 
+      "dep_idx": 10, 
+      "gov": "reported", 
+      "gov_idx": 4, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 12, 
+      "gov": "results", 
+      "gov_idx": 14, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "latest", 
+      "dep_idx": 13, 
+      "gov": "results", 
+      "gov_idx": 14, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "results", 
+      "dep_idx": 14, 
+      "gov": "appear", 
+      "gov_idx": 15, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "appear", 
+      "dep_idx": 15, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "today", 
+      "dep_idx": 17, 
+      "gov": "Journal", 
+      "gov_idx": 21, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "New", 
+      "dep_idx": 19, 
+      "gov": "England", 
+      "gov_idx": 20, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "England", 
+      "dep_idx": 20, 
+      "gov": "Journal", 
+      "gov_idx": 21, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Journal", 
+      "dep_idx": 21, 
+      "gov": "appear", 
+      "gov_idx": 15, 
+      "rel": "prep_in"
+    }, 
+    {
+      "dep": "Medicine", 
+      "dep_idx": 23, 
+      "gov": "Journal", 
+      "gov_idx": 21, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 25, 
+      "gov": "forum", 
+      "gov_idx": 26, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "forum", 
+      "dep_idx": 26, 
+      "gov": "Journal", 
+      "gov_idx": 21, 
+      "rel": "appos"
+    }, 
+    {
+      "dep": "likely", 
+      "dep_idx": 27, 
+      "gov": "forum", 
+      "gov_idx": 26, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 29, 
+      "gov": "bring", 
+      "gov_idx": 30, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "bring", 
+      "dep_idx": 30, 
+      "gov": "likely", 
+      "gov_idx": 27, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "new", 
+      "dep_idx": 31, 
+      "gov": "attention", 
+      "gov_idx": 32, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "attention", 
+      "dep_idx": 32, 
+      "gov": "bring", 
+      "gov_idx": 30, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 34, 
+      "gov": "problem", 
+      "gov_idx": 35, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "problem", 
+      "dep_idx": 35, 
+      "gov": "bring", 
+      "gov_idx": 30, 
+      "rel": "prep_to"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Although", 
+      "dep_idx": 0, 
+      "gov": "reported", 
+      "gov_idx": 4, 
+      "rel": "mark"
+    }, 
+    {
+      "dep": "preliminary", 
+      "dep_idx": 1, 
+      "gov": "findings", 
+      "gov_idx": 2, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "findings", 
+      "dep_idx": 2, 
+      "gov": "reported", 
+      "gov_idx": 4, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 3, 
+      "gov": "reported", 
+      "gov_idx": 4, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "reported", 
+      "dep_idx": 4, 
+      "gov": "appear", 
+      "gov_idx": 15, 
+      "rel": "advcl"
+    }, 
+    {
+      "dep": "more", 
+      "dep_idx": 6, 
+      "gov": "than", 
+      "gov_idx": 7, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "than", 
+      "dep_idx": 7, 
+      "gov": "a", 
+      "gov_idx": 8, 
+      "rel": "quantmod"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 8, 
+      "gov": "year", 
+      "gov_idx": 9, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "year", 
+      "dep_idx": 9, 
+      "gov": "ago", 
+      "gov_idx": 10, 
+      "rel": "npadvmod"
+    }, 
+    {
+      "dep": "ago", 
+      "dep_idx": 10, 
+      "gov": "reported", 
+      "gov_idx": 4, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 12, 
+      "gov": "results", 
+      "gov_idx": 14, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "latest", 
+      "dep_idx": 13, 
+      "gov": "results", 
+      "gov_idx": 14, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "results", 
+      "dep_idx": 14, 
+      "gov": "appear", 
+      "gov_idx": 15, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "appear", 
+      "dep_idx": 15, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 16, 
+      "gov": "appear", 
+      "gov_idx": 15, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "today", 
+      "dep_idx": 17, 
+      "gov": "Journal", 
+      "gov_idx": 21, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "'s", 
+      "dep_idx": 18, 
+      "gov": "today", 
+      "gov_idx": 17, 
+      "rel": "possessive"
+    }, 
+    {
+      "dep": "New", 
+      "dep_idx": 19, 
+      "gov": "England", 
+      "gov_idx": 20, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "England", 
+      "dep_idx": 20, 
+      "gov": "Journal", 
+      "gov_idx": 21, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Journal", 
+      "dep_idx": 21, 
+      "gov": "in", 
+      "gov_idx": 16, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 22, 
+      "gov": "Journal", 
+      "gov_idx": 21, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Medicine", 
+      "dep_idx": 23, 
+      "gov": "of", 
+      "gov_idx": 22, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 25, 
+      "gov": "forum", 
+      "gov_idx": 26, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "forum", 
+      "dep_idx": 26, 
+      "gov": "Journal", 
+      "gov_idx": 21, 
+      "rel": "appos"
+    }, 
+    {
+      "dep": "likely", 
+      "dep_idx": 27, 
+      "gov": "forum", 
+      "gov_idx": 26, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 29, 
+      "gov": "bring", 
+      "gov_idx": 30, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "bring", 
+      "dep_idx": 30, 
+      "gov": "likely", 
+      "gov_idx": 27, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "new", 
+      "dep_idx": 31, 
+      "gov": "attention", 
+      "gov_idx": 32, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "attention", 
+      "dep_idx": 32, 
+      "gov": "bring", 
+      "gov_idx": 30, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 33, 
+      "gov": "bring", 
+      "gov_idx": 30, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 34, 
+      "gov": "problem", 
+      "gov_idx": 35, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "problem", 
+      "dep_idx": 35, 
+      "gov": "to", 
+      "gov_idx": 33, 
+      "rel": "pobj"
+    }
+  ], 
+  "text": "Although preliminary findings were reported more than a year ago , the latest results appear in today 's New England Journal of Medicine , a forum likely to bring new attention to the problem .", 
+  "timex": [
+    [
+      "t2", 
+      17, 
+      17, 
+      "<TIMEX3 tid=\"t2\" alt_value=\"THIS P1D\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf1\" anchorTimeID=\"t0\">today</TIMEX3>"
+    ], 
+    [
+      "t1", 
+      6, 
+      10, 
+      "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-1Y\" type=\"DATE\" mod=\"MORE_THAN\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">more than a year ago</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "Although preliminary findings were reported *-2 more than a year ago , the latest results appear in today 's New England Journal of Medicine , a forum likely *PRO* to bring new attention to the problem .", 
+  "tuples": [
+    [
+      "mark", 
+      "reported", 
+      "Although"
+    ], 
+    [
+      "amod", 
+      "findings", 
+      "preliminary"
+    ], 
+    [
+      "nsubjpass", 
+      "reported", 
+      "findings"
+    ], 
+    [
+      "auxpass", 
+      "reported", 
+      "were"
+    ], 
+    [
+      "advcl", 
+      "appear", 
+      "reported"
+    ], 
+    [
+      "advmod", 
+      "than", 
+      "more"
+    ], 
+    [
+      "quantmod", 
+      "a", 
+      "than"
+    ], 
+    [
+      "num", 
+      "year", 
+      "a"
+    ], 
+    [
+      "npadvmod", 
+      "ago", 
+      "year"
+    ], 
+    [
+      "advmod", 
+      "reported", 
+      "ago"
+    ], 
+    [
+      "det", 
+      "results", 
+      "the"
+    ], 
+    [
+      "amod", 
+      "results", 
+      "latest"
+    ], 
+    [
+      "nsubj", 
+      "appear", 
+      "results"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "appear"
+    ], 
+    [
+      "poss", 
+      "Journal", 
+      "today"
+    ], 
+    [
+      "nn", 
+      "Journal", 
+      "New"
+    ], 
+    [
+      "nn", 
+      "Journal", 
+      "England"
+    ], 
+    [
+      "prep_in", 
+      "appear", 
+      "Journal"
+    ], 
+    [
+      "prep_of", 
+      "Journal", 
+      "Medicine"
+    ], 
+    [
+      "det", 
+      "forum", 
+      "a"
+    ], 
+    [
+      "appos", 
+      "Medicine", 
+      "forum"
+    ], 
+    [
+      "amod", 
+      "forum", 
+      "likely"
+    ], 
+    [
+      "aux", 
+      "bring", 
+      "to"
+    ], 
+    [
+      "xcomp", 
+      "likely", 
+      "bring"
+    ], 
+    [
+      "amod", 
+      "attention", 
+      "new"
+    ], 
+    [
+      "dobj", 
+      "bring", 
+      "attention"
+    ], 
+    [
+      "det", 
+      "problem", 
+      "the"
+    ], 
+    [
+      "prep_to", 
+      "bring", 
+      "problem"
+    ]
+  ], 
+  "words": [
+    [
+      "Although", 
+      {
+        "Lemma": "although", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 0
+      }
+    ], 
+    [
+      "preliminary", 
+      {
+        "Lemma": "preliminary", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 1
+      }
+    ], 
+    [
+      "findings", 
+      {
+        "Lemma": "finding", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 2
+      }
+    ], 
+    [
+      "were", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 3
+      }
+    ], 
+    [
+      "reported", 
+      {
+        "Lemma": "report", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 4
+      }
+    ], 
+    [
+      "more", 
+      {
+        "Lemma": "more", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "PartOfSpeech": "RBR", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-1Y\" type=\"DATE\" mod=\"MORE_THAN\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">more than a year ago</TIMEX3>", 
+        "idx": 6
+      }
+    ], 
+    [
+      "than", 
+      {
+        "Lemma": "than", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "PartOfSpeech": "IN", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-1Y\" type=\"DATE\" mod=\"MORE_THAN\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">more than a year ago</TIMEX3>", 
+        "idx": 7
+      }
+    ], 
+    [
+      "a", 
+      {
+        "Lemma": "a", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "PartOfSpeech": "DT", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-1Y\" type=\"DATE\" mod=\"MORE_THAN\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">more than a year ago</TIMEX3>", 
+        "idx": 8
+      }
+    ], 
+    [
+      "year", 
+      {
+        "Lemma": "year", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "PartOfSpeech": "NN", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-1Y\" type=\"DATE\" mod=\"MORE_THAN\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">more than a year ago</TIMEX3>", 
+        "idx": 9
+      }
+    ], 
+    [
+      "ago", 
+      {
+        "Lemma": "ago", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "PartOfSpeech": "RB", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-1Y\" type=\"DATE\" mod=\"MORE_THAN\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">more than a year ago</TIMEX3>", 
+        "idx": 10
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 11
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 12
+      }
+    ], 
+    [
+      "latest", 
+      {
+        "Lemma": "latest", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJS", 
+        "idx": 13
+      }
+    ], 
+    [
+      "results", 
+      {
+        "Lemma": "result", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 14
+      }
+    ], 
+    [
+      "appear", 
+      {
+        "Lemma": "appear", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBP", 
+        "idx": 15
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 16
+      }
+    ], 
+    [
+      "today", 
+      {
+        "Lemma": "today", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "THIS", 
+        "PartOfSpeech": "NN", 
+        "Timex": "<TIMEX3 tid=\"t2\" alt_value=\"THIS P1D\" type=\"DATE\" temporalFunction=\"true\" valueFromFunction=\"tf1\" anchorTimeID=\"t0\">today</TIMEX3>", 
+        "idx": 17
+      }
+    ], 
+    [
+      "'s", 
+      {
+        "Lemma": "'s", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "POS", 
+        "idx": 18
+      }
+    ], 
+    [
+      "New", 
+      {
+        "Lemma": "New", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNP", 
+        "idx": 19
+      }
+    ], 
+    [
+      "England", 
+      {
+        "Lemma": "England", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNP", 
+        "idx": 20
+      }
+    ], 
+    [
+      "Journal", 
+      {
+        "Lemma": "Journal", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNP", 
+        "idx": 21
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 22
+      }
+    ], 
+    [
+      "Medicine", 
+      {
+        "Lemma": "Medicine", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNP", 
+        "idx": 23
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 24
+      }
+    ], 
+    [
+      "a", 
+      {
+        "Lemma": "a", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 25
+      }
+    ], 
+    [
+      "forum", 
+      {
+        "Lemma": "forum", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 26
+      }
+    ], 
+    [
+      "likely", 
+      {
+        "Lemma": "likely", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 27
+      }
+    ], 
+    [
+      "to", 
+      {
+        "Lemma": "to", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "TO", 
+        "idx": 29
+      }
+    ], 
+    [
+      "bring", 
+      {
+        "Lemma": "bring", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VB", 
+        "idx": 30
+      }
+    ], 
+    [
+      "new", 
+      {
+        "Lemma": "new", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 31
+      }
+    ], 
+    [
+      "attention", 
+      {
+        "Lemma": "attention", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 32
+      }
+    ], 
+    [
+      "to", 
+      {
+        "Lemma": "to", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "TO", 
+        "idx": 33
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 34
+      }
+    ], 
+    [
+      "problem", 
+      {
+        "Lemma": "problem", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 35
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 36
+      }
+    ]
+  ]
+}

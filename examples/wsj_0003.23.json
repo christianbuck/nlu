@@ -1,0 +1,729 @@
+{
+  "bbn_ne": [
+    [
+      0, 
+      1, 
+      "About 160", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">About 160</NUMEX>"
+    ], 
+    [
+      2, 
+      2, 
+      "workers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">workers</ENAMEX>"
+    ], 
+    [
+      11, 
+      12, 
+      "the 1950s", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">the 1950s</TIMEX>"
+    ], 
+    [
+      12, 
+      12, 
+      "Kent", 
+      "PRODUCT", 
+      "OTHER", 
+      "<ENAMEX TYPE=\"PRODUCT:OTHER\">Kent</ENAMEX>"
+    ], 
+    [
+      18, 
+      18, 
+      "asbestos", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">asbestos</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ-7 (NP (QP (IN About) (CD 160)) (NNS workers)) (PP-LOC (IN at) (NP (NP (DT a) (NN factory)) (SBAR (WHNP-8 (WDT that)) (S (NP-SBJ (-NONE- *T*-8)) (VP (VBD made) (NP (NP (NN paper)) (PP (IN for) (NP (DT the) (NNP Kent) (NNS filters)))))))))) (VP (VBD were) (VP (VBN exposed) (NP (-NONE- *-7)) (PP-DIR (IN to) (NP (NN asbestos))) (PP-TMP (IN in) (NP (DT the) (CD 1950s))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG0", 
+          "5:0", 
+          5, 
+          5, 
+          "factory"
+        ], 
+        [
+          "rel", 
+          "5:0", 
+          5, 
+          5, 
+          "factory"
+        ], 
+        [
+          "Support", 
+          "8:0", 
+          8, 
+          8, 
+          "made"
+        ], 
+        [
+          "ARG1", 
+          "9:2", 
+          9, 
+          13, 
+          "paper for the Kent filters"
+        ]
+      ], 
+      "baseform": "factory", 
+      "frame": "factory.01", 
+      "tokenNr": "5"
+    }, 
+    {
+      "args": [
+        [
+          "ARG0", 
+          "2:0", 
+          2, 
+          2, 
+          "workers"
+        ], 
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "workers"
+        ], 
+        [
+          "ARGM-LOC", 
+          "3:1", 
+          3, 
+          13, 
+          "at a factory that *T*-8 made paper for the Kent filters"
+        ]
+      ], 
+      "baseform": "worker", 
+      "frame": "worker.01", 
+      "tokenNr": "2"
+    }
+  ], 
+  "parsetree": "(ROOT (S (PP (IN About) (NP (NP (CD 160) (NNS workers)) (PP (IN at) (NP (NP (DT a) (NN factory)) (SBAR (WHNP (WDT that)) (S (VP (VBD made) (NP (NN paper)) (PP (IN for) (NP (DT the) (NNP Kent)))))))))) (NP (NNS filters)) (VP (VBD were) (VP (VBN exposed) (PP (TO to) (NP (NP (NN asbestos)) (PP (IN in) (NP (DT the) (NNS 1950s))))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "8:0", 
+          8, 
+          8, 
+          "made"
+        ], 
+        [
+          "ARG0", 
+          "7:0", 
+          6, 
+          6, 
+          "that"
+        ], 
+        [
+          "ARG1", 
+          "9:2", 
+          9, 
+          13, 
+          "paper for the Kent filters"
+        ], 
+        [
+          "LINK-SLC", 
+          "4:1*7:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "make", 
+      "basepos": "v", 
+      "frame": "make.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "15:0", 
+          15, 
+          15, 
+          "exposed"
+        ], 
+        [
+          "ARG1", 
+          "16:0", 
+          0, 
+          13, 
+          "About 160 workers at a factory that *T*-8 made paper for the Kent filters"
+        ], 
+        [
+          "ARG2", 
+          "17:1", 
+          17, 
+          18, 
+          "to asbestos"
+        ], 
+        [
+          "ARGM-TMP", 
+          "19:1", 
+          19, 
+          21, 
+          "in the 1950s"
+        ]
+      ], 
+      "baseform": "expose", 
+      "basepos": "v", 
+      "frame": "expose.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ-7 (NP (QP (IN About) (CD 160) ) (NNS workers) ) (PP-LOC (IN at) (NP (NP (DT a) (NN factory) ) (SBAR (WHNP-8 (WDT that) ) (S (NP-SBJ (-NONE- *T*-8) ) (VP (VBD made) (NP (NP (NN paper) ) (PP (IN for) (NP (DT the) (NNP Kent) (NNS filters) ))))))))) (VP (VBD were) (VP (VBN exposed) (NP (-NONE- *-7) ) (PP-DIR (TO to) (NP (NN asbestos) )) (PP-TMP (IN in) (NP (DT the) (CD 1950s) )))) (. .) ))", 
+  "sentence_nr": 23, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "About", 
+      "dep_idx": 0, 
+      "gov": "160", 
+      "gov_idx": 1, 
+      "rel": "quantmod"
+    }, 
+    {
+      "dep": "160", 
+      "dep_idx": 1, 
+      "gov": "workers", 
+      "gov_idx": 2, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "workers", 
+      "dep_idx": 2, 
+      "gov": "exposed", 
+      "gov_idx": 15, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 4, 
+      "gov": "factory", 
+      "gov_idx": 5, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "factory", 
+      "dep_idx": 5, 
+      "gov": "workers", 
+      "gov_idx": 2, 
+      "rel": "prep_at"
+    }, 
+    {
+      "dep": "factory", 
+      "dep_idx": 5, 
+      "gov": "made", 
+      "gov_idx": 8, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "made", 
+      "dep_idx": 8, 
+      "gov": "factory", 
+      "gov_idx": 5, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "paper", 
+      "dep_idx": 9, 
+      "gov": "made", 
+      "gov_idx": 8, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 11, 
+      "gov": "filters", 
+      "gov_idx": 13, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Kent", 
+      "dep_idx": 12, 
+      "gov": "filters", 
+      "gov_idx": 13, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "filters", 
+      "dep_idx": 13, 
+      "gov": "paper", 
+      "gov_idx": 9, 
+      "rel": "prep_for"
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 14, 
+      "gov": "exposed", 
+      "gov_idx": 15, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "exposed", 
+      "dep_idx": 15, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 18, 
+      "gov": "exposed", 
+      "gov_idx": 15, 
+      "rel": "prep_to"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 20, 
+      "gov": "1950s", 
+      "gov_idx": 21, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "1950s", 
+      "dep_idx": 21, 
+      "gov": "exposed", 
+      "gov_idx": 15, 
+      "rel": "prep_in"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "About", 
+      "dep_idx": 0, 
+      "gov": "160", 
+      "gov_idx": 1, 
+      "rel": "quantmod"
+    }, 
+    {
+      "dep": "160", 
+      "dep_idx": 1, 
+      "gov": "workers", 
+      "gov_idx": 2, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "workers", 
+      "dep_idx": 2, 
+      "gov": "exposed", 
+      "gov_idx": 15, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "at", 
+      "dep_idx": 3, 
+      "gov": "workers", 
+      "gov_idx": 2, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 4, 
+      "gov": "factory", 
+      "gov_idx": 5, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "factory", 
+      "dep_idx": 5, 
+      "gov": "at", 
+      "gov_idx": 3, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 6, 
+      "gov": "made", 
+      "gov_idx": 8, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "made", 
+      "dep_idx": 8, 
+      "gov": "factory", 
+      "gov_idx": 5, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "paper", 
+      "dep_idx": 9, 
+      "gov": "made", 
+      "gov_idx": 8, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "for", 
+      "dep_idx": 10, 
+      "gov": "paper", 
+      "gov_idx": 9, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 11, 
+      "gov": "filters", 
+      "gov_idx": 13, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Kent", 
+      "dep_idx": 12, 
+      "gov": "filters", 
+      "gov_idx": 13, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "filters", 
+      "dep_idx": 13, 
+      "gov": "for", 
+      "gov_idx": 10, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "were", 
+      "dep_idx": 14, 
+      "gov": "exposed", 
+      "gov_idx": 15, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "exposed", 
+      "dep_idx": 15, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 17, 
+      "gov": "exposed", 
+      "gov_idx": 15, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 18, 
+      "gov": "to", 
+      "gov_idx": 17, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 19, 
+      "gov": "exposed", 
+      "gov_idx": 15, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 20, 
+      "gov": "1950s", 
+      "gov_idx": 21, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "1950s", 
+      "dep_idx": 21, 
+      "gov": "in", 
+      "gov_idx": 19, 
+      "rel": "pobj"
+    }
+  ], 
+  "text": "About 160 workers at a factory that made paper for the Kent filters were exposed to asbestos in the 1950s .", 
+  "timex": [
+    [
+      "t1", 
+      20, 
+      21, 
+      "<TIMEX3 tid=\"t1\" value=\"195X\" type=\"DATE\">the 1950s</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "About 160 workers at a factory that *T*-8 made paper for the Kent filters were exposed *-7 to asbestos in the 1950s .", 
+  "tuples": [
+    [
+      "num", 
+      "workers", 
+      "160"
+    ], 
+    [
+      "prep_about", 
+      "exposed", 
+      "workers"
+    ], 
+    [
+      "det", 
+      "factory", 
+      "a"
+    ], 
+    [
+      "prep_at", 
+      "workers", 
+      "factory"
+    ], 
+    [
+      "nsubj", 
+      "made", 
+      "factory"
+    ], 
+    [
+      "rcmod", 
+      "factory", 
+      "made"
+    ], 
+    [
+      "dobj", 
+      "made", 
+      "paper"
+    ], 
+    [
+      "det", 
+      "Kent", 
+      "the"
+    ], 
+    [
+      "prep_for", 
+      "made", 
+      "Kent"
+    ], 
+    [
+      "nsubjpass", 
+      "exposed", 
+      "filters"
+    ], 
+    [
+      "auxpass", 
+      "exposed", 
+      "were"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "exposed"
+    ], 
+    [
+      "prep_to", 
+      "exposed", 
+      "asbestos"
+    ], 
+    [
+      "det", 
+      "1950s", 
+      "the"
+    ], 
+    [
+      "prep_in", 
+      "asbestos", 
+      "1950s"
+    ]
+  ], 
+  "words": [
+    [
+      "About", 
+      {
+        "Lemma": "about", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 0
+      }
+    ], 
+    [
+      "160", 
+      {
+        "Lemma": "160", 
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "~160.0", 
+        "PartOfSpeech": "CD", 
+        "idx": 1
+      }
+    ], 
+    [
+      "workers", 
+      {
+        "Lemma": "worker", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 2
+      }
+    ], 
+    [
+      "at", 
+      {
+        "Lemma": "at", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 3
+      }
+    ], 
+    [
+      "a", 
+      {
+        "Lemma": "a", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 4
+      }
+    ], 
+    [
+      "factory", 
+      {
+        "Lemma": "factory", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 5
+      }
+    ], 
+    [
+      "that", 
+      {
+        "Lemma": "that", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "WDT", 
+        "idx": 6
+      }
+    ], 
+    [
+      "made", 
+      {
+        "Lemma": "make", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 8
+      }
+    ], 
+    [
+      "paper", 
+      {
+        "Lemma": "paper", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 9
+      }
+    ], 
+    [
+      "for", 
+      {
+        "Lemma": "for", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 10
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 11
+      }
+    ], 
+    [
+      "Kent", 
+      {
+        "Lemma": "Kent", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNP", 
+        "idx": 12
+      }
+    ], 
+    [
+      "filters", 
+      {
+        "Lemma": "filter", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 13
+      }
+    ], 
+    [
+      "were", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 14
+      }
+    ], 
+    [
+      "exposed", 
+      {
+        "Lemma": "expose", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 15
+      }
+    ], 
+    [
+      "to", 
+      {
+        "Lemma": "to", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "TO", 
+        "idx": 17
+      }
+    ], 
+    [
+      "asbestos", 
+      {
+        "Lemma": "asbestos", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 18
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 19
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "195X", 
+        "PartOfSpeech": "DT", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"195X\" type=\"DATE\">the 1950s</TIMEX3>", 
+        "idx": 20
+      }
+    ], 
+    [
+      "1950s", 
+      {
+        "Lemma": "1950", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "195X", 
+        "PartOfSpeech": "NNS", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"195X\" type=\"DATE\">the 1950s</TIMEX3>", 
+        "idx": 21
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 22
+      }
+    ]
+  ]
+}

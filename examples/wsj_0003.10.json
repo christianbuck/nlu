@@ -1,0 +1,1145 @@
+{
+  "bbn_ne": [
+    [
+      1, 
+      1, 
+      "Lorillard", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Lorillard</ENAMEX>"
+    ], 
+    [
+      2, 
+      2, 
+      "spokeswoman", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">spokeswoman</ENAMEX>"
+    ], 
+    [
+      5, 
+      5, 
+      "asbestos", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">asbestos</ENAMEX>"
+    ], 
+    [
+      20, 
+      22, 
+      "the early 1950s", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">the early 1950s</TIMEX>"
+    ], 
+    [
+      36, 
+      36, 
+      "1956", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">1956</TIMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (DT The) (NNP Lorillard) (NN spokeswoman)) (VP (VBD said) (SBAR (-NONE- 0) (S (NP-SBJ-1 (NN asbestos)) (VP (VBD was) (VP (VP (VBN used) (NP (-NONE- *-1)) (PP-CLR (IN in) (`` ``) (NP (ADJP (RB very) (JJ modest)) (NNS amounts)) ('' '')) (PP-LOC (IN in) (S-NOM (NP-SBJ (-NONE- *PRO*)) (VP (VBG making) (NP (NP (NN paper)) (PP (IN for) (NP (DT the) (NNS filters))))))) (PP-TMP (IN in) (NP (DT the) (JJ early) (CD 1950s)))) (CC and) (VP (VBN replaced) (NP (-NONE- *-1)) (PP (IN with) (NP (NP (DT a) (JJ different) (NN type)) (PP (IN of) (NP (NN filter))))) (PP-TMP (IN in) (NP (CD 1956))))))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG1", 
+          "5:1*8:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "Support", 
+          "7:0,9:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "rel", 
+          "13:0", 
+          13, 
+          13, 
+          "amounts"
+        ]
+      ], 
+      "baseform": "amount", 
+      "frame": "amount.01", 
+      "tokenNr": "13"
+    }, 
+    {
+      "args": [
+        [
+          "ARG2", 
+          "1:0", 
+          1, 
+          1, 
+          "Lorillard"
+        ], 
+        [
+          "ARG0", 
+          "2:0", 
+          2, 
+          2, 
+          "spokeswoman"
+        ], 
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "spokeswoman"
+        ]
+      ], 
+      "baseform": "spokeswoman", 
+      "frame": "spokeswoman.01", 
+      "tokenNr": "2"
+    }, 
+    {
+      "args": [
+        [
+          "ARG2-REF", 
+          "32:0", 
+          32, 
+          32, 
+          "type"
+        ], 
+        [
+          "rel", 
+          "32:0", 
+          32, 
+          32, 
+          "type"
+        ], 
+        [
+          "ARG1", 
+          "33:1", 
+          33, 
+          34, 
+          "of filter"
+        ]
+      ], 
+      "baseform": "type", 
+      "frame": "type.01", 
+      "tokenNr": "32"
+    }
+  ], 
+  "parsetree": "(ROOT (S (NP (DT The) (NNP Lorillard) (NN spokeswoman)) (VP (VBD said) (SBAR (S (NP (NN asbestos)) (VP (VBD was) (VP (VP (VBN used) (PP (IN in) (`` ``) (NP (RB very) (JJ modest) (NNS amounts)) ('' '')) (PP (IN in) (S (VP (VBG making) (NP (NN paper)) (PP (IN for) (NP (NP (DT the) (NNS filters)) (PP (IN in) (NP (DT the) (JJ early) (CD 1950s))))))))) (CC and) (VP (VBN replaced) (PP (IN with) (NP (NP (DT a) (JJ different) (NN type)) (PP (IN of) (NP (NN filter))))) (PP (IN in) (NP (CD 1956))))))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "3:0", 
+          3, 
+          3, 
+          "said"
+        ], 
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          2, 
+          "The Lorillard spokeswoman"
+        ], 
+        [
+          "ARG1", 
+          "4:1", 
+          4, 
+          36, 
+          "0 asbestos was used *-1 in `` very modest amounts '' in *PRO* making paper for the filters in the early 1950s and replaced *-1 with a different type of filter in 1956"
+        ]
+      ], 
+      "baseform": "say", 
+      "basepos": "v", 
+      "frame": "say.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "7:0", 
+          7, 
+          7, 
+          "used"
+        ], 
+        [
+          "ARG1", 
+          "8:0", 
+          5, 
+          5, 
+          "asbestos"
+        ], 
+        [
+          "ARGM-MNR", 
+          "9:1", 
+          9, 
+          14, 
+          "in `` very modest amounts ''"
+        ], 
+        [
+          "ARG2", 
+          "15:1", 
+          15, 
+          21, 
+          "in *PRO* making paper for the filters"
+        ], 
+        [
+          "ARGM-TMP", 
+          "22:1", 
+          22, 
+          25, 
+          "in the early 1950s"
+        ], 
+        [
+          "LINK-PCR", 
+          "8:0*8:0*8:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "use", 
+      "basepos": "v", 
+      "frame": "use.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "17:0", 
+          17, 
+          17, 
+          "making"
+        ], 
+        [
+          "ARG0", 
+          "16:0", 
+          16, 
+          16, 
+          "*PRO*"
+        ], 
+        [
+          "ARG1", 
+          "18:2", 
+          18, 
+          21, 
+          "paper for the filters"
+        ]
+      ], 
+      "baseform": "make", 
+      "basepos": "v", 
+      "frame": "make.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "27:0", 
+          27, 
+          27, 
+          "replaced"
+        ], 
+        [
+          "ARG1", 
+          "28:0", 
+          5, 
+          5, 
+          "asbestos"
+        ], 
+        [
+          "ARG2", 
+          "29:1", 
+          29, 
+          34, 
+          "with a different type of filter"
+        ], 
+        [
+          "ARGM-TMP", 
+          "35:1", 
+          35, 
+          36, 
+          "in 1956"
+        ], 
+        [
+          "LINK-PCR", 
+          "28:0*28:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "replace", 
+      "basepos": "v", 
+      "frame": "replace.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (DT The) (NNP Lorillard) (NN spokeswoman) ) (VP (VBD said) (SBAR (-NONE- 0) (S (NP-SBJ-1 (NN asbestos) ) (VP (VBD was) (VP (VP (VBN used) (NP (-NONE- *-1) ) (PP-CLR (IN in) (`` ``) (NP (ADJP (RB very) (JJ modest) ) (NNS amounts) ) ('' '') ) (PP-LOC (IN in) (S-NOM (NP-SBJ (-NONE- *) ) (VP (VBG making) (NP (NP (NN paper) ) (PP (IN for) (NP (DT the) (NNS filters) )))))) (PP-TMP (IN in) (NP (DT the) (JJ early) (CD 1950s) ))) (CC and) (VP (VBN replaced) (NP (-NONE- *-1) ) (PP (IN with) (NP (NP (DT a) (JJ different) (NN type) ) (PP (IN of) (NP (NN filter) )))) (PP-TMP (IN in) (NP (CD 1956) )))))))) (. .) ))", 
+  "sentence_nr": 10, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "spokeswoman", 
+      "gov_idx": 2, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Lorillard", 
+      "dep_idx": 1, 
+      "gov": "spokeswoman", 
+      "gov_idx": 2, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "spokeswoman", 
+      "dep_idx": 2, 
+      "gov": "said", 
+      "gov_idx": 3, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 3, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 5, 
+      "gov": "used", 
+      "gov_idx": 7, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 5, 
+      "gov": "replaced", 
+      "gov_idx": 27, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "was", 
+      "dep_idx": 6, 
+      "gov": "used", 
+      "gov_idx": 7, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "used", 
+      "dep_idx": 7, 
+      "gov": "said", 
+      "gov_idx": 3, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "very", 
+      "dep_idx": 11, 
+      "gov": "modest", 
+      "gov_idx": 12, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "modest", 
+      "dep_idx": 12, 
+      "gov": "amounts", 
+      "gov_idx": 13, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "amounts", 
+      "dep_idx": 13, 
+      "gov": "used", 
+      "gov_idx": 7, 
+      "rel": "prep_in"
+    }, 
+    {
+      "dep": "making", 
+      "dep_idx": 17, 
+      "gov": "used", 
+      "gov_idx": 7, 
+      "rel": "prepc_in"
+    }, 
+    {
+      "dep": "paper", 
+      "dep_idx": 18, 
+      "gov": "making", 
+      "gov_idx": 17, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 20, 
+      "gov": "filters", 
+      "gov_idx": 21, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "filters", 
+      "dep_idx": 21, 
+      "gov": "paper", 
+      "gov_idx": 18, 
+      "rel": "prep_for"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 23, 
+      "gov": "1950s", 
+      "gov_idx": 25, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "early", 
+      "dep_idx": 24, 
+      "gov": "1950s", 
+      "gov_idx": 25, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "1950s", 
+      "dep_idx": 25, 
+      "gov": "used", 
+      "gov_idx": 7, 
+      "rel": "prep_in"
+    }, 
+    {
+      "dep": "replaced", 
+      "dep_idx": 27, 
+      "gov": "said", 
+      "gov_idx": 3, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "replaced", 
+      "dep_idx": 27, 
+      "gov": "used", 
+      "gov_idx": 7, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 30, 
+      "gov": "type", 
+      "gov_idx": 32, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "different", 
+      "dep_idx": 31, 
+      "gov": "type", 
+      "gov_idx": 32, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "type", 
+      "dep_idx": 32, 
+      "gov": "replaced", 
+      "gov_idx": 27, 
+      "rel": "prep_with"
+    }, 
+    {
+      "dep": "filter", 
+      "dep_idx": 34, 
+      "gov": "type", 
+      "gov_idx": 32, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "1956", 
+      "dep_idx": 36, 
+      "gov": "replaced", 
+      "gov_idx": 27, 
+      "rel": "prep_in"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "spokeswoman", 
+      "gov_idx": 2, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "Lorillard", 
+      "dep_idx": 1, 
+      "gov": "spokeswoman", 
+      "gov_idx": 2, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "spokeswoman", 
+      "dep_idx": 2, 
+      "gov": "said", 
+      "gov_idx": 3, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 3, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 5, 
+      "gov": "used", 
+      "gov_idx": 7, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "was", 
+      "dep_idx": 6, 
+      "gov": "used", 
+      "gov_idx": 7, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "used", 
+      "dep_idx": 7, 
+      "gov": "said", 
+      "gov_idx": 3, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 9, 
+      "gov": "used", 
+      "gov_idx": 7, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "very", 
+      "dep_idx": 11, 
+      "gov": "modest", 
+      "gov_idx": 12, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "modest", 
+      "dep_idx": 12, 
+      "gov": "amounts", 
+      "gov_idx": 13, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "amounts", 
+      "dep_idx": 13, 
+      "gov": "in", 
+      "gov_idx": 9, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 15, 
+      "gov": "used", 
+      "gov_idx": 7, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "making", 
+      "dep_idx": 17, 
+      "gov": "in", 
+      "gov_idx": 15, 
+      "rel": "pcomp"
+    }, 
+    {
+      "dep": "paper", 
+      "dep_idx": 18, 
+      "gov": "making", 
+      "gov_idx": 17, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "for", 
+      "dep_idx": 19, 
+      "gov": "paper", 
+      "gov_idx": 18, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 20, 
+      "gov": "filters", 
+      "gov_idx": 21, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "filters", 
+      "dep_idx": 21, 
+      "gov": "for", 
+      "gov_idx": 19, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 22, 
+      "gov": "used", 
+      "gov_idx": 7, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 23, 
+      "gov": "1950s", 
+      "gov_idx": 25, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "early", 
+      "dep_idx": 24, 
+      "gov": "1950s", 
+      "gov_idx": 25, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "1950s", 
+      "dep_idx": 25, 
+      "gov": "in", 
+      "gov_idx": 22, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 26, 
+      "gov": "used", 
+      "gov_idx": 7, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "replaced", 
+      "dep_idx": 27, 
+      "gov": "used", 
+      "gov_idx": 7, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "with", 
+      "dep_idx": 29, 
+      "gov": "replaced", 
+      "gov_idx": 27, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 30, 
+      "gov": "type", 
+      "gov_idx": 32, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "different", 
+      "dep_idx": 31, 
+      "gov": "type", 
+      "gov_idx": 32, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "type", 
+      "dep_idx": 32, 
+      "gov": "with", 
+      "gov_idx": 29, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 33, 
+      "gov": "type", 
+      "gov_idx": 32, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "filter", 
+      "dep_idx": 34, 
+      "gov": "of", 
+      "gov_idx": 33, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 35, 
+      "gov": "replaced", 
+      "gov_idx": 27, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "1956", 
+      "dep_idx": 36, 
+      "gov": "in", 
+      "gov_idx": 35, 
+      "rel": "pobj"
+    }
+  ], 
+  "text": "The Lorillard spokeswoman said asbestos was used in `` very modest amounts '' in making paper for the filters in the early 1950s and replaced with a different type of filter in 1956 .", 
+  "timex": [
+    [
+      "t2", 
+      36, 
+      36, 
+      "<TIMEX3 tid=\"t2\" value=\"1956\" type=\"DATE\">1956</TIMEX3>"
+    ], 
+    [
+      "t1", 
+      23, 
+      25, 
+      "<TIMEX3 tid=\"t1\" value=\"195X\" type=\"DATE\" mod=\"EARLY\">the early 1950s</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "The Lorillard spokeswoman said 0 asbestos was used *-1 in `` very modest amounts '' in *PRO* making paper for the filters in the early 1950s and replaced *-1 with a different type of filter in 1956 .", 
+  "tuples": [
+    [
+      "det", 
+      "spokeswoman", 
+      "The"
+    ], 
+    [
+      "nn", 
+      "spokeswoman", 
+      "Lorillard"
+    ], 
+    [
+      "nsubj", 
+      "said", 
+      "spokeswoman"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "said"
+    ], 
+    [
+      "nsubjpass", 
+      "used", 
+      "asbestos"
+    ], 
+    [
+      "nsubjpass", 
+      "replaced", 
+      "asbestos"
+    ], 
+    [
+      "auxpass", 
+      "used", 
+      "was"
+    ], 
+    [
+      "ccomp", 
+      "said", 
+      "used"
+    ], 
+    [
+      "advmod", 
+      "amounts", 
+      "very"
+    ], 
+    [
+      "amod", 
+      "amounts", 
+      "modest"
+    ], 
+    [
+      "prep_in", 
+      "used", 
+      "amounts"
+    ], 
+    [
+      "prepc_in", 
+      "used", 
+      "making"
+    ], 
+    [
+      "dobj", 
+      "making", 
+      "paper"
+    ], 
+    [
+      "det", 
+      "filters", 
+      "the"
+    ], 
+    [
+      "prep_for", 
+      "making", 
+      "filters"
+    ], 
+    [
+      "det", 
+      "1950s", 
+      "the"
+    ], 
+    [
+      "amod", 
+      "1950s", 
+      "early"
+    ], 
+    [
+      "prep_in", 
+      "filters", 
+      "1950s"
+    ], 
+    [
+      "ccomp", 
+      "said", 
+      "replaced"
+    ], 
+    [
+      "conj_and", 
+      "used", 
+      "replaced"
+    ], 
+    [
+      "det", 
+      "type", 
+      "a"
+    ], 
+    [
+      "amod", 
+      "type", 
+      "different"
+    ], 
+    [
+      "prep_with", 
+      "replaced", 
+      "type"
+    ], 
+    [
+      "prep_of", 
+      "type", 
+      "filter"
+    ], 
+    [
+      "prep_in", 
+      "replaced", 
+      "1956"
+    ]
+  ], 
+  "words": [
+    [
+      "The", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 0
+      }
+    ], 
+    [
+      "Lorillard", 
+      {
+        "Lemma": "Lorillard", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 1
+      }
+    ], 
+    [
+      "spokeswoman", 
+      {
+        "Lemma": "spokeswoman", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 2
+      }
+    ], 
+    [
+      "said", 
+      {
+        "Lemma": "say", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 3
+      }
+    ], 
+    [
+      "asbestos", 
+      {
+        "Lemma": "asbestos", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 5
+      }
+    ], 
+    [
+      "was", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 6
+      }
+    ], 
+    [
+      "used", 
+      {
+        "Lemma": "use", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 9
+      }
+    ], 
+    [
+      "``", 
+      {
+        "Lemma": "``", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "``", 
+        "idx": 10
+      }
+    ], 
+    [
+      "very", 
+      {
+        "Lemma": "very", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 11
+      }
+    ], 
+    [
+      "modest", 
+      {
+        "Lemma": "modest", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 12
+      }
+    ], 
+    [
+      "amounts", 
+      {
+        "Lemma": "amount", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 13
+      }
+    ], 
+    [
+      "''", 
+      {
+        "Lemma": "''", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "''", 
+        "idx": 14
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 15
+      }
+    ], 
+    [
+      "making", 
+      {
+        "Lemma": "make", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBG", 
+        "idx": 17
+      }
+    ], 
+    [
+      "paper", 
+      {
+        "Lemma": "paper", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 18
+      }
+    ], 
+    [
+      "for", 
+      {
+        "Lemma": "for", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 19
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 20
+      }
+    ], 
+    [
+      "filters", 
+      {
+        "Lemma": "filter", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 21
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 22
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "195X", 
+        "PartOfSpeech": "DT", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"195X\" type=\"DATE\" mod=\"EARLY\">the early 1950s</TIMEX3>", 
+        "idx": 23
+      }
+    ], 
+    [
+      "early", 
+      {
+        "Lemma": "early", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "195X", 
+        "PartOfSpeech": "JJ", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"195X\" type=\"DATE\" mod=\"EARLY\">the early 1950s</TIMEX3>", 
+        "idx": 24
+      }
+    ], 
+    [
+      "1950s", 
+      {
+        "Lemma": "1950s", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "195X", 
+        "PartOfSpeech": "CD", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"195X\" type=\"DATE\" mod=\"EARLY\">the early 1950s</TIMEX3>", 
+        "idx": 25
+      }
+    ], 
+    [
+      "and", 
+      {
+        "Lemma": "and", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "CC", 
+        "idx": 26
+      }
+    ], 
+    [
+      "replaced", 
+      {
+        "Lemma": "replace", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 27
+      }
+    ], 
+    [
+      "with", 
+      {
+        "Lemma": "with", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 29
+      }
+    ], 
+    [
+      "a", 
+      {
+        "Lemma": "a", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 30
+      }
+    ], 
+    [
+      "different", 
+      {
+        "Lemma": "different", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 31
+      }
+    ], 
+    [
+      "type", 
+      {
+        "Lemma": "type", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 32
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 33
+      }
+    ], 
+    [
+      "filter", 
+      {
+        "Lemma": "filter", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 34
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 35
+      }
+    ], 
+    [
+      "1956", 
+      {
+        "Lemma": "1956", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "1956", 
+        "PartOfSpeech": "CD", 
+        "Timex": "<TIMEX3 tid=\"t2\" value=\"1956\" type=\"DATE\">1956</TIMEX3>", 
+        "idx": 36
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 37
+      }
+    ]
+  ]
+}

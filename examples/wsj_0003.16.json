@@ -1,0 +1,1241 @@
+{
+  "bbn_ne": [
+    [
+      4, 
+      4, 
+      "cancer", 
+      "DISEASE", 
+      "", 
+      "<ENAMEX TYPE=\"DISEASE\">cancer</ENAMEX>"
+    ], 
+    [
+      8, 
+      8, 
+      "workers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">workers</ENAMEX>"
+    ], 
+    [
+      11, 
+      12, 
+      "West Groton", 
+      "GPE", 
+      "CITY", 
+      "<ENAMEX TYPE=\"GPE:CITY\">West Groton</ENAMEX>"
+    ], 
+    [
+      14, 
+      14, 
+      "Mass.", 
+      "GPE", 
+      "STATE_PROVINCE", 
+      "<ENAMEX TYPE=\"GPE:STATE_PROVINCE\">Mass.</ENAMEX>"
+    ], 
+    [
+      27, 
+      27, 
+      "workers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">workers</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (S-TPC-2 (NP-SBJ-1 (NP (DT The) (NN percentage)) (PP (IN of) (NP (NML (NN lung) (NN cancer)) (NNS deaths))) (PP-LOC (IN among) (NP (NP (DT the) (NNS workers)) (PP-LOC (IN at) (NP (DT the) (NML (NML (NNP West) (NNP Groton)) (, ,) (NML (NNP Mass.)) (, ,)) (NN paper) (NN factory)))))) (VP (VBZ appears) (S (NP-SBJ (-NONE- *-1)) (VP (TO to) (VP (VB be) (NP-PRD (NP (DT the) (JJS highest)) (PP (IN for) (NP (NP (DT any) (NN asbestos) (NNS workers)) (VP (VBN studied) (NP (-NONE- *)) (PP-LOC (IN in) (NP (JJ Western) (VBN industrialized) (NNS countries)))))))))))) (, ,) (NP-SBJ (PRP he)) (VP (VBD said) (SBAR (-NONE- 0) (S (-NONE- *T*-2)))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "Support", 
+          "1:0,2:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "ARG1", 
+          "3:0", 
+          3, 
+          3, 
+          "lung"
+        ], 
+        [
+          "ARG2", 
+          "4:0", 
+          4, 
+          4, 
+          "cancer"
+        ], 
+        [
+          "rel", 
+          "4:0", 
+          4, 
+          4, 
+          "cancer"
+        ], 
+        [
+          "ARG0", 
+          "6:1", 
+          6, 
+          17, 
+          "among the workers at the West Groton , Mass. , paper factory"
+        ]
+      ], 
+      "baseform": "cancer", 
+      "frame": "cancer.01", 
+      "tokenNr": "4"
+    }, 
+    {
+      "args": [
+        [
+          "ARGM-CAU", 
+          "3:0,4:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "rel", 
+          "5:0", 
+          5, 
+          5, 
+          "deaths"
+        ], 
+        [
+          "ARG1", 
+          "6:1", 
+          6, 
+          17, 
+          "among the workers at the West Groton , Mass. , paper factory"
+        ]
+      ], 
+      "baseform": "death", 
+      "frame": "death.01", 
+      "tokenNr": "5"
+    }, 
+    {
+      "args": [
+        [
+          "ARGM-LOC", 
+          "11:1", 
+          11, 
+          15, 
+          "West Groton , Mass. ,"
+        ], 
+        [
+          "ARG1", 
+          "16:0", 
+          16, 
+          16, 
+          "paper"
+        ], 
+        [
+          "ARG0", 
+          "17:0", 
+          17, 
+          17, 
+          "factory"
+        ], 
+        [
+          "rel", 
+          "17:0", 
+          17, 
+          17, 
+          "factory"
+        ]
+      ], 
+      "baseform": "factory", 
+      "frame": "factory.01", 
+      "tokenNr": "17"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "percentage"
+        ], 
+        [
+          "ARG1", 
+          "2:1", 
+          2, 
+          5, 
+          "of lung cancer deaths"
+        ]
+      ], 
+      "baseform": "percentage", 
+      "frame": "percentage.01", 
+      "tokenNr": "1"
+    }, 
+    {
+      "args": [
+        [
+          "ARG1", 
+          "26:0", 
+          26, 
+          26, 
+          "asbestos"
+        ], 
+        [
+          "ARG0", 
+          "27:0", 
+          27, 
+          27, 
+          "workers"
+        ], 
+        [
+          "rel", 
+          "27:0", 
+          27, 
+          27, 
+          "workers"
+        ]
+      ], 
+      "baseform": "worker", 
+      "frame": "worker.01", 
+      "tokenNr": "27"
+    }, 
+    {
+      "args": [
+        [
+          "ARG0", 
+          "8:0", 
+          8, 
+          8, 
+          "workers"
+        ], 
+        [
+          "rel", 
+          "8:0", 
+          8, 
+          8, 
+          "workers"
+        ], 
+        [
+          "ARGM-LOC", 
+          "9:1", 
+          9, 
+          17, 
+          "at the West Groton , Mass. , paper factory"
+        ]
+      ], 
+      "baseform": "worker", 
+      "frame": "worker.01", 
+      "tokenNr": "8"
+    }
+  ], 
+  "parsetree": "(ROOT (S (S (NP (NP (DT The) (NN percentage)) (PP (IN of) (NP (NP (NN lung) (NN cancer) (NNS deaths)) (PP (IN among) (NP (NP (DT the) (NNS workers)) (PP (IN at) (NP (DT the) (NNP West) (NNP Groton) (, ,) (NNP Mass.) (, ,) (NN paper) (NN factory)))))))) (VP (VBZ appears) (S (VP (TO to) (VP (VB be) (NP (NP (DT the) (JJS highest)) (PP (IN for) (NP (NP (DT any) (NN asbestos) (NNS workers)) (VP (VBN studied) (PP (IN in) (NP (JJ Western) (JJ industrialized) (NNS countries)))))))))))) (, ,) (NP (PRP he)) (VP (VBD said)) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "18:0", 
+          18, 
+          18, 
+          "appears"
+        ], 
+        [
+          "ARG1", 
+          "0:2,19:2", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "appear", 
+      "basepos": "v", 
+      "frame": "appear.02", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "28:0", 
+          28, 
+          28, 
+          "studied"
+        ], 
+        [
+          "ARG1", 
+          "29:0", 
+          29, 
+          29, 
+          "*"
+        ], 
+        [
+          "ARGM-LOC", 
+          "30:1", 
+          30, 
+          33, 
+          "in Western industrialized countries"
+        ], 
+        [
+          "LINK-PCR", 
+          "25:1*29:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "study", 
+      "basepos": "v", 
+      "frame": "study.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "32:0", 
+          32, 
+          32, 
+          "industrialized"
+        ], 
+        [
+          "ARG1", 
+          "33:0", 
+          33, 
+          33, 
+          "countries"
+        ]
+      ], 
+      "baseform": "industrialize", 
+      "basepos": "v", 
+      "frame": "industrialize.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "36:0", 
+          36, 
+          36, 
+          "said"
+        ], 
+        [
+          "ARG0", 
+          "35:1", 
+          35, 
+          35, 
+          "he"
+        ], 
+        [
+          "ARG1", 
+          "38:0", 
+          0, 
+          33, 
+          "The percentage of lung cancer deaths among the workers at the West Groton , Mass. , paper factory appears *-1 to be the highest for any asbestos workers studied * in Western industrialized countries"
+        ]
+      ], 
+      "baseform": "say", 
+      "basepos": "v", 
+      "frame": "say.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (S-TPC-2 (NP-SBJ-1 (NP (DT The) (NN percentage) ) (PP (IN of) (NP (NN lung) (NN cancer) (NNS deaths) )) (PP-LOC (IN among) (NP (NP (DT the) (NNS workers) ) (PP-LOC (IN at) (NP (DT the) (NAC-LOC (NNP West) (NNP Groton) (, ,) (NNP Mass.) (, ,) ) (NN paper) (NN factory) ))))) (VP (VBZ appears) (S (NP-SBJ (-NONE- *-1) ) (VP (TO to) (VP (VB be) (NP-PRD (NP (DT the) (JJS highest) ) (PP (IN for) (NP (NP (DT any) (NN asbestos) (NNS workers) ) (RRC (VP (VBN studied) (NP (-NONE- *) ) (PP-LOC (IN in) (NP (JJ Western) (VBN industrialized) (NNS countries) )))))))))))) (, ,) (NP-SBJ (PRP he) ) (VP (VBD said) (SBAR (-NONE- 0) (S (-NONE- *T*-2) ))) (. .) ))", 
+  "sentence_nr": 16, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "percentage", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "percentage", 
+      "dep_idx": 1, 
+      "gov": "appears", 
+      "gov_idx": 18, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "percentage", 
+      "dep_idx": 1, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "xsubj"
+    }, 
+    {
+      "dep": "lung", 
+      "dep_idx": 3, 
+      "gov": "cancer", 
+      "gov_idx": 4, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "cancer", 
+      "dep_idx": 4, 
+      "gov": "deaths", 
+      "gov_idx": 5, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "deaths", 
+      "dep_idx": 5, 
+      "gov": "percentage", 
+      "gov_idx": 1, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 7, 
+      "gov": "workers", 
+      "gov_idx": 8, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "workers", 
+      "dep_idx": 8, 
+      "gov": "percentage", 
+      "gov_idx": 1, 
+      "rel": "prep_among"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 10, 
+      "gov": "factory", 
+      "gov_idx": 17, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "West", 
+      "dep_idx": 11, 
+      "gov": "Groton", 
+      "gov_idx": 12, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Groton", 
+      "dep_idx": 12, 
+      "gov": "Mass.", 
+      "gov_idx": 14, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "Mass.", 
+      "dep_idx": 14, 
+      "gov": "factory", 
+      "gov_idx": 17, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "paper", 
+      "dep_idx": 16, 
+      "gov": "factory", 
+      "gov_idx": 17, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "factory", 
+      "dep_idx": 17, 
+      "gov": "workers", 
+      "gov_idx": 8, 
+      "rel": "prep_at"
+    }, 
+    {
+      "dep": "appears", 
+      "dep_idx": 18, 
+      "gov": "said", 
+      "gov_idx": 36, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 20, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "be", 
+      "dep_idx": 21, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 22, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "highest", 
+      "dep_idx": 23, 
+      "gov": "appears", 
+      "gov_idx": 18, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "any", 
+      "dep_idx": 25, 
+      "gov": "workers", 
+      "gov_idx": 27, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 26, 
+      "gov": "workers", 
+      "gov_idx": 27, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "workers", 
+      "dep_idx": 27, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "prep_for"
+    }, 
+    {
+      "dep": "studied", 
+      "dep_idx": 28, 
+      "gov": "workers", 
+      "gov_idx": 27, 
+      "rel": "partmod"
+    }, 
+    {
+      "dep": "Western", 
+      "dep_idx": 31, 
+      "gov": "countries", 
+      "gov_idx": 33, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "industrialized", 
+      "dep_idx": 32, 
+      "gov": "countries", 
+      "gov_idx": 33, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "countries", 
+      "dep_idx": 33, 
+      "gov": "studied", 
+      "gov_idx": 28, 
+      "rel": "prep_in"
+    }, 
+    {
+      "dep": "he", 
+      "dep_idx": 35, 
+      "gov": "said", 
+      "gov_idx": 36, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 36, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "percentage", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "percentage", 
+      "dep_idx": 1, 
+      "gov": "appears", 
+      "gov_idx": 18, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 2, 
+      "gov": "percentage", 
+      "gov_idx": 1, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "lung", 
+      "dep_idx": 3, 
+      "gov": "cancer", 
+      "gov_idx": 4, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "cancer", 
+      "dep_idx": 4, 
+      "gov": "deaths", 
+      "gov_idx": 5, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "deaths", 
+      "dep_idx": 5, 
+      "gov": "of", 
+      "gov_idx": 2, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "among", 
+      "dep_idx": 6, 
+      "gov": "percentage", 
+      "gov_idx": 1, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 7, 
+      "gov": "workers", 
+      "gov_idx": 8, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "workers", 
+      "dep_idx": 8, 
+      "gov": "among", 
+      "gov_idx": 6, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "at", 
+      "dep_idx": 9, 
+      "gov": "workers", 
+      "gov_idx": 8, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 10, 
+      "gov": "factory", 
+      "gov_idx": 17, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "West", 
+      "dep_idx": 11, 
+      "gov": "Groton", 
+      "gov_idx": 12, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Groton", 
+      "dep_idx": 12, 
+      "gov": "Mass.", 
+      "gov_idx": 14, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "Mass.", 
+      "dep_idx": 14, 
+      "gov": "factory", 
+      "gov_idx": 17, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "paper", 
+      "dep_idx": 16, 
+      "gov": "factory", 
+      "gov_idx": 17, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "factory", 
+      "dep_idx": 17, 
+      "gov": "at", 
+      "gov_idx": 9, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "appears", 
+      "dep_idx": 18, 
+      "gov": "said", 
+      "gov_idx": 36, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 20, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "be", 
+      "dep_idx": 21, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 22, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "highest", 
+      "dep_idx": 23, 
+      "gov": "appears", 
+      "gov_idx": 18, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "for", 
+      "dep_idx": 24, 
+      "gov": "highest", 
+      "gov_idx": 23, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "any", 
+      "dep_idx": 25, 
+      "gov": "workers", 
+      "gov_idx": 27, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 26, 
+      "gov": "workers", 
+      "gov_idx": 27, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "workers", 
+      "dep_idx": 27, 
+      "gov": "for", 
+      "gov_idx": 24, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "studied", 
+      "dep_idx": 28, 
+      "gov": "workers", 
+      "gov_idx": 27, 
+      "rel": "partmod"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 30, 
+      "gov": "studied", 
+      "gov_idx": 28, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Western", 
+      "dep_idx": 31, 
+      "gov": "countries", 
+      "gov_idx": 33, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "industrialized", 
+      "dep_idx": 32, 
+      "gov": "countries", 
+      "gov_idx": 33, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "countries", 
+      "dep_idx": 33, 
+      "gov": "in", 
+      "gov_idx": 30, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "he", 
+      "dep_idx": 35, 
+      "gov": "said", 
+      "gov_idx": 36, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 36, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "text": "The percentage of lung cancer deaths among the workers at the West Groton , Mass. , paper factory appears to be the highest for any asbestos workers studied in Western industrialized countries , he said .", 
+  "timex": [], 
+  "treebank_sentence": "The percentage of lung cancer deaths among the workers at the West Groton , Mass. , paper factory appears *-1 to be the highest for any asbestos workers studied * in Western industrialized countries , he said 0 *T*-2 .", 
+  "tuples": [
+    [
+      "det", 
+      "percentage", 
+      "The"
+    ], 
+    [
+      "nsubj", 
+      "appears", 
+      "percentage"
+    ], 
+    [
+      "xsubj", 
+      "highest", 
+      "percentage"
+    ], 
+    [
+      "nn", 
+      "deaths", 
+      "lung"
+    ], 
+    [
+      "nn", 
+      "deaths", 
+      "cancer"
+    ], 
+    [
+      "prep_of", 
+      "percentage", 
+      "deaths"
+    ], 
+    [
+      "det", 
+      "workers", 
+      "the"
+    ], 
+    [
+      "prep_among", 
+      "deaths", 
+      "workers"
+    ], 
+    [
+      "det", 
+      "factory", 
+      "the"
+    ], 
+    [
+      "nn", 
+      "factory", 
+      "West"
+    ], 
+    [
+      "nn", 
+      "factory", 
+      "Groton"
+    ], 
+    [
+      "appos", 
+      "factory", 
+      "Mass."
+    ], 
+    [
+      "dep", 
+      "factory", 
+      "paper"
+    ], 
+    [
+      "prep_at", 
+      "workers", 
+      "factory"
+    ], 
+    [
+      "ccomp", 
+      "said", 
+      "appears"
+    ], 
+    [
+      "aux", 
+      "highest", 
+      "to"
+    ], 
+    [
+      "cop", 
+      "highest", 
+      "be"
+    ], 
+    [
+      "det", 
+      "highest", 
+      "the"
+    ], 
+    [
+      "xcomp", 
+      "appears", 
+      "highest"
+    ], 
+    [
+      "det", 
+      "workers", 
+      "any"
+    ], 
+    [
+      "nn", 
+      "workers", 
+      "asbestos"
+    ], 
+    [
+      "prep_for", 
+      "highest", 
+      "workers"
+    ], 
+    [
+      "partmod", 
+      "workers", 
+      "studied"
+    ], 
+    [
+      "amod", 
+      "countries", 
+      "Western"
+    ], 
+    [
+      "amod", 
+      "countries", 
+      "industrialized"
+    ], 
+    [
+      "prep_in", 
+      "studied", 
+      "countries"
+    ], 
+    [
+      "nsubj", 
+      "said", 
+      "he"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "said"
+    ]
+  ], 
+  "words": [
+    [
+      "The", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 0
+      }
+    ], 
+    [
+      "percentage", 
+      {
+        "Lemma": "percentage", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 1
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 2
+      }
+    ], 
+    [
+      "lung", 
+      {
+        "Lemma": "lung", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 3
+      }
+    ], 
+    [
+      "cancer", 
+      {
+        "Lemma": "cancer", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 4
+      }
+    ], 
+    [
+      "deaths", 
+      {
+        "Lemma": "death", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 5
+      }
+    ], 
+    [
+      "among", 
+      {
+        "Lemma": "among", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 6
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 7
+      }
+    ], 
+    [
+      "workers", 
+      {
+        "Lemma": "worker", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 8
+      }
+    ], 
+    [
+      "at", 
+      {
+        "Lemma": "at", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 9
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 10
+      }
+    ], 
+    [
+      "West", 
+      {
+        "Lemma": "West", 
+        "NamedEntityTag": "LOCATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 11
+      }
+    ], 
+    [
+      "Groton", 
+      {
+        "Lemma": "Groton", 
+        "NamedEntityTag": "LOCATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 12
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 13
+      }
+    ], 
+    [
+      "Mass.", 
+      {
+        "Lemma": "Mass.", 
+        "NamedEntityTag": "LOCATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 14
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 15
+      }
+    ], 
+    [
+      "paper", 
+      {
+        "Lemma": "paper", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 16
+      }
+    ], 
+    [
+      "factory", 
+      {
+        "Lemma": "factory", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 17
+      }
+    ], 
+    [
+      "appears", 
+      {
+        "Lemma": "appear", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBZ", 
+        "idx": 18
+      }
+    ], 
+    [
+      "to", 
+      {
+        "Lemma": "to", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "TO", 
+        "idx": 20
+      }
+    ], 
+    [
+      "be", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VB", 
+        "idx": 21
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 22
+      }
+    ], 
+    [
+      "highest", 
+      {
+        "Lemma": "highest", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJS", 
+        "idx": 23
+      }
+    ], 
+    [
+      "for", 
+      {
+        "Lemma": "for", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 24
+      }
+    ], 
+    [
+      "any", 
+      {
+        "Lemma": "any", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 25
+      }
+    ], 
+    [
+      "asbestos", 
+      {
+        "Lemma": "asbestos", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 26
+      }
+    ], 
+    [
+      "workers", 
+      {
+        "Lemma": "worker", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 27
+      }
+    ], 
+    [
+      "studied", 
+      {
+        "Lemma": "study", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 28
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 30
+      }
+    ], 
+    [
+      "Western", 
+      {
+        "Lemma": "western", 
+        "NamedEntityTag": "LOCATION", 
+        "PartOfSpeech": "JJ", 
+        "idx": 31
+      }
+    ], 
+    [
+      "industrialized", 
+      {
+        "Lemma": "industrialized", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 32
+      }
+    ], 
+    [
+      "countries", 
+      {
+        "Lemma": "country", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 33
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 34
+      }
+    ], 
+    [
+      "he", 
+      {
+        "Lemma": "he", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "PRP", 
+        "idx": 35
+      }
+    ], 
+    [
+      "said", 
+      {
+        "Lemma": "say", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 36
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 39
+      }
+    ]
+  ]
+}

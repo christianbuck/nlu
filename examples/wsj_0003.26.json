@@ -1,0 +1,737 @@
+{
+  "bbn_ne": [
+    [
+      0, 
+      0, 
+      "Workers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">Workers</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (NNS Workers)) (VP (VBD described) (NP (`` ``) (NP (NP (NNS clouds)) (PP (IN of) (NP (JJ blue) (NN dust)))) ('' '') (SBAR (WHNP-1 (WDT that)) (S (NP-SBJ (-NONE- *T*-1)) (VP (VBD hung) (PP-LOC (IN over) (NP (NP (NNS parts)) (PP (IN of) (NP (DT the) (NN factory))))) (, ,) (SBAR-ADV (ADVP (RB even)) (IN though) (S (NP-SBJ (NN exhaust) (NNS fans)) (VP (VBD ventilated) (NP (DT the) (NN area)))))))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "rel", 
+          "3:0", 
+          3, 
+          3, 
+          "clouds"
+        ], 
+        [
+          "ARG1", 
+          "4:1", 
+          4, 
+          6, 
+          "of blue dust"
+        ]
+      ], 
+      "baseform": "cloud", 
+      "frame": "cloud.01", 
+      "tokenNr": "3"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "12:0", 
+          12, 
+          12, 
+          "parts"
+        ], 
+        [
+          "ARG1", 
+          "13:1", 
+          13, 
+          15, 
+          "of the factory"
+        ]
+      ], 
+      "baseform": "part", 
+      "frame": "part.01", 
+      "tokenNr": "12"
+    }
+  ], 
+  "parsetree": "(ROOT (S (NP (NNS Workers)) (VP (VBD described) (NP (NP (`` ``) (NP (NNS clouds)) (PP (IN of) (NP (JJ blue) (NN dust))) ('' '')) (SBAR (WHNP (WDT that)) (S (VP (VBD hung) (PP (IN over) (NP (NP (NNS parts)) (PP (IN of) (NP (DT the) (NN factory))))) (, ,) (SBAR (RB even) (IN though) (S (NP (NN exhaust) (NNS fans)) (VP (VBD ventilated) (NP (DT the) (NN area)))))))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "described"
+        ], 
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          0, 
+          "Workers"
+        ], 
+        [
+          "ARG1", 
+          "2:1", 
+          2, 
+          23, 
+          "`` clouds of blue dust '' that *T*-1 hung over parts of the factory , even though exhaust fans ventilated the area"
+        ]
+      ], 
+      "baseform": "describe", 
+      "basepos": "v", 
+      "frame": "describe.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "10:0", 
+          10, 
+          10, 
+          "hung"
+        ], 
+        [
+          "ARG1", 
+          "9:0", 
+          8, 
+          8, 
+          "that"
+        ], 
+        [
+          "ARGM-LOC", 
+          "11:1", 
+          11, 
+          15, 
+          "over parts of the factory"
+        ], 
+        [
+          "ARGM-ADV", 
+          "17:2", 
+          17, 
+          23, 
+          "even though exhaust fans ventilated the area"
+        ], 
+        [
+          "LINK-SLC", 
+          "3:2*9:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "hang", 
+      "basepos": "v", 
+      "frame": "hang.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "21:0", 
+          21, 
+          21, 
+          "ventilated"
+        ], 
+        [
+          "ARG0", 
+          "19:1", 
+          19, 
+          20, 
+          "exhaust fans"
+        ], 
+        [
+          "ARG1", 
+          "22:1", 
+          22, 
+          23, 
+          "the area"
+        ]
+      ], 
+      "baseform": "ventilate", 
+      "basepos": "v", 
+      "frame": "ventilate.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (NNS Workers) ) (VP (VBD described) (NP (`` ``) (NP (NNS clouds) ) (PP (IN of) (NP (JJ blue) (NN dust) )) ('' '') (SBAR (WHNP-1 (WDT that) ) (S (NP-SBJ (-NONE- *T*-1) ) (VP (VBD hung) (PP-LOC (IN over) (NP (NP (NNS parts) ) (PP (IN of) (NP (DT the) (NN factory) )))) (, ,) (SBAR-ADV (RB even) (IN though) (S (NP-SBJ (NN exhaust) (NNS fans) ) (VP (VBD ventilated) (NP (DT the) (NN area) ))))))))) (. .) ))", 
+  "sentence_nr": 26, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "Workers", 
+      "dep_idx": 0, 
+      "gov": "described", 
+      "gov_idx": 1, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "described", 
+      "dep_idx": 1, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "clouds", 
+      "dep_idx": 3, 
+      "gov": "described", 
+      "gov_idx": 1, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "blue", 
+      "dep_idx": 5, 
+      "gov": "dust", 
+      "gov_idx": 6, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "dust", 
+      "dep_idx": 6, 
+      "gov": "clouds", 
+      "gov_idx": 3, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 8, 
+      "gov": "hung", 
+      "gov_idx": 10, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "hung", 
+      "dep_idx": 10, 
+      "gov": "clouds", 
+      "gov_idx": 3, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "parts", 
+      "dep_idx": 12, 
+      "gov": "hung", 
+      "gov_idx": 10, 
+      "rel": "prep_over"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 14, 
+      "gov": "factory", 
+      "gov_idx": 15, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "factory", 
+      "dep_idx": 15, 
+      "gov": "parts", 
+      "gov_idx": 12, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "even", 
+      "dep_idx": 17, 
+      "gov": "ventilated", 
+      "gov_idx": 21, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "though", 
+      "dep_idx": 18, 
+      "gov": "ventilated", 
+      "gov_idx": 21, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "exhaust", 
+      "dep_idx": 19, 
+      "gov": "fans", 
+      "gov_idx": 20, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "fans", 
+      "dep_idx": 20, 
+      "gov": "ventilated", 
+      "gov_idx": 21, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "ventilated", 
+      "dep_idx": 21, 
+      "gov": "hung", 
+      "gov_idx": 10, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 22, 
+      "gov": "area", 
+      "gov_idx": 23, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "area", 
+      "dep_idx": 23, 
+      "gov": "ventilated", 
+      "gov_idx": 21, 
+      "rel": "dobj"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Workers", 
+      "dep_idx": 0, 
+      "gov": "described", 
+      "gov_idx": 1, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "described", 
+      "dep_idx": 1, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "clouds", 
+      "dep_idx": 3, 
+      "gov": "described", 
+      "gov_idx": 1, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 4, 
+      "gov": "clouds", 
+      "gov_idx": 3, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "blue", 
+      "dep_idx": 5, 
+      "gov": "dust", 
+      "gov_idx": 6, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "dust", 
+      "dep_idx": 6, 
+      "gov": "of", 
+      "gov_idx": 4, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 8, 
+      "gov": "hung", 
+      "gov_idx": 10, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "hung", 
+      "dep_idx": 10, 
+      "gov": "clouds", 
+      "gov_idx": 3, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "over", 
+      "dep_idx": 11, 
+      "gov": "hung", 
+      "gov_idx": 10, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "parts", 
+      "dep_idx": 12, 
+      "gov": "over", 
+      "gov_idx": 11, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 13, 
+      "gov": "parts", 
+      "gov_idx": 12, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 14, 
+      "gov": "factory", 
+      "gov_idx": 15, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "factory", 
+      "dep_idx": 15, 
+      "gov": "of", 
+      "gov_idx": 13, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "even", 
+      "dep_idx": 17, 
+      "gov": "ventilated", 
+      "gov_idx": 21, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "though", 
+      "dep_idx": 18, 
+      "gov": "ventilated", 
+      "gov_idx": 21, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "exhaust", 
+      "dep_idx": 19, 
+      "gov": "fans", 
+      "gov_idx": 20, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "fans", 
+      "dep_idx": 20, 
+      "gov": "ventilated", 
+      "gov_idx": 21, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "ventilated", 
+      "dep_idx": 21, 
+      "gov": "hung", 
+      "gov_idx": 10, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 22, 
+      "gov": "area", 
+      "gov_idx": 23, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "area", 
+      "dep_idx": 23, 
+      "gov": "ventilated", 
+      "gov_idx": 21, 
+      "rel": "dobj"
+    }
+  ], 
+  "text": "Workers described `` clouds of blue dust '' that hung over parts of the factory , even though exhaust fans ventilated the area .", 
+  "timex": [], 
+  "treebank_sentence": "Workers described `` clouds of blue dust '' that *T*-1 hung over parts of the factory , even though exhaust fans ventilated the area .", 
+  "tuples": [
+    [
+      "nsubj", 
+      "described", 
+      "Workers"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "described"
+    ], 
+    [
+      "dobj", 
+      "described", 
+      "clouds"
+    ], 
+    [
+      "nsubj", 
+      "hung", 
+      "clouds"
+    ], 
+    [
+      "amod", 
+      "dust", 
+      "blue"
+    ], 
+    [
+      "prep_of", 
+      "clouds", 
+      "dust"
+    ], 
+    [
+      "rcmod", 
+      "clouds", 
+      "hung"
+    ], 
+    [
+      "prep_over", 
+      "hung", 
+      "parts"
+    ], 
+    [
+      "det", 
+      "factory", 
+      "the"
+    ], 
+    [
+      "prep_of", 
+      "parts", 
+      "factory"
+    ], 
+    [
+      "advmod", 
+      "ventilated", 
+      "even"
+    ], 
+    [
+      "dep", 
+      "ventilated", 
+      "though"
+    ], 
+    [
+      "nn", 
+      "fans", 
+      "exhaust"
+    ], 
+    [
+      "nsubj", 
+      "ventilated", 
+      "fans"
+    ], 
+    [
+      "ccomp", 
+      "hung", 
+      "ventilated"
+    ], 
+    [
+      "det", 
+      "area", 
+      "the"
+    ], 
+    [
+      "dobj", 
+      "ventilated", 
+      "area"
+    ]
+  ], 
+  "words": [
+    [
+      "Workers", 
+      {
+        "Lemma": "worker", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 0
+      }
+    ], 
+    [
+      "described", 
+      {
+        "Lemma": "describe", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 1
+      }
+    ], 
+    [
+      "``", 
+      {
+        "Lemma": "``", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "``", 
+        "idx": 2
+      }
+    ], 
+    [
+      "clouds", 
+      {
+        "Lemma": "cloud", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 3
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 4
+      }
+    ], 
+    [
+      "blue", 
+      {
+        "Lemma": "blue", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 5
+      }
+    ], 
+    [
+      "dust", 
+      {
+        "Lemma": "dust", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 6
+      }
+    ], 
+    [
+      "''", 
+      {
+        "Lemma": "''", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "''", 
+        "idx": 7
+      }
+    ], 
+    [
+      "that", 
+      {
+        "Lemma": "that", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "WDT", 
+        "idx": 8
+      }
+    ], 
+    [
+      "hung", 
+      {
+        "Lemma": "hang", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 10
+      }
+    ], 
+    [
+      "over", 
+      {
+        "Lemma": "over", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 11
+      }
+    ], 
+    [
+      "parts", 
+      {
+        "Lemma": "part", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 12
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 13
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 14
+      }
+    ], 
+    [
+      "factory", 
+      {
+        "Lemma": "factory", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 15
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 16
+      }
+    ], 
+    [
+      "even", 
+      {
+        "Lemma": "even", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 17
+      }
+    ], 
+    [
+      "though", 
+      {
+        "Lemma": "though", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 18
+      }
+    ], 
+    [
+      "exhaust", 
+      {
+        "Lemma": "exhaust", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 19
+      }
+    ], 
+    [
+      "fans", 
+      {
+        "Lemma": "fan", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 20
+      }
+    ], 
+    [
+      "ventilated", 
+      {
+        "Lemma": "ventilate", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 21
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 22
+      }
+    ], 
+    [
+      "area", 
+      {
+        "Lemma": "area", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 23
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 24
+      }
+    ]
+  ]
+}

@@ -1,0 +1,770 @@
+{
+  "bbn_ne": [
+    [
+      3, 
+      3, 
+      "18", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">18</NUMEX>"
+    ], 
+    [
+      7, 
+      7, 
+      "mesothelioma", 
+      "DISEASE", 
+      "", 
+      "<ENAMEX TYPE=\"DISEASE\">mesothelioma</ENAMEX>"
+    ], 
+    [
+      10, 
+      10, 
+      "cancer", 
+      "DISEASE", 
+      "", 
+      "<ENAMEX TYPE=\"DISEASE\">cancer</ENAMEX>"
+    ], 
+    [
+      12, 
+      12, 
+      "asbestosis", 
+      "DISEASE", 
+      "", 
+      "<ENAMEX TYPE=\"DISEASE\">asbestosis</ENAMEX>"
+    ], 
+    [
+      22, 
+      22, 
+      "researchers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">researchers</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (S-TPC-1 (NP-SBJ (NP (DT The) (NN total)) (PP (IN of) (NP (NP (CD 18) (NNS deaths)) (PP-DIR (IN from) (NP (NP (JJ malignant) (NN mesothelioma)) (, ,) (NP (NN lung) (NN cancer)) (CC and) (NP (NN asbestosis))))))) (VP (VBD was) (ADJP-PRD (ADJP (RB far) (JJR higher)) (SBAR (IN than) (S (NP-SBJ (-NONE- *PRO*)) (VP (VBN expected) (S (-NONE- *?*)))))))) (, ,) (NP-SBJ (DT the) (NNS researchers)) (VP (VBD said) (SBAR (-NONE- 0) (S (-NONE- *T*-1)))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG1", 
+          "9:0", 
+          9, 
+          9, 
+          "lung"
+        ], 
+        [
+          "ARG2", 
+          "10:0", 
+          10, 
+          10, 
+          "cancer"
+        ], 
+        [
+          "rel", 
+          "10:0", 
+          10, 
+          10, 
+          "cancer"
+        ]
+      ], 
+      "baseform": "cancer", 
+      "frame": "cancer.01", 
+      "tokenNr": "10"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "4:0", 
+          4, 
+          4, 
+          "deaths"
+        ], 
+        [
+          "ARGM-CAU", 
+          "5:1", 
+          5, 
+          12, 
+          "from malignant mesothelioma , lung cancer and asbestosis"
+        ]
+      ], 
+      "baseform": "death", 
+      "frame": "death.01", 
+      "tokenNr": "4"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "total"
+        ], 
+        [
+          "ARG2", 
+          "2:1", 
+          2, 
+          12, 
+          "of 18 deaths from malignant mesothelioma , lung cancer and asbestosis"
+        ]
+      ], 
+      "baseform": "total", 
+      "frame": "total.01", 
+      "tokenNr": "1"
+    }
+  ], 
+  "parsetree": "(ROOT (S (S (NP (NP (DT The) (NN total)) (PP (IN of) (NP (NP (CD 18) (NNS deaths)) (PP (IN from) (NP (NP (JJ malignant) (NN mesothelioma)) (, ,) (NP (NN lung) (NN cancer)) (CC and) (NP (NN asbestosis))))))) (VP (VBD was) (ADVP (RB far) (JJR higher)) (VP (ADVP (IN than)) (VBN expected)))) (, ,) (NP (DT the) (NNS researchers)) (VP (VBD said)) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "18:0", 
+          18, 
+          18, 
+          "expected"
+        ], 
+        [
+          "ARG0", 
+          "17:0", 
+          17, 
+          17, 
+          "*PRO*"
+        ], 
+        [
+          "ARG1", 
+          "19:0", 
+          19, 
+          19, 
+          "*?*"
+        ]
+      ], 
+      "baseform": "expect", 
+      "basepos": "v", 
+      "frame": "expect.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "23:0", 
+          23, 
+          23, 
+          "said"
+        ], 
+        [
+          "ARG0", 
+          "21:1", 
+          21, 
+          22, 
+          "the researchers"
+        ], 
+        [
+          "ARG1", 
+          "24:1", 
+          0, 
+          19, 
+          "The total of 18 deaths from malignant mesothelioma , lung cancer and asbestosis was far higher than *PRO* expected *?*"
+        ]
+      ], 
+      "baseform": "say", 
+      "basepos": "v", 
+      "frame": "say.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (S-TPC-1 (NP-SBJ (NP (DT The) (NN total) ) (PP (IN of) (NP (NP (CD 18) (NNS deaths) ) (PP-DIR (IN from) (NP (NP (JJ malignant) (NN mesothelioma) ) (, ,) (NP (NN lung) (NN cancer) ) (CC and) (NP (NN asbestosis) )))))) (VP (VBD was) (ADJP-PRD (ADJP (RB far) (JJR higher) ) (SBAR (IN than) (S (NP-SBJ (-NONE- *) ) (VP (VBN expected) (S (-NONE- *?*) ))))))) (, ,) (NP-SBJ (DT the) (NNS researchers) ) (VP (VBD said) (SBAR (-NONE- 0) (S (-NONE- *T*-1) ))) (. .) ))", 
+  "sentence_nr": 14, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "total", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "total", 
+      "dep_idx": 1, 
+      "gov": "higher", 
+      "gov_idx": 15, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "18", 
+      "dep_idx": 3, 
+      "gov": "deaths", 
+      "gov_idx": 4, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "deaths", 
+      "dep_idx": 4, 
+      "gov": "total", 
+      "gov_idx": 1, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "malignant", 
+      "dep_idx": 6, 
+      "gov": "mesothelioma", 
+      "gov_idx": 7, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "mesothelioma", 
+      "dep_idx": 7, 
+      "gov": "deaths", 
+      "gov_idx": 4, 
+      "rel": "prep_from"
+    }, 
+    {
+      "dep": "lung", 
+      "dep_idx": 9, 
+      "gov": "cancer", 
+      "gov_idx": 10, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "cancer", 
+      "dep_idx": 10, 
+      "gov": "deaths", 
+      "gov_idx": 4, 
+      "rel": "prep_from"
+    }, 
+    {
+      "dep": "cancer", 
+      "dep_idx": 10, 
+      "gov": "mesothelioma", 
+      "gov_idx": 7, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "asbestosis", 
+      "dep_idx": 12, 
+      "gov": "deaths", 
+      "gov_idx": 4, 
+      "rel": "prep_from"
+    }, 
+    {
+      "dep": "asbestosis", 
+      "dep_idx": 12, 
+      "gov": "mesothelioma", 
+      "gov_idx": 7, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "was", 
+      "dep_idx": 13, 
+      "gov": "higher", 
+      "gov_idx": 15, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "far", 
+      "dep_idx": 14, 
+      "gov": "higher", 
+      "gov_idx": 15, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "higher", 
+      "dep_idx": 15, 
+      "gov": "said", 
+      "gov_idx": 23, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "than", 
+      "dep_idx": 16, 
+      "gov": "expected", 
+      "gov_idx": 18, 
+      "rel": "mark"
+    }, 
+    {
+      "dep": "expected", 
+      "dep_idx": 18, 
+      "gov": "higher", 
+      "gov_idx": 15, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 21, 
+      "gov": "researchers", 
+      "gov_idx": 22, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "researchers", 
+      "dep_idx": 22, 
+      "gov": "said", 
+      "gov_idx": 23, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 23, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "The", 
+      "dep_idx": 0, 
+      "gov": "total", 
+      "gov_idx": 1, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "total", 
+      "dep_idx": 1, 
+      "gov": "higher", 
+      "gov_idx": 15, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 2, 
+      "gov": "total", 
+      "gov_idx": 1, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "18", 
+      "dep_idx": 3, 
+      "gov": "deaths", 
+      "gov_idx": 4, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "deaths", 
+      "dep_idx": 4, 
+      "gov": "of", 
+      "gov_idx": 2, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "from", 
+      "dep_idx": 5, 
+      "gov": "deaths", 
+      "gov_idx": 4, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "malignant", 
+      "dep_idx": 6, 
+      "gov": "mesothelioma", 
+      "gov_idx": 7, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "mesothelioma", 
+      "dep_idx": 7, 
+      "gov": "from", 
+      "gov_idx": 5, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "lung", 
+      "dep_idx": 9, 
+      "gov": "cancer", 
+      "gov_idx": 10, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "cancer", 
+      "dep_idx": 10, 
+      "gov": "mesothelioma", 
+      "gov_idx": 7, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 11, 
+      "gov": "mesothelioma", 
+      "gov_idx": 7, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "asbestosis", 
+      "dep_idx": 12, 
+      "gov": "mesothelioma", 
+      "gov_idx": 7, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "was", 
+      "dep_idx": 13, 
+      "gov": "higher", 
+      "gov_idx": 15, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "far", 
+      "dep_idx": 14, 
+      "gov": "higher", 
+      "gov_idx": 15, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "higher", 
+      "dep_idx": 15, 
+      "gov": "said", 
+      "gov_idx": 23, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "than", 
+      "dep_idx": 16, 
+      "gov": "expected", 
+      "gov_idx": 18, 
+      "rel": "mark"
+    }, 
+    {
+      "dep": "expected", 
+      "dep_idx": 18, 
+      "gov": "higher", 
+      "gov_idx": 15, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 21, 
+      "gov": "researchers", 
+      "gov_idx": 22, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "researchers", 
+      "dep_idx": 22, 
+      "gov": "said", 
+      "gov_idx": 23, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "said", 
+      "dep_idx": 23, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "text": "The total of 18 deaths from malignant mesothelioma , lung cancer and asbestosis was far higher than expected , the researchers said .", 
+  "timex": [], 
+  "treebank_sentence": "The total of 18 deaths from malignant mesothelioma , lung cancer and asbestosis was far higher than *PRO* expected *?* , the researchers said 0 *T*-1 .", 
+  "tuples": [
+    [
+      "det", 
+      "total", 
+      "The"
+    ], 
+    [
+      "nsubjpass", 
+      "expected", 
+      "total"
+    ], 
+    [
+      "num", 
+      "deaths", 
+      "18"
+    ], 
+    [
+      "prep_of", 
+      "total", 
+      "deaths"
+    ], 
+    [
+      "amod", 
+      "mesothelioma", 
+      "malignant"
+    ], 
+    [
+      "prep_from", 
+      "deaths", 
+      "mesothelioma"
+    ], 
+    [
+      "nn", 
+      "cancer", 
+      "lung"
+    ], 
+    [
+      "prep_from", 
+      "deaths", 
+      "cancer"
+    ], 
+    [
+      "conj_and", 
+      "mesothelioma", 
+      "cancer"
+    ], 
+    [
+      "prep_from", 
+      "deaths", 
+      "asbestosis"
+    ], 
+    [
+      "conj_and", 
+      "mesothelioma", 
+      "asbestosis"
+    ], 
+    [
+      "auxpass", 
+      "expected", 
+      "was"
+    ], 
+    [
+      "advmod", 
+      "higher", 
+      "far"
+    ], 
+    [
+      "advmod", 
+      "expected", 
+      "higher"
+    ], 
+    [
+      "advmod", 
+      "expected", 
+      "than"
+    ], 
+    [
+      "ccomp", 
+      "said", 
+      "expected"
+    ], 
+    [
+      "det", 
+      "researchers", 
+      "the"
+    ], 
+    [
+      "nsubj", 
+      "said", 
+      "researchers"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "said"
+    ]
+  ], 
+  "words": [
+    [
+      "The", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 0
+      }
+    ], 
+    [
+      "total", 
+      {
+        "Lemma": "total", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 1
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 2
+      }
+    ], 
+    [
+      "18", 
+      {
+        "Lemma": "18", 
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "18.0", 
+        "PartOfSpeech": "CD", 
+        "idx": 3
+      }
+    ], 
+    [
+      "deaths", 
+      {
+        "Lemma": "death", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 4
+      }
+    ], 
+    [
+      "from", 
+      {
+        "Lemma": "from", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 5
+      }
+    ], 
+    [
+      "malignant", 
+      {
+        "Lemma": "malignant", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 6
+      }
+    ], 
+    [
+      "mesothelioma", 
+      {
+        "Lemma": "mesothelioma", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 7
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 8
+      }
+    ], 
+    [
+      "lung", 
+      {
+        "Lemma": "lung", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 9
+      }
+    ], 
+    [
+      "cancer", 
+      {
+        "Lemma": "cancer", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 10
+      }
+    ], 
+    [
+      "and", 
+      {
+        "Lemma": "and", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "CC", 
+        "idx": 11
+      }
+    ], 
+    [
+      "asbestosis", 
+      {
+        "Lemma": "asbestosis", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 12
+      }
+    ], 
+    [
+      "was", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 13
+      }
+    ], 
+    [
+      "far", 
+      {
+        "Lemma": "far", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 14
+      }
+    ], 
+    [
+      "higher", 
+      {
+        "Lemma": "higher", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJR", 
+        "idx": 15
+      }
+    ], 
+    [
+      "than", 
+      {
+        "Lemma": "than", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 16
+      }
+    ], 
+    [
+      "expected", 
+      {
+        "Lemma": "expect", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 18
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 20
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 21
+      }
+    ], 
+    [
+      "researchers", 
+      {
+        "Lemma": "researcher", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 22
+      }
+    ], 
+    [
+      "said", 
+      {
+        "Lemma": "say", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 23
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 26
+      }
+    ]
+  ]
+}

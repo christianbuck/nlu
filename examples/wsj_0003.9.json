@@ -1,0 +1,728 @@
+{
+  "bbn_ne": [
+    [
+      0, 
+      0, 
+      "Dr.", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">Dr.</ENAMEX>"
+    ], 
+    [
+      1, 
+      1, 
+      "Talcott", 
+      "PERSON", 
+      "", 
+      "<ENAMEX TYPE=\"PERSON\">Talcott</ENAMEX>"
+    ], 
+    [
+      4, 
+      4, 
+      "team", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">team</ENAMEX>"
+    ], 
+    [
+      6, 
+      6, 
+      "researchers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">researchers</ENAMEX>"
+    ], 
+    [
+      9, 
+      11, 
+      "National Cancer Institute", 
+      "ORGANIZATION", 
+      "OTHER", 
+      "<ENAMEX TYPE=\"ORGANIZATION:OTHER\">National Cancer Institute</ENAMEX>"
+    ], 
+    [
+      17, 
+      18, 
+      "Harvard University", 
+      "ORGANIZATION", 
+      "EDUCATIONAL", 
+      "<ENAMEX TYPE=\"ORGANIZATION:EDUCATIONAL\">Harvard University</ENAMEX>"
+    ], 
+    [
+      20, 
+      21, 
+      "Boston University", 
+      "ORGANIZATION", 
+      "EDUCATIONAL", 
+      "<ENAMEX TYPE=\"ORGANIZATION:EDUCATIONAL\">Boston University</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (NNP Dr.) (NNP Talcott)) (VP (VBD led) (NP (NP (DT a) (NN team)) (PP (IN of) (NP (NP (NNS researchers)) (PP-DIR (IN from) (NP (NP (DT the) (NNP National) (NNP Cancer) (NNP Institute)) (CC and) (NP (NP (DT the) (JJ medical) (NNS schools)) (PP (IN of) (NP (NP (NNP Harvard) (NNP University)) (CC and) (NP (NNP Boston) (NNP University))))))))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG0", 
+          "6:0", 
+          6, 
+          6, 
+          "researchers"
+        ], 
+        [
+          "rel", 
+          "6:0", 
+          6, 
+          6, 
+          "researchers"
+        ], 
+        [
+          "ARGM-LOC", 
+          "7:1", 
+          7, 
+          21, 
+          "from the National Cancer Institute and the medical schools of Harvard University and Boston University"
+        ]
+      ], 
+      "baseform": "researcher", 
+      "frame": "researcher.01", 
+      "tokenNr": "6"
+    }
+  ], 
+  "parsetree": "(ROOT (S (NP (NNP Dr.) (NNP Talcott)) (VP (VBD led) (NP (NP (DT a) (NN team)) (PP (IN of) (NP (NP (NP (NNS researchers)) (PP (IN from) (NP (DT the) (NNP National) (NNP Cancer) (NNP Institute)))) (CC and) (NP (NP (DT the) (JJ medical) (NNS schools)) (PP (IN of) (NP (NP (NNP Harvard) (NNP University)) (CC and) (NP (NNP Boston) (NNP University))))))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "led"
+        ], 
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          1, 
+          "Dr. Talcott"
+        ], 
+        [
+          "ARG1", 
+          "3:2", 
+          3, 
+          21, 
+          "a team of researchers from the National Cancer Institute and the medical schools of Harvard University and Boston University"
+        ]
+      ], 
+      "baseform": "lead", 
+      "basepos": "v", 
+      "frame": "lead.02", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (NNP Dr.) (NNP Talcott) ) (VP (VBD led) (NP (NP (DT a) (NN team) ) (PP (IN of) (NP (NP (NNS researchers) ) (PP-DIR (IN from) (NP (NP (DT the) (NNP National) (NNP Cancer) (NNP Institute) ) (CC and) (NP (NP (DT the) (JJ medical) (NNS schools) ) (PP (IN of) (NP (NP (NNP Harvard) (NNP University) ) (CC and) (NP (NNP Boston) (NNP University) )))))))))) (. .) ))", 
+  "sentence_nr": 9, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "Dr.", 
+      "dep_idx": 0, 
+      "gov": "Talcott", 
+      "gov_idx": 1, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Talcott", 
+      "dep_idx": 1, 
+      "gov": "led", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "led", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 3, 
+      "gov": "team", 
+      "gov_idx": 4, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "team", 
+      "dep_idx": 4, 
+      "gov": "led", 
+      "gov_idx": 2, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "researchers", 
+      "dep_idx": 6, 
+      "gov": "team", 
+      "gov_idx": 4, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 8, 
+      "gov": "Institute", 
+      "gov_idx": 11, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "National", 
+      "dep_idx": 9, 
+      "gov": "Institute", 
+      "gov_idx": 11, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Cancer", 
+      "dep_idx": 10, 
+      "gov": "Institute", 
+      "gov_idx": 11, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Institute", 
+      "dep_idx": 11, 
+      "gov": "researchers", 
+      "gov_idx": 6, 
+      "rel": "prep_from"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 13, 
+      "gov": "schools", 
+      "gov_idx": 15, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "medical", 
+      "dep_idx": 14, 
+      "gov": "schools", 
+      "gov_idx": 15, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "schools", 
+      "dep_idx": 15, 
+      "gov": "researchers", 
+      "gov_idx": 6, 
+      "rel": "prep_from"
+    }, 
+    {
+      "dep": "schools", 
+      "dep_idx": 15, 
+      "gov": "Institute", 
+      "gov_idx": 11, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "Harvard", 
+      "dep_idx": 17, 
+      "gov": "University", 
+      "gov_idx": 18, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "University", 
+      "dep_idx": 18, 
+      "gov": "schools", 
+      "gov_idx": 15, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "Boston", 
+      "dep_idx": 20, 
+      "gov": "University", 
+      "gov_idx": 21, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "University", 
+      "dep_idx": 21, 
+      "gov": "schools", 
+      "gov_idx": 15, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "University", 
+      "dep_idx": 21, 
+      "gov": "University", 
+      "gov_idx": 18, 
+      "rel": "conj_and"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Dr.", 
+      "dep_idx": 0, 
+      "gov": "Talcott", 
+      "gov_idx": 1, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Talcott", 
+      "dep_idx": 1, 
+      "gov": "led", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "led", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 3, 
+      "gov": "team", 
+      "gov_idx": 4, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "team", 
+      "dep_idx": 4, 
+      "gov": "led", 
+      "gov_idx": 2, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 5, 
+      "gov": "team", 
+      "gov_idx": 4, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "researchers", 
+      "dep_idx": 6, 
+      "gov": "of", 
+      "gov_idx": 5, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "from", 
+      "dep_idx": 7, 
+      "gov": "researchers", 
+      "gov_idx": 6, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 8, 
+      "gov": "Institute", 
+      "gov_idx": 11, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "National", 
+      "dep_idx": 9, 
+      "gov": "Institute", 
+      "gov_idx": 11, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Cancer", 
+      "dep_idx": 10, 
+      "gov": "Institute", 
+      "gov_idx": 11, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Institute", 
+      "dep_idx": 11, 
+      "gov": "from", 
+      "gov_idx": 7, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 12, 
+      "gov": "Institute", 
+      "gov_idx": 11, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 13, 
+      "gov": "schools", 
+      "gov_idx": 15, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "medical", 
+      "dep_idx": 14, 
+      "gov": "schools", 
+      "gov_idx": 15, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "schools", 
+      "dep_idx": 15, 
+      "gov": "Institute", 
+      "gov_idx": 11, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 16, 
+      "gov": "schools", 
+      "gov_idx": 15, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "Harvard", 
+      "dep_idx": 17, 
+      "gov": "University", 
+      "gov_idx": 18, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "University", 
+      "dep_idx": 18, 
+      "gov": "of", 
+      "gov_idx": 16, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 19, 
+      "gov": "University", 
+      "gov_idx": 18, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "Boston", 
+      "dep_idx": 20, 
+      "gov": "University", 
+      "gov_idx": 21, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "University", 
+      "dep_idx": 21, 
+      "gov": "University", 
+      "gov_idx": 18, 
+      "rel": "conj"
+    }
+  ], 
+  "text": "Dr. Talcott led a team of researchers from the National Cancer Institute and the medical schools of Harvard University and Boston University .", 
+  "timex": [], 
+  "treebank_sentence": "Dr. Talcott led a team of researchers from the National Cancer Institute and the medical schools of Harvard University and Boston University .", 
+  "tuples": [
+    [
+      "nn", 
+      "Talcott", 
+      "Dr."
+    ], 
+    [
+      "nsubj", 
+      "led", 
+      "Talcott"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "led"
+    ], 
+    [
+      "det", 
+      "team", 
+      "a"
+    ], 
+    [
+      "dobj", 
+      "led", 
+      "team"
+    ], 
+    [
+      "prep_of", 
+      "team", 
+      "researchers"
+    ], 
+    [
+      "det", 
+      "Institute", 
+      "the"
+    ], 
+    [
+      "nn", 
+      "Institute", 
+      "National"
+    ], 
+    [
+      "nn", 
+      "Institute", 
+      "Cancer"
+    ], 
+    [
+      "prep_from", 
+      "researchers", 
+      "Institute"
+    ], 
+    [
+      "det", 
+      "schools", 
+      "the"
+    ], 
+    [
+      "amod", 
+      "schools", 
+      "medical"
+    ], 
+    [
+      "prep_of", 
+      "team", 
+      "schools"
+    ], 
+    [
+      "conj_and", 
+      "researchers", 
+      "schools"
+    ], 
+    [
+      "nn", 
+      "University", 
+      "Harvard"
+    ], 
+    [
+      "prep_of", 
+      "schools", 
+      "University"
+    ], 
+    [
+      "nn", 
+      "University", 
+      "Boston"
+    ], 
+    [
+      "prep_of", 
+      "schools", 
+      "University"
+    ], 
+    [
+      "conj_and", 
+      "University", 
+      "University"
+    ]
+  ], 
+  "words": [
+    [
+      "Dr.", 
+      {
+        "Lemma": "Dr.", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 0
+      }
+    ], 
+    [
+      "Talcott", 
+      {
+        "Lemma": "Talcott", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 1
+      }
+    ], 
+    [
+      "led", 
+      {
+        "Lemma": "lead", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 2
+      }
+    ], 
+    [
+      "a", 
+      {
+        "Lemma": "a", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 3
+      }
+    ], 
+    [
+      "team", 
+      {
+        "Lemma": "team", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 4
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 5
+      }
+    ], 
+    [
+      "researchers", 
+      {
+        "Lemma": "researcher", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 6
+      }
+    ], 
+    [
+      "from", 
+      {
+        "Lemma": "from", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 8
+      }
+    ], 
+    [
+      "National", 
+      {
+        "Lemma": "National", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 9
+      }
+    ], 
+    [
+      "Cancer", 
+      {
+        "Lemma": "Cancer", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 10
+      }
+    ], 
+    [
+      "Institute", 
+      {
+        "Lemma": "Institute", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 11
+      }
+    ], 
+    [
+      "and", 
+      {
+        "Lemma": "and", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "CC", 
+        "idx": 12
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 13
+      }
+    ], 
+    [
+      "medical", 
+      {
+        "Lemma": "medical", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 14
+      }
+    ], 
+    [
+      "schools", 
+      {
+        "Lemma": "school", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 15
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 16
+      }
+    ], 
+    [
+      "Harvard", 
+      {
+        "Lemma": "Harvard", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 17
+      }
+    ], 
+    [
+      "University", 
+      {
+        "Lemma": "University", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 18
+      }
+    ], 
+    [
+      "and", 
+      {
+        "Lemma": "and", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "CC", 
+        "idx": 19
+      }
+    ], 
+    [
+      "Boston", 
+      {
+        "Lemma": "Boston", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 20
+      }
+    ], 
+    [
+      "University", 
+      {
+        "Lemma": "University", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 21
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 22
+      }
+    ]
+  ]
+}

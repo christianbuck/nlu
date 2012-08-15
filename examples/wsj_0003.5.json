@@ -1,0 +1,584 @@
+{
+  "bbn_ne": [
+    [
+      4, 
+      5, 
+      "years ago", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">years ago</TIMEX>"
+    ], 
+    [
+      10, 
+      10, 
+      "asbestos", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">asbestos</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (PRP We)) (VP (VBP 're) (VP (VBG talking) (PP-CLR (IN about) (ADVP-TMP (ADVP (NP (NNS years)) (IN ago)) (SBAR (IN before) (S (NP-SBJ (NN anyone)) (VP (VBD heard) (PP-CLR (IN of) (S-NOM (NP-SBJ (NN asbestos)) (VP (VBG having) (NP (DT any) (JJ questionable) (NNS properties)))))))))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG1", 
+          "10:1", 
+          10, 
+          10, 
+          "asbestos"
+        ], 
+        [
+          "Support", 
+          "11:0", 
+          11, 
+          11, 
+          "having"
+        ], 
+        [
+          "rel", 
+          "14:0", 
+          14, 
+          14, 
+          "properties"
+        ]
+      ], 
+      "baseform": "property", 
+      "frame": "property.02", 
+      "tokenNr": "14"
+    }
+  ], 
+  "parsetree": "(ROOT (S (NP (PRP We)) (VP (VBP 're) (VP (VBG talking) (PP (IN about) (NP (NP (NNS years)) (VP (ADVP (IN ago) (PP (IN before) (NP (NN anyone)))) (VBN heard) (PP (IN of) (NP (NN asbestos))) (S (VP (VBG having) (NP (DT any) (JJ questionable) (NNS properties))))))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "2:0", 
+          2, 
+          2, 
+          "talking"
+        ], 
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          0, 
+          "We"
+        ], 
+        [
+          "ARG1", 
+          "3:1", 
+          3, 
+          14, 
+          "about years ago before anyone heard of asbestos having any questionable properties"
+        ]
+      ], 
+      "baseform": "talk", 
+      "basepos": "v", 
+      "frame": "talk.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "8:0", 
+          8, 
+          8, 
+          "heard"
+        ], 
+        [
+          "ARG0", 
+          "7:1", 
+          7, 
+          7, 
+          "anyone"
+        ], 
+        [
+          "ARG1", 
+          "9:1", 
+          9, 
+          14, 
+          "of asbestos having any questionable properties"
+        ]
+      ], 
+      "baseform": "hear", 
+      "basepos": "v", 
+      "frame": "hear.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "11:0", 
+          11, 
+          11, 
+          "having"
+        ], 
+        [
+          "ARG0", 
+          "10:1", 
+          10, 
+          10, 
+          "asbestos"
+        ], 
+        [
+          "ARG1", 
+          "12:1", 
+          12, 
+          14, 
+          "any questionable properties"
+        ]
+      ], 
+      "baseform": "have", 
+      "basepos": "v", 
+      "frame": "have.03", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (PRP We) ) (VP (VBP 're) (VP (VBG talking) (PP-CLR (IN about) (ADVP-TMP (ADVP (NP (NNS years) ) (IN ago) ) (SBAR (IN before) (S (NP-SBJ (NN anyone) ) (VP (VBD heard) (PP-CLR (IN of) (S-NOM (NP-SBJ (NN asbestos) ) (VP (VBG having) (NP (DT any) (JJ questionable) (NNS properties) ))))))))))) (. .) ))", 
+  "sentence_nr": 5, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "We", 
+      "dep_idx": 0, 
+      "gov": "talking", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "'re", 
+      "dep_idx": 1, 
+      "gov": "talking", 
+      "gov_idx": 2, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "talking", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "about", 
+      "dep_idx": 3, 
+      "gov": "talking", 
+      "gov_idx": 2, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "years", 
+      "dep_idx": 4, 
+      "gov": "ago", 
+      "gov_idx": 5, 
+      "rel": "npadvmod"
+    }, 
+    {
+      "dep": "ago", 
+      "dep_idx": 5, 
+      "gov": "about", 
+      "gov_idx": 3, 
+      "rel": "pcomp"
+    }, 
+    {
+      "dep": "ago", 
+      "dep_idx": 5, 
+      "gov": "about", 
+      "gov_idx": 3, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "before", 
+      "dep_idx": 6, 
+      "gov": "heard", 
+      "gov_idx": 8, 
+      "rel": "mark"
+    }, 
+    {
+      "dep": "anyone", 
+      "dep_idx": 7, 
+      "gov": "heard", 
+      "gov_idx": 8, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "heard", 
+      "dep_idx": 8, 
+      "gov": "ago", 
+      "gov_idx": 5, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 10, 
+      "gov": "having", 
+      "gov_idx": 11, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "having", 
+      "dep_idx": 11, 
+      "gov": "heard", 
+      "gov_idx": 8, 
+      "rel": "prepc_of"
+    }, 
+    {
+      "dep": "any", 
+      "dep_idx": 12, 
+      "gov": "properties", 
+      "gov_idx": 14, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "questionable", 
+      "dep_idx": 13, 
+      "gov": "properties", 
+      "gov_idx": 14, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "properties", 
+      "dep_idx": 14, 
+      "gov": "having", 
+      "gov_idx": 11, 
+      "rel": "dobj"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "We", 
+      "dep_idx": 0, 
+      "gov": "talking", 
+      "gov_idx": 2, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "'re", 
+      "dep_idx": 1, 
+      "gov": "talking", 
+      "gov_idx": 2, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "talking", 
+      "dep_idx": 2, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "about", 
+      "dep_idx": 3, 
+      "gov": "talking", 
+      "gov_idx": 2, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "years", 
+      "dep_idx": 4, 
+      "gov": "ago", 
+      "gov_idx": 5, 
+      "rel": "npadvmod"
+    }, 
+    {
+      "dep": "ago", 
+      "dep_idx": 5, 
+      "gov": "about", 
+      "gov_idx": 3, 
+      "rel": "pcomp"
+    }, 
+    {
+      "dep": "before", 
+      "dep_idx": 6, 
+      "gov": "heard", 
+      "gov_idx": 8, 
+      "rel": "mark"
+    }, 
+    {
+      "dep": "anyone", 
+      "dep_idx": 7, 
+      "gov": "heard", 
+      "gov_idx": 8, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "heard", 
+      "dep_idx": 8, 
+      "gov": "ago", 
+      "gov_idx": 5, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 9, 
+      "gov": "heard", 
+      "gov_idx": 8, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "asbestos", 
+      "dep_idx": 10, 
+      "gov": "having", 
+      "gov_idx": 11, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "having", 
+      "dep_idx": 11, 
+      "gov": "of", 
+      "gov_idx": 9, 
+      "rel": "pcomp"
+    }, 
+    {
+      "dep": "any", 
+      "dep_idx": 12, 
+      "gov": "properties", 
+      "gov_idx": 14, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "questionable", 
+      "dep_idx": 13, 
+      "gov": "properties", 
+      "gov_idx": 14, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "properties", 
+      "dep_idx": 14, 
+      "gov": "having", 
+      "gov_idx": 11, 
+      "rel": "dobj"
+    }
+  ], 
+  "text": "We 're talking about years ago before anyone heard of asbestos having any questionable properties .", 
+  "timex": [
+    [
+      "t1", 
+      3, 
+      5, 
+      "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-1Y\" type=\"DATE\" mod=\"APPROX\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">about years ago</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "We 're talking about years ago before anyone heard of asbestos having any questionable properties .", 
+  "tuples": [
+    [
+      "nsubj", 
+      "talking", 
+      "We"
+    ], 
+    [
+      "aux", 
+      "talking", 
+      "'re"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "talking"
+    ], 
+    [
+      "prep_about", 
+      "talking", 
+      "years"
+    ], 
+    [
+      "advmod", 
+      "heard", 
+      "ago"
+    ], 
+    [
+      "prep_before", 
+      "ago", 
+      "anyone"
+    ], 
+    [
+      "partmod", 
+      "years", 
+      "heard"
+    ], 
+    [
+      "prep_of", 
+      "heard", 
+      "asbestos"
+    ], 
+    [
+      "xcomp", 
+      "heard", 
+      "having"
+    ], 
+    [
+      "det", 
+      "properties", 
+      "any"
+    ], 
+    [
+      "amod", 
+      "properties", 
+      "questionable"
+    ], 
+    [
+      "dobj", 
+      "having", 
+      "properties"
+    ]
+  ], 
+  "words": [
+    [
+      "We", 
+      {
+        "Lemma": "we", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "PRP", 
+        "idx": 0
+      }
+    ], 
+    [
+      "'re", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBP", 
+        "idx": 1
+      }
+    ], 
+    [
+      "talking", 
+      {
+        "Lemma": "talk", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBG", 
+        "idx": 2
+      }
+    ], 
+    [
+      "about", 
+      {
+        "Lemma": "about", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "PartOfSpeech": "IN", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-1Y\" type=\"DATE\" mod=\"APPROX\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">about years ago</TIMEX3>", 
+        "idx": 3
+      }
+    ], 
+    [
+      "years", 
+      {
+        "Lemma": "year", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "PartOfSpeech": "NNS", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-1Y\" type=\"DATE\" mod=\"APPROX\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">about years ago</TIMEX3>", 
+        "idx": 4
+      }
+    ], 
+    [
+      "ago", 
+      {
+        "Lemma": "ago", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "OFFSET", 
+        "PartOfSpeech": "IN", 
+        "Timex": "<TIMEX3 tid=\"t1\" alt_value=\"OFFSET P-1Y\" type=\"DATE\" mod=\"APPROX\" temporalFunction=\"true\" valueFromFunction=\"tf0\" anchorTimeID=\"t0\">about years ago</TIMEX3>", 
+        "idx": 5
+      }
+    ], 
+    [
+      "before", 
+      {
+        "Lemma": "before", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 6
+      }
+    ], 
+    [
+      "anyone", 
+      {
+        "Lemma": "anyone", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "heard", 
+      {
+        "Lemma": "hear", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 8
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 9
+      }
+    ], 
+    [
+      "asbestos", 
+      {
+        "Lemma": "asbestos", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 10
+      }
+    ], 
+    [
+      "having", 
+      {
+        "Lemma": "have", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBG", 
+        "idx": 11
+      }
+    ], 
+    [
+      "any", 
+      {
+        "Lemma": "any", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 12
+      }
+    ], 
+    [
+      "questionable", 
+      {
+        "Lemma": "questionable", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 13
+      }
+    ], 
+    [
+      "properties", 
+      {
+        "Lemma": "property", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 14
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 15
+      }
+    ]
+  ]
+}

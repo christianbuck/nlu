@@ -1,0 +1,630 @@
+{
+  "bbn_ne": [
+    [
+      3, 
+      3, 
+      "fibers", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">fibers</ENAMEX>"
+    ], 
+    [
+      16, 
+      16, 
+      "Dr.", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">Dr.</ENAMEX>"
+    ], 
+    [
+      17, 
+      17, 
+      "Mossman", 
+      "PERSON", 
+      "", 
+      "<ENAMEX TYPE=\"PERSON\">Mossman</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (S-TPC-2 (NP-SBJ-1 (ADJP (RBR More) (JJ common)) (NN chrysotile) (NNS fibers)) (VP (VP (VBP are) (ADJP-PRD (JJ curly))) (CC and) (VP (VBP are) (ADVP-MNR (RBR more) (RB easily)) (VP (VBN rejected) (NP (-NONE- *-1)) (PP (IN by) (NP-LGS (DT the) (NN body))))))) (, ,) (NP-SBJ (NNP Dr.) (NNP Mossman)) (VP (VBD explained) (SBAR (-NONE- 0) (S (-NONE- *T*-2)))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG1", 
+          "2:0", 
+          2, 
+          2, 
+          "chrysotile"
+        ], 
+        [
+          "rel", 
+          "3:0", 
+          3, 
+          3, 
+          "fibers"
+        ]
+      ], 
+      "baseform": "fiber", 
+      "frame": "fiber.01", 
+      "tokenNr": "3"
+    }
+  ], 
+  "parsetree": "(ROOT (S (S (NP (ADJP (RBR More) (JJ common)) (NN chrysotile) (NNS fibers)) (VP (VP (VBP are) (ADJP (JJ curly))) (CC and) (VP (VBP are) (ADVP (RBR more) (RB easily)) (VP (VBN rejected) (PP (IN by) (NP (DT the) (NN body))))))) (, ,) (NP (NNP Dr.) (NNP Mossman)) (VP (VBD explained)) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "10:0", 
+          10, 
+          10, 
+          "rejected"
+        ], 
+        [
+          "ARGM-MNR", 
+          "8:1", 
+          8, 
+          9, 
+          "more easily"
+        ], 
+        [
+          "ARG1", 
+          "11:0", 
+          0, 
+          3, 
+          "More common chrysotile fibers"
+        ], 
+        [
+          "ARG0", 
+          "12:1", 
+          12, 
+          14, 
+          "by the body"
+        ]
+      ], 
+      "baseform": "reject", 
+      "basepos": "v", 
+      "frame": "reject.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "18:0", 
+          18, 
+          18, 
+          "explained"
+        ], 
+        [
+          "ARG0", 
+          "16:1", 
+          16, 
+          17, 
+          "Dr. Mossman"
+        ], 
+        [
+          "ARG1", 
+          "20:0", 
+          0, 
+          14, 
+          "More common chrysotile fibers are curly and are more easily rejected *-1 by the body"
+        ]
+      ], 
+      "baseform": "explain", 
+      "basepos": "v", 
+      "frame": "explain.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (S-TPC-2 (NP-SBJ-1 (RBR More) (JJ common) (NN chrysotile) (NNS fibers) ) (VP (VP (VBP are) (ADJP-PRD (JJ curly) )) (CC and) (VP (VBP are) (VP (ADVP-MNR (RBR more) (RB easily) ) (VBN rejected) (NP (-NONE- *-1) ) (PP (IN by) (NP-LGS (DT the) (NN body) )))))) (, ,) (NP-SBJ (NNP Dr.) (NNP Mossman) ) (VP (VBD explained) (SBAR (-NONE- 0) (S (-NONE- *T*-2) ))) (. .) ))", 
+  "sentence_nr": 20, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "More", 
+      "dep_idx": 0, 
+      "gov": "common", 
+      "gov_idx": 1, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "common", 
+      "dep_idx": 1, 
+      "gov": "fibers", 
+      "gov_idx": 3, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "chrysotile", 
+      "dep_idx": 2, 
+      "gov": "fibers", 
+      "gov_idx": 3, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "fibers", 
+      "dep_idx": 3, 
+      "gov": "curly", 
+      "gov_idx": 5, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "fibers", 
+      "dep_idx": 3, 
+      "gov": "rejected", 
+      "gov_idx": 10, 
+      "rel": "nsubjpass"
+    }, 
+    {
+      "dep": "are", 
+      "dep_idx": 4, 
+      "gov": "curly", 
+      "gov_idx": 5, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "curly", 
+      "dep_idx": 5, 
+      "gov": "explained", 
+      "gov_idx": 18, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "are", 
+      "dep_idx": 7, 
+      "gov": "rejected", 
+      "gov_idx": 10, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "more", 
+      "dep_idx": 8, 
+      "gov": "easily", 
+      "gov_idx": 9, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "easily", 
+      "dep_idx": 9, 
+      "gov": "rejected", 
+      "gov_idx": 10, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "rejected", 
+      "dep_idx": 10, 
+      "gov": "curly", 
+      "gov_idx": 5, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "rejected", 
+      "dep_idx": 10, 
+      "gov": "explained", 
+      "gov_idx": 18, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 13, 
+      "gov": "body", 
+      "gov_idx": 14, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "body", 
+      "dep_idx": 14, 
+      "gov": "rejected", 
+      "gov_idx": 10, 
+      "rel": "agent"
+    }, 
+    {
+      "dep": "Dr.", 
+      "dep_idx": 16, 
+      "gov": "Mossman", 
+      "gov_idx": 17, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Mossman", 
+      "dep_idx": 17, 
+      "gov": "explained", 
+      "gov_idx": 18, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "explained", 
+      "dep_idx": 18, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "More", 
+      "dep_idx": 0, 
+      "gov": "common", 
+      "gov_idx": 1, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "common", 
+      "dep_idx": 1, 
+      "gov": "fibers", 
+      "gov_idx": 3, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "chrysotile", 
+      "dep_idx": 2, 
+      "gov": "fibers", 
+      "gov_idx": 3, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "fibers", 
+      "dep_idx": 3, 
+      "gov": "curly", 
+      "gov_idx": 5, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "are", 
+      "dep_idx": 4, 
+      "gov": "curly", 
+      "gov_idx": 5, 
+      "rel": "cop"
+    }, 
+    {
+      "dep": "curly", 
+      "dep_idx": 5, 
+      "gov": "explained", 
+      "gov_idx": 18, 
+      "rel": "ccomp"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 6, 
+      "gov": "curly", 
+      "gov_idx": 5, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "are", 
+      "dep_idx": 7, 
+      "gov": "rejected", 
+      "gov_idx": 10, 
+      "rel": "auxpass"
+    }, 
+    {
+      "dep": "more", 
+      "dep_idx": 8, 
+      "gov": "easily", 
+      "gov_idx": 9, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "easily", 
+      "dep_idx": 9, 
+      "gov": "rejected", 
+      "gov_idx": 10, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "rejected", 
+      "dep_idx": 10, 
+      "gov": "curly", 
+      "gov_idx": 5, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "by", 
+      "dep_idx": 12, 
+      "gov": "rejected", 
+      "gov_idx": 10, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 13, 
+      "gov": "body", 
+      "gov_idx": 14, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "body", 
+      "dep_idx": 14, 
+      "gov": "by", 
+      "gov_idx": 12, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "Dr.", 
+      "dep_idx": 16, 
+      "gov": "Mossman", 
+      "gov_idx": 17, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Mossman", 
+      "dep_idx": 17, 
+      "gov": "explained", 
+      "gov_idx": 18, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "explained", 
+      "dep_idx": 18, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }
+  ], 
+  "text": "More common chrysotile fibers are curly and are more easily rejected by the body , Dr. Mossman explained .", 
+  "timex": [], 
+  "treebank_sentence": "More common chrysotile fibers are curly and are more easily rejected *-1 by the body , Dr. Mossman explained 0 *T*-2 .", 
+  "tuples": [
+    [
+      "advmod", 
+      "common", 
+      "More"
+    ], 
+    [
+      "amod", 
+      "fibers", 
+      "common"
+    ], 
+    [
+      "nn", 
+      "fibers", 
+      "chrysotile"
+    ], 
+    [
+      "nsubj", 
+      "curly", 
+      "fibers"
+    ], 
+    [
+      "nsubjpass", 
+      "rejected", 
+      "fibers"
+    ], 
+    [
+      "cop", 
+      "curly", 
+      "are"
+    ], 
+    [
+      "ccomp", 
+      "explained", 
+      "curly"
+    ], 
+    [
+      "auxpass", 
+      "rejected", 
+      "are"
+    ], 
+    [
+      "advmod", 
+      "easily", 
+      "more"
+    ], 
+    [
+      "advmod", 
+      "rejected", 
+      "easily"
+    ], 
+    [
+      "conj_and", 
+      "curly", 
+      "rejected"
+    ], 
+    [
+      "ccomp", 
+      "explained", 
+      "rejected"
+    ], 
+    [
+      "det", 
+      "body", 
+      "the"
+    ], 
+    [
+      "agent", 
+      "rejected", 
+      "body"
+    ], 
+    [
+      "nn", 
+      "Mossman", 
+      "Dr."
+    ], 
+    [
+      "nsubj", 
+      "explained", 
+      "Mossman"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "explained"
+    ]
+  ], 
+  "words": [
+    [
+      "More", 
+      {
+        "Lemma": "more", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RBR", 
+        "idx": 0
+      }
+    ], 
+    [
+      "common", 
+      {
+        "Lemma": "common", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 1
+      }
+    ], 
+    [
+      "chrysotile", 
+      {
+        "Lemma": "chrysotile", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 2
+      }
+    ], 
+    [
+      "fibers", 
+      {
+        "Lemma": "fiber", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 3
+      }
+    ], 
+    [
+      "are", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBP", 
+        "idx": 4
+      }
+    ], 
+    [
+      "curly", 
+      {
+        "Lemma": "curly", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 5
+      }
+    ], 
+    [
+      "and", 
+      {
+        "Lemma": "and", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "CC", 
+        "idx": 6
+      }
+    ], 
+    [
+      "are", 
+      {
+        "Lemma": "be", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBP", 
+        "idx": 7
+      }
+    ], 
+    [
+      "more", 
+      {
+        "Lemma": "more", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RBR", 
+        "idx": 8
+      }
+    ], 
+    [
+      "easily", 
+      {
+        "Lemma": "easily", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 9
+      }
+    ], 
+    [
+      "rejected", 
+      {
+        "Lemma": "reject", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 10
+      }
+    ], 
+    [
+      "by", 
+      {
+        "Lemma": "by", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 12
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 13
+      }
+    ], 
+    [
+      "body", 
+      {
+        "Lemma": "body", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 14
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 15
+      }
+    ], 
+    [
+      "Dr.", 
+      {
+        "Lemma": "Dr.", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 16
+      }
+    ], 
+    [
+      "Mossman", 
+      {
+        "Lemma": "Mossman", 
+        "NamedEntityTag": "PERSON", 
+        "PartOfSpeech": "NNP", 
+        "idx": 17
+      }
+    ], 
+    [
+      "explained", 
+      {
+        "Lemma": "explain", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 18
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 21
+      }
+    ]
+  ]
+}

@@ -1,0 +1,970 @@
+{
+  "bbn_ne": [
+    [
+      0, 
+      1, 
+      "Lorillard Inc.", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Lorillard Inc.</ENAMEX>"
+    ], 
+    [
+      6, 
+      7, 
+      "New York", 
+      "GPE", 
+      "CITY", 
+      "<ENAMEX TYPE=\"GPE:CITY\">New York</ENAMEX>"
+    ], 
+    [
+      10, 
+      11, 
+      "Loews Corp.", 
+      "ORGANIZATION", 
+      "CORPORATION", 
+      "<ENAMEX TYPE=\"ORGANIZATION:CORPORATION\">Loews Corp.</ENAMEX>"
+    ], 
+    [
+      15, 
+      15, 
+      "Kent", 
+      "PRODUCT", 
+      "OTHER", 
+      "<ENAMEX TYPE=\"PRODUCT:OTHER\">Kent</ENAMEX>"
+    ], 
+    [
+      20, 
+      20, 
+      "crocidolite", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">crocidolite</ENAMEX>"
+    ], 
+    [
+      23, 
+      23, 
+      "Micronite", 
+      "PRODUCT", 
+      "OTHER", 
+      "<ENAMEX TYPE=\"PRODUCT:OTHER\">Micronite</ENAMEX>"
+    ], 
+    [
+      27, 
+      27, 
+      "1956", 
+      "DATE", 
+      "DATE", 
+      "<TIMEX TYPE=\"DATE:DATE\">1956</TIMEX>"
+    ]
+  ], 
+  "coref_chains": [
+    [
+      0, 
+      17, 
+      3, 
+      "Lorillard Inc. , the unit of New York - based Loews Corp. that makes Kent cigarettes ,"
+    ], 
+    [
+      22, 
+      22, 
+      3, 
+      "its"
+    ]
+  ], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (NP (NNP Lorillard) (NNP Inc.)) (, ,) (NP (NP (NP (DT the) (NN unit)) (PP (IN of) (NP (ADJP (NML (NNP New) (NNP York)) (HYPH -) (VBN based)) (NNP Loews) (NNP Corp.)))) (SBAR (WHNP-2 (WDT that)) (S (NP-SBJ (-NONE- *T*-2)) (VP (VBZ makes) (NP (NNP Kent) (NNS cigarettes)))))) (, ,)) (VP (VBD stopped) (VP (VBG using) (NP (NN crocidolite)) (PP-LOC-CLR (IN in) (NP (PRP$ its) (NN Micronite) (NN cigarette) (NNS filters))) (PP-TMP (IN in) (NP (CD 1956))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG2", 
+          "22:0", 
+          24, 
+          24, 
+          "cigarette"
+        ], 
+        [
+          "ARG0", 
+          "23:0", 
+          25, 
+          25, 
+          "filters"
+        ], 
+        [
+          "rel", 
+          "23:0", 
+          25, 
+          25, 
+          "filters"
+        ]
+      ], 
+      "baseform": "filter", 
+      "frame": "filter.01", 
+      "tokenNr": "23"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "4:0", 
+          4, 
+          4, 
+          "unit"
+        ], 
+        [
+          "ARG1", 
+          "5:1", 
+          5, 
+          11, 
+          "of New York - based Loews Corp."
+        ]
+      ], 
+      "baseform": "unit", 
+      "frame": "unit.01", 
+      "tokenNr": "4"
+    }
+  ], 
+  "parsetree": "(ROOT (S (NP (NP (NNP Lorillard) (NNP Inc.)) (, ,) (NP (NP (DT the) (NN unit)) (PP (IN of) (NP (NP (NNP New) (NNP York)) (: -) (VP (VBN based) (NP (NP (NNP Loews) (NNP Corp.)) (SBAR (WHNP (WDT that)) (S (VP (VBZ makes) (NP (NNP Kent) (NNS cigarettes)))))))))) (, ,)) (VP (VBD stopped) (S (VP (VBG using) (NP (NN crocidolite)) (PP (IN in) (NP (NP (PRP$ its) (NN Micronite) (NN cigarette) (NNS filters)) (PP (IN in) (NP (CD 1956)))))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "14:0", 
+          14, 
+          14, 
+          "makes"
+        ], 
+        [
+          "ARG0", 
+          "13:0", 
+          12, 
+          12, 
+          "that"
+        ], 
+        [
+          "ARG1", 
+          "15:1", 
+          15, 
+          16, 
+          "Kent cigarettes"
+        ], 
+        [
+          "LINK-SLC", 
+          "3:2*13:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "make", 
+      "basepos": "v", 
+      "frame": "make.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "18:0", 
+          18, 
+          18, 
+          "stopped"
+        ], 
+        [
+          "ARG0", 
+          "0:2", 
+          0, 
+          17, 
+          "Lorillard Inc. , the unit of New York - based Loews Corp. that *T*-2 makes Kent cigarettes ,"
+        ], 
+        [
+          "ARG1", 
+          "19:1", 
+          19, 
+          27, 
+          "using crocidolite in its Micronite cigarette filters in 1956"
+        ]
+      ], 
+      "baseform": "stop", 
+      "basepos": "v", 
+      "frame": "stop.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "19:0", 
+          19, 
+          19, 
+          "using"
+        ], 
+        [
+          "ARG0", 
+          "0:2", 
+          0, 
+          17, 
+          "Lorillard Inc. , the unit of New York - based Loews Corp. that *T*-2 makes Kent cigarettes ,"
+        ], 
+        [
+          "ARG1", 
+          "20:1", 
+          20, 
+          20, 
+          "crocidolite"
+        ], 
+        [
+          "ARGM-LOC", 
+          "21:1", 
+          21, 
+          25, 
+          "in its Micronite cigarette filters"
+        ], 
+        [
+          "ARGM-TMP", 
+          "26:1", 
+          26, 
+          27, 
+          "in 1956"
+        ]
+      ], 
+      "baseform": "use", 
+      "basepos": "v", 
+      "frame": "use.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (NP (NNP Lorillard) (NNP Inc.) ) (, ,) (NP (NP (DT the) (NN unit) ) (PP (IN of) (NP (ADJP (JJ New) (JJ York-based) ) (NNP Loews) (NNP Corp.) )) (SBAR (WHNP-2 (WDT that) ) (S (NP-SBJ (-NONE- *T*-2) ) (VP (VBZ makes) (NP (NNP Kent) (NNS cigarettes) ))))) (, ,) ) (VP (VBD stopped) (VP (VBG using) (NP (NN crocidolite) ) (PP-LOC-CLR (IN in) (NP (PRP$ its) (NN Micronite) (NN cigarette) (NNS filters) )) (PP-TMP (IN in) (NP (CD 1956) )))) (. .) ))", 
+  "sentence_nr": 2, 
+  "stanford_coref": [
+    [
+      [
+        "Lorillard Inc.", 
+        0, 
+        2
+      ], 
+      [
+        "Lorillard Inc. , the unit of New York - based Loews Corp. that makes Kent cigarettes ,", 
+        0, 
+        17
+      ]
+    ], 
+    [
+      [
+        "the unit of New York - based Loews Corp. that makes Kent cigarettes", 
+        3, 
+        16
+      ], 
+      [
+        "Lorillard Inc. , the unit of New York - based Loews Corp. that makes Kent cigarettes ,", 
+        0, 
+        17
+      ]
+    ], 
+    [
+      [
+        "its", 
+        21, 
+        22
+      ], 
+      [
+        "Lorillard Inc. , the unit of New York - based Loews Corp. that makes Kent cigarettes ,", 
+        0, 
+        17
+      ]
+    ]
+  ], 
+  "stanford_dep": [
+    {
+      "dep": "Lorillard", 
+      "dep_idx": 0, 
+      "gov": "Inc.", 
+      "gov_idx": 1, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Inc.", 
+      "dep_idx": 1, 
+      "gov": "stopped", 
+      "gov_idx": 18, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 3, 
+      "gov": "unit", 
+      "gov_idx": 4, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "unit", 
+      "dep_idx": 4, 
+      "gov": "Inc.", 
+      "gov_idx": 1, 
+      "rel": "appos"
+    }, 
+    {
+      "dep": "unit", 
+      "dep_idx": 4, 
+      "gov": "makes", 
+      "gov_idx": 14, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "New", 
+      "dep_idx": 6, 
+      "gov": "York", 
+      "gov_idx": 7, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "York", 
+      "dep_idx": 7, 
+      "gov": "based", 
+      "gov_idx": 9, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "based", 
+      "dep_idx": 9, 
+      "gov": "Corp.", 
+      "gov_idx": 11, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "Loews", 
+      "dep_idx": 10, 
+      "gov": "Corp.", 
+      "gov_idx": 11, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Corp.", 
+      "dep_idx": 11, 
+      "gov": "unit", 
+      "gov_idx": 4, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "makes", 
+      "dep_idx": 14, 
+      "gov": "unit", 
+      "gov_idx": 4, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "Kent", 
+      "dep_idx": 15, 
+      "gov": "cigarettes", 
+      "gov_idx": 16, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "cigarettes", 
+      "dep_idx": 16, 
+      "gov": "makes", 
+      "gov_idx": 14, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "stopped", 
+      "dep_idx": 18, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "using", 
+      "dep_idx": 19, 
+      "gov": "stopped", 
+      "gov_idx": 18, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "crocidolite", 
+      "dep_idx": 20, 
+      "gov": "using", 
+      "gov_idx": 19, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "its", 
+      "dep_idx": 22, 
+      "gov": "filters", 
+      "gov_idx": 25, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "Micronite", 
+      "dep_idx": 23, 
+      "gov": "filters", 
+      "gov_idx": 25, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "cigarette", 
+      "dep_idx": 24, 
+      "gov": "filters", 
+      "gov_idx": 25, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "filters", 
+      "dep_idx": 25, 
+      "gov": "using", 
+      "gov_idx": 19, 
+      "rel": "prep_in"
+    }, 
+    {
+      "dep": "1956", 
+      "dep_idx": 27, 
+      "gov": "using", 
+      "gov_idx": 19, 
+      "rel": "prep_in"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Lorillard", 
+      "dep_idx": 0, 
+      "gov": "Inc.", 
+      "gov_idx": 1, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Inc.", 
+      "dep_idx": 1, 
+      "gov": "stopped", 
+      "gov_idx": 18, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 3, 
+      "gov": "unit", 
+      "gov_idx": 4, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "unit", 
+      "dep_idx": 4, 
+      "gov": "Inc.", 
+      "gov_idx": 1, 
+      "rel": "appos"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 5, 
+      "gov": "unit", 
+      "gov_idx": 4, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "New", 
+      "dep_idx": 6, 
+      "gov": "York", 
+      "gov_idx": 7, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "York", 
+      "dep_idx": 7, 
+      "gov": "based", 
+      "gov_idx": 9, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "based", 
+      "dep_idx": 9, 
+      "gov": "Corp.", 
+      "gov_idx": 11, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "Loews", 
+      "dep_idx": 10, 
+      "gov": "Corp.", 
+      "gov_idx": 11, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "Corp.", 
+      "dep_idx": 11, 
+      "gov": "of", 
+      "gov_idx": 5, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "that", 
+      "dep_idx": 12, 
+      "gov": "makes", 
+      "gov_idx": 14, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "makes", 
+      "dep_idx": 14, 
+      "gov": "unit", 
+      "gov_idx": 4, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "Kent", 
+      "dep_idx": 15, 
+      "gov": "cigarettes", 
+      "gov_idx": 16, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "cigarettes", 
+      "dep_idx": 16, 
+      "gov": "makes", 
+      "gov_idx": 14, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "stopped", 
+      "dep_idx": 18, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "using", 
+      "dep_idx": 19, 
+      "gov": "stopped", 
+      "gov_idx": 18, 
+      "rel": "dep"
+    }, 
+    {
+      "dep": "crocidolite", 
+      "dep_idx": 20, 
+      "gov": "using", 
+      "gov_idx": 19, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 21, 
+      "gov": "using", 
+      "gov_idx": 19, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "its", 
+      "dep_idx": 22, 
+      "gov": "filters", 
+      "gov_idx": 25, 
+      "rel": "poss"
+    }, 
+    {
+      "dep": "Micronite", 
+      "dep_idx": 23, 
+      "gov": "filters", 
+      "gov_idx": 25, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "cigarette", 
+      "dep_idx": 24, 
+      "gov": "filters", 
+      "gov_idx": 25, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "filters", 
+      "dep_idx": 25, 
+      "gov": "in", 
+      "gov_idx": 21, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 26, 
+      "gov": "using", 
+      "gov_idx": 19, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "1956", 
+      "dep_idx": 27, 
+      "gov": "in", 
+      "gov_idx": 26, 
+      "rel": "pobj"
+    }
+  ], 
+  "text": "Lorillard Inc. , the unit of New York - based Loews Corp. that makes Kent cigarettes , stopped using crocidolite in its Micronite cigarette filters in 1956 .", 
+  "timex": [
+    [
+      "t1", 
+      27, 
+      27, 
+      "<TIMEX3 tid=\"t1\" value=\"1956\" type=\"DATE\">1956</TIMEX3>"
+    ]
+  ], 
+  "treebank_sentence": "Lorillard Inc. , the unit of New York - based Loews Corp. that *T*-2 makes Kent cigarettes , stopped using crocidolite in its Micronite cigarette filters in 1956 .", 
+  "tuples": [
+    [
+      "nn", 
+      "Inc.", 
+      "Lorillard"
+    ], 
+    [
+      "nsubj", 
+      "stopped", 
+      "Inc."
+    ], 
+    [
+      "det", 
+      "unit", 
+      "the"
+    ], 
+    [
+      "appos", 
+      "Inc.", 
+      "unit"
+    ], 
+    [
+      "nn", 
+      "York", 
+      "New"
+    ], 
+    [
+      "prep_of", 
+      "unit", 
+      "York"
+    ], 
+    [
+      "partmod", 
+      "York", 
+      "based"
+    ], 
+    [
+      "nn", 
+      "Corp.", 
+      "Loews"
+    ], 
+    [
+      "dobj", 
+      "based", 
+      "Corp."
+    ], 
+    [
+      "nsubj", 
+      "makes", 
+      "Corp."
+    ], 
+    [
+      "rcmod", 
+      "Corp.", 
+      "makes"
+    ], 
+    [
+      "nn", 
+      "cigarettes", 
+      "Kent"
+    ], 
+    [
+      "dobj", 
+      "makes", 
+      "cigarettes"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "stopped"
+    ], 
+    [
+      "xcomp", 
+      "stopped", 
+      "using"
+    ], 
+    [
+      "dobj", 
+      "using", 
+      "crocidolite"
+    ], 
+    [
+      "poss", 
+      "filters", 
+      "its"
+    ], 
+    [
+      "nn", 
+      "filters", 
+      "Micronite"
+    ], 
+    [
+      "nn", 
+      "filters", 
+      "cigarette"
+    ], 
+    [
+      "prep_in", 
+      "using", 
+      "filters"
+    ], 
+    [
+      "prep_in", 
+      "filters", 
+      "1956"
+    ]
+  ], 
+  "words": [
+    [
+      "Lorillard", 
+      {
+        "Lemma": "Lorillard", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 0
+      }
+    ], 
+    [
+      "Inc.", 
+      {
+        "Lemma": "Inc.", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 1
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 2
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 3
+      }
+    ], 
+    [
+      "unit", 
+      {
+        "Lemma": "unit", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 4
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 5
+      }
+    ], 
+    [
+      "New", 
+      {
+        "Lemma": "New", 
+        "NamedEntityTag": "LOCATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 6
+      }
+    ], 
+    [
+      "York", 
+      {
+        "Lemma": "York", 
+        "NamedEntityTag": "LOCATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 7
+      }
+    ], 
+    [
+      "-", 
+      {
+        "Lemma": "-", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ":", 
+        "idx": 8
+      }
+    ], 
+    [
+      "based", 
+      {
+        "Lemma": "base", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 9
+      }
+    ], 
+    [
+      "Loews", 
+      {
+        "Lemma": "Loews", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 10
+      }
+    ], 
+    [
+      "Corp.", 
+      {
+        "Lemma": "Corp.", 
+        "NamedEntityTag": "ORGANIZATION", 
+        "PartOfSpeech": "NNP", 
+        "idx": 11
+      }
+    ], 
+    [
+      "that", 
+      {
+        "Lemma": "that", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "WDT", 
+        "idx": 12
+      }
+    ], 
+    [
+      "makes", 
+      {
+        "Lemma": "make", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBZ", 
+        "idx": 14
+      }
+    ], 
+    [
+      "Kent", 
+      {
+        "Lemma": "Kent", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNP", 
+        "idx": 15
+      }
+    ], 
+    [
+      "cigarettes", 
+      {
+        "Lemma": "cigarette", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 16
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 17
+      }
+    ], 
+    [
+      "stopped", 
+      {
+        "Lemma": "stop", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 18
+      }
+    ], 
+    [
+      "using", 
+      {
+        "Lemma": "use", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBG", 
+        "idx": 19
+      }
+    ], 
+    [
+      "crocidolite", 
+      {
+        "Lemma": "crocidolite", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 20
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 21
+      }
+    ], 
+    [
+      "its", 
+      {
+        "Lemma": "its", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "PRP$", 
+        "idx": 22
+      }
+    ], 
+    [
+      "Micronite", 
+      {
+        "Lemma": "micronite", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 23
+      }
+    ], 
+    [
+      "cigarette", 
+      {
+        "Lemma": "cigarette", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 24
+      }
+    ], 
+    [
+      "filters", 
+      {
+        "Lemma": "filter", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 25
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 26
+      }
+    ], 
+    [
+      "1956", 
+      {
+        "Lemma": "1956", 
+        "NamedEntityTag": "DATE", 
+        "NormalizedNamedEntityTag": "1956", 
+        "PartOfSpeech": "CD", 
+        "Timex": "<TIMEX3 tid=\"t1\" value=\"1956\" type=\"DATE\">1956</TIMEX3>", 
+        "idx": 27
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 28
+      }
+    ]
+  ]
+}

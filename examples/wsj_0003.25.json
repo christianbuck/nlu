@@ -1,0 +1,1201 @@
+{
+  "bbn_ne": [
+    [
+      0, 
+      0, 
+      "Workers", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">Workers</ENAMEX>"
+    ], 
+    [
+      8, 
+      8, 
+      "material", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">material</ENAMEX>"
+    ], 
+    [
+      19, 
+      19, 
+      "fibers", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">fibers</ENAMEX>"
+    ], 
+    [
+      25, 
+      25, 
+      "fibers", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">fibers</ENAMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (NP-SBJ (NNS Workers)) (VP (VP (VBD dumped) (NP (NP (JJ large) (NN burlap) (NNS sacks)) (PP (IN of) (NP (DT the) (VBN imported) (NN material)))) (PP-DIR (IN into) (NP (DT a) (JJ huge) (NN bin)))) (, ,) (VP (VBD poured) (PRT (RP in)) (NP (NML (NN cotton) (CC and) (NN acetate)) (NNS fibers))) (CC and) (ADVP-MNR (RB mechanically)) (VP (VBD mixed) (NP (DT the) (JJ dry) (NNS fibers)) (PP-LOC (IN in) (NP (NP (DT a) (NN process)) (VP (VBN used) (NP (-NONE- *)) (S-CLR (NP-SBJ (-NONE- *PRO*)) (VP (TO to) (VP (VB make) (NP (NNS filters)))))))))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG1", 
+          "16:0,17:0,18:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "rel", 
+          "19:0", 
+          19, 
+          19, 
+          "fibers"
+        ]
+      ], 
+      "baseform": "fiber", 
+      "frame": "fiber.01", 
+      "tokenNr": "19"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "4:0", 
+          4, 
+          4, 
+          "sacks"
+        ], 
+        [
+          "ARG1", 
+          "5:1", 
+          5, 
+          8, 
+          "of the imported material"
+        ]
+      ], 
+      "baseform": "sack", 
+      "frame": "sack.02", 
+      "tokenNr": "4"
+    }
+  ], 
+  "parsetree": "(ROOT (SINV (S (NP (NNS Workers)) (VP (VBD dumped) (NP (NP (JJ large) (NN burlap) (NNS sacks)) (PP (IN of) (NP (DT the) (VBN imported) (NN material)))) (PP (IN into) (NP (DT a) (JJ huge) (NN bin))))) (, ,) (VP (VBD poured) (PP (IN in) (NP (NP (NP (NN cotton)) (CC and) (NP (NN acetate) (NNS fibers))) (CC and) (ADJP (RB mechanically) (JJ mixed))))) (NP (NP (DT the) (JJ dry) (NNS fibers)) (PP (IN in) (NP (NP (DT a) (NN process)) (VP (VBN used) (S (VP (TO to) (VP (VB make) (NP (NNS filters))))))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "1:0", 
+          1, 
+          1, 
+          "dumped"
+        ], 
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          0, 
+          "Workers"
+        ], 
+        [
+          "ARG1", 
+          "2:2", 
+          2, 
+          8, 
+          "large burlap sacks of the imported material"
+        ], 
+        [
+          "ARGM-DIR", 
+          "9:1", 
+          9, 
+          12, 
+          "into a huge bin"
+        ]
+      ], 
+      "baseform": "dump", 
+      "basepos": "v", 
+      "frame": "dump.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "7:0", 
+          7, 
+          7, 
+          "imported"
+        ], 
+        [
+          "ARG1", 
+          "8:0", 
+          8, 
+          8, 
+          "material"
+        ]
+      ], 
+      "baseform": "import", 
+      "basepos": "v", 
+      "frame": "import.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "14:0", 
+          14, 
+          14, 
+          "poured"
+        ], 
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          0, 
+          "Workers"
+        ], 
+        [
+          "ARGM-DIR", 
+          "15:1", 
+          15, 
+          15, 
+          "in"
+        ], 
+        [
+          "ARG1", 
+          "16:2", 
+          16, 
+          19, 
+          "cotton and acetate fibers"
+        ]
+      ], 
+      "baseform": "pour", 
+      "basepos": "v", 
+      "frame": "pour.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "22:0", 
+          22, 
+          22, 
+          "mixed"
+        ], 
+        [
+          "ARG0", 
+          "0:1", 
+          0, 
+          0, 
+          "Workers"
+        ], 
+        [
+          "ARGM-MNR", 
+          "21:1", 
+          21, 
+          21, 
+          "mechanically"
+        ], 
+        [
+          "ARG1", 
+          "23:1", 
+          23, 
+          25, 
+          "the dry fibers"
+        ], 
+        [
+          "ARGM-LOC", 
+          "26:1", 
+          26, 
+          34, 
+          "in a process used * *PRO* to make filters"
+        ]
+      ], 
+      "baseform": "mix", 
+      "basepos": "v", 
+      "frame": "mix.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "29:0", 
+          29, 
+          29, 
+          "used"
+        ], 
+        [
+          "ARG1", 
+          "30:0", 
+          30, 
+          30, 
+          "*"
+        ], 
+        [
+          "ARG2", 
+          "31:2", 
+          31, 
+          34, 
+          "*PRO* to make filters"
+        ], 
+        [
+          "LINK-PCR", 
+          "27:1*30:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "use", 
+      "basepos": "v", 
+      "frame": "use.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "33:0", 
+          33, 
+          33, 
+          "make"
+        ], 
+        [
+          "ARG0", 
+          "31:0", 
+          31, 
+          31, 
+          "*PRO*"
+        ], 
+        [
+          "ARG1", 
+          "34:1", 
+          34, 
+          34, 
+          "filters"
+        ]
+      ], 
+      "baseform": "make", 
+      "basepos": "v", 
+      "frame": "make.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (NP-SBJ (NNS Workers) ) (VP (VP (VBD dumped) (NP (NP (JJ large) (NN burlap) (NNS sacks) ) (PP (IN of) (NP (DT the) (VBN imported) (NN material) ))) (PP-DIR (IN into) (NP (DT a) (JJ huge) (NN bin) ))) (, ,) (VP (VBD poured) (PRT (RP in) ) (NP (NN cotton) (CC and) (NN acetate) (NNS fibers) )) (CC and) (VP (VP (ADVP-MNR (RB mechanically) ) (VBD mixed) (NP (DT the) (JJ dry) (NNS fibers) ) (PP-LOC (IN in) (NP (NP (DT a) (NN process) ) (RRC (VP (VBN used) (NP (-NONE- *) ) (S-CLR (NP-SBJ (-NONE- *) ) (VP (TO to) (VP (VB make) (NP (NNS filters) ))))))))))) (. .) ))", 
+  "sentence_nr": 25, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "Workers", 
+      "dep_idx": 0, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "Workers", 
+      "dep_idx": 0, 
+      "gov": "poured", 
+      "gov_idx": 14, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "Workers", 
+      "dep_idx": 0, 
+      "gov": "mixed", 
+      "gov_idx": 22, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "dumped", 
+      "dep_idx": 1, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "large", 
+      "dep_idx": 2, 
+      "gov": "sacks", 
+      "gov_idx": 4, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "burlap", 
+      "dep_idx": 3, 
+      "gov": "sacks", 
+      "gov_idx": 4, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "sacks", 
+      "dep_idx": 4, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 6, 
+      "gov": "material", 
+      "gov_idx": 8, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "imported", 
+      "dep_idx": 7, 
+      "gov": "material", 
+      "gov_idx": 8, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "material", 
+      "dep_idx": 8, 
+      "gov": "sacks", 
+      "gov_idx": 4, 
+      "rel": "prep_of"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 10, 
+      "gov": "bin", 
+      "gov_idx": 12, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "huge", 
+      "dep_idx": 11, 
+      "gov": "bin", 
+      "gov_idx": 12, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "bin", 
+      "dep_idx": 12, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "prep_into"
+    }, 
+    {
+      "dep": "poured", 
+      "dep_idx": 14, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 15, 
+      "gov": "poured", 
+      "gov_idx": 14, 
+      "rel": "prt"
+    }, 
+    {
+      "dep": "cotton", 
+      "dep_idx": 16, 
+      "gov": "fibers", 
+      "gov_idx": 19, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "acetate", 
+      "dep_idx": 18, 
+      "gov": "cotton", 
+      "gov_idx": 16, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "acetate", 
+      "dep_idx": 18, 
+      "gov": "fibers", 
+      "gov_idx": 19, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "fibers", 
+      "dep_idx": 19, 
+      "gov": "poured", 
+      "gov_idx": 14, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "mechanically", 
+      "dep_idx": 21, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "mechanically", 
+      "dep_idx": 21, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "mixed", 
+      "dep_idx": 22, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "conj_and"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 23, 
+      "gov": "fibers", 
+      "gov_idx": 25, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "dry", 
+      "dep_idx": 24, 
+      "gov": "fibers", 
+      "gov_idx": 25, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "fibers", 
+      "dep_idx": 25, 
+      "gov": "mixed", 
+      "gov_idx": 22, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 27, 
+      "gov": "process", 
+      "gov_idx": 28, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "process", 
+      "dep_idx": 28, 
+      "gov": "mixed", 
+      "gov_idx": 22, 
+      "rel": "prep_in"
+    }, 
+    {
+      "dep": "process", 
+      "dep_idx": 28, 
+      "gov": "make", 
+      "gov_idx": 33, 
+      "rel": "xsubj"
+    }, 
+    {
+      "dep": "used", 
+      "dep_idx": 29, 
+      "gov": "process", 
+      "gov_idx": 28, 
+      "rel": "partmod"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 32, 
+      "gov": "make", 
+      "gov_idx": 33, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "make", 
+      "dep_idx": 33, 
+      "gov": "used", 
+      "gov_idx": 29, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "filters", 
+      "dep_idx": 34, 
+      "gov": "make", 
+      "gov_idx": 33, 
+      "rel": "dobj"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Workers", 
+      "dep_idx": 0, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "dumped", 
+      "dep_idx": 1, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "large", 
+      "dep_idx": 2, 
+      "gov": "sacks", 
+      "gov_idx": 4, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "burlap", 
+      "dep_idx": 3, 
+      "gov": "sacks", 
+      "gov_idx": 4, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "sacks", 
+      "dep_idx": 4, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "of", 
+      "dep_idx": 5, 
+      "gov": "sacks", 
+      "gov_idx": 4, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 6, 
+      "gov": "material", 
+      "gov_idx": 8, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "imported", 
+      "dep_idx": 7, 
+      "gov": "material", 
+      "gov_idx": 8, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "material", 
+      "dep_idx": 8, 
+      "gov": "of", 
+      "gov_idx": 5, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "into", 
+      "dep_idx": 9, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 10, 
+      "gov": "bin", 
+      "gov_idx": 12, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "huge", 
+      "dep_idx": 11, 
+      "gov": "bin", 
+      "gov_idx": 12, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "bin", 
+      "dep_idx": 12, 
+      "gov": "into", 
+      "gov_idx": 9, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "poured", 
+      "dep_idx": 14, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 15, 
+      "gov": "poured", 
+      "gov_idx": 14, 
+      "rel": "prt"
+    }, 
+    {
+      "dep": "cotton", 
+      "dep_idx": 16, 
+      "gov": "fibers", 
+      "gov_idx": 19, 
+      "rel": "nn"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 17, 
+      "gov": "cotton", 
+      "gov_idx": 16, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "acetate", 
+      "dep_idx": 18, 
+      "gov": "cotton", 
+      "gov_idx": 16, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "fibers", 
+      "dep_idx": 19, 
+      "gov": "poured", 
+      "gov_idx": 14, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "and", 
+      "dep_idx": 20, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "cc"
+    }, 
+    {
+      "dep": "mechanically", 
+      "dep_idx": 21, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "mixed", 
+      "dep_idx": 22, 
+      "gov": "dumped", 
+      "gov_idx": 1, 
+      "rel": "conj"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 23, 
+      "gov": "fibers", 
+      "gov_idx": 25, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "dry", 
+      "dep_idx": 24, 
+      "gov": "fibers", 
+      "gov_idx": 25, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "fibers", 
+      "dep_idx": 25, 
+      "gov": "mixed", 
+      "gov_idx": 22, 
+      "rel": "dobj"
+    }, 
+    {
+      "dep": "in", 
+      "dep_idx": 26, 
+      "gov": "mixed", 
+      "gov_idx": 22, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "a", 
+      "dep_idx": 27, 
+      "gov": "process", 
+      "gov_idx": 28, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "process", 
+      "dep_idx": 28, 
+      "gov": "in", 
+      "gov_idx": 26, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "used", 
+      "dep_idx": 29, 
+      "gov": "process", 
+      "gov_idx": 28, 
+      "rel": "partmod"
+    }, 
+    {
+      "dep": "to", 
+      "dep_idx": 32, 
+      "gov": "make", 
+      "gov_idx": 33, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "make", 
+      "dep_idx": 33, 
+      "gov": "used", 
+      "gov_idx": 29, 
+      "rel": "xcomp"
+    }, 
+    {
+      "dep": "filters", 
+      "dep_idx": 34, 
+      "gov": "make", 
+      "gov_idx": 33, 
+      "rel": "dobj"
+    }
+  ], 
+  "text": "Workers dumped large burlap sacks of the imported material into a huge bin , poured in cotton and acetate fibers and mechanically mixed the dry fibers in a process used to make filters .", 
+  "timex": [], 
+  "treebank_sentence": "Workers dumped large burlap sacks of the imported material into a huge bin , poured in cotton and acetate fibers and mechanically mixed the dry fibers in a process used * *PRO* to make filters .", 
+  "tuples": [
+    [
+      "nsubj", 
+      "dumped", 
+      "Workers"
+    ], 
+    [
+      "ccomp", 
+      "poured", 
+      "dumped"
+    ], 
+    [
+      "amod", 
+      "sacks", 
+      "large"
+    ], 
+    [
+      "nn", 
+      "sacks", 
+      "burlap"
+    ], 
+    [
+      "dobj", 
+      "dumped", 
+      "sacks"
+    ], 
+    [
+      "det", 
+      "material", 
+      "the"
+    ], 
+    [
+      "amod", 
+      "material", 
+      "imported"
+    ], 
+    [
+      "prep_of", 
+      "sacks", 
+      "material"
+    ], 
+    [
+      "det", 
+      "bin", 
+      "a"
+    ], 
+    [
+      "amod", 
+      "bin", 
+      "huge"
+    ], 
+    [
+      "prep_into", 
+      "dumped", 
+      "bin"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "poured"
+    ], 
+    [
+      "prep_in", 
+      "poured", 
+      "cotton"
+    ], 
+    [
+      "nn", 
+      "fibers", 
+      "acetate"
+    ], 
+    [
+      "prep_in", 
+      "poured", 
+      "fibers"
+    ], 
+    [
+      "conj_and", 
+      "cotton", 
+      "fibers"
+    ], 
+    [
+      "advmod", 
+      "mixed", 
+      "mechanically"
+    ], 
+    [
+      "prep_in", 
+      "poured", 
+      "mixed"
+    ], 
+    [
+      "conj_and", 
+      "cotton", 
+      "mixed"
+    ], 
+    [
+      "det", 
+      "fibers", 
+      "the"
+    ], 
+    [
+      "amod", 
+      "fibers", 
+      "dry"
+    ], 
+    [
+      "nsubj", 
+      "poured", 
+      "fibers"
+    ], 
+    [
+      "det", 
+      "process", 
+      "a"
+    ], 
+    [
+      "prep_in", 
+      "fibers", 
+      "process"
+    ], 
+    [
+      "xsubj", 
+      "make", 
+      "process"
+    ], 
+    [
+      "partmod", 
+      "process", 
+      "used"
+    ], 
+    [
+      "aux", 
+      "make", 
+      "to"
+    ], 
+    [
+      "xcomp", 
+      "used", 
+      "make"
+    ], 
+    [
+      "dobj", 
+      "make", 
+      "filters"
+    ]
+  ], 
+  "words": [
+    [
+      "Workers", 
+      {
+        "Lemma": "worker", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 0
+      }
+    ], 
+    [
+      "dumped", 
+      {
+        "Lemma": "dump", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 1
+      }
+    ], 
+    [
+      "large", 
+      {
+        "Lemma": "large", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 2
+      }
+    ], 
+    [
+      "burlap", 
+      {
+        "Lemma": "burlap", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 3
+      }
+    ], 
+    [
+      "sacks", 
+      {
+        "Lemma": "sack", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 4
+      }
+    ], 
+    [
+      "of", 
+      {
+        "Lemma": "of", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 5
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 6
+      }
+    ], 
+    [
+      "imported", 
+      {
+        "Lemma": "import", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "material", 
+      {
+        "Lemma": "material", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 8
+      }
+    ], 
+    [
+      "into", 
+      {
+        "Lemma": "into", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 9
+      }
+    ], 
+    [
+      "a", 
+      {
+        "Lemma": "a", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 10
+      }
+    ], 
+    [
+      "huge", 
+      {
+        "Lemma": "huge", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 11
+      }
+    ], 
+    [
+      "bin", 
+      {
+        "Lemma": "bin", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 12
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 13
+      }
+    ], 
+    [
+      "poured", 
+      {
+        "Lemma": "pour", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 14
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 15
+      }
+    ], 
+    [
+      "cotton", 
+      {
+        "Lemma": "cotton", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 16
+      }
+    ], 
+    [
+      "and", 
+      {
+        "Lemma": "and", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "CC", 
+        "idx": 17
+      }
+    ], 
+    [
+      "acetate", 
+      {
+        "Lemma": "acetate", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 18
+      }
+    ], 
+    [
+      "fibers", 
+      {
+        "Lemma": "fiber", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 19
+      }
+    ], 
+    [
+      "and", 
+      {
+        "Lemma": "and", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "CC", 
+        "idx": 20
+      }
+    ], 
+    [
+      "mechanically", 
+      {
+        "Lemma": "mechanically", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 21
+      }
+    ], 
+    [
+      "mixed", 
+      {
+        "Lemma": "mixed", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 22
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 23
+      }
+    ], 
+    [
+      "dry", 
+      {
+        "Lemma": "dry", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 24
+      }
+    ], 
+    [
+      "fibers", 
+      {
+        "Lemma": "fiber", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 25
+      }
+    ], 
+    [
+      "in", 
+      {
+        "Lemma": "in", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 26
+      }
+    ], 
+    [
+      "a", 
+      {
+        "Lemma": "a", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 27
+      }
+    ], 
+    [
+      "process", 
+      {
+        "Lemma": "process", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 28
+      }
+    ], 
+    [
+      "used", 
+      {
+        "Lemma": "use", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 29
+      }
+    ], 
+    [
+      "to", 
+      {
+        "Lemma": "to", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "TO", 
+        "idx": 32
+      }
+    ], 
+    [
+      "make", 
+      {
+        "Lemma": "make", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VB", 
+        "idx": 33
+      }
+    ], 
+    [
+      "filters", 
+      {
+        "Lemma": "filter", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 34
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 35
+      }
+    ]
+  ]
+}

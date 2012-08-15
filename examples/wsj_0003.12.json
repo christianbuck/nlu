@@ -1,0 +1,736 @@
+{
+  "bbn_ne": [
+    [
+      1, 
+      1, 
+      "33", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">33</NUMEX>"
+    ], 
+    [
+      2, 
+      2, 
+      "men", 
+      "PER_DESC", 
+      "", 
+      "<ENAMEX TYPE=\"PER_DESC\">men</ENAMEX>"
+    ], 
+    [
+      9, 
+      9, 
+      "substance", 
+      "SUBSTANCE", 
+      "CHEMICAL", 
+      "<ENAMEX TYPE=\"SUBSTANCE:CHEMICAL\">substance</ENAMEX>"
+    ], 
+    [
+      11, 
+      11, 
+      "28", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">28</NUMEX>"
+    ], 
+    [
+      16, 
+      18, 
+      "more than three", 
+      "CARDINAL", 
+      "", 
+      "<NUMEX TYPE=\"CARDINAL\">more than three</NUMEX>"
+    ]
+  ], 
+  "coref_chains": [], 
+  "document_id": "nw/wsj/00/wsj_0003@all@wsj@nw@en@on", 
+  "goldparse": "(TOP (S (PP-LOC (IN Among) (NP (NP (CD 33) (NNS men)) (SBAR (WHNP-4 (WP who)) (S (NP-SBJ (-NONE- *T*-4)) (VP (VBD worked) (ADVP-MNR (RB closely)) (PP-CLR (IN with) (NP (DT the) (NN substance)))))))) (, ,) (NP-SBJ (NP (CD 28)) (NP (-NONE- *ICH*-1))) (VP (VBP have) (VP (VBN died) (: --) (NP-1 (QP (JJ more) (IN than) (CD three) (NNS times)) (DT the) (VBN expected) (NN number)))) (. .)))", 
+  "nom": [
+    {
+      "args": [
+        [
+          "ARG2", 
+          "16:0,17:0,18:0", 
+          null, 
+          null, 
+          ""
+        ], 
+        [
+          "rel", 
+          "19:0", 
+          19, 
+          19, 
+          "times"
+        ], 
+        [
+          "ARG1", 
+          "20:0,21:0,22:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "time", 
+      "frame": "time.03", 
+      "tokenNr": "19"
+    }
+  ], 
+  "parsetree": "(ROOT (S (PP (IN Among) (NP (NP (CD 33) (NNS men)) (SBAR (WHNP (WP who)) (S (VP (VBD worked) (ADVP (RB closely)) (PP (IN with) (NP (DT the) (NN substance)))))))) (, ,) (NP (CD 28)) (VP (VBP have) (VP (VP (VBN died)) (: --) (NP (NP (QP (XS (JJR more) (IN than)) (CD three)) (NNS times)) (NP (DT the) (JJ expected) (NN number))))) (. .)))", 
+  "prop": [
+    {
+      "args": [
+        [
+          "rel", 
+          "5:0", 
+          5, 
+          5, 
+          "worked"
+        ], 
+        [
+          "ARG0", 
+          "4:0", 
+          3, 
+          3, 
+          "who"
+        ], 
+        [
+          "ARGM-MNR", 
+          "6:1", 
+          6, 
+          6, 
+          "closely"
+        ], 
+        [
+          "ARG1", 
+          "7:1", 
+          7, 
+          9, 
+          "with the substance"
+        ], 
+        [
+          "LINK-SLC", 
+          "1:1*4:0", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "work", 
+      "basepos": "v", 
+      "frame": "work.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "14:0", 
+          14, 
+          14, 
+          "died"
+        ], 
+        [
+          "ARGM-LOC", 
+          "0:1", 
+          0, 
+          9, 
+          "Among 33 men who *T*-4 worked closely with the substance"
+        ], 
+        [
+          "ARG1", 
+          "11:2;16:2", 
+          null, 
+          null, 
+          ""
+        ]
+      ], 
+      "baseform": "die", 
+      "basepos": "v", 
+      "frame": "die.01", 
+      "inflection": "-----"
+    }, 
+    {
+      "args": [
+        [
+          "rel", 
+          "21:0", 
+          21, 
+          21, 
+          "expected"
+        ], 
+        [
+          "ARG1", 
+          "22:0", 
+          22, 
+          22, 
+          "number"
+        ]
+      ], 
+      "baseform": "expect", 
+      "basepos": "v", 
+      "frame": "expect.01", 
+      "inflection": "-----"
+    }
+  ], 
+  "ptbparse": "( (S (PP-LOC (IN Among) (NP (NP (CD 33) (NNS men) ) (SBAR (WHNP-4 (WP who) ) (S (NP-SBJ (-NONE- *T*-4) ) (VP (VBD worked) (ADVP-MNR (RB closely) ) (PP-CLR (IN with) (NP (DT the) (NN substance) ))))))) (, ,) (NP-SBJ (NP (CD 28) ) (NP (-NONE- *ICH*-1) )) (VP (VBP have) (VP (VBN died) (: --) (NP-1 (QP (JJ more) (IN than) (CD three) (NNS times) ) (DT the) (VBN expected) (NN number) ))) (. .) ))", 
+  "sentence_nr": 12, 
+  "stanford_coref": [], 
+  "stanford_dep": [
+    {
+      "dep": "33", 
+      "dep_idx": 1, 
+      "gov": "men", 
+      "gov_idx": 2, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "men", 
+      "dep_idx": 2, 
+      "gov": "worked", 
+      "gov_idx": 5, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "men", 
+      "dep_idx": 2, 
+      "gov": "died", 
+      "gov_idx": 14, 
+      "rel": "prep_among"
+    }, 
+    {
+      "dep": "worked", 
+      "dep_idx": 5, 
+      "gov": "men", 
+      "gov_idx": 2, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "closely", 
+      "dep_idx": 6, 
+      "gov": "worked", 
+      "gov_idx": 5, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 8, 
+      "gov": "substance", 
+      "gov_idx": 9, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "substance", 
+      "dep_idx": 9, 
+      "gov": "worked", 
+      "gov_idx": 5, 
+      "rel": "prep_with"
+    }, 
+    {
+      "dep": "28", 
+      "dep_idx": 11, 
+      "gov": "died", 
+      "gov_idx": 14, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "have", 
+      "dep_idx": 13, 
+      "gov": "died", 
+      "gov_idx": 14, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "died", 
+      "dep_idx": 14, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "more", 
+      "dep_idx": 16, 
+      "gov": "than", 
+      "gov_idx": 17, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "than", 
+      "dep_idx": 17, 
+      "gov": "times", 
+      "gov_idx": 19, 
+      "rel": "quantmod"
+    }, 
+    {
+      "dep": "three", 
+      "dep_idx": 18, 
+      "gov": "times", 
+      "gov_idx": 19, 
+      "rel": "number"
+    }, 
+    {
+      "dep": "times", 
+      "dep_idx": 19, 
+      "gov": "number", 
+      "gov_idx": 22, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 20, 
+      "gov": "number", 
+      "gov_idx": 22, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "expected", 
+      "dep_idx": 21, 
+      "gov": "number", 
+      "gov_idx": 22, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "number", 
+      "dep_idx": 22, 
+      "gov": "died", 
+      "gov_idx": 14, 
+      "rel": "dobj"
+    }
+  ], 
+  "stanford_dep_basic": [
+    {
+      "dep": "Among", 
+      "dep_idx": 0, 
+      "gov": "died", 
+      "gov_idx": 14, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "33", 
+      "dep_idx": 1, 
+      "gov": "men", 
+      "gov_idx": 2, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "men", 
+      "dep_idx": 2, 
+      "gov": "Among", 
+      "gov_idx": 0, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "who", 
+      "dep_idx": 3, 
+      "gov": "worked", 
+      "gov_idx": 5, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "worked", 
+      "dep_idx": 5, 
+      "gov": "men", 
+      "gov_idx": 2, 
+      "rel": "rcmod"
+    }, 
+    {
+      "dep": "closely", 
+      "dep_idx": 6, 
+      "gov": "worked", 
+      "gov_idx": 5, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "with", 
+      "dep_idx": 7, 
+      "gov": "worked", 
+      "gov_idx": 5, 
+      "rel": "prep"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 8, 
+      "gov": "substance", 
+      "gov_idx": 9, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "substance", 
+      "dep_idx": 9, 
+      "gov": "with", 
+      "gov_idx": 7, 
+      "rel": "pobj"
+    }, 
+    {
+      "dep": "28", 
+      "dep_idx": 11, 
+      "gov": "died", 
+      "gov_idx": 14, 
+      "rel": "nsubj"
+    }, 
+    {
+      "dep": "have", 
+      "dep_idx": 13, 
+      "gov": "died", 
+      "gov_idx": 14, 
+      "rel": "aux"
+    }, 
+    {
+      "dep": "died", 
+      "dep_idx": 14, 
+      "gov": "ROOT", 
+      "gov_idx": -1, 
+      "rel": "root"
+    }, 
+    {
+      "dep": "more", 
+      "dep_idx": 16, 
+      "gov": "than", 
+      "gov_idx": 17, 
+      "rel": "advmod"
+    }, 
+    {
+      "dep": "than", 
+      "dep_idx": 17, 
+      "gov": "times", 
+      "gov_idx": 19, 
+      "rel": "quantmod"
+    }, 
+    {
+      "dep": "three", 
+      "dep_idx": 18, 
+      "gov": "times", 
+      "gov_idx": 19, 
+      "rel": "number"
+    }, 
+    {
+      "dep": "times", 
+      "dep_idx": 19, 
+      "gov": "number", 
+      "gov_idx": 22, 
+      "rel": "num"
+    }, 
+    {
+      "dep": "the", 
+      "dep_idx": 20, 
+      "gov": "number", 
+      "gov_idx": 22, 
+      "rel": "det"
+    }, 
+    {
+      "dep": "expected", 
+      "dep_idx": 21, 
+      "gov": "number", 
+      "gov_idx": 22, 
+      "rel": "amod"
+    }, 
+    {
+      "dep": "number", 
+      "dep_idx": 22, 
+      "gov": "died", 
+      "gov_idx": 14, 
+      "rel": "dobj"
+    }
+  ], 
+  "text": "Among 33 men who worked closely with the substance , 28 have died -- more than three times the expected number .", 
+  "timex": [], 
+  "treebank_sentence": "Among 33 men who *T*-4 worked closely with the substance , 28 *ICH*-1 have died -- more than three times the expected number .", 
+  "tuples": [
+    [
+      "num", 
+      "men", 
+      "33"
+    ], 
+    [
+      "nsubj", 
+      "worked", 
+      "men"
+    ], 
+    [
+      "prep_among", 
+      "died", 
+      "men"
+    ], 
+    [
+      "rcmod", 
+      "men", 
+      "worked"
+    ], 
+    [
+      "advmod", 
+      "worked", 
+      "closely"
+    ], 
+    [
+      "det", 
+      "substance", 
+      "the"
+    ], 
+    [
+      "prep_with", 
+      "worked", 
+      "substance"
+    ], 
+    [
+      "nsubj", 
+      "died", 
+      "28"
+    ], 
+    [
+      "aux", 
+      "died", 
+      "have"
+    ], 
+    [
+      "root", 
+      "ROOT", 
+      "died"
+    ], 
+    [
+      "mwe", 
+      "than", 
+      "more"
+    ], 
+    [
+      "quantmod", 
+      "three", 
+      "than"
+    ], 
+    [
+      "num", 
+      "times", 
+      "three"
+    ], 
+    [
+      "dobj", 
+      "died", 
+      "times"
+    ], 
+    [
+      "iobj", 
+      "died", 
+      "times"
+    ], 
+    [
+      "det", 
+      "number", 
+      "the"
+    ], 
+    [
+      "amod", 
+      "number", 
+      "expected"
+    ], 
+    [
+      "dobj", 
+      "died", 
+      "number"
+    ], 
+    [
+      "dep", 
+      "times", 
+      "number"
+    ]
+  ], 
+  "words": [
+    [
+      "Among", 
+      {
+        "Lemma": "among", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 0
+      }
+    ], 
+    [
+      "33", 
+      {
+        "Lemma": "33", 
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "33.0", 
+        "PartOfSpeech": "CD", 
+        "idx": 1
+      }
+    ], 
+    [
+      "men", 
+      {
+        "Lemma": "man", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 2
+      }
+    ], 
+    [
+      "who", 
+      {
+        "Lemma": "who", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "WP", 
+        "idx": 3
+      }
+    ], 
+    [
+      "worked", 
+      {
+        "Lemma": "work", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBD", 
+        "idx": 5
+      }
+    ], 
+    [
+      "closely", 
+      {
+        "Lemma": "closely", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "RB", 
+        "idx": 6
+      }
+    ], 
+    [
+      "with", 
+      {
+        "Lemma": "with", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 7
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 8
+      }
+    ], 
+    [
+      "substance", 
+      {
+        "Lemma": "substance", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 9
+      }
+    ], 
+    [
+      ",", 
+      {
+        "Lemma": ",", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ",", 
+        "idx": 10
+      }
+    ], 
+    [
+      "28", 
+      {
+        "Lemma": "28", 
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": "28.0", 
+        "PartOfSpeech": "CD", 
+        "idx": 11
+      }
+    ], 
+    [
+      "have", 
+      {
+        "Lemma": "have", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBP", 
+        "idx": 13
+      }
+    ], 
+    [
+      "died", 
+      {
+        "Lemma": "die", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "VBN", 
+        "idx": 14
+      }
+    ], 
+    [
+      "--", 
+      {
+        "Lemma": "--", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ":", 
+        "idx": 15
+      }
+    ], 
+    [
+      "more", 
+      {
+        "Lemma": "more", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJR", 
+        "idx": 16
+      }
+    ], 
+    [
+      "than", 
+      {
+        "Lemma": "than", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "IN", 
+        "idx": 17
+      }
+    ], 
+    [
+      "three", 
+      {
+        "Lemma": "three", 
+        "NamedEntityTag": "NUMBER", 
+        "NormalizedNamedEntityTag": ">3.0", 
+        "PartOfSpeech": "CD", 
+        "idx": 18
+      }
+    ], 
+    [
+      "times", 
+      {
+        "Lemma": "time", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NNS", 
+        "idx": 19
+      }
+    ], 
+    [
+      "the", 
+      {
+        "Lemma": "the", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "DT", 
+        "idx": 20
+      }
+    ], 
+    [
+      "expected", 
+      {
+        "Lemma": "expected", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "JJ", 
+        "idx": 21
+      }
+    ], 
+    [
+      "number", 
+      {
+        "Lemma": "number", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": "NN", 
+        "idx": 22
+      }
+    ], 
+    [
+      ".", 
+      {
+        "Lemma": ".", 
+        "NamedEntityTag": "O", 
+        "PartOfSpeech": ".", 
+        "idx": 23
+      }
+    ]
+  ]
+}
