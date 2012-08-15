@@ -557,10 +557,10 @@ class Dag(defaultdict):
                 else:
                     children.add(v)
         roots = list(parents - children)
-    
+
         not_found = parents.union(children)
         for r in roots: 
-            x = self.triples(start_node = r)
+            x = self.triples(start_node = r, instances = False)
             for p,r,c in x: 
                if p in not_found:
                    not_found.remove(p)
