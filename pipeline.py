@@ -3,7 +3,7 @@
 Driver and utilities for English-to-AMR pipeline.
 '''
 from __future__ import print_function
-import os, sys, re, codecs, fileinput, json, glob
+import os, sys, re, codecs, fileinput, json, glob, time, traceback
 
 from collections import defaultdict
 
@@ -19,58 +19,65 @@ def main(files):
     # TODO: does conjunctions module work gracefully when propositions are conjoined?
     
     for f in files:
-        sentenceId = os.path.basename(f).replace('.json','')
-        print(sentenceId)
-        
-        # load dependency parse from sentence file
-        tokens, ww, wTags, depParse = loadDepParse(f, verbose=verbose)
 
-        # initialize input to first pipeline step
-        token_accounted_for = [False]*len(depParse)
-        '''Has the token been accounted for yet in the semantics?'''
+        try:
+            sentenceId = os.path.basename(f).replace('.json','')
+            print(sentenceId)
         
-        edge_accounted_for = {(dep['gov_idx'],m): False for m in range(len(depParse)) if depParse[m] for dep in depParse[m]}
-        '''Has the dependency edge been accounted for yet in the semantics?'''
-    
-        completed = token_accounted_for, edge_accounted_for
-    
-        amr = Amr()
-        alignments = Alignment()
-    
-        # serially execute pipeline steps
-        print(' '.join(filter(None,ww)))
-        print()
-        sys.stdout.flush()
+            # load dependency parse from sentence file
+            tokens, ww, wTags, depParse = loadDepParse(f, verbose=verbose)
 
-        for m in [nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify]:
-            if verbose:
-                print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
-            depParse, amr, alignments, completed = m.main(sentenceId, f, tokens, ww, wTags, depParse, amr, alignments, completed)
-            #print(' '.join(ww))
-            if verbose:
-                print(repr(amr), file=sys.stderr)
-                print('Completed:',[depParse[i][0]['dep'] for i,v in enumerate(completed[0]) if v and depParse[i]], file=sys.stderr)
-                print(alignments, [deps[0]['dep'] for deps in depParse if deps and not completed[0][deps[0]['dep_idx']]], file=sys.stderr)
-                print(amr, file=sys.stderr)
-                
-        if verbose:
-            print(' '.join(tokens), file=sys.stderr)
+            # initialize input to first pipeline step
+            token_accounted_for = [False]*len(depParse)
+            '''Has the token been accounted for yet in the semantics?'''
         
-        print(amr)
-        #amr.render()
-        #print('Amr.from_triples(',amr.triples(instances=False),',',amr.node_to_concepts,')')
-        print()
-        if config.alignments:
-            print(alignments)
+            edge_accounted_for = {(dep['gov_idx'],m): False for m in range(len(depParse)) if depParse[m] for dep in depParse[m]}
+            '''Has the dependency edge been accounted for yet in the semantics?'''
+    
+            completed = token_accounted_for, edge_accounted_for
+    
+            amr = Amr()
+            alignments = Alignment()
+    
+            # serially execute pipeline steps
+            print(' '.join(filter(None,ww)))
             print()
+            sys.stdout.flush()
+
+
+            for m in [nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify]:
+                if verbose:
+                    print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
+                depParse, amr, alignments, completed = m.main(sentenceId, f, tokens, ww, wTags, depParse, amr, alignments, completed)
+                #print(' '.join(ww))
+                if verbose:
+                    print(repr(amr), file=sys.stderr)
+                    print('Completed:',[depParse[i][0]['dep'] for i,v in enumerate(completed[0]) if v and depParse[i]], file=sys.stderr)
+                    print(alignments, [deps[0]['dep'] for deps in depParse if deps and not completed[0][deps[0]['dep_idx']]], file=sys.stderr)
+                    print(amr, file=sys.stderr)
+                
+            if verbose:
+                print(' '.join(tokens), file=sys.stderr)
+        
+            print(amr)
+            #amr.render()
+            #print('Amr.from_triples(',amr.triples(instances=False),',',amr.node_to_concepts,')')
+            print()
+            if config.alignments:
+                print(alignments)
+                print()
     
-        if verbose:
-            print('\n\nRemaining edges:', file=sys.stderr)
-            for deps in depParse:
-                if deps is None: continue
-                for dep in deps:
-                    if dep['gov_idx'] is not None and not completed[1][(dep['gov_idx'],dep['dep_idx'])]:
-                        print((dep['gov']+'-'+str(dep['gov_idx']),dep['rel'],dep['dep']+'-'+str(dep['dep_idx'])), file=sys.stderr)
+            if verbose:
+                print('\n\nRemaining edges:', file=sys.stderr)
+                for deps in depParse:
+                    if deps is None: continue
+                    for dep in deps:
+                        if dep['gov_idx'] is not None and not completed[1][(dep['gov_idx'],dep['dep_idx'])]:
+                            print((dep['gov']+'-'+str(dep['gov_idx']),dep['rel'],dep['dep']+'-'+str(dep['dep_idx'])), file=sys.stderr)
+
+        except Exception as ex:
+            traceback.print_exception(*sys.exc_info())
+            time.sleep(3)
 
 def token2concept(t):
     t = t.replace('$', '-DOLLAR-')
@@ -94,7 +101,7 @@ def loadVProp(jsonFile):
             empty2overt = {}
             for arg in prop["args"]:
                 if arg[0]=='LINK-PCR':
-                    overtNode, emptyNode = arg[1].split('*')
+                    overtNode, emptyNode = arg[1].split('*')[:2] # TODO: sometimes more than 2 chain members, e.g. in wsj_0003.10
                     empty2overt[emptyNode] = overtNode
             for arg in prop["args"]:
                 if arg[0].startswith('ARG') and arg[4]=='*':

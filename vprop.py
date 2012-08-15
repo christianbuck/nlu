@@ -70,6 +70,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
         pred = prop["args"][0]
         assert pred[2]==pred[3] # multiword predicates?
         ph = pred[2]    # predicate head
+        if ph is None: continue  # TODO: improve coverage of complex spans
         px = alignment[:ph]
         if not (px or px==0):
             px = new_concept(pipeline.token2concept(roleset.replace('.','-')), amr, alignment, ph)
@@ -83,6 +84,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
         
         pred = [arg for arg in prop["args"] if arg[0]=='rel'][0]
         ph = pred[2]    # predicate head
+        if ph is None: continue # TODO: improve coverage of complex spans
         px = alignment[:ph]
         
         for rel,treenode,i,j,yieldS in prop["args"]:

@@ -37,10 +37,12 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
     replacements = {}
     for coref_trip in coref_triples:
         x, _, (y,) = coref_trip
-        
+        # TODO: strengthen the choice of main concepts for the cluster
+        '''
         assert amr.get_concept(x).replace('-ROOT','')==amr.get_concept(y).replace('-ROOT','') \
             or (alignment[int(y):] is not None and wTags[alignment[int(y):]]["PartOfSpeech"] in ['PRP','PRP$']) \
             or amr.get_concept(y).endswith('-FALLBACK'), (y,ww[alignment[int(y):]],x,ww[alignment[int(x):]])
+        '''
         replacements[y] = x
     
     # MERGE the coreferent nodes
