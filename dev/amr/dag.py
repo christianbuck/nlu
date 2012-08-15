@@ -15,7 +15,6 @@ import unittest
 import re
 import sys
 import copy
-import pyparsing
 
 _graphics = False
 def require_graphics():
@@ -234,6 +233,7 @@ class Dag(defaultdict):
         """
         Initialize a new DAG from a Pennman style string.
         """
+        import pyparsing
         if not cls._parser_singleton: # Initialize the AMR parser only once
             _parser_singleton = make_amr_parser()           
         try:

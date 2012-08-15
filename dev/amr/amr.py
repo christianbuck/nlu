@@ -10,7 +10,6 @@ from dag import Dag
 from amr_parser import make_amr_parser, SpecialValue, StrLiteral
 
 from collections import defaultdict
-import pyparsing
 import unittest
 import re
 import sys
@@ -79,6 +78,7 @@ class Amr(Dag):
         """
         Initialize a new abstract meaning representation from a Pennman style string.
         """
+        import pyparsing
         if not cls._parser_singleton: # Initialize the AMR parser only once
             _parser_singleton = make_amr_parser()           
         try:

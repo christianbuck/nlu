@@ -6,7 +6,6 @@ import math
 import sys
 import random
 import copy
-import pyparsing
 import timeit
 
 def get_mappings(l2, l1):
@@ -193,6 +192,7 @@ def mean(l):
 
 
 def compute_smatch_batch(gold_filename, test_filename, concept_edges= False):
+     import pyparsing 
      ps, rs, fs = [], [],[]
      with open(sys.argv[1]) as gold_file:
             with open(sys.argv[2]) as test_file:
