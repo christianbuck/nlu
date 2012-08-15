@@ -10,7 +10,7 @@ import os, sys, re, codecs, fileinput
 import pipeline
 from pipeline import new_concept, new_amr_from_old
 
-def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
+def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     for deps in depParse:
         if deps is None: continue

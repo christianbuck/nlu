@@ -39,11 +39,11 @@ Example input, from wsj_0002.0:
 
 
 
-def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
+def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     triples = set() # to add to the AMR
     
-    entities = pipeline.loadBBN(sentenceId)
+    entities = pipeline.loadBBN(jsonFile)
     for i,j,name,coarse,fine,raw in entities:    # TODO: what is the last one?
         
         if raw.startswith('<TIMEX'): continue  # TODO: NUMEX, TIMEX

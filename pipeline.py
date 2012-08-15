@@ -23,7 +23,7 @@ def main(files):
         print(sentenceId)
         
         # load dependency parse from sentence file
-        tokens, ww, wTags, depParse = loadDepParse(sentenceId, verbose=verbose)
+        tokens, ww, wTags, depParse = loadDepParse(f, verbose=verbose)
 
         # initialize input to first pipeline step
         token_accounted_for = [False]*len(depParse)
@@ -45,7 +45,7 @@ def main(files):
         for m in [nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify]:
             if verbose:
                 print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
-            depParse, amr, alignments, completed = m.main(sentenceId, tokens, ww, wTags, depParse, amr, alignments, completed)
+            depParse, amr, alignments, completed = m.main(sentenceId, f, tokens, ww, wTags, depParse, amr, alignments, completed)
             #print(' '.join(ww))
             if verbose:
                 print(repr(amr), file=sys.stderr)
@@ -80,13 +80,11 @@ def token2concept(t):
     return res
 
 
-def loadBBN(sentenceId):
-    jsonFile = 'examples/'+sentenceId+'.json'
+def loadBBN(jsonFile):
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         return json.load(jsonF)['bbn_ne']
 
-def loadVProp(sentenceId):
-    jsonFile = 'examples/'+sentenceId+'.json'
+def loadVProp(jsonFile):
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         data = json.load(jsonF)
         props = [prop for prop in data["prop"] if prop["frame"]!='do.01']   # auxiliary do.01 shouldn't be annotated, but sometimes is
@@ -113,18 +111,15 @@ def loadVProp(sentenceId):
                     arg[4] = ' '.join(overtWords)
         return props
 
-def loadNProp(sentenceId):
-    jsonFile = 'examples/'+sentenceId+'.json'
+def loadNProp(jsonFile):
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         return json.load(jsonF)['nom']
 
-def loadTimex(sentenceId):
-    jsonFile = 'examples/'+sentenceId+'.json'
+def loadTimex(jsonFile):
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         return json.load(jsonF)['timex']
 
-def loadDepParse(sentenceId, verbose=False):
-    jsonFile = 'examples/'+sentenceId+'.json'
+def loadDepParse(jsonFile, verbose=False):
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         sentJ = json.load(jsonF)
 
@@ -218,8 +213,7 @@ def surface2treeToken(offset, ww):
         i += 1
     return i
 
-def loadCoref(sentenceId, ww):
-    jsonFile = 'examples/'+sentenceId+'.json'
+def loadCoref(jsonFile, ww):
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         chains = json.load(jsonF)["coref_chains"]
         coref = {}  # coref chain ID -> set of elements

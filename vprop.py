@@ -56,11 +56,11 @@ Example input, from wsj_0002.0:
 
 
 
-def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
+def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     triples = set() # to add to the AMR
     
-    props = pipeline.loadVProp(sentenceId)
+    props = pipeline.loadVProp(jsonFile)
     
     # add all predicates first, so the roleset properly goes into the AMR
     for prop in props:

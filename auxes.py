@@ -24,7 +24,7 @@ ACTION_ARG = {'obligate-01': 'ARG2', 'permit-01': 'ARG1', 'possible': 'domain', 
 
 # TODO: other modalities not expressed exclusively in the auxiliary: e.g. 'would rather', 'likely/able/permitted/have to'
 
-def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
+def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     for deps in depParse:
         if deps is None: continue

@@ -22,12 +22,12 @@ Example input, from wsj_0002.0:
 '''
 
 
-def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
+def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     new_triples = set()
     nNewTrip = 0
 
-    time_expressions = pipeline.loadTimex(sentenceId)
+    time_expressions = pipeline.loadTimex(jsonFile)
     for tid, start, end, raw_timex in time_expressions:
         t = Timex3Entity(ElementTree.fromstring(raw_timex))
         h = choose_head(range(start,end+1), depParse)

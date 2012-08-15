@@ -12,7 +12,7 @@ import pipeline, config
 from pipeline import new_concept, new_amr, new_amr_from_old, loadCoref, choose_head
 from alignment import Alignment
 
-def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
+def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     
     

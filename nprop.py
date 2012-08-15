@@ -120,11 +120,11 @@ Example input, from wsj_0002.0:
 
 
 
-def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
+def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     triples = set() # to add to the AMR
     
-    props = pipeline.loadNProp(sentenceId)
+    props = pipeline.loadNProp(jsonFile)
     
     predheads = {}  # map head index to nominal predicate variable (not reflected in the alignment)
     

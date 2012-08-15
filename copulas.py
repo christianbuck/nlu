@@ -16,7 +16,7 @@ import os, sys, re, codecs, fileinput
 import pipeline
 from pipeline import new_concept, new_amr_from_old, get_or_create_concept_from_token as amrget
 
-def main(sentenceId, tokens, ww, wTags, depParse, inAMR, alignment, completed):
+def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
     cop_preds = set()
     for deps in depParse:
