@@ -10,10 +10,12 @@ from dag import Dag
 from amr_parser import make_amr_parser, SpecialValue, StrLiteral
 
 from collections import defaultdict
+import pyparsing
 import unittest
 import re
 import sys
 import copy
+
 
 _graphics = False
 def require_graphics():
@@ -78,8 +80,6 @@ class Amr(Dag):
         """
         Initialize a new abstract meaning representation from a Pennman style string.
         """
-        import pyparsing
-        
         if not cls._parser_singleton: # Initialize the AMR parser only once
             _parser_singleton = make_amr_parser()           
         try:
@@ -172,11 +172,14 @@ class Amr(Dag):
 
         return new_amr
 
-    def make_rooted_amr(self, root, swap_callback=None):
+    def make_rooted_amr(self, root):
         """
         Flip edges in the AMR so that all nodes are reachable from the unique root.
-        If swap_callback is provided, it is called with two arguments--the old and 
-        new edges--every time an edge is inverted.
+        >>> x =Amr.from_triples( [(u'j', u'ARG0', (u'p',)), (u'j', u'ARG1', (u'b',)), (u'j', u'ARGM-PRD', ('t',)), (u'j', 'time', ('d',)), (u'p', 'age', ('t1',)), (u'p', 'name', ('n',)), ('t', u'ARG0-of', ('d1',)), ('d', 'day', (29,)), ('d', 'month', (11,)), ('t1', 'quant', (61,)), ('t1', 'unit', ('y',)), ('n', 'op1', (u'"Pierre"',)), ('n', 'op2', (u'"Vinken"',)), ('d1', u'ARG0', ('t',)), ('d1', u'ARG3', (u'n1',))] , {u'b': u'board', 'd': 'date-entity', u'j': u'join-01-ROOT', 't1': 'temporal-quantity', u'p': u'person', 't': 'thing', 'y': 'year', u'n1': u'nonexecutive', 'n': 'name', 'd1': 'direct-01'} )
+        >>> x
+        DAG{ (j / join-01-ROOT :ARG0 (p / person :age (t1 / temporal-quantity :quant 61 :unit (y / year) ) :name (n / name :op1 "Pierre" :op2 "Vinken")) :ARG1 (b / board) :ARGM-PRD (t / thing :ARG0-of (d1 / direct-01 :ARG0 t :ARG3 (n1 / nonexecutive) )) :time (d / date-entity :day 29 :month 11)) }
+        >>> x.make_rooted_amr("n")
+        DAG{ (n / name :name-OF (p / person :ARG0-OF (j / join-01-ROOT :ARG1 (b / board) :ARGM-PRD (t / thing :ARG0-of (d1 / direct-01 :ARG0 t :ARG3 (n1 / nonexecutive) )) :time (d / date-entity :day 29 :month 11)) :age (t1 / temporal-quantity :quant 61 :unit (y / year) )) :op1 "Pierre" :op2 "Vinken") }
         """
         amr = self.clone()
 
@@ -193,11 +196,9 @@ class Amr(Dag):
 
             unreached = all_nodes - reached
     
-            out_triples = [(p,r,c) for p,r,c in amr.triples(refresh = True) if c[0] in reached and p in unreached]
+            out_triples = [(p,r,c) for p,r,c in amr.triples(refresh = True, instances = False) if c[0] in reached and p in unreached]
             for p,r,c in out_triples:
-                newtrip = (c[0],"%s-of" %r, (p,))
-                amr._replace_triple(p,r,c,*newtrip)
-                if swap_callback: swap_callback((p,r,c),newtrip)
+                amr._replace_triple(p,r,c,c[0],"%s-OF" %r, (p,))           
         amr.triples(refresh = True)            
         amr.roots = [root]
         amr.node_alignments = self.node_alignments
@@ -513,12 +514,10 @@ def ast_to_amr(ast):
 
 
 if __name__ == "__main__":
-    amr = Amr.from_string("""(j / join-01
-      :ARG0 (p / person :name (p2 / name :op1 "Pierre" :op2 "Vinken")
-            :age (t / temporal-quantity :quant 61
-                  :unit (y / year)))
-      :ARG1 (b / board)
-      :prep-as (d2 / director
-            :mod (e / executive :polarity -))
-      :time (d / date-entity :month 11 :day 29))""")
-    #print amr
+
+    import doctest
+    doctest.testmod()
+
+
+
+      

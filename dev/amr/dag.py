@@ -8,12 +8,14 @@ Directed Acyclic Graphs.
 #from rule import Rule
 
 from collections import defaultdict
+from amr_parser import make_amr_parser, SpecialValue, StrLiteral, NonterminalLabel
 from operator import itemgetter
 import functools
 import unittest
 import re
 import sys
 import copy
+import pyparsing
 
 _graphics = False
 def require_graphics():
@@ -232,9 +234,6 @@ class Dag(defaultdict):
         """
         Initialize a new DAG from a Pennman style string.
         """
-        import pyparsing
-        from amr_parser import make_amr_parser
-        
         if not cls._parser_singleton: # Initialize the AMR parser only once
             _parser_singleton = make_amr_parser()           
         try:
@@ -424,7 +423,7 @@ class Dag(defaultdict):
     def has_edge(self, par, rel, child):
         return par in self and rel in self[par] and child in self[par].getall(rel) 
     
-    def triples(self, start_node = None, refresh = False):
+    def triples(self, start_node = None, refresh = False, **kwargs):
         """
         Traverse the DAG breadth first to collect a list of (parent, relation, child) triples.
         """
@@ -598,7 +597,7 @@ class Dag(defaultdict):
         """
         order = {}
         count = 0
-        for par, rel, child in self.triples():
+        for par, rel, child in self.triples(instances = False):
             if not par in order: 
                 order[par] = count 
                 count += 1
@@ -648,25 +647,46 @@ class Dag(defaultdict):
         result.sort(lambda x,y: cmp(order[x], order[y]))
         return result
    
+    def get_weakly_connected_roots(self):
+        """
+        Return a set of root nodes for each weakly connected component.
+        >>> x = Dag.from_triples([("a","B","c"), ("d","E","f")])
+        >>> x.get_weakly_connected_roots()
+        set(['a', 'd'])
+        >>> y = Dag.from_triples([("a","B","c"), ("d","E","f"),("c","H","f")],{})
+        >>> y.get_weakly_connected_roots()
+        set(['a'])
+        >>> y.is_connected()
+        True
+        """
+
+        roots = list(self.find_roots())
+        if len(roots) == 1:
+                return roots
+
+        merged  = defaultdict(list)
+        node_to_comp = defaultdict(list)
+        equiv = {}
+        for r in roots:
+            for n in self.reach(r):
+                node_to_comp[n].append(r)
+                if len(node_to_comp[n]) == 2: 
+                    if not r in equiv:
+                        equiv[r] = node_to_comp[n][0]    
+                
+        final = set()
+        for r in roots: 
+            unique_repr = r
+            while unique_repr in equiv:
+                unique_repr = equiv[unique_repr]        
+            final.add(unique_repr)
+              
+        return final
+        #new_roots = set()                       
+        #for r in nodes:
+
     def is_connected(self):
-        
-        all_nodes = set(self.keys())
-        start = self.roots[0]
-        reached = set(self.reach(start))
-
-        unreached = all_nodes - reached
-        while unreached: 
-            start = list(unreached)[0]
-            new_reached = set(self.reach(start))
-            if new_reached.intersection(reached):
-                reached.update(new_reached)
-                unreached = all_nodes - reached
-            else:
-                return False
-        return True
-
-        
-            
+        return len(self.get_weakly_connected_roots()) == 1        
 
     ####Methods that modify the DAG###    
     def _add_triple(self, parent, relation, child, warn=sys.stderr):
