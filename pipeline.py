@@ -22,7 +22,13 @@ def main(files):
     nSuccess = nConnected = 0
     iSent = 0
     
-    for f in files:
+    def wsj_sort(path):
+        m = re.search(r'wsj_(\d{4})\.(\d+)', path)
+        if not m: return 0
+        docnum, sentnum = m.groups()
+        return (int(docnum), int(sentnum))
+
+    for f in sorted(files,key=wsj_sort):
 
         try:
             sentenceId = os.path.basename(f).replace('.json','')
@@ -67,7 +73,13 @@ def main(files):
                 
             if config.verbose:
                 print(' '.join(tokens), file=sys.stderr)
-        
+
+            if amr.is_connected(warn=None):
+                nConnected += 1
+            else:
+                # insert dummy top node, called 'and' for now. remove :-DUMMY triples for (former) orphans.
+                amr = new_amr_from_old(amr, new_triples=[('top','opX',v) for v in amr.roots], new_concepts={'top': 'and'}, avoid_triples=[(x,r,(y,)) for x,r,(y,) in amr.triples(instances=False) if r=='-DUMMY'])
+
             print(amr)
             #amr.render()
             #print('Amr.from_triples(',amr.triples(instances=False),',',amr.node_to_concepts,')')
@@ -86,13 +98,12 @@ def main(files):
 
 
             nSuccess += 1
-            if amr.is_connected(warn=None):
-                nConnected += 1
+
             
         except Exception as ex:
             if not config.errorTolerant:
                 raise
-            print('amr-empty\n')
+            print('(x1 / amr-empty)\n')
             print(sentenceId, file=sys.stderr)
             traceback.print_exception(*sys.exc_info())
             time.sleep(0)
