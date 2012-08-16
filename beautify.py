@@ -123,7 +123,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
     old2newvars = {}
     newconcepts = {}
     for v,c in amr.node_to_concepts.items():
-        v2 = c[0] if c[0].isalpha() else v
+        v2 = c[0].lower() if c[0].isalpha() else v
         if v2 in newconcepts:    # append numerical suffix if necessary to disambiguate
             assert v2.isalpha()
             v2 += str(sum(1 for k in newconcepts.keys() if k[0]==v2))
