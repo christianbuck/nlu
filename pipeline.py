@@ -347,14 +347,15 @@ def highest(tokenIndices, depParse):
     return min(frontier, key=lambda i: depParse[i][0]["depth"])
 
 def new_amr(triples, concepts, roots=None):
-    return Amr.from_triples(triples, concepts, roots=None, 
+    return Amr.from_triples(ensure_quant(triples), concepts, roots=None, 
                             warn=(sys.stderr if config.verbose else None))  # only display AMR cycle warnings in verbose mode
 
 def new_amr_from_old(oldamr, new_triples=[], new_concepts={}, avoid_triples=[], avoid_concepts=[], roots=None):
     '''Triples of the form (x,r,(y,)) or (x,r,y) are accepted.'''
     newconcepts = {v: c for v,c in oldamr.node_to_concepts.items() if v not in avoid_concepts}
     newconcepts.update(new_concepts)
-    return new_amr([trip for trip in oldamr.triples(instances=None) if trip not in ensure_hyper(avoid_triples)]+new_triples,
+    return new_amr([trip for trip in oldamr.triples(instances=None) if trip not in ensure_quant(avoid_triples)] \
+                    + list(ensure_quant(new_triples)),
                    newconcepts, roots=roots)
 
 def ensure_hyper(triples):
@@ -363,7 +364,29 @@ def ensure_hyper(triples):
     for a,b,c in triples:
         if not isinstance(c,tuple):
             yield (a,b,(c,))
-        yield (a,b,c)
+        else:
+            yield (a,b,c)
+
+class Quant(object):
+    '''Wrapper for atomic quantities in AMRs. This ensures that if a value occurs multiple times, 
+    those are not treated as identical (i.e. the same node) for the purpose of printing AMRs.'''
+    def __init__(self, q):
+        self._q = q
+    def __str__(self):
+        return str(self._q)
+    def __repr__(self):
+        return repr(self._q)
+    def __eq__(self, that):
+        '''Tests as equal to the bare value, as well as to other Quants with equal bare values'''
+        return that==self._q
+
+def ensure_quant(triples):
+    for trip in ensure_hyper(triples):
+        a,b,(c,) = trip
+        if isinstance(c,(int,float)):
+            yield (a,b,(Quant(c),))
+        else:
+            yield (a,b,(c,))
 
 def new_concept(concept, amr, alignment=None, alignedToken=None):
     '''
