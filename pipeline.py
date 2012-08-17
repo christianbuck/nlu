@@ -181,6 +181,9 @@ def loadDepParse(jsonFile):
                 entry["gov_idx"] = None
             deps[i].append(entry)  # can be multiple entries for a token, because tokens can have multiple heads
 
+
+        mark_depths(deps)
+
         # dependency parse: un-collapse coordinate structures except for amod links
         conjs = [d for dep in deps if dep for d in dep if d["rel"].startswith('conj_')]
         if conjs:
@@ -188,57 +191,93 @@ def loadDepParse(jsonFile):
                 print('resolving coordination...', file=sys.stderr)
             #print(tokens)
             ccs = [dep for dep in sentJ["stanford_dep_basic"] if dep["rel"]=='cc']
+            
+        
+        # account for coordinations with >2 conjuncts: group together  
+        # under the head of the coordinate structure (one of the conjuncts)
+        conjgroups = defaultdict(lambda: [set(), set()])
         for conj in conjs:
             i, r, h = conj["dep_idx"], conj["rel"], conj["gov_idx"]
-            # note that the conjunction link connects two conjuncts
-            # (the conjunction word is incorporated in the relation name,
-            # but the conjunction token index is not represented)
+            if [dep for dep in sentJ["stanford_dep_basic"] if dep["dep_idx"]==i and dep["gov_idx"]==h and dep["rel"]=='conj']:
+                conjgroups[(h,r)][0].add(i)
+            else:   # i is a modifier of the whole coordinate phrase. see comment below for an example.
+                conjmodifiers = [dep for dep in sentJ["stanford_dep_basic"] if dep["dep_idx"]==i and dep["gov_idx"]==h]
+                assert len(conjmodifiers)==1
+                conjmodifier = conjmodifiers[0]
+                # remove the 'conj' edge from the collapsed parse
+                deps[conjmodifier["dep_idx"]] = [dep for dep in deps[conjmodifier["dep_idx"]] if dep["gov_idx"]!=h]
+                conjgroups[(h,r)][1].add((conjmodifier["dep_idx"], conjmodifier["rel"]))
+        
+        for (h,r),(ii,mm) in sorted(conjgroups.items(), key=lambda ((h,r),ii): deps[h][0]["depth"]):
+            assert h>0
+            # find the collapsed dependencies, i.e. the (non-conjunction) links shared 
+            # by all conjuncts. start with higher nodes in the tree in case there are 
+            # coordinations embedded within coordinations (cf. wsj_0003.25).
+            isharedheads = {g: gdep for g,gdep in parent_deps(deps[h]) if all(g in parents(deps[i]) for i in ii)}
+            if None in parents(deps[h]):  # h is the root token
+                assert not isharedheads
+                isharedheads = {None: dict(parent_deps(deps[h]))[None]}
+            else:
+                assert isharedheads,((ww[h],parents(deps[h]),r),[(ww[i],parents(deps[i])) for i in ii])
+            
+            # special treatment for and-ed adjectival modifiers
+            if r=='conj_and':
+                amodConj = False
+                for g,gdep in isharedheads.items():
+                    if gdep["rel"]=='amod':  # remove the conjunction link(s)
+                        amodConj = True
+                        for i in ii:
+                            if config.verbose: print('  removing',r,'link (gov',h,', dep',i,')', file=sys.stderr)
+                            deps[i] = [d for d in deps[i] if d["rel"]!=r]
+                        break
+                if amodConj:
+                    continue
+            
+            # everything else: undo propagation of conjunct dependencies
+            
+            
+            # 1. remove the non-conjunction link sharing a dependent with the conjunction link
+            # example from wsj_0020.0: "removed Korea and Taiwan" transformed from
+            #    removed <-dobj- Korea <-conj_and- Taiwan
+            #        ^-------------------------dobj---|
+            #  to
+            #    removed         Korea <-conj_and- Taiwan
+            # (Korea is h, Taiwan is its dependent i, removed is the shared head)
+            
+            for isharedhead in isharedheads:
+                for i in {h} | ii:
+                    if config.verbose: print('  removing any links with (gov',isharedhead,', dep',i,')', file=sys.stderr)
+                    deps[i] = [d for d in deps[i] if d["gov_idx"]!=isharedhead]
+            
+            # 2. then use Basic Dependencies to convert to
+            #    removed <-dobj- and <-conj- Korea
+            #                     ^----conj- Taiwan
+            
+            # - get the coordinating conjunction (call its index c)
+            ccdeps = [dep for dep in ccs if dep["gov_idx"]==h]
+            assert len(ccdeps)==1
+            cc = ccdeps[0]
+            c, cword = cc["dep_idx"], cc["dep"]
+            if deps[c] is None: deps[c] = []
+            
+            # conjmodifiers: anything that modifies the head conjunct with type conj_* in the collapsed parse 
+            # but another type (such as advmod) in the basic parse is a modifier of the entire coordinate phrase.
+            # therefore, attach to the coordinating conjunction.
+            # arises in wsj_0003.25 ('dumped..., poured... and mechanically mixed': 'mechanically' is converted to 
+            # an advmod of the whole phrase, which is probably not correct but would be a valid interpretation if 
+            # the word order were slightly different).
+            for (imod,modrel) in mm:
+                deps[imod].append({"gov_idx": c, "gov": cword, "dep_idx": imod, "dep": ww[imod], "rel": modrel})
+            
+            # - link coordinating conjunction to the shared heads, in place of h
+            for isharedhead,sharedheaddep in isharedheads.items():
+                deps[c].append({"gov_idx": sharedheaddep["gov_idx"], "gov": sharedheaddep["gov"], "dep_idx": c, "dep": cword, "rel": sharedheaddep["rel"]})
+                deps[h].append({"gov_idx": c, "gov": cword, "dep_idx": h, "dep": ww[h], "rel": 'conj'})
+                for i in ii:
+                    deps[i].append({"gov_idx": c, "gov": cword, "dep_idx": i, "dep": ww[i], "rel": 'conj'})
 
-            iextdeps = [dep for dep in deps[i] if not dep["rel"].startswith('conj')]
-            assert len(iextdeps)==1,iextdeps
-            iextdep = iextdeps[0]  # external (non-conjunction) head link of conjunction's dependent
-            hextdeps = [dep for dep in deps[h] if not dep["rel"].startswith('conj')]
-            assert len(hextdeps)<=1,hextdeps
-
-            if r=='conj_and' and iextdep["rel"]=='amod': # remove this conjunction link
-                if config.verbose: print('  removing',conj, file=sys.stderr)
-                deps[i].remove(conj)
-            else:   # undo propagation of conjunct dependencies
-                # remove the non-conjunction link sharing a dependent with the conjunction link
-                # example from wsj_0020.0: "removed Korea and Taiwan" transformed from
-                #    removed <-dobj- Korea <-conj_and- Taiwan
-                #        ^-------------------------dobj---|
-                #  to
-                #    removed <-dobj- Korea <-conj_and- Taiwan
-
-                if hextdeps:
-                    hextdep = hextdeps[0]  # external (non-conjunction) head link of conjunction's governor
-                    if config.verbose: print('  removing',hextdep, file=sys.stderr)
-                    deps[h].remove(hextdep)
-                if config.verbose: print('  removing',iextdep, file=sys.stderr)
-                deps[i].remove(iextdep)
-                # then use Basic Dependencies to convert to
-                #    removed <-dobj- and <-conj- Korea
-                #                     ^----conj- Taiwan
-                if config.verbose: print('  removing',conj, file=sys.stderr)
-                deps[i].remove(conj)
-                ccdeps = [dep for dep in ccs if dep["gov_idx"]==h]
-                assert len(ccdeps)==1
-                cc = ccdeps[0]
-                c, cword = cc["dep_idx"], cc["dep"]
-                conj0 = {"gov_idx": iextdep["gov_idx"], "gov": iextdep["gov"], "dep_idx": c, "dep": cword, "rel": iextdep["rel"]}
-                if deps[c] is None:
-                    deps[c] = []
-                if conj0 not in deps[c]:
-                    if config.verbose: print('  adding',conj0, file=sys.stderr)
-                    deps[c].append(conj0)
-                conj1 = {"gov_idx": c, "gov": cword, "dep_idx": h, "dep": ww[h], "rel": 'conj'}
-                if conj1 not in deps[h]:
-                    if config.verbose: print('  adding',conj1, file=sys.stderr)
-                    deps[h].append(conj1)
-                conj2 = {"gov_idx": c, "gov": cword, "dep_idx": i, "dep": ww[i], "rel": 'conj'}
-                if config.verbose: print('  adding',conj2, file=sys.stderr)
-                deps[i].append(conj2)
+            clear_depths(deps)
+            mark_depths(deps)
 
         return tokens, ww, wTags, deps  # ww and wTags have None for tokens which are empty elements
 
@@ -278,11 +317,14 @@ def loadCoref(jsonFile, ww):
             
         return coref
 
-#def parents(depParseEntry):
-#    return [dep['dep_idx'] for dep in depParseEntry] if depParseEntry else []
+def parents(depParseEntry):
+    return [dep["gov_idx"] for dep in depParseEntry] if depParseEntry else []
 
 def parent_edges(depParseEntry):
-    return [(dep['gov_idx'],dep['dep_idx']) for dep in depParseEntry] if depParseEntry else []
+    return [(dep["gov_idx"],dep["dep_idx"]) for dep in depParseEntry] if depParseEntry else []
+
+def parent_deps(depParseEntry):
+    return [(dep["gov_idx"],dep) for dep in depParseEntry] if depParseEntry else []
 
 def choose_head(tokenIndices, depParse, fallback=None):
     # restricted version of least common subsumer:
@@ -331,6 +373,13 @@ def mark_depths(depParse):
                     queue.append((i,d+1))
     
     bfs(next(iter(roots)))
+
+def clear_depths(depParse):
+    for deps in depParse:
+        if deps is None: continue
+        for dep in deps:
+            if "depth" in dep:
+                del dep["depth"]
 
 def highest(tokenIndices, depParse):
     '''Of the given token indices, chooses the one corresponding to the node 
