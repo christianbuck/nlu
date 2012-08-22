@@ -59,12 +59,21 @@ def main(files):
                 print()
                 sys.stdout.flush()
 
-
+            hasModuleException = False
             for m in [nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify]:
                 if config.verbose:
                     print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
-                depParse, amr, alignments, completed = m.main(sentenceId, f, tokens, ww, wTags, depParse, amr, alignments, completed)
-                #print(' '.join(ww))
+                    
+                try:
+                    depParse, amr, alignments, completed = m.main(sentenceId, f, tokens, ww, wTags, depParse, amr, alignments, completed)
+                except Exception as ex:
+                    hasModuleException = True
+                    if not config.errorTolerant:
+                        raise
+                    print('EXCEPTION IN', m.__name__, 'MODULE\n')
+                    print(sentenceId, file=sys.stderr)
+                    traceback.print_exception(*sys.exc_info())
+                
                 if config.verbose:
                     print(repr(amr), file=sys.stderr)
                     print('Completed:',[depParse[i][0]['dep'] for i,v in enumerate(completed[0]) if v and depParse[i]], file=sys.stderr)
@@ -96,8 +105,8 @@ def main(files):
                         if dep['gov_idx'] is not None and not completed[1][(dep['gov_idx'],dep['dep_idx'])]:
                             print((dep['gov']+'-'+str(dep['gov_idx']),dep['rel'],dep['dep']+'-'+str(dep['dep_idx'])), file=sys.stderr)
 
-
-            nSuccess += 1
+            if not hasModuleException:
+                nSuccess += 1
 
             
         except Exception as ex:
@@ -109,7 +118,7 @@ def main(files):
             time.sleep(0)
             
         iSent += 1
-        print('{}/{}, {} succeeded ({} connected)'.format(iSent, nSents, nSuccess, nConnected), file=sys.stderr)
+        print('{}/{}, {} succeeded without exceptions ({} connected)'.format(iSent, nSents, nSuccess, nConnected), file=sys.stderr)
 
 def token2concept(t):
     t = t.replace('$', '-DOLLAR-')
