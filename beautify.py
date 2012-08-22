@@ -77,7 +77,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
     
     # delete various decorations
     for k,v in amr.node_to_concepts.items():
-        amr.node_to_concepts[k] = v.replace('-FALLBACK', '').replace('-DATE_RELATIVE','').replace('-DATE','')
+        amr.node_to_concepts[k] = v.replace('-FALLBACK_PRON','').replace('-FALLBACK','').replace('-DATE_RELATIVE','').replace('-DATE','')
     
     if config.verbose:
         print('Triple-to-token alignment:',{trip:ww[trip2tokAlignment[t:]]+'-'+str(trip2tokAlignment[t:]) for t,trip in enumerate(all_triples) if trip2tokAlignment[t:] is not None},

@@ -18,9 +18,11 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
     #print(coref)
     
     for cluster in coref.values():
-        clusterX = None # choose an arbitrary member of the cluster to decorate with coreferent equivalents, marked :-COREF
-        for i,j,w in sorted(cluster, key=lambda mention: (mention[1]-mention[0],wTags[mention[1]]["PartOfSpeech"]), reverse=True): 
-            # for each mention, starting with longer and alphabetically-later-POS-tagged mentions (to prioritize nouns over pronouns)
+        clusterX = None # choose one member of the cluster to decorate with coreferent equivalents, marked :-COREF
+        for i,j,w in sorted(cluster, key=lambda mention: (alignment[:mention[1]] is None or '-FALLBACK_PRON' not in amr.node_to_concepts[str(alignment[:mention[1]])],
+                                                          alignment[:mention[1]] is None or '-FALLBACK' not in amr.node_to_concepts[str(alignment[:mention[1]])],
+                                                          mention[1]-mention[0]), reverse=True):
+            # preferences: pronouns (-FALLBACK_PRON) < hallucinated concepts (-FALLBACK) < content words from the sentence
             assert ' '.join(filter(None, ww[i:j+1]))==w,(w,i,j, ww[i:j+1])
             trips = amr.triples(instances=False)
             h = choose_head(range(i,j+1), depParse)

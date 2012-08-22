@@ -70,7 +70,7 @@ def main(files):
                     hasModuleException = True
                     if not config.errorTolerant:
                         raise
-                    print('EXCEPTION IN', m.__name__, 'MODULE\n')
+                    print('EXCEPTION IN', m.__name__, 'MODULE\n', file=sys.stderr)
                     print(sentenceId, file=sys.stderr)
                     traceback.print_exception(*sys.exc_info())
                 
@@ -120,11 +120,17 @@ def main(files):
         iSent += 1
         print('{}/{}, {} succeeded without exceptions ({} connected)'.format(iSent, nSents, nSuccess, nConnected), file=sys.stderr)
 
-def token2concept(t):
+def token2concept(t, normalize_pronouns=True):
     t = t.replace('$', '-DOLLAR-')
     res =  re.sub(r'[^A-Za-z0-9-]', '', t).lower() or '??'
     if res=='??':
         assert False, t
+    PRONS = {'me': 'i', 'my': 'i', 'us': 'we', 'our': 'we', 
+             'your': 'you', 'them': 'they', 'their': 'they', 
+             'him': 'he', 'his': 'he', 'her': 'she', 'its': 'it'}   # TODO: mine, hers, etc.?
+    res = PRONS.get(res, res)
+    if res in PRONS or res in PRONS.values():
+        res += '-FALLBACK_PRON'  # Pronouns should be dispreferred as concept heads
     return res
 
 
