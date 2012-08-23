@@ -291,6 +291,11 @@ def loadDepParse(jsonFile):
                 for i in ii:
                     deps[i].append({"gov_idx": c, "gov": cword, "dep_idx": i, "dep": ww[i], "rel": 'conj'})
 
+            # 3. Remove conj_* links
+            for i in ii:
+                if config.verbose: print('  removing any conj_* links with (gov',h,', dep',i,')', file=sys.stderr)
+                deps[i] = [d for d in deps[i] if d["gov_idx"]!=h or not d["rel"].startswith('conj_')]
+
             clear_depths(deps)
             mark_depths(deps)
 
