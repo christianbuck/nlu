@@ -1,11 +1,19 @@
 '''
-Copula constructions: the predicate goes as the head. 
+Copula constructions and appositives:
+
+For copulas, the predicate goes as the head. 
 E.g. for wsj_0077.3, the dependency parse has
   (u'ahead-11', u'nsubj', u'issues-2')
   (u'ahead-11', u'cop', u'were-9')
 which is converted to
   (a / ahead
      :domain (i / issues))
+
+Appositive heads are marked as coreferent with 
+the modified noun. E.g. in wsj_0001.1,
+  (u'N.V.-6', u'appos', u'group-11')
+the named entity containing "N.V." is marked with 
+the [:-COREF group] relation.
 
 @author: Nathan Schneider (nschneid)
 @since: 2012-08-13
@@ -31,12 +39,17 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
         if deps is None: continue
         for dep in deps:
             i, r, h = dep["dep_idx"], dep["rel"], dep["gov_idx"]
-            if h in cop_preds and r.endswith('subj'):
+            if (h in cop_preds and r.endswith('subj')) or r=='appos':
                 x = amrget(amr, alignment, h, depParse, completed)
                 y = amrget(amr, alignment, i, depParse, completed)  # asserting non-completion here might be bad
                 
+                if r=='appos':
+                    completed[1][(h,i)] = True
+                    if '-FALLBACK' in amr.get_concept(str(x)) and '-FALLBACK' not in amr.get_concept(str(y)):
+                        x, y = y, x
+                
                 if x!=y:
-                    newtriple = (str(x), 'domain', str(y))
+                    newtriple = (str(x), '-COREF' if r=='appos' else 'domain', str(y))
                 
                 amr = new_amr_from_old(amr, new_triples=[newtriple])
 
