@@ -16,7 +16,6 @@ from add_prop import SpanTree, span_from_treepos
 def main(files):
     # pipeline steps
     import nes, timex, vprop, nprop, verbalize, conjunctions, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify
-    # TODO: does conjunctions module work gracefully when propositions are conjoined?
     
     nSents = len(files)
     nSuccess = nConnected = 0
@@ -97,7 +96,7 @@ def main(files):
                 print(alignments)
                 print()
     
-            if config.verbose:
+            if config.verbose or config.showRemainingDeps:
                 print('\n\nRemaining edges:', file=sys.stderr)
                 for deps in depParse:
                     if deps is None: continue
@@ -507,6 +506,8 @@ if __name__=='__main__':
             config.verbose = True
         elif arg=='-w':
             config.warn = True
+        elif arg=='-r':
+            config.showRemainingDeps = True
         elif arg=='-e':
             config.errorTolerant = True
         elif arg=='-n':

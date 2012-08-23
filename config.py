@@ -9,6 +9,9 @@ verbose = False
 warn = False
 '''Show warnings, even if verbose is False'''
 
+showRemainingDeps = False
+'''Show unused dependency links, even if verbose is False'''
+
 fullNombank = False
 '''Include concepts & arguments for NomBank predicates that cannot be verbalized'''
 
