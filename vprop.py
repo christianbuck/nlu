@@ -8,7 +8,7 @@ from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
 import pipeline, config, timex
-from pipeline import choose_head, new_concept, new_amr_from_old, parent_edges, get_or_create_concept_from_token as amrget
+from pipeline import Atom, choose_head, new_concept, new_amr_from_old, parent_edges, get_or_create_concept_from_token as amrget
 
 '''
 Example input, from wsj_0002.0:
@@ -113,6 +113,10 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                     pass    # skip this auxiliary
                 else:
                     continue # handle modal in a later module
+            elif isinstance(rel,tuple):
+                rel, val = rel
+                assert isinstance(val,Atom)
+                triples.add((str(px), rel, val))
             else:
                 if not (x or x==0): # need a new variable
                     x = new_concept(pipeline.token2concept(depParse[h][0]['dep']),
@@ -171,6 +175,7 @@ def common_arg(rel, concept=None, drels=None):
                 newrel = 'direction'
             elif rel=='ARGM-NEG':
                 newrel = 'polarity'
+                newconcept = Atom('-')
             elif '-REF' in rel:
                 newrel = rel.replace('-REF','')
 

@@ -8,7 +8,7 @@ from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
 import pipeline, config, verbalize
-from pipeline import choose_head, new_concept, new_amr_from_old, parent_edges, get_or_create_concept_from_token as amrget
+from pipeline import Atom, choose_head, new_concept, new_amr_from_old, parent_edges, get_or_create_concept_from_token as amrget
 from vprop import common_arg
 
 #TODO: the example below is buggy
@@ -184,9 +184,14 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                 drels = [dep["rel"] for dep in depParse[h]]
                 rel = common_arg(rel, drels=drels)
             
-            x = amrget(amr, alignment, h, depParse)
-            
-            triples.add((str(px), rel, str(x)))
+            if isinstance(rel,tuple):
+                rel, val = rel
+                assert isinstance(val,Atom)
+                triples.add((str(px), rel, val))
+            else:
+                x = amrget(amr, alignment, h, depParse)
+                
+                triples.add((str(px), rel, str(x)))
             #print('###',px,rel,x)
             
             completed[0][h] = True

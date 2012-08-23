@@ -431,24 +431,25 @@ def ensure_hyper(triples):
         else:
             yield (a,b,c)
 
-class Quant(object):
-    '''Wrapper for atomic quantities in AMRs. This ensures that if a value occurs multiple times, 
-    those are not treated as identical (i.e. the same node) for the purpose of printing AMRs.'''
-    def __init__(self, q):
-        self._q = q
+class Atom(object):
+    '''Wrapper for atomic values in AMRs, such as numeric quantities and the special symbol '-'. 
+    This ensures that if a value occurs multiple times, those are not treated as identical 
+    (i.e. the same node) for the purpose of printing AMRs.'''
+    def __init__(self, v):
+        self._v = v
     def __str__(self):
-        return str(self._q)
+        return str(self._v)
     def __repr__(self):
-        return repr(self._q)
+        return repr(self._v)
     def __eq__(self, that):
-        '''Tests as equal to the bare value, as well as to other Quants with equal bare values'''
-        return that==self._q
+        '''Tests as equal to the bare value, as well as to other Atoms with equal bare values'''
+        return that==self._v
 
 def ensure_quant(triples):
     for trip in ensure_hyper(triples):
         a,b,(c,) = trip
         if isinstance(c,(int,float)):
-            yield (a,b,(Quant(c),))
+            yield (a,b,(Atom(c),))
         else:
             yield (a,b,(c,))
 
