@@ -15,7 +15,7 @@ from add_prop import SpanTree, span_from_treepos
 
 def main(files):
     # pipeline steps
-    import nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify
+    import nes, timex, vprop, nprop, verbalize, conjunctions, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify
     # TODO: does conjunctions module work gracefully when propositions are conjoined?
     
     nSents = len(files)
@@ -60,7 +60,7 @@ def main(files):
                 sys.stdout.flush()
 
             hasModuleException = False
-            for m in [nes, timex, conjunctions, vprop, nprop, verbalize, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify]:
+            for m in [nes, timex, vprop, nprop, verbalize, conjunctions, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify]:
                 if config.verbose:
                     print('\n\nSTAGE: ', m.__name__, '...', file=sys.stderr)
                     
