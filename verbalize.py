@@ -57,6 +57,13 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
 
 _npred2vpred = {}
 def nompred2verbpred(nompred):
+    '''
+    >>> nompred2verbpred('gift.01')
+    'verb-give.01'
+    >>> nompred2verbpred('destruction.01')
+    'verb-destroy.01'
+    >>> nompred2verbpred('institution.01')
+    '''
     global _npred2vpred
     if not _npred2vpred:
         with open('nombank-deverbals-combined.txt') as inF:
@@ -67,3 +74,8 @@ def nompred2verbpred(nompred):
                 else:
                     _npred2vpred[npred] = vpred
     return _npred2vpred.get(nompred)
+
+if __name__=='__main__':
+    import doctest
+    doctest.testmod()
+

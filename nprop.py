@@ -7,7 +7,7 @@ Creates AMR fragments for verb propositions (PropBank-style semantic role struct
 from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
-import pipeline
+import pipeline, config, verbalize
 from pipeline import choose_head, new_concept, new_amr_from_old, parent_edges, get_or_create_concept_from_token as amrget
 from vprop import common_arg
 
@@ -132,6 +132,9 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
     for prop in props:
         baseform, roleset = prop["baseform"], prop["frame"]
         
+        if not config.fullNombank and not verbalize.nompred2verbpred(roleset):
+            continue    # TODO: maybe add just the pred stem & non-core args that map to AMR role names?
+        
         preds = {tuple(arg) for arg in prop["args"] if arg[0]=='rel'}
         assert len(preds)==1
         pred = next(iter(preds))
@@ -162,6 +165,9 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
         pred = [arg for arg in prop["args"] if arg[0]=='rel'][0]
         ph = pred[2]    # predicate head
         #px = alignment[:ph]
+        if ph not in predheads:
+            continue
+        
         px = predheads[ph]
         
         for rel,treenode,i,j,yieldS in prop["args"]:

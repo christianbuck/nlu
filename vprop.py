@@ -169,6 +169,8 @@ def common_arg(rel, concept=None, drels=None):
                 newrel = 'manner'
             elif rel=='ARGM-DIR':
                 newrel = 'direction'
+            elif rel=='ARGM-NEG':
+                newrel = 'polarity'
             elif '-REF' in rel:
                 newrel = rel.replace('-REF','')
 

@@ -498,7 +498,7 @@ def get_or_create_concept_from_token(amr, alignment, i, depParse, completed=None
 
 if __name__=='__main__':
     args = sys.argv[1:]
-    keepNombank = False # keep NomBank predicate names and arguments that cannot be verbalized
+    fullNombank = False # include NomBank predicate names and arguments that cannot be verbalized
     while args and args[0][0]=='-':
         arg = args.pop(0)
         if arg=='-v':
@@ -508,7 +508,7 @@ if __name__=='__main__':
         elif arg=='-e':
             config.errorTolerant = True
         elif arg=='-n':
-            config.keepNombank = True
+            config.fullNombank = True
         elif arg=='-a':
             config.alignments = True
         elif arg=='-S':

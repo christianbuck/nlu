@@ -9,7 +9,8 @@ verbose = False
 warn = False
 '''Show warnings, even if verbose is False'''
 
-keepNombank = False
+fullNombank = False
+'''Include concepts & arguments for NomBank predicates that cannot be verbalized'''
 
 alignments = False
 '''Include AMR triple-to-token alignments in the output'''
