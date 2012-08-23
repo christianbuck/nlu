@@ -127,10 +127,11 @@ def token2concept(t, normalize_pronouns=True):
         assert False, t
     PRONS = {'me': 'i', 'my': 'i', 'us': 'we', 'our': 'we', 
              'your': 'you', 'them': 'they', 'their': 'they', 
-             'him': 'he', 'his': 'he', 'her': 'she', 'its': 'it'}   # TODO: mine, hers, etc.?
+             'him': 'he', 'his': 'he', 'her': 'she', 'its': 'it',
+             'these': 'this', 'those': 'that'}   # TODO: mine, hers, etc.?
     res = PRONS.get(res, res)
-    if res in PRONS or res in PRONS.values():
-        res += '-FALLBACK_PRON'  # Pronouns should be dispreferred as concept heads
+    if res in PRONS.values():   # Will also apply to demonstrative determiners, which should be kept as :mod's.
+        res += '-FALLBACK_PRON'  # Pronouns should be dispreferred as concept heads.
     return res
 
 
