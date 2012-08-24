@@ -40,8 +40,8 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
         for dep in deps:
             i, r, h = dep["dep_idx"], dep["rel"], dep["gov_idx"]
             if (h in cop_preds and r.endswith('subj')) or r=='appos':
-                x = amrget(amr, alignment, h, depParse, completed)
-                y = amrget(amr, alignment, i, depParse, completed)  # asserting non-completion here might be bad
+                x = amrget(amr, alignment, h, depParse, wTags, completed)
+                y = amrget(amr, alignment, i, depParse, wTags, completed)  # asserting non-completion here might be bad
                 
                 if r=='appos':
                     completed[1][(h,i)] = True

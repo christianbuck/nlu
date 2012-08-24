@@ -15,7 +15,7 @@ from add_prop import SpanTree, span_from_treepos
 
 def main(files):
     # pipeline steps
-    import nes, timex, vprop, nprop, verbalize, conjunctions, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify
+    import nes, timex, nouns, vprop, nprop, verbalize, conjunctions, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify
     
     nSents = len(files)
     nSuccess = nConnected = 0
@@ -458,35 +458,32 @@ def ensure_quant(triples):
         else:
             yield (a,b,(c,))
 
-def new_concept(concept, amr, alignment=None, alignedToken=None):
+def new_concept(concept, amr):
     '''
     Creates and returns a new (integer) variable for the designated concept, 
     though the variable is actually stored as a string in the AMR.
-    Optionally updates an alignment, marking the specified token 
-    as aligned to the new variable.
     '''
-    x = len(amr.node_to_concepts)
+    v = len(amr.node_to_concepts)
 
-    amr.node_to_concepts[str(x)] = concept
+    amr.node_to_concepts[str(v)] = concept
 
-    if alignedToken is not None:
-        alignment.link(x, alignedToken)
+    return v    # variable, as an integer
 
-    return x    # variable, as an integer
-
-def new_concept_from_token(amr, alignment, i, depParse, concept=None):
+def new_concept_from_token(amr, alignment, i, depParse, wTags, concept=None):
     '''
     If 'i' is an integer, aligning to the 'i'th token.
     If 'i' is an interable over integers, finds and aligns to 
     the common head of the indices in 'i'.
     If 'concept' is specified, that string will be used as the 
-    concept name; otherwise, the aligned token will be used.
+    concept name; otherwise, the aligned token's lemma will be used.
+    @return: Integer variable for the new concept
     '''
     h = choose_head(i, depParse) if hasattr(i, '__iter__') else i
-    v = new_concept(token2concept(depParse[h][0]["dep"]) if concept is None else concept, amr, alignment, h)
+    v = new_concept(token2concept(wTags[h]["Lemma"]) if concept is None else concept, amr)
+    alignment.link(v, h)
     return v
 
-def get_or_create_concept_from_token(amr, alignment, i, depParse, completed=None, concept=None):
+def get_or_create_concept_from_token(amr, alignment, i, depParse, wTags, completed=None, concept=None):
     '''
     Like new_concept_from_token(), but doesn't modify the AMR if the 
     appropriate head token is already aligned to a variable.
@@ -498,7 +495,8 @@ def get_or_create_concept_from_token(amr, alignment, i, depParse, completed=None
     if not (v or v==0): # need a new variable
         if completed:
             assert not completed[0][h]
-        v = new_concept(token2concept(depParse[h][0]["dep"]) if concept is None else concept, amr, alignment, h)
+        v = new_concept(token2concept(wTags[h]["Lemma"]) if concept is None else concept, amr)
+        alignment.link(v, h)
     if completed: completed[0][h] = True
     return v
 

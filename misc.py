@@ -20,8 +20,8 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
             i, r, h = dep["dep_idx"], dep["rel"], dep["gov_idx"]
             if completed[1][(h,i)]: continue
             if r in ['nn','poss'] or r.startswith('prep_'):
-                x = amrget(amr, alignment, h, depParse, completed)
-                y = amrget(amr, alignment, i, depParse, completed) # modifier variable
+                x = amrget(amr, alignment, h, depParse, wTags, completed)
+                y = amrget(amr, alignment, i, depParse, wTags, completed) # modifier variable
                 
                 if r=='nn':   # attach as :mod-NN
                     newtriple = (str(x), 'mod-NN', str(y))

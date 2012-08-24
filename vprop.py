@@ -8,7 +8,7 @@ from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
 import pipeline, config, timex
-from pipeline import Atom, choose_head, new_concept, new_amr_from_old, parent_edges, get_or_create_concept_from_token as amrget
+from pipeline import Atom, choose_head, new_concept_from_token, new_amr_from_old
 
 '''
 Example input, from wsj_0002.0:
@@ -72,9 +72,10 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
         assert pred[2]==pred[3] # multiword predicates?
         ph = pred[2]    # predicate head
         if ph is None: continue  # TODO: improve coverage of complex spans
+        
         px = alignment[:ph]
         if not (px or px==0):
-            px = new_concept(pipeline.token2concept(roleset.replace('.','-')), amr, alignment, ph)
+            px = new_concept_from_token(amr, alignment, ph, depParse, wTags, concept=pipeline.token2concept(roleset.replace('.','-')))
             if len(prop["args"])==1 or prop["args"][1][0].startswith('LINK'):
                 triples.add((str(px), '-DUMMY', ''))
         completed[0][ph] = True
@@ -119,8 +120,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                 triples.add((str(px), rel, val))
             else:
                 if not (x or x==0): # need a new variable
-                    x = new_concept(pipeline.token2concept(depParse[h][0]['dep']),
-                                    amr, alignment, h)
+                    x = new_concept_from_token(amr, alignment, h, depParse, wTags)
                 triples.add((str(px), rel, str(x)))
             
             completed[0][h] = True

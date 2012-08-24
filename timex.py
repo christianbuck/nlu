@@ -5,7 +5,7 @@ from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
 import pipeline, config
-from pipeline import choose_head, new_concept, new_amr_from_old, parent_edges
+from pipeline import choose_head, new_concept, new_concept_from_token, new_amr_from_old, parent_edges
 from xml.etree import ElementTree
 
 '''
@@ -32,11 +32,11 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
         t = Timex3Entity(ElementTree.fromstring(raw_timex))
         h = choose_head(range(start,end+1), depParse)
 
-        mc = new_concept(pipeline.token2concept(t.main_concept), amr, alignment, h)
+        mc = new_concept_from_token(amr, alignment, h, depParse, wTags, concept=pipeline.token2concept(t.main_concept))
 
         if t.wrapper != None:
             alignment.unlink(mc, h)
-            wc = new_concept(pipeline.token2concept(t.wrapper)+'-'+t.type, amr, alignment, h)
+            wc = new_concept_from_token(amr, alignment, h, depParse, wTags, concept=pipeline.token2concept(t.wrapper)+'-'+t.type)
             new_triples.add((str(wc), 'op1', str(mc)))
         else:
             amr.node_to_concepts[str(mc)] += '-'+t.type

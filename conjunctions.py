@@ -9,7 +9,7 @@ from __future__ import print_function
 import os, sys, re, codecs, fileinput
 
 import pipeline
-from pipeline import new_concept, new_amr_from_old, get_or_create_concept_from_token as amrget
+from pipeline import new_amr_from_old, get_or_create_concept_from_token as amrget
 
 def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
@@ -20,8 +20,8 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
             if completed[1][(dep["gov_idx"],dep["dep_idx"])]: continue
             i, r, c = dep['dep_idx'], dep["rel"], dep["gov_idx"]
             if r=='conj':
-                x = amrget(amr, alignment, c, depParse, completed)
-                y = amrget(amr, alignment, i, depParse, completed)
+                x = amrget(amr, alignment, c, depParse, wTags, completed)
+                y = amrget(amr, alignment, i, depParse, wTags, completed)
                 
                 newtriple = (str(x), 'op'+str(nConjOps.setdefault(x,0)+1), str(y))
                 nConjOps[x] += 1

@@ -8,7 +8,7 @@ from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
 import pipeline, config, verbalize
-from pipeline import Atom, choose_head, new_concept, new_amr_from_old, parent_edges, get_or_create_concept_from_token as amrget
+from pipeline import Atom, choose_head, new_concept, new_concept_from_token, new_amr_from_old, parent_edges, get_or_create_concept_from_token as amrget
 from vprop import common_arg
 
 #TODO: the example below is buggy
@@ -148,13 +148,13 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
             #print('###','newconcept',px,'/',predconcept)
             px0 = alignment[:ph]
             if not (px0 or px0==0):
-                px0 = new_concept(pipeline.token2concept(ww[ph]), amr, alignment, ph)
+                px0 = new_concept_from_token(amr, alignment, ph, depParse, wTags)
             triples.add((str(px0), '-PRED', str(px)))
             #if len(prop["args"])==1 or (prop["args"][0][0] in ['Support','rel'] and prop["args"][1][0] in ['Support','rel']):
             #    triples.add((str(px), '-DUMMY', ''))
             predheads[ph] = px
-        #else:   # predicate already a concept in the AMR
-        #    amr.node_to_concepts[str(px)] = predconcept # change the name of the concept
+        else:   # predicate already a concept in the AMR (e.g. inserted by the 'nouns' module)
+            amr.node_to_concepts[str(px)] = predconcept # change the name of the concept
         
         completed[0][ph] = True
         
@@ -189,7 +189,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                 assert isinstance(val,Atom)
                 triples.add((str(px), rel, val))
             else:
-                x = amrget(amr, alignment, h, depParse)
+                x = amrget(amr, alignment, h, depParse, wTags)
                 
                 triples.add((str(px), rel, str(x)))
             #print('###',px,rel,x)

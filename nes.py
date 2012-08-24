@@ -9,7 +9,7 @@ from __future__ import print_function
 import os, sys, re, codecs, fileinput, json
 
 import pipeline
-from pipeline import choose_head, new_concept, new_amr_from_old, parent_edges
+from pipeline import new_concept_from_token, choose_head, new_concept, new_amr_from_old, parent_edges
 
 '''
 Example input, from wsj_0002.0:
@@ -73,7 +73,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                             reln = v[0]
                             v = v[1:]
                         concept = {'<': 'less-than', '>': 'more-than', '<=': 'no-more-than', '>=': 'at-least'}[reln]
-                        wrapper = new_concept(concept, amr, alignment, h)
+                        wrapper = new_concept_from_token(amr, alignment, h, depParse, wTags, concept=concept)
                     
                 if coarse=='MONEY':
                     m = re.match(r'^([\$¥£])(\d+\.\d+(E-?\d+)?)$', v)
@@ -95,10 +95,11 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                     pass
                 
                 if (wrapper is None or coarse=='MONEY') and not (x or x==0): # need a new variable
-                    _args = [{'MONEY': 'monetary-quantity', 'PERCENT': 'percentage-entity'}.get(coarse, coarse.upper()), amr]
+                    kind = {'MONEY': 'monetary-quantity', 'PERCENT': 'percentage-entity'}.get(coarse, coarse.upper())
                     if wrapper is None: # if there is a wrapper concept (e.g. 'more-than'), it is aligned, so don't provide an alignment for x
-                        _args += [alignment, h]
-                    x = new_concept(*_args)
+                        x = new_concept_from_token(amr, alignment, h, depParse, wTags, concept=kind)
+                    else:
+                        x = new_concept(kind, amr)
                 
                 if (x or x==0):
                     triples.add((str(x), 'value' if coarse=='PERCENT' else 'quant', v))
@@ -119,14 +120,15 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
             # make the phrase head word the AMR head concept
             # (could be a multiword term, like Trade Representative)
             if not (x or x==0): # need a new variable
-                x = new_concept(pipeline.token2concept(depParse[h][0]['dep']), amr, alignment, h)
+                x = new_concept_from_token(amr, alignment, h, depParse, wTags)
                 triples.add((str(x), '-DUMMY', '')) # ensure the concept participates in some triple so it is printed
         else:
             if not (x or x==0): # need a new variable
                 ne_class = fine.lower().replace('other','') or coarse.lower()
                 concept, amr_name = amrify(ne_class, name)
-                x = new_concept(pipeline.token2concept(concept)+'-FALLBACK',    # -FALLBACK indicates extra information not in the sentence (NE class)
-                                amr, alignment, h)
+                x = new_concept_from_token(amr, alignment, h, depParse, wTags, 
+                                concept=pipeline.token2concept(concept)+'-FALLBACK')
+                # -FALLBACK indicates extra information not in the sentence (NE class)
                 n = new_concept('name', amr)
                 triples.add((str(x), 'name', str(n)))
                 for iw,w in enumerate(amr_name.split()):

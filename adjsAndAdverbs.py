@@ -8,7 +8,7 @@ from __future__ import print_function
 import os, sys, re, codecs, fileinput
 
 import pipeline
-from pipeline import new_concept, new_amr_from_old
+from pipeline import new_concept_from_token, new_amr_from_old
 
 def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, completed):
     amr = inAMR
@@ -29,12 +29,11 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                 x = alignment[:h] # index of variable associated with i's head, if any
                 if not (x or x==0): # need a new variable
                     assert not completed[0][h], (depParse[h],amr)
-                    w = depParse[itm['gov_idx']][0]['dep']  # modifier token
-                    x = new_concept(pipeline.token2concept(w), amr, alignment, h)
+                    x = new_concept_from_token(amr, alignment, h, depParse, wTags)
                     completed[0][h] = True
                 y = alignment[:i] # modifier variable
                 if not (y or y==0): # new variable
-                    y = new_concept(pipeline.token2concept(itm['dep'].lower()), amr, alignment, i)
+                    y = new_concept_from_token( amr, alignment, i, depParse, wTags)
                     completed[0][i] = True
                 if itm['rel'] in ['num', 'number']:   # attach as :quant
                     newtriple = (str(x), 'quant', str(y))   # TODO: for plain values, don't create a variable
