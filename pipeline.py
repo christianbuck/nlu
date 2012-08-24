@@ -15,7 +15,7 @@ from add_prop import SpanTree, span_from_treepos
 
 def main(files):
     # pipeline steps
-    import nes, timex, nouns, vprop, nprop, verbalize, conjunctions, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify
+    import nes, timex, vprop, nprop, verbalize, conjunctions, copulas, adjsAndAdverbs, auxes, misc, coref, top, beautify
     
     nSents = len(files)
     nSuccess = nConnected = 0
