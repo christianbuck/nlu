@@ -71,8 +71,20 @@ def parse_onprop(raw_prop):
     return d
 
 def get_trace(subtree, recursive=False):
+    '''
+    If the yield of a given subtree consists of empty elements, one of them with 
+    a consituent pointer index (e.g. *-10 or *T*-10), returns that token. 
+    Otherwise, returns None. 
+    
+    If 'recursive' is True: checks whether the subtree's entire yield consists of 
+    empty elements, exactly one of which has a constituent pointer; if so, returns 
+    that element, otherwise returns None.
+    
+    If 'recursive' is False: returns the subtree's yield iff the subtree is a 
+    preterminal for an empty element with a constituent pointer, and None otherwise.
+    '''
     re_trace = re.compile(r'.*-\d+$')
-    if subtree.node == '-NONE-' or subtree.height() == 2:
+    if subtree.node == '-NONE-' or subtree.height() == 2:   # nschneid: isn't the first condition redundant, i.e. all '-NONE-' nodes have height 2?
         words = ' '.join(subtree.leaves())
         if re_trace.match(words):
             return words
@@ -119,42 +131,60 @@ if __name__ == "__main__":
 
     pt = SpanTree.parse(data['goldparse'])
 
-    for prop in pb[docId][sentNr]:
-        pb_data = parse_onprop(prop)
-        args = pb_data['args']
+    
+
+    for propS in pb[docId][sentNr]:
+        prop = parse_onprop(propS)
+        args = prop['args']
+        
+        
+        empty2overt = {}
+        # for resolving relative clause * / LINK-PCR arguments
+        # see wsj_0003.0 for an example ('workers' at 25:1 vs. '*' at 27:0 as the ARG1 of expose.01)
+        for position, role in args:
+            if role=='LINK-PCR':
+                overtNode, emptyNode = position.split('*')[:2] # TODO: sometimes more than 2 chain members, e.g. in wsj_0003.10
+                empty2overt[emptyNode] = overtNode
+        
         new_args = []
-        for pos, role in args:
+        for position, role in args: # update the arguments with token span offsets where possible
             words, start, end = [], None, None
-            leaf_id, depth = pt.parse_pos(pos)
-            if leaf_id != None and depth != None:
+            
+            leaf_id, depth = pt.parse_pos(position)
+            if leaf_id is not None and depth is not None:
                 treepos = pt.get_treepos(leaf_id, depth)
+                
+                if role.startswith('ARG') and pt[treepos].leaves()==['*']:
+                    overtNode = empty2overt[position]   # use mapping from a LINK-PCR argument
+                    # look up node in the tree, convert to offsets
+                    pt = SpanTree.parse(data["goldparse"])  # TODO: what if it is a non-OntoNotes (PTB) tree?
+                    leaf_id, depth = pt.parse_pos(overtNode)
+                    treepos = pt.get_treepos(leaf_id, depth)
+                    position = overtNode
+
                 trace = get_trace(pt[treepos], recursive=recursive)
-                #print is_trace(pt[treepos], recursive=True)
-                #print 'trace for role %s : %s' %(role, trace)
-                while trace != None:
-                    #print 'trace:', trace
-                    #trace_id = int(pt[treepos].leaves()[0].split('-')[-1])
+                while trace is not None:    # follow trace pointer to another constituent
                     trace_id = int(trace.split('-')[-1])
-                    #print 'looking for trace', trace_id
+                        
+                    # attempt to follow trace pointer to a consituent
                     tracepos = pt.find_trace(trace_id)
-                    if tracepos != None:
-                        #print 'trace %s found! Here:', tracepos
-                        #print pt[tracepos].pprint()
+                    if tracepos is not None:
                         treepos = tracepos
                     else:
                         break # could not follow trace
+                        
+                    # we have possibly arrived at another trace
                     trace = get_trace(pt[treepos], recursive=recursive)
 
                 words = pt[treepos].leaves()
                 start, end = span_from_treepos(pt, treepos)
-            else: # pos was not number:number
+            else: # position was not number:number
                 pass
 
+            # argument (possibly with token offsets)
+            new_args.append( [role, position, start, end, ' '.join(words)] )
 
-            new_args.append( [role, pos, start, end, ' '.join(words)] )
+        prop['args'] = new_args
+        data['prop'].append(prop)
 
-        pb_data['args'] = new_args
-        data['prop'].append(pb_data)
-
-        #print pb_data
     json.dump(data, open(arguments.jsonout, 'w'), indent=2, sort_keys=True)
