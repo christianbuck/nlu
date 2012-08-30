@@ -123,6 +123,11 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                 x = new_concept_from_token(amr, alignment, h, depParse, wTags)
                 triples.add((str(x), '-DUMMY', '')) # ensure the concept participates in some triple so it is printed
         else:
+            if coarse.lower()=='person' and i>0 and ww[i-1].lower() in ['mr','mr.','mister','master','sir','mrs','mrs.','miss']:
+                # Extend the NE to include formal titles that do not get concepts
+                name = ww[i-1]+' '+name
+                i -= 1
+
             if not (x or x==0): # need a new variable
                 ne_class = fine.lower().replace('other','') or coarse.lower()
                 concept, amr_name = amrify(ne_class, name)
