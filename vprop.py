@@ -66,7 +66,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
     for prop in props:
         baseform, roleset = prop["baseform"], prop["frame"]
         
-        preds = {tuple(arg) for arg in prop["args"] if arg[0]=='rel'}
+        preds = {tuple(arg[:5]) for arg in prop["args"] if arg[0]=='rel'}
         assert len(preds)==1
         pred = next(iter(preds))
         assert pred[2]==pred[3] # multiword predicates?
@@ -89,7 +89,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
         if ph is None: continue # TODO: improve coverage of complex spans
         px = alignment[:ph]
         
-        for rel,treenode,i,j,yieldS in prop["args"]:
+        for rel,treenode,i,j,yieldS,_ in prop["args"]:
             if i is None or j is None: continue # TODO: special PropBank cases that need further work
             if rel in ['rel', 'LINK-PCR', 'LINK-SLC']: continue
             assert rel[:3]=='ARG'

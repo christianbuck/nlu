@@ -142,27 +142,6 @@ def loadVProp(jsonFile):
     with codecs.open(jsonFile, 'r', 'utf-8') as jsonF:
         data = json.load(jsonF)
         props = [prop for prop in data["prop"] if prop["frame"]!='do.01']   # auxiliary do.01 shouldn't be annotated, but sometimes is
-        for prop in props:  # resolve relative clause * / LINK-PCR arguments    # TODO: ideally this would be done in preparing the JSON file (add_prop)
-            # see wsj_0003.0 for an example ('workers' at 25:1 vs. '*' at 27:0 as the ARG1 of expose.01)
-            
-            empty2overt = {}
-            for arg in prop["args"]:
-                if arg[0]=='LINK-PCR':
-                    overtNode, emptyNode = arg[1].split('*')[:2] # TODO: sometimes more than 2 chain members, e.g. in wsj_0003.10
-                    empty2overt[emptyNode] = overtNode
-            for arg in prop["args"]:
-                if arg[0].startswith('ARG') and arg[4]=='*':
-                    overtNode = empty2overt[arg[1]]
-                    # look up node in the tree, convert to offsets
-                    pt = SpanTree.parse(data["goldparse"])  # TODO: what if it is a non-OntoNotes (PTB) tree?
-                    leaf_id, depth = pt.parse_pos(overtNode)
-                    treepos = pt.get_treepos(leaf_id, depth)
-                    overtWords = pt[treepos].leaves()
-                    overtStart, overtEnd = span_from_treepos(pt, treepos)
-                    if config.verbose: print('relative clause LINK-PCR: ',arg,'-->',(overtStart,overtEnd,overtWords), file=sys.stderr)
-                    arg[1] = overtNode
-                    arg[2], arg[3] = overtStart, overtEnd
-                    arg[4] = ' '.join(overtWords)
         return props
 
 def loadNProp(jsonFile):
