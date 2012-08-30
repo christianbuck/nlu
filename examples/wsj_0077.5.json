@@ -74,14 +74,16 @@
           "0:0", 
           0, 
           0, 
-          "Continuing"
+          "Continuing", 
+          []
         ], 
         [
           "ARG1", 
           "1:0", 
           1, 
           1, 
-          "demand"
+          "demand", 
+          []
         ]
       ], 
       "baseform": "continue", 
@@ -96,21 +98,24 @@
           "7:0", 
           7, 
           7, 
-          "boosted"
+          "boosted", 
+          []
         ], 
         [
           "ARG0", 
           "0:2", 
           0, 
           6, 
-          "Continuing demand for dollars from Japanese investors"
+          "Continuing demand for dollars from Japanese investors", 
+          []
         ], 
         [
           "ARG1", 
           "8:1", 
           8, 
           10, 
-          "the U.S. currency"
+          "the U.S. currency", 
+          []
         ]
       ], 
       "baseform": "boost", 

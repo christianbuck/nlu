@@ -89,28 +89,32 @@
           "1:0", 
           1, 
           1, 
-          "dumped"
+          "dumped", 
+          []
         ], 
         [
           "ARG0", 
           "0:1", 
           0, 
           0, 
-          "Workers"
+          "Workers", 
+          []
         ], 
         [
           "ARG1", 
           "2:2", 
           2, 
           8, 
-          "large burlap sacks of the imported material"
+          "large burlap sacks of the imported material", 
+          []
         ], 
         [
           "ARGM-DIR", 
           "9:1", 
           9, 
           12, 
-          "into a huge bin"
+          "into a huge bin", 
+          []
         ]
       ], 
       "baseform": "dump", 
@@ -125,14 +129,16 @@
           "7:0", 
           7, 
           7, 
-          "imported"
+          "imported", 
+          []
         ], 
         [
           "ARG1", 
           "8:0", 
           8, 
           8, 
-          "material"
+          "material", 
+          []
         ]
       ], 
       "baseform": "import", 
@@ -147,28 +153,32 @@
           "14:0", 
           14, 
           14, 
-          "poured"
+          "poured", 
+          []
         ], 
         [
           "ARG0", 
           "0:1", 
           0, 
           0, 
-          "Workers"
+          "Workers", 
+          []
         ], 
         [
           "ARGM-DIR", 
           "15:1", 
           15, 
           15, 
-          "in"
+          "in", 
+          []
         ], 
         [
           "ARG1", 
           "16:2", 
           16, 
           19, 
-          "cotton and acetate fibers"
+          "cotton and acetate fibers", 
+          []
         ]
       ], 
       "baseform": "pour", 
@@ -183,35 +193,40 @@
           "22:0", 
           22, 
           22, 
-          "mixed"
+          "mixed", 
+          []
         ], 
         [
           "ARG0", 
           "0:1", 
           0, 
           0, 
-          "Workers"
+          "Workers", 
+          []
         ], 
         [
           "ARGM-MNR", 
           "21:1", 
           21, 
           21, 
-          "mechanically"
+          "mechanically", 
+          []
         ], 
         [
           "ARG1", 
           "23:1", 
           23, 
           25, 
-          "the dry fibers"
+          "the dry fibers", 
+          []
         ], 
         [
           "ARGM-LOC", 
           "26:1", 
           26, 
           34, 
-          "in a process used * *PRO* to make filters"
+          "in a process used * *PRO* to make filters", 
+          []
         ]
       ], 
       "baseform": "mix", 
@@ -226,28 +241,29 @@
           "29:0", 
           29, 
           29, 
-          "used"
+          "used", 
+          []
         ], 
         [
           "ARG1", 
-          "30:0", 
-          30, 
-          30, 
-          "*"
+          "27:1", 
+          27, 
+          28, 
+          "a process", 
+          [
+            "30:0", 
+            30, 
+            30, 
+            "*"
+          ]
         ], 
         [
           "ARG2", 
           "31:2", 
           31, 
           34, 
-          "*PRO* to make filters"
-        ], 
-        [
-          "LINK-PCR", 
-          "27:1*30:0", 
-          null, 
-          null, 
-          ""
+          "*PRO* to make filters", 
+          []
         ]
       ], 
       "baseform": "use", 
@@ -262,21 +278,24 @@
           "33:0", 
           33, 
           33, 
-          "make"
+          "make", 
+          []
         ], 
         [
           "ARG0", 
           "31:0", 
           31, 
           31, 
-          "*PRO*"
+          "*PRO*", 
+          []
         ], 
         [
           "ARG1", 
           "34:1", 
           34, 
           34, 
-          "filters"
+          "filters", 
+          []
         ]
       ], 
       "baseform": "make", 

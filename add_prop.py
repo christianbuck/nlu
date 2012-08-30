@@ -136,31 +136,40 @@ if __name__ == "__main__":
     for propS in pb[docId][sentNr]:
         prop = parse_onprop(propS)
         args = prop['args']
+
+	# TODO: concatenated arguments (comma-separated positions used if the argument is not a constituent)
+	# currently these appear in the output with null start and end positions
         
         
-        empty2overt = {}
-        # for resolving relative clause * / LINK-PCR arguments
+        support2main = {}
+	# for LINK-PCR and LINK-SLC arguments, there is a relativizer or empty element which 
+	# I am calling a "support" node; this "support" is associated with a normal argument 
+	# and the link associates it with the main node. In the output, supporting nodes are 
+	# moved to a special slot within the argument, replaced in the normal slot by the 
+	# corresponding main node, and the LINK entries are removed.
         # see wsj_0003.0 for an example ('workers' at 25:1 vs. '*' at 27:0 as the ARG1 of expose.01)
         for position, role in args:
-            if role=='LINK-PCR':
-                overtNode, emptyNode = position.split('*')[:2] # TODO: sometimes more than 2 chain members, e.g. in wsj_0003.10
-                empty2overt[emptyNode] = overtNode
+            if role in ['LINK-PCR','LINK-SLC']:
+                mainNode, supportNode = position.split('*')[:2] # TODO: sometimes more than 2 chain members, e.g. in wsj_0003.10
+		assert support2main.setdefault(supportNode, mainNode)==mainNode
         
         new_args = []
         for position, role in args: # update the arguments with token span offsets where possible
-            words, start, end = [], None, None
+	    if role in ['LINK-PCR','LINK-SLC']: continue # exclude the link entries themselves from the output
+            words, start, end, support = [], None, None, []
             
             leaf_id, depth = pt.parse_pos(position)
             if leaf_id is not None and depth is not None:
                 treepos = pt.get_treepos(leaf_id, depth)
-                
-                if role.startswith('ARG') and pt[treepos].leaves()==['*']:
-                    overtNode = empty2overt[position]   # use mapping from a LINK-PCR argument
+		support = [position]+list(span_from_treepos(pt, treepos))+[' '.join(pt[treepos].leaves())]
+
+                if position in support2main:
+                    mainNode = support2main[position]   # use mapping from a LINK entry
                     # look up node in the tree, convert to offsets
                     pt = SpanTree.parse(data["goldparse"])  # TODO: what if it is a non-OntoNotes (PTB) tree?
-                    leaf_id, depth = pt.parse_pos(overtNode)
+                    leaf_id, depth = pt.parse_pos(mainNode)
                     treepos = pt.get_treepos(leaf_id, depth)
-                    position = overtNode
+                    position = mainNode
 
                 trace = get_trace(pt[treepos], recursive=recursive)
                 while trace is not None:    # follow trace pointer to another constituent
@@ -169,6 +178,9 @@ if __name__ == "__main__":
                     # attempt to follow trace pointer to a consituent
                     tracepos = pt.find_trace(trace_id)
                     if tracepos is not None:
+	                start, end = span_from_treepos(pt, treepos)
+			if support[-3:-1]!=[start,end]:
+                            support.extend([start,end,' '.join(pt[treepos].leaves())])
                         treepos = tracepos
                     else:
                         break # could not follow trace
@@ -182,7 +194,9 @@ if __name__ == "__main__":
                 pass
 
             # argument (possibly with token offsets)
-            new_args.append( [role, position, start, end, ' '.join(words)] )
+            new_arg = [role, position, start, end, ' '.join(words)]
+	    new_arg.append(support if support!=new_arg[1:] else [])
+            new_args.append(new_arg)
 
         prop['args'] = new_args
         data['prop'].append(prop)

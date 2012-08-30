@@ -83,35 +83,37 @@
           "5:0", 
           5, 
           5, 
-          "worked"
+          "worked", 
+          []
         ], 
         [
           "ARG0", 
-          "4:0", 
-          3, 
-          3, 
-          "who"
+          "1:1", 
+          1, 
+          2, 
+          "33 men", 
+          [
+            "4:0", 
+            4, 
+            4, 
+            "*T*-4"
+          ]
         ], 
         [
           "ARGM-MNR", 
           "6:1", 
           6, 
           6, 
-          "closely"
+          "closely", 
+          []
         ], 
         [
           "ARG1", 
           "7:1", 
           7, 
           9, 
-          "with the substance"
-        ], 
-        [
-          "LINK-SLC", 
-          "1:1*4:0", 
-          null, 
-          null, 
-          ""
+          "with the substance", 
+          []
         ]
       ], 
       "baseform": "work", 
@@ -126,21 +128,24 @@
           "14:0", 
           14, 
           14, 
-          "died"
+          "died", 
+          []
         ], 
         [
           "ARGM-LOC", 
           "0:1", 
           0, 
           9, 
-          "Among 33 men who *T*-4 worked closely with the substance"
+          "Among 33 men who *T*-4 worked closely with the substance", 
+          []
         ], 
         [
           "ARG1", 
           "11:2;16:2", 
           null, 
           null, 
-          ""
+          "", 
+          []
         ]
       ], 
       "baseform": "die", 
@@ -155,14 +160,16 @@
           "21:0", 
           21, 
           21, 
-          "expected"
+          "expected", 
+          []
         ], 
         [
           "ARG1", 
           "22:0", 
           22, 
           22, 
-          "number"
+          "number", 
+          []
         ]
       ], 
       "baseform": "expect", 

@@ -13,28 +13,32 @@
           "5:0", 
           5, 
           5, 
-          "finished"
+          "finished", 
+          []
         ], 
         [
           "ARG1", 
           "0:1", 
           0, 
           4, 
-          "The Dow Jones Industrial Average"
+          "The Dow Jones Industrial Average", 
+          []
         ], 
         [
           "ARGM-MNR", 
           "6:3", 
           6, 
           10, 
-          "less than a point higher"
+          "less than a point higher", 
+          []
         ], 
         [
           "ARGM-EXT", 
           "11:2", 
           11, 
           18, 
-          "*PRO*-1 to close at 2645.90 in moderate trading"
+          "*PRO*-1 to close at 2645.90 in moderate trading", 
+          []
         ]
       ], 
       "baseform": "finish", 
@@ -49,35 +53,37 @@
           "13:0", 
           13, 
           13, 
-          "close"
+          "close", 
+          []
         ], 
         [
           "ARG1", 
-          "11:0", 
+          "0:1", 
           0, 
           4, 
-          "The Dow Jones Industrial Average"
+          "The Dow Jones Industrial Average", 
+          [
+            "11:0", 
+            11, 
+            11, 
+            "*PRO*-1"
+          ]
         ], 
         [
           "ARGM-EXT", 
           "14:1", 
           14, 
           15, 
-          "at 2645.90"
+          "at 2645.90", 
+          []
         ], 
         [
           "ARGM-LOC", 
           "16:1", 
           16, 
           18, 
-          "in moderate trading"
-        ], 
-        [
-          "LINK-PCR", 
-          "0:1*11:0", 
-          null, 
-          null, 
-          ""
+          "in moderate trading", 
+          []
         ]
       ], 
       "baseform": "close", 

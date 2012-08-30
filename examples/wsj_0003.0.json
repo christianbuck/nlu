@@ -202,35 +202,37 @@
           "5:0", 
           5, 
           5, 
-          "used"
+          "used", 
+          []
         ], 
         [
           "ARG1", 
-          "6:0", 
-          6, 
-          6, 
-          "*"
+          "0:2", 
+          0, 
+          3, 
+          "A form of asbestos", 
+          [
+            "6:0", 
+            6, 
+            6, 
+            "*"
+          ]
         ], 
         [
           "ARGM-TMP", 
           "4:1", 
           4, 
           4, 
-          "once"
+          "once", 
+          []
         ], 
         [
           "ARG2", 
           "7:2", 
           7, 
           12, 
-          "*PRO* to make Kent cigarette filters"
-        ], 
-        [
-          "LINK-PCR", 
-          "0:2*6:0", 
-          null, 
-          null, 
-          ""
+          "*PRO* to make Kent cigarette filters", 
+          []
         ]
       ], 
       "baseform": "use", 
@@ -245,21 +247,24 @@
           "9:0", 
           9, 
           9, 
-          "make"
+          "make", 
+          []
         ], 
         [
           "ARG0", 
           "7:0", 
           7, 
           7, 
-          "*PRO*"
+          "*PRO*", 
+          []
         ], 
         [
           "ARG1", 
           "10:1", 
           10, 
           12, 
-          "Kent cigarette filters"
+          "Kent cigarette filters", 
+          []
         ]
       ], 
       "baseform": "make", 
@@ -274,21 +279,24 @@
           "14:0", 
           14, 
           14, 
-          "caused"
+          "caused", 
+          []
         ], 
         [
           "ARG0", 
           "0:3", 
           0, 
           12, 
-          "A form of asbestos once used * *PRO* to make Kent cigarette filters"
+          "A form of asbestos once used * *PRO* to make Kent cigarette filters", 
+          []
         ], 
         [
           "ARG1", 
           "15:2", 
           15, 
           34, 
-          "a high percentage of cancer deaths among a group of workers exposed * to it more than 30 years ago"
+          "a high percentage of cancer deaths among a group of workers exposed * to it more than 30 years ago", 
+          []
         ]
       ], 
       "baseform": "cause", 
@@ -303,35 +311,37 @@
           "26:0", 
           26, 
           26, 
-          "exposed"
+          "exposed", 
+          []
         ], 
         [
           "ARG1", 
-          "27:0", 
-          27, 
-          27, 
-          "*"
+          "25:1", 
+          25, 
+          25, 
+          "workers", 
+          [
+            "27:0", 
+            27, 
+            27, 
+            "*"
+          ]
         ], 
         [
           "ARG2", 
           "28:1", 
           28, 
           29, 
-          "to it"
+          "to it", 
+          []
         ], 
         [
           "ARGM-TMP", 
           "30:3", 
           30, 
           34, 
-          "more than 30 years ago"
-        ], 
-        [
-          "LINK-PCR", 
-          "25:1*27:0", 
-          null, 
-          null, 
-          ""
+          "more than 30 years ago", 
+          []
         ]
       ], 
       "baseform": "expose", 
@@ -346,21 +356,29 @@
           "37:0", 
           37, 
           37, 
-          "reported"
+          "reported", 
+          []
         ], 
         [
           "ARG0", 
           "36:1", 
           36, 
           36, 
-          "researchers"
+          "researchers", 
+          []
         ], 
         [
           "ARG1", 
           "38:1", 
           0, 
           34, 
-          "A form of asbestos once used * *PRO* to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed * to it more than 30 years ago"
+          "A form of asbestos once used * *PRO* to make Kent cigarette filters has caused a high percentage of cancer deaths among a group of workers exposed * to it more than 30 years ago", 
+          [
+            "38:1", 
+            38, 
+            39, 
+            "0 *T*-1"
+          ]
         ]
       ], 
       "baseform": "report", 

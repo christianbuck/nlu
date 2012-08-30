@@ -199,42 +199,48 @@
           "17:0", 
           17, 
           17, 
-          "remain"
+          "remain", 
+          []
         ], 
         [
           "ARGM-DIS", 
           "0:1", 
           0, 
           0, 
-          "However"
+          "However", 
+          []
         ], 
         [
           "ARG1", 
           "2:2", 
           2, 
           15, 
-          "five other countries -- China , Thailand , India , Brazil and Mexico --"
+          "five other countries -- China , Thailand , India , Brazil and Mexico --", 
+          []
         ], 
         [
           "ARGM-MOD", 
           "16:0", 
           16, 
           16, 
-          "will"
+          "will", 
+          []
         ], 
         [
           "ARG3", 
           "18:1", 
           18, 
           25, 
-          "on that so - called priority watch list"
+          "on that so - called priority watch list", 
+          []
         ], 
         [
           "ARGM-CAU", 
           "26:1", 
           26, 
           32, 
-          "as a result of an interim review"
+          "as a result of an interim review", 
+          []
         ]
       ], 
       "baseform": "remain", 
@@ -249,21 +255,29 @@
           "39:0", 
           39, 
           39, 
-          "announced"
+          "announced", 
+          []
         ], 
         [
           "ARG0", 
           "34:2", 
           34, 
           38, 
-          "U.S. Trade Representative Carla Hills"
+          "U.S. Trade Representative Carla Hills", 
+          []
         ], 
         [
           "ARG1", 
           "40:1", 
           0, 
           32, 
-          "However , five other countries -- China , Thailand , India , Brazil and Mexico -- will remain on that so - called priority watch list as a result of an interim review"
+          "However , five other countries -- China , Thailand , India , Brazil and Mexico -- will remain on that so - called priority watch list as a result of an interim review", 
+          [
+            "40:1", 
+            40, 
+            41, 
+            "0 *T*-1"
+          ]
         ]
       ], 
       "baseform": "announce", 

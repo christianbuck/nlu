@@ -185,21 +185,24 @@
           "16:0", 
           16, 
           16, 
-          "indicated"
+          "indicated", 
+          []
         ], 
         [
           "ARG0", 
           "0:3", 
           0, 
           15, 
-          "The Federal Reserve 's Beige Book , a summary of economic conditions across the country ,"
+          "The Federal Reserve 's Beige Book , a summary of economic conditions across the country ,", 
+          []
         ], 
         [
           "ARG1", 
           "17:1", 
           17, 
           27, 
-          "that the overall economy remains in a pattern of sluggish growth"
+          "that the overall economy remains in a pattern of sluggish growth", 
+          []
         ]
       ], 
       "baseform": "indicate", 
@@ -214,21 +217,24 @@
           "21:0", 
           21, 
           21, 
-          "remains"
+          "remains", 
+          []
         ], 
         [
           "ARG1", 
           "18:1", 
           18, 
           20, 
-          "the overall economy"
+          "the overall economy", 
+          []
         ], 
         [
           "ARG3", 
           "22:1", 
           22, 
           27, 
-          "in a pattern of sluggish growth"
+          "in a pattern of sluggish growth", 
+          []
         ]
       ], 
       "baseform": "remain", 

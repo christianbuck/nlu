@@ -186,6 +186,9 @@ def process_file(json_filename, nb):
 
     for nb_data in nb[docId][sentNr]:
         args = nb_data['args']
+
+	# TODO: arguments that are chains or concatenations of multiple nodes
+
         new_args = []
         for pos, role in args:
             words, start, end = [], None, None

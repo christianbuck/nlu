@@ -66,21 +66,24 @@
           "3:0", 
           3, 
           3, 
-          "totaled"
+          "totaled", 
+          []
         ], 
         [
           "ARG1", 
           "0:2", 
           0, 
           2, 
-          "Big Board volume"
+          "Big Board volume", 
+          []
         ], 
         [
           "ARG2", 
           "4:2", 
           4, 
           6, 
-          "154.2 million shares"
+          "154.2 million shares", 
+          []
         ]
       ], 
       "baseform": "total", 

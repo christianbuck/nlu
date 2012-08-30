@@ -150,21 +150,24 @@
           "11:0", 
           11, 
           11, 
-          "enters"
+          "enters", 
+          []
         ], 
         [
           "ARG0", 
           "10:1", 
           10, 
           10, 
-          "it"
+          "it", 
+          []
         ], 
         [
           "ARG1", 
           "12:1", 
           12, 
           13, 
-          "the lungs"
+          "the lungs", 
+          []
         ]
       ], 
       "baseform": "enter", 
@@ -179,21 +182,24 @@
           "21:0", 
           21, 
           21, 
-          "causing"
+          "causing", 
+          []
         ], 
         [
           "ARG0", 
           "16:2", 
           16, 
           20, 
-          "even brief exposures to it"
+          "even brief exposures to it", 
+          []
         ], 
         [
           "ARG1", 
           "22:2", 
           22, 
           28, 
-          "symptoms that *T*-1 show up decades later"
+          "symptoms that *T*-1 show up decades later", 
+          []
         ]
       ], 
       "baseform": "cause", 
@@ -208,28 +214,29 @@
           "25:0,26:1", 
           null, 
           null, 
-          ""
+          "", 
+          []
         ], 
         [
           "ARG1", 
-          "24:0", 
-          23, 
-          23, 
-          "that"
+          "22:1", 
+          22, 
+          22, 
+          "symptoms", 
+          [
+            "24:0", 
+            24, 
+            24, 
+            "*T*-1"
+          ]
         ], 
         [
           "ARGM-TMP", 
           "27:2", 
           27, 
           28, 
-          "decades later"
-        ], 
-        [
-          "LINK-SLC", 
-          "22:1*24:0", 
-          null, 
-          null, 
-          ""
+          "decades later", 
+          []
         ]
       ], 
       "baseform": "show", 
@@ -244,21 +251,29 @@
           "31:0", 
           31, 
           31, 
-          "said"
+          "said", 
+          []
         ], 
         [
           "ARG0", 
           "30:1", 
           30, 
           30, 
-          "researchers"
+          "researchers", 
+          []
         ], 
         [
           "ARG1", 
           "33:0", 
           0, 
           28, 
-          "The asbestos fiber , crocidolite , is unusually resilient once it enters the lungs , with even brief exposures to it causing symptoms that *T*-1 show up decades later"
+          "The asbestos fiber , crocidolite , is unusually resilient once it enters the lungs , with even brief exposures to it causing symptoms that *T*-1 show up decades later", 
+          [
+            "33:0", 
+            33, 
+            33, 
+            "*T*-2"
+          ]
         ]
       ], 
       "baseform": "say", 

@@ -153,28 +153,29 @@
           "2:0", 
           2, 
           2, 
-          "disappointed"
+          "disappointed", 
+          []
         ], 
         [
           "ARG1", 
-          "3:0", 
+          "0:1", 
           0, 
           0, 
-          "Analysts"
+          "Analysts", 
+          [
+            "3:0", 
+            3, 
+            3, 
+            "*-112"
+          ]
         ], 
         [
           "ARG0", 
           "4:1;12:1", 
           null, 
           null, 
-          ""
-        ], 
-        [
-          "LINK-PCR", 
-          "0:1*3:0", 
-          null, 
-          null, 
-          ""
+          "", 
+          []
         ]
       ], 
       "baseform": "disappoint", 
@@ -189,21 +190,24 @@
           "31:0", 
           31, 
           31, 
-          "evaporated"
+          "evaporated", 
+          []
         ], 
         [
           "ARG1", 
           "5:3;12:1", 
           null, 
           null, 
-          ""
+          "", 
+          []
         ], 
         [
           "ARGM-TMP", 
           "32:1", 
           32, 
           33, 
-          "so quickly"
+          "so quickly", 
+          []
         ]
       ], 
       "baseform": "evaporate", 

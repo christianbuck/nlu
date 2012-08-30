@@ -137,28 +137,29 @@
           "4:0", 
           4, 
           4, 
-          "reported"
+          "reported", 
+          []
         ], 
         [
           "ARG1", 
           "5:0", 
           1, 
           2, 
-          "preliminary findings"
+          "preliminary findings", 
+          [
+            "5:0", 
+            5, 
+            5, 
+            "*-2"
+          ]
         ], 
         [
           "ARGM-TMP", 
           "6:3", 
           6, 
           10, 
-          "more than a year ago"
-        ], 
-        [
-          "LINK-PCR", 
-          "5:0*5:0", 
-          null, 
-          null, 
-          ""
+          "more than a year ago", 
+          []
         ]
       ], 
       "baseform": "report", 
@@ -173,28 +174,32 @@
           "15:0", 
           15, 
           15, 
-          "appear"
+          "appear", 
+          []
         ], 
         [
           "ARGM-ADV", 
           "0:1", 
           0, 
           10, 
-          "Although preliminary findings were reported *-2 more than a year ago"
+          "Although preliminary findings were reported *-2 more than a year ago", 
+          []
         ], 
         [
           "ARG1", 
           "12:1", 
           12, 
           14, 
-          "the latest results"
+          "the latest results", 
+          []
         ], 
         [
           "ARGM-LOC", 
           "16:1", 
           16, 
           35, 
-          "in today 's New England Journal of Medicine , a forum likely *PRO* to bring new attention to the problem"
+          "in today 's New England Journal of Medicine , a forum likely *PRO* to bring new attention to the problem", 
+          []
         ]
       ], 
       "baseform": "appear", 
@@ -209,35 +214,37 @@
           "30:0", 
           30, 
           30, 
-          "bring"
+          "bring", 
+          []
         ], 
         [
           "ARG0", 
-          "28:0", 
-          28, 
-          28, 
-          "*PRO*"
+          "25:1", 
+          25, 
+          26, 
+          "a forum", 
+          [
+            "28:0", 
+            28, 
+            28, 
+            "*PRO*"
+          ]
         ], 
         [
           "ARG1", 
           "31:1", 
           31, 
           32, 
-          "new attention"
+          "new attention", 
+          []
         ], 
         [
           "ARG2", 
           "33:1", 
           33, 
           35, 
-          "to the problem"
-        ], 
-        [
-          "LINK-PCR", 
-          "25:1*28:0", 
-          null, 
-          null, 
-          ""
+          "to the problem", 
+          []
         ]
       ], 
       "baseform": "bring", 

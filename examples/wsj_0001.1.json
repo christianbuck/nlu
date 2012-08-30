@@ -109,14 +109,16 @@
           "10:0", 
           10, 
           10, 
-          "publishing"
+          "publishing", 
+          []
         ], 
         [
           "ARG0", 
           "11:0", 
           11, 
           11, 
-          "group"
+          "group", 
+          []
         ]
       ], 
       "baseform": "publish", 

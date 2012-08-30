@@ -104,28 +104,29 @@
           "7:0", 
           7, 
           7, 
-          "studied"
+          "studied", 
+          []
         ], 
         [
           "ARG0", 
-          "6:0", 
-          5, 
-          5, 
-          "who"
+          "3:1", 
+          3, 
+          4, 
+          "the researchers", 
+          [
+            "6:0", 
+            6, 
+            6, 
+            "*T*-3"
+          ]
         ], 
         [
           "ARG1", 
           "8:1", 
           8, 
           9, 
-          "the workers"
-        ], 
-        [
-          "LINK-SLC", 
-          "3:1*6:0", 
-          null, 
-          null, 
-          ""
+          "the workers", 
+          []
         ]
       ], 
       "baseform": "study", 

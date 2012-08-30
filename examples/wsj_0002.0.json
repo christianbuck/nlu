@@ -161,28 +161,29 @@
           "16:0", 
           16, 
           16, 
-          "named"
+          "named", 
+          []
         ], 
         [
           "ARG1", 
           "17:0", 
           0, 
           14, 
-          "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC ,"
+          "Rudolph Agnew , 55 years old and former chairman of Consolidated Gold Fields PLC ,", 
+          [
+            "17:0", 
+            17, 
+            17, 
+            "*-1"
+          ]
         ], 
         [
           "ARG2", 
           "18:2", 
           18, 
           26, 
-          "*PRO*-2 a nonexecutive director of this British industrial conglomerate"
-        ], 
-        [
-          "LINK-PCR", 
-          "17:0*17:0", 
-          null, 
-          null, 
-          ""
+          "*PRO*-2 a nonexecutive director of this British industrial conglomerate", 
+          []
         ]
       ], 
       "baseform": "name", 

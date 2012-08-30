@@ -94,21 +94,24 @@
           "22:0", 
           22, 
           22, 
-          "make"
+          "make", 
+          []
         ], 
         [
           "ARG0", 
           "20:0", 
           20, 
           20, 
-          "*PRO*"
+          "*PRO*", 
+          []
         ], 
         [
           "ARG1", 
           "23:1", 
           23, 
           25, 
-          "the cigarette filters"
+          "the cigarette filters", 
+          []
         ]
       ], 
       "baseform": "make", 

@@ -141,14 +141,16 @@
           "4:0", 
           4, 
           4, 
-          "surviving"
+          "surviving", 
+          []
         ], 
         [
           "ARG0", 
           "5:0", 
           5, 
           5, 
-          "workers"
+          "workers", 
+          []
         ]
       ], 
       "baseform": "survive", 
@@ -163,28 +165,32 @@
           "6:0", 
           6, 
           6, 
-          "have"
+          "have", 
+          []
         ], 
         [
           "ARG0", 
           "0:2", 
           0, 
           5, 
-          "Four of the five surviving workers"
+          "Four of the five surviving workers", 
+          []
         ], 
         [
           "ARG1", 
           "7:2", 
           7, 
           10, 
-          "asbestos - related diseases"
+          "asbestos - related diseases", 
+          []
         ], 
         [
           "ARGM-PRD", 
           "12:1", 
           12, 
           17, 
-          "including three with recently diagnosed cancer"
+          "including three with recently diagnosed cancer", 
+          []
         ]
       ], 
       "baseform": "have", 
@@ -199,21 +205,24 @@
           "16:0", 
           16, 
           16, 
-          "diagnosed"
+          "diagnosed", 
+          []
         ], 
         [
           "ARGM-TMP", 
           "15:0", 
           15, 
           15, 
-          "recently"
+          "recently", 
+          []
         ], 
         [
           "ARG2", 
           "17:0", 
           17, 
           17, 
-          "cancer"
+          "cancer", 
+          []
         ]
       ], 
       "baseform": "diagnose", 

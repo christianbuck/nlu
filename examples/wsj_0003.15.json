@@ -108,28 +108,29 @@
           "14:0", 
           14, 
           14, 
-          "study"
+          "study", 
+          []
         ], 
         [
           "ARG0", 
-          "13:0", 
-          12, 
-          12, 
-          "who"
+          "9:2", 
+          9, 
+          11, 
+          "those of us", 
+          [
+            "13:0", 
+            13, 
+            13, 
+            "*T*-5"
+          ]
         ], 
         [
           "ARG1", 
           "15:2", 
           15, 
           18, 
-          "asbestos - related diseases"
-        ], 
-        [
-          "LINK-SLC", 
-          "9:2*13:0", 
-          null, 
-          null, 
-          ""
+          "asbestos - related diseases", 
+          []
         ]
       ], 
       "baseform": "study", 
@@ -144,21 +145,29 @@
           "21:0", 
           21, 
           21, 
-          "said"
+          "said", 
+          []
         ], 
         [
           "ARG1", 
           "22:0", 
           1, 
           18, 
-          "The morbidity rate is a striking finding among those of us who *T*-5 study asbestos - related diseases"
+          "The morbidity rate is a striking finding among those of us who *T*-5 study asbestos - related diseases", 
+          [
+            "22:0", 
+            22, 
+            22, 
+            "*T*-1"
+          ]
         ], 
         [
           "ARG0", 
           "23:1", 
           23, 
           24, 
-          "Dr. Talcott"
+          "Dr. Talcott", 
+          []
         ]
       ], 
       "baseform": "say", 

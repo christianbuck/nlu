@@ -136,35 +136,40 @@
           "4:0", 
           4, 
           4, 
-          "support"
+          "support", 
+          []
         ], 
         [
           "ARG0", 
           "0:1", 
           0, 
           1, 
-          "The finding"
+          "The finding", 
+          []
         ], 
         [
           "ARGM-ADV", 
           "2:1", 
           2, 
           2, 
-          "probably"
+          "probably", 
+          []
         ], 
         [
           "ARGM-MOD", 
           "3:0", 
           3, 
           3, 
-          "will"
+          "will", 
+          []
         ], 
         [
           "ARG1", 
           "5:2", 
           5, 
           38, 
-          "those who *T*-6 argue that the U.S. should regulate the class of asbestos including crocidolite more stringently than the common kind of asbestos , chrysotile , found * in most schools and other buildings"
+          "those who *T*-6 argue that the U.S. should regulate the class of asbestos including crocidolite more stringently than the common kind of asbestos , chrysotile , found * in most schools and other buildings", 
+          []
         ]
       ], 
       "baseform": "support", 
@@ -179,28 +184,29 @@
           "8:0", 
           8, 
           8, 
-          "argue"
+          "argue", 
+          []
         ], 
         [
           "ARG0", 
-          "7:0", 
-          6, 
-          6, 
-          "who"
+          "5:1", 
+          5, 
+          5, 
+          "those", 
+          [
+            "7:0", 
+            7, 
+            7, 
+            "*T*-6"
+          ]
         ], 
         [
           "ARG1", 
           "9:1", 
           9, 
           38, 
-          "that the U.S. should regulate the class of asbestos including crocidolite more stringently than the common kind of asbestos , chrysotile , found * in most schools and other buildings"
-        ], 
-        [
-          "LINK-SLC", 
-          "5:1*7:0", 
-          null, 
-          null, 
-          ""
+          "that the U.S. should regulate the class of asbestos including crocidolite more stringently than the common kind of asbestos , chrysotile , found * in most schools and other buildings", 
+          []
         ]
       ], 
       "baseform": "argue", 
@@ -215,35 +221,40 @@
           "13:0", 
           13, 
           13, 
-          "regulate"
+          "regulate", 
+          []
         ], 
         [
           "ARG0", 
           "10:1", 
           10, 
           11, 
-          "the U.S."
+          "the U.S.", 
+          []
         ], 
         [
           "ARGM-MOD", 
           "12:0", 
           12, 
           12, 
-          "should"
+          "should", 
+          []
         ], 
         [
           "ARG1", 
           "14:2", 
           14, 
           19, 
-          "the class of asbestos including crocidolite"
+          "the class of asbestos including crocidolite", 
+          []
         ], 
         [
           "ARGM-MNR", 
           "20:2", 
           20, 
           38, 
-          "more stringently than the common kind of asbestos , chrysotile , found * in most schools and other buildings"
+          "more stringently than the common kind of asbestos , chrysotile , found * in most schools and other buildings", 
+          []
         ]
       ], 
       "baseform": "regulate", 
@@ -258,21 +269,24 @@
           "18:0", 
           18, 
           18, 
-          "including"
+          "including", 
+          []
         ], 
         [
           "ARG2", 
           "14:1,16:1", 
           null, 
           null, 
-          ""
+          "", 
+          []
         ], 
         [
           "ARG1", 
           "19:1", 
           19, 
           19, 
-          "crocidolite"
+          "crocidolite", 
+          []
         ]
       ], 
       "baseform": "include", 
@@ -287,28 +301,29 @@
           "31:0", 
           31, 
           31, 
-          "found"
+          "found", 
+          []
         ], 
         [
           "ARG1", 
-          "32:0", 
-          32, 
-          32, 
-          "*"
+          "23:2", 
+          23, 
+          30, 
+          "the common kind of asbestos , chrysotile ,", 
+          [
+            "32:0", 
+            32, 
+            32, 
+            "*"
+          ]
         ], 
         [
           "ARGM-LOC", 
           "33:1", 
           33, 
           38, 
-          "in most schools and other buildings"
-        ], 
-        [
-          "LINK-PCR", 
-          "23:2*32:0", 
-          null, 
-          null, 
-          ""
+          "in most schools and other buildings", 
+          []
         ]
       ], 
       "baseform": "find", 
@@ -323,21 +338,29 @@
           "42:0", 
           42, 
           42, 
-          "said"
+          "said", 
+          []
         ], 
         [
           "ARG0", 
           "40:1", 
           40, 
           41, 
-          "Dr. Talcott"
+          "Dr. Talcott", 
+          []
         ], 
         [
           "ARG1", 
           "44:0", 
           0, 
           38, 
-          "The finding probably will support those who *T*-6 argue that the U.S. should regulate the class of asbestos including crocidolite more stringently than the common kind of asbestos , chrysotile , found * in most schools and other buildings"
+          "The finding probably will support those who *T*-6 argue that the U.S. should regulate the class of asbestos including crocidolite more stringently than the common kind of asbestos , chrysotile , found * in most schools and other buildings", 
+          [
+            "44:0", 
+            44, 
+            44, 
+            "*T*-1"
+          ]
         ]
       ], 
       "baseform": "say", 

@@ -145,21 +145,24 @@
           "8:0", 
           8, 
           8, 
-          "gained"
+          "gained", 
+          []
         ], 
         [
           "ARG1", 
           "0:2", 
           0, 
           7, 
-          "The Treasury 's benchmark 30 - year bond"
+          "The Treasury 's benchmark 30 - year bond", 
+          []
         ], 
         [
           "ARG2", 
           "9:4", 
           9, 
           27, 
-          "about a quarter of a point , or $ 2.50 *U* for each $ 1,000 *U* of face amount"
+          "about a quarter of a point , or $ 2.50 *U* for each $ 1,000 *U* of face amount", 
+          []
         ]
       ], 
       "baseform": "gain", 

@@ -60,14 +60,16 @@
           "5:0", 
           5, 
           5, 
-          "remaining"
+          "remaining", 
+          []
         ], 
         [
           "ARG1", 
           "6:0", 
           6, 
           6, 
-          "uses"
+          "uses", 
+          []
         ]
       ], 
       "baseform": "remain", 
@@ -82,35 +84,37 @@
           "14:0", 
           14, 
           14, 
-          "outlawed"
+          "outlawed", 
+          []
         ], 
         [
           "ARGM-TMP", 
           "0:1", 
           0, 
           1, 
-          "By 1997"
+          "By 1997", 
+          []
         ], 
         [
           "ARGM-MOD", 
           "12:0", 
           12, 
           12, 
-          "will"
+          "will", 
+          []
         ], 
         [
           "ARG1", 
           "15:0", 
           3, 
           11, 
-          "almost all remaining uses of cancer - causing asbestos"
-        ], 
-        [
-          "LINK-PCR", 
-          "15:0*15:0", 
-          null, 
-          null, 
-          ""
+          "almost all remaining uses of cancer - causing asbestos", 
+          [
+            "15:0", 
+            15, 
+            15, 
+            "*-6"
+          ]
         ]
       ], 
       "baseform": "outlaw", 

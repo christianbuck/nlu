@@ -44,21 +44,34 @@
           "12:0", 
           12, 
           12, 
-          "used"
+          "used", 
+          []
         ], 
         [
           "ARG1", 
           "13:0", 
           9, 
           10, 
-          "the crocidolite"
+          "the crocidolite", 
+          [
+            "13:0", 
+            13, 
+            13, 
+            "*-8"
+          ]
         ], 
         [
           "ARGM-LOC", 
           "14:0", 
           8, 
           8, 
-          "where"
+          "where", 
+          [
+            "14:0", 
+            14, 
+            14, 
+            "*T*-1"
+          ]
         ]
       ], 
       "baseform": "use", 

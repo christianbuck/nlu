@@ -51,14 +51,16 @@
           "3:0", 
           3, 
           3, 
-          "have"
+          "have", 
+          []
         ], 
         [
           "ARGM-DIS", 
           "1:0", 
           1, 
           1, 
-          "But"
+          "But", 
+          []
         ]
       ], 
       "baseform": "have", 
@@ -73,28 +75,37 @@
           "6:0", 
           6, 
           6, 
-          "recognize"
+          "recognize", 
+          []
         ], 
         [
           "ARGM-MOD", 
           "3:0", 
           3, 
           3, 
-          "have"
+          "have", 
+          []
         ], 
         [
           "ARG0", 
           "4:0", 
           2, 
           2, 
-          "you"
+          "you", 
+          [
+            "4:0", 
+            4, 
+            4, 
+            "*-1"
+          ]
         ], 
         [
           "ARG1", 
           "8:2", 
           8, 
           14, 
-          "these events took place 35 years ago"
+          "these events took place 35 years ago", 
+          []
         ]
       ], 
       "baseform": "recognize", 
@@ -109,28 +120,32 @@
           "10:0", 
           10, 
           10, 
-          "took"
+          "took", 
+          []
         ], 
         [
           "ARG1", 
           "8:1", 
           8, 
           9, 
-          "these events"
+          "these events", 
+          []
         ], 
         [
           "ARG2", 
           "11:1", 
           11, 
           11, 
-          "place"
+          "place", 
+          []
         ], 
         [
           "ARGM-TMP", 
           "12:2", 
           12, 
           14, 
-          "35 years ago"
+          "35 years ago", 
+          []
         ]
       ], 
       "baseform": "take", 

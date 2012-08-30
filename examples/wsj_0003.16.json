@@ -237,14 +237,16 @@
           "18:0", 
           18, 
           18, 
-          "appears"
+          "appears", 
+          []
         ], 
         [
           "ARG1", 
           "0:2,19:2", 
           null, 
           null, 
-          ""
+          "", 
+          []
         ]
       ], 
       "baseform": "appear", 
@@ -259,28 +261,29 @@
           "28:0", 
           28, 
           28, 
-          "studied"
+          "studied", 
+          []
         ], 
         [
           "ARG1", 
-          "29:0", 
-          29, 
-          29, 
-          "*"
+          "25:1", 
+          25, 
+          27, 
+          "any asbestos workers", 
+          [
+            "29:0", 
+            29, 
+            29, 
+            "*"
+          ]
         ], 
         [
           "ARGM-LOC", 
           "30:1", 
           30, 
           33, 
-          "in Western industrialized countries"
-        ], 
-        [
-          "LINK-PCR", 
-          "25:1*29:0", 
-          null, 
-          null, 
-          ""
+          "in Western industrialized countries", 
+          []
         ]
       ], 
       "baseform": "study", 
@@ -295,14 +298,16 @@
           "32:0", 
           32, 
           32, 
-          "industrialized"
+          "industrialized", 
+          []
         ], 
         [
           "ARG1", 
           "33:0", 
           33, 
           33, 
-          "countries"
+          "countries", 
+          []
         ]
       ], 
       "baseform": "industrialize", 
@@ -317,21 +322,29 @@
           "36:0", 
           36, 
           36, 
-          "said"
+          "said", 
+          []
         ], 
         [
           "ARG0", 
           "35:1", 
           35, 
           35, 
-          "he"
+          "he", 
+          []
         ], 
         [
           "ARG1", 
           "38:0", 
           0, 
           33, 
-          "The percentage of lung cancer deaths among the workers at the West Groton , Mass. , paper factory appears *-1 to be the highest for any asbestos workers studied * in Western industrialized countries"
+          "The percentage of lung cancer deaths among the workers at the West Groton , Mass. , paper factory appears *-1 to be the highest for any asbestos workers studied * in Western industrialized countries", 
+          [
+            "38:0", 
+            38, 
+            38, 
+            "*T*-2"
+          ]
         ]
       ], 
       "baseform": "say", 

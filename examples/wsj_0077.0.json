@@ -137,49 +137,61 @@
           "1:0", 
           1, 
           1, 
-          "took"
+          "took", 
+          []
         ], 
         [
           "ARG0", 
           "8:0", 
           0, 
           0, 
-          "Investors"
+          "Investors", 
+          [
+            "8:0", 
+            8, 
+            8, 
+            "*PRO*-1"
+          ]
         ], 
         [
           "ARG1", 
           "2:1", 
           2, 
           2, 
-          "advantage"
+          "advantage", 
+          []
         ], 
         [
           "ARG2", 
           "3:1", 
           3, 
           7, 
-          "of Tuesday 's stock rally"
+          "of Tuesday 's stock rally", 
+          []
         ], 
         [
           "ARGM-PRP", 
           "8:2", 
           8, 
           12, 
-          "*PRO*-1 to book some profits"
+          "*PRO*-1 to book some profits", 
+          []
         ], 
         [
           "ARGM-TMP", 
           "13:1", 
           13, 
           13, 
-          "yesterday"
+          "yesterday", 
+          []
         ], 
         [
           "ARGM-ADV", 
           "15:2", 
           15, 
           20, 
-          "*PRO*-1 leaving stocks *PRO*-2 up fractionally"
+          "*PRO*-1 leaving stocks *PRO*-2 up fractionally", 
+          []
         ]
       ], 
       "baseform": "take", 
@@ -194,28 +206,29 @@
           "10:0", 
           10, 
           10, 
-          "book"
+          "book", 
+          []
         ], 
         [
           "ARG0", 
           "8:0", 
           0, 
           0, 
-          "Investors"
+          "Investors", 
+          [
+            "8:0", 
+            8, 
+            8, 
+            "*PRO*-1"
+          ]
         ], 
         [
           "ARG1", 
           "11:1", 
           11, 
           12, 
-          "some profits"
-        ], 
-        [
-          "LINK-PCR", 
-          "8:0*8:0", 
-          null, 
-          null, 
-          ""
+          "some profits", 
+          []
         ]
       ], 
       "baseform": "book", 
@@ -230,35 +243,42 @@
           "16:0", 
           16, 
           16, 
-          "leaving"
+          "leaving", 
+          []
         ], 
         [
           "ARG0", 
           "15:0", 
           0, 
           0, 
-          "Investors"
+          "Investors", 
+          [
+            "15:0", 
+            15, 
+            15, 
+            "*PRO*-1"
+          ]
         ], 
         [
           "ARG1", 
           "18:0", 
           17, 
           17, 
-          "stocks"
+          "stocks", 
+          [
+            "18:0", 
+            18, 
+            18, 
+            "*PRO*-2"
+          ]
         ], 
         [
           "ARG2", 
           "18:2", 
           18, 
           20, 
-          "*PRO*-2 up fractionally"
-        ], 
-        [
-          "LINK-PCR", 
-          "15:0*15:0", 
-          null, 
-          null, 
-          ""
+          "*PRO*-2 up fractionally", 
+          []
         ]
       ], 
       "baseform": "leave", 

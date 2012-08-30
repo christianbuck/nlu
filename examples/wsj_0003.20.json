@@ -60,28 +60,37 @@
           "10:0", 
           10, 
           10, 
-          "rejected"
+          "rejected", 
+          []
         ], 
         [
           "ARGM-MNR", 
           "8:1", 
           8, 
           9, 
-          "more easily"
+          "more easily", 
+          []
         ], 
         [
           "ARG1", 
           "11:0", 
           0, 
           3, 
-          "More common chrysotile fibers"
+          "More common chrysotile fibers", 
+          [
+            "11:0", 
+            11, 
+            11, 
+            "*-1"
+          ]
         ], 
         [
           "ARG0", 
           "12:1", 
           12, 
           14, 
-          "by the body"
+          "by the body", 
+          []
         ]
       ], 
       "baseform": "reject", 
@@ -96,21 +105,29 @@
           "18:0", 
           18, 
           18, 
-          "explained"
+          "explained", 
+          []
         ], 
         [
           "ARG0", 
           "16:1", 
           16, 
           17, 
-          "Dr. Mossman"
+          "Dr. Mossman", 
+          []
         ], 
         [
           "ARG1", 
           "20:0", 
           0, 
           14, 
-          "More common chrysotile fibers are curly and are more easily rejected *-1 by the body"
+          "More common chrysotile fibers are curly and are more easily rejected *-1 by the body", 
+          [
+            "20:0", 
+            20, 
+            20, 
+            "*T*-2"
+          ]
         ]
       ], 
       "baseform": "explain", 

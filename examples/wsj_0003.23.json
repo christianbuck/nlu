@@ -118,28 +118,29 @@
           "8:0", 
           8, 
           8, 
-          "made"
+          "made", 
+          []
         ], 
         [
           "ARG0", 
-          "7:0", 
-          6, 
-          6, 
-          "that"
+          "4:1", 
+          4, 
+          5, 
+          "a factory", 
+          [
+            "7:0", 
+            7, 
+            7, 
+            "*T*-8"
+          ]
         ], 
         [
           "ARG1", 
           "9:2", 
           9, 
           13, 
-          "paper for the Kent filters"
-        ], 
-        [
-          "LINK-SLC", 
-          "4:1*7:0", 
-          null, 
-          null, 
-          ""
+          "paper for the Kent filters", 
+          []
         ]
       ], 
       "baseform": "make", 
@@ -154,28 +155,37 @@
           "15:0", 
           15, 
           15, 
-          "exposed"
+          "exposed", 
+          []
         ], 
         [
           "ARG1", 
           "16:0", 
           0, 
           13, 
-          "About 160 workers at a factory that *T*-8 made paper for the Kent filters"
+          "About 160 workers at a factory that *T*-8 made paper for the Kent filters", 
+          [
+            "16:0", 
+            16, 
+            16, 
+            "*-7"
+          ]
         ], 
         [
           "ARG2", 
           "17:1", 
           17, 
           18, 
-          "to asbestos"
+          "to asbestos", 
+          []
         ], 
         [
           "ARGM-TMP", 
           "19:1", 
           19, 
           21, 
-          "in the 1950s"
+          "in the 1950s", 
+          []
         ]
       ], 
       "baseform": "expose", 

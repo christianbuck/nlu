@@ -99,21 +99,24 @@
           "2:0", 
           2, 
           2, 
-          "led"
+          "led", 
+          []
         ], 
         [
           "ARG0", 
           "0:1", 
           0, 
           1, 
-          "Dr. Talcott"
+          "Dr. Talcott", 
+          []
         ], 
         [
           "ARG1", 
           "3:2", 
           3, 
           21, 
-          "a team of researchers from the National Cancer Institute and the medical schools of Harvard University and Boston University"
+          "a team of researchers from the National Cancer Institute and the medical schools of Harvard University and Boston University", 
+          []
         ]
       ], 
       "baseform": "lead", 

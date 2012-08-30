@@ -125,21 +125,24 @@
           "18:0", 
           18, 
           18, 
-          "expected"
+          "expected", 
+          []
         ], 
         [
           "ARG0", 
           "17:0", 
           17, 
           17, 
-          "*PRO*"
+          "*PRO*", 
+          []
         ], 
         [
           "ARG1", 
           "19:0", 
           19, 
           19, 
-          "*?*"
+          "*?*", 
+          []
         ]
       ], 
       "baseform": "expect", 
@@ -154,21 +157,29 @@
           "23:0", 
           23, 
           23, 
-          "said"
+          "said", 
+          []
         ], 
         [
           "ARG0", 
           "21:1", 
           21, 
           22, 
-          "the researchers"
+          "the researchers", 
+          []
         ], 
         [
           "ARG1", 
           "24:1", 
           0, 
           19, 
-          "The total of 18 deaths from malignant mesothelioma , lung cancer and asbestosis was far higher than *PRO* expected *?*"
+          "The total of 18 deaths from malignant mesothelioma , lung cancer and asbestosis was far higher than *PRO* expected *?*", 
+          [
+            "24:1", 
+            24, 
+            25, 
+            "0 *T*-1"
+          ]
         ]
       ], 
       "baseform": "say", 

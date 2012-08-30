@@ -59,21 +59,24 @@
           "2:0", 
           2, 
           2, 
-          "talking"
+          "talking", 
+          []
         ], 
         [
           "ARG0", 
           "0:1", 
           0, 
           0, 
-          "We"
+          "We", 
+          []
         ], 
         [
           "ARG1", 
           "3:1", 
           3, 
           14, 
-          "about years ago before anyone heard of asbestos having any questionable properties"
+          "about years ago before anyone heard of asbestos having any questionable properties", 
+          []
         ]
       ], 
       "baseform": "talk", 
@@ -88,21 +91,24 @@
           "8:0", 
           8, 
           8, 
-          "heard"
+          "heard", 
+          []
         ], 
         [
           "ARG0", 
           "7:1", 
           7, 
           7, 
-          "anyone"
+          "anyone", 
+          []
         ], 
         [
           "ARG1", 
           "9:1", 
           9, 
           14, 
-          "of asbestos having any questionable properties"
+          "of asbestos having any questionable properties", 
+          []
         ]
       ], 
       "baseform": "hear", 
@@ -117,21 +123,24 @@
           "11:0", 
           11, 
           11, 
-          "having"
+          "having", 
+          []
         ], 
         [
           "ARG0", 
           "10:1", 
           10, 
           10, 
-          "asbestos"
+          "asbestos", 
+          []
         ], 
         [
           "ARG1", 
           "12:1", 
           12, 
           14, 
-          "any questionable properties"
+          "any questionable properties", 
+          []
         ]
       ], 
       "baseform": "have", 

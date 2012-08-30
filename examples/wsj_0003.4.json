@@ -43,21 +43,24 @@
           "3:0", 
           3, 
           3, 
-          "said"
+          "said", 
+          []
         ], 
         [
           "ARG0", 
           "0:1", 
           0, 
           2, 
-          "A Lorillard spokewoman"
+          "A Lorillard spokewoman", 
+          []
         ], 
         [
           "ARG1", 
           "6:2", 
           6, 
           10, 
-          "This is an old story"
+          "This is an old story", 
+          []
         ]
       ], 
       "baseform": "say", 

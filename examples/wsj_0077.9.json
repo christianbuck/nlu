@@ -84,21 +84,24 @@
           "2:0", 
           2, 
           2, 
-          "had"
+          "had", 
+          []
         ], 
         [
           "ARG0", 
           "0:1", 
           0, 
           1, 
-          "Economic news"
+          "Economic news", 
+          []
         ], 
         [
           "ARG1", 
           "3:2", 
           3, 
           7, 
-          "little effect on financial markets"
+          "little effect on financial markets", 
+          []
         ]
       ], 
       "baseform": "have", 

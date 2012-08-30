@@ -65,21 +65,24 @@
           "1:0", 
           1, 
           1, 
-          "described"
+          "described", 
+          []
         ], 
         [
           "ARG0", 
           "0:1", 
           0, 
           0, 
-          "Workers"
+          "Workers", 
+          []
         ], 
         [
           "ARG1", 
           "2:1", 
           2, 
           23, 
-          "`` clouds of blue dust '' that *T*-1 hung over parts of the factory , even though exhaust fans ventilated the area"
+          "`` clouds of blue dust '' that *T*-1 hung over parts of the factory , even though exhaust fans ventilated the area", 
+          []
         ]
       ], 
       "baseform": "describe", 
@@ -94,35 +97,37 @@
           "10:0", 
           10, 
           10, 
-          "hung"
+          "hung", 
+          []
         ], 
         [
           "ARG1", 
-          "9:0", 
-          8, 
-          8, 
-          "that"
+          "3:2", 
+          3, 
+          6, 
+          "clouds of blue dust", 
+          [
+            "9:0", 
+            9, 
+            9, 
+            "*T*-1"
+          ]
         ], 
         [
           "ARGM-LOC", 
           "11:1", 
           11, 
           15, 
-          "over parts of the factory"
+          "over parts of the factory", 
+          []
         ], 
         [
           "ARGM-ADV", 
           "17:2", 
           17, 
           23, 
-          "even though exhaust fans ventilated the area"
-        ], 
-        [
-          "LINK-SLC", 
-          "3:2*9:0", 
-          null, 
-          null, 
-          ""
+          "even though exhaust fans ventilated the area", 
+          []
         ]
       ], 
       "baseform": "hang", 
@@ -137,21 +142,24 @@
           "21:0", 
           21, 
           21, 
-          "ventilated"
+          "ventilated", 
+          []
         ], 
         [
           "ARG0", 
           "19:1", 
           19, 
           20, 
-          "exhaust fans"
+          "exhaust fans", 
+          []
         ], 
         [
           "ARG1", 
           "22:1", 
           22, 
           23, 
-          "the area"
+          "the area", 
+          []
         ]
       ], 
       "baseform": "ventilate", 

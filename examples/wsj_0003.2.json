@@ -133,28 +133,29 @@
           "14:0", 
           14, 
           14, 
-          "makes"
+          "makes", 
+          []
         ], 
         [
           "ARG0", 
-          "13:0", 
-          12, 
-          12, 
-          "that"
+          "3:2", 
+          3, 
+          11, 
+          "the unit of New York - based Loews Corp.", 
+          [
+            "13:0", 
+            13, 
+            13, 
+            "*T*-2"
+          ]
         ], 
         [
           "ARG1", 
           "15:1", 
           15, 
           16, 
-          "Kent cigarettes"
-        ], 
-        [
-          "LINK-SLC", 
-          "3:2*13:0", 
-          null, 
-          null, 
-          ""
+          "Kent cigarettes", 
+          []
         ]
       ], 
       "baseform": "make", 
@@ -169,21 +170,24 @@
           "18:0", 
           18, 
           18, 
-          "stopped"
+          "stopped", 
+          []
         ], 
         [
           "ARG0", 
           "0:2", 
           0, 
           17, 
-          "Lorillard Inc. , the unit of New York - based Loews Corp. that *T*-2 makes Kent cigarettes ,"
+          "Lorillard Inc. , the unit of New York - based Loews Corp. that *T*-2 makes Kent cigarettes ,", 
+          []
         ], 
         [
           "ARG1", 
           "19:1", 
           19, 
           27, 
-          "using crocidolite in its Micronite cigarette filters in 1956"
+          "using crocidolite in its Micronite cigarette filters in 1956", 
+          []
         ]
       ], 
       "baseform": "stop", 
@@ -198,35 +202,40 @@
           "19:0", 
           19, 
           19, 
-          "using"
+          "using", 
+          []
         ], 
         [
           "ARG0", 
           "0:2", 
           0, 
           17, 
-          "Lorillard Inc. , the unit of New York - based Loews Corp. that *T*-2 makes Kent cigarettes ,"
+          "Lorillard Inc. , the unit of New York - based Loews Corp. that *T*-2 makes Kent cigarettes ,", 
+          []
         ], 
         [
           "ARG1", 
           "20:1", 
           20, 
           20, 
-          "crocidolite"
+          "crocidolite", 
+          []
         ], 
         [
           "ARGM-LOC", 
           "21:1", 
           21, 
           25, 
-          "in its Micronite cigarette filters"
+          "in its Micronite cigarette filters", 
+          []
         ], 
         [
           "ARGM-TMP", 
           "26:1", 
           26, 
           27, 
-          "in 1956"
+          "in 1956", 
+          []
         ]
       ], 
       "baseform": "use", 

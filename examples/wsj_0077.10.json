@@ -107,21 +107,21 @@
           "2:0", 
           2, 
           2, 
-          "expected"
+          "expected", 
+          []
         ], 
         [
           "ARG1", 
-          "1:0", 
+          "1:1", 
           1, 
           1, 
-          "*PRO*"
-        ], 
-        [
-          "LINK-PCR", 
-          "1:1*1:0", 
-          null, 
-          null, 
-          ""
+          "*PRO*", 
+          [
+            "1:0", 
+            1, 
+            1, 
+            "*PRO*"
+          ]
         ]
       ], 
       "baseform": "expect", 
@@ -136,28 +136,32 @@
           "11:0", 
           11, 
           11, 
-          "indicated"
+          "indicated", 
+          []
         ], 
         [
           "ARGM-ADV", 
           "0:1", 
           0, 
           3, 
-          "As *PRO* expected *-1"
+          "As *PRO* expected *-1", 
+          []
         ], 
         [
           "ARG0", 
           "5:2", 
           5, 
           10, 
-          "a national purchasing managers ' report"
+          "a national purchasing managers ' report", 
+          []
         ], 
         [
           "ARG1", 
           "12:1", 
           12, 
           22, 
-          "0 the nation 's manufacturing sector continues *-2 to contract modestly"
+          "0 the nation 's manufacturing sector continues *-2 to contract modestly", 
+          []
         ]
       ], 
       "baseform": "indicate", 
@@ -172,14 +176,16 @@
           "18:0", 
           18, 
           18, 
-          "continues"
+          "continues", 
+          []
         ], 
         [
           "ARG1", 
           "19:2", 
           19, 
           22, 
-          "*-2 to contract modestly"
+          "*-2 to contract modestly", 
+          []
         ]
       ], 
       "baseform": "continue", 
@@ -194,28 +200,29 @@
           "21:0", 
           21, 
           21, 
-          "contract"
+          "contract", 
+          []
         ], 
         [
           "ARG1", 
-          "19:0", 
+          "13:2", 
           13, 
           17, 
-          "the nation 's manufacturing sector"
+          "the nation 's manufacturing sector", 
+          [
+            "19:0", 
+            19, 
+            19, 
+            "*-2"
+          ]
         ], 
         [
           "ARG2", 
           "22:1", 
           22, 
           22, 
-          "modestly"
-        ], 
-        [
-          "LINK-PCR", 
-          "13:2*19:0", 
-          null, 
-          null, 
-          ""
+          "modestly", 
+          []
         ]
       ], 
       "baseform": "contract", 

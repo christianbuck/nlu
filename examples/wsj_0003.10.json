@@ -139,21 +139,24 @@
           "3:0", 
           3, 
           3, 
-          "said"
+          "said", 
+          []
         ], 
         [
           "ARG0", 
           "0:1", 
           0, 
           2, 
-          "The Lorillard spokeswoman"
+          "The Lorillard spokeswoman", 
+          []
         ], 
         [
           "ARG1", 
           "4:1", 
           4, 
           36, 
-          "0 asbestos was used *-1 in `` very modest amounts '' in *PRO* making paper for the filters in the early 1950s and replaced *-1 with a different type of filter in 1956"
+          "0 asbestos was used *-1 in `` very modest amounts '' in *PRO* making paper for the filters in the early 1950s and replaced *-1 with a different type of filter in 1956", 
+          []
         ]
       ], 
       "baseform": "say", 
@@ -168,42 +171,45 @@
           "7:0", 
           7, 
           7, 
-          "used"
+          "used", 
+          []
         ], 
         [
           "ARG1", 
           "8:0", 
           5, 
           5, 
-          "asbestos"
+          "asbestos", 
+          [
+            "8:0", 
+            8, 
+            8, 
+            "*-1"
+          ]
         ], 
         [
           "ARGM-MNR", 
           "9:1", 
           9, 
           14, 
-          "in `` very modest amounts ''"
+          "in `` very modest amounts ''", 
+          []
         ], 
         [
           "ARG2", 
           "15:1", 
           15, 
           21, 
-          "in *PRO* making paper for the filters"
+          "in *PRO* making paper for the filters", 
+          []
         ], 
         [
           "ARGM-TMP", 
           "22:1", 
           22, 
           25, 
-          "in the early 1950s"
-        ], 
-        [
-          "LINK-PCR", 
-          "8:0*8:0*8:0", 
-          null, 
-          null, 
-          ""
+          "in the early 1950s", 
+          []
         ]
       ], 
       "baseform": "use", 
@@ -218,21 +224,24 @@
           "17:0", 
           17, 
           17, 
-          "making"
+          "making", 
+          []
         ], 
         [
           "ARG0", 
           "16:0", 
           16, 
           16, 
-          "*PRO*"
+          "*PRO*", 
+          []
         ], 
         [
           "ARG1", 
           "18:2", 
           18, 
           21, 
-          "paper for the filters"
+          "paper for the filters", 
+          []
         ]
       ], 
       "baseform": "make", 
@@ -247,35 +256,37 @@
           "27:0", 
           27, 
           27, 
-          "replaced"
+          "replaced", 
+          []
         ], 
         [
           "ARG1", 
           "28:0", 
           5, 
           5, 
-          "asbestos"
+          "asbestos", 
+          [
+            "28:0", 
+            28, 
+            28, 
+            "*-1"
+          ]
         ], 
         [
           "ARG2", 
           "29:1", 
           29, 
           34, 
-          "with a different type of filter"
+          "with a different type of filter", 
+          []
         ], 
         [
           "ARGM-TMP", 
           "35:1", 
           35, 
           36, 
-          "in 1956"
-        ], 
-        [
-          "LINK-PCR", 
-          "28:0*28:0", 
-          null, 
-          null, 
-          ""
+          "in 1956", 
+          []
         ]
       ], 
       "baseform": "replace", 

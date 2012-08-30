@@ -164,21 +164,24 @@
           "5:0", 
           5, 
           5, 
-          "rose"
+          "rose", 
+          []
         ], 
         [
           "ARG1", 
           "0:2", 
           0, 
           4, 
-          "Long - term bond prices"
+          "Long - term bond prices", 
+          []
         ], 
         [
           "ARGM-ADV", 
           "6:1", 
           6, 
           17, 
-          "despite prospects of a huge new supply of Treasury debt this month"
+          "despite prospects of a huge new supply of Treasury debt this month", 
+          []
         ]
       ], 
       "baseform": "rise", 

@@ -205,21 +205,29 @@
           "16:0", 
           16, 
           16, 
-          "take"
+          "take", 
+          []
         ], 
         [
           "ARG0", 
           "14:0", 
           10, 
           11, 
-          "money managers"
+          "money managers", 
+          [
+            "14:0", 
+            14, 
+            14, 
+            "*PRO*-1"
+          ]
         ], 
         [
           "ARG1", 
           "17:1", 
           17, 
           17, 
-          "profits"
+          "profits", 
+          []
         ]
       ], 
       "baseform": "take", 
@@ -234,28 +242,29 @@
           "19:0", 
           19, 
           19, 
-          "cut"
+          "cut", 
+          []
         ], 
         [
           "ARG0", 
-          "14:0", 
+          "10:1", 
           10, 
           11, 
-          "money managers"
+          "money managers", 
+          [
+            "14:0", 
+            14, 
+            14, 
+            "*PRO*-1"
+          ]
         ], 
         [
           "ARG1", 
           "20:2", 
           20, 
           34, 
-          "their risks of *PRO*-2 losing what for many *T*-178 have been exceptionally good returns in"
-        ], 
-        [
-          "LINK-PCR", 
-          "10:1*14:0", 
-          null, 
-          null, 
-          ""
+          "their risks of *PRO*-2 losing what for many *T*-178 have been exceptionally good returns in", 
+          []
         ]
       ], 
       "baseform": "cut", 
@@ -270,28 +279,32 @@
           "24:0", 
           24, 
           24, 
-          "losing"
+          "losing", 
+          []
         ], 
         [
           "ARG0", 
           "23:0", 
           10, 
           11, 
-          "money managers"
+          "money managers", 
+          [
+            "23:0", 
+            23, 
+            23, 
+            "*PRO*-2", 
+            14, 
+            14, 
+            "*PRO*-1"
+          ]
         ], 
         [
           "ARG1", 
           "25:2", 
           25, 
           34, 
-          "what for many *T*-178 have been exceptionally good returns in"
-        ], 
-        [
-          "LINK-PCR", 
-          "23:0*23:0", 
-          null, 
-          null, 
-          ""
+          "what for many *T*-178 have been exceptionally good returns in", 
+          []
         ]
       ], 
       "baseform": "lose", 

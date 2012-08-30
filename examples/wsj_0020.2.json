@@ -204,42 +204,48 @@
           "10:0", 
           10, 
           10, 
-          "face"
+          "face", 
+          []
         ], 
         [
           "ARGM-LOC", 
           "0:1", 
           0, 
           5, 
-          "Under the new U.S. trade law"
+          "Under the new U.S. trade law", 
+          []
         ], 
         [
           "ARG0", 
           "7:1", 
           7, 
           8, 
-          "those countries"
+          "those countries", 
+          []
         ], 
         [
           "ARGM-MOD", 
           "9:0", 
           9, 
           9, 
-          "could"
+          "could", 
+          []
         ], 
         [
           "ARG1", 
           "11:2", 
           11, 
           19, 
-          "accelerated unfair - trade investigations and stiff trade sanctions"
+          "accelerated unfair - trade investigations and stiff trade sanctions", 
+          []
         ], 
         [
           "ARGM-ADV", 
           "20:1", 
           20, 
           32, 
-          "if they do n't improve their protection of intellectual property by next spring"
+          "if they do n't improve their protection of intellectual property by next spring", 
+          []
         ]
       ], 
       "baseform": "face", 
@@ -254,7 +260,8 @@
           "22:0", 
           22, 
           22, 
-          "do"
+          "do", 
+          []
         ]
       ], 
       "baseform": "do", 
@@ -269,35 +276,40 @@
           "24:0", 
           24, 
           24, 
-          "improve"
+          "improve", 
+          []
         ], 
         [
           "ARG0", 
           "21:1", 
           21, 
           21, 
-          "they"
+          "they", 
+          []
         ], 
         [
           "ARGM-NEG", 
           "23:0", 
           23, 
           23, 
-          "n't"
+          "n't", 
+          []
         ], 
         [
           "ARG1", 
           "25:2", 
           25, 
           29, 
-          "their protection of intellectual property"
+          "their protection of intellectual property", 
+          []
         ], 
         [
           "ARGM-TMP", 
           "30:1", 
           30, 
           32, 
-          "by next spring"
+          "by next spring", 
+          []
         ]
       ], 
       "baseform": "improve", 

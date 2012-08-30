@@ -204,21 +204,24 @@
           "12:0", 
           12, 
           12, 
-          "contracted"
+          "contracted", 
+          []
         ], 
         [
           "ARG1", 
           "6:2", 
           6, 
           11, 
-          "some of those workers and managers"
+          "some of those workers and managers", 
+          []
         ], 
         [
           "ARG2", 
           "13:2", 
           13, 
           16, 
-          "asbestos - related diseases"
+          "asbestos - related diseases", 
+          []
         ]
       ], 
       "baseform": "contract", 
@@ -233,21 +236,29 @@
           "19:0", 
           19, 
           19, 
-          "said"
+          "said", 
+          []
         ], 
         [
           "ARG1", 
           "20:0", 
           1, 
           16, 
-          "There 's no question that some of those workers and managers contracted asbestos - related diseases"
+          "There 's no question that some of those workers and managers contracted asbestos - related diseases", 
+          [
+            "20:0", 
+            20, 
+            20, 
+            "*T*-1"
+          ]
         ], 
         [
           "ARG0", 
           "21:2", 
           21, 
           32, 
-          "Darrell Phillips , vice president of human resources for Hollingsworth & Vose"
+          "Darrell Phillips , vice president of human resources for Hollingsworth & Vose", 
+          []
         ]
       ], 
       "baseform": "say", 

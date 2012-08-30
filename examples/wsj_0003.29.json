@@ -101,21 +101,24 @@
           "1:0", 
           1, 
           1, 
-          "has"
+          "has", 
+          []
         ], 
         [
           "ARG0", 
           "0:1", 
           0, 
           0, 
-          "It"
+          "It", 
+          []
         ], 
         [
           "ARG1", 
           "2:2", 
           2, 
           8, 
-          "no bearing on our work force today"
+          "no bearing on our work force today", 
+          []
         ]
       ], 
       "baseform": "have", 

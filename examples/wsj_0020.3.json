@@ -149,21 +149,24 @@
           "2:0", 
           2, 
           2, 
-          "said"
+          "said", 
+          []
         ], 
         [
           "ARG0", 
           "0:1", 
           0, 
           1, 
-          "Mrs. Hills"
+          "Mrs. Hills", 
+          []
         ], 
         [
           "ARG1", 
           "3:1", 
           3, 
           27, 
-          "0 many of the 25 countries that she placed *T*-1 under varying degrees of scrutiny have made `` genuine progress '' on this touchy issue"
+          "0 many of the 25 countries that she placed *T*-1 under varying degrees of scrutiny have made `` genuine progress '' on this touchy issue", 
+          []
         ]
       ], 
       "baseform": "say", 
@@ -178,35 +181,37 @@
           "11:0", 
           11, 
           11, 
-          "placed"
+          "placed", 
+          []
         ], 
         [
           "ARG0", 
           "10:1", 
           10, 
           10, 
-          "she"
+          "she", 
+          []
         ], 
         [
           "ARG1", 
-          "12:0", 
-          9, 
-          9, 
-          "that"
+          "6:1", 
+          6, 
+          8, 
+          "the 25 countries", 
+          [
+            "12:0", 
+            12, 
+            12, 
+            "*T*-1"
+          ]
         ], 
         [
           "ARG2", 
           "13:1", 
           13, 
           17, 
-          "under varying degrees of scrutiny"
-        ], 
-        [
-          "LINK-SLC", 
-          "6:1*12:0", 
-          null, 
-          null, 
-          ""
+          "under varying degrees of scrutiny", 
+          []
         ]
       ], 
       "baseform": "place", 
@@ -221,14 +226,16 @@
           "14:0", 
           14, 
           14, 
-          "varying"
+          "varying", 
+          []
         ], 
         [
           "ARG1", 
           "15:0", 
           15, 
           15, 
-          "degrees"
+          "degrees", 
+          []
         ]
       ], 
       "baseform": "vary", 
@@ -243,21 +250,24 @@
           "19:0", 
           19, 
           19, 
-          "made"
+          "made", 
+          []
         ], 
         [
           "ARG0", 
           "4:2", 
           4, 
           17, 
-          "many of the 25 countries that she placed *T*-1 under varying degrees of scrutiny"
+          "many of the 25 countries that she placed *T*-1 under varying degrees of scrutiny", 
+          []
         ], 
         [
           "ARG1", 
           "21:2", 
           21, 
           27, 
-          "genuine progress '' on this touchy issue"
+          "genuine progress '' on this touchy issue", 
+          []
         ]
       ], 
       "baseform": "make", 

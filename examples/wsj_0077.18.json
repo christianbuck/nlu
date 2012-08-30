@@ -13,14 +13,16 @@
           "2:0", 
           2, 
           2, 
-          "rose"
+          "rose", 
+          []
         ], 
         [
           "ARG1", 
           "0:1", 
           0, 
           1, 
-          "The dollar"
+          "The dollar", 
+          []
         ]
       ], 
       "baseform": "rise", 

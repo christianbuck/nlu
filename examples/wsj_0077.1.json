@@ -42,21 +42,24 @@
           "6:0", 
           6, 
           6, 
-          "gained"
+          "gained", 
+          []
         ], 
         [
           "ARG1", 
           "0:2", 
           0, 
           4, 
-          "Bond prices and the dollar"
+          "Bond prices and the dollar", 
+          []
         ], 
         [
           "ARG2", 
           "7:1", 
           7, 
           7, 
-          "modestly"
+          "modestly", 
+          []
         ]
       ], 
       "baseform": "gain", 

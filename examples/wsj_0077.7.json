@@ -158,35 +158,40 @@
           "3:0", 
           3, 
           3, 
-          "jumped"
+          "jumped", 
+          []
         ], 
         [
           "ARG1", 
           "0:1", 
           0, 
           2, 
-          "The industrial average"
+          "The industrial average", 
+          []
         ], 
         [
           "ARG2", 
           "4:2", 
           4, 
           7, 
-          "more than 41 points"
+          "more than 41 points", 
+          []
         ], 
         [
           "ARGM-TMP", 
           "8:1", 
           8, 
           8, 
-          "Tuesday"
+          "Tuesday", 
+          []
         ], 
         [
           "ARGM-TMP", 
           "9:1", 
           9, 
           19, 
-          "as speculators rushed *PRO*-1 to buy shares of potential takeover targets"
+          "as speculators rushed *PRO*-1 to buy shares of potential takeover targets", 
+          []
         ]
       ], 
       "baseform": "jump", 
@@ -201,21 +206,29 @@
           "11:0", 
           11, 
           11, 
-          "rushed"
+          "rushed", 
+          []
         ], 
         [
           "ARG1", 
           "12:0", 
           10, 
           10, 
-          "speculators"
+          "speculators", 
+          [
+            "12:0", 
+            12, 
+            12, 
+            "*PRO*-1"
+          ]
         ], 
         [
           "ARG2", 
           "12:2", 
           12, 
           19, 
-          "*PRO*-1 to buy shares of potential takeover targets"
+          "*PRO*-1 to buy shares of potential takeover targets", 
+          []
         ]
       ], 
       "baseform": "rush", 
@@ -230,28 +243,29 @@
           "14:0", 
           14, 
           14, 
-          "buy"
+          "buy", 
+          []
         ], 
         [
           "ARG0", 
           "12:0", 
           10, 
           10, 
-          "speculators"
+          "speculators", 
+          [
+            "12:0", 
+            12, 
+            12, 
+            "*PRO*-1"
+          ]
         ], 
         [
           "ARG1", 
           "15:2", 
           15, 
           19, 
-          "shares of potential takeover targets"
-        ], 
-        [
-          "LINK-PCR", 
-          "12:0*12:0", 
-          null, 
-          null, 
-          ""
+          "shares of potential takeover targets", 
+          []
         ]
       ], 
       "baseform": "buy", 
