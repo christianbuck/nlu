@@ -177,7 +177,7 @@ class Amr(Dag):
 
         return new_amr
 
-    def make_rooted_amr(self, root, swap_callback=None and (lambda oldtrip,newtrip: True)):
+    def make_rooted_amr(self, root, swap_callback=None and (lambda oldtrip,newtrip: True), warn=sys.stderr):
         """
         Flip edges in the AMR so that all nodes are reachable from the unique root.
         If 'swap_callback' is provided, it is called whenever an edge is inverted with 
@@ -188,7 +188,7 @@ class Amr(Dag):
         >>> x.make_rooted_amr("n")
         DAG{ (n / name :name-of (p / person :ARG0-of (j / join-01-ROOT :ARG1 (b / board) :ARGM-PRD (t / thing :ARG0-of (d1 / direct-01 :ARG0 t :ARG3 (n1 / nonexecutive) )) :time (d / date-entity :day 29 :month 11)) :age (t1 / temporal-quantity :quant 61 :unit (y / year) )) :op1 "Pierre" :op2 "Vinken") }
         """
-        amr = self.clone()
+        amr = self.clone(warn=warn)
 
         all_nodes = set(amr.get_nodes())
 
@@ -206,7 +206,7 @@ class Amr(Dag):
             out_triples = [(p,r,c) for p,r,c in amr.triples(refresh = True, instances = False) if c[0] in reached and p in unreached]
             for p,r,c in out_triples:
                 newtrip = (c[0],"%s-of" %r, (p,))
-                amr._replace_triple(p,r,c,*newtrip)
+                amr._replace_triple(p,r,c,*newtrip,warn=warn)
                 if swap_callback: swap_callback((p,r,c),newtrip)
         amr.triples(refresh = True)            
         amr.roots = [root]
@@ -368,7 +368,7 @@ class Amr(Dag):
         graph = self._get_gv_graph(instances)
         graph.draw(file_or_name, prog="dot", *args, **kwargs)
     
-    def clone(self):
+    def clone(self, warn=sys.stderr):
         """
         Return a deep copy of the AMR.
         """
@@ -377,7 +377,7 @@ class Amr(Dag):
         new.external_nodes = copy.copy(self.external_nodes)
         new.node_to_concepts = copy.copy(self.node_to_concepts)
         for triple in self.triples(instances = False):
-            new._add_triple(*copy.copy(triple))        
+            new._add_triple(*copy.copy(triple), warn=warn)        
         return new
 
     def clone_as_dag(self, instances = True):        
