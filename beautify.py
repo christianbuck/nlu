@@ -45,6 +45,13 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
         '''
         replacements[y] = x
     
+    # Avoid a chain of replacements, e.g. a -> b and b -> c
+    # Assume there are no cycles, otherwise this will loop infinitely
+    while set(replacements.keys()) & set(replacements.values()):
+        for k in replacements.keys():
+            if replacements[k] in replacements:
+                replacements[k] = replacements[replacements[k]]
+    
     # MERGE the coreferent nodes
     
     all_triples = []
