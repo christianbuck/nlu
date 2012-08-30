@@ -128,7 +128,7 @@ class NonterminalLabel(object):
     label_matcher = re.compile("(?P<label>.*?)(\[(?P<index>.*)\])?$")
 
     def __init__(self, label, index = None):            
-        if index:
+        if index is not None:
             self.label = label
             self.index = index  
         else: 

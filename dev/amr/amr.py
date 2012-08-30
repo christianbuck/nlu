@@ -59,6 +59,7 @@ class Amr(Dag):
 
     def __init__(self, *args, **kwargs):       
         super(Amr, self).__init__(*args, **kwargs)
+        self.__cached_triples = None
         self.node_to_concepts = {}
 
     def apply_node_map(self, node_map):
@@ -68,6 +69,7 @@ class Amr(Dag):
         new = Dag.apply_node_map(self, node_map)
         new.__class__ = Amr
         new.node_to_concepts = {}
+        new.__cached_triples = None
         for n in self.node_to_concepts:
             if n in node_map:
                 new.node_to_concepts[node_map[n]] = self.node_to_concepts[n]
@@ -101,19 +103,22 @@ class Amr(Dag):
         new_amr.roots = copy.copy(amr.roots)
         for par, rel, child in amr.triples():
            if type(rel) is str:   
-                parts = rel.rsplit(":",1)        
+                parts = rel.rsplit(":",1)    
+                part2 = None
                 if len(parts)==2:
                     part1, part2 = parts
                     if not (part1.lower().startswith("root")):
                         new_amr._replace_triple(par, rel, child, par, part1, child)
                     for c in child: 
                          new_amr.node_to_concepts[c] = part2
-                if rel.lower().startswith("root"):
+                if rel.lower().startswith("root"): 
                     new_amr.roots.remove(par)
                     new_amr._remove_triple(par, rel, child)
                     new_amr.roots = []
                     for c in child:
                         new_amr.roots.append(c)
+                elif par in amr.roots and par not in new_amr.node_to_concepts:
+                    new_amr.node_to_concepts[par] = None    
         #new_amr = amr.clone()
         #new_amr.__class__ = cls
         #new_amr.node_to_concepts = {}
@@ -172,7 +177,7 @@ class Amr(Dag):
 
         return new_amr
 
-    def make_rooted_amr(self, root, swap_callback=None and (lambda oldtrip,newtrip: True), warn=sys.stderr):
+    def make_rooted_amr(self, root, swap_callback=None and (lambda oldtrip,newtrip: True)):
         """
         Flip edges in the AMR so that all nodes are reachable from the unique root.
         If 'swap_callback' is provided, it is called whenever an edge is inverted with 
@@ -183,7 +188,7 @@ class Amr(Dag):
         >>> x.make_rooted_amr("n")
         DAG{ (n / name :name-of (p / person :ARG0-of (j / join-01-ROOT :ARG1 (b / board) :ARGM-PRD (t / thing :ARG0-of (d1 / direct-01 :ARG0 t :ARG3 (n1 / nonexecutive) )) :time (d / date-entity :day 29 :month 11)) :age (t1 / temporal-quantity :quant 61 :unit (y / year) )) :op1 "Pierre" :op2 "Vinken") }
         """
-        amr = self.clone(warn=warn)
+        amr = self.clone()
 
         all_nodes = set(amr.get_nodes())
 
@@ -201,7 +206,7 @@ class Amr(Dag):
             out_triples = [(p,r,c) for p,r,c in amr.triples(refresh = True, instances = False) if c[0] in reached and p in unreached]
             for p,r,c in out_triples:
                 newtrip = (c[0],"%s-of" %r, (p,))
-                amr._replace_triple(p,r,c,*newtrip,warn=warn)
+                amr._replace_triple(p,r,c,*newtrip)
                 if swap_callback: swap_callback((p,r,c),newtrip)
         amr.triples(refresh = True)            
         amr.roots = [root]
@@ -245,6 +250,7 @@ class Amr(Dag):
         amr = Dag.from_triples(triples, roots, warn=warn)
         amr.__class__ = Amr
         amr.node_to_concepts = concepts
+        amr.__cached_triples = None
         return amr
 
     def get_concept(self, node):
@@ -264,11 +270,19 @@ class Amr(Dag):
         Retrieve a list of (node, role, filler) triples. If instances is False
         do not include 'instance' roles.
         """
-        res = [t for t in super(Amr, self).triples(start_node, refresh)]
-        if instances:
-            for node, concept in self.node_to_concepts.items():
-                res.append((node, 'instance', concept))
-        return res
+
+        if not instances: 
+            return super(Amr, self).triples(start_node, refresh)
+        else: 
+            if (not (refresh or start_node)) and self.__cached_triples:
+                return self.__cached_triples
+            
+            res = copy.copy(super(Amr, self).triples(start_node, refresh))
+            if instances:
+                for node, concept in self.node_to_concepts.items():
+                    res.append((node, 'instance', concept))
+            self.__cached_triples = res                        
+            return res
 
     def __str__(self):
         def extractor(node, firsthit, leaf):
@@ -354,7 +368,7 @@ class Amr(Dag):
         graph = self._get_gv_graph(instances)
         graph.draw(file_or_name, prog="dot", *args, **kwargs)
     
-    def clone(self, warn=sys.stderr):
+    def clone(self):
         """
         Return a deep copy of the AMR.
         """
@@ -363,7 +377,7 @@ class Amr(Dag):
         new.external_nodes = copy.copy(self.external_nodes)
         new.node_to_concepts = copy.copy(self.node_to_concepts)
         for triple in self.triples(instances = False):
-            new._add_triple(*copy.copy(triple), warn=warn)        
+            new._add_triple(*copy.copy(triple))        
         return new
 
     def clone_as_dag(self, instances = True):        
@@ -419,6 +433,7 @@ class Amr(Dag):
         new = Dag.apply_node_map(self, node_map, *args, **kwargs)    
         new.__class__ = Amr
         new.node_to_concepts = {} 
+        new.__cached_triples = None
         for node in self.node_to_concepts:
             if node in node_map:
                 new.node_to_concepts[node_map[node]] = self.node_to_concepts[node]

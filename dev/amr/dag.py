@@ -483,7 +483,6 @@ class Dag(defaultdict):
         """
         return flatten([self.out_edges(r) for r in self.roots])
 
-    @memoize
     def get_all_in_edges(self):
         """
         Return dictionary mapping nodes to their incomping edges. 
@@ -704,7 +703,7 @@ class Dag(defaultdict):
             x = self[c]
             for rel, test in self[c].items():
                 if parent in test: 
-                    if warn: warn.write("WARNING: (%s, %s, %s) would produce a cycle with (%s, %s, %s)\n" % (parent, relation, child, c, rel, test))
+                   if warn: warn.write("WARNING: (%s, %s, %s) would produce a cycle with (%s, %s, %s)\n" % (parent, relation, child, c, rel, test))
                     #raise ValueError,"(%s, %s, %s) would produce a cycle with (%s, %s, %s)" % (parent, relation, child, c, rel, test)
         self[parent].append(relation, child)    
     
