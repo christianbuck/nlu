@@ -43,14 +43,18 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
             or (alignment[int(y):] is not None and wTags[alignment[int(y):]]["PartOfSpeech"] in ['PRP','PRP$']) \
             or amr.get_concept(y).endswith('-FALLBACK'), (y,ww[alignment[int(y):]],x,ww[alignment[int(x):]])
         '''
+        if x in replacements and replacements[x]==y: # avoid 2-node cycle
+            continue
         replacements[y] = x
-    
+
     # Avoid a chain of replacements, e.g. a -> b and b -> c
     # Assume there are no cycles, otherwise this will loop infinitely
     while set(replacements.keys()) & set(replacements.values()):
         for k in replacements.keys():
             if replacements[k] in replacements:
+                assert replacements[k]!=k,('Self-coreferent?',k,'in',sentenceId,replacements)
                 replacements[k] = replacements[replacements[k]]
+                break
     
     # MERGE the coreferent nodes
     

@@ -120,7 +120,7 @@ def main(files):
         print('{}/{}, {} succeeded without exceptions ({} connected)'.format(iSent, nSents, nSuccess, nConnected), file=sys.stderr)
 
 def token2concept(t, normalize_pronouns=True):
-    t = t.replace('$', '-DOLLAR-')
+    t = t.replace('$', '-DOLLAR-').replace('&', 'and')
     res =  re.sub(r'[^A-Za-z0-9-]', '', t).lower() or '??'
     if res=='??':
         assert False, t

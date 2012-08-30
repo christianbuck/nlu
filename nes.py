@@ -62,7 +62,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                 v = wTags[h]["NormalizedNamedEntityTag"]
                 
                 wrapper = None
-                if v[0] in '<>':
+                if v[0] in '<>~':
                     if len(v)==1:
                         print('Warning: Unexpected NormalizedNamedEntityTag:',v,'for',raw, file=sys.stderr)
                     else:
@@ -72,7 +72,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                         else:
                             reln = v[0]
                             v = v[1:]
-                        concept = {'<': 'less-than', '>': 'more-than', '<=': 'no-more-than', '>=': 'at-least'}[reln]
+                        concept = {'<': 'less-than', '>': 'more-than', '<=': 'no-more-than', '>=': 'at-least', '~': 'about'}[reln]
                         wrapper = new_concept_from_token(amr, alignment, h, depParse, wTags, concept=concept)
                     
                 if coarse=='MONEY':
@@ -123,7 +123,7 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                 x = new_concept_from_token(amr, alignment, h, depParse, wTags)
                 triples.add((str(x), '-DUMMY', '')) # ensure the concept participates in some triple so it is printed
         else:
-            if coarse.lower()=='person' and i>0 and ww[i-1].lower() in ['mr','mr.','mister','master','sir','mrs','mrs.','miss']:
+            if coarse.lower()=='person' and i>0 and ww[i-1] and ww[i-1].lower() in ['mr','mr.','mister','master','sir','mrs','mrs.','miss']:
                 # Extend the NE to include formal titles that do not get concepts
                 name = ww[i-1]+' '+name
                 i -= 1
