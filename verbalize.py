@@ -37,7 +37,8 @@ def main(sentenceId, jsonFile, tokens, ww, wTags, depParse, inAMR, alignment, co
                 # i.e. rename the x and y concepts and the relation between them
                 # do not change the alignments (x continues to be aligned to a token, 
                 # y continues to be unaligned)
-                triples.append((x,r2+'-of',(y,)))
+                if (x,r2+'-of',(y,)) not in triples and (y,r2,(x,)) not in triples:
+                    triples.append((x,r2+'-of',(y,)))
                 amr.node_to_concepts[x] = 'thing-FALLBACK'
                 amr.node_to_concepts[y] = vpred
             else:
