@@ -144,7 +144,7 @@ def common_arg(rel, concept=None, drels=None):
     Exceptions include ARGM-MOD (modal), which is verb-specific.
     '''
     if True:
-            newrel = rel
+            newrel = rel.replace('-REF','')
             newconcept = concept
             if rel=='ARGM-TMP':
                 if concept is not None and any(ttyp in concept.split('-') for ttyp in timex.Timex3Entity.valid_types):
@@ -163,20 +163,20 @@ def common_arg(rel, concept=None, drels=None):
                             newrel = 'time'
                         elif 'amod' in drels:
                             newrel = 'mod' # e.g. 'former' -- temporal but not itself a time
-            elif rel=='ARGM-LOC':
-                newrel = 'location'    # TODO: possibly also :direction, :source, :destination. look at preposition?
-            elif rel=='ARGM-CAU':
-                newrel = 'cause'
-            elif rel=='ARGM-PRP':
-                newrel = 'purpose'
-            elif rel=='ARGM-MNR':
-                newrel = 'manner'
-            elif rel=='ARGM-DIR':
-                newrel = 'direction'
             elif rel=='ARGM-NEG':
                 newrel = 'polarity'
                 newconcept = Atom('-')
-            elif '-REF' in rel:
-                newrel = rel.replace('-REF','')
+            elif rel[:5]=='ARGM-':
+                newrel = {'CAU': 'cause',
+                          'COM': 'accompanier',  # is this right? ARGM-COM is used for two people performing an action together
+                          'DIR': 'direction',
+                          'EXT': 'degree',  # extent
+                          'GOL': 'beneficiary',  # could also be :destination
+                          'LOC': 'location',  # possibly also :source. look at preposition?
+                          'MNR': 'manner',
+                          'PRP': 'purpose',
+                          'PNC': 'purpose',  # purpose not cause
+                          }.get(rel[5:], 'mod')  
+                # will default to :mod for: ADV, ADJ, DIS(course), DSP (direct speech), PRD (secondary predication), REC (reciprocal), LVB (light verb of nominal proposition)
 
     return (newrel, newconcept) if newconcept is not None else newrel
