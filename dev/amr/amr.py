@@ -188,25 +188,27 @@ class Amr(Dag):
         >>> x.make_rooted_amr("n")
         DAG{ (n / name :name-of (p / person :ARG0-of (j / join-01-ROOT :ARG1 (b / board) :ARGM-PRD (t / thing :ARG0-of (d1 / direct-01 :ARG0 t :ARG3 (n1 / nonexecutive) )) :time (d / date-entity :day 29 :month 11)) :age (t1 / temporal-quantity :quant 61 :unit (y / year) )) :op1 "Pierre" :op2 "Vinken") }
         """
+        if not root in self:
+            raise ValueError, "%s is not a node in this AMR." % root    
         amr = self.clone(warn=warn)
 
         all_nodes = set(amr.get_nodes())
 
         unreached  = True
         while unreached: 
-
             reach_triples = amr.triples(start_node = root, instances = False)
             reached = set()
+            reached.add(root)
             for p,r,c in reach_triples: 
                 reached.add(p)
                 reached.update(c)
 
             unreached = all_nodes - reached
-    
+     
             out_triples = [(p,r,c) for p,r,c in amr.triples(refresh = True, instances = False) if c[0] in reached and p in unreached]
             for p,r,c in out_triples:
                 newtrip = (c[0],"%s-of" %r, (p,))
-                amr._replace_triple(p,r,c,*newtrip,warn=warn)
+                amr._replace_triple(p,r,c,*newtrip, warn=warn)
                 if swap_callback: swap_callback((p,r,c),newtrip)
         amr.triples(refresh = True)            
         amr.roots = [root]
